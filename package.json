@@ -1,6 +1,18 @@
 {
   "name": "@boomi/embedkit-cdn",
-  "version": "1.1.6",
-  "description": "Boomi EmbedKit CDN files",
-  "files": ["embedkit-cdn.js", "embedkit-cdn.umd.js", "embedkit-cdn.css"]
+  "version": "1.1.9",
+  "description": "Pre-built UMD bundle and CSS for Boomi EmbedKit — drop-in script tag distribution via jsDelivr and unpkg",
+  "files": [
+    "embedkit-cdn.js",
+    "embedkit-cdn.umd.cjs",
+    "embedkit-cdn.css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OfficialBoomi/embedkit-cdn.git"
+  },
+  "license": "BSD-2-Clause",
+  "publishConfig": {
+    "access": "public"
+  }
 }
