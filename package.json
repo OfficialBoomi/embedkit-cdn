@@ -1,6 +1,6 @@
 {
   "name": "@boomi/embedkit-cdn",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Boomi EmbedKit CDN files",
-  "files": ["embedkit-cdn.js", "embedkit-cdn.umd.cjs", "embedkit-cdn.css"]
+  "files": ["embedkit-cdn.js", "embedkit-cdn.umd.js", "embedkit-cdn.css"]
 }
