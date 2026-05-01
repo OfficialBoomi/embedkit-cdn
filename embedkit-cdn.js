@@ -37666,22 +37666,33 @@ const mM = (t) => {
   const e = Et.parse(t);
   return QD.sanitize(e, { USE_PROFILES: { html: !0 }, ADD_ATTR: ["target", "rel"] });
 }, gM = ({ m: t, getMsgText: e, isBoomiDirect: o = !1 }) => {
-  var E, h;
-  const r = (t == null ? void 0 : t.role) === "user", w = ((E = t == null ? void 0 : t.content) == null ? void 0 : E.data) ?? (t == null ? void 0 : t.content);
-  let m = w;
-  if (typeof w == "string") {
-    const p = w.trim();
+  var h;
+  const r = (t == null ? void 0 : t.role) === "user", w = (() => {
+    const p = t == null ? void 0 : t.content;
+    if (typeof p == "string") {
+      const a = p.trim();
+      if (a.startsWith("{") || a.startsWith("["))
+        try {
+          return JSON.parse(a);
+        } catch {
+        }
+    }
+    return p;
+  })(), m = (w == null ? void 0 : w.data) ?? w;
+  let g = m;
+  if (typeof m == "string") {
+    const p = m.trim();
     if (p.startsWith("{") || p.startsWith("["))
       try {
-        m = JSON.parse(p);
+        g = JSON.parse(p);
       } catch {
-        m = w;
+        g = m;
       }
   }
   if (r)
     return /* @__PURE__ */ G.jsx("div", { className: "w-full flex justify-end px-2", children: /* @__PURE__ */ G.jsx("div", { className: "w-full flex justify-end", children: /* @__PURE__ */ G.jsx("div", { className: "boomi-agent-bubble from-user", children: /* @__PURE__ */ G.jsx("div", { className: "boomi-agent-bubble-text", children: e(t) }) }) }) });
-  if (o && ((h = t == null ? void 0 : t.metadata) == null ? void 0 : h.event) === "application_auth_required" && m && typeof m == "object") {
-    const p = m, a = typeof p.authorization_url == "string" ? p.authorization_url : "", c = typeof p.application_name == "string" ? p.application_name : "application", d = typeof p.sign_in_message == "string" ? p.sign_in_message : "Authorization required";
+  if (o && ((h = t == null ? void 0 : t.metadata) == null ? void 0 : h.event) === "application_auth_required" && g && typeof g == "object") {
+    const p = g, a = typeof p.authorization_url == "string" ? p.authorization_url : "", c = typeof p.application_name == "string" ? p.application_name : "application", d = typeof p.sign_in_message == "string" ? p.sign_in_message : "Authorization required";
     return /* @__PURE__ */ G.jsx("div", { className: "w-full", children: /* @__PURE__ */ G.jsx("div", { className: "w-full max-w-[1024px] px-4 md:px-6", children: /* @__PURE__ */ G.jsxs("div", { className: "rounded-xl border border-[var(--boomi-card-border)] bg-[var(--boomi-card-bg)] shadow-[var(--boomi-card-shadow)] p-4 md:p-5", children: [
       /* @__PURE__ */ G.jsx("div", { className: "text-sm uppercase tracking-wide text-[var(--boomi-muted)]", children: "Authorization required" }),
       /* @__PURE__ */ G.jsx("div", { className: "mt-1 text-base font-semibold text-[var(--boomi-page-fg-color)]", children: c }),
@@ -37702,7 +37713,7 @@ const mM = (t) => {
     ] }) }) });
   }
   if ((t == null ? void 0 : t.type) === "error") {
-    const p = m && typeof m == "object" ? m : {}, a = typeof p.title == "string" && p.title.trim() ? p.title : "Agent error", c = typeof p.message == "string" && p.message || typeof p.data == "string" && p.data || void 0, d = p.raw ?? p, u = {
+    const p = g && typeof g == "object" ? g : {}, a = typeof p.title == "string" && p.title.trim() ? p.title : "Agent error", c = typeof p.message == "string" && p.message || typeof p.data == "string" && p.data || void 0, d = p.raw ?? p, u = {
       ...p,
       title: a,
       message: c,
@@ -37719,10 +37730,10 @@ const mM = (t) => {
       }
     ) });
   }
-  if (m && typeof m == "object") {
-    const p = m, a = p.success === !1 && typeof p.error == "string" && p.error.trim() || p.success === !1 && typeof p.message == "string" && p.message.trim() || "";
+  if (g && typeof g == "object") {
+    const p = g, a = p.success === !1 && typeof p.error == "string" && p.error.trim() || p.success === !1 && typeof p.message == "string" && p.message.trim() || "";
     if (a) {
-      const c = { title: "Agent error", message: a, raw: m };
+      const c = { title: "Agent error", message: a, raw: g };
       return /* @__PURE__ */ G.jsx("div", { className: "w-full", children: /* @__PURE__ */ G.jsx(
         bp,
         {
@@ -37736,26 +37747,26 @@ const mM = (t) => {
     }
   }
   if ((t == null ? void 0 : t.type) === "text") {
-    if (m && typeof m == "object" && typeof m.html == "string")
+    if (g && typeof g == "object" && typeof g.html == "string")
       return /* @__PURE__ */ G.jsx("div", { className: "w-full", children: /* @__PURE__ */ G.jsx("div", { className: "w-full max-w-[1024px] px-4 md:px-6 leading-7 text-[var(--boomi-page-fg-color)]", children: /* @__PURE__ */ G.jsx(
         Pf,
         {
-          title: m.title,
-          value: m.html,
+          title: g.title,
+          value: g.html,
           treatStringAsHTML: !0
         }
       ) }) });
-    const p = typeof m == "string" ? m : m != null ? String(m) : "";
+    const p = typeof g == "string" ? g : g != null ? String(g) : "";
     return /* @__PURE__ */ G.jsx("div", { className: "w-full", children: /* @__PURE__ */ G.jsx("div", { className: "w-full max-w-[1024px] px-4 md:px-6 leading-7 text-[var(--boomi-page-fg-color)]", children: /* @__PURE__ */ G.jsx(Pf, { value: mM(p), treatStringAsHTML: !0 }) }) });
   }
-  return m && typeof m == "object" && typeof m.html == "string" ? /* @__PURE__ */ G.jsx("div", { className: "w-full", children: /* @__PURE__ */ G.jsx("div", { className: "w-full max-w-[1024px] px-4 md:px-6 leading-7 text-[var(--boomi-page-fg-color)]", children: /* @__PURE__ */ G.jsx(
+  return g && typeof g == "object" && typeof g.html == "string" ? /* @__PURE__ */ G.jsx("div", { className: "w-full", children: /* @__PURE__ */ G.jsx("div", { className: "w-full max-w-[1024px] px-4 md:px-6 leading-7 text-[var(--boomi-page-fg-color)]", children: /* @__PURE__ */ G.jsx(
     Pf,
     {
-      title: m.title,
-      value: m.html,
+      title: g.title,
+      value: g.html,
       treatStringAsHTML: !0
     }
-  ) }) }) : /* @__PURE__ */ G.jsx("div", { className: "w-full", children: /* @__PURE__ */ G.jsx("div", { className: "w-full max-w-[1024px] px-4 md:px-6 leading-7 text-[var(--boomi-page-fg-color)]", children: /* @__PURE__ */ G.jsx(hM, { value: m ?? (t == null ? void 0 : t.content), language: "json", title: "Data" }) }) });
+  ) }) }) : /* @__PURE__ */ G.jsx("div", { className: "w-full", children: /* @__PURE__ */ G.jsx("div", { className: "w-full max-w-[1024px] px-4 md:px-6 leading-7 text-[var(--boomi-page-fg-color)]", children: /* @__PURE__ */ G.jsx(hM, { value: g ?? (t == null ? void 0 : t.content), language: "json", title: "Data" }) }) });
 };
 /**
  * @file message.ts
