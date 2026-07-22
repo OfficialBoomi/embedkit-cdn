@@ -257,11 +257,11 @@ function DC() {
   function A() {
   }
   A.prototype = y.prototype;
-  function N(F, K, V) {
+  function C(F, K, V) {
     this.props = F, this.context = K, this.refs = b, this.updater = V || a;
   }
-  var C = N.prototype = new A();
-  C.constructor = N, f(C, y.prototype), C.isPureReactComponent = !0;
+  var N = C.prototype = new A();
+  N.constructor = C, f(N, y.prototype), N.isPureReactComponent = !0;
   var S = Array.isArray;
   function T() {
   }
@@ -424,7 +424,7 @@ function DC() {
       return;
     }
     console.error(F);
-  }, Q = {
+  }, W = {
     map: z,
     forEach: function(F, K, V) {
       z(
@@ -454,7 +454,7 @@ function DC() {
       return F;
     }
   };
-  return Qe.Activity = c, Qe.Children = Q, Qe.Component = y, Qe.Fragment = i, Qe.Profiler = w, Qe.PureComponent = N, Qe.StrictMode = r, Qe.Suspense = h, Qe.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = k, Qe.__COMPILER_RUNTIME = {
+  return Qe.Activity = c, Qe.Children = W, Qe.Component = y, Qe.Fragment = i, Qe.Profiler = w, Qe.PureComponent = C, Qe.StrictMode = r, Qe.Suspense = h, Qe.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = k, Qe.__COMPILER_RUNTIME = {
     __proto__: null,
     c: function(F) {
       return k.H.useMemoCache(F);
@@ -586,11 +586,11 @@ var Zv;
 function sa() {
   return Zv || (Zv = 1, lf.exports = DC()), lf.exports;
 }
-var W = sa();
-const tt = /* @__PURE__ */ kl(W), tm = /* @__PURE__ */ kC({
+var Q = sa();
+const tt = /* @__PURE__ */ kl(Q), tm = /* @__PURE__ */ kC({
   __proto__: null,
   default: tt
-}, [W]);
+}, [Q]);
 var cf = { exports: {} }, fl = {}, uf = { exports: {} }, df = {};
 /**
  * @license React
@@ -608,9 +608,9 @@ function MC() {
       var H = L.length;
       L.push(z);
       e: for (; 0 < H; ) {
-        var P = H - 1 >>> 1, Q = L[P];
-        if (0 < w(Q, z))
-          L[P] = z, L[H] = Q, H = P;
+        var P = H - 1 >>> 1, W = L[P];
+        if (0 < w(W, z))
+          L[P] = z, L[H] = W, H = P;
         else break e;
       }
     }
@@ -622,11 +622,11 @@ function MC() {
       var z = L[0], H = L.pop();
       if (H !== z) {
         L[0] = H;
-        e: for (var P = 0, Q = L.length, F = Q >>> 1; P < F; ) {
+        e: for (var P = 0, W = L.length, F = W >>> 1; P < F; ) {
           var K = 2 * (P + 1) - 1, V = L[K], X = K + 1, q = L[X];
           if (0 > w(V, H))
-            X < Q && 0 > w(q, V) ? (L[P] = q, L[X] = H, P = X) : (L[P] = V, L[K] = H, P = K);
-          else if (X < Q && 0 > w(q, H))
+            X < W && 0 > w(q, V) ? (L[P] = q, L[X] = H, P = X) : (L[P] = V, L[K] = H, P = K);
+          else if (X < W && 0 > w(q, H))
             L[P] = q, L[X] = H, P = X;
           else break e;
         }
@@ -648,8 +648,8 @@ function MC() {
         return g.now() - E;
       };
     }
-    var h = [], m = [], s = 1, c = null, u = 3, d = !1, a = !1, f = !1, b = !1, y = typeof setTimeout == "function" ? setTimeout : null, A = typeof clearTimeout == "function" ? clearTimeout : null, N = typeof setImmediate < "u" ? setImmediate : null;
-    function C(L) {
+    var h = [], m = [], s = 1, c = null, u = 3, d = !1, a = !1, f = !1, b = !1, y = typeof setTimeout == "function" ? setTimeout : null, A = typeof clearTimeout == "function" ? clearTimeout : null, C = typeof setImmediate < "u" ? setImmediate : null;
+    function N(L) {
       for (var z = i(m); z !== null; ) {
         if (z.callback === null) r(m);
         else if (z.startTime <= L)
@@ -659,7 +659,7 @@ function MC() {
       }
     }
     function S(L) {
-      if (f = !1, C(L), !a)
+      if (f = !1, N(L), !a)
         if (i(h) !== null)
           a = !0, T || (T = !0, D());
         else {
@@ -682,18 +682,18 @@ function MC() {
             var H = u;
             try {
               t: {
-                for (C(L), c = i(h); c !== null && !(c.expirationTime > L && $()); ) {
+                for (N(L), c = i(h); c !== null && !(c.expirationTime > L && $()); ) {
                   var P = c.callback;
                   if (typeof P == "function") {
                     c.callback = null, u = c.priorityLevel;
-                    var Q = P(
+                    var W = P(
                       c.expirationTime <= L
                     );
-                    if (L = t.unstable_now(), typeof Q == "function") {
-                      c.callback = Q, C(L), z = !0;
+                    if (L = t.unstable_now(), typeof W == "function") {
+                      c.callback = W, N(L), z = !0;
                       break t;
                     }
-                    c === i(h) && r(h), C(L);
+                    c === i(h) && r(h), N(L);
                   } else r(h);
                   c = i(h);
                 }
@@ -718,9 +718,9 @@ function MC() {
       }
     }
     var D;
-    if (typeof N == "function")
+    if (typeof C == "function")
       D = function() {
-        N(B);
+        C(B);
       };
     else if (typeof MessageChannel < "u") {
       var O = new MessageChannel(), x = O.port2;
@@ -785,28 +785,28 @@ function MC() {
       var P = t.unstable_now();
       switch (typeof H == "object" && H !== null ? (H = H.delay, H = typeof H == "number" && 0 < H ? P + H : P) : H = P, L) {
         case 1:
-          var Q = -1;
+          var W = -1;
           break;
         case 2:
-          Q = 250;
+          W = 250;
           break;
         case 5:
-          Q = 1073741823;
+          W = 1073741823;
           break;
         case 4:
-          Q = 1e4;
+          W = 1e4;
           break;
         default:
-          Q = 5e3;
+          W = 5e3;
       }
-      return Q = H + Q, L = {
+      return W = H + W, L = {
         id: s++,
         callback: z,
         priorityLevel: L,
         startTime: H,
-        expirationTime: Q,
+        expirationTime: W,
         sortIndex: -1
-      }, H > P ? (L.sortIndex = H, e(m, L), i(h) === null && L === i(m) && (f ? (A(k), k = -1) : f = !0, _(S, H - P))) : (L.sortIndex = Q, e(h, L), a || d || (a = !0, T || (T = !0, D()))), L;
+      }, H > P ? (L.sortIndex = H, e(m, L), i(h) === null && L === i(m) && (f ? (A(k), k = -1) : f = !0, _(S, H - P))) : (L.sortIndex = W, e(h, L), a || d || (a = !0, T || (T = !0, D()))), L;
     }, t.unstable_shouldYield = $, t.unstable_wrapCallback = function(L) {
       var z = u;
       return function() {
@@ -1104,7 +1104,7 @@ function HC() {
     }
     return null;
   }
-  var c = Object.assign, u = Symbol.for("react.element"), d = Symbol.for("react.transitional.element"), a = Symbol.for("react.portal"), f = Symbol.for("react.fragment"), b = Symbol.for("react.strict_mode"), y = Symbol.for("react.profiler"), A = Symbol.for("react.consumer"), N = Symbol.for("react.context"), C = Symbol.for("react.forward_ref"), S = Symbol.for("react.suspense"), T = Symbol.for("react.suspense_list"), k = Symbol.for("react.memo"), M = Symbol.for("react.lazy"), I = Symbol.for("react.activity"), $ = Symbol.for("react.memo_cache_sentinel"), B = Symbol.iterator;
+  var c = Object.assign, u = Symbol.for("react.element"), d = Symbol.for("react.transitional.element"), a = Symbol.for("react.portal"), f = Symbol.for("react.fragment"), b = Symbol.for("react.strict_mode"), y = Symbol.for("react.profiler"), A = Symbol.for("react.consumer"), C = Symbol.for("react.context"), N = Symbol.for("react.forward_ref"), S = Symbol.for("react.suspense"), T = Symbol.for("react.suspense_list"), k = Symbol.for("react.memo"), M = Symbol.for("react.lazy"), I = Symbol.for("react.activity"), $ = Symbol.for("react.memo_cache_sentinel"), B = Symbol.iterator;
   function D(n) {
     return n === null || typeof n != "object" ? null : (n = B && n[B] || n["@@iterator"], typeof n == "function" ? n : null);
   }
@@ -1132,11 +1132,11 @@ function HC() {
       switch (n.$$typeof) {
         case a:
           return "Portal";
-        case N:
+        case C:
           return n.displayName || "Context";
         case A:
           return (n._context.displayName || "Context") + ".Consumer";
-        case C:
+        case N:
           var o = n.render;
           return n = n.displayName, n || (n = o.displayName || o.name || "", n = n !== "" ? "ForwardRef(" + n + ")" : "ForwardRef"), n;
         case k:
@@ -1155,15 +1155,15 @@ function HC() {
     data: null,
     method: null,
     action: null
-  }, P = [], Q = -1;
+  }, P = [], W = -1;
   function F(n) {
     return { current: n };
   }
   function K(n) {
-    0 > Q || (n.current = P[Q], P[Q] = null, Q--);
+    0 > W || (n.current = P[W], P[W] = null, W--);
   }
   function V(n, o) {
-    Q++, P[Q] = n.current, n.current = o;
+    W++, P[W] = n.current, n.current = o;
   }
   var X = F(null), q = F(null), Z = F(null), ne = F(null);
   function ae(n, o) {
@@ -2599,13 +2599,13 @@ Error generating stack: ` + v.message + `
         default:
           if (typeof n == "object" && n !== null)
             switch (n.$$typeof) {
-              case N:
+              case C:
                 j = 10;
                 break e;
               case A:
                 j = 9;
                 break e;
-              case C:
+              case N:
                 j = 11;
                 break e;
               case k:
@@ -2912,7 +2912,7 @@ Error generating stack: ` + v.message + `
       });
     };
   }, mL = t.unstable_scheduleCallback, pL = t.unstable_NormalPriority, nn = {
-    $$typeof: N,
+    $$typeof: C,
     Consumer: null,
     Provider: null,
     _currentValue: null,
@@ -3157,7 +3157,7 @@ Error generating stack: ` + v.message + `
           ), ie.return = se, ie;
         if (typeof ie.then == "function")
           return Ee(se, cc(ie), ce);
-        if (ie.$$typeof === N)
+        if (ie.$$typeof === C)
           return Ee(
             se,
             rc(se, ie),
@@ -3189,7 +3189,7 @@ Error generating stack: ` + v.message + `
             cc(ce),
             ve
           );
-        if (ce.$$typeof === N)
+        if (ce.$$typeof === C)
           return de(
             se,
             ie,
@@ -3232,7 +3232,7 @@ Error generating stack: ` + v.message + `
             cc(ve),
             He
           );
-        if (ve.$$typeof === N)
+        if (ve.$$typeof === C)
           return fe(
             se,
             ie,
@@ -3408,7 +3408,7 @@ Error generating stack: ` + v.message + `
             cc(ce),
             ve
           );
-        if (ce.$$typeof === N)
+        if (ce.$$typeof === C)
           return Rt(
             se,
             ie,
@@ -3733,7 +3733,7 @@ Error generating stack: ` + v.message + `
   function gc(n) {
     if (n !== null && typeof n == "object") {
       if (typeof n.then == "function") return Gs(n);
-      if (n.$$typeof === N) return vn(n);
+      if (n.$$typeof === C) return vn(n);
     }
     throw Error(r(438, String(n)));
   }
@@ -5436,7 +5436,7 @@ Error generating stack: ` + v.message + `
           else {
             if (n != null) {
               var R = n.$$typeof;
-              if (R === C) {
+              if (R === N) {
                 o.tag = 11, o = sb(
                   null,
                   o,
@@ -10177,7 +10177,7 @@ Error generating stack: ` + v.message + `
     }
   }
   var ll = {
-    $$typeof: N,
+    $$typeof: C,
     Provider: null,
     Consumer: null,
     _currentValue: H,
@@ -10779,10 +10779,10 @@ function zC() {
   return t(), cf.exports = HC(), cf.exports;
 }
 var BC = zC();
-const FC = /* @__PURE__ */ kl(BC), YS = W.createContext(void 0);
+const FC = /* @__PURE__ */ kl(BC), YS = Q.createContext(void 0);
 zi.get();
 function An() {
-  const t = W.useContext(YS);
+  const t = Q.useContext(YS);
   if (!t) throw new Error("usePlugin must be used within a PluginContextProvider");
   return t;
 }
@@ -10803,46 +10803,46 @@ const PC = ({
   nonce: g,
   boomiConfig: E
 }) => {
-  const h = zi.get(), [m, s] = W.useState(h.getToken()), [c, u] = W.useState(!1), [d] = W.useState(!0), a = W.useMemo(
+  const h = zi.get(), [m, s] = Q.useState(h.getToken()), [c, u] = Q.useState(!1), [d] = Q.useState(!0), a = Q.useMemo(
     () => w.replace(/\/$/, ""),
     [w]
   );
-  W.useEffect(() => {
+  Q.useEffect(() => {
     let y;
     return h.bootstrap({ serverBase: a, tenantId: p, nonce: g }), y = h.subscribeToken((A) => s(A)), () => {
       y == null || y();
     };
   }, [h, a, p, g]);
-  const f = W.useMemo(() => {
+  const f = Q.useMemo(() => {
     const y = a;
     return {
-      get: (A, N) => h.fetchWithJwt(`${y}${A}`, {
+      get: (A, C) => h.fetchWithJwt(`${y}${A}`, {
         method: "GET",
-        ...N,
-        headers: eu(N == null ? void 0 : N.headers, p)
+        ...C,
+        headers: eu(C == null ? void 0 : C.headers, p)
       }),
-      post: (A, N, C) => {
-        const S = r0(N), T = new Headers(eu(C == null ? void 0 : C.headers, p));
-        return !S && N !== void 0 && !T.has("Content-Type") && T.set("Content-Type", "application/json; charset=utf-8"), h.fetchWithJwt(`${y}${A}`, {
+      post: (A, C, N) => {
+        const S = r0(C), T = new Headers(eu(N == null ? void 0 : N.headers, p));
+        return !S && C !== void 0 && !T.has("Content-Type") && T.set("Content-Type", "application/json; charset=utf-8"), h.fetchWithJwt(`${y}${A}`, {
           method: "POST",
-          ...C,
+          ...N,
           headers: T,
-          body: N === void 0 ? void 0 : S ? N : JSON.stringify(N)
+          body: C === void 0 ? void 0 : S ? C : JSON.stringify(C)
         });
       },
-      put: (A, N, C) => {
-        const S = r0(N), T = new Headers(eu(C == null ? void 0 : C.headers, p));
-        return !S && N !== void 0 && !T.has("Content-Type") && T.set("Content-Type", "application/json; charset=utf-8"), h.fetchWithJwt(`${y}${A}`, {
+      put: (A, C, N) => {
+        const S = r0(C), T = new Headers(eu(N == null ? void 0 : N.headers, p));
+        return !S && C !== void 0 && !T.has("Content-Type") && T.set("Content-Type", "application/json; charset=utf-8"), h.fetchWithJwt(`${y}${A}`, {
           method: "PUT",
-          ...C,
+          ...N,
           headers: T,
-          body: N === void 0 ? void 0 : S ? N : JSON.stringify(N)
+          body: C === void 0 ? void 0 : S ? C : JSON.stringify(C)
         });
       },
-      del: (A, N) => h.fetchWithJwt(`${y}${A}`, {
+      del: (A, C) => h.fetchWithJwt(`${y}${A}`, {
         method: "DELETE",
-        ...N,
-        headers: eu(N == null ? void 0 : N.headers, p)
+        ...C,
+        headers: eu(C == null ? void 0 : C.headers, p)
       })
     };
   }, [h, a, p]), b = {
@@ -10941,18 +10941,18 @@ const je = {
   },
   debug: (...t) => {
   }
-}, WC = W.forwardRef(function(e, i) {
-  var A, N, C, S, T;
-  const { initialComponent: r, initialProps: w } = e, { isReady: p, boomiConfig: g } = An(), [E, h] = W.useState(r ?? null), [m, s] = W.useState(
+}, WC = Q.forwardRef(function(e, i) {
+  var A, C, N, S, T;
+  const { initialComponent: r, initialProps: w } = e, { isReady: p, boomiConfig: g } = An(), [E, h] = Q.useState(r ?? null), [m, s] = Q.useState(
     w ?? {}
-  ), [c, u] = W.useState(0), d = W.useCallback(
+  ), [c, u] = Q.useState(0), d = Q.useCallback(
     (k, M, I) => {
       h(() => k), s(M ?? {}), I != null && I.forceRemount ? u(($) => $ + 1) : u(($) => $ + 1);
     },
     []
   );
-  W.useImperativeHandle(i, () => ({ updateComponent: d }), [d]);
-  const a = m == null ? void 0 : m.__componentName, f = (m == null ? void 0 : m.integrationPackId) ?? ((A = m == null ? void 0 : m.integration) == null ? void 0 : A.integrationPackId) ?? ((N = m == null ? void 0 : m.integration) == null ? void 0 : N.id) ?? (m == null ? void 0 : m.componentKey) ?? void 0, b = a === "Agent" ? (T = (S = (C = g == null ? void 0 : g.agents) == null ? void 0 : C[f]) == null ? void 0 : S.ui) == null ? void 0 : T.mode : void 0, y = W.useMemo(() => {
+  Q.useImperativeHandle(i, () => ({ updateComponent: d }), [d]);
+  const a = m == null ? void 0 : m.__componentName, f = (m == null ? void 0 : m.integrationPackId) ?? ((A = m == null ? void 0 : m.integration) == null ? void 0 : A.integrationPackId) ?? ((C = m == null ? void 0 : m.integration) == null ? void 0 : C.id) ?? (m == null ? void 0 : m.componentKey) ?? void 0, b = a === "Agent" ? (T = (S = (N = g == null ? void 0 : g.agents) == null ? void 0 : N[f]) == null ? void 0 : S.ui) == null ? void 0 : T.mode : void 0, y = Q.useMemo(() => {
     const k = { ...m };
     return "__componentName" in k && delete k.__componentName, k;
   }, [m]);
@@ -11182,7 +11182,7 @@ const tu = { color: "var(--boomi-notice-icon)" }, mN = {
   buttonLabel: r = "Go Back",
   onButtonClick: w = () => window.history.back()
 }) => {
-  const [p, g] = W.useState(!0), E = () => {
+  const [p, g] = Q.useState(!0), E = () => {
     t.onClose ? t.onClose() : g(!1);
   };
   if (!p) return null;
@@ -11230,7 +11230,7 @@ const tu = { color: "var(--boomi-notice-icon)" }, mN = {
     }
   );
 };
-class JS extends W.Component {
+class JS extends Q.Component {
   constructor() {
     super(...arguments), this.state = { hasError: !1 }, this.handleClose = () => {
       this.setState({ hasError: !1, error: void 0 });
@@ -11260,7 +11260,7 @@ class JS extends W.Component {
     ) : this.props.children;
   }
 }
-const pN = '/*! tailwindcss v4.1.14 | MIT License | https://tailwindcss.com */@layer properties{@supports ((-webkit-hyphens:none) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,:before,:after,::backdrop{--tw-translate-x:0;--tw-translate-y:0;--tw-translate-z:0;--tw-scale-x:1;--tw-scale-y:1;--tw-scale-z:1;--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial;--tw-space-y-reverse:0;--tw-space-x-reverse:0;--tw-divide-y-reverse:0;--tw-border-style:solid;--tw-leading:initial;--tw-font-weight:initial;--tw-tracking:initial;--tw-shadow:0 0 #0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 #0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 #0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 #0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000;--tw-outline-style:solid;--tw-blur:initial;--tw-brightness:initial;--tw-contrast:initial;--tw-grayscale:initial;--tw-hue-rotate:initial;--tw-invert:initial;--tw-opacity:initial;--tw-saturate:initial;--tw-sepia:initial;--tw-drop-shadow:initial;--tw-drop-shadow-color:initial;--tw-drop-shadow-alpha:100%;--tw-drop-shadow-size:initial;--tw-backdrop-blur:initial;--tw-backdrop-brightness:initial;--tw-backdrop-contrast:initial;--tw-backdrop-grayscale:initial;--tw-backdrop-hue-rotate:initial;--tw-backdrop-invert:initial;--tw-backdrop-opacity:initial;--tw-backdrop-saturate:initial;--tw-backdrop-sepia:initial;--tw-duration:initial;--tw-ease:initial}}}@layer theme{:root,:host{--font-sans:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--color-red-100:oklch(93.6% .032 17.717);--color-red-400:oklch(70.4% .191 22.216);--color-red-500:oklch(63.7% .237 25.331);--color-red-600:oklch(57.7% .245 27.325);--color-yellow-100:oklch(97.3% .071 103.193);--color-yellow-600:oklch(68.1% .162 75.834);--color-green-100:oklch(96.2% .044 156.743);--color-green-600:oklch(62.7% .194 149.214);--color-green-700:oklch(52.7% .154 150.069);--color-blue-600:oklch(54.6% .245 262.881);--color-indigo-100:oklch(93% .034 272.788);--color-indigo-400:oklch(67.3% .182 276.935);--color-indigo-500:oklch(58.5% .233 277.117);--color-indigo-600:oklch(51.1% .262 276.966);--color-indigo-700:oklch(45.7% .24 277.023);--color-gray-100:oklch(96.7% .003 264.542);--color-gray-300:oklch(87.2% .01 258.338);--color-gray-400:oklch(70.7% .022 261.325);--color-gray-500:oklch(55.1% .027 264.364);--color-gray-600:oklch(44.6% .03 256.802);--color-gray-700:oklch(37.3% .034 259.733);--color-gray-800:oklch(27.8% .033 256.848);--color-black:#000;--color-white:#fff;--spacing:.25rem;--container-xs:20rem;--container-sm:24rem;--container-md:28rem;--container-lg:32rem;--container-xl:36rem;--text-xs:.75rem;--text-xs--line-height:calc(1/.75);--text-sm:.875rem;--text-sm--line-height:calc(1.25/.875);--text-base:1rem;--text-base--line-height: 1.5 ;--text-lg:1.125rem;--text-lg--line-height:calc(1.75/1.125);--text-xl:1.25rem;--text-xl--line-height:calc(1.75/1.25);--text-2xl:1.5rem;--text-2xl--line-height:calc(2/1.5);--text-3xl:1.875rem;--text-3xl--line-height: 1.2 ;--font-weight-thin:100;--font-weight-normal:400;--font-weight-medium:500;--font-weight-semibold:600;--font-weight-bold:700;--font-weight-extrabold:800;--tracking-wide:.025em;--leading-snug:1.375;--radius-sm:.25rem;--radius-md:.375rem;--radius-lg:.5rem;--radius-xl:.75rem;--radius-2xl:1rem;--ease-in:cubic-bezier(.4,0,1,1);--ease-out:cubic-bezier(0,0,.2,1);--animate-spin:spin 1s linear infinite;--default-transition-duration:.15s;--default-transition-timing-function:cubic-bezier(.4,0,.2,1);--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono)}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;line-height:1.5;font-family:var(--default-font-family,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::-moz-placeholder{opacity:1}::placeholder{opacity:1}@supports (not (-webkit-appearance:-apple-pay-button)) or (contain-intrinsic-size:1px){::-moz-placeholder{color:currentColor}::placeholder{color:currentColor}@supports (color:color-mix(in lab,red,red)){::-moz-placeholder{color:color-mix(in oklab,currentcolor 50%,transparent)}::placeholder{color:color-mix(in oklab,currentcolor 50%,transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}::-webkit-calendar-picker-indicator{line-height:1}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){-webkit-appearance:button;-moz-appearance:button;appearance:button}::file-selector-button{-webkit-appearance:button;-moz-appearance:button;appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}:host{--boomi-font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--default-font-family:var(--boomi-font);--boomi-danger:oklch(58.6% .253 17.585);--boomi-danger-contrast:#fff;--boomi-danger-fg:var(--boomi-danger);--boomi-danger-border:var(--boomi-danger);--boomi-danger-bg:var(--boomi-danger);height:100%;display:block}@supports (color:color-mix(in lab,red,red)){:host{--boomi-danger-bg:color-mix(in srgb,var(--boomi-danger)10%,transparent)}}:host{--boomi-danger-ring:0 0 0 2px var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-danger-ring:0 0 0 2px color-mix(in srgb,var(--boomi-danger)35%,transparent)}}:host{--boomi-error-soft:var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-error-soft:color-mix(in srgb,var(--boomi-danger)70%,#fff)}}:host{--boomi-btn-primary-bg:oklch(51.1% .262 276.966);--boomi-btn-primary-fg:#fff;--boomi-btn-primary-border:oklch(45.7% .24 277.023);--boomi-btn-primary-shadow:0 4px 6px -1px #432dd71a,0 2px 4px -2px #432dd71a;--boomi-btn-primary-bg-hover:oklch(45.7% .24 277.023);--boomi-btn-primary-bg-active:oklch(39.8% .195 277.366);--boomi-btn-secondary-bg:oklch(92.8% .006 264.531);--boomi-btn-secondary-fg:oklch(37.3% .034 259.733);--boomi-btn-secondary-border:oklch(87.2% .01 258.338);--boomi-btn-secondary-shadow:0 4px 6px -1px #d1d5dc1a,0 2px 4px -2px #d1d5dc1a;--boomi-btn-secondary-bg-hover:oklch(87.2% .01 258.338);--boomi-btn-secondary-bg-active:oklch(70.7% .022 261.325);--boomi-input-bg:#fff;--boomi-input-fg:oklch(27.8% .033 256.848);--boomi-input-placeholder:oklch(70.7% .022 261.325);--boomi-input-border:oklch(87.2% .01 258.338);--boomi-input-shadow:0 0 0 0 #0000;--boomi-input-border-focus:oklch(58.5% .233 277.117);--boomi-input-shadow-focus:0 0 0 2px #625fff59;--boomi-input-outline-focus:var(--boomi-input-border-focus);--boomi-input-border-invalid:var(--boomi-danger);--boomi-input-outline-invalid:var(--boomi-danger);--boomi-input-bg-disabled:oklch(98.5% .002 247.839);--boomi-input-fg-disabled:oklch(55.1% .027 264.364);--boomi-input-border-disabled:oklch(92.8% .006 264.531);--boomi-root-bg-color:#fff;--boomi-root-fg-color:oklch(37.3% .034 259.733);--boomi-page-bg-color:#fff;--boomi-page-fg-color:oklch(37.3% .034 259.733);--boomi-show-header:1;--boomi-header-bg-color:#fff;--boomi-header-fg-color:oklch(37.3% .034 259.733);--boomi-header-fg-hover:oklch(44.6% .03 256.802);--boomi-header-border-color:oklch(92.8% .006 264.531);--boomi-header-shadow:0 4px 6px -1px #e5e7eb1a,0 2px 4px -2px #e5e7eb1a;--boomi-table-header-bg:oklch(96.7% .003 264.542);--boomi-table-header-fg:oklch(37.3% .034 259.733);--boomi-table-header-border:oklch(87.2% .01 258.338);--boomi-table-row-odd-bg:#fff;--boomi-table-row-even-bg:oklch(98.5% .002 247.839);--boomi-table-row-hover-shadow:0 4px 6px -1px #0000001a,0 2px 4px -2px #0000001a;--boomi-card-border:oklch(78.5% .115 274.713);--boomi-card-bg:oklch(98.5% .002 247.839);--boomi-card-shadow:0 4px 6px -1px #0000001a,0 2px 4px -2px #0000001a;--boomi-card-hover-shadow:0 8px 10px -1px #6366f133,0 4px 6px -2px #6366f11a;--boomi-card-hover-scale:scale(1.01);--boomi-agent-text-bg:var(--boomi-agent-pane-bg,var(--boomi-page-bg-color))}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-text-bg:color-mix(in srgb,var(--boomi-agent-pane-bg,var(--boomi-page-bg-color))94%,transparent)}}:host{--boomi-agent-text-border:var(--boomi-agent-pane-fg,var(--boomi-page-fg-color))}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-text-border:color-mix(in srgb,var(--boomi-agent-pane-fg,var(--boomi-page-fg-color))14%,transparent)}}:host{--boomi-agent-text-fg:var(--boomi-agent-pane-fg,var(--boomi-page-fg-color));--boomi-agent-text-copy-bg:var(--boomi-agent-text-border)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-text-copy-bg:color-mix(in srgb,var(--boomi-agent-text-border)45%,transparent)}}:host{--boomi-agent-text-copy-bg-hover:var(--boomi-agent-text-border)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-text-copy-bg-hover:color-mix(in srgb,var(--boomi-agent-text-border)65%,transparent)}}:host{--boomi-agent-text-copy-fg:var(--boomi-agent-text-fg);--boomi-sidebar-bg:var(--boomi-card-bg)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-sidebar-bg:color-mix(in srgb,var(--boomi-card-bg)92%,transparent)}}:host{--boomi-sidebar-fg:var(--boomi-page-fg-color);--boomi-sidebar-header-bg:var(--boomi-card-bg)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-sidebar-header-bg:color-mix(in srgb,var(--boomi-card-bg)80%,transparent)}}:host{--boomi-sidebar-border:var(--boomi-card-border);--boomi-sidebar-header-shadow:0 1px 2px var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-sidebar-header-shadow:0 1px 2px color-mix(in srgb,var(--boomi-card-border)35%,transparent)}}:host{--boomi-sidebar-btn-bg:var(--boomi-btn-primary-bg);--boomi-sidebar-btn-bg-hover:var(--boomi-btn-primary-bg-hover);--boomi-sidebar-btn-fg:var(--boomi-btn-primary-fg);--boomi-sidebar-btn-border:var(--boomi-btn-primary-border);--boomi-sidebar-secondary-btn-bg:var(--boomi-btn-secondary-bg);--boomi-sidebar-secondary-btn-bg-hover:var(--boomi-btn-secondary-bg-hover);--boomi-sidebar-secondary-btn-fg:var(--boomi-btn-secondary-fg);--boomi-sidebar-secondary-btn-border:var(--boomi-btn-secondary-border);--boomi-menu-bg:#fff;--boomi-menu-fg:oklch(37.3% .034 259.733);--boomi-menu-border:oklch(92.8% .006 264.531);--boomi-menu-shadow:0 4px 6px -1px #00000014,0 2px 4px -2px #0000000f;--boomi-menu-item-bg:transparent;--boomi-menu-item-bg-hover:oklch(96.7% .003 264.542);--boomi-menu-item-fg:oklch(37.3% .034 259.733);--boomi-menu-item-fg-hover:oklch(27.8% .033 256.848);--boomi-menu-divider:oklch(92.8% .006 264.531);--boomi-menu-danger-fg:var(--boomi-danger-fg);--boomi-menu-danger-fg-hover:var(--boomi-danger-fg);--boomi-menu-danger-bg-hover:var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-menu-danger-bg-hover:color-mix(in srgb,var(--boomi-danger)10%,transparent)}}:host{--boomi-modal-top-offset:1rem;--boomi-modal-overlay-bg:#00000080;--boomi-modal-bg:#fff;--boomi-modal-fg:oklch(27.8% .033 256.848);--boomi-modal-border:1px solid oklch(92.8% .006 264.531);--boomi-modal-shadow:0 20px 25px -5px #0000001a,0 8px 10px -6px #0000001a;--boomi-modal-close-fg:oklch(70.7% .022 261.325);--boomi-modal-close-hover-fg:oklch(37.3% .034 259.733);--boomi-form-label-fg:oklch(37.3% .034 259.733);--boomi-form-helper-fg:oklch(55.1% .027 264.364);--boomi-form-error-fg:var(--boomi-danger-fg);--boomi-form-required-fg:oklch(71.2% .194 13.428);--boomi-select-bg:#fff;--boomi-select-fg:oklch(27.8% .033 256.848);--boomi-select-border:oklch(87.2% .01 258.338);--boomi-select-shadow:0 0 0 0 #0000;--boomi-select-border-focus:oklch(58.5% .233 277.117);--boomi-select-shadow-focus:0 0 0 2px #625fff59;--boomi-select-icon:oklch(70.7% .022 261.325);--boomi-select-bg-disabled:oklch(98.5% .002 247.839);--boomi-select-fg-disabled:oklch(55.1% .027 264.364);--boomi-select-border-disabled:oklch(92.8% .006 264.531);--boomi-select-border-invalid:var(--boomi-danger);--boomi-options-bg:#fff;--boomi-options-fg:oklch(27.8% .033 256.848);--boomi-options-border:oklch(92.8% .006 264.531);--boomi-options-shadow:0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a;--boomi-options-search-bg:#fff;--boomi-option-bg-active:oklch(96.7% .003 264.542);--boomi-option-fg-selected:oklch(21% .034 264.665);--boomi-loader-dot-bg:oklch(21% .034 264.665);--boomi-loader-dot-size:.75rem;--boomi-loader-dot1-opacity:.25;--boomi-loader-dot2-opacity:.6;--boomi-loader-dot3-opacity:1;--boomi-loader-msg-fg:oklch(44.6% .03 256.802);--boomi-spinner-overlay-bg:#fff9;--boomi-spinner-overlay-blur:4px;--boomi-spinner-overlay-contained-bg:#e5e7eb73;--boomi-spinner-overlay-contained-blur:2px;--boomi-spinner-ring-color:oklch(58.5% .233 277.117);--boomi-spinner-ping-color:oklch(67.3% .182 276.935);--boomi-spinner-message-fg:oklch(37.3% .034 259.733);--boomi-wizard-step-dot-bg:oklch(93% .034 272.788);--boomi-wizard-step-dot-fg:oklch(27.8% .033 256.848);--boomi-wizard-step-dot-border:oklch(87% .065 274.039);--boomi-wizard-step-dot-shadow:0 1px 2px #0000000a;--boomi-wizard-step-dot-bg-active:oklch(67.3% .182 276.935);--boomi-wizard-step-dot-fg-active:#fff;--boomi-wizard-step-dot-border-active:oklch(58.5% .233 277.117);--boomi-wizard-step-dot-bg-completed:oklch(78.5% .115 274.713);--boomi-wizard-step-dot-fg-completed:#fff;--boomi-wizard-step-dot-border-completed:oklch(67.3% .182 276.935);--boomi-wizard-connector-bg:oklch(87.2% .01 258.338);--boomi-wizard-connector-shadow:none;--boomi-wizard-label-fg:oklch(37.3% .034 259.733);--boomi-wizard-card-bg:#fff;--boomi-wizard-card-fg:oklch(27.8% .033 256.848);--boomi-wizard-card-border:oklch(92.8% .006 264.531);--boomi-wizard-card-shadow:0 4px 6px -1px #00000014,0 2px 4px -2px #0000000f;--boomi-wizard-link-fg:oklch(51.1% .262 276.966);--boomi-wizard-link-fg-hover:oklch(45.7% .24 277.023);--boomi-wizard-link-strong-fg:oklch(45.7% .24 277.023);--boomi-notice-bg:var(--boomi-notice-error-bg);--boomi-notice-fg:var(--boomi-notice-error-fg);--boomi-notice-border:var(--boomi-notice-error-border);--boomi-notice-shadow:var(--boomi-notice-error-shadow,0 0 0 0 transparent);--boomi-update-bg:var(--boomi-card-bg,#fff);--boomi-update-fg:var(--boomi-page-fg-color,oklch(37.3% .034 259.733));--boomi-update-border:var(--boomi-card-border,oklch(92.8% .006 264.531));--boomi-update-shadow:var(--boomi-card-shadow,0 4px 6px -1px #00000014,0 2px 4px -2px #0000000f);--boomi-update-title-fg:oklch(27.8% .033 256.848);--boomi-update-desc-fg:oklch(44.6% .03 256.802);--boomi-update-content-bg:#fff;--boomi-update-content-fg:oklch(27.8% .033 256.848);--boomi-thread-separator:var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-thread-separator:color-mix(in srgb,var(--boomi-card-border)70%,transparent)}}:host{--boomi-tablist-border:oklch(92.8% .006 264.531);--boomi-tab-bg:oklch(96.7% .003 264.542);--boomi-tab-fg:oklch(37.3% .034 259.733);--boomi-tab-border:oklch(87.2% .01 258.338);--boomi-tab-bg-hover:oklch(92.8% .006 264.531);--boomi-tab-fg-hover:oklch(27.8% .033 256.848);--boomi-tab-border-hover:oklch(87.2% .01 258.338);--boomi-tab-bg-active:oklch(51.1% .262 276.966);--boomi-tab-fg-active:#fff;--boomi-tab-border-active:oklch(45.7% .24 277.023);--boomi-accent:oklch(58.5% .233 277.117);--boomi-muted:oklch(55.1% .027 264.364);--boomi-map-bg:transparent;--boomi-map-fg:inherit;--boomi-map-line-highlight:red;--boomi-map-line-dim:.35;--boomi-map-line:oklch(44.6% .03 256.802);--boomi-map-line-width:1.4px;--boomi-map-heading-fg:oklch(27.8% .033 256.848);--boomi-map-card-bg:#fff;--boomi-map-card-border:oklch(87.2% .01 258.338);--boomi-map-card-shadow:0 1px 2px #0000000f;--boomi-map-card-shadow-hover:0 8px 20px #6366f126;--boomi-map-card-transform-hover:scale(1.01);--boomi-map-source-bg:#fff;--boomi-map-source-bg-mapped:oklch(97% .014 254.604);--boomi-map-source-border-mapped:oklch(70.7% .165 254.624);--boomi-map-source-outline:oklch(70.7% .165 254.624);--boomi-map-target-bg:#fff;--boomi-map-target-bg-mapped:oklch(98.2% .018 155.826);--boomi-map-target-border-mapped:oklch(79.2% .209 151.711);--boomi-map-target-outline:oklch(79.2% .209 151.711);--boomi-map-func-bg:oklch(98.5% .002 247.839);--boomi-map-func-fg:oklch(27.8% .033 256.848);--boomi-map-func-title-fg:oklch(51.1% .262 276.966);--boomi-map-func-subtle-fg:oklch(55.1% .027 264.364);--boomi-map-pin-source-bg:oklch(58.5% .233 277.117);--boomi-map-pin-target-bg:oklch(72.3% .219 149.579);--boomi-map-pin-input-bg:oklch(79.5% .184 86.047);--boomi-map-pin-output-bg:oklch(62.7% .265 303.9);--boomi-map-pin-badge-bg:oklch(57.7% .245 27.325);--boomi-map-pin-badge-fg:#fff;--boomi-map-pin-danger-bg:oklch(63.7% .237 25.331);--boomi-map-pulse-color:#2eaadc59;--boomi-map-pulse-border:var(--boomi-accent,#2eabdc);--boomi-map-pin-output-bg-active:oklch(71.4% .203 305.504);--boomi-map-pin-output-border-active:oklch(62.7% .265 303.9);--boomi-map-add-bg:oklch(92.8% .006 264.531);--boomi-map-add-fg:oklch(37.3% .034 259.733);--boomi-map-add-border:oklch(87.2% .01 258.338);--boomi-map-add-bg-hover:oklch(87.2% .01 258.338);--boomi-schedule-bg:#fff;--boomi-schedule-fg:#1f2937;--boomi-schedule-border:#d1d5db;--boomi-schedule-shadow:0 1px 2px #0000000d;--boomi-schedule-title-fg:#111827;--boomi-schedule-content-fg:#374151;--boomi-schedule-accordion-bg:#f9fafb;--boomi-schedule-accordion-border:#e5e7eb;--boomi-schedule-btn-bg:#2563eb;--boomi-schedule-btn-fg:#fff;--boomi-schedule-btn-border:#1d4ed8;--boomi-schedule-btn-bg-hover:#1d4ed8;--boomi-schedule-btn-bg-active:#1e40af;--boomi-schedule-input-bg:#fff;--boomi-schedule-input-fg:#111827;--boomi-schedule-input-border:#d1d5db;--boomi-schedule-input-border-focus:#2563eb;--boomi-schedule-input-bg-disabled:#f3f4f6;--boomi-schedule-input-fg-disabled:#9ca3af;--boomi-schedule-input-border-disabled:#e5e7eb;--boomi-conn-bg:#fff;--boomi-conn-border:oklch(92.8% .006 264.531);--boomi-conn-heading-fg:oklch(37.3% .034 259.733);--boomi-conn-field-bg:oklch(98.5% .002 247.839);--boomi-conn-field-border:oklch(87.2% .01 258.338);--boomi-conn-field-label-fg:oklch(27.8% .033 256.848);--boomi-conn-field-error-fg:var(--boomi-danger-fg);--boomi-conn-btn-save-bg:oklch(62.7% .194 149.214);--boomi-conn-btn-save-fg:#fff;--boomi-conn-btn-auth-bg:oklch(51.1% .262 276.966);--boomi-conn-btn-auth-fg:#fff;--boomi-conn-btn-disabled-bg:oklch(70.7% .022 261.325);--boomi-conn-btn-disabled-fg:#fff;--boomi-swal-bg:var(--boomi-modal-bg,#fff);--boomi-swal-fg:var(--boomi-modal-fg,oklch(27.8% .033 256.848));--boomi-swal-border:var(--boomi-modal-border,1px solid oklch(92.8% .006 264.531));--boomi-swal-shadow:var(--boomi-modal-shadow,0 20px 25px -5px #0000001a,0 8px 10px -6px #0000001a);--boomi-swal-title-fg:var(--boomi-update-title-fg,oklch(27.8% .033 256.848));--boomi-swal-desc-fg:var(--boomi-update-desc-fg,oklch(44.6% .03 256.802));--boomi-swal-icon-success:oklch(62.7% .194 149.214);--boomi-swal-icon-warning:oklch(76.9% .188 70.08);--boomi-swal-icon-error:var(--boomi-danger);--boomi-swal-overlay-bg:var(--boomi-modal-overlay-bg,#00000080);--boomi-toast-success-bg:oklch(72.3% .219 149.579);--boomi-toast-success-fg:#fff;--boomi-toast-success-icon:#fff;--boomi-toast-error-bg:oklch(63.7% .237 25.331);--boomi-toast-error-fg:#fff;--boomi-toast-error-icon:#fff;--boomi-toast-warning-bg:oklch(90.5% .182 98.111);--boomi-toast-warning-fg:#000;--boomi-toast-warning-icon:#000;--boomi-toast-info-bg:oklch(62.3% .214 259.815);--boomi-toast-info-fg:#fff;--boomi-toast-info-icon:#fff;--boomi-toast-question-bg:oklch(44.6% .03 256.802);--boomi-toast-question-fg:#fff;--boomi-toast-question-icon:#fff;--boomi-toast-position:top;--boomi-toast-timer:2000;--boomi-toast-width:600px;--boomi-toast-radius:.5rem;--boomi-toast-shadow:0 6px 16px #0000002e;--boomi-toast-border:none;--boomi-toast-title-fg:inherit;--boomi-toast-progress-bar:#ffffffb3;--boomi-agent-bg:var(--boomi-card-bg);--boomi-agent-fg:var(--boomi-page-fg-color);--boomi-agent-border:var(--boomi-card-border);--boomi-agent-shadow:0 20px 40px -16px #0f172a2e,0 8px 20px -12px #0f172a1a;--boomi-agent-header-bg:var(--boomi-modal-bg);--boomi-agent-tab-bg:var(--boomi-tab-bg);--boomi-agent-tab-fg:var(--boomi-tab-fg);--boomi-agent-tab-border:var(--boomi-tab-border);--boomi-agent-tab-bg-active:var(--boomi-tab-bg-active);--boomi-agent-tab-fg-active:var(--boomi-tab-fg-active);--boomi-agent-tab-border-active:var(--boomi-tab-border-active);--boomi-agent-section-bg:var(--boomi-update-content-bg);--boomi-agent-section-fg:var(--boomi-update-content-fg);--boomi-agent-section-border:var(--boomi-update-border);--boomi-agent-chat-bg:var(--boomi-card-bg);--boomi-agent-chat-border:var(--boomi-card-border);--boomi-agent-bubble-agent-bg:var(--boomi-update-content-bg);--boomi-agent-bubble-agent-fg:var(--boomi-update-content-fg);--boomi-agent-bubble-agent-border:var(--boomi-update-border);--boomi-agent-bubble-user-bg:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-bubble-user-bg:color-mix(in srgb,var(--boomi-accent)12%,transparent)}}:host{--boomi-agent-bubble-user-border:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-bubble-user-border:color-mix(in srgb,var(--boomi-accent)30%,transparent)}}:host{--boomi-agent-update-bg:var(--boomi-card-bg,#fff);--boomi-uagent-pdate-fg:var(--boomi-page-fg-color,oklch(37.3% .034 259.733));--boomi-agent-update-border:var(--boomi-card-border,oklch(92.8% .006 264.531));--boomi-agent-update-shadow:var(--boomi-card-shadow,0 4px 6px -1px #00000014,0 2px 4px -2px #0000000f);--boomi-agent-update-title-fg:oklch(27.8% .033 256.848);--boomi-agent-update-desc-fg:oklch(44.6% .03 256.802);--boomi-agent-update-content-bg:#fff;--boomi-agent-update-content-fg:oklch(27.8% .033 256.848);--boomi-agent-thread-separator:var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-thread-separator:color-mix(in srgb,var(--boomi-card-border)70%,transparent)}}:host{--boomi-agent-card-tint:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-card-tint:color-mix(in srgb,var(--boomi-accent)7%,transparent)}}:host{--boomi-agent-row-tint:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-row-tint:color-mix(in srgb,var(--boomi-accent)5%,transparent)}}:host{--boomi-agent-pane-bg:var(--boomi-agent-pane-bg-color,var(--boomi-page-bg-color));--boomi-agent-pane-fg:var(--boomi-agent-pane-fg-color,var(--boomi-page-fg-color));--boomi-agent-compose-bg:var(--boomi-card-bg)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-compose-bg:color-mix(in srgb,var(--boomi-card-bg)96%,transparent)}}:host{--boomi-agent-compose-border:var(--boomi-card-border);--boomi-agent-compose-shadow:0 -1px 2px var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-compose-shadow:0 -1px 2px color-mix(in srgb,var(--boomi-card-border)45%,transparent)}}:host{--boomi-agent-compose-input-bg:var(--boomi-input-bg);--boomi-agent-compose-input-border:var(--boomi-input-border)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-compose-input-border:color-mix(in srgb,var(--boomi-input-border)95%,transparent)}}:host{--boomi-agent-compose-secondary-bg:var(--boomi-card-bg)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-compose-secondary-bg:color-mix(in srgb,var(--boomi-card-bg)90%,transparent)}}:host{--boomi-agent-compose-secondary-border:var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-compose-secondary-border:color-mix(in srgb,var(--boomi-card-border)80%,transparent)}}:host{--boomi-agent-composer-backdrop-bg:var(--boomi-agent-pane-bg,var(--boomi-page-bg-color));--boomi-agent-composer-backdrop-fade:2.5rem;--boomi-agent-composer-backdrop-line-width:0;--boomi-agent-composer-backdrop-line-color:var(--boomi-agent-chat-border,var(--boomi-card-border));--boomi-agent-shimmer-1:oklch(58.5% .233 277.117);--boomi-agent-shimmer-2:oklch(74.6% .16 232.661);--boomi-agent-shimmer-opacity:.35;--boomi-agent-row-shimmer-opacity:.22;--boomi-agent-shimmer-speed:8s;--boomi-chip-bg:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-chip-bg:color-mix(in srgb,var(--boomi-accent)12%,transparent)}}:host{--boomi-chip-fg:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-chip-fg:color-mix(in srgb,var(--boomi-accent)85%,currentColor)}}:host{--boomi-chip-border:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-chip-border:color-mix(in srgb,var(--boomi-accent)40%,transparent)}}:host{--boomi-chip-success-bg:oklch(96.2% .044 156.743);--boomi-chip-success-fg:oklch(44.8% .119 151.328);--boomi-chip-success-border:oklch(87.1% .15 154.449);--boomi-chip-warning-bg:oklch(96.2% .059 95.617);--boomi-chip-warning-fg:oklch(47.3% .137 46.201);--boomi-chip-warning-border:oklch(87.9% .169 91.605);--boomi-chip-error-bg:var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-chip-error-bg:color-mix(in srgb,var(--boomi-danger)12%,transparent)}}:host{--boomi-chip-error-fg:var(--boomi-danger-fg);--boomi-chip-error-border:var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-chip-error-border:color-mix(in srgb,var(--boomi-danger)40%,transparent)}}:host{--boomi-scrollbar-width:10px;--boomi-scrollbar-radius:999px;--boomi-scrollbar-bg:var(--boomi-update-border,#e5e7eb)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-scrollbar-bg:color-mix(in srgb,var(--boomi-update-border,#e5e7eb)35%,transparent)}}:host{--boomi-scrollbar-thumb:var(--boomi-page-fg-color,#111827)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-scrollbar-thumb:color-mix(in srgb,var(--boomi-page-fg-color,#111827)18%,transparent)}}:host{--boomi-scrollbar-thumb-hover:var(--boomi-accent,#6366f1)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-scrollbar-thumb-hover:color-mix(in srgb,var(--boomi-accent,#6366f1)28%,transparent)}}:host{--boomi-scrollbar-thumb-active:var(--boomi-accent,#6366f1)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-scrollbar-thumb-active:color-mix(in srgb,var(--boomi-accent,#6366f1)40%,transparent)}}:host{--boomi-scrollbar-corner:transparent}:host([data-theme=dark]){--boomi-danger:oklch(71.2% .194 13.428);--boomi-danger-contrast:#fff;--boomi-danger-fg:var(--boomi-danger);--boomi-danger-border:var(--boomi-danger);--boomi-danger-bg:var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-danger-bg:color-mix(in srgb,var(--boomi-danger)18%,transparent)}}:host([data-theme=dark]){--boomi-danger-ring:0 0 0 2px var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-danger-ring:0 0 0 2px color-mix(in srgb,var(--boomi-danger)45%,transparent)}}:host([data-theme=dark]){--boomi-error-soft:var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-error-soft:color-mix(in srgb,var(--boomi-danger)55%,oklch(96.7% .003 264.542))}}:host([data-theme=dark]){--boomi-btn-primary-bg:oklch(58.5% .233 277.117);--boomi-btn-primary-fg:#fff;--boomi-btn-primary-border:oklch(51.1% .262 276.966);--boomi-btn-primary-shadow:0 4px 6px -1px #4f39f61a,0 2px 4px -2px #4f39f61a;--boomi-btn-primary-bg-hover:oklch(51.1% .262 276.966);--boomi-btn-primary-bg-active:oklch(45.7% .24 277.023);--boomi-btn-secondary-bg:oklch(37.3% .034 259.733);--boomi-btn-secondary-fg:oklch(96.7% .003 264.542);--boomi-btn-secondary-border:oklch(44.6% .03 256.802);--boomi-btn-secondary-shadow:0 4px 6px -1px #4a55651a,0 2px 4px -2px #4a55651a;--boomi-btn-secondary-bg-hover:oklch(44.6% .03 256.802);--boomi-btn-secondary-bg-active:oklch(55.1% .027 264.364);--boomi-input-bg:oklch(27.8% .033 256.848);--boomi-input-fg:oklch(96.7% .003 264.542);--boomi-input-placeholder:oklch(70.7% .022 261.325);--boomi-input-border:oklch(51.1% .262 276.966);--boomi-input-shadow:0 0 0 0 #0000;--boomi-input-border-focus:oklch(67.3% .182 276.935);--boomi-input-shadow-focus:0 0 0 2px #7d87ff59;--boomi-input-outline-focus:var(--boomi-input-border-focus);--boomi-input-border-invalid:var(--boomi-danger);--boomi-input-outline-invalid:var(--boomi-danger);--boomi-input-bg-disabled:oklch(27.8% .033 256.848);--boomi-input-fg-disabled:oklch(70.7% .022 261.325);--boomi-input-border-disabled:oklch(37.3% .034 259.733);--boomi-root-bg-color:oklch(21% .034 264.665);--boomi-root-fg-color:#fff;--boomi-page-bg-color:oklch(21% .034 264.665);--boomi-page-fg-color:#fff;--boomi-show-header:1;--boomi-header-bg-color:oklch(21% .034 264.665);--boomi-header-fg-color:#fff;--boomi-header-fg-hover:oklch(93% .034 272.788);--boomi-header-border-color:oklch(58.5% .233 277.117);--boomi-header-shadow:0 4px 6px -1px #625fff1a,0 2px 4px -2px #625fff1a;--boomi-table-header-bg:oklch(58.5% .233 277.117);--boomi-table-header-fg:#fff;--boomi-table-header-border:oklch(37.3% .034 259.733);--boomi-table-row-odd-bg:oklch(27.8% .033 256.848);--boomi-table-row-even-bg:oklch(37.3% .034 259.733);--boomi-table-row-hover-shadow:0 4px 6px -1px #ffffff0d,0 2px 4px -2px #ffffff0d;--boomi-card-border:oklch(58.5% .233 277.117);--boomi-card-bg:oklch(27.8% .033 256.848);--boomi-card-shadow:0 4px 6px -1px #ffffff0d,0 2px 4px -2px #ffffff0d;--boomi-card-hover-shadow:0 8px 10px -1px #a5b4fc26,0 4px 6px -2px #a5b4fc1a;--boomi-agent-text-bg:var(--boomi-agent-pane-bg,oklch(21% .034 264.665))}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-text-bg:color-mix(in srgb,var(--boomi-agent-pane-bg,oklch(21% .034 264.665))88%,var(--boomi-page-fg-color,#e5e7eb)12%)}}:host([data-theme=dark]){--boomi-agent-text-border:var(--boomi-page-fg-color,#e5e7eb)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-text-border:color-mix(in srgb,var(--boomi-page-fg-color,#e5e7eb)18%,transparent)}}:host([data-theme=dark]){--boomi-agent-text-fg:var(--boomi-page-fg-color);--boomi-agent-text-copy-bg:var(--boomi-agent-text-border)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-text-copy-bg:color-mix(in srgb,var(--boomi-agent-text-border)55%,transparent)}}:host([data-theme=dark]){--boomi-agent-text-copy-bg-hover:var(--boomi-agent-text-border)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-text-copy-bg-hover:color-mix(in srgb,var(--boomi-agent-text-border)75%,transparent)}}:host([data-theme=dark]){--boomi-agent-text-copy-fg:var(--boomi-page-fg-color);--boomi-sidebar-bg:var(--boomi-card-bg)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-sidebar-bg:color-mix(in srgb,var(--boomi-card-bg)94%,transparent)}}:host([data-theme=dark]){--boomi-sidebar-fg:var(--boomi-page-fg-color);--boomi-sidebar-header-bg:var(--boomi-card-bg)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-sidebar-header-bg:color-mix(in srgb,var(--boomi-card-bg)85%,transparent)}}:host([data-theme=dark]){--boomi-sidebar-border:var(--boomi-card-border);--boomi-sidebar-header-shadow:0 1px 2px #10182899;--boomi-sidebar-btn-bg:var(--boomi-btn-primary-bg);--boomi-sidebar-btn-bg-hover:var(--boomi-btn-primary-bg-hover);--boomi-sidebar-btn-fg:var(--boomi-btn-primary-fg);--boomi-sidebar-btn-border:var(--boomi-btn-primary-border);--boomi-sidebar-secondary-btn-bg:var(--boomi-btn-secondary-bg);--boomi-sidebar-secondary-btn-bg-hover:var(--boomi-btn-secondary-bg-hover);--boomi-sidebar-secondary-btn-fg:var(--boomi-btn-secondary-fg);--boomi-sidebar-secondary-btn-border:var(--boomi-btn-secondary-border);--boomi-menu-bg:oklch(21% .034 264.665);--boomi-menu-fg:oklch(96.7% .003 264.542);--boomi-menu-border:oklch(37.3% .034 259.733);--boomi-menu-shadow:0 4px 6px -1px #ffffff0f,0 2px 4px -2px #ffffff0a;--boomi-menu-item-bg:oklch(21% .034 264.665);--boomi-menu-item-bg-hover:oklch(27.8% .033 256.848);--boomi-menu-item-fg:oklch(96.7% .003 264.542);--boomi-menu-item-fg-hover:oklch(98.5% .002 247.839);--boomi-menu-divider:oklch(37.3% .034 259.733);--boomi-menu-danger-fg:var(--boomi-danger-fg);--boomi-menu-danger-fg-hover:var(--boomi-danger-fg);--boomi-menu-danger-bg-hover:var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-menu-danger-bg-hover:color-mix(in srgb,var(--boomi-danger)10%,transparent)}}:host([data-theme=dark]){--boomi-modal-overlay-bg:#0000008c;--boomi-modal-bg:oklch(21% .034 264.665);--boomi-modal-fg:oklch(96.7% .003 264.542);--boomi-modal-border:1px solid oklch(37.3% .034 259.733);--boomi-modal-shadow:0 20px 25px -5px #ffffff12,0 8px 10px -6px #ffffff0d;--boomi-modal-close-fg:oklch(70.7% .022 261.325);--boomi-modal-close-hover-fg:oklch(96.7% .003 264.542);--boomi-form-label-fg:oklch(92.8% .006 264.531);--boomi-form-helper-fg:oklch(70.7% .022 261.325);--boomi-form-error-fg:var(--boomi-danger-fg);--boomi-form-required-fg:oklch(81% .117 11.638);--boomi-select-bg:oklch(21% .034 264.665);--boomi-select-fg:oklch(96.7% .003 264.542);--boomi-select-border:oklch(37.3% .034 259.733);--boomi-select-shadow:0 0 0 0 #0000;--boomi-select-border-focus:oklch(67.3% .182 276.935);--boomi-select-shadow-focus:0 0 0 2px #7d87ff59;--boomi-select-icon:oklch(87.2% .01 258.338);--boomi-select-bg-disabled:oklch(27.8% .033 256.848);--boomi-select-fg-disabled:oklch(55.1% .027 264.364);--boomi-select-border-disabled:oklch(37.3% .034 259.733);--boomi-select-border-invalid:var(--boomi-danger);--boomi-options-bg:oklch(21% .034 264.665);--boomi-options-fg:oklch(96.7% .003 264.542);--boomi-options-border:oklch(37.3% .034 259.733);--boomi-options-shadow:0 10px 15px -3px #ffffff0f,0 4px 6px -4px #ffffff0a;--boomi-options-search-bg:oklch(21% .034 264.665);--boomi-option-bg-active:oklch(37.3% .034 259.733);--boomi-option-fg-active:#fff;--boomi-option-bg-selected:var(--boomi-option-bg-active);--boomi-option-fg-selected:#fff;--boomi-loader-dot-bg:oklch(96.7% .003 264.542);--boomi-loader-dot1-opacity:.3;--boomi-loader-dot2-opacity:.7;--boomi-loader-dot3-opacity:1;--boomi-loader-msg-fg:oklch(87.2% .01 258.338);--boomi-spinner-overlay-bg:#0009;--boomi-spinner-overlay-blur:4px;--boomi-spinner-overlay-contained-bg:#101828b3;--boomi-spinner-overlay-contained-blur:3px;--boomi-spinner-ring-color:oklch(82.8% .189 84.429);--boomi-spinner-ping-color:oklch(87.9% .169 91.605);--boomi-spinner-message-fg:oklch(92.8% .006 264.531);--boomi-wizard-step-dot-bg:oklch(37.3% .034 259.733);--boomi-wizard-step-dot-fg:oklch(96.7% .003 264.542);--boomi-wizard-step-dot-border:oklch(44.6% .03 256.802);--boomi-wizard-step-dot-shadow:0 1px 2px #ffffff0f;--boomi-wizard-step-dot-bg-active:oklch(58.5% .233 277.117);--boomi-wizard-step-dot-fg-active:#fff;--boomi-wizard-step-dot-border-active:oklch(67.3% .182 276.935);--boomi-wizard-step-dot-bg-completed:oklch(67.3% .182 276.935);--boomi-wizard-step-dot-fg-completed:#fff;--boomi-wizard-step-dot-border-completed:oklch(78.5% .115 274.713);--boomi-wizard-connector-bg:oklch(44.6% .03 256.802);--boomi-wizard-label-fg:oklch(92.8% .006 264.531);--boomi-wizard-card-bg:oklch(21% .034 264.665);--boomi-wizard-card-fg:oklch(96.7% .003 264.542);--boomi-wizard-card-border:oklch(37.3% .034 259.733);--boomi-wizard-card-shadow:0 4px 6px -1px #ffffff0f,0 2px 4px -2px #ffffff0a;--boomi-wizard-link-fg:oklch(78.5% .115 274.713);--boomi-wizard-link-fg-hover:oklch(87% .065 274.039);--boomi-wizard-link-strong-fg:oklch(87% .065 274.039);--boomi-notice-bg:var(--boomi-notice-warning-bg);--boomi-notice-fg:var(--boomi-notice-warning-fg);--boomi-notice-border:var(--boomi-notice-warning-border);--boomi-notice-shadow:var(--boomi-notice-warning-shadow,0 0 0 0 transparent);--boomi-update-bg:var(--boomi-card-bg,oklch(27.8% .033 256.848));--boomi-update-fg:var(--boomi-page-fg-color,oklch(96.7% .003 264.542));--boomi-update-border:var(--boomi-card-border,oklch(37.3% .034 259.733));--boomi-update-shadow:var(--boomi-card-shadow,0 4px 6px -1px #ffffff0d,0 2px 4px -2px #ffffff0d);--boomi-update-title-fg:oklch(96.7% .003 264.542);--boomi-update-desc-fg:oklch(87.2% .01 258.338);--boomi-update-content-bg:oklch(44.6% .03 256.802);--boomi-update-content-fg:#fff;--boomi-thread-separator:var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-thread-separator:color-mix(in srgb,var(--boomi-card-border)60%,transparent)}}:host([data-theme=dark]){--boomi-tablist-border:oklch(37.3% .034 259.733);--boomi-tab-bg:oklch(27.8% .033 256.848);--boomi-tab-fg:oklch(96.7% .003 264.542);--boomi-tab-border:oklch(37.3% .034 259.733);--boomi-tab-bg-hover:oklch(37.3% .034 259.733);--boomi-tab-fg-hover:oklch(98.5% .002 247.839);--boomi-tab-border-hover:oklch(44.6% .03 256.802);--boomi-tab-bg-active:oklch(58.5% .233 277.117);--boomi-tab-fg-active:#fff;--boomi-tab-border-active:oklch(67.3% .182 276.935);--boomi-accent:oklch(78.5% .115 274.713);--boomi-muted:oklch(70.7% .022 261.325);--boomi-map-line-highlight:red;--boomi-map-line-dim:.35;--boomi-map-line:oklch(87.2% .01 258.338);--boomi-map-heading-fg:oklch(96.7% .003 264.542);--boomi-map-card-bg:oklch(27.8% .033 256.848);--boomi-map-card-border:oklch(37.3% .034 259.733);--boomi-map-card-shadow:0 1px 2px #ffffff0f;--boomi-map-card-shadow-hover:0 8px 20px #a5b4fc1f;--boomi-map-source-bg:oklch(27.8% .033 256.848);--boomi-map-source-bg-mapped:oklch(35.9% .144 278.697);--boomi-map-source-border-mapped:oklch(58.5% .233 277.117);--boomi-map-source-outline:oklch(67.3% .182 276.935);--boomi-map-target-bg:oklch(27.8% .033 256.848);--boomi-map-target-bg-mapped:oklch(37.8% .077 168.94);--boomi-map-target-border-mapped:oklch(69.6% .17 162.48);--boomi-map-target-outline:oklch(76.5% .177 163.223);--boomi-map-func-bg:oklch(37.3% .034 259.733);--boomi-map-func-fg:oklch(96.7% .003 264.542);--boomi-map-func-title-fg:oklch(78.5% .115 274.713);--boomi-map-func-subtle-fg:oklch(70.7% .022 261.325);--boomi-map-pin-source-bg:oklch(67.3% .182 276.935);--boomi-map-pin-target-bg:oklch(76.5% .177 163.223);--boomi-map-pin-input-bg:oklch(82.8% .189 84.429);--boomi-map-pin-output-bg:oklch(70.2% .183 293.541);--boomi-map-pin-badge-bg:oklch(70.4% .191 22.216);--boomi-map-pin-badge-fg:#fff;--boomi-map-pulse-color:#2eaadc73;--boomi-map-pulse-border:var(--boomi-accent,#5cc8f0);--boomi-map-pin-output-bg-active:oklch(81.1% .111 293.571);--boomi-map-pin-output-border-active:oklch(70.2% .183 293.541);--boomi-map-add-bg:oklch(37.3% .034 259.733);--boomi-map-add-fg:oklch(96.7% .003 264.542);--boomi-map-add-border:oklch(44.6% .03 256.802);--boomi-map-add-bg-hover:oklch(44.6% .03 256.802);--boomi-schedule-bg:#1f2937;--boomi-schedule-fg:#f9fafb;--boomi-schedule-border:#374151;--boomi-schedule-shadow:0 1px 2px #00000080;--boomi-schedule-title-fg:#fff;--boomi-schedule-content-fg:#d1d5db;--boomi-schedule-accordion-bg:#111827;--boomi-schedule-accordion-border:#374151;--boomi-schedule-btn-bg:#3b82f6;--boomi-schedule-btn-fg:#fff;--boomi-schedule-btn-border:#2563eb;--boomi-schedule-btn-bg-hover:#2563eb;--boomi-schedule-btn-bg-active:#1d4ed8;--boomi-schedule-input-bg:#111827;--boomi-schedule-input-fg:#f9fafb;--boomi-schedule-input-border:#374151;--boomi-schedule-input-border-focus:#3b82f6;--boomi-schedule-input-bg-disabled:#1f2937;--boomi-schedule-input-fg-disabled:#6b7280;--boomi-schedule-input-border-disabled:#374151;--boomi-conn-bg:oklch(27.8% .033 256.848);--boomi-conn-border:oklch(37.3% .034 259.733);--boomi-conn-heading-fg:oklch(96.7% .003 264.542);--boomi-conn-field-bg:oklch(37.3% .034 259.733);--boomi-conn-field-border:oklch(44.6% .03 256.802);--boomi-conn-field-label-fg:oklch(92.8% .006 264.531);--boomi-conn-field-error-fg:var(--boomi-danger-fg);--boomi-conn-btn-save-bg:oklch(72.3% .219 149.579);--boomi-conn-btn-save-fg:#fff;--boomi-conn-btn-auth-bg:oklch(58.5% .233 277.117);--boomi-conn-btn-auth-fg:#fff;--boomi-conn-btn-disabled-bg:oklch(55.1% .027 264.364);--boomi-conn-btn-disabled-fg:oklch(87.2% .01 258.338);--boomi-swal-bg:var(--boomi-modal-bg,oklch(21% .034 264.665));--boomi-swal-fg:var(--boomi-modal-fg,oklch(96.7% .003 264.542));--boomi-swal-border:var(--boomi-modal-border,1px solid oklch(37.3% .034 259.733));--boomi-swal-shadow:var(--boomi-modal-shadow,0 20px 25px -5px #ffffff12,0 8px 10px -6px #ffffff0d);--boomi-swal-title-fg:var(--boomi-update-title-fg,oklch(96.7% .003 264.542));--boomi-swal-desc-fg:var(--boomi-update-desc-fg,oklch(87.2% .01 258.338));--boomi-swal-icon-success:oklch(79.2% .209 151.711);--boomi-swal-icon-warning:oklch(82.8% .189 84.429);--boomi-swal-icon-error:var(--boomi-danger);--boomi-swal-overlay-bg:var(--boomi-modal-overlay-bg,#0000008c);--boomi-toast-success-bg:oklch(62.7% .194 149.214);--boomi-toast-error-bg:oklch(57.7% .245 27.325);--boomi-toast-warning-bg:oklch(76.9% .188 70.08);--boomi-toast-info-bg:oklch(54.6% .245 262.881);--boomi-toast-question-bg:oklch(37.3% .034 259.733);--boomi-toast-shadow:0 6px 16px #00000080;--boomi-toast-progress-bar:#fff9;--boomi-agent-bg:var(--boomi-card-bg);--boomi-agent-fg:var(--boomi-page-fg-color);--boomi-agent-border:var(--boomi-card-border);--boomi-agent-shadow:0 24px 44px -18px #00000073,0 10px 24px -12px #00000059;--boomi-agent-header-bg:var(--boomi-modal-bg);--boomi-agent-bubble-user-bg:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-bubble-user-bg:color-mix(in srgb,var(--boomi-accent)26%,transparent)}}:host([data-theme=dark]){--boomi-agent-bubble-user-border:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-bubble-user-border:color-mix(in srgb,var(--boomi-accent)40%,transparent)}}:host([data-theme=dark]){--boomi-agent-card-tint:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-card-tint:color-mix(in srgb,var(--boomi-accent)10%,transparent)}}:host([data-theme=dark]){--boomi-agent-row-tint:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-row-tint:color-mix(in srgb,var(--boomi-accent)7%,transparent)}}:host([data-theme=dark]){--boomi-agent-pane-bg:var(--boomi-page-bg-color)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-pane-bg:color-mix(in srgb,var(--boomi-page-bg-color)98%,transparent)}}:host([data-theme=dark]){--boomi-agent-pane-fg:var(--boomi-page-fg-color);--boomi-agent-compose-bg:var(--boomi-card-bg)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-compose-bg:color-mix(in srgb,var(--boomi-card-bg)95%,transparent)}}:host([data-theme=dark]){--boomi-agent-compose-border:var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-compose-border:color-mix(in srgb,var(--boomi-card-border)92%,transparent)}}:host([data-theme=dark]){--boomi-agent-compose-shadow:0 -1px 2px #b8e6fe73;--boomi-agent-compose-input-bg:var(--boomi-input-bg);--boomi-agent-compose-input-border:var(--boomi-input-border)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-compose-input-border:color-mix(in srgb,var(--boomi-input-border)80%,#fff 20%)}}:host([data-theme=dark]){--boomi-agent-compose-secondary-bg:var(--boomi-card-bg)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-compose-secondary-bg:color-mix(in srgb,var(--boomi-card-bg)88%,transparent)}}:host([data-theme=dark]){--boomi-agent-compose-secondary-border:var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-compose-secondary-border:color-mix(in srgb,var(--boomi-card-border)82%,transparent)}}:host([data-theme=dark]){--boomi-agent-shimmer-1:oklch(81.1% .111 293.571);--boomi-agent-shimmer-2:oklch(78.5% .115 274.713);--boomi-agent-shimmer-opacity:.28;--boomi-agent-row-shimmer-opacity:.18;--boomi-agent-shimmer-speed:9s;--boomi-uagent-pdate-bg:var(--boomi-card-bg,oklch(27.8% .033 256.848));--boomi-uagent-pdate-fg:var(--boomi-page-fg-color,oklch(96.7% .003 264.542));--boomi-uagent-pdate-border:var(--boomi-card-border,oklch(37.3% .034 259.733));--boomi-agent-update-shadow:var(--boomi-card-shadow,0 4px 6px -1px #ffffff0d,0 2px 4px -2px #ffffff0d);--boomi-uagent-pdate-title-fg:oklch(96.7% .003 264.542);--boomi-agent-update-desc-fg:oklch(87.2% .01 258.338);--boomi-agent-update-content-bg:oklch(44.6% .03 256.802);--boomi-agent-update-content-fg:#fff;--boomi-agent-thread-separator:var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-thread-separator:color-mix(in srgb,var(--boomi-card-border)60%,transparent)}}:host([data-theme=dark]){--boomi-chip-bg:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-chip-bg:color-mix(in srgb,var(--boomi-accent)24%,transparent)}}:host([data-theme=dark]){--boomi-chip-fg:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-chip-fg:color-mix(in srgb,var(--boomi-accent)92%,oklch(96.7% .003 264.542))}}:host([data-theme=dark]){--boomi-chip-border:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-chip-border:color-mix(in srgb,var(--boomi-accent)50%,transparent)}}:host([data-theme=dark]){--boomi-chip-success-bg:#00c75838;--boomi-chip-success-fg:oklch(96.2% .044 156.743);--boomi-chip-success-border:oklch(72.3% .219 149.579);--boomi-chip-warning-bg:#f99c0038;--boomi-chip-warning-fg:oklch(96.2% .059 95.617);--boomi-chip-warning-border:oklch(76.9% .188 70.08);--boomi-chip-error-bg:var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-chip-error-bg:color-mix(in srgb,var(--boomi-danger)24%,transparent)}}:host([data-theme=dark]){--boomi-chip-error-fg:oklch(94.1% .03 12.58);--boomi-chip-error-border:var(--boomi-danger);--boomi-scrollbar-bg:var(--boomi-update-border,#374151)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-scrollbar-bg:color-mix(in srgb,var(--boomi-update-border,#374151)35%,transparent)}}:host([data-theme=dark]){--boomi-scrollbar-thumb:var(--boomi-page-fg-color,#fff)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-scrollbar-thumb:color-mix(in srgb,var(--boomi-page-fg-color,#fff)18%,transparent)}}:host([data-theme=dark]){--boomi-scrollbar-thumb-hover:var(--boomi-accent,#818cf8)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-scrollbar-thumb-hover:color-mix(in srgb,var(--boomi-accent,#818cf8)32%,transparent)}}:host([data-theme=dark]){--boomi-scrollbar-thumb-active:var(--boomi-accent,#818cf8)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-scrollbar-thumb-active:color-mix(in srgb,var(--boomi-accent,#818cf8)45%,transparent)}}:host([data-theme=boomi]){--boomi-danger:oklch(58.6% .253 17.585);--boomi-danger-contrast:#fff;--boomi-danger-fg:var(--boomi-danger);--boomi-danger-border:var(--boomi-danger);--boomi-danger-bg:color-mix(in srgb,var(--boomi-danger)10%,transparent);--boomi-danger-ring:0 0 0 2px color-mix(in srgb,var(--boomi-danger)35%,transparent);--boomi-error-soft:color-mix(in srgb,var(--boomi-danger)70%,oklch(97.7% .013 236.62));--boomi-btn-primary-bg:oklch(58.8% .158 241.966);--boomi-btn-primary-fg:#fff;--boomi-btn-primary-border:oklch(50% .134 242.749);--boomi-btn-primary-shadow:0 4px 6px -1px #0069a41a,0 2px 4px -2px #0069a41a;--boomi-btn-primary-bg-hover:oklch(50% .134 242.749);--boomi-btn-primary-bg-active:oklch(44.3% .11 240.79);--boomi-btn-secondary-bg:oklch(95.1% .026 236.824);--boomi-btn-secondary-fg:oklch(39.1% .09 240.876);--boomi-btn-secondary-border:oklch(90.1% .058 230.902);--boomi-btn-secondary-shadow:0 4px 6px -1px #b8e6fe1a,0 2px 4px -2px #b8e6fe1a;--boomi-btn-secondary-bg-hover:oklch(90.1% .058 230.902);--boomi-btn-secondary-bg-active:oklch(82.8% .111 230.318);--boomi-root-bg-color:oklch(97.7% .013 236.62);--boomi-root-fg-color:oklch(37.3% .034 259.733);--boomi-page-bg-color:oklch(97.7% .013 236.62);--boomi-page-fg-color:oklch(37.3% .034 259.733);--boomi-show-header:1;--boomi-header-bg-color:#fff;--boomi-header-fg-color:oklch(37.3% .034 259.733);--boomi-header-fg-hover:oklch(44.6% .03 256.802);--boomi-header-border-color:oklch(90.1% .058 230.902);--boomi-header-shadow:0 4px 6px -1px #b8e6fe1a,0 2px 4px -2px #b8e6fe1a;--boomi-table-header-bg:oklch(95.1% .026 236.824);--boomi-table-header-fg:oklch(39.1% .09 240.876);--boomi-table-header-border:oklch(82.8% .111 230.318);--boomi-table-row-odd-bg:oklch(97.7% .013 236.62);--boomi-table-row-even-bg:oklch(95.1% .026 236.824);--boomi-table-row-hover-shadow:0 4px 6px -1px #0ea5e91a,0 2px 4px -2px #0ea5e91a;--boomi-card-border:oklch(82.8% .111 230.318);--boomi-card-bg:#fff;--boomi-card-shadow:0 4px 6px -1px #0ea5e91a,0 2px 4px -2px #0ea5e91a;--boomi-card-hover-shadow:0 8px 10px -1px #0ea5e926,0 4px 6px -2px #0ea5e91a;--boomi-card-hover-scale:scale(1.01);--boomi-agent-text-bg:color-mix(in srgb,var(--boomi-agent-pane-bg,oklch(97.7% .013 236.62))92%,transparent);--boomi-agent-text-border:color-mix(in srgb,var(--boomi-agent-pane-fg,oklch(37.3% .034 259.733))16%,transparent);--boomi-agent-text-fg:var(--boomi-agent-pane-fg,oklch(37.3% .034 259.733));--boomi-agent-text-copy-bg:color-mix(in srgb,var(--boomi-agent-text-border)45%,transparent);--boomi-agent-text-copy-bg-hover:color-mix(in srgb,var(--boomi-agent-text-border)65%,transparent);--boomi-agent-text-copy-fg:var(--boomi-agent-pane-fg,oklch(37.3% .034 259.733));--boomi-sidebar-bg:color-mix(in srgb,var(--boomi-card-bg)95%,transparent);--boomi-sidebar-fg:var(--boomi-page-fg-color);--boomi-sidebar-header-bg:color-mix(in srgb,var(--boomi-card-bg)88%,transparent);--boomi-sidebar-border:var(--boomi-card-border);--boomi-sidebar-header-shadow:0 1px 2px #77d4ff66;--boomi-sidebar-btn-bg:var(--boomi-btn-primary-bg);--boomi-sidebar-btn-bg-hover:var(--boomi-btn-primary-bg-hover);--boomi-sidebar-btn-fg:var(--boomi-btn-primary-fg);--boomi-sidebar-btn-border:var(--boomi-btn-primary-border);--boomi-sidebar-secondary-btn-bg:var(--boomi-btn-secondary-bg);--boomi-sidebar-secondary-btn-bg-hover:var(--boomi-btn-secondary-bg-hover);--boomi-sidebar-secondary-btn-fg:var(--boomi-btn-secondary-fg);--boomi-sidebar-secondary-btn-border:var(--boomi-btn-secondary-border);--boomi-menu-bg:#fff;--boomi-menu-fg:oklch(37.3% .034 259.733);--boomi-menu-border:oklch(90.1% .058 230.902);--boomi-menu-shadow:0 4px 6px -1px #0ea5e91a,0 2px 4px -2px #0ea5e91a;--boomi-menu-item-bg:transparent;--boomi-menu-item-bg-hover:oklch(95.1% .026 236.824);--boomi-menu-item-fg:oklch(37.3% .034 259.733);--boomi-menu-item-fg-hover:oklch(21% .034 264.665);--boomi-menu-divider:oklch(90.1% .058 230.902);--boomi-menu-danger-fg:var(--boomi-danger-fg);--boomi-menu-danger-fg-hover:var(--boomi-danger-fg);--boomi-menu-danger-bg-hover:color-mix(in srgb,var(--boomi-danger)10%,transparent);--boomi-modal-overlay-bg:#024a7073;--boomi-modal-bg:#fff;--boomi-modal-fg:oklch(27.8% .033 256.848);--boomi-modal-border:1px solid oklch(90.1% .058 230.902);--boomi-modal-shadow:0 20px 25px -5px #0ea5e91a,0 8px 10px -6px #0ea5e914;--boomi-modal-close-fg:oklch(68.5% .169 237.323);--boomi-modal-close-hover-fg:oklch(50% .134 242.749);--boomi-form-label-fg:oklch(37.3% .034 259.733);--boomi-form-helper-fg:oklch(50% .134 242.749);--boomi-form-error-fg:var(--boomi-danger-fg);--boomi-form-required-fg:oklch(71.2% .194 13.428);--boomi-select-bg:#fff;--boomi-select-fg:oklch(27.8% .033 256.848);--boomi-select-border:oklch(90.1% .058 230.902);--boomi-select-shadow:0 0 0 0 #0000;--boomi-select-border-focus:oklch(68.5% .169 237.323);--boomi-select-shadow-focus:0 0 0 2px #00a5ef59;--boomi-select-icon:oklch(68.5% .169 237.323);--boomi-select-bg-disabled:oklch(97.7% .013 236.62);--boomi-select-fg-disabled:oklch(55.1% .027 264.364);--boomi-select-border-disabled:oklch(95.1% .026 236.824);--boomi-select-border-invalid:var(--boomi-danger);--boomi-options-bg:#fff;--boomi-options-fg:oklch(27.8% .033 256.848);--boomi-options-border:oklch(90.1% .058 230.902);--boomi-options-shadow:0 10px 15px -3px #0ea5e91a,0 4px 6px -4px #0ea5e914;--boomi-options-search-bg:#fff;--boomi-option-bg-active:oklch(95.1% .026 236.824);--boomi-option-fg-selected:oklch(21% .034 264.665);--boomi-loader-dot-bg:oklch(58.8% .158 241.966);--boomi-loader-dot1-opacity:.3;--boomi-loader-dot2-opacity:.7;--boomi-loader-dot3-opacity:1;--boomi-loader-msg-fg:oklch(44.3% .11 240.79);--boomi-spinner-overlay-bg:#99f6e499;--boomi-spinner-overlay-blur:4px;--boomi-spinner-overlay-contained-bg:#b8e6fe8c;--boomi-spinner-overlay-contained-blur:2px;--boomi-spinner-ring-color:oklch(68.5% .169 237.323);--boomi-spinner-ping-color:oklch(82.8% .111 230.318);--boomi-spinner-message-fg:oklch(38.6% .063 188.416);--boomi-wizard-step-dot-bg:oklch(95.1% .026 236.824);--boomi-wizard-step-dot-fg:oklch(27.8% .033 256.848);--boomi-wizard-step-dot-border:oklch(90.1% .058 230.902);--boomi-wizard-step-dot-bg-active:oklch(74.6% .16 232.661);--boomi-wizard-step-dot-fg-active:#fff;--boomi-wizard-step-dot-border-active:oklch(68.5% .169 237.323);--boomi-wizard-step-dot-bg-completed:oklch(82.8% .111 230.318);--boomi-wizard-step-dot-fg-completed:#fff;--boomi-wizard-step-dot-border-completed:oklch(74.6% .16 232.661);--boomi-wizard-connector-bg:oklch(90.1% .058 230.902);--boomi-wizard-label-fg:oklch(37.3% .034 259.733);--boomi-wizard-card-bg:#fff;--boomi-wizard-card-fg:oklch(27.8% .033 256.848);--boomi-wizard-card-border:oklch(90.1% .058 230.902);--boomi-wizard-card-shadow:0 4px 6px -1px #0ea5e91a,0 2px 4px -2px #0ea5e914;--boomi-wizard-link-fg:oklch(58.8% .158 241.966);--boomi-wizard-link-fg-hover:oklch(50% .134 242.749);--boomi-wizard-link-strong-fg:oklch(50% .134 242.749);--boomi-notice-bg:var(--boomi-notice-success-bg);--boomi-notice-fg:var(--boomi-notice-success-fg);--boomi-notice-border:var(--boomi-notice-success-border);--boomi-notice-shadow:var(--boomi-notice-success-shadow,0 0 0 0 transparent);--boomi-update-bg:var(--boomi-card-bg,#fff);--boomi-update-fg:var(--boomi-page-fg-color,oklch(37.3% .034 259.733));--boomi-update-border:var(--boomi-card-border,oklch(90.1% .058 230.902));--boomi-update-shadow:var(--boomi-card-shadow,0 4px 6px -1px #0ea5e91a,0 2px 4px -2px #0ea5e91a);--boomi-update-title-fg:oklch(27.8% .033 256.848);--boomi-update-desc-fg:oklch(44.6% .03 256.802);--boomi-update-content-bg:#fff;--boomi-update-content-fg:oklch(27.8% .033 256.848);--boomi-thread-separator:color-mix(in srgb,var(--boomi-card-border)75%,transparent);--boomi-tablist-border:oklch(90.1% .058 230.902);--boomi-tab-bg:oklch(95.1% .026 236.824);--boomi-tab-fg:oklch(27.8% .033 256.848);--boomi-tab-border:oklch(90.1% .058 230.902);--boomi-tab-bg-hover:oklch(90.1% .058 230.902);--boomi-tab-fg-hover:oklch(21% .034 264.665);--boomi-tab-border-hover:oklch(82.8% .111 230.318);--boomi-tab-bg-active:oklch(58.8% .158 241.966);--boomi-tab-fg-active:#fff;--boomi-tab-border-active:oklch(50% .134 242.749);--boomi-muted:oklch(44.6% .03 256.802);--boomi-map-line-highlight:red;--boomi-map-line-dim:.35;--boomi-map-line:oklch(68.5% .169 237.323);--boomi-map-heading-fg:oklch(37.3% .034 259.733);--boomi-map-card-bg:#fff;--boomi-map-card-border:oklch(90.1% .058 230.902);--boomi-map-card-shadow:0 4px 6px -1px #0ea5e91a,0 2px 4px -2px #0ea5e91a;--boomi-map-card-shadow-hover:0 8px 10px -1px #0ea5e926,0 4px 6px -2px #0ea5e91a;--boomi-map-source-bg-mapped:oklch(97.7% .013 236.62);--boomi-map-source-border-mapped:oklch(74.6% .16 232.661);--boomi-map-source-outline:oklch(68.5% .169 237.323);--boomi-map-target-bg-mapped:oklch(97.7% .013 236.62);--boomi-map-target-border-mapped:oklch(74.6% .16 232.661);--boomi-map-target-outline:oklch(68.5% .169 237.323);--boomi-map-func-bg:oklch(97.7% .013 236.62);--boomi-map-func-fg:oklch(27.8% .033 256.848);--boomi-map-func-title-fg:oklch(50% .134 242.749);--boomi-map-pin-source-bg:oklch(58.8% .158 241.966);--boomi-map-pin-target-bg:oklch(70.4% .14 182.503);--boomi-map-pin-input-bg:oklch(76.9% .188 70.08);--boomi-map-pin-output-bg:oklch(58.5% .233 277.117);--boomi-map-pin-badge-bg:oklch(63.7% .237 25.331);--boomi-map-pin-badge-fg:#fff;--boomi-map-pulse-color:#00b8d959;--boomi-map-pulse-border:var(--boomi-accent,#00b8d9);--boomi-map-pin-output-bg-active:oklch(67.3% .182 276.935);--boomi-map-pin-output-border-active:oklch(58.5% .233 277.117);--boomi-map-add-bg:oklch(95.1% .026 236.824);--boomi-map-add-fg:oklch(37.3% .034 259.733);--boomi-map-add-border:oklch(82.8% .111 230.318);--boomi-map-add-bg-hover:oklch(90.1% .058 230.902);--boomi-schedule-bg:#fff8e7;--boomi-schedule-fg:#000;--boomi-schedule-border:#000;--boomi-schedule-shadow:6px 6px 0 #000;--boomi-schedule-title-fg:#000;--boomi-schedule-content-fg:#222;--boomi-schedule-accordion-bg:#fff;--boomi-schedule-accordion-border:#000;--boomi-schedule-btn-bg:#ffde59;--boomi-schedule-btn-fg:#111;--boomi-schedule-btn-border:#000;--boomi-schedule-btn-bg-hover:#ffd633;--boomi-schedule-btn-bg-active:#fc0;--boomi-schedule-input-bg:#fff;--boomi-schedule-input-fg:#2b2b2b;--boomi-schedule-input-border:#000;--boomi-schedule-input-border-focus:#ff90b3;--boomi-schedule-input-bg-disabled:#fef9c3;--boomi-schedule-input-fg-disabled:#9ca3af;--boomi-schedule-input-border-disabled:#fde68a;--boomi-conn-bg:oklch(97% .014 254.604);--boomi-conn-border:oklch(88.2% .059 254.128);--boomi-conn-heading-fg:oklch(37.9% .146 265.522);--boomi-conn-field-bg:#fff;--boomi-conn-field-border:oklch(80.9% .105 251.813);--boomi-conn-field-label-fg:oklch(37.9% .146 265.522);--boomi-conn-field-error-fg:var(--boomi-danger-fg);--boomi-conn-btn-save-bg:oklch(62.7% .194 149.214);--boomi-conn-btn-save-fg:#fff;--boomi-conn-btn-auth-bg:oklch(51.1% .262 276.966);--boomi-conn-btn-auth-fg:#fff;--boomi-conn-btn-disabled-bg:oklch(70.7% .022 261.325);--boomi-conn-btn-disabled-fg:#fff;--boomi-swal-bg:var(--boomi-modal-bg,#fff);--boomi-swal-fg:var(--boomi-modal-fg,oklch(27.8% .033 256.848));--boomi-swal-border:var(--boomi-modal-border,1px solid oklch(90.1% .058 230.902));--boomi-swal-shadow:var(--boomi-modal-shadow,0 20px 25px -5px #0ea5e91a,0 8px 10px -6px #0ea5e914);--boomi-swal-title-fg:var(--boomi-update-title-fg,oklch(27.8% .033 256.848));--boomi-swal-desc-fg:var(--boomi-update-desc-fg,oklch(44.6% .03 256.802));--boomi-swal-icon-success:oklch(60% .118 184.704);--boomi-swal-icon-warning:oklch(76.9% .188 70.08);--boomi-swal-icon-error:var(--boomi-danger);--boomi-swal-overlay-bg:var(--boomi-modal-overlay-bg,#024a7073);--boomi-toast-success-bg:oklch(60% .118 184.704);--boomi-toast-info-bg:oklch(58.8% .158 241.966);--boomi-toast-question-bg:oklch(44.6% .043 257.281);--boomi-toast-shadow:0 6px 16px #0ea5e92e;--boomi-agent-bg:var(--boomi-card-bg);--boomi-agent-fg:var(--boomi-page-fg-color);--boomi-agent-border:var(--boomi-card-border);--boomi-agent-shadow:0 22px 44px -14px #024a7040,0 10px 24px -12px #024a702e;--boomi-agent-header-bg:var(--boomi-modal-bg);--boomi-agent-bubble-user-bg:color-mix(in srgb,var(--boomi-accent)16%,transparent);--boomi-agent-bubble-user-border:color-mix(in srgb,var(--boomi-accent)35%,transparent);--boomi-agent-card-tint:color-mix(in srgb,var(--boomi-accent)10%,transparent);--boomi-agent-row-tint:color-mix(in srgb,var(--boomi-accent)7%,transparent);--boomi-agent-shimmer-1:oklch(81.1% .111 293.571);--boomi-agent-shimmer-2:oklch(78.5% .115 274.713);--boomi-agent-shimmer-opacity:.28;--boomi-agent-row-shimmer-opacity:.18;--boomi-agent-shimmer-speed:9s;--boomi-agent-update-bg:var(--boomi-card-bg,#fff);--boomi-agent-update-fg:var(--boomi-page-fg-color,oklch(37.3% .034 259.733));--boomi-agent-update-border:var(--boomi-card-border,oklch(90.1% .058 230.902));--boomi-agent-update-shadow:var(--boomi-card-shadow,0 4px 6px -1px #0ea5e91a,0 2px 4px -2px #0ea5e91a);--boomi-agent-update-title-fg:oklch(27.8% .033 256.848);--boomi-agent-update-desc-fg:oklch(44.6% .03 256.802);--boomi-agent-update-content-bg:#fff;--boomi-agent-update-content-fg:oklch(27.8% .033 256.848);--boomi-agent-thread-separator:color-mix(in srgb,var(--boomi-card-border)75%,transparent);--boomi-accent:oklch(58.8% .158 241.966);--boomi-chip-bg:color-mix(in srgb,var(--boomi-accent)14%,transparent);--boomi-chip-fg:color-mix(in srgb,var(--boomi-accent)85%,oklch(21% .034 264.665));--boomi-chip-border:color-mix(in srgb,var(--boomi-accent)42%,transparent);--boomi-chip-success-bg:oklch(95.3% .051 180.801);--boomi-chip-success-fg:oklch(38.6% .063 188.416);--boomi-chip-success-border:oklch(85.5% .138 181.071);--boomi-chip-warning-bg:oklch(96.2% .059 95.617);--boomi-chip-warning-fg:oklch(41.4% .112 45.904);--boomi-chip-warning-border:oklch(87.9% .169 91.605);--boomi-chip-error-bg:color-mix(in srgb,var(--boomi-danger)12%,transparent);--boomi-chip-error-fg:var(--boomi-danger-fg);--boomi-chip-error-border:color-mix(in srgb,var(--boomi-danger)40%,transparent);--boomi-scrollbar-thumb:color-mix(in srgb,var(--boomi-accent,#0284c7)22%,transparent);--boomi-scrollbar-thumb-hover:color-mix(in srgb,var(--boomi-accent,#0284c7)36%,transparent);--boomi-scrollbar-thumb-active:color-mix(in srgb,var(--boomi-accent,#0284c7)48%,transparent)}}@layer components;@layer utilities{.pointer-events-auto{pointer-events:auto}.pointer-events-none{pointer-events:none}.collapse{visibility:collapse}.visible{visibility:visible}.sr-only{clip-path:inset(50%);white-space:nowrap;border-width:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}.absolute{position:absolute}.fixed{position:fixed}.relative{position:relative}.static{position:static}.sticky{position:sticky}.inset-0{inset:calc(var(--spacing)*0)}.inset-y-0{inset-block:calc(var(--spacing)*0)}.top-0{top:calc(var(--spacing)*0)}.top-1\\/2{top:50%}.top-3{top:calc(var(--spacing)*3)}.top-full{top:100%}.right-0{right:calc(var(--spacing)*0)}.right-2{right:calc(var(--spacing)*2)}.right-3{right:calc(var(--spacing)*3)}.right-3\\.5{right:calc(var(--spacing)*3.5)}.bottom-full{bottom:100%}.left-0{left:calc(var(--spacing)*0)}.left-1\\/2{left:50%}.isolate{isolation:isolate}.z-0{z-index:0}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.z-\\[0\\]{z-index:0}.z-\\[510\\]{z-index:510}.z-\\[520\\]{z-index:520}.col-span-full{grid-column:1/-1}.container{width:100%}@media (min-width:40rem){.container{max-width:40rem}}@media (min-width:48rem){.container{max-width:48rem}}@media (min-width:64rem){.container{max-width:64rem}}@media (min-width:80rem){.container{max-width:80rem}}@media (min-width:96rem){.container{max-width:96rem}}.-m-2\\.5{margin:calc(var(--spacing)*-2.5)}.m-0{margin:calc(var(--spacing)*0)}.m-6{margin:calc(var(--spacing)*6)}.mx-auto{margin-inline:auto}.mt-0\\.5{margin-top:calc(var(--spacing)*.5)}.mt-1{margin-top:calc(var(--spacing)*1)}.mt-2{margin-top:calc(var(--spacing)*2)}.mt-3{margin-top:calc(var(--spacing)*3)}.mt-4{margin-top:calc(var(--spacing)*4)}.mt-6{margin-top:calc(var(--spacing)*6)}.mt-8{margin-top:calc(var(--spacing)*8)}.mr-1{margin-right:calc(var(--spacing)*1)}.mr-2{margin-right:calc(var(--spacing)*2)}.-mb-px{margin-bottom:-1px}.mb-1{margin-bottom:calc(var(--spacing)*1)}.mb-2{margin-bottom:calc(var(--spacing)*2)}.mb-3{margin-bottom:calc(var(--spacing)*3)}.mb-4{margin-bottom:calc(var(--spacing)*4)}.ml-2{margin-left:calc(var(--spacing)*2)}.ml-3{margin-left:calc(var(--spacing)*3)}.ml-auto{margin-left:auto}.line-clamp-2{-webkit-line-clamp:2;-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden}.block{display:block}.contents{display:contents}.flex{display:flex}.grid{display:grid}.hidden{display:none}.inline{display:inline}.inline-block{display:inline-block}.inline-flex{display:inline-flex}.table{display:table}.h-3\\.5{height:calc(var(--spacing)*3.5)}.h-4{height:calc(var(--spacing)*4)}.h-5{height:calc(var(--spacing)*5)}.h-6{height:calc(var(--spacing)*6)}.h-9{height:calc(var(--spacing)*9)}.h-10{height:calc(var(--spacing)*10)}.h-12{height:calc(var(--spacing)*12)}.h-48{height:calc(var(--spacing)*48)}.h-\\[200px\\]{height:200px}.h-full{height:100%}.max-h-10{max-height:calc(var(--spacing)*10)}.max-h-44{max-height:calc(var(--spacing)*44)}.max-h-48{max-height:calc(var(--spacing)*48)}.min-h-0{min-height:calc(var(--spacing)*0)}.min-h-\\[120px\\]{min-height:120px}.min-h-\\[140px\\]{min-height:140px}.min-h-\\[160px\\]{min-height:160px}.min-h-full{min-height:100%}.w-1\\/2{width:50%}.w-1\\/4{width:25%}.w-1\\/6{width:16.6667%}.w-2{width:calc(var(--spacing)*2)}.w-3\\.5{width:calc(var(--spacing)*3.5)}.w-3\\/4{width:75%}.w-3\\/6{width:50%}.w-4{width:calc(var(--spacing)*4)}.w-5{width:calc(var(--spacing)*5)}.w-6{width:calc(var(--spacing)*6)}.w-12{width:calc(var(--spacing)*12)}.w-24{width:calc(var(--spacing)*24)}.w-48{width:calc(var(--spacing)*48)}.w-92{width:calc(var(--spacing)*92)}.w-\\[400px\\]{width:400px}.w-auto{width:auto}.w-full{width:100%}.max-w-\\[220px\\]{max-width:220px}.max-w-\\[260px\\]{max-width:260px}.max-w-\\[360px\\]{max-width:360px}.max-w-\\[720px\\]{max-width:720px}.max-w-\\[860px\\]{max-width:860px}.max-w-\\[1024px\\]{max-width:1024px}.max-w-\\[1140px\\]{max-width:1140px}.max-w-lg{max-width:var(--container-lg)}.max-w-md{max-width:var(--container-md)}.max-w-sm{max-width:var(--container-sm)}.max-w-xl{max-width:var(--container-xl)}.max-w-xs{max-width:var(--container-xs)}.min-w-0{min-width:calc(var(--spacing)*0)}.min-w-\\[2\\.5rem\\]{min-width:2.5rem}.min-w-\\[56px\\]{min-width:56px}.min-w-\\[220px\\]{min-width:220px}.flex-0{flex:0}.flex-1{flex:1}.flex-none{flex:none}.flex-shrink-0,.shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.basis-0{flex-basis:calc(var(--spacing)*0)}.table-auto{table-layout:auto}.origin-top-right{transform-origin:100% 0}.-translate-x-1\\/2{--tw-translate-x: -50% ;translate:var(--tw-translate-x)var(--tw-translate-y)}.-translate-x-full{--tw-translate-x:-100%;translate:var(--tw-translate-x)var(--tw-translate-y)}.-translate-y-1\\/2{--tw-translate-y: -50% ;translate:var(--tw-translate-x)var(--tw-translate-y)}.scale-95{--tw-scale-x:95%;--tw-scale-y:95%;--tw-scale-z:95%;scale:var(--tw-scale-x)var(--tw-scale-y)}.scale-100{--tw-scale-x:100%;--tw-scale-y:100%;--tw-scale-z:100%;scale:var(--tw-scale-x)var(--tw-scale-y)}.transform{transform:var(--tw-rotate-x,)var(--tw-rotate-y,)var(--tw-rotate-z,)var(--tw-skew-x,)var(--tw-skew-y,)}.animate-spin{animation:var(--animate-spin)}.cursor-default{cursor:default}.cursor-not-allowed{cursor:not-allowed}.cursor-pointer{cursor:pointer}.resize{resize:both}.resize-none{resize:none}.resize-y{resize:vertical}.list-disc{list-style-type:disc}.list-none{list-style-type:none}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-nowrap{flex-wrap:nowrap}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.items-end{align-items:flex-end}.items-start{align-items:flex-start}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.justify-end{justify-content:flex-end}.justify-start{justify-content:flex-start}.gap-0\\.5{gap:calc(var(--spacing)*.5)}.gap-1{gap:calc(var(--spacing)*1)}.gap-2{gap:calc(var(--spacing)*2)}.gap-3{gap:calc(var(--spacing)*3)}.gap-4{gap:calc(var(--spacing)*4)}.gap-6{gap:calc(var(--spacing)*6)}:where(.space-y-0\\.5>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing)*.5)*var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing)*.5)*calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-1>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing)*1)*var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing)*1)*calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-2>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing)*2)*var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing)*2)*calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-3>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing)*3)*var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing)*3)*calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-4>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing)*4)*var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing)*4)*calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-6>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing)*6)*var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing)*6)*calc(1 - var(--tw-space-y-reverse)))}.gap-x-2{-moz-column-gap:calc(var(--spacing)*2);column-gap:calc(var(--spacing)*2)}.gap-x-6{-moz-column-gap:calc(var(--spacing)*6);column-gap:calc(var(--spacing)*6)}:where(.space-x-2>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-start:calc(calc(var(--spacing)*2)*var(--tw-space-x-reverse));margin-inline-end:calc(calc(var(--spacing)*2)*calc(1 - var(--tw-space-x-reverse)))}:where(.space-x-3>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-start:calc(calc(var(--spacing)*3)*var(--tw-space-x-reverse));margin-inline-end:calc(calc(var(--spacing)*3)*calc(1 - var(--tw-space-x-reverse)))}.gap-y-2{row-gap:calc(var(--spacing)*2)}.gap-y-6{row-gap:calc(var(--spacing)*6)}.gap-y-8{row-gap:calc(var(--spacing)*8)}:where(.divide-y>:not(:last-child)){--tw-divide-y-reverse:0;border-bottom-style:var(--tw-border-style);border-top-style:var(--tw-border-style);border-top-width:calc(1px*var(--tw-divide-y-reverse));border-bottom-width:calc(1px*calc(1 - var(--tw-divide-y-reverse)))}.truncate{text-overflow:ellipsis;white-space:nowrap;overflow:hidden}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-visible{overflow:visible}.overflow-x-auto{overflow-x:auto}.overflow-x-hidden{overflow-x:hidden}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:var(--radius-2xl)}.rounded-full{border-radius:3.40282e38px}.rounded-lg{border-radius:var(--radius-lg)}.rounded-md{border-radius:var(--radius-md)}.rounded-none{border-radius:0}.rounded-sm{border-radius:var(--radius-sm)}.rounded-xl{border-radius:var(--radius-xl)}.border{border-style:var(--tw-border-style);border-width:1px}.border-0{border-style:var(--tw-border-style);border-width:0}.border-1{border-style:var(--tw-border-style);border-width:1px}.border-2{border-style:var(--tw-border-style);border-width:2px}.border-r{border-right-style:var(--tw-border-style);border-right-width:1px}.border-b{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}.border-b-2{border-bottom-style:var(--tw-border-style);border-bottom-width:2px}.border-l{border-left-style:var(--tw-border-style);border-left-width:1px}.border-dashed{--tw-border-style:dashed;border-style:dashed}.\\[border-color\\:var\\(--boomi-header-border-color\\)\\]{border-color:var(--boomi-header-border-color)}.border-\\[color-mix\\(in_srgb\\,var\\(--boomi-card-border\\,\\#e5e7eb\\)_80\\%\\,transparent\\)\\]{border-color:var(--boomi-card-border,#e5e7eb)}@supports (color:color-mix(in lab,red,red)){.border-\\[color-mix\\(in_srgb\\,var\\(--boomi-card-border\\,\\#e5e7eb\\)_80\\%\\,transparent\\)\\]{border-color:color-mix(in srgb,var(--boomi-card-border,#e5e7eb)80%,transparent)}}.border-\\[var\\(--boomi-accent\\)\\]{border-color:var(--boomi-accent)}.border-\\[var\\(--boomi-agent-compose-input-border\\,var\\(--boomi-card-border\\)\\)\\]{border-color:var(--boomi-agent-compose-input-border,var(--boomi-card-border))}.border-\\[var\\(--boomi-agent-compose-secondary-border\\,var\\(--boomi-card-border\\)\\)\\]{border-color:var(--boomi-agent-compose-secondary-border,var(--boomi-card-border))}.border-\\[var\\(--boomi-btn-primary-bg\\)\\]{border-color:var(--boomi-btn-primary-bg)}.border-\\[var\\(--boomi-card-border\\)\\]{border-color:var(--boomi-card-border)}.border-\\[var\\(--boomi-sidebar-border\\,var\\(--boomi-card-border\\)\\)\\]{border-color:var(--boomi-sidebar-border,var(--boomi-card-border))}.border-\\[var\\(--boomi-sidebar-btn-border\\,var\\(--boomi-btn-primary-border\\)\\)\\]{border-color:var(--boomi-sidebar-btn-border,var(--boomi-btn-primary-border))}.border-\\[var\\(--boomi-sidebar-secondary-btn-border\\,var\\(--boomi-btn-secondary-border\\)\\)\\]{border-color:var(--boomi-sidebar-secondary-btn-border,var(--boomi-btn-secondary-border))}.border-current\\/10{border-color:currentColor}@supports (color:color-mix(in lab,red,red)){.border-current\\/10{border-color:color-mix(in oklab,currentcolor 10%,transparent)}}.border-gray-300{border-color:var(--color-gray-300)}.border-red-500{border-color:var(--color-red-500)}.\\[background-color\\:var\\(--boomi-header-bg-color\\)\\]{background-color:var(--boomi-header-bg-color)}.\\[background-color\\:var\\(--boomi-page-bg-color\\)\\]{background-color:var(--boomi-page-bg-color)}.\\[background-color\\:var\\(--boomi-root-bg-color\\)\\]{background-color:var(--boomi-root-bg-color)}.bg-\\[color-mix\\(in_srgb\\,var\\(--boomi-card-bg\\,\\#ffffff\\)_86\\%\\,\\#000000\\)\\]{background-color:var(--boomi-card-bg,#fff)}@supports (color:color-mix(in lab,red,red)){.bg-\\[color-mix\\(in_srgb\\,var\\(--boomi-card-bg\\,\\#ffffff\\)_86\\%\\,\\#000000\\)\\]{background-color:color-mix(in srgb,var(--boomi-card-bg,#fff)86%,#000)}}.bg-\\[color-mix\\(in_srgb\\,var\\(--boomi-card-bg\\,\\#ffffff\\)_92\\%\\,\\#000000\\)\\]{background-color:var(--boomi-card-bg,#fff)}@supports (color:color-mix(in lab,red,red)){.bg-\\[color-mix\\(in_srgb\\,var\\(--boomi-card-bg\\,\\#ffffff\\)_92\\%\\,\\#000000\\)\\]{background-color:color-mix(in srgb,var(--boomi-card-bg,#fff)92%,#000)}}.bg-\\[var\\(--boomi-agent-compose-bg\\,var\\(--boomi-card-bg\\)\\)\\]{background-color:var(--boomi-agent-compose-bg,var(--boomi-card-bg))}.bg-\\[var\\(--boomi-agent-compose-secondary-bg\\,var\\(--boomi-card-bg\\)\\)\\]{background-color:var(--boomi-agent-compose-secondary-bg,var(--boomi-card-bg))}.bg-\\[var\\(--boomi-agent-pane-bg\\)\\]{background-color:var(--boomi-agent-pane-bg)}.bg-\\[var\\(--boomi-btn-primary-bg\\)\\]{background-color:var(--boomi-btn-primary-bg)}.bg-\\[var\\(--boomi-card-bg\\)\\],.bg-\\[var\\(--boomi-card-bg\\)\\]\\/70{background-color:var(--boomi-card-bg)}@supports (color:color-mix(in lab,red,red)){.bg-\\[var\\(--boomi-card-bg\\)\\]\\/70{background-color:color-mix(in oklab,var(--boomi-card-bg)70%,transparent)}}.bg-\\[var\\(--boomi-sidebar-bg\\,var\\(--boomi-card-bg\\)\\)\\]{background-color:var(--boomi-sidebar-bg,var(--boomi-card-bg))}.bg-\\[var\\(--boomi-sidebar-btn-bg\\,var\\(--boomi-btn-primary-bg\\)\\)\\]{background-color:var(--boomi-sidebar-btn-bg,var(--boomi-btn-primary-bg))}.bg-\\[var\\(--boomi-sidebar-header-bg\\,var\\(--boomi-sidebar-bg\\)\\)\\]{background-color:var(--boomi-sidebar-header-bg,var(--boomi-sidebar-bg))}.bg-\\[var\\(--boomi-sidebar-secondary-btn-bg\\,var\\(--boomi-btn-secondary-bg\\)\\)\\]{background-color:var(--boomi-sidebar-secondary-btn-bg,var(--boomi-btn-secondary-bg))}.bg-black{background-color:var(--color-black)}.bg-blue-600{background-color:var(--color-blue-600)}.bg-gray-100{background-color:var(--color-gray-100)}.bg-green-100{background-color:var(--color-green-100)}.bg-indigo-100{background-color:var(--color-indigo-100)}.bg-indigo-600{background-color:var(--color-indigo-600)}.bg-red-100{background-color:var(--color-red-100)}.bg-transparent{background-color:#0000}.bg-white{background-color:var(--color-white)}.bg-yellow-100{background-color:var(--color-yellow-100)}.p-0{padding:calc(var(--spacing)*0)}.p-0\\.5{padding:calc(var(--spacing)*.5)}.p-1{padding:calc(var(--spacing)*1)}.p-2{padding:calc(var(--spacing)*2)}.p-2\\.5{padding:calc(var(--spacing)*2.5)}.p-3{padding:calc(var(--spacing)*3)}.p-4{padding:calc(var(--spacing)*4)}.p-5{padding:calc(var(--spacing)*5)}.p-6{padding:calc(var(--spacing)*6)}.px-1{padding-inline:calc(var(--spacing)*1)}.px-2{padding-inline:calc(var(--spacing)*2)}.px-3{padding-inline:calc(var(--spacing)*3)}.px-4{padding-inline:calc(var(--spacing)*4)}.px-6{padding-inline:calc(var(--spacing)*6)}.py-0\\.5{padding-block:calc(var(--spacing)*.5)}.py-1{padding-block:calc(var(--spacing)*1)}.py-1\\.5{padding-block:calc(var(--spacing)*1.5)}.py-2{padding-block:calc(var(--spacing)*2)}.py-2\\.5{padding-block:calc(var(--spacing)*2.5)}.py-3{padding-block:calc(var(--spacing)*3)}.py-4{padding-block:calc(var(--spacing)*4)}.py-6{padding-block:calc(var(--spacing)*6)}.py-10{padding-block:calc(var(--spacing)*10)}.pt-1{padding-top:calc(var(--spacing)*1)}.pt-2{padding-top:calc(var(--spacing)*2)}.pt-4{padding-top:calc(var(--spacing)*4)}.pt-6{padding-top:calc(var(--spacing)*6)}.pr-2{padding-right:calc(var(--spacing)*2)}.pr-3{padding-right:calc(var(--spacing)*3)}.pr-4{padding-right:calc(var(--spacing)*4)}.pr-6{padding-right:calc(var(--spacing)*6)}.pr-10{padding-right:calc(var(--spacing)*10)}.pb-1{padding-bottom:calc(var(--spacing)*1)}.pb-2{padding-bottom:calc(var(--spacing)*2)}.pb-3{padding-bottom:calc(var(--spacing)*3)}.pb-4{padding-bottom:calc(var(--spacing)*4)}.pl-1{padding-left:calc(var(--spacing)*1)}.pl-2{padding-left:calc(var(--spacing)*2)}.pl-3{padding-left:calc(var(--spacing)*3)}.pl-4{padding-left:calc(var(--spacing)*4)}.pl-5{padding-left:calc(var(--spacing)*5)}.pl-8{padding-left:calc(var(--spacing)*8)}.text-center{text-align:center}.text-left{text-align:left}.text-right{text-align:right}.font-mono{font-family:var(--font-mono)}.text-2xl{font-size:var(--text-2xl);line-height:var(--tw-leading,var(--text-2xl--line-height))}.text-3xl{font-size:var(--text-3xl);line-height:var(--tw-leading,var(--text-3xl--line-height))}.text-base{font-size:var(--text-base);line-height:var(--tw-leading,var(--text-base--line-height))}.text-lg{font-size:var(--text-lg);line-height:var(--tw-leading,var(--text-lg--line-height))}.text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.text-xl{font-size:var(--text-xl);line-height:var(--tw-leading,var(--text-xl--line-height))}.text-xs{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}.text-\\[10px\\]{font-size:10px}.text-\\[11px\\]{font-size:11px}.text-\\[13px\\]{font-size:13px}.leading-5{--tw-leading:calc(var(--spacing)*5);line-height:calc(var(--spacing)*5)}.leading-6{--tw-leading:calc(var(--spacing)*6);line-height:calc(var(--spacing)*6)}.leading-7{--tw-leading:calc(var(--spacing)*7);line-height:calc(var(--spacing)*7)}.leading-none{--tw-leading:1;line-height:1}.leading-snug{--tw-leading:var(--leading-snug);line-height:var(--leading-snug)}.font-bold{--tw-font-weight:var(--font-weight-bold);font-weight:var(--font-weight-bold)}.font-extrabold{--tw-font-weight:var(--font-weight-extrabold);font-weight:var(--font-weight-extrabold)}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.font-normal{--tw-font-weight:var(--font-weight-normal);font-weight:var(--font-weight-normal)}.font-semibold{--tw-font-weight:var(--font-weight-semibold);font-weight:var(--font-weight-semibold)}.font-thin{--tw-font-weight:var(--font-weight-thin);font-weight:var(--font-weight-thin)}.tracking-wide{--tw-tracking:var(--tracking-wide);letter-spacing:var(--tracking-wide)}.break-words{overflow-wrap:break-word}.whitespace-normal{white-space:normal}.whitespace-nowrap{white-space:nowrap}.whitespace-pre{white-space:pre}.whitespace-pre-line{white-space:pre-line}.whitespace-pre-wrap{white-space:pre-wrap}.\\[color\\:var\\(--boomi-header-fg-color\\)\\]{color:var(--boomi-header-fg-color)}.\\[color\\:var\\(--boomi-page-fg-color\\)\\]{color:var(--boomi-page-fg-color)}.\\[color\\:var\\(--boomi-root-fg-color\\)\\]{color:var(--boomi-root-fg-color)}.text-\\[color-mix\\(in_srgb\\,var\\(--boomi-card-fg\\,\\#111\\)_55\\%\\,transparent\\)\\]{color:var(--boomi-card-fg,#111)}@supports (color:color-mix(in lab,red,red)){.text-\\[color-mix\\(in_srgb\\,var\\(--boomi-card-fg\\,\\#111\\)_55\\%\\,transparent\\)\\]{color:color-mix(in srgb,var(--boomi-card-fg,#111)55%,transparent)}}.text-\\[var\\(--boomi-agent-pane-fg\\)\\]{color:var(--boomi-agent-pane-fg)}.text-\\[var\\(--boomi-btn-primary-bg\\)\\]{color:var(--boomi-btn-primary-bg)}.text-\\[var\\(--boomi-btn-primary-fg\\)\\]{color:var(--boomi-btn-primary-fg)}.text-\\[var\\(--boomi-muted\\)\\]{color:var(--boomi-muted)}.text-\\[var\\(--boomi-page-fg-color\\)\\]{color:var(--boomi-page-fg-color)}.text-\\[var\\(--boomi-sidebar-btn-fg\\,var\\(--boomi-btn-primary-fg\\)\\)\\]{color:var(--boomi-sidebar-btn-fg,var(--boomi-btn-primary-fg))}.text-\\[var\\(--boomi-sidebar-fg\\,var\\(--boomi-page-fg-color\\)\\)\\]{color:var(--boomi-sidebar-fg,var(--boomi-page-fg-color))}.text-\\[var\\(--boomi-sidebar-secondary-btn-fg\\,var\\(--boomi-btn-secondary-fg\\)\\)\\]{color:var(--boomi-sidebar-secondary-btn-fg,var(--boomi-btn-secondary-fg))}.text-gray-400{color:var(--color-gray-400)}.text-gray-500{color:var(--color-gray-500)}.text-gray-600{color:var(--color-gray-600)}.text-gray-700{color:var(--color-gray-700)}.text-gray-800{color:var(--color-gray-800)}.text-green-600{color:var(--color-green-600)}.text-green-700{color:var(--color-green-700)}.text-indigo-400{color:var(--color-indigo-400)}.text-indigo-500{color:var(--color-indigo-500)}.text-red-400{color:var(--color-red-400)}.text-red-500{color:var(--color-red-500)}.text-red-600{color:var(--color-red-600)}.text-white{color:var(--color-white)}.text-yellow-600{color:var(--color-yellow-600)}.uppercase{text-transform:uppercase}.no-underline{text-decoration-line:none}.underline{text-decoration-line:underline}.placeholder-\\[var\\(--boomi-error-soft\\,var\\(--boomi-error-fg\\,\\#b91c1c\\)\\)\\]\\/90::-moz-placeholder{color:var(--boomi-error-soft,var(--boomi-error-fg,#b91c1c))}.placeholder-\\[var\\(--boomi-error-soft\\,var\\(--boomi-error-fg\\,\\#b91c1c\\)\\)\\]\\/90::placeholder{color:var(--boomi-error-soft,var(--boomi-error-fg,#b91c1c))}@supports (color:color-mix(in lab,red,red)){.placeholder-\\[var\\(--boomi-error-soft\\,var\\(--boomi-error-fg\\,\\#b91c1c\\)\\)\\]\\/90::-moz-placeholder{color:color-mix(in oklab,var(--boomi-error-soft,var(--boomi-error-fg,#b91c1c))90%,transparent)}.placeholder-\\[var\\(--boomi-error-soft\\,var\\(--boomi-error-fg\\,\\#b91c1c\\)\\)\\]\\/90::placeholder{color:color-mix(in oklab,var(--boomi-error-soft,var(--boomi-error-fg,#b91c1c))90%,transparent)}}.opacity-0{opacity:0}.opacity-50{opacity:.5}.opacity-60{opacity:.6}.opacity-70{opacity:.7}.opacity-75{opacity:.75}.opacity-80{opacity:.8}.opacity-90{opacity:.9}.opacity-100{opacity:1}.shadow{--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,#0000001a),0 1px 2px -1px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-\\[0_6px_18px_rgba\\(15\\,23\\,42\\,0\\.08\\)\\]{--tw-shadow:0 6px 18px var(--tw-shadow-color,#0f172a14);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-\\[var\\(--boomi-card-shadow\\)\\]{--tw-shadow:var(--boomi-card-shadow);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-\\[var\\(--boomi-sidebar-header-shadow\\,0_1px_2px_rgba\\(0\\,0\\,0\\,0\\.08\\)\\)\\]{--tw-shadow:var(--boomi-sidebar-header-shadow,0 1px 2px #00000014);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px var(--tw-shadow-color,#0000001a),0 4px 6px -4px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px var(--tw-shadow-color,#0000001a),0 2px 4px -2px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-none{--tw-shadow:0 0 #0000;box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,#0000001a),0 1px 2px -1px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,#0000001a),0 8px 10px -6px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.ring{--tw-ring-shadow:var(--tw-ring-inset,)0 0 0 calc(1px + var(--tw-ring-offset-width))var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.\\[box-shadow\\:var\\(--boomi-header-shadow\\)\\]{box-shadow:var(--boomi-header-shadow)}.outline{outline-style:var(--tw-outline-style);outline-width:1px}.outline-2{outline-style:var(--tw-outline-style);outline-width:2px}.outline-\\[var\\(--boomi-accent\\,\\#6366f1\\)\\]{outline-color:var(--boomi-accent,#6366f1)}.blur{--tw-blur:blur(8px);filter:var(--tw-blur,)var(--tw-brightness,)var(--tw-contrast,)var(--tw-grayscale,)var(--tw-hue-rotate,)var(--tw-invert,)var(--tw-saturate,)var(--tw-sepia,)var(--tw-drop-shadow,)}.\\[filter\\:saturate\\(0\\.9\\)\\]{filter:saturate(.9)}.filter{filter:var(--tw-blur,)var(--tw-brightness,)var(--tw-contrast,)var(--tw-grayscale,)var(--tw-hue-rotate,)var(--tw-invert,)var(--tw-saturate,)var(--tw-sepia,)var(--tw-drop-shadow,)}.backdrop-blur-\\[1px\\]{--tw-backdrop-blur:blur(1px);-webkit-backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,)}.transition{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to,opacity,box-shadow,transform,translate,scale,rotate,filter,backdrop-filter,display,content-visibility,overlay,pointer-events;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-all{transition-property:all;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-colors{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-transform{transition-property:transform,translate,scale,rotate;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.duration-75{--tw-duration:75ms;transition-duration:75ms}.duration-100{--tw-duration:.1s;transition-duration:.1s}.duration-150{--tw-duration:.15s;transition-duration:.15s}.ease-in{--tw-ease:var(--ease-in);transition-timing-function:var(--ease-in)}.ease-out{--tw-ease:var(--ease-out);transition-timing-function:var(--ease-out)}.will-change-transform{will-change:transform}.outline-none{--tw-outline-style:none;outline-style:none}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.\\[background\\:linear-gradient\\(90deg\\,transparent\\,rgba\\(255\\,255\\,255\\,\\.08\\)\\,transparent\\)\\]{background:linear-gradient(90deg,#0000,#ffffff14,#0000)}@media (hover:hover){.group-hover\\:block:is(:where(.group):hover *){display:block}.group-hover\\:translate-x-0:is(:where(.group):hover *){--tw-translate-x:calc(var(--spacing)*0);translate:var(--tw-translate-x)var(--tw-translate-y)}.hover\\:-translate-y-\\[1px\\]:hover{--tw-translate-y: -1px ;translate:var(--tw-translate-x)var(--tw-translate-y)}.hover\\:scale-\\[1\\.02\\]:hover{scale:1.02}.hover\\:scale-\\[1\\.03\\]:hover{scale:1.03}.hover\\:bg-\\[var\\(--boomi-card-bg\\)\\]:hover{background-color:var(--boomi-card-bg)}.hover\\:bg-\\[var\\(--boomi-sidebar-btn-bg-hover\\,var\\(--boomi-btn-primary-bg-hover\\)\\)\\]:hover{background-color:var(--boomi-sidebar-btn-bg-hover,var(--boomi-btn-primary-bg-hover))}.hover\\:bg-\\[var\\(--boomi-sidebar-secondary-btn-bg-hover\\,var\\(--boomi-btn-secondary-bg-hover\\)\\)\\]:hover{background-color:var(--boomi-sidebar-secondary-btn-bg-hover,var(--boomi-btn-secondary-bg-hover))}.hover\\:bg-black\\/5:hover{background-color:#0000000d}@supports (color:color-mix(in lab,red,red)){.hover\\:bg-black\\/5:hover{background-color:color-mix(in oklab,var(--color-black)5%,transparent)}}.hover\\:bg-indigo-700:hover{background-color:var(--color-indigo-700)}.hover\\:text-gray-600:hover{color:var(--color-gray-600)}.hover\\:text-indigo-500:hover{color:var(--color-indigo-500)}.hover\\:text-red-600:hover{color:var(--color-red-600)}.hover\\:opacity-100:hover{opacity:1}.hover\\:shadow:hover{--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,#0000001a),0 1px 2px -1px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}}.focus\\:ring-2:focus{--tw-ring-shadow:var(--tw-ring-inset,)0 0 0 calc(2px + var(--tw-ring-offset-width))var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.focus\\:ring-indigo-500:focus{--tw-ring-color:var(--color-indigo-500)}.focus\\:ring-offset-1:focus{--tw-ring-offset-width:1px;--tw-ring-offset-shadow:var(--tw-ring-inset,)0 0 0 var(--tw-ring-offset-width)var(--tw-ring-offset-color)}.focus\\:ring-offset-2:focus{--tw-ring-offset-width:2px;--tw-ring-offset-shadow:var(--tw-ring-inset,)0 0 0 var(--tw-ring-offset-width)var(--tw-ring-offset-color)}.focus\\:outline-none:focus{--tw-outline-style:none;outline-style:none}.focus-visible\\:outline:focus-visible{outline-style:var(--tw-outline-style);outline-width:1px}.focus-visible\\:outline-2:focus-visible{outline-style:var(--tw-outline-style);outline-width:2px}.focus-visible\\:outline-offset-2:focus-visible{outline-offset:2px}.focus-visible\\:\\[outline-color\\:var\\(--boomi-btn-primary-border\\)\\]:focus-visible{outline-color:var(--boomi-btn-primary-border)}.focus-visible\\:\\[outline-color\\:var\\(--boomi-btn-secondary-border\\)\\]:focus-visible{outline-color:var(--boomi-btn-secondary-border)}.disabled\\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\\:opacity-50:disabled{opacity:.5}@media (min-width:40rem){.sm\\:col-span-2{grid-column:span 2/span 2}.sm\\:flex{display:flex}.sm\\:flex-auto{flex:auto}.sm\\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\\:items-center{align-items:center}.sm\\:pl-2{padding-left:calc(var(--spacing)*2)}}@media (min-width:48rem){.md\\:w-auto{width:auto}.md\\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.md\\:p-5{padding:calc(var(--spacing)*5)}.md\\:px-6{padding-inline:calc(var(--spacing)*6)}.md\\:px-8{padding-inline:calc(var(--spacing)*8)}}@media (min-width:64rem){.lg\\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}@media (min-width:80rem){.xl\\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}.boomi-plugin-root{--boomi-root-bg-color:var(--boomi-page-bg-color,#f9fafb);background-color:var(--boomi-root-bg-color);color:var(--boomi-root-fg-color,#111827);background-image:var(--boomi-root-bg-image,none);background-repeat:no-repeat,repeat,repeat;position:relative}.boomi-plugin-root a,.boomi-plugin-root button,.boomi-plugin-root [role=button]{cursor:pointer}.boomi-plugin-body{padding:2rem;position:relative}.boomi-btn-primary{background-color:var(--boomi-btn-primary-bg);color:var(--boomi-btn-primary-fg);border-color:var(--boomi-btn-primary-border);box-shadow:var(--boomi-btn-primary-shadow)}.boomi-btn-primary:hover{background-color:var(--boomi-btn-primary-bg-hover,var(--boomi-btn-primary-bg));color:var(--boomi-btn-primary-fg-hover,var(--boomi-btn-primary-fg));border-color:var(--boomi-btn-primary-border-hover,var(--boomi-btn-primary-border));box-shadow:var(--boomi-btn-primary-shadow-hover,var(--boomi-btn-primary-shadow))}.boomi-btn-primary:active{background-color:var(--boomi-btn-primary-bg-active,var(--boomi-btn-primary-bg));color:var(--boomi-btn-primary-fg-active,var(--boomi-btn-primary-fg));border-color:var(--boomi-btn-primary-border-active,var(--boomi-btn-primary-border));box-shadow:var(--boomi-btn-primary-shadow-active,var(--boomi-btn-primary-shadow))}.boomi-btn-primary:disabled{opacity:.5;cursor:not-allowed;pointer-events:none;filter:saturate(.9)}.boomi-btn-secondary{background-color:var(--boomi-btn-secondary-bg);color:var(--boomi-btn-secondary-fg);border-color:var(--boomi-btn-secondary-border);box-shadow:var(--boomi-btn-secondary-shadow)}.boomi-btn-secondary:hover{background-color:var(--boomi-btn-secondary-bg-hover,var(--boomi-btn-secondary-bg));color:var(--boomi-btn-secondary-fg-hover,var(--boomi-btn-secondary-fg));border-color:var(--boomi-btn-secondary-border-hover,var(--boomi-btn-secondary-border));box-shadow:var(--boomi-btn-secondary-shadow-hover,var(--boomi-btn-secondary-shadow))}.boomi-btn-secondary:active{background-color:var(--boomi-btn-secondary-bg-active,var(--boomi-btn-secondary-bg));color:var(--boomi-btn-secondary-fg-active,var(--boomi-btn-secondary-fg));border-color:var(--boomi-btn-secondary-border-active,var(--boomi-btn-secondary-border));box-shadow:var(--boomi-btn-secondary-shadow-active,var(--boomi-btn-secondary-shadow))}.boomi-btn-secondary:disabled{opacity:.5;cursor:not-allowed;pointer-events:none;filter:saturate(.9)}.boomi-btn-success{--_bg:var(--boomi-success-bg,#16a34a);--_bg-hover:var(--boomi-success-bg-hover,#15803d);--_border:var(--boomi-success-border,#15803d);--_text:var(--boomi-success-text,#fff);background:var(--_bg);color:var(--_text);border-color:var(--_border)}.boomi-btn-success:hover{background:var(--_bg-hover)}.boomi-btn-success:focus-visible{outline:2px solid var(--_border);outline-offset:2px}.boomi-breadcrumb-link{color:var(--boomi-header-fg);text-decoration:none;transition:color .15s ease-in-out}.boomi-breadcrumb-link:hover{color:var(--boomi-header-fg-hover,var(--boomi-header-fg));text-decoration:none}.boomi-breadcrumb-link:active{color:var(--boomi-header-fg-active,var(--boomi-header-fg-hover,var(--boomi-header-fg)))}.boomi-input{background-color:var(--boomi-input-bg);color:var(--boomi-input-fg);border:1px solid var(--boomi-input-border);box-shadow:var(--boomi-input-shadow);transition:border-color .15s,box-shadow .15s,outline-color .15s}.boomi-input::-moz-placeholder{color:var(--boomi-input-placeholder)}.boomi-input::placeholder{color:var(--boomi-input-placeholder)}.boomi-input:focus{outline:none}.boomi-input:focus-visible{border-color:var(--boomi-input-border-focus,var(--boomi-input-border));box-shadow:var(--boomi-input-shadow-focus,var(--boomi-input-shadow));outline:1px solid var(--boomi-input-outline-focus,var(--boomi-input-border-focus,currentColor))}.boomi-input:disabled{background-color:var(--boomi-input-bg-disabled,var(--boomi-input-bg));color:var(--boomi-input-fg-disabled,var(--boomi-input-fg));border-color:var(--boomi-input-border-disabled,var(--boomi-input-border));box-shadow:none;cursor:not-allowed}.boomi-input:invalid{border-color:var(--boomi-input-border-invalid,var(--boomi-input-border))}.boomi-input:focus-visible:invalid{outline-color:var(--boomi-input-outline-invalid,var(--boomi-input-border-invalid,currentColor))}.boomi-table-row{transition:transform .2s ease-in-out,box-shadow .2s ease-in-out}.boomi-table-row:nth-child(odd){background-color:var(--boomi-table-row-odd-bg)}.boomi-table-row:nth-child(2n){background-color:var(--boomi-table-row-even-bg)}.boomi-table-row-scale:hover{transform:scale(1.01)}.boomi-table-row:hover{box-shadow:var(--boomi-table-row-hover-shadow)}.boomi-table-header{background-color:var(--boomi-table-header-bg);color:var(--boomi-table-header-fg);border-bottom:1px solid var(--boomi-table-header-border,currentColor)}.boomi-admin-shell{--_shell-bg:var(--boomi-admin-shell-bg,var(--boomi-root-bg-color));--_shell-fg:var(--boomi-admin-shell-fg,var(--boomi-root-fg-color));--_shell-radius:var(--boomi-admin-shell-radius,0rem);--_shell-shadow:var(--boomi-admin-shell-shadow,var(--boomi-card-shadow,none));background-color:var(--_shell-bg);width:100%;height:100%;min-height:540px;color:var(--_shell-fg);border-radius:var(--_shell-radius);box-shadow:var(--_shell-shadow);display:flex;overflow:hidden}.boomi-admin-sidebar{--_sidebar-bg:var(--boomi-admin-sidebar-bg,var(--boomi-header-bg,var(--boomi-card-bg,var(--boomi-root-bg-color))));--_sidebar-fg:var(--boomi-admin-sidebar-fg,var(--boomi-header-fg,var(--boomi-root-fg-color)));--_sidebar-border:var(--boomi-admin-sidebar-border,var(--boomi-card-border,transparent));width:var(--boomi-admin-sidebar-width,16rem);background-color:var(--_sidebar-bg);color:var(--_sidebar-fg);border-right:1px solid var(--_sidebar-border);border-top-left-radius:0;border-bottom-left-radius:0;flex-direction:column;display:flex}.boomi-admin-logo{border-bottom:1px solid var(--boomi-admin-sidebar-border,var(--boomi-card-border,transparent));align-items:center;height:4rem;padding:0 1rem;display:flex}.boomi-admin-logo-text{letter-spacing:.01em;font-size:1.05rem;font-weight:700}.boomi-admin-nav{flex-direction:column;flex:1;gap:.35rem;padding:1rem .75rem;display:flex;overflow-y:auto}.boomi-admin-nav-button{--_nav-bg:var(--boomi-admin-nav-bg,transparent);--_nav-fg:var(--boomi-admin-nav-fg,var(--boomi-admin-sidebar-fg,currentColor));--_nav-bg-hover:var(--boomi-admin-nav-bg-hover,var(--_nav-bg))}@supports (color:color-mix(in lab,red,red)){.boomi-admin-nav-button{--_nav-bg-hover:var(--boomi-admin-nav-bg-hover,color-mix(in srgb,var(--_nav-bg)75%,transparent))}}.boomi-admin-nav-button{--_nav-fg-hover:var(--boomi-admin-nav-fg-hover,var(--_nav-fg));--_nav-bg-active:var(--boomi-admin-nav-bg-active,var(--_nav-bg))}@supports (color:color-mix(in lab,red,red)){.boomi-admin-nav-button{--_nav-bg-active:var(--boomi-admin-nav-bg-active,color-mix(in srgb,var(--_nav-bg)85%,transparent))}}.boomi-admin-nav-button{--_nav-fg-active:var(--boomi-admin-nav-fg-active,var(--_nav-fg));border-radius:var(--boomi-admin-nav-radius,.625rem);background-color:var(--_nav-bg);width:100%;color:var(--_nav-fg);text-align:left;border:1px solid #0000;align-items:center;gap:.75rem;padding:.65rem .9rem;font-size:.95rem;font-weight:600;transition:background-color .15s,color .15s,border-color .15s;display:flex}.boomi-admin-nav-button:hover{background-color:var(--_nav-bg-hover);color:var(--_nav-fg-hover);border-color:var(--boomi-admin-nav-border-hover,transparent)}.boomi-admin-nav-button.is-active{background-color:var(--_nav-bg-active);color:var(--_nav-fg-active);border-color:var(--boomi-admin-nav-border-active,var(--boomi-admin-nav-border-hover,transparent));box-shadow:var(--boomi-admin-nav-shadow-active,inset 0 0 0 1px currentColor)}.boomi-admin-nav-icon{align-items:center;font-size:1.1rem;line-height:1;display:inline-flex}.boomi-admin-nav-label{flex:1}.boomi-admin-logout{border-top:1px solid var(--boomi-admin-sidebar-border,var(--boomi-card-border,transparent));padding:1rem}.boomi-admin-logout-button{--_logout-bg:var(--boomi-admin-logout-bg,var(--boomi-admin-nav-bg,transparent));--_logout-fg:var(--boomi-admin-logout-fg,var(--boomi-admin-sidebar-fg,currentColor));--_logout-bg-hover:var(--boomi-admin-logout-bg-hover,var(--_logout-bg))}@supports (color:color-mix(in lab,red,red)){.boomi-admin-logout-button{--_logout-bg-hover:var(--boomi-admin-logout-bg-hover,color-mix(in srgb,var(--_logout-bg)82%,transparent))}}.boomi-admin-logout-button{border-radius:var(--boomi-admin-nav-radius,.625rem);background-color:var(--_logout-bg);width:100%;color:var(--_logout-fg);border:1px solid #0000;align-items:center;gap:.5rem;padding:.6rem .9rem;font-weight:600;transition:background-color .15s,color .15s,border-color .15s;display:inline-flex}.boomi-admin-logout-button:hover{background-color:var(--_logout-bg-hover);border-color:var(--boomi-admin-nav-border-hover,transparent)}.boomi-admin-main{background-color:var(--boomi-admin-main-bg,var(--boomi-page-bg-color,var(--boomi-root-bg-color)));color:var(--boomi-admin-main-fg,var(--boomi-root-fg-color));padding:var(--boomi-admin-main-padding,0);flex:1;overflow:auto}.boomi-admin-main-inner{max-width:var(--boomi-admin-main-max-width,100%);width:100%;height:100%;margin:0}.boomi-cors-card{min-height:150px;padding:.5rem}.boomi-card{border-style:solid;border-width:1px;border-color:var(--boomi-card-border);background-color:var(--boomi-card-bg);box-shadow:var(--boomi-card-shadow);border-radius:var(--boomi-card-radius,.75rem);z-index:1;flex-direction:column;justify-content:space-between;transition:transform .2s ease-in-out,box-shadow .2s ease-in-out;display:flex;position:relative;overflow:visible}.boomi-card:hover{transform:var(--boomi-card-hover-scale,scale(1.01));box-shadow:var(--boomi-card-hover-shadow,var(--boomi-card-shadow));z-index:5}.boomi-menu{background-color:var(--boomi-menu-bg);color:var(--boomi-menu-fg);border:1px solid var(--boomi-menu-border);box-shadow:var(--boomi-menu-shadow);border-radius:var(--boomi-menu-radius,.5rem);font-size:var(--boomi-menu-font-size,.875rem);z-index:50;min-width:15rem;padding:.25rem}.boomi-menu-item{white-space:nowrap;border-radius:var(--boomi-menu-item-radius,.375rem);width:100%;min-height:2.75rem;color:var(--boomi-menu-item-fg,var(--boomi-menu-fg));align-items:center;gap:.5rem;padding:.75rem 1rem;line-height:1.35rem;transition:background-color .15s,color .15s;display:flex}.boomi-menu-item:hover,.boomi-menu-item[data-headlessui-state~=active]{background-color:var(--boomi-menu-item-bg-hover,var(--boomi-menu-item-bg));color:var(--boomi-menu-item-fg-hover,var(--boomi-menu-item-fg,var(--boomi-menu-fg)))}.boomi-menu-item:focus-visible{outline:2px solid var(--boomi-menu-item-outline,var(--boomi-menu-border));outline-offset:2px}.boomi-menu-icon{width:1.25rem;height:1.25rem;opacity:var(--boomi-menu-icon-opacity,.95)}.boomi-menu-item--danger{color:var(--boomi-menu-danger-fg)}.boomi-menu-item--danger:hover,.boomi-menu-item--danger[data-headlessui-state~=active]{background-color:var(--boomi-menu-danger-bg-hover,var(--boomi-menu-item-bg-hover));color:var(--boomi-menu-danger-fg-hover,var(--boomi-menu-danger-fg))}.boomi-menu-divider{background-color:var(--boomi-menu-divider);height:1px;margin:.25rem 0}.boomi-modal-overlay{z-index:2147483500;background-color:var(--boomi-modal-overlay-bg,#00000080);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);justify-content:center;align-items:flex-start;padding-top:6rem;display:flex;position:fixed;top:0;right:0;bottom:0;left:0;overflow:auto}.boomi-modal-container{width:65%;transform:translate(var(--boomi-modal-offset-x,0px),var(--boomi-modal-offset-y,0px));background-color:var(--boomi-modal-bg,#fff);color:var(--boomi-modal-fg,#111);box-shadow:var(--boomi-modal-shadow,0 4px 20px #0003);border:var(--boomi-modal-border,1px solid transparent);border-radius:1rem;padding:1.5rem;position:relative;overflow:auto}.boomi-modal-container--wide{width:90%;max-width:1100px}.boomi-modal-close{color:var(--boomi-modal-close-fg,#6b7280);cursor:pointer;background:0 0;border:none;transition:color .15s ease-in-out;position:absolute;top:.75rem;right:.75rem}.boomi-modal-close:hover{color:var(--boomi-modal-close-hover-fg,#111)}.boomi-form-label{color:var(--boomi-form-label-fg,var(--boomi-header-fg-color,#374151));margin-bottom:.25rem;font-size:.875rem;font-weight:600;display:block}.boomi-form-required{color:var(--boomi-form-required-fg,#f87171);margin-left:.125rem}.boomi-form-helper{color:var(--boomi-form-helper-fg,#6b7280);margin-top:.25rem;font-size:.75rem}.boomi-form-error{color:var(--boomi-danger-fg);margin-top:.15rem;font-size:.875rem}.boomi-input--readonly{background-color:var(--boomi-input-bg-disabled,var(--boomi-input-bg));color:var(--boomi-input-fg-disabled,var(--boomi-input-fg));border-color:var(--boomi-input-border-disabled,var(--boomi-input-border));cursor:not-allowed}.boomi-input--error{border-color:var(--boomi-input-border-invalid,var(--boomi-input-border));outline-color:var(--boomi-input-outline-invalid,var(--boomi-input-border-invalid))}.boomi-select{background-color:var(--boomi-select-bg,var(--boomi-input-bg,#fff));color:var(--boomi-select-fg,var(--boomi-input-fg,#111));border:1px solid var(--boomi-select-border,var(--boomi-input-border,#d1d5db));box-shadow:var(--boomi-select-shadow,var(--boomi-input-shadow,0 0 0 0 #0000));text-align:left;border-radius:.375rem;padding:.5rem 2.5rem .5rem .75rem;transition:border-color .15s,box-shadow .15s;position:relative}.boomi-select:focus-visible{border-color:var(--boomi-select-border-focus,var(--boomi-input-border-focus,#6366f1));box-shadow:var(--boomi-select-shadow-focus,var(--boomi-input-shadow-focus,0 0 0 2px #6366f159));outline:none}.boomi-select--disabled{background-color:var(--boomi-select-bg-disabled,var(--boomi-input-bg-disabled,#f9fafb));color:var(--boomi-select-fg-disabled,var(--boomi-input-fg-disabled,#6b7280));border-color:var(--boomi-select-border-disabled,var(--boomi-input-border-disabled,#e5e7eb));cursor:not-allowed}.boomi-select--error{border-color:var(--boomi-select-border-invalid,var(--boomi-input-border-invalid,#f87171));box-shadow:none}.boomi-select-icon{width:1rem;height:1rem;color:var(--boomi-select-icon,#9ca3af)}.boomi-options{background-color:var(--boomi-options-bg,#fff);max-height:9rem;color:var(--boomi-options-fg,#111);border:1px solid var(--boomi-options-border,#e5e7eb);box-shadow:var(--boomi-options-shadow,0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a);z-index:9999;border-radius:.375rem;margin-top:.25rem;overflow:auto}.boomi-options-search{background-color:var(--boomi-options-search-bg,var(--boomi-options-bg,#fff));border-bottom:1px solid var(--boomi-options-border,#e5e7eb);padding:.25rem}.boomi-option{cursor:default;-webkit-user-select:none;-moz-user-select:none;user-select:none;color:var(--boomi-option-fg,var(--boomi-options-fg,#111));background:var(--boomi-option-bg,transparent);border-radius:.375rem;padding:.5rem 2.25rem .5rem .75rem;transition:background-color .15s,color .15s;position:relative}.boomi-option--active{background-color:var(--boomi-option-bg-active,var(--boomi-menu-item-bg-hover,#f3f4f6));color:var(--boomi-option-fg-active,var(--boomi-option-fg,#111))}.boomi-option--selected{background-color:var(--boomi-option-bg-selected,var(--boomi-option-bg-active));color:var(--boomi-option-fg-selected,#fff)}.boomi-option--placeholder{color:var(--boomi-option-fg-placeholder,#9ca3af);font-style:italic}.boomi-loader{flex-direction:column;justify-content:center;align-items:center;row-gap:.5rem;display:flex}.boomi-loader-dots{-moz-column-gap:.25rem;column-gap:.25rem;display:flex}.boomi-loader-dot{width:var(--boomi-loader-dot-size,.75rem);height:var(--boomi-loader-dot-size,.75rem);background-color:var(--boomi-loader-dot-bg,#111827);opacity:var(--boomi-loader-dot-opacity,1);border-radius:9999px;animation:.9s ease-in-out infinite boomi-bounce}.boomi-loader-dot--1{opacity:var(--boomi-loader-dot1-opacity,.25);animation-delay:0s}.boomi-loader-dot--2{opacity:var(--boomi-loader-dot2-opacity,.6);animation-delay:.12s}.boomi-loader-dot--3{opacity:var(--boomi-loader-dot3-opacity,1);animation-delay:.24s}.boomi-loader-message{color:var(--boomi-loader-msg-fg,#4b5563);text-align:center;padding-top:.5rem;font-size:.875rem}@keyframes boomi-bounce{0%,80%,to{transform:translateY(0)}40%{transform:translateY(-35%)}}.boomi-spinner-overlay{z-index:9999;background-color:var(--boomi-spinner-overlay-bg,#00000080);-webkit-backdrop-filter:blur(var(--boomi-spinner-overlay-blur,4px));backdrop-filter:blur(var(--boomi-spinner-overlay-blur,4px));justify-content:center;align-items:flex-start;padding-top:8rem;display:flex;position:fixed;top:0;right:0;bottom:0;left:0}.boomi-spinner-overlay--contained{border-radius:inherit;background-color:var(--boomi-spinner-overlay-contained-bg,var(--boomi-agent-update-bg,var(--boomi-page-bg-color)));justify-content:center;align-items:center;padding-top:0;position:absolute}@supports (color:color-mix(in lab,red,red)){.boomi-spinner-overlay--contained{background-color:var(--boomi-spinner-overlay-contained-bg,color-mix(in srgb,var(--boomi-agent-update-bg,var(--boomi-page-bg-color))80%,transparent))}}.boomi-spinner-overlay--contained{-webkit-backdrop-filter:blur(var(--boomi-spinner-overlay-contained-blur,2px));backdrop-filter:blur(var(--boomi-spinner-overlay-contained-blur,2px));z-index:20}.boomi-spinner-container{flex-direction:column;align-items:center;row-gap:1rem;display:flex}.boomi-spinner-ring-wrap{width:var(--boomi-spinner-size,4rem);height:var(--boomi-spinner-size,4rem);position:relative}.boomi-spinner-ring{border-width:var(--boomi-spinner-border-width,4px);border-style:solid;border-color:#0000;border-top-color:var(--boomi-spinner-ring-color,white);border-radius:9999px;width:100%;height:100%;animation:1s linear infinite boomi-spin}.boomi-spinner-ring-ping{background-color:var(--boomi-spinner-ping-color,white);opacity:var(--boomi-spinner-ping-opacity,.1);border-radius:9999px;animation:1.5s cubic-bezier(0,0,.2,1) infinite boomi-ping;position:absolute;top:0;right:0;bottom:0;left:0}.boomi-spinner-message{color:var(--boomi-spinner-message-fg,white);font-size:.875rem;font-weight:500;animation:1.5s ease-in-out infinite boomi-pulse}@keyframes boomi-spin{to{transform:rotate(360deg)}}@keyframes boomi-ping{0%{opacity:var(--boomi-spinner-ping-opacity,.1);transform:scale(1)}75%,to{opacity:0;transform:scale(2)}}@keyframes boomi-pulse{0%,to{opacity:1}50%{opacity:.6}}.boomi-wizard{flex-direction:column;justify-content:center;display:flex}.boomi-steps{flex-direction:row;justify-content:space-between;gap:.5rem;width:100%;padding:1rem;display:flex;position:relative}.boomi-step{flex-direction:column;flex:none;align-items:stretch;min-width:2rem;display:flex}.boomi-step--with-connector{flex:1 1 0}.boomi-step-row{align-items:center;min-height:1.75rem;display:inline-flex}.boomi-step-dot{background-color:var(--boomi-wizard-step-dot-bg);width:1.75rem;height:1.75rem;color:var(--boomi-wizard-step-dot-fg);box-shadow:var(--boomi-wizard-step-dot-shadow,0 0 0 0 #0000);border:1px solid var(--boomi-wizard-step-dot-border,transparent);border-radius:9999px;flex-shrink:0;justify-content:center;align-items:center;font-weight:600;transition:background-color .15s,color .15s,box-shadow .15s,border-color .15s;display:flex}.boomi-step-connector{background:var(--boomi-wizard-connector-bg);height:1px;box-shadow:var(--boomi-wizard-connector-shadow,none);flex:auto;margin-inline-start:.5rem}.boomi-step:last-child .boomi-step-connector{display:none!important}.boomi-step-label{color:var(--boomi-wizard-label-fg);margin-top:.75rem;font-size:.875rem;font-weight:600}.boomi-step--active .boomi-step-dot{background-color:var(--boomi-wizard-step-dot-bg-active);color:var(--boomi-wizard-step-dot-fg-active);border-color:var(--boomi-wizard-step-dot-border-active,var(--boomi-wizard-step-dot-bg-active));box-shadow:var(--boomi-wizard-step-dot-shadow-active,var(--boomi-wizard-step-dot-shadow))}.boomi-step--completed .boomi-step-dot{background-color:var(--boomi-wizard-step-dot-bg-completed);color:var(--boomi-wizard-step-dot-fg-completed);border-color:var(--boomi-wizard-step-dot-border-completed,var(--boomi-wizard-step-dot-bg-completed));box-shadow:var(--boomi-wizard-step-dot-shadow-completed,var(--boomi-wizard-step-dot-shadow))}.boomi-wizard-card{background-color:var(--boomi-wizard-card-bg);color:var(--boomi-wizard-card-fg);border:1px solid var(--boomi-wizard-card-border);box-shadow:var(--boomi-wizard-card-shadow);border-radius:.75rem;margin-top:1rem;padding:1rem}.boomi-wizard-links{flex-direction:row;gap:1rem;margin-top:.5rem;padding:.5rem;display:flex}.boomi-wizard-link-left{flex:auto}.boomi-wizard-link-right{justify-content:flex-end;padding-right:.5rem;display:flex}.boomi-wizard-link{color:var(--boomi-wizard-link-fg);cursor:pointer;font-size:.875rem;font-weight:600;text-decoration:none;transition:color .15s}.boomi-wizard-link:hover{color:var(--boomi-wizard-link-fg-hover,var(--boomi-wizard-link-fg))}.boomi-wizard-link-strong{color:var(--boomi-wizard-link-strong-fg,var(--boomi-wizard-link-fg));cursor:pointer;font-size:.875rem;font-weight:700}.boomi-wizard-actions{flex-direction:row;gap:1rem;margin-top:.5rem;padding:.5rem;display:flex}.boomi-notice{border:1px solid var(--boomi-notice-border);border-radius:var(--boomi-notice-radius,.5rem);background:var(--boomi-notice-bg);color:var(--boomi-notice-fg);box-shadow:var(--boomi-notice-shadow,none);align-items:flex-start;gap:.5rem;padding:1rem;display:flex}.boomi-notice__icon{width:1.25rem;height:1.25rem;color:var(--boomi-notice-icon,currentColor);opacity:var(--boomi-notice-icon-opacity,.95)}.boomi-notice__text{font-size:.875rem;font-weight:500;line-height:1.25rem}.boomi-notice__label{margin-right:.25rem;font-weight:700}.boomi-notice--info,.boomi-notice[data-variant=info]{--boomi-notice-bg:var(--boomi-notice-info-bg,#eff6ff);--boomi-notice-fg:var(--boomi-notice-info-fg,#1e40af);--boomi-notice-border:var(--boomi-notice-info-border,#bfdbfe);--boomi-notice-icon:var(--boomi-notice-info-icon,#3b82f6)}.boomi-notice--success,.boomi-notice[data-variant=success]{--boomi-notice-bg:var(--boomi-notice-success-bg,#f0fdf4);--boomi-notice-fg:var(--boomi-notice-success-fg,#166534);--boomi-notice-border:var(--boomi-notice-success-border,#bbf7d0);--boomi-notice-icon:var(--boomi-notice-success-icon,#22c55e)}.boomi-notice--warning,.boomi-notice[data-variant=warning]{--boomi-notice-bg:var(--boomi-notice-warning-bg,#fffbeb);--boomi-notice-fg:var(--boomi-notice-warning-fg,#92400e);--boomi-notice-border:var(--boomi-notice-warning-border,#fde68a);--boomi-notice-icon:var(--boomi-notice-warning-icon,#f59e0b)}.boomi-notice--error,.boomi-notice[data-variant=error]{--boomi-notice-bg:var(--boomi-notice-error-bg,#fef2f2);--boomi-notice-fg:var(--boomi-notice-error-fg,#991b1b);--boomi-notice-border:var(--boomi-notice-error-border,#fecaca);--boomi-notice-icon:var(--boomi-notice-error-icon,#ef4444)}.boomi-update{background-color:var(--boomi-update-bg);color:var(--boomi-update-fg);border:1px solid var(--boomi-update-border);border-radius:var(--boomi-update-radius,.75rem);box-shadow:var(--boomi-update-shadow);padding:var(--boomi-update-padding,1rem)}.boomi-update-header{padding-inline:var(--boomi-update-header-px,.5rem);margin-bottom:.5rem}.boomi-update-title{color:var(--boomi-update-title-fg,currentColor);margin-bottom:.25rem;font-size:1.125rem;font-weight:700}.boomi-update-desc{color:var(--boomi-update-desc-fg,var(--boomi-page-fg-color));margin-bottom:1rem;font-size:.875rem}.boomi-update-body{gap:var(--boomi-update-body-gap,1rem);flex-direction:column;display:flex}.boomi-update-actions{justify-content:flex-end;gap:.5rem;margin-top:1.5rem;display:flex}.boomi-center{justify-content:center;align-items:center;display:flex}.boomi-tabs{border-bottom:1px solid var(--boomi-tablist-border,var(--boomi-update-border));padding-top:1rem;padding-bottom:0}.boomi-tablist{gap:.5rem;padding-left:1rem;padding-right:1rem;display:flex}.boomi-tab{background-color:var(--boomi-tab-bg,var(--boomi-btn-secondary-bg));color:var(--boomi-tab-fg,var(--boomi-btn-secondary-fg));border:1px solid var(--boomi-tab-border,var(--boomi-btn-secondary-border));border-bottom:none;border-top-left-radius:.5rem;border-top-right-radius:.5rem;padding:.5rem 1rem;font-size:.875rem;font-weight:600;transition:background-color .15s,color .15s,border-color .15s}.boomi-tab:hover{background-color:var(--boomi-tab-bg-hover,var(--boomi-btn-secondary-bg-hover,var(--boomi-tab-bg)));color:var(--boomi-tab-fg-hover,var(--boomi-btn-secondary-fg))}.boomi-tab--active{background-color:var(--boomi-tab-bg-active,var(--boomi-btn-primary-bg));color:var(--boomi-tab-fg-active,var(--boomi-btn-primary-fg));border-color:var(--boomi-tab-border-active,var(--boomi-btn-primary-border))}.boomi-update-content{background-color:var(--boomi-update-content-bg);color:var(--boomi-update-content-fg);border:1px solid var(--boomi-update-border);border-bottom-left-radius:var(--boomi-update-radius,.2rem);border-bottom-right-radius:var(--boomi-update-radius,.2rem);border-top:none;padding:1rem}.boomi-map-canvas{background:var(--boomi-map-bg,transparent);color:var(--boomi-map-fg,inherit);justify-content:space-between;padding:1rem;display:flex;position:relative}.boomi-map-svg{pointer-events:none;z-index:10;width:100%;height:100%;position:absolute;top:0;right:0;bottom:0;left:0}.boomi-map-svg path{stroke:var(--boomi-map-line,currentColor);stroke-width:var(--boomi-map-line-width,1.4px);fill:none;stroke-linejoin:round;stroke-linecap:round;filter:var(--boomi-map-line-filter,none)}.boomi-map-svg path.is-highlighted{stroke:var(--boomi-map-line-highlight);stroke-width:var(--boomi-map-line-width,2.5px)}.boomi-map-svg.has-selection path:not(.is-highlighted){opacity:var(--boomi-map-line-dim)}.boomi-map-col{z-index:10;flex-direction:column;gap:.5rem;display:flex}.boomi-map-col--sources{width:25%;padding-right:.5rem}.boomi-map-col--functions{align-items:center;width:40%;padding-inline:.5rem}.boomi-map-col--targets{width:25%;padding-left:.5rem}.boomi-map-heading{color:var(--boomi-map-heading-fg,inherit);margin-bottom:.5rem;font-weight:600}.boomi-map-card{border:1px solid var(--boomi-map-card-border);background:var(--boomi-map-card-bg);box-shadow:var(--boomi-map-card-shadow);border-radius:.5rem;padding:.5rem;transition:box-shadow .15s,transform .15s,background-color .15s;position:relative}.boomi-map-card:hover{box-shadow:var(--boomi-map-card-shadow-hover,var(--boomi-map-card-shadow));transform:var(--boomi-map-card-transform-hover,none);transform:none}.boomi-map-card--source{background:var(--boomi-map-source-bg,var(--boomi-map-card-bg))}.boomi-map-card--source.is-selected{outline:3px solid var(--boomi-map-source-outline,var(--boomi-accent))}.boomi-map-card--source.is-mapped{background:var(--boomi-map-source-bg-mapped,var(--boomi-map-source-bg));border-color:var(--boomi-map-source-border-mapped,var(--boomi-map-card-border))}.boomi-map-card--target{background:var(--boomi-map-target-bg,var(--boomi-map-card-bg))}.boomi-map-card--target.is-selected{outline:3px solid var(--boomi-map-target-outline,var(--boomi-accent))}.boomi-map-card--target.is-mapped{background:var(--boomi-map-target-bg-mapped,var(--boomi-map-target-bg));border-color:var(--boomi-map-target-border-mapped,var(--boomi-map-card-border))}.boomi-map-card--function{background:var(--boomi-map-func-bg,var(--boomi-map-card-bg));color:var(--boomi-map-func-fg,inherit)}.boomi-map-col{z-index:10}.boomi-map-card--function .boomi-map-card-title{color:var(--boomi-map-func-title-fg,var(--boomi-accent));font-weight:600}.boomi-map-card--function .boomi-map-card-subtitle{color:var(--boomi-map-func-subtle-fg,var(--boomi-muted));font-size:.75rem}.boomi-map-pin{border-radius:9999px;justify-content:center;align-items:center;width:.75rem;height:.75rem;transition:background-color .15s,border-color .15s,transform .15s;display:flex;position:absolute}.boomi-map-pin.--source{background:var(--boomi-map-pin-source-bg);border:2px solid var(--boomi-map-pin-source-border,transparent);top:50%;right:-10px;transform:translateY(-50%)}.boomi-map-pin.--target{background:var(--boomi-map-pin-target-bg);border:2px solid var(--boomi-map-pin-target-border,transparent);top:50%;left:-10px;transform:translateY(-50%)}.boomi-map-pin.--input{background:var(--boomi-map-pin-input-bg);border:2px solid var(--boomi-map-pin-input-border,transparent);top:50%;left:-14px;transform:translateY(-50%)}.boomi-map-pin.--output{background:var(--boomi-map-pin-output-bg);border:2px solid var(--boomi-map-pin-output-border,transparent);top:50%;right:-16px;transform:translateY(-50%)}.boomi-map-pin.is-selectable{cursor:pointer}.boomi-map-pin.is-mappable{border-color:var(--boomi-map-pulse-border);opacity:var(--boomi-map-pin-mappable-opacity,.9);filter:saturate(.95)brightness(1.1);animation:1.2s ease-in-out infinite boomi-map-pulse}.boomi-map-pin.--source.is-mappable{opacity:1!important;filter:none!important;animation:none!important}.boomi-map-pin.is-mappable:after{content:"";border:2px solid var(--boomi-map-pulse-border,currentColor);pointer-events:none;opacity:.75;border-radius:9999px;animation:1.2s ease-out infinite boomi-map-pulse;position:absolute;top:-4px;right:-4px;bottom:-4px;left:-4px}.boomi-map-pin.is-danger{background:var(--boomi-map-pin-danger-bg)}.boomi-map-pin:hover{transform:translateY(-50%)scale(1.06)}.boomi-map-pin.--output.is-active-output{--boomi-map-pin-anim:boomi-map-pulse 1.15s ease-in-out infinite;animation:var(--boomi-map-pin-anim);background:var(--boomi-map-pin-output-bg-active,var(--boomi-map-pin-output-bg));border-color:var(--boomi-map-pin-output-border-active,currentColor);box-shadow:0 0 0 6px}@supports (color:color-mix(in lab,red,red)){.boomi-map-pin.--output.is-active-output{box-shadow:0 0 0 6px color-mix(in srgb,currentColor 18%,transparent)}}.boomi-map-pin.--output.is-active-output{opacity:var(--boomi-map-pin-active-opacity,.96);filter:saturate(1.05)brightness(1.05)}.boomi-map-pin-badge{background:var(--boomi-map-pin-badge-bg);width:1rem;height:1rem;color:var(--boomi-map-pin-badge-fg);text-align:center;cursor:pointer;border-radius:9999px;font-size:.75rem;line-height:1rem;position:absolute;top:-4px;right:-6px}.boomi-map-add-btn{border:1px solid var(--boomi-map-add-border,var(--boomi-btn-secondary-border));background:var(--boomi-map-add-bg,var(--boomi-btn-secondary-bg));color:var(--boomi-map-add-fg,var(--boomi-btn-secondary-fg));box-shadow:var(--boomi-map-add-shadow,none);border-radius:.375rem;align-items:center;gap:.25rem;padding:.375rem .75rem;font-size:.75rem;font-weight:600;transition:background-color .15s,color .15s,border-color .15s,box-shadow .15s;display:inline-flex}.boomi-map-add-btn:hover{background:var(--boomi-map-add-bg-hover,var(--boomi-btn-secondary-bg-hover,var(--boomi-map-add-bg)));color:var(--boomi-map-add-fg-hover,var(--boomi-map-add-fg));border-color:var(--boomi-map-add-border-hover,var(--boomi-map-add-border));box-shadow:var(--boomi-map-add-shadow-hover,var(--boomi-map-add-shadow))}.boomi-map-col--functions{position:relative}.boomi-map-card.boomi-map-card--function{transition:box-shadow .15s,background-color .15s!important;position:absolute!important}.boomi-map-card--function:hover{--boomi-map-card-transform-hover:none}.boomi-map-card--function.is-selected{outline:3px solid var(--boomi-map-func-outline,var(--boomi-accent));outline-offset:0}.boomi-map-svg{z-index:1!important}.boomi-map-col{position:relative;z-index:2!important}@keyframes boomi-map-pulse{0%,to{box-shadow:0 0 0 0 var(--boomi-map-pulse-color)}50%{box-shadow:0 0 0 8px var(--boomi-map-pulse-color)}}@media (prefers-reduced-motion:reduce){.boomi-map-pin.is-selectable{animation:none}}.boomi-map-card.is-search-hit{outline:2px solid var(--hit-outline,#ff9800);outline-offset:2px}.boomi-map-card.is-current-hit{box-shadow:0 0 0 3px var(--hit-current,#ffb74d)}.dark .boomi-map-card.is-search-hit{outline-color:#ffd400}.dark .boomi-map-card.is-current-hit{box-shadow:0 0 0 3px #ffe266}.boomi-btn-xs{padding:2px 6px;font-size:11px;line-height:1}.boomi-sched{background:var(--boomi-update-bg,transparent);color:var(--boomi-update-fg,inherit);flex-direction:column;gap:1rem;padding:1rem;display:flex}.boomi-sched-card{border:1px solid var(--boomi-wizard-card-border,var(--boomi-update-border,currentColor));background:var(--boomi-wizard-card-bg,var(--boomi-card-bg,#fff));color:var(--boomi-wizard-card-fg,var(--boomi-card-fg,#111));box-shadow:var(--boomi-wizard-card-shadow,var(--boomi-card-shadow,0 2px 0 #000));border-radius:.75rem;overflow:hidden}.boomi-sched-card__header{cursor:pointer;background:var(--boomi-sched-header-bg,transparent);color:var(--boomi-sched-header-fg,inherit);border-bottom:1px solid var(--boomi-sched-header-border,var(--boomi-update-border,transparent));justify-content:space-between;align-items:center;padding:.5rem 1rem;display:flex}.boomi-sched-card__title{font-size:.95rem;font-weight:700}.boomi-sched-card__controls{align-items:center;gap:.75rem;display:flex}.boomi-sched-card__delete{color:var(--boomi-danger-fg,#ef4444);transition:color .15s}.boomi-sched-card__delete:hover{color:var(--boomi-danger-fg-hover,#b91c1c)}.boomi-sched-card__body{gap:1rem;padding:1rem;display:grid}.boomi-sched-row{flex-wrap:wrap;align-items:center;gap:.5rem;display:flex}.boomi-sched-label{min-width:6.5rem;font-weight:600}.boomi-sched-days__label{font-weight:600}.boomi-sched-days{flex-wrap:wrap;gap:1rem;margin-top:.5rem;display:flex}.boomi-sched-day{align-items:center;gap:.25rem;font-size:.9rem;display:inline-flex}.boomi-sched-day input[type=checkbox]{accent-color:var(--boomi-accent,#ff5ca2)}.boomi-sched-actions{justify-content:flex-end;display:flex}.boomi-connector,.boomi-connector-group{flex-direction:column;gap:1rem;display:flex}.boomi-connector-section{background-color:var(--boomi-connector-bg);color:var(--boomi-connector-fg);border:1px solid var(--boomi-conn-border);border-radius:var(--boomi-connector-radius,.75rem);box-shadow:var(--boomi-connector-shadow,0 0 0 0 transparent);padding:.75rem}.boomi-connector-section--error{--boomi-conn-border:var(--boomi-danger,#dc2626);--boomi-connector-shadow:0 0 0 2px var(--boomi-danger,#dc2626)}.boomi-connector-heading{color:var(--boomi-connector-title-fg,currentColor);margin-bottom:.5rem;font-size:1rem;font-weight:600}.boomi-connector-heading--error{color:var(--boomi-danger,#dc2626)}.boomi-connector-error-banner{margin:.5rem 0 1rem;font-size:.875rem;line-height:1.25rem}.boomi-connector-field{margin-bottom:.5rem}.boomi-connector-actions{gap:.5rem;margin-top:.25rem;padding-inline:1rem;display:flex}.boomi-connector-subtle{color:var(--boomi-connector-subtle-fg,inherit)}.boomi-connector-inner{background-color:var(--boomi-connector-inner-bg,transparent);border:1px solid var(--boomi-connector-inner-border,transparent);border-radius:.5rem;padding:.75rem}.swal2-container .boomi-toast-popup{border-radius:var(--boomi-toast-radius,.5rem)!important;box-shadow:var(--boomi-toast-shadow,0 6px 16px #0000002e)!important;border:var(--boomi-toast-border,none)!important}.swal2-container .boomi-toast-title{color:var(--boomi-toast-title-fg,inherit)!important}.swal2-container .boomi-toast-progress{background:var(--boomi-toast-progress-bar,#ffffffb3)!important}.swal2-container.boomi-swal{--boomi-swal-bg:#000000e6}.swal2-container{z-index:2147483600!important}#boomi-page-root.swal2-container{width:100%;height:100%;top:0;right:0;bottom:0;left:0;z-index:2147483600!important;position:absolute!important}.boomi-swal{background-color:var(--boomi-spinner-overlay-bg,#00000080)!important;-webkit-backdrop-filter:blur(var(--boomi-spinner-overlay-blur,4px))!important;backdrop-filter:blur(var(--boomi-spinner-overlay-blur,4px))!important}.swal2-container .boomi-swal-popup{background-color:var(--boomi-swal-bg)!important;opacity:1!important;color:var(--boomi-swal-fg)!important;border:var(--boomi-swal-border)!important;box-shadow:var(--boomi-swal-shadow)!important;border-radius:1rem!important;padding:1.25rem!important}.boomi-swal .swal2-title{color:var(--boomi-update-title-fg,var(--boomi-modal-fg));margin-bottom:.25rem;font-size:1.125rem;font-weight:700}.boomi-swal .swal2-html-container{color:var(--boomi-update-desc-fg,inherit);font-size:.95rem}.boomi-swal .swal2-actions{gap:.5rem;margin-top:1rem;display:flex}.boomi-swal .swal2-styled:focus{box-shadow:var(--boomi-input-shadow-focus,0 0 0 2px #6366f159);outline:none}.boomi-swal .swal2-confirm{background-color:var(--boomi-btn-primary-bg);color:var(--boomi-btn-primary-fg);border:1px solid var(--boomi-btn-primary-border);box-shadow:var(--boomi-btn-primary-shadow)}.boomi-swal .swal2-confirm:hover{background-color:var(--boomi-btn-primary-bg-hover,var(--boomi-btn-primary-bg))}.boomi-swal .swal2-confirm:active{background-color:var(--boomi-btn-primary-bg-active,var(--boomi-btn-primary-bg))}.boomi-swal .swal2-cancel{background-color:var(--boomi-btn-secondary-bg);color:var(--boomi-btn-secondary-fg);border:1px solid var(--boomi-btn-secondary-border);box-shadow:var(--boomi-btn-secondary-shadow)}.boomi-swal .swal2-cancel:hover{background-color:var(--boomi-btn-secondary-bg-hover,var(--boomi-btn-secondary-bg))}.boomi-swal .swal2-cancel:active{background-color:var(--boomi-btn-secondary-bg-active,var(--boomi-btn-secondary-bg))}.boomi-swal .swal2-icon{border-color:currentColor}.boomi-swal .swal2-icon.swal2-success{color:var(--boomi-notice-success-fg,#16a34a);border-color:currentColor}.boomi-swal .swal2-icon.swal2-warning{color:var(--boomi-notice-warning-fg,#f59e0b);border-color:currentColor}.boomi-swal .swal2-icon.swal2-error{color:var(--boomi-notice-error-fg,#ef4444);border-color:currentColor}.boomi-swal .swal2-timer-progress-bar{background:var(--boomi-accent,currentColor)}.boomi-swal-in{animation:.16s ease-out both boomi-swal-in}.boomi-swal-out{animation:.12s ease-in both boomi-swal-out}@keyframes boomi-swal-in{0%{opacity:0;transform:translateY(4px)scale(.98)}to{opacity:1;transform:translateY(0)scale(1)}}@keyframes boomi-swal-out{0%{opacity:1;transform:translateY(0)scale(1)}to{opacity:0;transform:translateY(4px)scale(.98)}}.boomi-agent-panel{background:var(--boomi-agent-bg,var(--boomi-card-bg));color:var(--boomi-agent-fg,var(--boomi-page-fg-color));border:1px solid var(--boomi-agent-border,var(--boomi-card-border));box-shadow:var(--boomi-agent-shadow,0 12px 24px -8px #00000040,0 8px 16px -8px #0000001f);border-radius:var(--boomi-agent-radius,1rem);-webkit-backdrop-filter:var(--boomi-agent-blur,none);backdrop-filter:var(--boomi-agent-blur,none);overflow:hidden}.boomi-agent-header{border-bottom:1px solid var(--boomi-agent-header-border,var(--boomi-card-border));background:linear-gradient(180deg,var(--boomi-agent-header-bg,var(--boomi-modal-bg))0%,var(--boomi-agent-header-bg,var(--boomi-modal-bg))100%);justify-content:space-between;align-items:center;padding:.5rem .5rem .5rem .375rem;display:flex}@supports (color:color-mix(in lab,red,red)){.boomi-agent-header{background:linear-gradient(180deg,color-mix(in srgb,var(--boomi-agent-header-bg,var(--boomi-modal-bg))100%,transparent),color-mix(in srgb,var(--boomi-agent-header-bg,var(--boomi-modal-bg))88%,transparent))}}.boomi-agent-pane{background-color:var(--boomi-agent-pane-bg,var(--boomi-page-bg-color));color:var(--boomi-agent-pane-fg,var(--boomi-page-fg-color));font-size:.96rem}.boomi-agent-workspace{width:100%;height:100%;min-height:0}.boomi-agent-configure-panel{border-radius:0;width:100%;height:100%;min-height:0;position:relative;overflow:auto}.boomi-agent-update{background:var(--boomi-agent-update-bg,var(--boomi-card-bg));border:1px solid var(--boomi-agent-update-border,var(--boomi-card-border));border-radius:var(--boomi-agent-update-radius,0);box-shadow:var(--boomi-agent-update-shadow,var(--boomi-card-shadow));color:var(--boomi-agent-update-fg,var(--boomi-card-fg,var(--boomi-page-fg-color)));flex-direction:column;gap:1rem;height:100%;display:flex;position:relative}.boomi-agent-update__body{flex-direction:column;gap:1rem;height:100%;padding:1rem 1.5rem 2rem;display:flex;overflow:auto}.boomi-agent-update__header{flex-direction:column;gap:.25rem;display:flex}.boomi-agent-update__title{color:inherit;font-size:1.25rem;font-weight:600}.boomi-agent-update__desc{opacity:.8;font-size:.95rem}.boomi-agent-update__actions{justify-content:flex-end;gap:.75rem;margin-top:auto;padding-top:1rem;display:flex}.boomi-agent-overlay{z-index:999998;pointer-events:auto;color:var(--boomi-page-fg-color,#f8fafc);flex-direction:column;display:flex;position:fixed;top:0;right:0;bottom:0;left:0}.boomi-agent-overlay--full{-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);background:0 0}.boomi-agent-overlay__header{border-bottom:1px solid var(--boomi-page-fg-color,#f8fafc);justify-content:space-between;align-items:center;padding:.75rem 1rem;display:flex}@supports (color:color-mix(in lab,red,red)){.boomi-agent-overlay__header{border-bottom:1px solid color-mix(in srgb,var(--boomi-page-fg-color,#f8fafc)12%,transparent)}}.boomi-agent-overlay__header{background:var(--boomi-page-bg-color,#0b1220)}@supports (color:color-mix(in lab,red,red)){.boomi-agent-overlay__header{background:color-mix(in srgb,var(--boomi-page-bg-color,#0b1220)80%,transparent)}}.boomi-agent-overlay__header-actions{align-items:center;gap:.5rem;display:inline-flex}.boomi-agent-overlay__title{letter-spacing:.02em;font-size:.95rem;font-weight:600}.boomi-agent-overlay__body{background:0 0;flex:auto;width:100%;min-height:0;overflow:auto}.boomi-agent-overlay__inner{background:var(--boomi-card-bg,#0f172a);flex-direction:column;width:100%;height:100%;display:flex;position:relative}@supports (color:color-mix(in lab,red,red)){.boomi-agent-overlay__inner{background:color-mix(in srgb,var(--boomi-card-bg,#0f172a)92%,transparent)}}.boomi-agent-overlay__inner{-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}.boomi-agent-overlay--modal{background:0 0;justify-content:center;align-items:center}.boomi-agent-overlay__scrim{pointer-events:none;background:0 0;position:absolute;top:0;right:0;bottom:0;left:0}.boomi-agent-overlay__modal{border:1px solid var(--boomi-card-border,#334155);border-radius:18px;position:relative}@supports (color:color-mix(in lab,red,red)){.boomi-agent-overlay__modal{border:1px solid color-mix(in srgb,var(--boomi-card-border,#334155)70%,transparent)}}.boomi-agent-overlay__modal{background:var(--boomi-card-bg,#0f172a)}@supports (color:color-mix(in lab,red,red)){.boomi-agent-overlay__modal{background:color-mix(in srgb,var(--boomi-card-bg,#0f172a)70%,transparent)}}.boomi-agent-overlay__modal{flex-direction:column;display:flex;overflow:hidden;box-shadow:0 25px 70px #00000073}.boomi-agent-overlay__close{background:var(--boomi-page-fg-color,#fff);border-radius:999px;justify-content:center;align-items:center;width:36px;height:36px;display:inline-flex}@supports (color:color-mix(in lab,red,red)){.boomi-agent-overlay__close{background:color-mix(in srgb,var(--boomi-page-fg-color,#fff)12%,transparent)}}.boomi-agent-overlay__close{color:var(--boomi-page-fg-color,#fff);transition:background-color .15s,transform .12s}.boomi-agent-overlay__close:hover{background:var(--boomi-page-fg-color,#fff);transform:translateY(-1px)}@supports (color:color-mix(in lab,red,red)){.boomi-agent-overlay__close:hover{background:color-mix(in srgb,var(--boomi-page-fg-color,#fff)22%,transparent)}}.boomi-agent-tabs{gap:.375rem;display:flex}.boomi-agent-tab{background:var(--boomi-agent-tab-bg,var(--boomi-tab-bg));color:var(--boomi-agent-tab-fg,var(--boomi-tab-fg));border:1px solid var(--boomi-agent-tab-border,var(--boomi-tab-border));border-radius:.5rem;padding:.375rem .75rem;transition:transform .12s,background-color .15s,color .15s,box-shadow .15s}.boomi-agent-tab:hover{transform:translateY(-1px)}.boomi-agent-tab.is-active{background:var(--boomi-agent-tab-bg-active,var(--boomi-tab-bg-active));color:var(--boomi-agent-tab-fg-active,var(--boomi-tab-fg-active));border-color:var(--boomi-agent-tab-border-active,var(--boomi-tab-border-active));box-shadow:var(--boomi-agent-tab-shadow-active,0 6px 14px -6px var(--boomi-accent))}@supports (color:color-mix(in lab,red,red)){.boomi-agent-tab.is-active{box-shadow:var(--boomi-agent-tab-shadow-active,0 6px 14px -6px color-mix(in srgb,var(--boomi-accent)35%,transparent))}}.boomi-agent-close{color:var(--boomi-agent-close-fg,var(--boomi-modal-close-fg));border-radius:.5rem;padding:.25rem .5rem;transition:background-color .15s,color .15s,transform .12s}.boomi-agent-close:hover{color:var(--boomi-agent-close-hover-fg,var(--boomi-modal-close-hover-fg));background:var(--boomi-agent-close-bg-hover,currentColor)}@supports (color:color-mix(in lab,red,red)){.boomi-agent-close:hover{background:var(--boomi-agent-close-bg-hover,color-mix(in srgb,currentColor 8%,transparent))}}.boomi-agent-close:hover{transform:rotate(0)scale(1.03)}.boomi-agent-body{flex-direction:column;gap:.75rem;height:calc(100% - 50px);padding:.75rem;display:flex}.boomi-agent-section{background:var(--boomi-agent-section-bg,var(--boomi-update-content-bg));color:var(--boomi-agent-section-fg,var(--boomi-update-content-fg));border:1px solid var(--boomi-agent-section-border,var(--boomi-update-border));box-shadow:var(--boomi-agent-section-shadow,0 1px 2px #0000000f);border-radius:.75rem;padding:.75rem}.boomi-agent-title{margin-bottom:.25rem;font-size:1rem;font-weight:700}.boomi-agent-kv{gap:.25rem;font-size:.9rem;display:grid}.boomi-agent-kv>div{grid-template-columns:5rem 1fr;gap:.5rem;display:grid}.boomi-agent-chat{background:var(--boomi-agent-chat-bg,var(--boomi-card-bg));color:var(--boomi-agent-chat-fg,inherit);border:1px solid var(--boomi-agent-chat-border,var(--boomi-card-border));border-radius:.75rem;flex-direction:column;flex:auto;min-height:0;display:flex}.boomi-agent-messages{flex-direction:column;flex:auto;gap:.5rem;padding:.75rem;display:flex;overflow:auto}.boomi-agent-bubble{border:1px solid var(--boomi-agent-bubble-border,transparent);max-width:min(820px,98%);box-shadow:var(--boomi-agent-bubble-shadow,0 1px 2px #0000000f);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-radius:1.25rem;padding:.7rem 1rem;font-size:.95rem;line-height:1.45rem;transition:transform .15s,box-shadow .2s}.boomi-agent-bubble.from-user{background:var(--boomi-agent-bubble-user-bg,var(--boomi-accent));margin-left:auto;margin-right:0}@supports (color:color-mix(in lab,red,red)){.boomi-agent-bubble.from-user{background:var(--boomi-agent-bubble-user-bg,color-mix(in srgb,var(--boomi-accent)12%,transparent))}}.boomi-agent-bubble.from-user{color:var(--boomi-agent-bubble-user-fg,currentColor);border-color:var(--boomi-agent-bubble-user-border,var(--boomi-accent))}@supports (color:color-mix(in lab,red,red)){.boomi-agent-bubble.from-user{border-color:var(--boomi-agent-bubble-user-border,color-mix(in srgb,var(--boomi-accent)30%,transparent))}}.boomi-agent-bubble.from-user{width:min(75%,1024px);max-width:min(75%,1024px)}.boomi-agent-bubble.from-agent{background:var(--boomi-agent-bubble-agent-bg,var(--boomi-update-content-bg));color:var(--boomi-agent-bubble-agent-fg,var(--boomi-update-content-fg));border-color:var(--boomi-agent-bubble-agent-border,var(--boomi-update-border))}.boomi-agent-bubble-text{white-space:pre-wrap}.boomi-agent-bubble:hover{transform:translateY(-1px);box-shadow:0 12px 24px #0f172a14}.boomi-agent-bubble-meta{opacity:.6;margin-top:.25rem;font-size:.7rem}.boomi-agent-text-block{border:1px solid var(--boomi-agent-text-border,var(--boomi-agent-pane-fg,#0f172a));border-radius:1.25rem;padding:1.25rem 1.5rem;position:relative}@supports (color:color-mix(in lab,red,red)){.boomi-agent-text-block{border:1px solid var(--boomi-agent-text-border,color-mix(in srgb,var(--boomi-agent-pane-fg,#0f172a)10%,transparent))}}.boomi-agent-text-block{background:var(--boomi-agent-text-bg,var(--boomi-agent-pane-bg,#f8fafc))}@supports (color:color-mix(in lab,red,red)){.boomi-agent-text-block{background:var(--boomi-agent-text-bg,color-mix(in srgb,var(--boomi-agent-pane-bg,#f8fafc)94%,transparent))}}.boomi-agent-text-block{color:var(--boomi-agent-text-fg,var(--boomi-agent-pane-fg,#0f172a));box-shadow:0 16px 32px #0000001f}.boomi-agent-text-block__content{white-space:pre-wrap;word-break:break-word;font-size:.75rem;line-height:1.6}.boomi-agent-text-block__content.is-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,Liberation Mono,Courier New,monospace}.boomi-agent-text-block__content.is-scrollable{overflow:auto}.boomi-agent-text-block__copy{background:var(--boomi-agent-text-copy-bg,var(--boomi-agent-text-fg,#0f172a));border-radius:999px;justify-content:center;align-items:center;width:32px;height:32px;display:inline-flex;position:absolute;top:.55rem;right:.55rem}@supports (color:color-mix(in lab,red,red)){.boomi-agent-text-block__copy{background:var(--boomi-agent-text-copy-bg,color-mix(in srgb,var(--boomi-agent-text-fg,#0f172a)12%,transparent))}}.boomi-agent-text-block__copy{color:var(--boomi-agent-text-copy-fg,var(--boomi-agent-text-fg,#0f172a));cursor:pointer;border:none;transition:background-color .15s,transform .12s}.boomi-agent-text-block__copy:hover{background:var(--boomi-agent-text-copy-bg-hover,var(--boomi-agent-text-fg,#0f172a))}@supports (color:color-mix(in lab,red,red)){.boomi-agent-text-block__copy:hover{background:var(--boomi-agent-text-copy-bg-hover,color-mix(in srgb,var(--boomi-agent-text-fg,#0f172a)22%,transparent))}}.boomi-agent-text-block__copy:hover{transform:translateY(-1px)}.boomi-agent-text-block__copy.is-copied{background:var(--boomi-agent-text-copy-bg-hover,#000)}@supports (color:color-mix(in lab,red,red)){.boomi-agent-text-block__copy.is-copied{background:color-mix(in srgb,var(--boomi-agent-text-copy-bg-hover,#000)90%,transparent)}}.boomi-agent-text-block__copy.is-copied{color:var(--boomi-agent-text-copy-fg,currentColor)}.boomi-agent-text-block__copy-toast{color:var(--boomi-agent-text-copy-fg,var(--boomi-agent-text-fg,#0f172a));opacity:.9;font-size:.75rem;font-weight:600;position:absolute;top:.7rem;right:3.3rem}.boomi-agent-feedback{align-items:center;gap:var(--boomi-agent-feedback-gap,.35rem);margin-top:var(--boomi-agent-feedback-margin-top,.5rem);color:var(--boomi-agent-feedback-fg,var(--boomi-muted,#64748b));flex-wrap:wrap;display:flex}.boomi-agent-feedback__btn{width:var(--boomi-agent-feedback-btn-size,30px);height:var(--boomi-agent-feedback-btn-size,30px);border-radius:var(--boomi-agent-feedback-btn-radius,999px);background:var(--boomi-agent-feedback-btn-bg,transparent);color:var(--boomi-agent-feedback-btn-fg,inherit);border:1px solid var(--boomi-agent-feedback-btn-border,transparent);cursor:pointer;font-size:var(--boomi-agent-feedback-icon-size,.9rem);justify-content:center;align-items:center;line-height:1;transition:background-color .15s,color .15s,transform .12s;display:inline-flex}.boomi-agent-feedback__btn:hover:not(:disabled){background:var(--boomi-agent-feedback-btn-bg-hover,currentColor)}@supports (color:color-mix(in lab,red,red)){.boomi-agent-feedback__btn:hover:not(:disabled){background:var(--boomi-agent-feedback-btn-bg-hover,color-mix(in srgb,currentColor 12%,transparent))}}.boomi-agent-feedback__btn:hover:not(:disabled){transform:translateY(-1px)}.boomi-agent-feedback__btn:disabled{opacity:.5;cursor:default}.boomi-agent-feedback__btn.is-active{background:var(--boomi-agent-feedback-btn-bg-active,var(--boomi-accent,#2563eb))}@supports (color:color-mix(in lab,red,red)){.boomi-agent-feedback__btn.is-active{background:var(--boomi-agent-feedback-btn-bg-active,color-mix(in srgb,var(--boomi-accent,#2563eb)14%,transparent))}}.boomi-agent-feedback__btn.is-active{color:var(--boomi-agent-feedback-btn-fg-active,var(--boomi-accent,#2563eb));border-color:var(--boomi-agent-feedback-btn-border-active,var(--boomi-accent,#2563eb))}@supports (color:color-mix(in lab,red,red)){.boomi-agent-feedback__btn.is-active{border-color:var(--boomi-agent-feedback-btn-border-active,color-mix(in srgb,var(--boomi-accent,#2563eb)35%,transparent))}}.boomi-agent-feedback__btn.is-up.is-active{color:var(--boomi-agent-feedback-up-fg-active,var(--boomi-agent-feedback-btn-fg-active,var(--boomi-accent,#2563eb)))}.boomi-agent-feedback__btn.is-down.is-active{color:var(--boomi-agent-feedback-down-fg-active,var(--boomi-agent-feedback-btn-fg-active,var(--boomi-accent,#2563eb)))}.boomi-agent-feedback__thanks{color:var(--boomi-agent-feedback-thanks-fg,inherit);font-size:.75rem}.boomi-agent-feedback__comment{align-items:flex-end;gap:.5rem;width:100%;display:flex}.boomi-agent-feedback__textarea{resize:vertical;border-radius:var(--boomi-agent-feedback-comment-radius,.5rem);background:var(--boomi-agent-feedback-comment-bg,var(--boomi-input-bg,transparent));min-height:64px;color:var(--boomi-agent-feedback-comment-fg,var(--boomi-input-fg,inherit));border:1px solid var(--boomi-agent-feedback-comment-border,var(--boomi-input-border,currentColor));flex:auto;padding:.5rem .75rem;font-size:.85rem}.boomi-agent-feedback__submit{border-radius:var(--boomi-agent-feedback-submit-radius,.5rem);background:var(--boomi-agent-feedback-submit-bg,var(--boomi-btn-primary-bg,#2563eb));color:var(--boomi-agent-feedback-submit-fg,var(--boomi-btn-primary-fg,#fff));border:1px solid var(--boomi-agent-feedback-submit-border,transparent);cursor:pointer;padding:.5rem .9rem;font-size:.75rem;font-weight:600;transition:filter .15s}.boomi-agent-feedback__submit:hover:not(:disabled){filter:brightness(1.08)}.boomi-agent-feedback__submit:disabled{opacity:.5;cursor:default}.boomi-agent-inputrow{border-top:1px solid var(--boomi-agent-chat-border,var(--boomi-card-border));background:var(--boomi-agent-compose-bg,var(--boomi-card-bg));box-shadow:var(--boomi-agent-compose-shadow,0 8px 24px #00000014);border-radius:1rem;gap:.5rem;padding:.75rem;display:flex}.boomi-agent-composer{pointer-events:none;z-index:10;isolation:isolate;inset-inline:0;background:0 0;justify-content:center;padding:clamp(.75rem,2vw,1.25rem);display:flex;position:absolute;bottom:0}.boomi-agent-composer:before{content:"";z-index:0;pointer-events:none;background:linear-gradient(to bottom,transparent 0,var(--boomi-agent-composer-backdrop-bg,var(--boomi-agent-pane-bg,var(--boomi-page-bg-color)))var(--boomi-agent-composer-backdrop-fade,2.5rem));position:absolute;top:0;right:0;bottom:0;left:0}.boomi-agent-composer:after{content:"";inset-inline:0;top:var(--boomi-agent-composer-backdrop-fade,2.5rem);height:var(--boomi-agent-composer-backdrop-line-width,0);background:var(--boomi-agent-composer-backdrop-line-color,var(--boomi-agent-chat-border,var(--boomi-card-border)));pointer-events:none;z-index:1;position:absolute}.boomi-hero-bar{background:linear-gradient(90deg,var(--boomi-accent)0%,var(--boomi-accent)40%,var(--boomi-accent)100%);height:6px}@supports (color:color-mix(in lab,red,red)){.boomi-hero-bar{background:linear-gradient(90deg,color-mix(in srgb,var(--boomi-accent)85%,transparent),color-mix(in srgb,var(--boomi-accent)55%,transparent)40%,color-mix(in srgb,var(--boomi-accent)25%,transparent))}}.boomi-hero-bar{border-bottom:1px solid var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){.boomi-hero-bar{border-bottom:1px solid color-mix(in srgb,var(--boomi-accent)35%,transparent)}}.boomi-divider-soft{background:var(--boomi-update-border,currentColor);height:1px}@supports (color:color-mix(in lab,red,red)){.boomi-divider-soft{background:color-mix(in srgb,var(--boomi-update-border,currentColor)55%,transparent)}}.boomi-divider-soft{opacity:.6}.boomi-kv{margin:.25rem 0}.boomi-kv-row{grid-template-columns:minmax(5.5rem,7.5rem) 1fr;align-items:start;gap:.75rem;display:grid}.boomi-kv-key{color:var(--boomi-form-label-fg,currentColor);opacity:.9;font-weight:700}.boomi-kv-val{color:var(--boomi-update-content-fg,inherit);word-break:break-word}.boomi-chip{border-style:solid;border-width:1px;border-color:var(--boomi-chip-border);background:var(--boomi-chip-bg);color:var(--boomi-chip-fg);box-shadow:0 1px 2px var(--boomi-accent),inset 0 0 0 1px #ffffff14;border-radius:9999px;align-items:center;gap:.4rem;padding:.25rem .55rem;font-size:.75rem;font-weight:700;display:inline-flex}@supports (color:color-mix(in lab,red,red)){.boomi-chip{box-shadow:0 1px 2px color-mix(in srgb,var(--boomi-accent)12%,transparent),inset 0 0 0 1px #ffffff14}}.boomi-chip--success{--boomi-chip-bg:var(--boomi-chip-success-bg);--boomi-chip-fg:var(--boomi-chip-success-fg);--boomi-chip-border:var(--boomi-chip-success-border)}.boomi-chip--warning{--boomi-chip-bg:var(--boomi-chip-warning-bg);--boomi-chip-fg:var(--boomi-chip-warning-fg);--boomi-chip-border:var(--boomi-chip-warning-border)}.boomi-chip--error{--boomi-chip-bg:var(--boomi-chip-error-bg);--boomi-chip-fg:var(--boomi-chip-error-fg);--boomi-chip-border:var(--boomi-chip-error-border)}@keyframes boomi-agent-in{0%{opacity:0;transform:translateY(10px)scale(.98)}to{opacity:1;transform:translateY(0)scale(1)}}@keyframes boomi-border-shimmer-rotate{to{transform:rotate(360deg)}}@property --boomi-angle{syntax: "<angle>"; inherits: true; initial-value: 0deg;}.boomi-card--agent{isolation:isolate;background:linear-gradient(var(--boomi-agent-card-tint,var(--boomi-accent)),var(--boomi-agent-card-tint,transparent))padding-box,var(--boomi-card-bg);position:relative}@supports (color:color-mix(in lab,red,red)){.boomi-card--agent{background:linear-gradient(var(--boomi-agent-card-tint,color-mix(in srgb,var(--boomi-accent)6%,transparent)),var(--boomi-agent-card-tint,transparent))padding-box,var(--boomi-card-bg)}}.boomi-card--agent{border-color:var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){.boomi-card--agent{border-color:color-mix(in srgb,var(--boomi-card-border)65%,var(--boomi-agent-shimmer-1))}}.boomi-card--agent:before{content:"";border-radius:inherit;padding:var(--boomi-agent-ring,2px);background:conic-gradient(from var(--boomi-angle,0deg),transparent 0deg 338deg,currentColor 338deg 360deg);pointer-events:none;z-index:0;filter:drop-shadow(0 0 4px)drop-shadow(0 0 10px)drop-shadow(0 0 18px);position:absolute;top:0;right:0;bottom:0;left:0;-webkit-mask-image:linear-gradient(#000 0 0),linear-gradient(#000 0 0);-webkit-mask-position:0 0,0 0;-webkit-mask-size:auto,auto;-webkit-mask-repeat:repeat,repeat;-webkit-mask-clip:content-box,border-box;-webkit-mask-origin:content-box,border-box;-webkit-mask-composite:xor;mask-composite:exclude;-webkit-mask-source-type:auto,auto;mask-mode:match-source,match-source}@supports (color:color-mix(in lab,red,red)){.boomi-card--agent:before{filter:drop-shadow(0 0 4px color-mix(in srgb,currentColor 55%,transparent))drop-shadow(0 0 10px color-mix(in srgb,currentColor 38%,transparent))drop-shadow(0 0 18px color-mix(in srgb,currentColor 22%,transparent))}}.boomi-card--agent:before{opacity:min(var(--boomi-agent-shimmer-opacity,.35),.6)}@keyframes boomi-angle-sweep{0%{--boomi-angle:0turn}to{--boomi-angle:.999turn}}.boomi-card--agent{--boomi-angle:0deg;--boomi-agent-shimmer-speed:2.8s;--boomi-agent-shimmer-direction:normal;animation-name:boomi-angle-sweep;animation-duration:var(--boomi-agent-shimmer-speed);animation-timing-function:linear;animation-iteration-count:infinite;animation-direction:var(--boomi-agent-shimmer-direction)}.boomi-card--agent:before{will-change:background}@media (prefers-reduced-motion:reduce){.boomi-card--agent{animation:none!important}}.boomi-table-row--agent{--_tint:var(--boomi-agent-row-tint,var(--boomi-accent))}@supports (color:color-mix(in lab,red,red)){.boomi-table-row--agent{--_tint:var(--boomi-agent-row-tint,color-mix(in srgb,var(--boomi-accent)5%,transparent))}}.boomi-table-row--agent{background:linear-gradient(var(--_tint),var(--_tint))padding-box,transparent;border-top:1px solid var(--boomi-table-header-border)}@supports (color:color-mix(in lab,red,red)){.boomi-table-row--agent{border-top:1px solid color-mix(in srgb,var(--boomi-table-header-border)60%,var(--boomi-agent-shimmer-2))}}.boomi-table-row--agent{border-bottom:1px solid var(--boomi-table-header-border)}@supports (color:color-mix(in lab,red,red)){.boomi-table-row--agent{border-bottom:1px solid color-mix(in srgb,var(--boomi-table-header-border)60%,var(--boomi-agent-shimmer-1))}}.boomi-table-row--agent{position:relative}.boomi-table-row--agent:before{content:"";background:conic-gradient(from var(--boomi-agent-shimmer-angle,0deg),transparent 0 10%,var(--boomi-agent-shimmer-1)30%,transparent 60%,var(--boomi-agent-shimmer-2)80%,transparent);border-radius:0;padding:1px;position:absolute;top:0;right:0;bottom:0;left:0}@supports (color:color-mix(in lab,red,red)){.boomi-table-row--agent:before{background:conic-gradient(from var(--boomi-agent-shimmer-angle,0deg),transparent 0 10%,color-mix(in srgb,var(--boomi-agent-shimmer-1)60%,transparent)30%,transparent 60%,color-mix(in srgb,var(--boomi-agent-shimmer-2)60%,transparent)80%,transparent)}}.boomi-table-row--agent:before{opacity:var(--boomi-agent-row-shimmer-opacity,.22);animation:boomi-border-shimmer-rotate var(--boomi-agent-shimmer-speed,10s)linear infinite;pointer-events:none;-webkit-mask-image:linear-gradient(#000 0 0),linear-gradient(#000 0 0);-webkit-mask-position:0 0,0 0;-webkit-mask-size:auto,auto;-webkit-mask-repeat:repeat,repeat;-webkit-mask-clip:content-box,border-box;-webkit-mask-origin:content-box,border-box;-webkit-mask-composite:xor;mask-composite:exclude;-webkit-mask-source-type:auto,auto;mask-mode:match-source,match-source}@media (prefers-reduced-motion:reduce){.boomi--agent-shimmer:before,.boomi-table-row--agent:before{opacity:0!important;animation:none!important}}.boomi-scroll{scrollbar-color:var(--boomi-scrollbar-thumb)var(--boomi-scrollbar-bg);scrollbar-width:thin}.boomi-scroll::-webkit-scrollbar{width:var(--boomi-scrollbar-width);height:var(--boomi-scrollbar-width);background:0 0}.boomi-scroll::-webkit-scrollbar-track{background:var(--boomi-scrollbar-bg);border-radius:var(--boomi-scrollbar-radius)}.boomi-scroll::-webkit-scrollbar-thumb{background-color:var(--boomi-scrollbar-thumb);border-radius:var(--boomi-scrollbar-radius);background-clip:content-box;border:3px solid #0000}.boomi-scroll::-webkit-scrollbar-thumb:hover{background-color:var(--boomi-scrollbar-thumb-hover)}.boomi-scroll::-webkit-scrollbar-thumb:active{background-color:var(--boomi-scrollbar-thumb-active)}.boomi-scroll::-webkit-scrollbar-corner{background:var(--boomi-scrollbar-corner)}.boomi-scroll.is-slim::-webkit-scrollbar{width:8px;height:8px}.boomi-scroll.is-ultraslim::-webkit-scrollbar{width:6px;height:6px}.boomi-scroll:hover::-webkit-scrollbar-thumb{border-width:2px}@media (prefers-reduced-motion:reduce){:host([data-animations=on]) .boomi-chip--pulse:after{animation:1.8s ease-out infinite boomi-chip-halo!important}:host([data-animations=on]) .boomi-chip-dot{animation:1.4s ease-in-out infinite boomi-chip-dot-pulse!important}}.boomi-chip{isolation:isolate;z-index:1;font-weight:700;position:relative}.boomi-chip-dot{opacity:.85;background:currentColor;border-radius:9999px;width:.375rem;height:.375rem;animation:1.4s ease-in-out infinite boomi-chip-dot-pulse}.boomi-chip--pulse:after{content:"";pointer-events:none;z-index:2;--_halo:var(--boomi-chip-pulse-color,var(--boomi-accent));border-radius:9999px;position:absolute;top:-4px;right:-4px;bottom:-4px;left:-4px}@supports (color:color-mix(in lab,red,red)){.boomi-chip--pulse:after{--_halo:var(--boomi-chip-pulse-color,color-mix(in srgb,var(--boomi-accent)40%,transparent))}}.boomi-chip--pulse:after{background:radial-gradient(closest-side,var(--_halo),transparent 70%);opacity:.18;animation:1.8s ease-out infinite boomi-chip-halo;transform:scale(.96)}.boomi-chip--success{--boomi-chip-pulse-color:var(--boomi-chip-success-fg)}@supports (color:color-mix(in lab,red,red)){.boomi-chip--success{--boomi-chip-pulse-color:color-mix(in srgb,var(--boomi-chip-success-fg)45%,transparent)}}.boomi-chip--warning{--boomi-chip-pulse-color:var(--boomi-chip-warning-fg)}@supports (color:color-mix(in lab,red,red)){.boomi-chip--warning{--boomi-chip-pulse-color:color-mix(in srgb,var(--boomi-chip-warning-fg)45%,transparent)}}.boomi-chip--error{--boomi-chip-pulse-color:var(--boomi-chip-error-fg)}@supports (color:color-mix(in lab,red,red)){.boomi-chip--error{--boomi-chip-pulse-color:color-mix(in srgb,var(--boomi-chip-error-fg)45%,transparent)}}@keyframes boomi-chip-halo{0%{opacity:.1;transform:scale(.96)}35%{opacity:.3;transform:scale(1.06)}70%{opacity:.16;transform:scale(1.1)}to{opacity:.1;transform:scale(1.12)}}@keyframes boomi-chip-dot-pulse{0%,to{opacity:.9;transform:scale(1)}50%{opacity:.55;transform:scale(1.28)}}@media (prefers-reduced-motion:reduce){.boomi-chip--pulse:after,.boomi-chip-dot{animation:none!important}}}.boomi-agent-thread-separator{background:var(--boomi-thread-separator,var(--boomi-card-border));width:min(1024px,90%);height:1px;margin:1.5rem auto}@supports (color:color-mix(in lab,red,red)){.boomi-agent-thread-separator{background:var(--boomi-thread-separator,color-mix(in srgb,var(--boomi-card-border)55%,transparent))}}.boomi-agent-thread-separator{opacity:.65}@property --tw-translate-x{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-y{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-z{syntax:"*";inherits:false;initial-value:0}@property --tw-scale-x{syntax:"*";inherits:false;initial-value:1}@property --tw-scale-y{syntax:"*";inherits:false;initial-value:1}@property --tw-scale-z{syntax:"*";inherits:false;initial-value:1}@property --tw-rotate-x{syntax:"*";inherits:false}@property --tw-rotate-y{syntax:"*";inherits:false}@property --tw-rotate-z{syntax:"*";inherits:false}@property --tw-skew-x{syntax:"*";inherits:false}@property --tw-skew-y{syntax:"*";inherits:false}@property --tw-space-y-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-space-x-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-divide-y-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-leading{syntax:"*";inherits:false}@property --tw-font-weight{syntax:"*";inherits:false}@property --tw-tracking{syntax:"*";inherits:false}@property --tw-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:"*";inherits:false}@property --tw-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:"*";inherits:false}@property --tw-inset-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-ring-color{syntax:"*";inherits:false}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:"*";inherits:false}@property --tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:"*";inherits:false}@property --tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-outline-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-blur{syntax:"*";inherits:false}@property --tw-brightness{syntax:"*";inherits:false}@property --tw-contrast{syntax:"*";inherits:false}@property --tw-grayscale{syntax:"*";inherits:false}@property --tw-hue-rotate{syntax:"*";inherits:false}@property --tw-invert{syntax:"*";inherits:false}@property --tw-opacity{syntax:"*";inherits:false}@property --tw-saturate{syntax:"*";inherits:false}@property --tw-sepia{syntax:"*";inherits:false}@property --tw-drop-shadow{syntax:"*";inherits:false}@property --tw-drop-shadow-color{syntax:"*";inherits:false}@property --tw-drop-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-drop-shadow-size{syntax:"*";inherits:false}@property --tw-backdrop-blur{syntax:"*";inherits:false}@property --tw-backdrop-brightness{syntax:"*";inherits:false}@property --tw-backdrop-contrast{syntax:"*";inherits:false}@property --tw-backdrop-grayscale{syntax:"*";inherits:false}@property --tw-backdrop-hue-rotate{syntax:"*";inherits:false}@property --tw-backdrop-invert{syntax:"*";inherits:false}@property --tw-backdrop-opacity{syntax:"*";inherits:false}@property --tw-backdrop-saturate{syntax:"*";inherits:false}@property --tw-backdrop-sepia{syntax:"*";inherits:false}@property --tw-duration{syntax:"*";inherits:false}@property --tw-ease{syntax:"*";inherits:false}@keyframes spin{to{transform:rotate(360deg)}}';
+const pN = '/*! tailwindcss v4.1.14 | MIT License | https://tailwindcss.com */@layer properties{@supports ((-webkit-hyphens:none) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,:before,:after,::backdrop{--tw-translate-x:0;--tw-translate-y:0;--tw-translate-z:0;--tw-scale-x:1;--tw-scale-y:1;--tw-scale-z:1;--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial;--tw-space-y-reverse:0;--tw-space-x-reverse:0;--tw-divide-y-reverse:0;--tw-border-style:solid;--tw-leading:initial;--tw-font-weight:initial;--tw-tracking:initial;--tw-shadow:0 0 #0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 #0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 #0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 #0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000;--tw-outline-style:solid;--tw-blur:initial;--tw-brightness:initial;--tw-contrast:initial;--tw-grayscale:initial;--tw-hue-rotate:initial;--tw-invert:initial;--tw-opacity:initial;--tw-saturate:initial;--tw-sepia:initial;--tw-drop-shadow:initial;--tw-drop-shadow-color:initial;--tw-drop-shadow-alpha:100%;--tw-drop-shadow-size:initial;--tw-backdrop-blur:initial;--tw-backdrop-brightness:initial;--tw-backdrop-contrast:initial;--tw-backdrop-grayscale:initial;--tw-backdrop-hue-rotate:initial;--tw-backdrop-invert:initial;--tw-backdrop-opacity:initial;--tw-backdrop-saturate:initial;--tw-backdrop-sepia:initial;--tw-duration:initial;--tw-ease:initial}}}@layer theme{:root,:host{--font-sans:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--color-red-100:oklch(93.6% .032 17.717);--color-red-400:oklch(70.4% .191 22.216);--color-red-500:oklch(63.7% .237 25.331);--color-red-600:oklch(57.7% .245 27.325);--color-yellow-100:oklch(97.3% .071 103.193);--color-yellow-600:oklch(68.1% .162 75.834);--color-green-100:oklch(96.2% .044 156.743);--color-green-600:oklch(62.7% .194 149.214);--color-green-700:oklch(52.7% .154 150.069);--color-blue-600:oklch(54.6% .245 262.881);--color-indigo-100:oklch(93% .034 272.788);--color-indigo-400:oklch(67.3% .182 276.935);--color-indigo-500:oklch(58.5% .233 277.117);--color-indigo-600:oklch(51.1% .262 276.966);--color-indigo-700:oklch(45.7% .24 277.023);--color-gray-100:oklch(96.7% .003 264.542);--color-gray-300:oklch(87.2% .01 258.338);--color-gray-400:oklch(70.7% .022 261.325);--color-gray-500:oklch(55.1% .027 264.364);--color-gray-600:oklch(44.6% .03 256.802);--color-gray-700:oklch(37.3% .034 259.733);--color-gray-800:oklch(27.8% .033 256.848);--color-black:#000;--color-white:#fff;--spacing:.25rem;--container-xs:20rem;--container-sm:24rem;--container-md:28rem;--container-lg:32rem;--container-xl:36rem;--text-xs:.75rem;--text-xs--line-height:calc(1/.75);--text-sm:.875rem;--text-sm--line-height:calc(1.25/.875);--text-base:1rem;--text-base--line-height: 1.5 ;--text-lg:1.125rem;--text-lg--line-height:calc(1.75/1.125);--text-xl:1.25rem;--text-xl--line-height:calc(1.75/1.25);--text-2xl:1.5rem;--text-2xl--line-height:calc(2/1.5);--text-3xl:1.875rem;--text-3xl--line-height: 1.2 ;--font-weight-thin:100;--font-weight-normal:400;--font-weight-medium:500;--font-weight-semibold:600;--font-weight-bold:700;--font-weight-extrabold:800;--tracking-wide:.025em;--leading-snug:1.375;--radius-sm:.25rem;--radius-md:.375rem;--radius-lg:.5rem;--radius-xl:.75rem;--radius-2xl:1rem;--ease-in:cubic-bezier(.4,0,1,1);--ease-out:cubic-bezier(0,0,.2,1);--animate-spin:spin 1s linear infinite;--default-transition-duration:.15s;--default-transition-timing-function:cubic-bezier(.4,0,.2,1);--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono)}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;line-height:1.5;font-family:var(--default-font-family,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::-moz-placeholder{opacity:1}::placeholder{opacity:1}@supports (not (-webkit-appearance:-apple-pay-button)) or (contain-intrinsic-size:1px){::-moz-placeholder{color:currentColor}::placeholder{color:currentColor}@supports (color:color-mix(in lab,red,red)){::-moz-placeholder{color:color-mix(in oklab,currentcolor 50%,transparent)}::placeholder{color:color-mix(in oklab,currentcolor 50%,transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}::-webkit-calendar-picker-indicator{line-height:1}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){-webkit-appearance:button;-moz-appearance:button;appearance:button}::file-selector-button{-webkit-appearance:button;-moz-appearance:button;appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}:host{--boomi-font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--default-font-family:var(--boomi-font);--boomi-danger:oklch(58.6% .253 17.585);--boomi-danger-contrast:#fff;--boomi-danger-fg:var(--boomi-danger);--boomi-danger-border:var(--boomi-danger);--boomi-danger-bg:var(--boomi-danger);height:100%;display:block}@supports (color:color-mix(in lab,red,red)){:host{--boomi-danger-bg:color-mix(in srgb,var(--boomi-danger)10%,transparent)}}:host{--boomi-danger-ring:0 0 0 2px var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-danger-ring:0 0 0 2px color-mix(in srgb,var(--boomi-danger)35%,transparent)}}:host{--boomi-error-soft:var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-error-soft:color-mix(in srgb,var(--boomi-danger)70%,#fff)}}:host{--boomi-btn-primary-bg:oklch(51.1% .262 276.966);--boomi-btn-primary-fg:#fff;--boomi-btn-primary-border:oklch(45.7% .24 277.023);--boomi-btn-primary-shadow:0 4px 6px -1px #432dd71a,0 2px 4px -2px #432dd71a;--boomi-btn-primary-bg-hover:oklch(45.7% .24 277.023);--boomi-btn-primary-bg-active:oklch(39.8% .195 277.366);--boomi-btn-secondary-bg:oklch(92.8% .006 264.531);--boomi-btn-secondary-fg:oklch(37.3% .034 259.733);--boomi-btn-secondary-border:oklch(87.2% .01 258.338);--boomi-btn-secondary-shadow:0 4px 6px -1px #d1d5dc1a,0 2px 4px -2px #d1d5dc1a;--boomi-btn-secondary-bg-hover:oklch(87.2% .01 258.338);--boomi-btn-secondary-bg-active:oklch(70.7% .022 261.325);--boomi-input-bg:#fff;--boomi-input-fg:oklch(27.8% .033 256.848);--boomi-input-placeholder:oklch(70.7% .022 261.325);--boomi-input-border:oklch(87.2% .01 258.338);--boomi-input-shadow:0 0 0 0 #0000;--boomi-input-border-focus:oklch(58.5% .233 277.117);--boomi-input-shadow-focus:0 0 0 2px #625fff59;--boomi-input-outline-focus:var(--boomi-input-border-focus);--boomi-input-border-invalid:var(--boomi-danger);--boomi-input-outline-invalid:var(--boomi-danger);--boomi-input-bg-disabled:oklch(98.5% .002 247.839);--boomi-input-fg-disabled:oklch(55.1% .027 264.364);--boomi-input-border-disabled:oklch(92.8% .006 264.531);--boomi-root-bg-color:#fff;--boomi-root-fg-color:oklch(37.3% .034 259.733);--boomi-page-bg-color:#fff;--boomi-page-fg-color:oklch(37.3% .034 259.733);--boomi-show-header:1;--boomi-header-bg-color:#fff;--boomi-header-fg-color:oklch(37.3% .034 259.733);--boomi-header-fg-hover:oklch(44.6% .03 256.802);--boomi-header-border-color:oklch(92.8% .006 264.531);--boomi-header-shadow:0 4px 6px -1px #e5e7eb1a,0 2px 4px -2px #e5e7eb1a;--boomi-table-header-bg:oklch(96.7% .003 264.542);--boomi-table-header-fg:oklch(37.3% .034 259.733);--boomi-table-header-border:oklch(87.2% .01 258.338);--boomi-table-row-odd-bg:#fff;--boomi-table-row-even-bg:oklch(98.5% .002 247.839);--boomi-table-row-hover-shadow:0 4px 6px -1px #0000001a,0 2px 4px -2px #0000001a;--boomi-card-border:oklch(78.5% .115 274.713);--boomi-card-bg:oklch(98.5% .002 247.839);--boomi-card-shadow:0 4px 6px -1px #0000001a,0 2px 4px -2px #0000001a;--boomi-card-hover-shadow:0 8px 10px -1px #6366f133,0 4px 6px -2px #6366f11a;--boomi-card-hover-scale:scale(1.01);--boomi-agent-text-bg:var(--boomi-agent-pane-bg,var(--boomi-page-bg-color))}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-text-bg:color-mix(in srgb,var(--boomi-agent-pane-bg,var(--boomi-page-bg-color))94%,transparent)}}:host{--boomi-agent-text-border:var(--boomi-agent-pane-fg,var(--boomi-page-fg-color))}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-text-border:color-mix(in srgb,var(--boomi-agent-pane-fg,var(--boomi-page-fg-color))14%,transparent)}}:host{--boomi-agent-text-fg:var(--boomi-agent-pane-fg,var(--boomi-page-fg-color));--boomi-agent-text-copy-bg:var(--boomi-agent-text-border)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-text-copy-bg:color-mix(in srgb,var(--boomi-agent-text-border)45%,transparent)}}:host{--boomi-agent-text-copy-bg-hover:var(--boomi-agent-text-border)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-text-copy-bg-hover:color-mix(in srgb,var(--boomi-agent-text-border)65%,transparent)}}:host{--boomi-agent-text-copy-fg:var(--boomi-agent-text-fg);--boomi-sidebar-bg:var(--boomi-card-bg)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-sidebar-bg:color-mix(in srgb,var(--boomi-card-bg)92%,transparent)}}:host{--boomi-sidebar-fg:var(--boomi-page-fg-color);--boomi-sidebar-header-bg:var(--boomi-card-bg)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-sidebar-header-bg:color-mix(in srgb,var(--boomi-card-bg)80%,transparent)}}:host{--boomi-sidebar-border:var(--boomi-card-border);--boomi-sidebar-header-shadow:0 1px 2px var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-sidebar-header-shadow:0 1px 2px color-mix(in srgb,var(--boomi-card-border)35%,transparent)}}:host{--boomi-sidebar-btn-bg:var(--boomi-btn-primary-bg);--boomi-sidebar-btn-bg-hover:var(--boomi-btn-primary-bg-hover);--boomi-sidebar-btn-fg:var(--boomi-btn-primary-fg);--boomi-sidebar-btn-border:var(--boomi-btn-primary-border);--boomi-sidebar-secondary-btn-bg:var(--boomi-btn-secondary-bg);--boomi-sidebar-secondary-btn-bg-hover:var(--boomi-btn-secondary-bg-hover);--boomi-sidebar-secondary-btn-fg:var(--boomi-btn-secondary-fg);--boomi-sidebar-secondary-btn-border:var(--boomi-btn-secondary-border);--boomi-menu-bg:#fff;--boomi-menu-fg:oklch(37.3% .034 259.733);--boomi-menu-border:oklch(92.8% .006 264.531);--boomi-menu-shadow:0 4px 6px -1px #00000014,0 2px 4px -2px #0000000f;--boomi-menu-item-bg:transparent;--boomi-menu-item-bg-hover:oklch(96.7% .003 264.542);--boomi-menu-item-fg:oklch(37.3% .034 259.733);--boomi-menu-item-fg-hover:oklch(27.8% .033 256.848);--boomi-menu-divider:oklch(92.8% .006 264.531);--boomi-menu-danger-fg:var(--boomi-danger-fg);--boomi-menu-danger-fg-hover:var(--boomi-danger-fg);--boomi-menu-danger-bg-hover:var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-menu-danger-bg-hover:color-mix(in srgb,var(--boomi-danger)10%,transparent)}}:host{--boomi-modal-top-offset:1rem;--boomi-modal-overlay-bg:#00000080;--boomi-modal-bg:#fff;--boomi-modal-fg:oklch(27.8% .033 256.848);--boomi-modal-border:1px solid oklch(92.8% .006 264.531);--boomi-modal-shadow:0 20px 25px -5px #0000001a,0 8px 10px -6px #0000001a;--boomi-modal-close-fg:oklch(70.7% .022 261.325);--boomi-modal-close-hover-fg:oklch(37.3% .034 259.733);--boomi-form-label-fg:oklch(37.3% .034 259.733);--boomi-form-helper-fg:oklch(55.1% .027 264.364);--boomi-form-error-fg:var(--boomi-danger-fg);--boomi-form-required-fg:oklch(71.2% .194 13.428);--boomi-select-bg:#fff;--boomi-select-fg:oklch(27.8% .033 256.848);--boomi-select-border:oklch(87.2% .01 258.338);--boomi-select-shadow:0 0 0 0 #0000;--boomi-select-border-focus:oklch(58.5% .233 277.117);--boomi-select-shadow-focus:0 0 0 2px #625fff59;--boomi-select-icon:oklch(70.7% .022 261.325);--boomi-select-bg-disabled:oklch(98.5% .002 247.839);--boomi-select-fg-disabled:oklch(55.1% .027 264.364);--boomi-select-border-disabled:oklch(92.8% .006 264.531);--boomi-select-border-invalid:var(--boomi-danger);--boomi-options-bg:#fff;--boomi-options-fg:oklch(27.8% .033 256.848);--boomi-options-border:oklch(92.8% .006 264.531);--boomi-options-shadow:0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a;--boomi-options-search-bg:#fff;--boomi-option-bg-active:oklch(96.7% .003 264.542);--boomi-option-fg-selected:oklch(21% .034 264.665);--boomi-loader-dot-bg:oklch(21% .034 264.665);--boomi-loader-dot-size:.75rem;--boomi-loader-dot1-opacity:.25;--boomi-loader-dot2-opacity:.6;--boomi-loader-dot3-opacity:1;--boomi-loader-msg-fg:oklch(44.6% .03 256.802);--boomi-spinner-overlay-bg:#fff9;--boomi-spinner-overlay-blur:4px;--boomi-spinner-overlay-contained-bg:#e5e7eb73;--boomi-spinner-overlay-contained-blur:2px;--boomi-spinner-ring-color:oklch(58.5% .233 277.117);--boomi-spinner-ping-color:oklch(67.3% .182 276.935);--boomi-spinner-message-fg:oklch(37.3% .034 259.733);--boomi-wizard-step-dot-bg:oklch(93% .034 272.788);--boomi-wizard-step-dot-fg:oklch(27.8% .033 256.848);--boomi-wizard-step-dot-border:oklch(87% .065 274.039);--boomi-wizard-step-dot-shadow:0 1px 2px #0000000a;--boomi-wizard-step-dot-bg-active:oklch(67.3% .182 276.935);--boomi-wizard-step-dot-fg-active:#fff;--boomi-wizard-step-dot-border-active:oklch(58.5% .233 277.117);--boomi-wizard-step-dot-bg-completed:oklch(78.5% .115 274.713);--boomi-wizard-step-dot-fg-completed:#fff;--boomi-wizard-step-dot-border-completed:oklch(67.3% .182 276.935);--boomi-wizard-connector-bg:oklch(87.2% .01 258.338);--boomi-wizard-connector-shadow:none;--boomi-wizard-label-fg:oklch(37.3% .034 259.733);--boomi-wizard-card-bg:#fff;--boomi-wizard-card-fg:oklch(27.8% .033 256.848);--boomi-wizard-card-border:oklch(92.8% .006 264.531);--boomi-wizard-card-shadow:0 4px 6px -1px #00000014,0 2px 4px -2px #0000000f;--boomi-wizard-link-fg:oklch(51.1% .262 276.966);--boomi-wizard-link-fg-hover:oklch(45.7% .24 277.023);--boomi-wizard-link-strong-fg:oklch(45.7% .24 277.023);--boomi-notice-bg:var(--boomi-notice-error-bg);--boomi-notice-fg:var(--boomi-notice-error-fg);--boomi-notice-border:var(--boomi-notice-error-border);--boomi-notice-shadow:var(--boomi-notice-error-shadow,0 0 0 0 transparent);--boomi-update-bg:var(--boomi-card-bg,#fff);--boomi-update-fg:var(--boomi-page-fg-color,oklch(37.3% .034 259.733));--boomi-update-border:var(--boomi-card-border,oklch(92.8% .006 264.531));--boomi-update-shadow:var(--boomi-card-shadow,0 4px 6px -1px #00000014,0 2px 4px -2px #0000000f);--boomi-update-title-fg:oklch(27.8% .033 256.848);--boomi-update-desc-fg:oklch(44.6% .03 256.802);--boomi-update-content-bg:#fff;--boomi-update-content-fg:oklch(27.8% .033 256.848);--boomi-thread-separator:var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-thread-separator:color-mix(in srgb,var(--boomi-card-border)70%,transparent)}}:host{--boomi-tablist-border:oklch(92.8% .006 264.531);--boomi-tab-bg:oklch(96.7% .003 264.542);--boomi-tab-fg:oklch(37.3% .034 259.733);--boomi-tab-border:oklch(87.2% .01 258.338);--boomi-tab-bg-hover:oklch(92.8% .006 264.531);--boomi-tab-fg-hover:oklch(27.8% .033 256.848);--boomi-tab-border-hover:oklch(87.2% .01 258.338);--boomi-tab-bg-active:oklch(51.1% .262 276.966);--boomi-tab-fg-active:#fff;--boomi-tab-border-active:oklch(45.7% .24 277.023);--boomi-accent:oklch(58.5% .233 277.117);--boomi-muted:oklch(55.1% .027 264.364);--boomi-map-bg:transparent;--boomi-map-fg:inherit;--boomi-map-line-highlight:red;--boomi-map-line-dim:.35;--boomi-map-line:oklch(44.6% .03 256.802);--boomi-map-line-width:1.4px;--boomi-map-heading-fg:oklch(27.8% .033 256.848);--boomi-map-card-bg:#fff;--boomi-map-card-border:oklch(87.2% .01 258.338);--boomi-map-card-shadow:0 1px 2px #0000000f;--boomi-map-card-shadow-hover:0 8px 20px #6366f126;--boomi-map-card-transform-hover:scale(1.01);--boomi-map-source-bg:#fff;--boomi-map-source-bg-mapped:oklch(97% .014 254.604);--boomi-map-source-border-mapped:oklch(70.7% .165 254.624);--boomi-map-source-outline:oklch(70.7% .165 254.624);--boomi-map-target-bg:#fff;--boomi-map-target-bg-mapped:oklch(98.2% .018 155.826);--boomi-map-target-border-mapped:oklch(79.2% .209 151.711);--boomi-map-target-outline:oklch(79.2% .209 151.711);--boomi-map-func-bg:oklch(98.5% .002 247.839);--boomi-map-func-fg:oklch(27.8% .033 256.848);--boomi-map-func-title-fg:oklch(51.1% .262 276.966);--boomi-map-func-subtle-fg:oklch(55.1% .027 264.364);--boomi-map-pin-source-bg:oklch(58.5% .233 277.117);--boomi-map-pin-target-bg:oklch(72.3% .219 149.579);--boomi-map-pin-input-bg:oklch(79.5% .184 86.047);--boomi-map-pin-output-bg:oklch(62.7% .265 303.9);--boomi-map-pin-badge-bg:oklch(57.7% .245 27.325);--boomi-map-pin-badge-fg:#fff;--boomi-map-pin-danger-bg:oklch(63.7% .237 25.331);--boomi-map-pulse-color:#2eaadc59;--boomi-map-pulse-border:var(--boomi-accent,#2eabdc);--boomi-map-pin-output-bg-active:oklch(71.4% .203 305.504);--boomi-map-pin-output-border-active:oklch(62.7% .265 303.9);--boomi-map-add-bg:oklch(92.8% .006 264.531);--boomi-map-add-fg:oklch(37.3% .034 259.733);--boomi-map-add-border:oklch(87.2% .01 258.338);--boomi-map-add-bg-hover:oklch(87.2% .01 258.338);--boomi-schedule-bg:#fff;--boomi-schedule-fg:#1f2937;--boomi-schedule-border:#d1d5db;--boomi-schedule-shadow:0 1px 2px #0000000d;--boomi-schedule-title-fg:#111827;--boomi-schedule-content-fg:#374151;--boomi-schedule-accordion-bg:#f9fafb;--boomi-schedule-accordion-border:#e5e7eb;--boomi-schedule-btn-bg:#2563eb;--boomi-schedule-btn-fg:#fff;--boomi-schedule-btn-border:#1d4ed8;--boomi-schedule-btn-bg-hover:#1d4ed8;--boomi-schedule-btn-bg-active:#1e40af;--boomi-schedule-input-bg:#fff;--boomi-schedule-input-fg:#111827;--boomi-schedule-input-border:#d1d5db;--boomi-schedule-input-border-focus:#2563eb;--boomi-schedule-input-bg-disabled:#f3f4f6;--boomi-schedule-input-fg-disabled:#9ca3af;--boomi-schedule-input-border-disabled:#e5e7eb;--boomi-conn-bg:#fff;--boomi-conn-border:oklch(92.8% .006 264.531);--boomi-conn-heading-fg:oklch(37.3% .034 259.733);--boomi-conn-field-bg:oklch(98.5% .002 247.839);--boomi-conn-field-border:oklch(87.2% .01 258.338);--boomi-conn-field-label-fg:oklch(27.8% .033 256.848);--boomi-conn-field-error-fg:var(--boomi-danger-fg);--boomi-conn-btn-save-bg:oklch(62.7% .194 149.214);--boomi-conn-btn-save-fg:#fff;--boomi-conn-btn-auth-bg:oklch(51.1% .262 276.966);--boomi-conn-btn-auth-fg:#fff;--boomi-conn-btn-disabled-bg:oklch(70.7% .022 261.325);--boomi-conn-btn-disabled-fg:#fff;--boomi-swal-bg:var(--boomi-modal-bg,#fff);--boomi-swal-fg:var(--boomi-modal-fg,oklch(27.8% .033 256.848));--boomi-swal-border:var(--boomi-modal-border,1px solid oklch(92.8% .006 264.531));--boomi-swal-shadow:var(--boomi-modal-shadow,0 20px 25px -5px #0000001a,0 8px 10px -6px #0000001a);--boomi-swal-title-fg:var(--boomi-update-title-fg,oklch(27.8% .033 256.848));--boomi-swal-desc-fg:var(--boomi-update-desc-fg,oklch(44.6% .03 256.802));--boomi-swal-icon-success:oklch(62.7% .194 149.214);--boomi-swal-icon-warning:oklch(76.9% .188 70.08);--boomi-swal-icon-error:var(--boomi-danger);--boomi-swal-overlay-bg:var(--boomi-modal-overlay-bg,#00000080);--boomi-toast-success-bg:oklch(72.3% .219 149.579);--boomi-toast-success-fg:#fff;--boomi-toast-success-icon:#fff;--boomi-toast-error-bg:oklch(63.7% .237 25.331);--boomi-toast-error-fg:#fff;--boomi-toast-error-icon:#fff;--boomi-toast-warning-bg:oklch(90.5% .182 98.111);--boomi-toast-warning-fg:#000;--boomi-toast-warning-icon:#000;--boomi-toast-info-bg:oklch(62.3% .214 259.815);--boomi-toast-info-fg:#fff;--boomi-toast-info-icon:#fff;--boomi-toast-question-bg:oklch(44.6% .03 256.802);--boomi-toast-question-fg:#fff;--boomi-toast-question-icon:#fff;--boomi-toast-position:top;--boomi-toast-timer:2000;--boomi-toast-width:600px;--boomi-toast-radius:.5rem;--boomi-toast-shadow:0 6px 16px #0000002e;--boomi-toast-border:none;--boomi-toast-title-fg:inherit;--boomi-toast-progress-bar:#ffffffb3;--boomi-agent-bg:var(--boomi-card-bg);--boomi-agent-fg:var(--boomi-page-fg-color);--boomi-agent-border:var(--boomi-card-border);--boomi-agent-shadow:0 20px 40px -16px #0f172a2e,0 8px 20px -12px #0f172a1a;--boomi-agent-header-bg:var(--boomi-modal-bg);--boomi-agent-tab-bg:var(--boomi-tab-bg);--boomi-agent-tab-fg:var(--boomi-tab-fg);--boomi-agent-tab-border:var(--boomi-tab-border);--boomi-agent-tab-bg-active:var(--boomi-tab-bg-active);--boomi-agent-tab-fg-active:var(--boomi-tab-fg-active);--boomi-agent-tab-border-active:var(--boomi-tab-border-active);--boomi-agent-section-bg:var(--boomi-update-content-bg);--boomi-agent-section-fg:var(--boomi-update-content-fg);--boomi-agent-section-border:var(--boomi-update-border);--boomi-agent-chat-bg:var(--boomi-card-bg);--boomi-agent-chat-border:var(--boomi-card-border);--boomi-agent-bubble-agent-bg:var(--boomi-update-content-bg);--boomi-agent-bubble-agent-fg:var(--boomi-update-content-fg);--boomi-agent-bubble-agent-border:var(--boomi-update-border);--boomi-agent-bubble-user-bg:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-bubble-user-bg:color-mix(in srgb,var(--boomi-accent)12%,transparent)}}:host{--boomi-agent-bubble-user-border:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-bubble-user-border:color-mix(in srgb,var(--boomi-accent)30%,transparent)}}:host{--boomi-agent-update-bg:var(--boomi-card-bg,#fff);--boomi-uagent-pdate-fg:var(--boomi-page-fg-color,oklch(37.3% .034 259.733));--boomi-agent-update-border:var(--boomi-card-border,oklch(92.8% .006 264.531));--boomi-agent-update-shadow:var(--boomi-card-shadow,0 4px 6px -1px #00000014,0 2px 4px -2px #0000000f);--boomi-agent-update-title-fg:oklch(27.8% .033 256.848);--boomi-agent-update-desc-fg:oklch(44.6% .03 256.802);--boomi-agent-update-content-bg:#fff;--boomi-agent-update-content-fg:oklch(27.8% .033 256.848);--boomi-agent-thread-separator:var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-thread-separator:color-mix(in srgb,var(--boomi-card-border)70%,transparent)}}:host{--boomi-agent-card-tint:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-card-tint:color-mix(in srgb,var(--boomi-accent)7%,transparent)}}:host{--boomi-agent-row-tint:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-row-tint:color-mix(in srgb,var(--boomi-accent)5%,transparent)}}:host{--boomi-agent-pane-bg:var(--boomi-agent-pane-bg-color,var(--boomi-page-bg-color));--boomi-agent-pane-fg:var(--boomi-agent-pane-fg-color,var(--boomi-page-fg-color));--boomi-agent-compose-bg:var(--boomi-card-bg)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-compose-bg:color-mix(in srgb,var(--boomi-card-bg)96%,transparent)}}:host{--boomi-agent-compose-border:var(--boomi-card-border);--boomi-agent-compose-shadow:0 -1px 2px var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-compose-shadow:0 -1px 2px color-mix(in srgb,var(--boomi-card-border)45%,transparent)}}:host{--boomi-agent-compose-input-bg:var(--boomi-input-bg);--boomi-agent-compose-input-border:var(--boomi-input-border)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-compose-input-border:color-mix(in srgb,var(--boomi-input-border)95%,transparent)}}:host{--boomi-agent-compose-secondary-bg:var(--boomi-card-bg)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-compose-secondary-bg:color-mix(in srgb,var(--boomi-card-bg)90%,transparent)}}:host{--boomi-agent-compose-secondary-border:var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-agent-compose-secondary-border:color-mix(in srgb,var(--boomi-card-border)80%,transparent)}}:host{--boomi-agent-composer-backdrop-bg:var(--boomi-agent-pane-bg,var(--boomi-page-bg-color));--boomi-agent-composer-backdrop-fade:2.5rem;--boomi-agent-composer-backdrop-line-width:0;--boomi-agent-composer-backdrop-line-color:var(--boomi-agent-chat-border,var(--boomi-card-border));--boomi-agent-shimmer-1:oklch(58.5% .233 277.117);--boomi-agent-shimmer-2:oklch(74.6% .16 232.661);--boomi-agent-shimmer-opacity:.35;--boomi-agent-row-shimmer-opacity:.22;--boomi-agent-shimmer-speed:8s;--boomi-chip-bg:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-chip-bg:color-mix(in srgb,var(--boomi-accent)12%,transparent)}}:host{--boomi-chip-fg:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-chip-fg:color-mix(in srgb,var(--boomi-accent)85%,currentColor)}}:host{--boomi-chip-border:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-chip-border:color-mix(in srgb,var(--boomi-accent)40%,transparent)}}:host{--boomi-chip-success-bg:oklch(96.2% .044 156.743);--boomi-chip-success-fg:oklch(44.8% .119 151.328);--boomi-chip-success-border:oklch(87.1% .15 154.449);--boomi-chip-warning-bg:oklch(96.2% .059 95.617);--boomi-chip-warning-fg:oklch(47.3% .137 46.201);--boomi-chip-warning-border:oklch(87.9% .169 91.605);--boomi-chip-error-bg:var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-chip-error-bg:color-mix(in srgb,var(--boomi-danger)12%,transparent)}}:host{--boomi-chip-error-fg:var(--boomi-danger-fg);--boomi-chip-error-border:var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-chip-error-border:color-mix(in srgb,var(--boomi-danger)40%,transparent)}}:host{--boomi-scrollbar-width:10px;--boomi-scrollbar-radius:999px;--boomi-scrollbar-bg:var(--boomi-update-border,#e5e7eb)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-scrollbar-bg:color-mix(in srgb,var(--boomi-update-border,#e5e7eb)35%,transparent)}}:host{--boomi-scrollbar-thumb:var(--boomi-page-fg-color,#111827)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-scrollbar-thumb:color-mix(in srgb,var(--boomi-page-fg-color,#111827)18%,transparent)}}:host{--boomi-scrollbar-thumb-hover:var(--boomi-accent,#6366f1)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-scrollbar-thumb-hover:color-mix(in srgb,var(--boomi-accent,#6366f1)28%,transparent)}}:host{--boomi-scrollbar-thumb-active:var(--boomi-accent,#6366f1)}@supports (color:color-mix(in lab,red,red)){:host{--boomi-scrollbar-thumb-active:color-mix(in srgb,var(--boomi-accent,#6366f1)40%,transparent)}}:host{--boomi-scrollbar-corner:transparent}:host([data-theme=dark]){--boomi-danger:oklch(71.2% .194 13.428);--boomi-danger-contrast:#fff;--boomi-danger-fg:var(--boomi-danger);--boomi-danger-border:var(--boomi-danger);--boomi-danger-bg:var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-danger-bg:color-mix(in srgb,var(--boomi-danger)18%,transparent)}}:host([data-theme=dark]){--boomi-danger-ring:0 0 0 2px var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-danger-ring:0 0 0 2px color-mix(in srgb,var(--boomi-danger)45%,transparent)}}:host([data-theme=dark]){--boomi-error-soft:var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-error-soft:color-mix(in srgb,var(--boomi-danger)55%,oklch(96.7% .003 264.542))}}:host([data-theme=dark]){--boomi-btn-primary-bg:oklch(58.5% .233 277.117);--boomi-btn-primary-fg:#fff;--boomi-btn-primary-border:oklch(51.1% .262 276.966);--boomi-btn-primary-shadow:0 4px 6px -1px #4f39f61a,0 2px 4px -2px #4f39f61a;--boomi-btn-primary-bg-hover:oklch(51.1% .262 276.966);--boomi-btn-primary-bg-active:oklch(45.7% .24 277.023);--boomi-btn-secondary-bg:oklch(37.3% .034 259.733);--boomi-btn-secondary-fg:oklch(96.7% .003 264.542);--boomi-btn-secondary-border:oklch(44.6% .03 256.802);--boomi-btn-secondary-shadow:0 4px 6px -1px #4a55651a,0 2px 4px -2px #4a55651a;--boomi-btn-secondary-bg-hover:oklch(44.6% .03 256.802);--boomi-btn-secondary-bg-active:oklch(55.1% .027 264.364);--boomi-input-bg:oklch(27.8% .033 256.848);--boomi-input-fg:oklch(96.7% .003 264.542);--boomi-input-placeholder:oklch(70.7% .022 261.325);--boomi-input-border:oklch(51.1% .262 276.966);--boomi-input-shadow:0 0 0 0 #0000;--boomi-input-border-focus:oklch(67.3% .182 276.935);--boomi-input-shadow-focus:0 0 0 2px #7d87ff59;--boomi-input-outline-focus:var(--boomi-input-border-focus);--boomi-input-border-invalid:var(--boomi-danger);--boomi-input-outline-invalid:var(--boomi-danger);--boomi-input-bg-disabled:oklch(27.8% .033 256.848);--boomi-input-fg-disabled:oklch(70.7% .022 261.325);--boomi-input-border-disabled:oklch(37.3% .034 259.733);--boomi-root-bg-color:oklch(21% .034 264.665);--boomi-root-fg-color:#fff;--boomi-page-bg-color:oklch(21% .034 264.665);--boomi-page-fg-color:#fff;--boomi-show-header:1;--boomi-header-bg-color:oklch(21% .034 264.665);--boomi-header-fg-color:#fff;--boomi-header-fg-hover:oklch(93% .034 272.788);--boomi-header-border-color:oklch(58.5% .233 277.117);--boomi-header-shadow:0 4px 6px -1px #625fff1a,0 2px 4px -2px #625fff1a;--boomi-table-header-bg:oklch(58.5% .233 277.117);--boomi-table-header-fg:#fff;--boomi-table-header-border:oklch(37.3% .034 259.733);--boomi-table-row-odd-bg:oklch(27.8% .033 256.848);--boomi-table-row-even-bg:oklch(37.3% .034 259.733);--boomi-table-row-hover-shadow:0 4px 6px -1px #ffffff0d,0 2px 4px -2px #ffffff0d;--boomi-card-border:oklch(58.5% .233 277.117);--boomi-card-bg:oklch(27.8% .033 256.848);--boomi-card-shadow:0 4px 6px -1px #ffffff0d,0 2px 4px -2px #ffffff0d;--boomi-card-hover-shadow:0 8px 10px -1px #a5b4fc26,0 4px 6px -2px #a5b4fc1a;--boomi-agent-text-bg:var(--boomi-agent-pane-bg,oklch(21% .034 264.665))}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-text-bg:color-mix(in srgb,var(--boomi-agent-pane-bg,oklch(21% .034 264.665))88%,var(--boomi-page-fg-color,#e5e7eb)12%)}}:host([data-theme=dark]){--boomi-agent-text-border:var(--boomi-page-fg-color,#e5e7eb)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-text-border:color-mix(in srgb,var(--boomi-page-fg-color,#e5e7eb)18%,transparent)}}:host([data-theme=dark]){--boomi-agent-text-fg:var(--boomi-page-fg-color);--boomi-agent-text-copy-bg:var(--boomi-agent-text-border)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-text-copy-bg:color-mix(in srgb,var(--boomi-agent-text-border)55%,transparent)}}:host([data-theme=dark]){--boomi-agent-text-copy-bg-hover:var(--boomi-agent-text-border)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-text-copy-bg-hover:color-mix(in srgb,var(--boomi-agent-text-border)75%,transparent)}}:host([data-theme=dark]){--boomi-agent-text-copy-fg:var(--boomi-page-fg-color);--boomi-sidebar-bg:var(--boomi-card-bg)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-sidebar-bg:color-mix(in srgb,var(--boomi-card-bg)94%,transparent)}}:host([data-theme=dark]){--boomi-sidebar-fg:var(--boomi-page-fg-color);--boomi-sidebar-header-bg:var(--boomi-card-bg)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-sidebar-header-bg:color-mix(in srgb,var(--boomi-card-bg)85%,transparent)}}:host([data-theme=dark]){--boomi-sidebar-border:var(--boomi-card-border);--boomi-sidebar-header-shadow:0 1px 2px #10182899;--boomi-sidebar-btn-bg:var(--boomi-btn-primary-bg);--boomi-sidebar-btn-bg-hover:var(--boomi-btn-primary-bg-hover);--boomi-sidebar-btn-fg:var(--boomi-btn-primary-fg);--boomi-sidebar-btn-border:var(--boomi-btn-primary-border);--boomi-sidebar-secondary-btn-bg:var(--boomi-btn-secondary-bg);--boomi-sidebar-secondary-btn-bg-hover:var(--boomi-btn-secondary-bg-hover);--boomi-sidebar-secondary-btn-fg:var(--boomi-btn-secondary-fg);--boomi-sidebar-secondary-btn-border:var(--boomi-btn-secondary-border);--boomi-menu-bg:oklch(21% .034 264.665);--boomi-menu-fg:oklch(96.7% .003 264.542);--boomi-menu-border:oklch(37.3% .034 259.733);--boomi-menu-shadow:0 4px 6px -1px #ffffff0f,0 2px 4px -2px #ffffff0a;--boomi-menu-item-bg:oklch(21% .034 264.665);--boomi-menu-item-bg-hover:oklch(27.8% .033 256.848);--boomi-menu-item-fg:oklch(96.7% .003 264.542);--boomi-menu-item-fg-hover:oklch(98.5% .002 247.839);--boomi-menu-divider:oklch(37.3% .034 259.733);--boomi-menu-danger-fg:var(--boomi-danger-fg);--boomi-menu-danger-fg-hover:var(--boomi-danger-fg);--boomi-menu-danger-bg-hover:var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-menu-danger-bg-hover:color-mix(in srgb,var(--boomi-danger)10%,transparent)}}:host([data-theme=dark]){--boomi-modal-overlay-bg:#0000008c;--boomi-modal-bg:oklch(21% .034 264.665);--boomi-modal-fg:oklch(96.7% .003 264.542);--boomi-modal-border:1px solid oklch(37.3% .034 259.733);--boomi-modal-shadow:0 20px 25px -5px #ffffff12,0 8px 10px -6px #ffffff0d;--boomi-modal-close-fg:oklch(70.7% .022 261.325);--boomi-modal-close-hover-fg:oklch(96.7% .003 264.542);--boomi-form-label-fg:oklch(92.8% .006 264.531);--boomi-form-helper-fg:oklch(70.7% .022 261.325);--boomi-form-error-fg:var(--boomi-danger-fg);--boomi-form-required-fg:oklch(81% .117 11.638);--boomi-select-bg:oklch(21% .034 264.665);--boomi-select-fg:oklch(96.7% .003 264.542);--boomi-select-border:oklch(37.3% .034 259.733);--boomi-select-shadow:0 0 0 0 #0000;--boomi-select-border-focus:oklch(67.3% .182 276.935);--boomi-select-shadow-focus:0 0 0 2px #7d87ff59;--boomi-select-icon:oklch(87.2% .01 258.338);--boomi-select-bg-disabled:oklch(27.8% .033 256.848);--boomi-select-fg-disabled:oklch(55.1% .027 264.364);--boomi-select-border-disabled:oklch(37.3% .034 259.733);--boomi-select-border-invalid:var(--boomi-danger);--boomi-options-bg:oklch(21% .034 264.665);--boomi-options-fg:oklch(96.7% .003 264.542);--boomi-options-border:oklch(37.3% .034 259.733);--boomi-options-shadow:0 10px 15px -3px #ffffff0f,0 4px 6px -4px #ffffff0a;--boomi-options-search-bg:oklch(21% .034 264.665);--boomi-option-bg-active:oklch(37.3% .034 259.733);--boomi-option-fg-active:#fff;--boomi-option-bg-selected:var(--boomi-option-bg-active);--boomi-option-fg-selected:#fff;--boomi-loader-dot-bg:oklch(96.7% .003 264.542);--boomi-loader-dot1-opacity:.3;--boomi-loader-dot2-opacity:.7;--boomi-loader-dot3-opacity:1;--boomi-loader-msg-fg:oklch(87.2% .01 258.338);--boomi-spinner-overlay-bg:#0009;--boomi-spinner-overlay-blur:4px;--boomi-spinner-overlay-contained-bg:#101828b3;--boomi-spinner-overlay-contained-blur:3px;--boomi-spinner-ring-color:oklch(82.8% .189 84.429);--boomi-spinner-ping-color:oklch(87.9% .169 91.605);--boomi-spinner-message-fg:oklch(92.8% .006 264.531);--boomi-wizard-step-dot-bg:oklch(37.3% .034 259.733);--boomi-wizard-step-dot-fg:oklch(96.7% .003 264.542);--boomi-wizard-step-dot-border:oklch(44.6% .03 256.802);--boomi-wizard-step-dot-shadow:0 1px 2px #ffffff0f;--boomi-wizard-step-dot-bg-active:oklch(58.5% .233 277.117);--boomi-wizard-step-dot-fg-active:#fff;--boomi-wizard-step-dot-border-active:oklch(67.3% .182 276.935);--boomi-wizard-step-dot-bg-completed:oklch(67.3% .182 276.935);--boomi-wizard-step-dot-fg-completed:#fff;--boomi-wizard-step-dot-border-completed:oklch(78.5% .115 274.713);--boomi-wizard-connector-bg:oklch(44.6% .03 256.802);--boomi-wizard-label-fg:oklch(92.8% .006 264.531);--boomi-wizard-card-bg:oklch(21% .034 264.665);--boomi-wizard-card-fg:oklch(96.7% .003 264.542);--boomi-wizard-card-border:oklch(37.3% .034 259.733);--boomi-wizard-card-shadow:0 4px 6px -1px #ffffff0f,0 2px 4px -2px #ffffff0a;--boomi-wizard-link-fg:oklch(78.5% .115 274.713);--boomi-wizard-link-fg-hover:oklch(87% .065 274.039);--boomi-wizard-link-strong-fg:oklch(87% .065 274.039);--boomi-notice-bg:var(--boomi-notice-warning-bg);--boomi-notice-fg:var(--boomi-notice-warning-fg);--boomi-notice-border:var(--boomi-notice-warning-border);--boomi-notice-shadow:var(--boomi-notice-warning-shadow,0 0 0 0 transparent);--boomi-update-bg:var(--boomi-card-bg,oklch(27.8% .033 256.848));--boomi-update-fg:var(--boomi-page-fg-color,oklch(96.7% .003 264.542));--boomi-update-border:var(--boomi-card-border,oklch(37.3% .034 259.733));--boomi-update-shadow:var(--boomi-card-shadow,0 4px 6px -1px #ffffff0d,0 2px 4px -2px #ffffff0d);--boomi-update-title-fg:oklch(96.7% .003 264.542);--boomi-update-desc-fg:oklch(87.2% .01 258.338);--boomi-update-content-bg:oklch(44.6% .03 256.802);--boomi-update-content-fg:#fff;--boomi-thread-separator:var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-thread-separator:color-mix(in srgb,var(--boomi-card-border)60%,transparent)}}:host([data-theme=dark]){--boomi-tablist-border:oklch(37.3% .034 259.733);--boomi-tab-bg:oklch(27.8% .033 256.848);--boomi-tab-fg:oklch(96.7% .003 264.542);--boomi-tab-border:oklch(37.3% .034 259.733);--boomi-tab-bg-hover:oklch(37.3% .034 259.733);--boomi-tab-fg-hover:oklch(98.5% .002 247.839);--boomi-tab-border-hover:oklch(44.6% .03 256.802);--boomi-tab-bg-active:oklch(58.5% .233 277.117);--boomi-tab-fg-active:#fff;--boomi-tab-border-active:oklch(67.3% .182 276.935);--boomi-accent:oklch(78.5% .115 274.713);--boomi-muted:oklch(70.7% .022 261.325);--boomi-map-line-highlight:red;--boomi-map-line-dim:.35;--boomi-map-line:oklch(87.2% .01 258.338);--boomi-map-heading-fg:oklch(96.7% .003 264.542);--boomi-map-card-bg:oklch(27.8% .033 256.848);--boomi-map-card-border:oklch(37.3% .034 259.733);--boomi-map-card-shadow:0 1px 2px #ffffff0f;--boomi-map-card-shadow-hover:0 8px 20px #a5b4fc1f;--boomi-map-source-bg:oklch(27.8% .033 256.848);--boomi-map-source-bg-mapped:oklch(35.9% .144 278.697);--boomi-map-source-border-mapped:oklch(58.5% .233 277.117);--boomi-map-source-outline:oklch(67.3% .182 276.935);--boomi-map-target-bg:oklch(27.8% .033 256.848);--boomi-map-target-bg-mapped:oklch(37.8% .077 168.94);--boomi-map-target-border-mapped:oklch(69.6% .17 162.48);--boomi-map-target-outline:oklch(76.5% .177 163.223);--boomi-map-func-bg:oklch(37.3% .034 259.733);--boomi-map-func-fg:oklch(96.7% .003 264.542);--boomi-map-func-title-fg:oklch(78.5% .115 274.713);--boomi-map-func-subtle-fg:oklch(70.7% .022 261.325);--boomi-map-pin-source-bg:oklch(67.3% .182 276.935);--boomi-map-pin-target-bg:oklch(76.5% .177 163.223);--boomi-map-pin-input-bg:oklch(82.8% .189 84.429);--boomi-map-pin-output-bg:oklch(70.2% .183 293.541);--boomi-map-pin-badge-bg:oklch(70.4% .191 22.216);--boomi-map-pin-badge-fg:#fff;--boomi-map-pulse-color:#2eaadc73;--boomi-map-pulse-border:var(--boomi-accent,#5cc8f0);--boomi-map-pin-output-bg-active:oklch(81.1% .111 293.571);--boomi-map-pin-output-border-active:oklch(70.2% .183 293.541);--boomi-map-add-bg:oklch(37.3% .034 259.733);--boomi-map-add-fg:oklch(96.7% .003 264.542);--boomi-map-add-border:oklch(44.6% .03 256.802);--boomi-map-add-bg-hover:oklch(44.6% .03 256.802);--boomi-schedule-bg:#1f2937;--boomi-schedule-fg:#f9fafb;--boomi-schedule-border:#374151;--boomi-schedule-shadow:0 1px 2px #00000080;--boomi-schedule-title-fg:#fff;--boomi-schedule-content-fg:#d1d5db;--boomi-schedule-accordion-bg:#111827;--boomi-schedule-accordion-border:#374151;--boomi-schedule-btn-bg:#3b82f6;--boomi-schedule-btn-fg:#fff;--boomi-schedule-btn-border:#2563eb;--boomi-schedule-btn-bg-hover:#2563eb;--boomi-schedule-btn-bg-active:#1d4ed8;--boomi-schedule-input-bg:#111827;--boomi-schedule-input-fg:#f9fafb;--boomi-schedule-input-border:#374151;--boomi-schedule-input-border-focus:#3b82f6;--boomi-schedule-input-bg-disabled:#1f2937;--boomi-schedule-input-fg-disabled:#6b7280;--boomi-schedule-input-border-disabled:#374151;--boomi-conn-bg:oklch(27.8% .033 256.848);--boomi-conn-border:oklch(37.3% .034 259.733);--boomi-conn-heading-fg:oklch(96.7% .003 264.542);--boomi-conn-field-bg:oklch(37.3% .034 259.733);--boomi-conn-field-border:oklch(44.6% .03 256.802);--boomi-conn-field-label-fg:oklch(92.8% .006 264.531);--boomi-conn-field-error-fg:var(--boomi-danger-fg);--boomi-conn-btn-save-bg:oklch(72.3% .219 149.579);--boomi-conn-btn-save-fg:#fff;--boomi-conn-btn-auth-bg:oklch(58.5% .233 277.117);--boomi-conn-btn-auth-fg:#fff;--boomi-conn-btn-disabled-bg:oklch(55.1% .027 264.364);--boomi-conn-btn-disabled-fg:oklch(87.2% .01 258.338);--boomi-swal-bg:var(--boomi-modal-bg,oklch(21% .034 264.665));--boomi-swal-fg:var(--boomi-modal-fg,oklch(96.7% .003 264.542));--boomi-swal-border:var(--boomi-modal-border,1px solid oklch(37.3% .034 259.733));--boomi-swal-shadow:var(--boomi-modal-shadow,0 20px 25px -5px #ffffff12,0 8px 10px -6px #ffffff0d);--boomi-swal-title-fg:var(--boomi-update-title-fg,oklch(96.7% .003 264.542));--boomi-swal-desc-fg:var(--boomi-update-desc-fg,oklch(87.2% .01 258.338));--boomi-swal-icon-success:oklch(79.2% .209 151.711);--boomi-swal-icon-warning:oklch(82.8% .189 84.429);--boomi-swal-icon-error:var(--boomi-danger);--boomi-swal-overlay-bg:var(--boomi-modal-overlay-bg,#0000008c);--boomi-toast-success-bg:oklch(62.7% .194 149.214);--boomi-toast-error-bg:oklch(57.7% .245 27.325);--boomi-toast-warning-bg:oklch(76.9% .188 70.08);--boomi-toast-info-bg:oklch(54.6% .245 262.881);--boomi-toast-question-bg:oklch(37.3% .034 259.733);--boomi-toast-shadow:0 6px 16px #00000080;--boomi-toast-progress-bar:#fff9;--boomi-agent-bg:var(--boomi-card-bg);--boomi-agent-fg:var(--boomi-page-fg-color);--boomi-agent-border:var(--boomi-card-border);--boomi-agent-shadow:0 24px 44px -18px #00000073,0 10px 24px -12px #00000059;--boomi-agent-header-bg:var(--boomi-modal-bg);--boomi-agent-bubble-user-bg:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-bubble-user-bg:color-mix(in srgb,var(--boomi-accent)26%,transparent)}}:host([data-theme=dark]){--boomi-agent-bubble-user-border:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-bubble-user-border:color-mix(in srgb,var(--boomi-accent)40%,transparent)}}:host([data-theme=dark]){--boomi-agent-card-tint:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-card-tint:color-mix(in srgb,var(--boomi-accent)10%,transparent)}}:host([data-theme=dark]){--boomi-agent-row-tint:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-row-tint:color-mix(in srgb,var(--boomi-accent)7%,transparent)}}:host([data-theme=dark]){--boomi-agent-pane-bg:var(--boomi-page-bg-color)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-pane-bg:color-mix(in srgb,var(--boomi-page-bg-color)98%,transparent)}}:host([data-theme=dark]){--boomi-agent-pane-fg:var(--boomi-page-fg-color);--boomi-agent-compose-bg:var(--boomi-card-bg)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-compose-bg:color-mix(in srgb,var(--boomi-card-bg)95%,transparent)}}:host([data-theme=dark]){--boomi-agent-compose-border:var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-compose-border:color-mix(in srgb,var(--boomi-card-border)92%,transparent)}}:host([data-theme=dark]){--boomi-agent-compose-shadow:0 -1px 2px #b8e6fe73;--boomi-agent-compose-input-bg:var(--boomi-input-bg);--boomi-agent-compose-input-border:var(--boomi-input-border)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-compose-input-border:color-mix(in srgb,var(--boomi-input-border)80%,#fff 20%)}}:host([data-theme=dark]){--boomi-agent-compose-secondary-bg:var(--boomi-card-bg)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-compose-secondary-bg:color-mix(in srgb,var(--boomi-card-bg)88%,transparent)}}:host([data-theme=dark]){--boomi-agent-compose-secondary-border:var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-compose-secondary-border:color-mix(in srgb,var(--boomi-card-border)82%,transparent)}}:host([data-theme=dark]){--boomi-agent-shimmer-1:oklch(81.1% .111 293.571);--boomi-agent-shimmer-2:oklch(78.5% .115 274.713);--boomi-agent-shimmer-opacity:.28;--boomi-agent-row-shimmer-opacity:.18;--boomi-agent-shimmer-speed:9s;--boomi-uagent-pdate-bg:var(--boomi-card-bg,oklch(27.8% .033 256.848));--boomi-uagent-pdate-fg:var(--boomi-page-fg-color,oklch(96.7% .003 264.542));--boomi-uagent-pdate-border:var(--boomi-card-border,oklch(37.3% .034 259.733));--boomi-agent-update-shadow:var(--boomi-card-shadow,0 4px 6px -1px #ffffff0d,0 2px 4px -2px #ffffff0d);--boomi-uagent-pdate-title-fg:oklch(96.7% .003 264.542);--boomi-agent-update-desc-fg:oklch(87.2% .01 258.338);--boomi-agent-update-content-bg:oklch(44.6% .03 256.802);--boomi-agent-update-content-fg:#fff;--boomi-agent-thread-separator:var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-agent-thread-separator:color-mix(in srgb,var(--boomi-card-border)60%,transparent)}}:host([data-theme=dark]){--boomi-chip-bg:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-chip-bg:color-mix(in srgb,var(--boomi-accent)24%,transparent)}}:host([data-theme=dark]){--boomi-chip-fg:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-chip-fg:color-mix(in srgb,var(--boomi-accent)92%,oklch(96.7% .003 264.542))}}:host([data-theme=dark]){--boomi-chip-border:var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-chip-border:color-mix(in srgb,var(--boomi-accent)50%,transparent)}}:host([data-theme=dark]){--boomi-chip-success-bg:#00c75838;--boomi-chip-success-fg:oklch(96.2% .044 156.743);--boomi-chip-success-border:oklch(72.3% .219 149.579);--boomi-chip-warning-bg:#f99c0038;--boomi-chip-warning-fg:oklch(96.2% .059 95.617);--boomi-chip-warning-border:oklch(76.9% .188 70.08);--boomi-chip-error-bg:var(--boomi-danger)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-chip-error-bg:color-mix(in srgb,var(--boomi-danger)24%,transparent)}}:host([data-theme=dark]){--boomi-chip-error-fg:oklch(94.1% .03 12.58);--boomi-chip-error-border:var(--boomi-danger);--boomi-scrollbar-bg:var(--boomi-update-border,#374151)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-scrollbar-bg:color-mix(in srgb,var(--boomi-update-border,#374151)35%,transparent)}}:host([data-theme=dark]){--boomi-scrollbar-thumb:var(--boomi-page-fg-color,#fff)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-scrollbar-thumb:color-mix(in srgb,var(--boomi-page-fg-color,#fff)18%,transparent)}}:host([data-theme=dark]){--boomi-scrollbar-thumb-hover:var(--boomi-accent,#818cf8)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-scrollbar-thumb-hover:color-mix(in srgb,var(--boomi-accent,#818cf8)32%,transparent)}}:host([data-theme=dark]){--boomi-scrollbar-thumb-active:var(--boomi-accent,#818cf8)}@supports (color:color-mix(in lab,red,red)){:host([data-theme=dark]){--boomi-scrollbar-thumb-active:color-mix(in srgb,var(--boomi-accent,#818cf8)45%,transparent)}}:host([data-theme=boomi]){--boomi-danger:oklch(58.6% .253 17.585);--boomi-danger-contrast:#fff;--boomi-danger-fg:var(--boomi-danger);--boomi-danger-border:var(--boomi-danger);--boomi-danger-bg:color-mix(in srgb,var(--boomi-danger)10%,transparent);--boomi-danger-ring:0 0 0 2px color-mix(in srgb,var(--boomi-danger)35%,transparent);--boomi-error-soft:color-mix(in srgb,var(--boomi-danger)70%,oklch(97.7% .013 236.62));--boomi-btn-primary-bg:oklch(58.8% .158 241.966);--boomi-btn-primary-fg:#fff;--boomi-btn-primary-border:oklch(50% .134 242.749);--boomi-btn-primary-shadow:0 4px 6px -1px #0069a41a,0 2px 4px -2px #0069a41a;--boomi-btn-primary-bg-hover:oklch(50% .134 242.749);--boomi-btn-primary-bg-active:oklch(44.3% .11 240.79);--boomi-btn-secondary-bg:oklch(95.1% .026 236.824);--boomi-btn-secondary-fg:oklch(39.1% .09 240.876);--boomi-btn-secondary-border:oklch(90.1% .058 230.902);--boomi-btn-secondary-shadow:0 4px 6px -1px #b8e6fe1a,0 2px 4px -2px #b8e6fe1a;--boomi-btn-secondary-bg-hover:oklch(90.1% .058 230.902);--boomi-btn-secondary-bg-active:oklch(82.8% .111 230.318);--boomi-root-bg-color:oklch(97.7% .013 236.62);--boomi-root-fg-color:oklch(37.3% .034 259.733);--boomi-page-bg-color:oklch(97.7% .013 236.62);--boomi-page-fg-color:oklch(37.3% .034 259.733);--boomi-show-header:1;--boomi-header-bg-color:#fff;--boomi-header-fg-color:oklch(37.3% .034 259.733);--boomi-header-fg-hover:oklch(44.6% .03 256.802);--boomi-header-border-color:oklch(90.1% .058 230.902);--boomi-header-shadow:0 4px 6px -1px #b8e6fe1a,0 2px 4px -2px #b8e6fe1a;--boomi-table-header-bg:oklch(95.1% .026 236.824);--boomi-table-header-fg:oklch(39.1% .09 240.876);--boomi-table-header-border:oklch(82.8% .111 230.318);--boomi-table-row-odd-bg:oklch(97.7% .013 236.62);--boomi-table-row-even-bg:oklch(95.1% .026 236.824);--boomi-table-row-hover-shadow:0 4px 6px -1px #0ea5e91a,0 2px 4px -2px #0ea5e91a;--boomi-card-border:oklch(82.8% .111 230.318);--boomi-card-bg:#fff;--boomi-card-shadow:0 4px 6px -1px #0ea5e91a,0 2px 4px -2px #0ea5e91a;--boomi-card-hover-shadow:0 8px 10px -1px #0ea5e926,0 4px 6px -2px #0ea5e91a;--boomi-card-hover-scale:scale(1.01);--boomi-agent-text-bg:color-mix(in srgb,var(--boomi-agent-pane-bg,oklch(97.7% .013 236.62))92%,transparent);--boomi-agent-text-border:color-mix(in srgb,var(--boomi-agent-pane-fg,oklch(37.3% .034 259.733))16%,transparent);--boomi-agent-text-fg:var(--boomi-agent-pane-fg,oklch(37.3% .034 259.733));--boomi-agent-text-copy-bg:color-mix(in srgb,var(--boomi-agent-text-border)45%,transparent);--boomi-agent-text-copy-bg-hover:color-mix(in srgb,var(--boomi-agent-text-border)65%,transparent);--boomi-agent-text-copy-fg:var(--boomi-agent-pane-fg,oklch(37.3% .034 259.733));--boomi-sidebar-bg:color-mix(in srgb,var(--boomi-card-bg)95%,transparent);--boomi-sidebar-fg:var(--boomi-page-fg-color);--boomi-sidebar-header-bg:color-mix(in srgb,var(--boomi-card-bg)88%,transparent);--boomi-sidebar-border:var(--boomi-card-border);--boomi-sidebar-header-shadow:0 1px 2px #77d4ff66;--boomi-sidebar-btn-bg:var(--boomi-btn-primary-bg);--boomi-sidebar-btn-bg-hover:var(--boomi-btn-primary-bg-hover);--boomi-sidebar-btn-fg:var(--boomi-btn-primary-fg);--boomi-sidebar-btn-border:var(--boomi-btn-primary-border);--boomi-sidebar-secondary-btn-bg:var(--boomi-btn-secondary-bg);--boomi-sidebar-secondary-btn-bg-hover:var(--boomi-btn-secondary-bg-hover);--boomi-sidebar-secondary-btn-fg:var(--boomi-btn-secondary-fg);--boomi-sidebar-secondary-btn-border:var(--boomi-btn-secondary-border);--boomi-menu-bg:#fff;--boomi-menu-fg:oklch(37.3% .034 259.733);--boomi-menu-border:oklch(90.1% .058 230.902);--boomi-menu-shadow:0 4px 6px -1px #0ea5e91a,0 2px 4px -2px #0ea5e91a;--boomi-menu-item-bg:transparent;--boomi-menu-item-bg-hover:oklch(95.1% .026 236.824);--boomi-menu-item-fg:oklch(37.3% .034 259.733);--boomi-menu-item-fg-hover:oklch(21% .034 264.665);--boomi-menu-divider:oklch(90.1% .058 230.902);--boomi-menu-danger-fg:var(--boomi-danger-fg);--boomi-menu-danger-fg-hover:var(--boomi-danger-fg);--boomi-menu-danger-bg-hover:color-mix(in srgb,var(--boomi-danger)10%,transparent);--boomi-modal-overlay-bg:#024a7073;--boomi-modal-bg:#fff;--boomi-modal-fg:oklch(27.8% .033 256.848);--boomi-modal-border:1px solid oklch(90.1% .058 230.902);--boomi-modal-shadow:0 20px 25px -5px #0ea5e91a,0 8px 10px -6px #0ea5e914;--boomi-modal-close-fg:oklch(68.5% .169 237.323);--boomi-modal-close-hover-fg:oklch(50% .134 242.749);--boomi-form-label-fg:oklch(37.3% .034 259.733);--boomi-form-helper-fg:oklch(50% .134 242.749);--boomi-form-error-fg:var(--boomi-danger-fg);--boomi-form-required-fg:oklch(71.2% .194 13.428);--boomi-select-bg:#fff;--boomi-select-fg:oklch(27.8% .033 256.848);--boomi-select-border:oklch(90.1% .058 230.902);--boomi-select-shadow:0 0 0 0 #0000;--boomi-select-border-focus:oklch(68.5% .169 237.323);--boomi-select-shadow-focus:0 0 0 2px #00a5ef59;--boomi-select-icon:oklch(68.5% .169 237.323);--boomi-select-bg-disabled:oklch(97.7% .013 236.62);--boomi-select-fg-disabled:oklch(55.1% .027 264.364);--boomi-select-border-disabled:oklch(95.1% .026 236.824);--boomi-select-border-invalid:var(--boomi-danger);--boomi-options-bg:#fff;--boomi-options-fg:oklch(27.8% .033 256.848);--boomi-options-border:oklch(90.1% .058 230.902);--boomi-options-shadow:0 10px 15px -3px #0ea5e91a,0 4px 6px -4px #0ea5e914;--boomi-options-search-bg:#fff;--boomi-option-bg-active:oklch(95.1% .026 236.824);--boomi-option-fg-selected:oklch(21% .034 264.665);--boomi-loader-dot-bg:oklch(58.8% .158 241.966);--boomi-loader-dot1-opacity:.3;--boomi-loader-dot2-opacity:.7;--boomi-loader-dot3-opacity:1;--boomi-loader-msg-fg:oklch(44.3% .11 240.79);--boomi-spinner-overlay-bg:#99f6e499;--boomi-spinner-overlay-blur:4px;--boomi-spinner-overlay-contained-bg:#b8e6fe8c;--boomi-spinner-overlay-contained-blur:2px;--boomi-spinner-ring-color:oklch(68.5% .169 237.323);--boomi-spinner-ping-color:oklch(82.8% .111 230.318);--boomi-spinner-message-fg:oklch(38.6% .063 188.416);--boomi-wizard-step-dot-bg:oklch(95.1% .026 236.824);--boomi-wizard-step-dot-fg:oklch(27.8% .033 256.848);--boomi-wizard-step-dot-border:oklch(90.1% .058 230.902);--boomi-wizard-step-dot-bg-active:oklch(74.6% .16 232.661);--boomi-wizard-step-dot-fg-active:#fff;--boomi-wizard-step-dot-border-active:oklch(68.5% .169 237.323);--boomi-wizard-step-dot-bg-completed:oklch(82.8% .111 230.318);--boomi-wizard-step-dot-fg-completed:#fff;--boomi-wizard-step-dot-border-completed:oklch(74.6% .16 232.661);--boomi-wizard-connector-bg:oklch(90.1% .058 230.902);--boomi-wizard-label-fg:oklch(37.3% .034 259.733);--boomi-wizard-card-bg:#fff;--boomi-wizard-card-fg:oklch(27.8% .033 256.848);--boomi-wizard-card-border:oklch(90.1% .058 230.902);--boomi-wizard-card-shadow:0 4px 6px -1px #0ea5e91a,0 2px 4px -2px #0ea5e914;--boomi-wizard-link-fg:oklch(58.8% .158 241.966);--boomi-wizard-link-fg-hover:oklch(50% .134 242.749);--boomi-wizard-link-strong-fg:oklch(50% .134 242.749);--boomi-notice-bg:var(--boomi-notice-success-bg);--boomi-notice-fg:var(--boomi-notice-success-fg);--boomi-notice-border:var(--boomi-notice-success-border);--boomi-notice-shadow:var(--boomi-notice-success-shadow,0 0 0 0 transparent);--boomi-update-bg:var(--boomi-card-bg,#fff);--boomi-update-fg:var(--boomi-page-fg-color,oklch(37.3% .034 259.733));--boomi-update-border:var(--boomi-card-border,oklch(90.1% .058 230.902));--boomi-update-shadow:var(--boomi-card-shadow,0 4px 6px -1px #0ea5e91a,0 2px 4px -2px #0ea5e91a);--boomi-update-title-fg:oklch(27.8% .033 256.848);--boomi-update-desc-fg:oklch(44.6% .03 256.802);--boomi-update-content-bg:#fff;--boomi-update-content-fg:oklch(27.8% .033 256.848);--boomi-thread-separator:color-mix(in srgb,var(--boomi-card-border)75%,transparent);--boomi-tablist-border:oklch(90.1% .058 230.902);--boomi-tab-bg:oklch(95.1% .026 236.824);--boomi-tab-fg:oklch(27.8% .033 256.848);--boomi-tab-border:oklch(90.1% .058 230.902);--boomi-tab-bg-hover:oklch(90.1% .058 230.902);--boomi-tab-fg-hover:oklch(21% .034 264.665);--boomi-tab-border-hover:oklch(82.8% .111 230.318);--boomi-tab-bg-active:oklch(58.8% .158 241.966);--boomi-tab-fg-active:#fff;--boomi-tab-border-active:oklch(50% .134 242.749);--boomi-muted:oklch(44.6% .03 256.802);--boomi-map-line-highlight:red;--boomi-map-line-dim:.35;--boomi-map-line:oklch(68.5% .169 237.323);--boomi-map-heading-fg:oklch(37.3% .034 259.733);--boomi-map-card-bg:#fff;--boomi-map-card-border:oklch(90.1% .058 230.902);--boomi-map-card-shadow:0 4px 6px -1px #0ea5e91a,0 2px 4px -2px #0ea5e91a;--boomi-map-card-shadow-hover:0 8px 10px -1px #0ea5e926,0 4px 6px -2px #0ea5e91a;--boomi-map-source-bg-mapped:oklch(97.7% .013 236.62);--boomi-map-source-border-mapped:oklch(74.6% .16 232.661);--boomi-map-source-outline:oklch(68.5% .169 237.323);--boomi-map-target-bg-mapped:oklch(97.7% .013 236.62);--boomi-map-target-border-mapped:oklch(74.6% .16 232.661);--boomi-map-target-outline:oklch(68.5% .169 237.323);--boomi-map-func-bg:oklch(97.7% .013 236.62);--boomi-map-func-fg:oklch(27.8% .033 256.848);--boomi-map-func-title-fg:oklch(50% .134 242.749);--boomi-map-pin-source-bg:oklch(58.8% .158 241.966);--boomi-map-pin-target-bg:oklch(70.4% .14 182.503);--boomi-map-pin-input-bg:oklch(76.9% .188 70.08);--boomi-map-pin-output-bg:oklch(58.5% .233 277.117);--boomi-map-pin-badge-bg:oklch(63.7% .237 25.331);--boomi-map-pin-badge-fg:#fff;--boomi-map-pulse-color:#00b8d959;--boomi-map-pulse-border:var(--boomi-accent,#00b8d9);--boomi-map-pin-output-bg-active:oklch(67.3% .182 276.935);--boomi-map-pin-output-border-active:oklch(58.5% .233 277.117);--boomi-map-add-bg:oklch(95.1% .026 236.824);--boomi-map-add-fg:oklch(37.3% .034 259.733);--boomi-map-add-border:oklch(82.8% .111 230.318);--boomi-map-add-bg-hover:oklch(90.1% .058 230.902);--boomi-schedule-bg:#fff8e7;--boomi-schedule-fg:#000;--boomi-schedule-border:#000;--boomi-schedule-shadow:6px 6px 0 #000;--boomi-schedule-title-fg:#000;--boomi-schedule-content-fg:#222;--boomi-schedule-accordion-bg:#fff;--boomi-schedule-accordion-border:#000;--boomi-schedule-btn-bg:#ffde59;--boomi-schedule-btn-fg:#111;--boomi-schedule-btn-border:#000;--boomi-schedule-btn-bg-hover:#ffd633;--boomi-schedule-btn-bg-active:#fc0;--boomi-schedule-input-bg:#fff;--boomi-schedule-input-fg:#2b2b2b;--boomi-schedule-input-border:#000;--boomi-schedule-input-border-focus:#ff90b3;--boomi-schedule-input-bg-disabled:#fef9c3;--boomi-schedule-input-fg-disabled:#9ca3af;--boomi-schedule-input-border-disabled:#fde68a;--boomi-conn-bg:oklch(97% .014 254.604);--boomi-conn-border:oklch(88.2% .059 254.128);--boomi-conn-heading-fg:oklch(37.9% .146 265.522);--boomi-conn-field-bg:#fff;--boomi-conn-field-border:oklch(80.9% .105 251.813);--boomi-conn-field-label-fg:oklch(37.9% .146 265.522);--boomi-conn-field-error-fg:var(--boomi-danger-fg);--boomi-conn-btn-save-bg:oklch(62.7% .194 149.214);--boomi-conn-btn-save-fg:#fff;--boomi-conn-btn-auth-bg:oklch(51.1% .262 276.966);--boomi-conn-btn-auth-fg:#fff;--boomi-conn-btn-disabled-bg:oklch(70.7% .022 261.325);--boomi-conn-btn-disabled-fg:#fff;--boomi-swal-bg:var(--boomi-modal-bg,#fff);--boomi-swal-fg:var(--boomi-modal-fg,oklch(27.8% .033 256.848));--boomi-swal-border:var(--boomi-modal-border,1px solid oklch(90.1% .058 230.902));--boomi-swal-shadow:var(--boomi-modal-shadow,0 20px 25px -5px #0ea5e91a,0 8px 10px -6px #0ea5e914);--boomi-swal-title-fg:var(--boomi-update-title-fg,oklch(27.8% .033 256.848));--boomi-swal-desc-fg:var(--boomi-update-desc-fg,oklch(44.6% .03 256.802));--boomi-swal-icon-success:oklch(60% .118 184.704);--boomi-swal-icon-warning:oklch(76.9% .188 70.08);--boomi-swal-icon-error:var(--boomi-danger);--boomi-swal-overlay-bg:var(--boomi-modal-overlay-bg,#024a7073);--boomi-toast-success-bg:oklch(60% .118 184.704);--boomi-toast-info-bg:oklch(58.8% .158 241.966);--boomi-toast-question-bg:oklch(44.6% .043 257.281);--boomi-toast-shadow:0 6px 16px #0ea5e92e;--boomi-agent-bg:var(--boomi-card-bg);--boomi-agent-fg:var(--boomi-page-fg-color);--boomi-agent-border:var(--boomi-card-border);--boomi-agent-shadow:0 22px 44px -14px #024a7040,0 10px 24px -12px #024a702e;--boomi-agent-header-bg:var(--boomi-modal-bg);--boomi-agent-bubble-user-bg:color-mix(in srgb,var(--boomi-accent)16%,transparent);--boomi-agent-bubble-user-border:color-mix(in srgb,var(--boomi-accent)35%,transparent);--boomi-agent-card-tint:color-mix(in srgb,var(--boomi-accent)10%,transparent);--boomi-agent-row-tint:color-mix(in srgb,var(--boomi-accent)7%,transparent);--boomi-agent-shimmer-1:oklch(81.1% .111 293.571);--boomi-agent-shimmer-2:oklch(78.5% .115 274.713);--boomi-agent-shimmer-opacity:.28;--boomi-agent-row-shimmer-opacity:.18;--boomi-agent-shimmer-speed:9s;--boomi-agent-update-bg:var(--boomi-card-bg,#fff);--boomi-agent-update-fg:var(--boomi-page-fg-color,oklch(37.3% .034 259.733));--boomi-agent-update-border:var(--boomi-card-border,oklch(90.1% .058 230.902));--boomi-agent-update-shadow:var(--boomi-card-shadow,0 4px 6px -1px #0ea5e91a,0 2px 4px -2px #0ea5e91a);--boomi-agent-update-title-fg:oklch(27.8% .033 256.848);--boomi-agent-update-desc-fg:oklch(44.6% .03 256.802);--boomi-agent-update-content-bg:#fff;--boomi-agent-update-content-fg:oklch(27.8% .033 256.848);--boomi-agent-thread-separator:color-mix(in srgb,var(--boomi-card-border)75%,transparent);--boomi-accent:oklch(58.8% .158 241.966);--boomi-chip-bg:color-mix(in srgb,var(--boomi-accent)14%,transparent);--boomi-chip-fg:color-mix(in srgb,var(--boomi-accent)85%,oklch(21% .034 264.665));--boomi-chip-border:color-mix(in srgb,var(--boomi-accent)42%,transparent);--boomi-chip-success-bg:oklch(95.3% .051 180.801);--boomi-chip-success-fg:oklch(38.6% .063 188.416);--boomi-chip-success-border:oklch(85.5% .138 181.071);--boomi-chip-warning-bg:oklch(96.2% .059 95.617);--boomi-chip-warning-fg:oklch(41.4% .112 45.904);--boomi-chip-warning-border:oklch(87.9% .169 91.605);--boomi-chip-error-bg:color-mix(in srgb,var(--boomi-danger)12%,transparent);--boomi-chip-error-fg:var(--boomi-danger-fg);--boomi-chip-error-border:color-mix(in srgb,var(--boomi-danger)40%,transparent);--boomi-scrollbar-thumb:color-mix(in srgb,var(--boomi-accent,#0284c7)22%,transparent);--boomi-scrollbar-thumb-hover:color-mix(in srgb,var(--boomi-accent,#0284c7)36%,transparent);--boomi-scrollbar-thumb-active:color-mix(in srgb,var(--boomi-accent,#0284c7)48%,transparent)}}@layer components;@layer utilities{.pointer-events-auto{pointer-events:auto}.pointer-events-none{pointer-events:none}.collapse{visibility:collapse}.visible{visibility:visible}.sr-only{clip-path:inset(50%);white-space:nowrap;border-width:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}.absolute{position:absolute}.fixed{position:fixed}.relative{position:relative}.static{position:static}.sticky{position:sticky}.inset-0{inset:calc(var(--spacing)*0)}.inset-y-0{inset-block:calc(var(--spacing)*0)}.top-0{top:calc(var(--spacing)*0)}.top-1\\/2{top:50%}.top-3{top:calc(var(--spacing)*3)}.top-full{top:100%}.right-0{right:calc(var(--spacing)*0)}.right-2{right:calc(var(--spacing)*2)}.right-3{right:calc(var(--spacing)*3)}.right-3\\.5{right:calc(var(--spacing)*3.5)}.bottom-full{bottom:100%}.left-0{left:calc(var(--spacing)*0)}.left-1\\/2{left:50%}.isolate{isolation:isolate}.z-0{z-index:0}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.z-\\[0\\]{z-index:0}.z-\\[510\\]{z-index:510}.z-\\[520\\]{z-index:520}.col-span-full{grid-column:1/-1}.container{width:100%}@media (min-width:40rem){.container{max-width:40rem}}@media (min-width:48rem){.container{max-width:48rem}}@media (min-width:64rem){.container{max-width:64rem}}@media (min-width:80rem){.container{max-width:80rem}}@media (min-width:96rem){.container{max-width:96rem}}.-m-2\\.5{margin:calc(var(--spacing)*-2.5)}.m-0{margin:calc(var(--spacing)*0)}.m-6{margin:calc(var(--spacing)*6)}.mx-auto{margin-inline:auto}.mt-0\\.5{margin-top:calc(var(--spacing)*.5)}.mt-1{margin-top:calc(var(--spacing)*1)}.mt-2{margin-top:calc(var(--spacing)*2)}.mt-3{margin-top:calc(var(--spacing)*3)}.mt-4{margin-top:calc(var(--spacing)*4)}.mt-6{margin-top:calc(var(--spacing)*6)}.mt-8{margin-top:calc(var(--spacing)*8)}.mr-1{margin-right:calc(var(--spacing)*1)}.mr-2{margin-right:calc(var(--spacing)*2)}.-mb-px{margin-bottom:-1px}.mb-1{margin-bottom:calc(var(--spacing)*1)}.mb-2{margin-bottom:calc(var(--spacing)*2)}.mb-3{margin-bottom:calc(var(--spacing)*3)}.mb-4{margin-bottom:calc(var(--spacing)*4)}.ml-2{margin-left:calc(var(--spacing)*2)}.ml-3{margin-left:calc(var(--spacing)*3)}.ml-auto{margin-left:auto}.line-clamp-2{-webkit-line-clamp:2;-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden}.block{display:block}.contents{display:contents}.flex{display:flex}.grid{display:grid}.hidden{display:none}.inline{display:inline}.inline-block{display:inline-block}.inline-flex{display:inline-flex}.table{display:table}.h-3\\.5{height:calc(var(--spacing)*3.5)}.h-4{height:calc(var(--spacing)*4)}.h-5{height:calc(var(--spacing)*5)}.h-6{height:calc(var(--spacing)*6)}.h-9{height:calc(var(--spacing)*9)}.h-10{height:calc(var(--spacing)*10)}.h-12{height:calc(var(--spacing)*12)}.h-48{height:calc(var(--spacing)*48)}.h-\\[200px\\]{height:200px}.h-full{height:100%}.max-h-10{max-height:calc(var(--spacing)*10)}.max-h-44{max-height:calc(var(--spacing)*44)}.max-h-48{max-height:calc(var(--spacing)*48)}.min-h-0{min-height:calc(var(--spacing)*0)}.min-h-\\[120px\\]{min-height:120px}.min-h-\\[140px\\]{min-height:140px}.min-h-\\[160px\\]{min-height:160px}.min-h-full{min-height:100%}.w-1\\/2{width:50%}.w-1\\/4{width:25%}.w-1\\/6{width:16.6667%}.w-2{width:calc(var(--spacing)*2)}.w-3\\.5{width:calc(var(--spacing)*3.5)}.w-3\\/4{width:75%}.w-3\\/6{width:50%}.w-4{width:calc(var(--spacing)*4)}.w-5{width:calc(var(--spacing)*5)}.w-6{width:calc(var(--spacing)*6)}.w-12{width:calc(var(--spacing)*12)}.w-24{width:calc(var(--spacing)*24)}.w-48{width:calc(var(--spacing)*48)}.w-92{width:calc(var(--spacing)*92)}.w-\\[400px\\]{width:400px}.w-auto{width:auto}.w-full{width:100%}.max-w-\\[220px\\]{max-width:220px}.max-w-\\[260px\\]{max-width:260px}.max-w-\\[360px\\]{max-width:360px}.max-w-\\[720px\\]{max-width:720px}.max-w-\\[860px\\]{max-width:860px}.max-w-\\[1024px\\]{max-width:1024px}.max-w-\\[1140px\\]{max-width:1140px}.max-w-lg{max-width:var(--container-lg)}.max-w-md{max-width:var(--container-md)}.max-w-sm{max-width:var(--container-sm)}.max-w-xl{max-width:var(--container-xl)}.max-w-xs{max-width:var(--container-xs)}.min-w-0{min-width:calc(var(--spacing)*0)}.min-w-\\[2\\.5rem\\]{min-width:2.5rem}.min-w-\\[56px\\]{min-width:56px}.min-w-\\[220px\\]{min-width:220px}.flex-0{flex:0}.flex-1{flex:1}.flex-none{flex:none}.flex-shrink-0,.shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.basis-0{flex-basis:calc(var(--spacing)*0)}.table-auto{table-layout:auto}.origin-top-right{transform-origin:100% 0}.-translate-x-1\\/2{--tw-translate-x: -50% ;translate:var(--tw-translate-x)var(--tw-translate-y)}.-translate-x-full{--tw-translate-x:-100%;translate:var(--tw-translate-x)var(--tw-translate-y)}.-translate-y-1\\/2{--tw-translate-y: -50% ;translate:var(--tw-translate-x)var(--tw-translate-y)}.scale-95{--tw-scale-x:95%;--tw-scale-y:95%;--tw-scale-z:95%;scale:var(--tw-scale-x)var(--tw-scale-y)}.scale-100{--tw-scale-x:100%;--tw-scale-y:100%;--tw-scale-z:100%;scale:var(--tw-scale-x)var(--tw-scale-y)}.transform{transform:var(--tw-rotate-x,)var(--tw-rotate-y,)var(--tw-rotate-z,)var(--tw-skew-x,)var(--tw-skew-y,)}.animate-spin{animation:var(--animate-spin)}.cursor-default{cursor:default}.cursor-not-allowed{cursor:not-allowed}.cursor-pointer{cursor:pointer}.resize{resize:both}.resize-none{resize:none}.resize-y{resize:vertical}.list-disc{list-style-type:disc}.list-none{list-style-type:none}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-nowrap{flex-wrap:nowrap}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.items-end{align-items:flex-end}.items-start{align-items:flex-start}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.justify-end{justify-content:flex-end}.justify-start{justify-content:flex-start}.gap-0\\.5{gap:calc(var(--spacing)*.5)}.gap-1{gap:calc(var(--spacing)*1)}.gap-2{gap:calc(var(--spacing)*2)}.gap-3{gap:calc(var(--spacing)*3)}.gap-4{gap:calc(var(--spacing)*4)}.gap-6{gap:calc(var(--spacing)*6)}:where(.space-y-0\\.5>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing)*.5)*var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing)*.5)*calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-1>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing)*1)*var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing)*1)*calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-2>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing)*2)*var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing)*2)*calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-3>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing)*3)*var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing)*3)*calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-4>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing)*4)*var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing)*4)*calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-6>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing)*6)*var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing)*6)*calc(1 - var(--tw-space-y-reverse)))}.gap-x-2{-moz-column-gap:calc(var(--spacing)*2);column-gap:calc(var(--spacing)*2)}.gap-x-6{-moz-column-gap:calc(var(--spacing)*6);column-gap:calc(var(--spacing)*6)}:where(.space-x-2>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-start:calc(calc(var(--spacing)*2)*var(--tw-space-x-reverse));margin-inline-end:calc(calc(var(--spacing)*2)*calc(1 - var(--tw-space-x-reverse)))}:where(.space-x-3>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-start:calc(calc(var(--spacing)*3)*var(--tw-space-x-reverse));margin-inline-end:calc(calc(var(--spacing)*3)*calc(1 - var(--tw-space-x-reverse)))}.gap-y-2{row-gap:calc(var(--spacing)*2)}.gap-y-6{row-gap:calc(var(--spacing)*6)}.gap-y-8{row-gap:calc(var(--spacing)*8)}:where(.divide-y>:not(:last-child)){--tw-divide-y-reverse:0;border-bottom-style:var(--tw-border-style);border-top-style:var(--tw-border-style);border-top-width:calc(1px*var(--tw-divide-y-reverse));border-bottom-width:calc(1px*calc(1 - var(--tw-divide-y-reverse)))}.truncate{text-overflow:ellipsis;white-space:nowrap;overflow:hidden}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-visible{overflow:visible}.overflow-x-auto{overflow-x:auto}.overflow-x-hidden{overflow-x:hidden}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:var(--radius-2xl)}.rounded-full{border-radius:3.40282e38px}.rounded-lg{border-radius:var(--radius-lg)}.rounded-md{border-radius:var(--radius-md)}.rounded-none{border-radius:0}.rounded-sm{border-radius:var(--radius-sm)}.rounded-xl{border-radius:var(--radius-xl)}.border{border-style:var(--tw-border-style);border-width:1px}.border-0{border-style:var(--tw-border-style);border-width:0}.border-1{border-style:var(--tw-border-style);border-width:1px}.border-2{border-style:var(--tw-border-style);border-width:2px}.border-r{border-right-style:var(--tw-border-style);border-right-width:1px}.border-b{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}.border-b-2{border-bottom-style:var(--tw-border-style);border-bottom-width:2px}.border-l{border-left-style:var(--tw-border-style);border-left-width:1px}.border-dashed{--tw-border-style:dashed;border-style:dashed}.\\[border-color\\:var\\(--boomi-header-border-color\\)\\]{border-color:var(--boomi-header-border-color)}.border-\\[color-mix\\(in_srgb\\,var\\(--boomi-card-border\\,\\#e5e7eb\\)_80\\%\\,transparent\\)\\]{border-color:var(--boomi-card-border,#e5e7eb)}@supports (color:color-mix(in lab,red,red)){.border-\\[color-mix\\(in_srgb\\,var\\(--boomi-card-border\\,\\#e5e7eb\\)_80\\%\\,transparent\\)\\]{border-color:color-mix(in srgb,var(--boomi-card-border,#e5e7eb)80%,transparent)}}.border-\\[var\\(--boomi-accent\\)\\]{border-color:var(--boomi-accent)}.border-\\[var\\(--boomi-agent-compose-input-border\\,var\\(--boomi-card-border\\)\\)\\]{border-color:var(--boomi-agent-compose-input-border,var(--boomi-card-border))}.border-\\[var\\(--boomi-agent-compose-secondary-border\\,var\\(--boomi-card-border\\)\\)\\]{border-color:var(--boomi-agent-compose-secondary-border,var(--boomi-card-border))}.border-\\[var\\(--boomi-btn-primary-bg\\)\\]{border-color:var(--boomi-btn-primary-bg)}.border-\\[var\\(--boomi-card-border\\)\\]{border-color:var(--boomi-card-border)}.border-\\[var\\(--boomi-sidebar-border\\,var\\(--boomi-card-border\\)\\)\\]{border-color:var(--boomi-sidebar-border,var(--boomi-card-border))}.border-\\[var\\(--boomi-sidebar-btn-border\\,var\\(--boomi-btn-primary-border\\)\\)\\]{border-color:var(--boomi-sidebar-btn-border,var(--boomi-btn-primary-border))}.border-\\[var\\(--boomi-sidebar-secondary-btn-border\\,var\\(--boomi-btn-secondary-border\\)\\)\\]{border-color:var(--boomi-sidebar-secondary-btn-border,var(--boomi-btn-secondary-border))}.border-current\\/10{border-color:currentColor}@supports (color:color-mix(in lab,red,red)){.border-current\\/10{border-color:color-mix(in oklab,currentcolor 10%,transparent)}}.border-gray-300{border-color:var(--color-gray-300)}.border-red-500{border-color:var(--color-red-500)}.\\[background-color\\:var\\(--boomi-header-bg-color\\)\\]{background-color:var(--boomi-header-bg-color)}.\\[background-color\\:var\\(--boomi-page-bg-color\\)\\]{background-color:var(--boomi-page-bg-color)}.\\[background-color\\:var\\(--boomi-root-bg-color\\)\\]{background-color:var(--boomi-root-bg-color)}.bg-\\[color-mix\\(in_srgb\\,var\\(--boomi-card-bg\\,\\#ffffff\\)_86\\%\\,\\#000000\\)\\]{background-color:var(--boomi-card-bg,#fff)}@supports (color:color-mix(in lab,red,red)){.bg-\\[color-mix\\(in_srgb\\,var\\(--boomi-card-bg\\,\\#ffffff\\)_86\\%\\,\\#000000\\)\\]{background-color:color-mix(in srgb,var(--boomi-card-bg,#fff)86%,#000)}}.bg-\\[color-mix\\(in_srgb\\,var\\(--boomi-card-bg\\,\\#ffffff\\)_92\\%\\,\\#000000\\)\\]{background-color:var(--boomi-card-bg,#fff)}@supports (color:color-mix(in lab,red,red)){.bg-\\[color-mix\\(in_srgb\\,var\\(--boomi-card-bg\\,\\#ffffff\\)_92\\%\\,\\#000000\\)\\]{background-color:color-mix(in srgb,var(--boomi-card-bg,#fff)92%,#000)}}.bg-\\[var\\(--boomi-agent-compose-bg\\,var\\(--boomi-card-bg\\)\\)\\]{background-color:var(--boomi-agent-compose-bg,var(--boomi-card-bg))}.bg-\\[var\\(--boomi-agent-compose-secondary-bg\\,var\\(--boomi-card-bg\\)\\)\\]{background-color:var(--boomi-agent-compose-secondary-bg,var(--boomi-card-bg))}.bg-\\[var\\(--boomi-agent-pane-bg\\)\\]{background-color:var(--boomi-agent-pane-bg)}.bg-\\[var\\(--boomi-btn-primary-bg\\)\\]{background-color:var(--boomi-btn-primary-bg)}.bg-\\[var\\(--boomi-card-bg\\)\\],.bg-\\[var\\(--boomi-card-bg\\)\\]\\/70{background-color:var(--boomi-card-bg)}@supports (color:color-mix(in lab,red,red)){.bg-\\[var\\(--boomi-card-bg\\)\\]\\/70{background-color:color-mix(in oklab,var(--boomi-card-bg)70%,transparent)}}.bg-\\[var\\(--boomi-sidebar-bg\\,var\\(--boomi-card-bg\\)\\)\\]{background-color:var(--boomi-sidebar-bg,var(--boomi-card-bg))}.bg-\\[var\\(--boomi-sidebar-btn-bg\\,var\\(--boomi-btn-primary-bg\\)\\)\\]{background-color:var(--boomi-sidebar-btn-bg,var(--boomi-btn-primary-bg))}.bg-\\[var\\(--boomi-sidebar-header-bg\\,var\\(--boomi-sidebar-bg\\)\\)\\]{background-color:var(--boomi-sidebar-header-bg,var(--boomi-sidebar-bg))}.bg-\\[var\\(--boomi-sidebar-secondary-btn-bg\\,var\\(--boomi-btn-secondary-bg\\)\\)\\]{background-color:var(--boomi-sidebar-secondary-btn-bg,var(--boomi-btn-secondary-bg))}.bg-black{background-color:var(--color-black)}.bg-blue-600{background-color:var(--color-blue-600)}.bg-gray-100{background-color:var(--color-gray-100)}.bg-green-100{background-color:var(--color-green-100)}.bg-indigo-100{background-color:var(--color-indigo-100)}.bg-indigo-600{background-color:var(--color-indigo-600)}.bg-red-100{background-color:var(--color-red-100)}.bg-transparent{background-color:#0000}.bg-white{background-color:var(--color-white)}.bg-yellow-100{background-color:var(--color-yellow-100)}.p-0{padding:calc(var(--spacing)*0)}.p-0\\.5{padding:calc(var(--spacing)*.5)}.p-1{padding:calc(var(--spacing)*1)}.p-2{padding:calc(var(--spacing)*2)}.p-2\\.5{padding:calc(var(--spacing)*2.5)}.p-3{padding:calc(var(--spacing)*3)}.p-4{padding:calc(var(--spacing)*4)}.p-5{padding:calc(var(--spacing)*5)}.p-6{padding:calc(var(--spacing)*6)}.px-1{padding-inline:calc(var(--spacing)*1)}.px-2{padding-inline:calc(var(--spacing)*2)}.px-3{padding-inline:calc(var(--spacing)*3)}.px-4{padding-inline:calc(var(--spacing)*4)}.px-6{padding-inline:calc(var(--spacing)*6)}.py-0\\.5{padding-block:calc(var(--spacing)*.5)}.py-1{padding-block:calc(var(--spacing)*1)}.py-1\\.5{padding-block:calc(var(--spacing)*1.5)}.py-2{padding-block:calc(var(--spacing)*2)}.py-2\\.5{padding-block:calc(var(--spacing)*2.5)}.py-3{padding-block:calc(var(--spacing)*3)}.py-4{padding-block:calc(var(--spacing)*4)}.py-6{padding-block:calc(var(--spacing)*6)}.py-10{padding-block:calc(var(--spacing)*10)}.pt-1{padding-top:calc(var(--spacing)*1)}.pt-2{padding-top:calc(var(--spacing)*2)}.pt-4{padding-top:calc(var(--spacing)*4)}.pt-6{padding-top:calc(var(--spacing)*6)}.pr-2{padding-right:calc(var(--spacing)*2)}.pr-3{padding-right:calc(var(--spacing)*3)}.pr-4{padding-right:calc(var(--spacing)*4)}.pr-6{padding-right:calc(var(--spacing)*6)}.pr-10{padding-right:calc(var(--spacing)*10)}.pb-1{padding-bottom:calc(var(--spacing)*1)}.pb-2{padding-bottom:calc(var(--spacing)*2)}.pb-3{padding-bottom:calc(var(--spacing)*3)}.pb-4{padding-bottom:calc(var(--spacing)*4)}.pl-1{padding-left:calc(var(--spacing)*1)}.pl-2{padding-left:calc(var(--spacing)*2)}.pl-3{padding-left:calc(var(--spacing)*3)}.pl-4{padding-left:calc(var(--spacing)*4)}.pl-5{padding-left:calc(var(--spacing)*5)}.pl-8{padding-left:calc(var(--spacing)*8)}.text-center{text-align:center}.text-left{text-align:left}.text-right{text-align:right}.font-mono{font-family:var(--font-mono)}.text-2xl{font-size:var(--text-2xl);line-height:var(--tw-leading,var(--text-2xl--line-height))}.text-3xl{font-size:var(--text-3xl);line-height:var(--tw-leading,var(--text-3xl--line-height))}.text-base{font-size:var(--text-base);line-height:var(--tw-leading,var(--text-base--line-height))}.text-lg{font-size:var(--text-lg);line-height:var(--tw-leading,var(--text-lg--line-height))}.text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.text-xl{font-size:var(--text-xl);line-height:var(--tw-leading,var(--text-xl--line-height))}.text-xs{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}.text-\\[10px\\]{font-size:10px}.text-\\[11px\\]{font-size:11px}.text-\\[13px\\]{font-size:13px}.leading-5{--tw-leading:calc(var(--spacing)*5);line-height:calc(var(--spacing)*5)}.leading-6{--tw-leading:calc(var(--spacing)*6);line-height:calc(var(--spacing)*6)}.leading-7{--tw-leading:calc(var(--spacing)*7);line-height:calc(var(--spacing)*7)}.leading-none{--tw-leading:1;line-height:1}.leading-snug{--tw-leading:var(--leading-snug);line-height:var(--leading-snug)}.font-bold{--tw-font-weight:var(--font-weight-bold);font-weight:var(--font-weight-bold)}.font-extrabold{--tw-font-weight:var(--font-weight-extrabold);font-weight:var(--font-weight-extrabold)}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.font-normal{--tw-font-weight:var(--font-weight-normal);font-weight:var(--font-weight-normal)}.font-semibold{--tw-font-weight:var(--font-weight-semibold);font-weight:var(--font-weight-semibold)}.font-thin{--tw-font-weight:var(--font-weight-thin);font-weight:var(--font-weight-thin)}.tracking-wide{--tw-tracking:var(--tracking-wide);letter-spacing:var(--tracking-wide)}.break-words{overflow-wrap:break-word}.whitespace-normal{white-space:normal}.whitespace-nowrap{white-space:nowrap}.whitespace-pre{white-space:pre}.whitespace-pre-line{white-space:pre-line}.whitespace-pre-wrap{white-space:pre-wrap}.\\[color\\:var\\(--boomi-header-fg-color\\)\\]{color:var(--boomi-header-fg-color)}.\\[color\\:var\\(--boomi-page-fg-color\\)\\]{color:var(--boomi-page-fg-color)}.\\[color\\:var\\(--boomi-root-fg-color\\)\\]{color:var(--boomi-root-fg-color)}.text-\\[color-mix\\(in_srgb\\,var\\(--boomi-card-fg\\,\\#111\\)_55\\%\\,transparent\\)\\]{color:var(--boomi-card-fg,#111)}@supports (color:color-mix(in lab,red,red)){.text-\\[color-mix\\(in_srgb\\,var\\(--boomi-card-fg\\,\\#111\\)_55\\%\\,transparent\\)\\]{color:color-mix(in srgb,var(--boomi-card-fg,#111)55%,transparent)}}.text-\\[var\\(--boomi-agent-pane-fg\\)\\]{color:var(--boomi-agent-pane-fg)}.text-\\[var\\(--boomi-btn-primary-bg\\)\\]{color:var(--boomi-btn-primary-bg)}.text-\\[var\\(--boomi-btn-primary-fg\\)\\]{color:var(--boomi-btn-primary-fg)}.text-\\[var\\(--boomi-muted\\)\\]{color:var(--boomi-muted)}.text-\\[var\\(--boomi-page-fg-color\\)\\]{color:var(--boomi-page-fg-color)}.text-\\[var\\(--boomi-sidebar-btn-fg\\,var\\(--boomi-btn-primary-fg\\)\\)\\]{color:var(--boomi-sidebar-btn-fg,var(--boomi-btn-primary-fg))}.text-\\[var\\(--boomi-sidebar-fg\\,var\\(--boomi-page-fg-color\\)\\)\\]{color:var(--boomi-sidebar-fg,var(--boomi-page-fg-color))}.text-\\[var\\(--boomi-sidebar-secondary-btn-fg\\,var\\(--boomi-btn-secondary-fg\\)\\)\\]{color:var(--boomi-sidebar-secondary-btn-fg,var(--boomi-btn-secondary-fg))}.text-gray-400{color:var(--color-gray-400)}.text-gray-500{color:var(--color-gray-500)}.text-gray-600{color:var(--color-gray-600)}.text-gray-700{color:var(--color-gray-700)}.text-gray-800{color:var(--color-gray-800)}.text-green-600{color:var(--color-green-600)}.text-green-700{color:var(--color-green-700)}.text-indigo-400{color:var(--color-indigo-400)}.text-indigo-500{color:var(--color-indigo-500)}.text-red-400{color:var(--color-red-400)}.text-red-500{color:var(--color-red-500)}.text-red-600{color:var(--color-red-600)}.text-white{color:var(--color-white)}.text-yellow-600{color:var(--color-yellow-600)}.uppercase{text-transform:uppercase}.italic{font-style:italic}.no-underline{text-decoration-line:none}.underline{text-decoration-line:underline}.placeholder-\\[var\\(--boomi-error-soft\\,var\\(--boomi-error-fg\\,\\#b91c1c\\)\\)\\]\\/90::-moz-placeholder{color:var(--boomi-error-soft,var(--boomi-error-fg,#b91c1c))}.placeholder-\\[var\\(--boomi-error-soft\\,var\\(--boomi-error-fg\\,\\#b91c1c\\)\\)\\]\\/90::placeholder{color:var(--boomi-error-soft,var(--boomi-error-fg,#b91c1c))}@supports (color:color-mix(in lab,red,red)){.placeholder-\\[var\\(--boomi-error-soft\\,var\\(--boomi-error-fg\\,\\#b91c1c\\)\\)\\]\\/90::-moz-placeholder{color:color-mix(in oklab,var(--boomi-error-soft,var(--boomi-error-fg,#b91c1c))90%,transparent)}.placeholder-\\[var\\(--boomi-error-soft\\,var\\(--boomi-error-fg\\,\\#b91c1c\\)\\)\\]\\/90::placeholder{color:color-mix(in oklab,var(--boomi-error-soft,var(--boomi-error-fg,#b91c1c))90%,transparent)}}.opacity-0{opacity:0}.opacity-50{opacity:.5}.opacity-60{opacity:.6}.opacity-70{opacity:.7}.opacity-75{opacity:.75}.opacity-80{opacity:.8}.opacity-90{opacity:.9}.opacity-100{opacity:1}.shadow{--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,#0000001a),0 1px 2px -1px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-\\[0_6px_18px_rgba\\(15\\,23\\,42\\,0\\.08\\)\\]{--tw-shadow:0 6px 18px var(--tw-shadow-color,#0f172a14);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-\\[var\\(--boomi-card-shadow\\)\\]{--tw-shadow:var(--boomi-card-shadow);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-\\[var\\(--boomi-sidebar-header-shadow\\,0_1px_2px_rgba\\(0\\,0\\,0\\,0\\.08\\)\\)\\]{--tw-shadow:var(--boomi-sidebar-header-shadow,0 1px 2px #00000014);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px var(--tw-shadow-color,#0000001a),0 4px 6px -4px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px var(--tw-shadow-color,#0000001a),0 2px 4px -2px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-none{--tw-shadow:0 0 #0000;box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,#0000001a),0 1px 2px -1px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,#0000001a),0 8px 10px -6px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.ring{--tw-ring-shadow:var(--tw-ring-inset,)0 0 0 calc(1px + var(--tw-ring-offset-width))var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.\\[box-shadow\\:var\\(--boomi-header-shadow\\)\\]{box-shadow:var(--boomi-header-shadow)}.outline{outline-style:var(--tw-outline-style);outline-width:1px}.outline-2{outline-style:var(--tw-outline-style);outline-width:2px}.outline-\\[var\\(--boomi-accent\\,\\#6366f1\\)\\]{outline-color:var(--boomi-accent,#6366f1)}.blur{--tw-blur:blur(8px);filter:var(--tw-blur,)var(--tw-brightness,)var(--tw-contrast,)var(--tw-grayscale,)var(--tw-hue-rotate,)var(--tw-invert,)var(--tw-saturate,)var(--tw-sepia,)var(--tw-drop-shadow,)}.\\[filter\\:saturate\\(0\\.9\\)\\]{filter:saturate(.9)}.filter{filter:var(--tw-blur,)var(--tw-brightness,)var(--tw-contrast,)var(--tw-grayscale,)var(--tw-hue-rotate,)var(--tw-invert,)var(--tw-saturate,)var(--tw-sepia,)var(--tw-drop-shadow,)}.backdrop-blur-\\[1px\\]{--tw-backdrop-blur:blur(1px);-webkit-backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,)}.transition{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to,opacity,box-shadow,transform,translate,scale,rotate,filter,backdrop-filter,display,content-visibility,overlay,pointer-events;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-all{transition-property:all;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-colors{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-transform{transition-property:transform,translate,scale,rotate;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.duration-75{--tw-duration:75ms;transition-duration:75ms}.duration-100{--tw-duration:.1s;transition-duration:.1s}.duration-150{--tw-duration:.15s;transition-duration:.15s}.ease-in{--tw-ease:var(--ease-in);transition-timing-function:var(--ease-in)}.ease-out{--tw-ease:var(--ease-out);transition-timing-function:var(--ease-out)}.will-change-transform{will-change:transform}.outline-none{--tw-outline-style:none;outline-style:none}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.\\[background\\:linear-gradient\\(90deg\\,transparent\\,rgba\\(255\\,255\\,255\\,\\.08\\)\\,transparent\\)\\]{background:linear-gradient(90deg,#0000,#ffffff14,#0000)}@media (hover:hover){.group-hover\\:block:is(:where(.group):hover *){display:block}.group-hover\\:translate-x-0:is(:where(.group):hover *){--tw-translate-x:calc(var(--spacing)*0);translate:var(--tw-translate-x)var(--tw-translate-y)}.hover\\:-translate-y-\\[1px\\]:hover{--tw-translate-y: -1px ;translate:var(--tw-translate-x)var(--tw-translate-y)}.hover\\:scale-\\[1\\.02\\]:hover{scale:1.02}.hover\\:scale-\\[1\\.03\\]:hover{scale:1.03}.hover\\:bg-\\[var\\(--boomi-card-bg\\)\\]:hover{background-color:var(--boomi-card-bg)}.hover\\:bg-\\[var\\(--boomi-sidebar-btn-bg-hover\\,var\\(--boomi-btn-primary-bg-hover\\)\\)\\]:hover{background-color:var(--boomi-sidebar-btn-bg-hover,var(--boomi-btn-primary-bg-hover))}.hover\\:bg-\\[var\\(--boomi-sidebar-secondary-btn-bg-hover\\,var\\(--boomi-btn-secondary-bg-hover\\)\\)\\]:hover{background-color:var(--boomi-sidebar-secondary-btn-bg-hover,var(--boomi-btn-secondary-bg-hover))}.hover\\:bg-black\\/5:hover{background-color:#0000000d}@supports (color:color-mix(in lab,red,red)){.hover\\:bg-black\\/5:hover{background-color:color-mix(in oklab,var(--color-black)5%,transparent)}}.hover\\:bg-indigo-700:hover{background-color:var(--color-indigo-700)}.hover\\:text-gray-600:hover{color:var(--color-gray-600)}.hover\\:text-indigo-500:hover{color:var(--color-indigo-500)}.hover\\:text-red-600:hover{color:var(--color-red-600)}.hover\\:opacity-100:hover{opacity:1}.hover\\:shadow:hover{--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,#0000001a),0 1px 2px -1px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}}.focus\\:ring-2:focus{--tw-ring-shadow:var(--tw-ring-inset,)0 0 0 calc(2px + var(--tw-ring-offset-width))var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.focus\\:ring-indigo-500:focus{--tw-ring-color:var(--color-indigo-500)}.focus\\:ring-offset-1:focus{--tw-ring-offset-width:1px;--tw-ring-offset-shadow:var(--tw-ring-inset,)0 0 0 var(--tw-ring-offset-width)var(--tw-ring-offset-color)}.focus\\:ring-offset-2:focus{--tw-ring-offset-width:2px;--tw-ring-offset-shadow:var(--tw-ring-inset,)0 0 0 var(--tw-ring-offset-width)var(--tw-ring-offset-color)}.focus\\:outline-none:focus{--tw-outline-style:none;outline-style:none}.focus-visible\\:outline:focus-visible{outline-style:var(--tw-outline-style);outline-width:1px}.focus-visible\\:outline-2:focus-visible{outline-style:var(--tw-outline-style);outline-width:2px}.focus-visible\\:outline-offset-2:focus-visible{outline-offset:2px}.focus-visible\\:\\[outline-color\\:var\\(--boomi-btn-primary-border\\)\\]:focus-visible{outline-color:var(--boomi-btn-primary-border)}.focus-visible\\:\\[outline-color\\:var\\(--boomi-btn-secondary-border\\)\\]:focus-visible{outline-color:var(--boomi-btn-secondary-border)}.disabled\\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\\:opacity-50:disabled{opacity:.5}@media (min-width:40rem){.sm\\:col-span-2{grid-column:span 2/span 2}.sm\\:flex{display:flex}.sm\\:flex-auto{flex:auto}.sm\\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\\:items-center{align-items:center}.sm\\:pl-2{padding-left:calc(var(--spacing)*2)}}@media (min-width:48rem){.md\\:w-auto{width:auto}.md\\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.md\\:p-5{padding:calc(var(--spacing)*5)}.md\\:px-6{padding-inline:calc(var(--spacing)*6)}.md\\:px-8{padding-inline:calc(var(--spacing)*8)}}@media (min-width:64rem){.lg\\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}@media (min-width:80rem){.xl\\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}.boomi-plugin-root{--boomi-root-bg-color:var(--boomi-page-bg-color,#f9fafb);background-color:var(--boomi-root-bg-color);color:var(--boomi-root-fg-color,#111827);background-image:var(--boomi-root-bg-image,none);background-repeat:no-repeat,repeat,repeat;position:relative}.boomi-plugin-root a,.boomi-plugin-root button,.boomi-plugin-root [role=button]{cursor:pointer}.boomi-plugin-body{padding:2rem;position:relative}.boomi-btn-primary{background-color:var(--boomi-btn-primary-bg);color:var(--boomi-btn-primary-fg);border-color:var(--boomi-btn-primary-border);box-shadow:var(--boomi-btn-primary-shadow)}.boomi-btn-primary:hover{background-color:var(--boomi-btn-primary-bg-hover,var(--boomi-btn-primary-bg));color:var(--boomi-btn-primary-fg-hover,var(--boomi-btn-primary-fg));border-color:var(--boomi-btn-primary-border-hover,var(--boomi-btn-primary-border));box-shadow:var(--boomi-btn-primary-shadow-hover,var(--boomi-btn-primary-shadow))}.boomi-btn-primary:active{background-color:var(--boomi-btn-primary-bg-active,var(--boomi-btn-primary-bg));color:var(--boomi-btn-primary-fg-active,var(--boomi-btn-primary-fg));border-color:var(--boomi-btn-primary-border-active,var(--boomi-btn-primary-border));box-shadow:var(--boomi-btn-primary-shadow-active,var(--boomi-btn-primary-shadow))}.boomi-btn-primary:disabled{opacity:.5;cursor:not-allowed;pointer-events:none;filter:saturate(.9)}.boomi-btn-secondary{background-color:var(--boomi-btn-secondary-bg);color:var(--boomi-btn-secondary-fg);border-color:var(--boomi-btn-secondary-border);box-shadow:var(--boomi-btn-secondary-shadow)}.boomi-btn-secondary:hover{background-color:var(--boomi-btn-secondary-bg-hover,var(--boomi-btn-secondary-bg));color:var(--boomi-btn-secondary-fg-hover,var(--boomi-btn-secondary-fg));border-color:var(--boomi-btn-secondary-border-hover,var(--boomi-btn-secondary-border));box-shadow:var(--boomi-btn-secondary-shadow-hover,var(--boomi-btn-secondary-shadow))}.boomi-btn-secondary:active{background-color:var(--boomi-btn-secondary-bg-active,var(--boomi-btn-secondary-bg));color:var(--boomi-btn-secondary-fg-active,var(--boomi-btn-secondary-fg));border-color:var(--boomi-btn-secondary-border-active,var(--boomi-btn-secondary-border));box-shadow:var(--boomi-btn-secondary-shadow-active,var(--boomi-btn-secondary-shadow))}.boomi-btn-secondary:disabled{opacity:.5;cursor:not-allowed;pointer-events:none;filter:saturate(.9)}.boomi-btn-success{--_bg:var(--boomi-success-bg,#16a34a);--_bg-hover:var(--boomi-success-bg-hover,#15803d);--_border:var(--boomi-success-border,#15803d);--_text:var(--boomi-success-text,#fff);background:var(--_bg);color:var(--_text);border-color:var(--_border)}.boomi-btn-success:hover{background:var(--_bg-hover)}.boomi-btn-success:focus-visible{outline:2px solid var(--_border);outline-offset:2px}.boomi-breadcrumb-link{color:var(--boomi-header-fg);text-decoration:none;transition:color .15s ease-in-out}.boomi-breadcrumb-link:hover{color:var(--boomi-header-fg-hover,var(--boomi-header-fg));text-decoration:none}.boomi-breadcrumb-link:active{color:var(--boomi-header-fg-active,var(--boomi-header-fg-hover,var(--boomi-header-fg)))}.boomi-input{background-color:var(--boomi-input-bg);color:var(--boomi-input-fg);border:1px solid var(--boomi-input-border);box-shadow:var(--boomi-input-shadow);transition:border-color .15s,box-shadow .15s,outline-color .15s}.boomi-input::-moz-placeholder{color:var(--boomi-input-placeholder)}.boomi-input::placeholder{color:var(--boomi-input-placeholder)}.boomi-input:focus{outline:none}.boomi-input:focus-visible{border-color:var(--boomi-input-border-focus,var(--boomi-input-border));box-shadow:var(--boomi-input-shadow-focus,var(--boomi-input-shadow));outline:1px solid var(--boomi-input-outline-focus,var(--boomi-input-border-focus,currentColor))}.boomi-input:disabled{background-color:var(--boomi-input-bg-disabled,var(--boomi-input-bg));color:var(--boomi-input-fg-disabled,var(--boomi-input-fg));border-color:var(--boomi-input-border-disabled,var(--boomi-input-border));box-shadow:none;cursor:not-allowed}.boomi-input:invalid{border-color:var(--boomi-input-border-invalid,var(--boomi-input-border))}.boomi-input:focus-visible:invalid{outline-color:var(--boomi-input-outline-invalid,var(--boomi-input-border-invalid,currentColor))}.boomi-table-row{transition:transform .2s ease-in-out,box-shadow .2s ease-in-out}.boomi-table-row:nth-child(odd){background-color:var(--boomi-table-row-odd-bg)}.boomi-table-row:nth-child(2n){background-color:var(--boomi-table-row-even-bg)}.boomi-table-row-scale:hover{transform:scale(1.01)}.boomi-table-row:hover{box-shadow:var(--boomi-table-row-hover-shadow)}.boomi-table-header{background-color:var(--boomi-table-header-bg);color:var(--boomi-table-header-fg);border-bottom:1px solid var(--boomi-table-header-border,currentColor)}.boomi-admin-shell{--_shell-bg:var(--boomi-admin-shell-bg,var(--boomi-root-bg-color));--_shell-fg:var(--boomi-admin-shell-fg,var(--boomi-root-fg-color));--_shell-radius:var(--boomi-admin-shell-radius,0rem);--_shell-shadow:var(--boomi-admin-shell-shadow,var(--boomi-card-shadow,none));background-color:var(--_shell-bg);width:100%;height:100%;min-height:540px;color:var(--_shell-fg);border-radius:var(--_shell-radius);box-shadow:var(--_shell-shadow);display:flex;overflow:hidden}.boomi-admin-sidebar{--_sidebar-bg:var(--boomi-admin-sidebar-bg,var(--boomi-header-bg,var(--boomi-card-bg,var(--boomi-root-bg-color))));--_sidebar-fg:var(--boomi-admin-sidebar-fg,var(--boomi-header-fg,var(--boomi-root-fg-color)));--_sidebar-border:var(--boomi-admin-sidebar-border,var(--boomi-card-border,transparent));width:var(--boomi-admin-sidebar-width,16rem);background-color:var(--_sidebar-bg);color:var(--_sidebar-fg);border-right:1px solid var(--_sidebar-border);border-top-left-radius:0;border-bottom-left-radius:0;flex-direction:column;display:flex}.boomi-admin-logo{border-bottom:1px solid var(--boomi-admin-sidebar-border,var(--boomi-card-border,transparent));align-items:center;height:4rem;padding:0 1rem;display:flex}.boomi-admin-logo-text{letter-spacing:.01em;font-size:1.05rem;font-weight:700}.boomi-admin-nav{flex-direction:column;flex:1;gap:.35rem;padding:1rem .75rem;display:flex;overflow-y:auto}.boomi-admin-nav-button{--_nav-bg:var(--boomi-admin-nav-bg,transparent);--_nav-fg:var(--boomi-admin-nav-fg,var(--boomi-admin-sidebar-fg,currentColor));--_nav-bg-hover:var(--boomi-admin-nav-bg-hover,var(--_nav-bg))}@supports (color:color-mix(in lab,red,red)){.boomi-admin-nav-button{--_nav-bg-hover:var(--boomi-admin-nav-bg-hover,color-mix(in srgb,var(--_nav-bg)75%,transparent))}}.boomi-admin-nav-button{--_nav-fg-hover:var(--boomi-admin-nav-fg-hover,var(--_nav-fg));--_nav-bg-active:var(--boomi-admin-nav-bg-active,var(--_nav-bg))}@supports (color:color-mix(in lab,red,red)){.boomi-admin-nav-button{--_nav-bg-active:var(--boomi-admin-nav-bg-active,color-mix(in srgb,var(--_nav-bg)85%,transparent))}}.boomi-admin-nav-button{--_nav-fg-active:var(--boomi-admin-nav-fg-active,var(--_nav-fg));border-radius:var(--boomi-admin-nav-radius,.625rem);background-color:var(--_nav-bg);width:100%;color:var(--_nav-fg);text-align:left;border:1px solid #0000;align-items:center;gap:.75rem;padding:.65rem .9rem;font-size:.95rem;font-weight:600;transition:background-color .15s,color .15s,border-color .15s;display:flex}.boomi-admin-nav-button:hover{background-color:var(--_nav-bg-hover);color:var(--_nav-fg-hover);border-color:var(--boomi-admin-nav-border-hover,transparent)}.boomi-admin-nav-button.is-active{background-color:var(--_nav-bg-active);color:var(--_nav-fg-active);border-color:var(--boomi-admin-nav-border-active,var(--boomi-admin-nav-border-hover,transparent));box-shadow:var(--boomi-admin-nav-shadow-active,inset 0 0 0 1px currentColor)}.boomi-admin-nav-icon{align-items:center;font-size:1.1rem;line-height:1;display:inline-flex}.boomi-admin-nav-label{flex:1}.boomi-admin-logout{border-top:1px solid var(--boomi-admin-sidebar-border,var(--boomi-card-border,transparent));padding:1rem}.boomi-admin-logout-button{--_logout-bg:var(--boomi-admin-logout-bg,var(--boomi-admin-nav-bg,transparent));--_logout-fg:var(--boomi-admin-logout-fg,var(--boomi-admin-sidebar-fg,currentColor));--_logout-bg-hover:var(--boomi-admin-logout-bg-hover,var(--_logout-bg))}@supports (color:color-mix(in lab,red,red)){.boomi-admin-logout-button{--_logout-bg-hover:var(--boomi-admin-logout-bg-hover,color-mix(in srgb,var(--_logout-bg)82%,transparent))}}.boomi-admin-logout-button{border-radius:var(--boomi-admin-nav-radius,.625rem);background-color:var(--_logout-bg);width:100%;color:var(--_logout-fg);border:1px solid #0000;align-items:center;gap:.5rem;padding:.6rem .9rem;font-weight:600;transition:background-color .15s,color .15s,border-color .15s;display:inline-flex}.boomi-admin-logout-button:hover{background-color:var(--_logout-bg-hover);border-color:var(--boomi-admin-nav-border-hover,transparent)}.boomi-admin-main{background-color:var(--boomi-admin-main-bg,var(--boomi-page-bg-color,var(--boomi-root-bg-color)));color:var(--boomi-admin-main-fg,var(--boomi-root-fg-color));padding:var(--boomi-admin-main-padding,0);flex:1;overflow:auto}.boomi-admin-main-inner{max-width:var(--boomi-admin-main-max-width,100%);width:100%;height:100%;margin:0}.boomi-cors-card{min-height:150px;padding:.5rem}.boomi-card{border-style:solid;border-width:1px;border-color:var(--boomi-card-border);background-color:var(--boomi-card-bg);box-shadow:var(--boomi-card-shadow);border-radius:var(--boomi-card-radius,.75rem);z-index:1;flex-direction:column;justify-content:space-between;transition:transform .2s ease-in-out,box-shadow .2s ease-in-out;display:flex;position:relative;overflow:visible}.boomi-card:hover{transform:var(--boomi-card-hover-scale,scale(1.01));box-shadow:var(--boomi-card-hover-shadow,var(--boomi-card-shadow));z-index:5}.boomi-menu{background-color:var(--boomi-menu-bg);color:var(--boomi-menu-fg);border:1px solid var(--boomi-menu-border);box-shadow:var(--boomi-menu-shadow);border-radius:var(--boomi-menu-radius,.5rem);font-size:var(--boomi-menu-font-size,.875rem);z-index:50;min-width:15rem;padding:.25rem}.boomi-menu-item{white-space:nowrap;border-radius:var(--boomi-menu-item-radius,.375rem);width:100%;min-height:2.75rem;color:var(--boomi-menu-item-fg,var(--boomi-menu-fg));align-items:center;gap:.5rem;padding:.75rem 1rem;line-height:1.35rem;transition:background-color .15s,color .15s;display:flex}.boomi-menu-item:hover,.boomi-menu-item[data-headlessui-state~=active]{background-color:var(--boomi-menu-item-bg-hover,var(--boomi-menu-item-bg));color:var(--boomi-menu-item-fg-hover,var(--boomi-menu-item-fg,var(--boomi-menu-fg)))}.boomi-menu-item:focus-visible{outline:2px solid var(--boomi-menu-item-outline,var(--boomi-menu-border));outline-offset:2px}.boomi-menu-icon{width:1.25rem;height:1.25rem;opacity:var(--boomi-menu-icon-opacity,.95)}.boomi-menu-item--danger{color:var(--boomi-menu-danger-fg)}.boomi-menu-item--danger:hover,.boomi-menu-item--danger[data-headlessui-state~=active]{background-color:var(--boomi-menu-danger-bg-hover,var(--boomi-menu-item-bg-hover));color:var(--boomi-menu-danger-fg-hover,var(--boomi-menu-danger-fg))}.boomi-menu-divider{background-color:var(--boomi-menu-divider);height:1px;margin:.25rem 0}.boomi-modal-overlay{z-index:2147483500;background-color:var(--boomi-modal-overlay-bg,#00000080);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);justify-content:center;align-items:flex-start;padding-top:6rem;display:flex;position:fixed;top:0;right:0;bottom:0;left:0;overflow:auto}.boomi-modal-container{width:65%;transform:translate(var(--boomi-modal-offset-x,0px),var(--boomi-modal-offset-y,0px));background-color:var(--boomi-modal-bg,#fff);color:var(--boomi-modal-fg,#111);box-shadow:var(--boomi-modal-shadow,0 4px 20px #0003);border:var(--boomi-modal-border,1px solid transparent);border-radius:1rem;padding:1.5rem;position:relative;overflow:auto}.boomi-modal-container--wide{width:90%;max-width:1100px}.boomi-modal-close{color:var(--boomi-modal-close-fg,#6b7280);cursor:pointer;background:0 0;border:none;transition:color .15s ease-in-out;position:absolute;top:.75rem;right:.75rem}.boomi-modal-close:hover{color:var(--boomi-modal-close-hover-fg,#111)}.boomi-form-label{color:var(--boomi-form-label-fg,var(--boomi-header-fg-color,#374151));margin-bottom:.25rem;font-size:.875rem;font-weight:600;display:block}.boomi-form-required{color:var(--boomi-form-required-fg,#f87171);margin-left:.125rem}.boomi-form-helper{color:var(--boomi-form-helper-fg,#6b7280);margin-top:.25rem;font-size:.75rem}.boomi-form-error{color:var(--boomi-danger-fg);margin-top:.15rem;font-size:.875rem}.boomi-input--readonly{background-color:var(--boomi-input-bg-disabled,var(--boomi-input-bg));color:var(--boomi-input-fg-disabled,var(--boomi-input-fg));border-color:var(--boomi-input-border-disabled,var(--boomi-input-border));cursor:not-allowed}.boomi-input--error{border-color:var(--boomi-input-border-invalid,var(--boomi-input-border));outline-color:var(--boomi-input-outline-invalid,var(--boomi-input-border-invalid))}.boomi-select{background-color:var(--boomi-select-bg,var(--boomi-input-bg,#fff));color:var(--boomi-select-fg,var(--boomi-input-fg,#111));border:1px solid var(--boomi-select-border,var(--boomi-input-border,#d1d5db));box-shadow:var(--boomi-select-shadow,var(--boomi-input-shadow,0 0 0 0 #0000));text-align:left;border-radius:.375rem;padding:.5rem 2.5rem .5rem .75rem;transition:border-color .15s,box-shadow .15s;position:relative}.boomi-select:focus-visible{border-color:var(--boomi-select-border-focus,var(--boomi-input-border-focus,#6366f1));box-shadow:var(--boomi-select-shadow-focus,var(--boomi-input-shadow-focus,0 0 0 2px #6366f159));outline:none}.boomi-select--disabled{background-color:var(--boomi-select-bg-disabled,var(--boomi-input-bg-disabled,#f9fafb));color:var(--boomi-select-fg-disabled,var(--boomi-input-fg-disabled,#6b7280));border-color:var(--boomi-select-border-disabled,var(--boomi-input-border-disabled,#e5e7eb));cursor:not-allowed}.boomi-select--error{border-color:var(--boomi-select-border-invalid,var(--boomi-input-border-invalid,#f87171));box-shadow:none}.boomi-select-icon{width:1rem;height:1rem;color:var(--boomi-select-icon,#9ca3af)}.boomi-options{background-color:var(--boomi-options-bg,#fff);max-height:9rem;color:var(--boomi-options-fg,#111);border:1px solid var(--boomi-options-border,#e5e7eb);box-shadow:var(--boomi-options-shadow,0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a);z-index:9999;border-radius:.375rem;margin-top:.25rem;overflow:auto}.boomi-options-search{background-color:var(--boomi-options-search-bg,var(--boomi-options-bg,#fff));border-bottom:1px solid var(--boomi-options-border,#e5e7eb);padding:.25rem}.boomi-option{cursor:default;-webkit-user-select:none;-moz-user-select:none;user-select:none;color:var(--boomi-option-fg,var(--boomi-options-fg,#111));background:var(--boomi-option-bg,transparent);border-radius:.375rem;padding:.5rem 2.25rem .5rem .75rem;transition:background-color .15s,color .15s;position:relative}.boomi-option--active{background-color:var(--boomi-option-bg-active,var(--boomi-menu-item-bg-hover,#f3f4f6));color:var(--boomi-option-fg-active,var(--boomi-option-fg,#111))}.boomi-option--selected{background-color:var(--boomi-option-bg-selected,var(--boomi-option-bg-active));color:var(--boomi-option-fg-selected,#fff)}.boomi-option--placeholder{color:var(--boomi-option-fg-placeholder,#9ca3af);font-style:italic}.boomi-loader{flex-direction:column;justify-content:center;align-items:center;row-gap:.5rem;display:flex}.boomi-loader-dots{-moz-column-gap:.25rem;column-gap:.25rem;display:flex}.boomi-loader-dot{width:var(--boomi-loader-dot-size,.75rem);height:var(--boomi-loader-dot-size,.75rem);background-color:var(--boomi-loader-dot-bg,#111827);opacity:var(--boomi-loader-dot-opacity,1);border-radius:9999px;animation:.9s ease-in-out infinite boomi-bounce}.boomi-loader-dot--1{opacity:var(--boomi-loader-dot1-opacity,.25);animation-delay:0s}.boomi-loader-dot--2{opacity:var(--boomi-loader-dot2-opacity,.6);animation-delay:.12s}.boomi-loader-dot--3{opacity:var(--boomi-loader-dot3-opacity,1);animation-delay:.24s}.boomi-loader-message{color:var(--boomi-loader-msg-fg,#4b5563);text-align:center;padding-top:.5rem;font-size:.875rem}@keyframes boomi-bounce{0%,80%,to{transform:translateY(0)}40%{transform:translateY(-35%)}}.boomi-spinner-overlay{z-index:9999;background-color:var(--boomi-spinner-overlay-bg,#00000080);-webkit-backdrop-filter:blur(var(--boomi-spinner-overlay-blur,4px));backdrop-filter:blur(var(--boomi-spinner-overlay-blur,4px));justify-content:center;align-items:flex-start;padding-top:8rem;display:flex;position:fixed;top:0;right:0;bottom:0;left:0}.boomi-spinner-overlay--contained{border-radius:inherit;background-color:var(--boomi-spinner-overlay-contained-bg,var(--boomi-agent-update-bg,var(--boomi-page-bg-color)));justify-content:center;align-items:center;padding-top:0;position:absolute}@supports (color:color-mix(in lab,red,red)){.boomi-spinner-overlay--contained{background-color:var(--boomi-spinner-overlay-contained-bg,color-mix(in srgb,var(--boomi-agent-update-bg,var(--boomi-page-bg-color))80%,transparent))}}.boomi-spinner-overlay--contained{-webkit-backdrop-filter:blur(var(--boomi-spinner-overlay-contained-blur,2px));backdrop-filter:blur(var(--boomi-spinner-overlay-contained-blur,2px));z-index:20}.boomi-spinner-container{flex-direction:column;align-items:center;row-gap:1rem;display:flex}.boomi-spinner-ring-wrap{width:var(--boomi-spinner-size,4rem);height:var(--boomi-spinner-size,4rem);position:relative}.boomi-spinner-ring{border-width:var(--boomi-spinner-border-width,4px);border-style:solid;border-color:#0000;border-top-color:var(--boomi-spinner-ring-color,white);border-radius:9999px;width:100%;height:100%;animation:1s linear infinite boomi-spin}.boomi-spinner-ring-ping{background-color:var(--boomi-spinner-ping-color,white);opacity:var(--boomi-spinner-ping-opacity,.1);border-radius:9999px;animation:1.5s cubic-bezier(0,0,.2,1) infinite boomi-ping;position:absolute;top:0;right:0;bottom:0;left:0}.boomi-spinner-message{color:var(--boomi-spinner-message-fg,white);font-size:.875rem;font-weight:500;animation:1.5s ease-in-out infinite boomi-pulse}@keyframes boomi-spin{to{transform:rotate(360deg)}}@keyframes boomi-ping{0%{opacity:var(--boomi-spinner-ping-opacity,.1);transform:scale(1)}75%,to{opacity:0;transform:scale(2)}}@keyframes boomi-pulse{0%,to{opacity:1}50%{opacity:.6}}.boomi-wizard{flex-direction:column;justify-content:center;display:flex}.boomi-steps{flex-direction:row;justify-content:space-between;gap:.5rem;width:100%;padding:1rem;display:flex;position:relative}.boomi-step{flex-direction:column;flex:none;align-items:stretch;min-width:2rem;display:flex}.boomi-step--with-connector{flex:1 1 0}.boomi-step-row{align-items:center;min-height:1.75rem;display:inline-flex}.boomi-step-dot{background-color:var(--boomi-wizard-step-dot-bg);width:1.75rem;height:1.75rem;color:var(--boomi-wizard-step-dot-fg);box-shadow:var(--boomi-wizard-step-dot-shadow,0 0 0 0 #0000);border:1px solid var(--boomi-wizard-step-dot-border,transparent);border-radius:9999px;flex-shrink:0;justify-content:center;align-items:center;font-weight:600;transition:background-color .15s,color .15s,box-shadow .15s,border-color .15s;display:flex}.boomi-step-connector{background:var(--boomi-wizard-connector-bg);height:1px;box-shadow:var(--boomi-wizard-connector-shadow,none);flex:auto;margin-inline-start:.5rem}.boomi-step:last-child .boomi-step-connector{display:none!important}.boomi-step-label{color:var(--boomi-wizard-label-fg);margin-top:.75rem;font-size:.875rem;font-weight:600}.boomi-step--active .boomi-step-dot{background-color:var(--boomi-wizard-step-dot-bg-active);color:var(--boomi-wizard-step-dot-fg-active);border-color:var(--boomi-wizard-step-dot-border-active,var(--boomi-wizard-step-dot-bg-active));box-shadow:var(--boomi-wizard-step-dot-shadow-active,var(--boomi-wizard-step-dot-shadow))}.boomi-step--completed .boomi-step-dot{background-color:var(--boomi-wizard-step-dot-bg-completed);color:var(--boomi-wizard-step-dot-fg-completed);border-color:var(--boomi-wizard-step-dot-border-completed,var(--boomi-wizard-step-dot-bg-completed));box-shadow:var(--boomi-wizard-step-dot-shadow-completed,var(--boomi-wizard-step-dot-shadow))}.boomi-wizard-card{background-color:var(--boomi-wizard-card-bg);color:var(--boomi-wizard-card-fg);border:1px solid var(--boomi-wizard-card-border);box-shadow:var(--boomi-wizard-card-shadow);border-radius:.75rem;margin-top:1rem;padding:1rem}.boomi-wizard-links{flex-direction:row;gap:1rem;margin-top:.5rem;padding:.5rem;display:flex}.boomi-wizard-link-left{flex:auto}.boomi-wizard-link-right{justify-content:flex-end;padding-right:.5rem;display:flex}.boomi-wizard-link{color:var(--boomi-wizard-link-fg);cursor:pointer;font-size:.875rem;font-weight:600;text-decoration:none;transition:color .15s}.boomi-wizard-link:hover{color:var(--boomi-wizard-link-fg-hover,var(--boomi-wizard-link-fg))}.boomi-wizard-link-strong{color:var(--boomi-wizard-link-strong-fg,var(--boomi-wizard-link-fg));cursor:pointer;font-size:.875rem;font-weight:700}.boomi-wizard-actions{flex-direction:row;gap:1rem;margin-top:.5rem;padding:.5rem;display:flex}.boomi-notice{border:1px solid var(--boomi-notice-border);border-radius:var(--boomi-notice-radius,.5rem);background:var(--boomi-notice-bg);color:var(--boomi-notice-fg);box-shadow:var(--boomi-notice-shadow,none);align-items:flex-start;gap:.5rem;padding:1rem;display:flex}.boomi-notice__icon{width:1.25rem;height:1.25rem;color:var(--boomi-notice-icon,currentColor);opacity:var(--boomi-notice-icon-opacity,.95)}.boomi-notice__text{font-size:.875rem;font-weight:500;line-height:1.25rem}.boomi-notice__label{margin-right:.25rem;font-weight:700}.boomi-notice--info,.boomi-notice[data-variant=info]{--boomi-notice-bg:var(--boomi-notice-info-bg,#eff6ff);--boomi-notice-fg:var(--boomi-notice-info-fg,#1e40af);--boomi-notice-border:var(--boomi-notice-info-border,#bfdbfe);--boomi-notice-icon:var(--boomi-notice-info-icon,#3b82f6)}.boomi-notice--success,.boomi-notice[data-variant=success]{--boomi-notice-bg:var(--boomi-notice-success-bg,#f0fdf4);--boomi-notice-fg:var(--boomi-notice-success-fg,#166534);--boomi-notice-border:var(--boomi-notice-success-border,#bbf7d0);--boomi-notice-icon:var(--boomi-notice-success-icon,#22c55e)}.boomi-notice--warning,.boomi-notice[data-variant=warning]{--boomi-notice-bg:var(--boomi-notice-warning-bg,#fffbeb);--boomi-notice-fg:var(--boomi-notice-warning-fg,#92400e);--boomi-notice-border:var(--boomi-notice-warning-border,#fde68a);--boomi-notice-icon:var(--boomi-notice-warning-icon,#f59e0b)}.boomi-notice--error,.boomi-notice[data-variant=error]{--boomi-notice-bg:var(--boomi-notice-error-bg,#fef2f2);--boomi-notice-fg:var(--boomi-notice-error-fg,#991b1b);--boomi-notice-border:var(--boomi-notice-error-border,#fecaca);--boomi-notice-icon:var(--boomi-notice-error-icon,#ef4444)}.boomi-update{background-color:var(--boomi-update-bg);color:var(--boomi-update-fg);border:1px solid var(--boomi-update-border);border-radius:var(--boomi-update-radius,.75rem);box-shadow:var(--boomi-update-shadow);padding:var(--boomi-update-padding,1rem)}.boomi-update-header{padding-inline:var(--boomi-update-header-px,.5rem);margin-bottom:.5rem}.boomi-update-title{color:var(--boomi-update-title-fg,currentColor);margin-bottom:.25rem;font-size:1.125rem;font-weight:700}.boomi-update-desc{color:var(--boomi-update-desc-fg,var(--boomi-page-fg-color));margin-bottom:1rem;font-size:.875rem}.boomi-update-body{gap:var(--boomi-update-body-gap,1rem);flex-direction:column;display:flex}.boomi-update-actions{justify-content:flex-end;gap:.5rem;margin-top:1.5rem;display:flex}.boomi-center{justify-content:center;align-items:center;display:flex}.boomi-tabs{border-bottom:1px solid var(--boomi-tablist-border,var(--boomi-update-border));padding-top:1rem;padding-bottom:0}.boomi-tablist{gap:.5rem;padding-left:1rem;padding-right:1rem;display:flex}.boomi-tab{background-color:var(--boomi-tab-bg,var(--boomi-btn-secondary-bg));color:var(--boomi-tab-fg,var(--boomi-btn-secondary-fg));border:1px solid var(--boomi-tab-border,var(--boomi-btn-secondary-border));border-bottom:none;border-top-left-radius:.5rem;border-top-right-radius:.5rem;padding:.5rem 1rem;font-size:.875rem;font-weight:600;transition:background-color .15s,color .15s,border-color .15s}.boomi-tab:hover{background-color:var(--boomi-tab-bg-hover,var(--boomi-btn-secondary-bg-hover,var(--boomi-tab-bg)));color:var(--boomi-tab-fg-hover,var(--boomi-btn-secondary-fg))}.boomi-tab--active{background-color:var(--boomi-tab-bg-active,var(--boomi-btn-primary-bg));color:var(--boomi-tab-fg-active,var(--boomi-btn-primary-fg));border-color:var(--boomi-tab-border-active,var(--boomi-btn-primary-border))}.boomi-update-content{background-color:var(--boomi-update-content-bg);color:var(--boomi-update-content-fg);border:1px solid var(--boomi-update-border);border-bottom-left-radius:var(--boomi-update-radius,.2rem);border-bottom-right-radius:var(--boomi-update-radius,.2rem);border-top:none;padding:1rem}.boomi-map-canvas{background:var(--boomi-map-bg,transparent);color:var(--boomi-map-fg,inherit);justify-content:space-between;padding:1rem;display:flex;position:relative}.boomi-map-svg{pointer-events:none;z-index:10;width:100%;height:100%;position:absolute;top:0;right:0;bottom:0;left:0}.boomi-map-svg path{stroke:var(--boomi-map-line,currentColor);stroke-width:var(--boomi-map-line-width,1.4px);fill:none;stroke-linejoin:round;stroke-linecap:round;filter:var(--boomi-map-line-filter,none)}.boomi-map-svg path.is-highlighted{stroke:var(--boomi-map-line-highlight);stroke-width:var(--boomi-map-line-width,2.5px)}.boomi-map-svg.has-selection path:not(.is-highlighted){opacity:var(--boomi-map-line-dim)}.boomi-map-col{z-index:10;flex-direction:column;gap:.5rem;display:flex}.boomi-map-col--sources{width:25%;padding-right:.5rem}.boomi-map-col--functions{align-items:center;width:40%;padding-inline:.5rem}.boomi-map-col--targets{width:25%;padding-left:.5rem}.boomi-map-heading{color:var(--boomi-map-heading-fg,inherit);margin-bottom:.5rem;font-weight:600}.boomi-map-card{border:1px solid var(--boomi-map-card-border);background:var(--boomi-map-card-bg);box-shadow:var(--boomi-map-card-shadow);border-radius:.5rem;padding:.5rem;transition:box-shadow .15s,transform .15s,background-color .15s;position:relative}.boomi-map-card:hover{box-shadow:var(--boomi-map-card-shadow-hover,var(--boomi-map-card-shadow));transform:var(--boomi-map-card-transform-hover,none);transform:none}.boomi-map-card--source{background:var(--boomi-map-source-bg,var(--boomi-map-card-bg))}.boomi-map-card--source.is-selected{outline:3px solid var(--boomi-map-source-outline,var(--boomi-accent))}.boomi-map-card--source.is-mapped{background:var(--boomi-map-source-bg-mapped,var(--boomi-map-source-bg));border-color:var(--boomi-map-source-border-mapped,var(--boomi-map-card-border))}.boomi-map-card--target{background:var(--boomi-map-target-bg,var(--boomi-map-card-bg))}.boomi-map-card--target.is-selected{outline:3px solid var(--boomi-map-target-outline,var(--boomi-accent))}.boomi-map-card--target.is-mapped{background:var(--boomi-map-target-bg-mapped,var(--boomi-map-target-bg));border-color:var(--boomi-map-target-border-mapped,var(--boomi-map-card-border))}.boomi-map-card--function{background:var(--boomi-map-func-bg,var(--boomi-map-card-bg));color:var(--boomi-map-func-fg,inherit)}.boomi-map-col{z-index:10}.boomi-map-card--function .boomi-map-card-title{color:var(--boomi-map-func-title-fg,var(--boomi-accent));font-weight:600}.boomi-map-card--function .boomi-map-card-subtitle{color:var(--boomi-map-func-subtle-fg,var(--boomi-muted));font-size:.75rem}.boomi-map-pin{border-radius:9999px;justify-content:center;align-items:center;width:.75rem;height:.75rem;transition:background-color .15s,border-color .15s,transform .15s;display:flex;position:absolute}.boomi-map-pin.--source{background:var(--boomi-map-pin-source-bg);border:2px solid var(--boomi-map-pin-source-border,transparent);top:50%;right:-10px;transform:translateY(-50%)}.boomi-map-pin.--target{background:var(--boomi-map-pin-target-bg);border:2px solid var(--boomi-map-pin-target-border,transparent);top:50%;left:-10px;transform:translateY(-50%)}.boomi-map-pin.--input{background:var(--boomi-map-pin-input-bg);border:2px solid var(--boomi-map-pin-input-border,transparent);top:50%;left:-14px;transform:translateY(-50%)}.boomi-map-pin.--output{background:var(--boomi-map-pin-output-bg);border:2px solid var(--boomi-map-pin-output-border,transparent);top:50%;right:-16px;transform:translateY(-50%)}.boomi-map-pin.is-selectable{cursor:pointer}.boomi-map-pin.is-mappable{border-color:var(--boomi-map-pulse-border);opacity:var(--boomi-map-pin-mappable-opacity,.9);filter:saturate(.95)brightness(1.1);animation:1.2s ease-in-out infinite boomi-map-pulse}.boomi-map-pin.--source.is-mappable{opacity:1!important;filter:none!important;animation:none!important}.boomi-map-pin.is-mappable:after{content:"";border:2px solid var(--boomi-map-pulse-border,currentColor);pointer-events:none;opacity:.75;border-radius:9999px;animation:1.2s ease-out infinite boomi-map-pulse;position:absolute;top:-4px;right:-4px;bottom:-4px;left:-4px}.boomi-map-pin.is-danger{background:var(--boomi-map-pin-danger-bg)}.boomi-map-pin:hover{transform:translateY(-50%)scale(1.06)}.boomi-map-pin.--output.is-active-output{--boomi-map-pin-anim:boomi-map-pulse 1.15s ease-in-out infinite;animation:var(--boomi-map-pin-anim);background:var(--boomi-map-pin-output-bg-active,var(--boomi-map-pin-output-bg));border-color:var(--boomi-map-pin-output-border-active,currentColor);box-shadow:0 0 0 6px}@supports (color:color-mix(in lab,red,red)){.boomi-map-pin.--output.is-active-output{box-shadow:0 0 0 6px color-mix(in srgb,currentColor 18%,transparent)}}.boomi-map-pin.--output.is-active-output{opacity:var(--boomi-map-pin-active-opacity,.96);filter:saturate(1.05)brightness(1.05)}.boomi-map-pin-badge{background:var(--boomi-map-pin-badge-bg);width:1rem;height:1rem;color:var(--boomi-map-pin-badge-fg);text-align:center;cursor:pointer;border-radius:9999px;font-size:.75rem;line-height:1rem;position:absolute;top:-4px;right:-6px}.boomi-map-add-btn{border:1px solid var(--boomi-map-add-border,var(--boomi-btn-secondary-border));background:var(--boomi-map-add-bg,var(--boomi-btn-secondary-bg));color:var(--boomi-map-add-fg,var(--boomi-btn-secondary-fg));box-shadow:var(--boomi-map-add-shadow,none);border-radius:.375rem;align-items:center;gap:.25rem;padding:.375rem .75rem;font-size:.75rem;font-weight:600;transition:background-color .15s,color .15s,border-color .15s,box-shadow .15s;display:inline-flex}.boomi-map-add-btn:hover{background:var(--boomi-map-add-bg-hover,var(--boomi-btn-secondary-bg-hover,var(--boomi-map-add-bg)));color:var(--boomi-map-add-fg-hover,var(--boomi-map-add-fg));border-color:var(--boomi-map-add-border-hover,var(--boomi-map-add-border));box-shadow:var(--boomi-map-add-shadow-hover,var(--boomi-map-add-shadow))}.boomi-map-col--functions{position:relative}.boomi-map-card.boomi-map-card--function{transition:box-shadow .15s,background-color .15s!important;position:absolute!important}.boomi-map-card--function:hover{--boomi-map-card-transform-hover:none}.boomi-map-card--function.is-selected{outline:3px solid var(--boomi-map-func-outline,var(--boomi-accent));outline-offset:0}.boomi-map-svg{z-index:1!important}.boomi-map-col{position:relative;z-index:2!important}@keyframes boomi-map-pulse{0%,to{box-shadow:0 0 0 0 var(--boomi-map-pulse-color)}50%{box-shadow:0 0 0 8px var(--boomi-map-pulse-color)}}@media (prefers-reduced-motion:reduce){.boomi-map-pin.is-selectable{animation:none}}.boomi-map-card.is-search-hit{outline:2px solid var(--hit-outline,#ff9800);outline-offset:2px}.boomi-map-card.is-current-hit{box-shadow:0 0 0 3px var(--hit-current,#ffb74d)}.dark .boomi-map-card.is-search-hit{outline-color:#ffd400}.dark .boomi-map-card.is-current-hit{box-shadow:0 0 0 3px #ffe266}.boomi-btn-xs{padding:2px 6px;font-size:11px;line-height:1}.boomi-sched{background:var(--boomi-update-bg,transparent);color:var(--boomi-update-fg,inherit);flex-direction:column;gap:1rem;padding:1rem;display:flex}.boomi-sched-card{border:1px solid var(--boomi-wizard-card-border,var(--boomi-update-border,currentColor));background:var(--boomi-wizard-card-bg,var(--boomi-card-bg,#fff));color:var(--boomi-wizard-card-fg,var(--boomi-card-fg,#111));box-shadow:var(--boomi-wizard-card-shadow,var(--boomi-card-shadow,0 2px 0 #000));border-radius:.75rem;overflow:hidden}.boomi-sched-card__header{cursor:pointer;background:var(--boomi-sched-header-bg,transparent);color:var(--boomi-sched-header-fg,inherit);border-bottom:1px solid var(--boomi-sched-header-border,var(--boomi-update-border,transparent));justify-content:space-between;align-items:center;padding:.5rem 1rem;display:flex}.boomi-sched-card__title{font-size:.95rem;font-weight:700}.boomi-sched-card__controls{align-items:center;gap:.75rem;display:flex}.boomi-sched-card__delete{color:var(--boomi-danger-fg,#ef4444);transition:color .15s}.boomi-sched-card__delete:hover{color:var(--boomi-danger-fg-hover,#b91c1c)}.boomi-sched-card__body{gap:1rem;padding:1rem;display:grid}.boomi-sched-row{flex-wrap:wrap;align-items:center;gap:.5rem;display:flex}.boomi-sched-label{min-width:6.5rem;font-weight:600}.boomi-sched-days__label{font-weight:600}.boomi-sched-days{flex-wrap:wrap;gap:1rem;margin-top:.5rem;display:flex}.boomi-sched-day{align-items:center;gap:.25rem;font-size:.9rem;display:inline-flex}.boomi-sched-day input[type=checkbox]{accent-color:var(--boomi-accent,#ff5ca2)}.boomi-sched-actions{justify-content:flex-end;display:flex}.boomi-connector,.boomi-connector-group{flex-direction:column;gap:1rem;display:flex}.boomi-connector-section{background-color:var(--boomi-connector-bg);color:var(--boomi-connector-fg);border:1px solid var(--boomi-conn-border);border-radius:var(--boomi-connector-radius,.75rem);box-shadow:var(--boomi-connector-shadow,0 0 0 0 transparent);padding:.75rem}.boomi-connector-section--error{--boomi-conn-border:var(--boomi-danger,#dc2626);--boomi-connector-shadow:0 0 0 2px var(--boomi-danger,#dc2626)}.boomi-connector-heading{color:var(--boomi-connector-title-fg,currentColor);margin-bottom:.5rem;font-size:1rem;font-weight:600}.boomi-connector-heading--error{color:var(--boomi-danger,#dc2626)}.boomi-connector-error-banner{margin:.5rem 0 1rem;font-size:.875rem;line-height:1.25rem}.boomi-connector-field{margin-bottom:.5rem}.boomi-connector-actions{gap:.5rem;margin-top:.25rem;padding-inline:1rem;display:flex}.boomi-connector-subtle{color:var(--boomi-connector-subtle-fg,inherit)}.boomi-connector-inner{background-color:var(--boomi-connector-inner-bg,transparent);border:1px solid var(--boomi-connector-inner-border,transparent);border-radius:.5rem;padding:.75rem}.swal2-container .boomi-toast-popup{border-radius:var(--boomi-toast-radius,.5rem)!important;box-shadow:var(--boomi-toast-shadow,0 6px 16px #0000002e)!important;border:var(--boomi-toast-border,none)!important}.swal2-container .boomi-toast-title{color:var(--boomi-toast-title-fg,inherit)!important}.swal2-container .boomi-toast-progress{background:var(--boomi-toast-progress-bar,#ffffffb3)!important}.swal2-container.boomi-swal{--boomi-swal-bg:#000000e6}.swal2-container{z-index:2147483600!important}#boomi-page-root.swal2-container{width:100%;height:100%;top:0;right:0;bottom:0;left:0;z-index:2147483600!important;position:absolute!important}.boomi-swal{background-color:var(--boomi-spinner-overlay-bg,#00000080)!important;-webkit-backdrop-filter:blur(var(--boomi-spinner-overlay-blur,4px))!important;backdrop-filter:blur(var(--boomi-spinner-overlay-blur,4px))!important}.swal2-container .boomi-swal-popup{background-color:var(--boomi-swal-bg)!important;opacity:1!important;color:var(--boomi-swal-fg)!important;border:var(--boomi-swal-border)!important;box-shadow:var(--boomi-swal-shadow)!important;border-radius:1rem!important;padding:1.25rem!important}.boomi-swal .swal2-title{color:var(--boomi-update-title-fg,var(--boomi-modal-fg));margin-bottom:.25rem;font-size:1.125rem;font-weight:700}.boomi-swal .swal2-html-container{color:var(--boomi-update-desc-fg,inherit);font-size:.95rem}.boomi-swal .swal2-actions{gap:.5rem;margin-top:1rem;display:flex}.boomi-swal .swal2-styled:focus{box-shadow:var(--boomi-input-shadow-focus,0 0 0 2px #6366f159);outline:none}.boomi-swal .swal2-confirm{background-color:var(--boomi-btn-primary-bg);color:var(--boomi-btn-primary-fg);border:1px solid var(--boomi-btn-primary-border);box-shadow:var(--boomi-btn-primary-shadow)}.boomi-swal .swal2-confirm:hover{background-color:var(--boomi-btn-primary-bg-hover,var(--boomi-btn-primary-bg))}.boomi-swal .swal2-confirm:active{background-color:var(--boomi-btn-primary-bg-active,var(--boomi-btn-primary-bg))}.boomi-swal .swal2-cancel{background-color:var(--boomi-btn-secondary-bg);color:var(--boomi-btn-secondary-fg);border:1px solid var(--boomi-btn-secondary-border);box-shadow:var(--boomi-btn-secondary-shadow)}.boomi-swal .swal2-cancel:hover{background-color:var(--boomi-btn-secondary-bg-hover,var(--boomi-btn-secondary-bg))}.boomi-swal .swal2-cancel:active{background-color:var(--boomi-btn-secondary-bg-active,var(--boomi-btn-secondary-bg))}.boomi-swal .swal2-icon{border-color:currentColor}.boomi-swal .swal2-icon.swal2-success{color:var(--boomi-notice-success-fg,#16a34a);border-color:currentColor}.boomi-swal .swal2-icon.swal2-warning{color:var(--boomi-notice-warning-fg,#f59e0b);border-color:currentColor}.boomi-swal .swal2-icon.swal2-error{color:var(--boomi-notice-error-fg,#ef4444);border-color:currentColor}.boomi-swal .swal2-timer-progress-bar{background:var(--boomi-accent,currentColor)}.boomi-swal-in{animation:.16s ease-out both boomi-swal-in}.boomi-swal-out{animation:.12s ease-in both boomi-swal-out}@keyframes boomi-swal-in{0%{opacity:0;transform:translateY(4px)scale(.98)}to{opacity:1;transform:translateY(0)scale(1)}}@keyframes boomi-swal-out{0%{opacity:1;transform:translateY(0)scale(1)}to{opacity:0;transform:translateY(4px)scale(.98)}}.boomi-agent-panel{background:var(--boomi-agent-bg,var(--boomi-card-bg));color:var(--boomi-agent-fg,var(--boomi-page-fg-color));border:1px solid var(--boomi-agent-border,var(--boomi-card-border));box-shadow:var(--boomi-agent-shadow,0 12px 24px -8px #00000040,0 8px 16px -8px #0000001f);border-radius:var(--boomi-agent-radius,1rem);-webkit-backdrop-filter:var(--boomi-agent-blur,none);backdrop-filter:var(--boomi-agent-blur,none);overflow:hidden}.boomi-agent-header{border-bottom:1px solid var(--boomi-agent-header-border,var(--boomi-card-border));background:linear-gradient(180deg,var(--boomi-agent-header-bg,var(--boomi-modal-bg))0%,var(--boomi-agent-header-bg,var(--boomi-modal-bg))100%);justify-content:space-between;align-items:center;padding:.5rem .5rem .5rem .375rem;display:flex}@supports (color:color-mix(in lab,red,red)){.boomi-agent-header{background:linear-gradient(180deg,color-mix(in srgb,var(--boomi-agent-header-bg,var(--boomi-modal-bg))100%,transparent),color-mix(in srgb,var(--boomi-agent-header-bg,var(--boomi-modal-bg))88%,transparent))}}.boomi-agent-pane{background-color:var(--boomi-agent-pane-bg,var(--boomi-page-bg-color));color:var(--boomi-agent-pane-fg,var(--boomi-page-fg-color));font-size:.96rem}.boomi-agent-workspace{width:100%;height:100%;min-height:0}.boomi-agent-configure-panel{border-radius:0;width:100%;height:100%;min-height:0;position:relative;overflow:auto}.boomi-agent-update{background:var(--boomi-agent-update-bg,var(--boomi-card-bg));border:1px solid var(--boomi-agent-update-border,var(--boomi-card-border));border-radius:var(--boomi-agent-update-radius,0);box-shadow:var(--boomi-agent-update-shadow,var(--boomi-card-shadow));color:var(--boomi-agent-update-fg,var(--boomi-card-fg,var(--boomi-page-fg-color)));flex-direction:column;gap:1rem;height:100%;display:flex;position:relative}.boomi-agent-update__body{flex-direction:column;gap:1rem;height:100%;padding:1rem 1.5rem 2rem;display:flex;overflow:auto}.boomi-agent-update__header{flex-direction:column;gap:.25rem;display:flex}.boomi-agent-update__title{color:inherit;font-size:1.25rem;font-weight:600}.boomi-agent-update__desc{opacity:.8;font-size:.95rem}.boomi-agent-update__actions{justify-content:flex-end;gap:.75rem;margin-top:auto;padding-top:1rem;display:flex}.boomi-agent-overlay{z-index:999998;pointer-events:auto;color:var(--boomi-page-fg-color,#f8fafc);flex-direction:column;display:flex;position:fixed;top:0;right:0;bottom:0;left:0}.boomi-agent-overlay--full{-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);background:0 0}.boomi-agent-overlay__header{border-bottom:1px solid var(--boomi-page-fg-color,#f8fafc);justify-content:space-between;align-items:center;padding:.75rem 1rem;display:flex}@supports (color:color-mix(in lab,red,red)){.boomi-agent-overlay__header{border-bottom:1px solid color-mix(in srgb,var(--boomi-page-fg-color,#f8fafc)12%,transparent)}}.boomi-agent-overlay__header{background:var(--boomi-page-bg-color,#0b1220)}@supports (color:color-mix(in lab,red,red)){.boomi-agent-overlay__header{background:color-mix(in srgb,var(--boomi-page-bg-color,#0b1220)80%,transparent)}}.boomi-agent-overlay__header-actions{align-items:center;gap:.5rem;display:inline-flex}.boomi-agent-overlay__title{letter-spacing:.02em;font-size:.95rem;font-weight:600}.boomi-agent-overlay__body{background:0 0;flex:auto;width:100%;min-height:0;overflow:auto}.boomi-agent-overlay__inner{background:var(--boomi-card-bg,#0f172a);flex-direction:column;width:100%;height:100%;display:flex;position:relative}@supports (color:color-mix(in lab,red,red)){.boomi-agent-overlay__inner{background:color-mix(in srgb,var(--boomi-card-bg,#0f172a)92%,transparent)}}.boomi-agent-overlay__inner{-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}.boomi-agent-overlay--modal{background:0 0;justify-content:center;align-items:center}.boomi-agent-overlay__scrim{pointer-events:none;background:0 0;position:absolute;top:0;right:0;bottom:0;left:0}.boomi-agent-overlay__modal{border:1px solid var(--boomi-card-border,#334155);border-radius:18px;position:relative}@supports (color:color-mix(in lab,red,red)){.boomi-agent-overlay__modal{border:1px solid color-mix(in srgb,var(--boomi-card-border,#334155)70%,transparent)}}.boomi-agent-overlay__modal{background:var(--boomi-card-bg,#0f172a)}@supports (color:color-mix(in lab,red,red)){.boomi-agent-overlay__modal{background:color-mix(in srgb,var(--boomi-card-bg,#0f172a)70%,transparent)}}.boomi-agent-overlay__modal{flex-direction:column;display:flex;overflow:hidden;box-shadow:0 25px 70px #00000073}.boomi-agent-overlay__close{background:var(--boomi-page-fg-color,#fff);border-radius:999px;justify-content:center;align-items:center;width:36px;height:36px;display:inline-flex}@supports (color:color-mix(in lab,red,red)){.boomi-agent-overlay__close{background:color-mix(in srgb,var(--boomi-page-fg-color,#fff)12%,transparent)}}.boomi-agent-overlay__close{color:var(--boomi-page-fg-color,#fff);transition:background-color .15s,transform .12s}.boomi-agent-overlay__close:hover{background:var(--boomi-page-fg-color,#fff);transform:translateY(-1px)}@supports (color:color-mix(in lab,red,red)){.boomi-agent-overlay__close:hover{background:color-mix(in srgb,var(--boomi-page-fg-color,#fff)22%,transparent)}}.boomi-agent-tabs{gap:.375rem;display:flex}.boomi-agent-tab{background:var(--boomi-agent-tab-bg,var(--boomi-tab-bg));color:var(--boomi-agent-tab-fg,var(--boomi-tab-fg));border:1px solid var(--boomi-agent-tab-border,var(--boomi-tab-border));border-radius:.5rem;padding:.375rem .75rem;transition:transform .12s,background-color .15s,color .15s,box-shadow .15s}.boomi-agent-tab:hover{transform:translateY(-1px)}.boomi-agent-tab.is-active{background:var(--boomi-agent-tab-bg-active,var(--boomi-tab-bg-active));color:var(--boomi-agent-tab-fg-active,var(--boomi-tab-fg-active));border-color:var(--boomi-agent-tab-border-active,var(--boomi-tab-border-active));box-shadow:var(--boomi-agent-tab-shadow-active,0 6px 14px -6px var(--boomi-accent))}@supports (color:color-mix(in lab,red,red)){.boomi-agent-tab.is-active{box-shadow:var(--boomi-agent-tab-shadow-active,0 6px 14px -6px color-mix(in srgb,var(--boomi-accent)35%,transparent))}}.boomi-agent-close{color:var(--boomi-agent-close-fg,var(--boomi-modal-close-fg));border-radius:.5rem;padding:.25rem .5rem;transition:background-color .15s,color .15s,transform .12s}.boomi-agent-close:hover{color:var(--boomi-agent-close-hover-fg,var(--boomi-modal-close-hover-fg));background:var(--boomi-agent-close-bg-hover,currentColor)}@supports (color:color-mix(in lab,red,red)){.boomi-agent-close:hover{background:var(--boomi-agent-close-bg-hover,color-mix(in srgb,currentColor 8%,transparent))}}.boomi-agent-close:hover{transform:rotate(0)scale(1.03)}.boomi-agent-body{flex-direction:column;gap:.75rem;height:calc(100% - 50px);padding:.75rem;display:flex}.boomi-agent-section{background:var(--boomi-agent-section-bg,var(--boomi-update-content-bg));color:var(--boomi-agent-section-fg,var(--boomi-update-content-fg));border:1px solid var(--boomi-agent-section-border,var(--boomi-update-border));box-shadow:var(--boomi-agent-section-shadow,0 1px 2px #0000000f);border-radius:.75rem;padding:.75rem}.boomi-agent-title{margin-bottom:.25rem;font-size:1rem;font-weight:700}.boomi-agent-kv{gap:.25rem;font-size:.9rem;display:grid}.boomi-agent-kv>div{grid-template-columns:5rem 1fr;gap:.5rem;display:grid}.boomi-agent-chat{background:var(--boomi-agent-chat-bg,var(--boomi-card-bg));color:var(--boomi-agent-chat-fg,inherit);border:1px solid var(--boomi-agent-chat-border,var(--boomi-card-border));border-radius:.75rem;flex-direction:column;flex:auto;min-height:0;display:flex}.boomi-agent-messages{flex-direction:column;flex:auto;gap:.5rem;padding:.75rem;display:flex;overflow:auto}.boomi-agent-bubble{border:1px solid var(--boomi-agent-bubble-border,transparent);max-width:min(820px,98%);box-shadow:var(--boomi-agent-bubble-shadow,0 1px 2px #0000000f);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-radius:1.25rem;padding:.7rem 1rem;font-size:.95rem;line-height:1.45rem;transition:transform .15s,box-shadow .2s}.boomi-agent-bubble.from-user{background:var(--boomi-agent-bubble-user-bg,var(--boomi-accent));margin-left:auto;margin-right:0}@supports (color:color-mix(in lab,red,red)){.boomi-agent-bubble.from-user{background:var(--boomi-agent-bubble-user-bg,color-mix(in srgb,var(--boomi-accent)12%,transparent))}}.boomi-agent-bubble.from-user{color:var(--boomi-agent-bubble-user-fg,currentColor);border-color:var(--boomi-agent-bubble-user-border,var(--boomi-accent))}@supports (color:color-mix(in lab,red,red)){.boomi-agent-bubble.from-user{border-color:var(--boomi-agent-bubble-user-border,color-mix(in srgb,var(--boomi-accent)30%,transparent))}}.boomi-agent-bubble.from-user{width:min(75%,1024px);max-width:min(75%,1024px)}.boomi-agent-bubble.from-agent{background:var(--boomi-agent-bubble-agent-bg,var(--boomi-update-content-bg));color:var(--boomi-agent-bubble-agent-fg,var(--boomi-update-content-fg));border-color:var(--boomi-agent-bubble-agent-border,var(--boomi-update-border))}.boomi-agent-bubble-text{white-space:pre-wrap}.boomi-agent-bubble:hover{transform:translateY(-1px);box-shadow:0 12px 24px #0f172a14}.boomi-agent-bubble-meta{opacity:.6;margin-top:.25rem;font-size:.7rem}.boomi-agent-text-block{border:1px solid var(--boomi-agent-text-border,var(--boomi-agent-pane-fg,#0f172a));border-radius:1.25rem;padding:1.25rem 1.5rem;position:relative}@supports (color:color-mix(in lab,red,red)){.boomi-agent-text-block{border:1px solid var(--boomi-agent-text-border,color-mix(in srgb,var(--boomi-agent-pane-fg,#0f172a)10%,transparent))}}.boomi-agent-text-block{background:var(--boomi-agent-text-bg,var(--boomi-agent-pane-bg,#f8fafc))}@supports (color:color-mix(in lab,red,red)){.boomi-agent-text-block{background:var(--boomi-agent-text-bg,color-mix(in srgb,var(--boomi-agent-pane-bg,#f8fafc)94%,transparent))}}.boomi-agent-text-block{color:var(--boomi-agent-text-fg,var(--boomi-agent-pane-fg,#0f172a));box-shadow:0 16px 32px #0000001f}.boomi-agent-text-block__content{white-space:pre-wrap;word-break:break-word;font-size:.75rem;line-height:1.6}.boomi-agent-text-block__content.is-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,Liberation Mono,Courier New,monospace}.boomi-agent-text-block__content.is-scrollable{overflow:auto}.boomi-agent-text-block__copy{background:var(--boomi-agent-text-copy-bg,var(--boomi-agent-text-fg,#0f172a));border-radius:999px;justify-content:center;align-items:center;width:32px;height:32px;display:inline-flex;position:absolute;top:.55rem;right:.55rem}@supports (color:color-mix(in lab,red,red)){.boomi-agent-text-block__copy{background:var(--boomi-agent-text-copy-bg,color-mix(in srgb,var(--boomi-agent-text-fg,#0f172a)12%,transparent))}}.boomi-agent-text-block__copy{color:var(--boomi-agent-text-copy-fg,var(--boomi-agent-text-fg,#0f172a));cursor:pointer;border:none;transition:background-color .15s,transform .12s}.boomi-agent-text-block__copy:hover{background:var(--boomi-agent-text-copy-bg-hover,var(--boomi-agent-text-fg,#0f172a))}@supports (color:color-mix(in lab,red,red)){.boomi-agent-text-block__copy:hover{background:var(--boomi-agent-text-copy-bg-hover,color-mix(in srgb,var(--boomi-agent-text-fg,#0f172a)22%,transparent))}}.boomi-agent-text-block__copy:hover{transform:translateY(-1px)}.boomi-agent-text-block__copy.is-copied{background:var(--boomi-agent-text-copy-bg-hover,#000)}@supports (color:color-mix(in lab,red,red)){.boomi-agent-text-block__copy.is-copied{background:color-mix(in srgb,var(--boomi-agent-text-copy-bg-hover,#000)90%,transparent)}}.boomi-agent-text-block__copy.is-copied{color:var(--boomi-agent-text-copy-fg,currentColor)}.boomi-agent-text-block__copy-toast{color:var(--boomi-agent-text-copy-fg,var(--boomi-agent-text-fg,#0f172a));opacity:.9;font-size:.75rem;font-weight:600;position:absolute;top:.7rem;right:3.3rem}.boomi-agent-feedback{align-items:center;gap:var(--boomi-agent-feedback-gap,.35rem);margin-top:var(--boomi-agent-feedback-margin-top,.5rem);color:var(--boomi-agent-feedback-fg,var(--boomi-muted,#64748b));flex-wrap:wrap;display:flex}.boomi-agent-feedback__btn{width:var(--boomi-agent-feedback-btn-size,30px);height:var(--boomi-agent-feedback-btn-size,30px);border-radius:var(--boomi-agent-feedback-btn-radius,999px);background:var(--boomi-agent-feedback-btn-bg,transparent);color:var(--boomi-agent-feedback-btn-fg,inherit);border:1px solid var(--boomi-agent-feedback-btn-border,transparent);cursor:pointer;font-size:var(--boomi-agent-feedback-icon-size,.9rem);justify-content:center;align-items:center;line-height:1;transition:background-color .15s,color .15s,transform .12s;display:inline-flex}.boomi-agent-feedback__btn:hover:not(:disabled){background:var(--boomi-agent-feedback-btn-bg-hover,currentColor)}@supports (color:color-mix(in lab,red,red)){.boomi-agent-feedback__btn:hover:not(:disabled){background:var(--boomi-agent-feedback-btn-bg-hover,color-mix(in srgb,currentColor 12%,transparent))}}.boomi-agent-feedback__btn:hover:not(:disabled){transform:translateY(-1px)}.boomi-agent-feedback__btn:disabled{opacity:.5;cursor:default}.boomi-agent-feedback__btn.is-active{background:var(--boomi-agent-feedback-btn-bg-active,var(--boomi-accent,#2563eb))}@supports (color:color-mix(in lab,red,red)){.boomi-agent-feedback__btn.is-active{background:var(--boomi-agent-feedback-btn-bg-active,color-mix(in srgb,var(--boomi-accent,#2563eb)14%,transparent))}}.boomi-agent-feedback__btn.is-active{color:var(--boomi-agent-feedback-btn-fg-active,var(--boomi-accent,#2563eb));border-color:var(--boomi-agent-feedback-btn-border-active,var(--boomi-accent,#2563eb))}@supports (color:color-mix(in lab,red,red)){.boomi-agent-feedback__btn.is-active{border-color:var(--boomi-agent-feedback-btn-border-active,color-mix(in srgb,var(--boomi-accent,#2563eb)35%,transparent))}}.boomi-agent-feedback__btn.is-up.is-active{color:var(--boomi-agent-feedback-up-fg-active,var(--boomi-agent-feedback-btn-fg-active,var(--boomi-accent,#2563eb)))}.boomi-agent-feedback__btn.is-down.is-active{color:var(--boomi-agent-feedback-down-fg-active,var(--boomi-agent-feedback-btn-fg-active,var(--boomi-accent,#2563eb)))}.boomi-agent-feedback__thanks{color:var(--boomi-agent-feedback-thanks-fg,inherit);font-size:.75rem}.boomi-agent-feedback__comment{align-items:flex-end;gap:.5rem;width:100%;display:flex}.boomi-agent-feedback__textarea{resize:vertical;border-radius:var(--boomi-agent-feedback-comment-radius,.5rem);background:var(--boomi-agent-feedback-comment-bg,var(--boomi-input-bg,transparent));min-height:64px;color:var(--boomi-agent-feedback-comment-fg,var(--boomi-input-fg,inherit));border:1px solid var(--boomi-agent-feedback-comment-border,var(--boomi-input-border,currentColor));flex:auto;padding:.5rem .75rem;font-size:.85rem}.boomi-agent-feedback__textarea::-moz-placeholder{color:var(--boomi-agent-feedback-placeholder-fg,var(--boomi-input-placeholder,currentColor));opacity:var(--boomi-agent-feedback-placeholder-opacity,.7);font-style:var(--boomi-agent-feedback-placeholder-style,normal)}.boomi-agent-feedback__textarea::placeholder{color:var(--boomi-agent-feedback-placeholder-fg,var(--boomi-input-placeholder,currentColor));opacity:var(--boomi-agent-feedback-placeholder-opacity,.7);font-style:var(--boomi-agent-feedback-placeholder-style,normal)}.boomi-agent-feedback__submit{border-radius:var(--boomi-agent-feedback-submit-radius,.5rem);background:var(--boomi-agent-feedback-submit-bg,var(--boomi-btn-primary-bg,#2563eb));color:var(--boomi-agent-feedback-submit-fg,var(--boomi-btn-primary-fg,#fff));border:1px solid var(--boomi-agent-feedback-submit-border,transparent);cursor:pointer;padding:.5rem .9rem;font-size:.75rem;font-weight:600;transition:filter .15s}.boomi-agent-feedback__submit:hover:not(:disabled){filter:brightness(1.08)}.boomi-agent-feedback__submit:disabled{opacity:.5;cursor:default}.boomi-agent-inputrow{border-top:1px solid var(--boomi-agent-chat-border,var(--boomi-card-border));background:var(--boomi-agent-compose-bg,var(--boomi-card-bg));box-shadow:var(--boomi-agent-compose-shadow,0 8px 24px #00000014);border-radius:1rem;gap:.5rem;padding:.75rem;display:flex}.boomi-agent-composer{pointer-events:none;z-index:10;isolation:isolate;inset-inline:0;background:0 0;justify-content:center;padding:clamp(.75rem,2vw,1.25rem);display:flex;position:absolute;bottom:0}.boomi-agent-composer:before{content:"";z-index:0;pointer-events:none;background:linear-gradient(to bottom,transparent 0,var(--boomi-agent-composer-backdrop-bg,var(--boomi-agent-pane-bg,var(--boomi-page-bg-color)))var(--boomi-agent-composer-backdrop-fade,2.5rem));position:absolute;top:0;right:0;bottom:0;left:0}.boomi-agent-composer:after{content:"";inset-inline:0;top:var(--boomi-agent-composer-backdrop-fade,2.5rem);height:var(--boomi-agent-composer-backdrop-line-width,0);background:var(--boomi-agent-composer-backdrop-line-color,var(--boomi-agent-chat-border,var(--boomi-card-border)));pointer-events:none;z-index:1;position:absolute}.boomi-hero-bar{background:linear-gradient(90deg,var(--boomi-accent)0%,var(--boomi-accent)40%,var(--boomi-accent)100%);height:6px}@supports (color:color-mix(in lab,red,red)){.boomi-hero-bar{background:linear-gradient(90deg,color-mix(in srgb,var(--boomi-accent)85%,transparent),color-mix(in srgb,var(--boomi-accent)55%,transparent)40%,color-mix(in srgb,var(--boomi-accent)25%,transparent))}}.boomi-hero-bar{border-bottom:1px solid var(--boomi-accent)}@supports (color:color-mix(in lab,red,red)){.boomi-hero-bar{border-bottom:1px solid color-mix(in srgb,var(--boomi-accent)35%,transparent)}}.boomi-divider-soft{background:var(--boomi-update-border,currentColor);height:1px}@supports (color:color-mix(in lab,red,red)){.boomi-divider-soft{background:color-mix(in srgb,var(--boomi-update-border,currentColor)55%,transparent)}}.boomi-divider-soft{opacity:.6}.boomi-kv{margin:.25rem 0}.boomi-kv-row{grid-template-columns:minmax(5.5rem,7.5rem) 1fr;align-items:start;gap:.75rem;display:grid}.boomi-kv-key{color:var(--boomi-form-label-fg,currentColor);opacity:.9;font-weight:700}.boomi-kv-val{color:var(--boomi-update-content-fg,inherit);word-break:break-word}.boomi-chip{border-style:solid;border-width:1px;border-color:var(--boomi-chip-border);background:var(--boomi-chip-bg);color:var(--boomi-chip-fg);box-shadow:0 1px 2px var(--boomi-accent),inset 0 0 0 1px #ffffff14;border-radius:9999px;align-items:center;gap:.4rem;padding:.25rem .55rem;font-size:.75rem;font-weight:700;display:inline-flex}@supports (color:color-mix(in lab,red,red)){.boomi-chip{box-shadow:0 1px 2px color-mix(in srgb,var(--boomi-accent)12%,transparent),inset 0 0 0 1px #ffffff14}}.boomi-chip--success{--boomi-chip-bg:var(--boomi-chip-success-bg);--boomi-chip-fg:var(--boomi-chip-success-fg);--boomi-chip-border:var(--boomi-chip-success-border)}.boomi-chip--warning{--boomi-chip-bg:var(--boomi-chip-warning-bg);--boomi-chip-fg:var(--boomi-chip-warning-fg);--boomi-chip-border:var(--boomi-chip-warning-border)}.boomi-chip--error{--boomi-chip-bg:var(--boomi-chip-error-bg);--boomi-chip-fg:var(--boomi-chip-error-fg);--boomi-chip-border:var(--boomi-chip-error-border)}@keyframes boomi-agent-in{0%{opacity:0;transform:translateY(10px)scale(.98)}to{opacity:1;transform:translateY(0)scale(1)}}@keyframes boomi-border-shimmer-rotate{to{transform:rotate(360deg)}}@property --boomi-angle{syntax: "<angle>"; inherits: true; initial-value: 0deg;}.boomi-card--agent{isolation:isolate;background:linear-gradient(var(--boomi-agent-card-tint,var(--boomi-accent)),var(--boomi-agent-card-tint,transparent))padding-box,var(--boomi-card-bg);position:relative}@supports (color:color-mix(in lab,red,red)){.boomi-card--agent{background:linear-gradient(var(--boomi-agent-card-tint,color-mix(in srgb,var(--boomi-accent)6%,transparent)),var(--boomi-agent-card-tint,transparent))padding-box,var(--boomi-card-bg)}}.boomi-card--agent{border-color:var(--boomi-card-border)}@supports (color:color-mix(in lab,red,red)){.boomi-card--agent{border-color:color-mix(in srgb,var(--boomi-card-border)65%,var(--boomi-agent-shimmer-1))}}.boomi-card--agent:before{content:"";border-radius:inherit;padding:var(--boomi-agent-ring,2px);background:conic-gradient(from var(--boomi-angle,0deg),transparent 0deg 338deg,currentColor 338deg 360deg);pointer-events:none;z-index:0;filter:drop-shadow(0 0 4px)drop-shadow(0 0 10px)drop-shadow(0 0 18px);position:absolute;top:0;right:0;bottom:0;left:0;-webkit-mask-image:linear-gradient(#000 0 0),linear-gradient(#000 0 0);-webkit-mask-position:0 0,0 0;-webkit-mask-size:auto,auto;-webkit-mask-repeat:repeat,repeat;-webkit-mask-clip:content-box,border-box;-webkit-mask-origin:content-box,border-box;-webkit-mask-composite:xor;mask-composite:exclude;-webkit-mask-source-type:auto,auto;mask-mode:match-source,match-source}@supports (color:color-mix(in lab,red,red)){.boomi-card--agent:before{filter:drop-shadow(0 0 4px color-mix(in srgb,currentColor 55%,transparent))drop-shadow(0 0 10px color-mix(in srgb,currentColor 38%,transparent))drop-shadow(0 0 18px color-mix(in srgb,currentColor 22%,transparent))}}.boomi-card--agent:before{opacity:min(var(--boomi-agent-shimmer-opacity,.35),.6)}@keyframes boomi-angle-sweep{0%{--boomi-angle:0turn}to{--boomi-angle:.999turn}}.boomi-card--agent{--boomi-angle:0deg;--boomi-agent-shimmer-speed:2.8s;--boomi-agent-shimmer-direction:normal;animation-name:boomi-angle-sweep;animation-duration:var(--boomi-agent-shimmer-speed);animation-timing-function:linear;animation-iteration-count:infinite;animation-direction:var(--boomi-agent-shimmer-direction)}.boomi-card--agent:before{will-change:background}@media (prefers-reduced-motion:reduce){.boomi-card--agent{animation:none!important}}.boomi-table-row--agent{--_tint:var(--boomi-agent-row-tint,var(--boomi-accent))}@supports (color:color-mix(in lab,red,red)){.boomi-table-row--agent{--_tint:var(--boomi-agent-row-tint,color-mix(in srgb,var(--boomi-accent)5%,transparent))}}.boomi-table-row--agent{background:linear-gradient(var(--_tint),var(--_tint))padding-box,transparent;border-top:1px solid var(--boomi-table-header-border)}@supports (color:color-mix(in lab,red,red)){.boomi-table-row--agent{border-top:1px solid color-mix(in srgb,var(--boomi-table-header-border)60%,var(--boomi-agent-shimmer-2))}}.boomi-table-row--agent{border-bottom:1px solid var(--boomi-table-header-border)}@supports (color:color-mix(in lab,red,red)){.boomi-table-row--agent{border-bottom:1px solid color-mix(in srgb,var(--boomi-table-header-border)60%,var(--boomi-agent-shimmer-1))}}.boomi-table-row--agent{position:relative}.boomi-table-row--agent:before{content:"";background:conic-gradient(from var(--boomi-agent-shimmer-angle,0deg),transparent 0 10%,var(--boomi-agent-shimmer-1)30%,transparent 60%,var(--boomi-agent-shimmer-2)80%,transparent);border-radius:0;padding:1px;position:absolute;top:0;right:0;bottom:0;left:0}@supports (color:color-mix(in lab,red,red)){.boomi-table-row--agent:before{background:conic-gradient(from var(--boomi-agent-shimmer-angle,0deg),transparent 0 10%,color-mix(in srgb,var(--boomi-agent-shimmer-1)60%,transparent)30%,transparent 60%,color-mix(in srgb,var(--boomi-agent-shimmer-2)60%,transparent)80%,transparent)}}.boomi-table-row--agent:before{opacity:var(--boomi-agent-row-shimmer-opacity,.22);animation:boomi-border-shimmer-rotate var(--boomi-agent-shimmer-speed,10s)linear infinite;pointer-events:none;-webkit-mask-image:linear-gradient(#000 0 0),linear-gradient(#000 0 0);-webkit-mask-position:0 0,0 0;-webkit-mask-size:auto,auto;-webkit-mask-repeat:repeat,repeat;-webkit-mask-clip:content-box,border-box;-webkit-mask-origin:content-box,border-box;-webkit-mask-composite:xor;mask-composite:exclude;-webkit-mask-source-type:auto,auto;mask-mode:match-source,match-source}@media (prefers-reduced-motion:reduce){.boomi--agent-shimmer:before,.boomi-table-row--agent:before{opacity:0!important;animation:none!important}}.boomi-scroll{scrollbar-color:var(--boomi-scrollbar-thumb)var(--boomi-scrollbar-bg);scrollbar-width:thin}.boomi-scroll::-webkit-scrollbar{width:var(--boomi-scrollbar-width);height:var(--boomi-scrollbar-width);background:0 0}.boomi-scroll::-webkit-scrollbar-track{background:var(--boomi-scrollbar-bg);border-radius:var(--boomi-scrollbar-radius)}.boomi-scroll::-webkit-scrollbar-thumb{background-color:var(--boomi-scrollbar-thumb);border-radius:var(--boomi-scrollbar-radius);background-clip:content-box;border:3px solid #0000}.boomi-scroll::-webkit-scrollbar-thumb:hover{background-color:var(--boomi-scrollbar-thumb-hover)}.boomi-scroll::-webkit-scrollbar-thumb:active{background-color:var(--boomi-scrollbar-thumb-active)}.boomi-scroll::-webkit-scrollbar-corner{background:var(--boomi-scrollbar-corner)}.boomi-scroll.is-slim::-webkit-scrollbar{width:8px;height:8px}.boomi-scroll.is-ultraslim::-webkit-scrollbar{width:6px;height:6px}.boomi-scroll:hover::-webkit-scrollbar-thumb{border-width:2px}@media (prefers-reduced-motion:reduce){:host([data-animations=on]) .boomi-chip--pulse:after{animation:1.8s ease-out infinite boomi-chip-halo!important}:host([data-animations=on]) .boomi-chip-dot{animation:1.4s ease-in-out infinite boomi-chip-dot-pulse!important}}.boomi-chip{isolation:isolate;z-index:1;font-weight:700;position:relative}.boomi-chip-dot{opacity:.85;background:currentColor;border-radius:9999px;width:.375rem;height:.375rem;animation:1.4s ease-in-out infinite boomi-chip-dot-pulse}.boomi-chip--pulse:after{content:"";pointer-events:none;z-index:2;--_halo:var(--boomi-chip-pulse-color,var(--boomi-accent));border-radius:9999px;position:absolute;top:-4px;right:-4px;bottom:-4px;left:-4px}@supports (color:color-mix(in lab,red,red)){.boomi-chip--pulse:after{--_halo:var(--boomi-chip-pulse-color,color-mix(in srgb,var(--boomi-accent)40%,transparent))}}.boomi-chip--pulse:after{background:radial-gradient(closest-side,var(--_halo),transparent 70%);opacity:.18;animation:1.8s ease-out infinite boomi-chip-halo;transform:scale(.96)}.boomi-chip--success{--boomi-chip-pulse-color:var(--boomi-chip-success-fg)}@supports (color:color-mix(in lab,red,red)){.boomi-chip--success{--boomi-chip-pulse-color:color-mix(in srgb,var(--boomi-chip-success-fg)45%,transparent)}}.boomi-chip--warning{--boomi-chip-pulse-color:var(--boomi-chip-warning-fg)}@supports (color:color-mix(in lab,red,red)){.boomi-chip--warning{--boomi-chip-pulse-color:color-mix(in srgb,var(--boomi-chip-warning-fg)45%,transparent)}}.boomi-chip--error{--boomi-chip-pulse-color:var(--boomi-chip-error-fg)}@supports (color:color-mix(in lab,red,red)){.boomi-chip--error{--boomi-chip-pulse-color:color-mix(in srgb,var(--boomi-chip-error-fg)45%,transparent)}}@keyframes boomi-chip-halo{0%{opacity:.1;transform:scale(.96)}35%{opacity:.3;transform:scale(1.06)}70%{opacity:.16;transform:scale(1.1)}to{opacity:.1;transform:scale(1.12)}}@keyframes boomi-chip-dot-pulse{0%,to{opacity:.9;transform:scale(1)}50%{opacity:.55;transform:scale(1.28)}}@media (prefers-reduced-motion:reduce){.boomi-chip--pulse:after,.boomi-chip-dot{animation:none!important}}}.boomi-agent-thread-separator{background:var(--boomi-thread-separator,var(--boomi-card-border));width:min(1024px,90%);height:1px;margin:1.5rem auto}@supports (color:color-mix(in lab,red,red)){.boomi-agent-thread-separator{background:var(--boomi-thread-separator,color-mix(in srgb,var(--boomi-card-border)55%,transparent))}}.boomi-agent-thread-separator{opacity:.65}@property --tw-translate-x{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-y{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-z{syntax:"*";inherits:false;initial-value:0}@property --tw-scale-x{syntax:"*";inherits:false;initial-value:1}@property --tw-scale-y{syntax:"*";inherits:false;initial-value:1}@property --tw-scale-z{syntax:"*";inherits:false;initial-value:1}@property --tw-rotate-x{syntax:"*";inherits:false}@property --tw-rotate-y{syntax:"*";inherits:false}@property --tw-rotate-z{syntax:"*";inherits:false}@property --tw-skew-x{syntax:"*";inherits:false}@property --tw-skew-y{syntax:"*";inherits:false}@property --tw-space-y-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-space-x-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-divide-y-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-leading{syntax:"*";inherits:false}@property --tw-font-weight{syntax:"*";inherits:false}@property --tw-tracking{syntax:"*";inherits:false}@property --tw-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:"*";inherits:false}@property --tw-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:"*";inherits:false}@property --tw-inset-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-ring-color{syntax:"*";inherits:false}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:"*";inherits:false}@property --tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:"*";inherits:false}@property --tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-outline-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-blur{syntax:"*";inherits:false}@property --tw-brightness{syntax:"*";inherits:false}@property --tw-contrast{syntax:"*";inherits:false}@property --tw-grayscale{syntax:"*";inherits:false}@property --tw-hue-rotate{syntax:"*";inherits:false}@property --tw-invert{syntax:"*";inherits:false}@property --tw-opacity{syntax:"*";inherits:false}@property --tw-saturate{syntax:"*";inherits:false}@property --tw-sepia{syntax:"*";inherits:false}@property --tw-drop-shadow{syntax:"*";inherits:false}@property --tw-drop-shadow-color{syntax:"*";inherits:false}@property --tw-drop-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-drop-shadow-size{syntax:"*";inherits:false}@property --tw-backdrop-blur{syntax:"*";inherits:false}@property --tw-backdrop-brightness{syntax:"*";inherits:false}@property --tw-backdrop-contrast{syntax:"*";inherits:false}@property --tw-backdrop-grayscale{syntax:"*";inherits:false}@property --tw-backdrop-hue-rotate{syntax:"*";inherits:false}@property --tw-backdrop-invert{syntax:"*";inherits:false}@property --tw-backdrop-opacity{syntax:"*";inherits:false}@property --tw-backdrop-saturate{syntax:"*";inherits:false}@property --tw-backdrop-sepia{syntax:"*";inherits:false}@property --tw-duration{syntax:"*";inherits:false}@property --tw-ease{syntax:"*";inherits:false}@keyframes spin{to{transform:rotate(360deg)}}';
 /**
  * @file events.service.ts
  * @module events
@@ -11415,7 +11415,7 @@ function Fu() {
   async function r() {
     await zi.get().ensureReady();
   }
-  return W.useMemo(
+  return Q.useMemo(
     () => ({
       get: async (w, p) => (await r(), e(
         await t.get(i(w, p == null ? void 0 : p.params), {
@@ -11504,7 +11504,7 @@ function AN() {
  * Fetches a single IntegrationPackInstance
  */
 function Pu(t, e, i, r) {
-  const [w, p] = W.useState(null), [g, E] = W.useState(null), [h, m] = W.useState(!0), [s, c] = W.useState(null), u = W.useRef(null), { getIntegrationPack: d, createIntegrationPack: a } = AN(), f = W.useCallback(async () => {
+  const [w, p] = Q.useState(null), [g, E] = Q.useState(null), [h, m] = Q.useState(!0), [s, c] = Q.useState(null), u = Q.useRef(null), { getIntegrationPack: d, createIntegrationPack: a } = AN(), f = Q.useCallback(async () => {
     if (r === "boomi-direct") {
       p(!0), E({
         integrationPackId: t,
@@ -11543,7 +11543,7 @@ function Pu(t, e, i, r) {
       m(!1);
     }
   }, [t, e, i, r]);
-  return W.useEffect(() => {
+  return Q.useEffect(() => {
     f();
   }, [f]), { instance: g, installed: w, loading: h, error: s, refetch: f };
 }
@@ -11606,8 +11606,8 @@ async function xN(t, e) {
       if (!a || !((y = u.field) != null && y.length)) return u;
       let f = !1;
       const b = u.field.map((A) => {
-        for (const [N, C] of a.entries())
-          if (_N(A, N)) {
+        for (const [C, N] of a.entries())
+          if (_N(A, C)) {
             f = !0, m = !0;
             const S = A.__ui, T = {
               ...A,
@@ -11615,9 +11615,9 @@ async function xN(t, e) {
                 ...S,
                 invalid: !0,
                 message: (S == null ? void 0 : S.message) || r,
-                side: C,
+                side: N,
                 connectionId: d,
-                fieldName: N
+                fieldName: C
               }
             };
             return je.error("UI FLAG", {
@@ -11696,19 +11696,19 @@ function CN(t, e, i, r = {}) {
     debounceMs: w = 0,
     transientOnRateLimit: p = !0,
     disabled: g = !1
-  } = r, { fetchEnvironmentExtensions: E } = Ol(), [h, m] = W.useState(null), [s, c] = W.useState(!1), [u, d] = W.useState(null), a = W.useRef(!0);
-  W.useEffect(() => () => {
+  } = r, { fetchEnvironmentExtensions: E } = Ol(), [h, m] = Q.useState(null), [s, c] = Q.useState(!1), [u, d] = Q.useState(null), a = Q.useRef(!0);
+  Q.useEffect(() => () => {
     a.current = !1;
   }, []);
-  const f = W.useRef(null), b = W.useRef(""), y = W.useRef(null), A = (C, S) => {
-    a.current && C(S);
-  }, N = W.useCallback(async (C = !1) => {
+  const f = Q.useRef(null), b = Q.useRef(""), y = Q.useRef(null), A = (N, S) => {
+    a.current && N(S);
+  }, C = Q.useCallback(async (N = !1) => {
     if (g) {
       A(m, !0), A(c, !1), A(d, null);
       return;
     }
     const S = JSON.stringify({ integrationPackInstanceId: t, environmentId: e, single: i });
-    if (!C && f.current && b.current === S)
+    if (!N && f.current && b.current === S)
       return f.current;
     b.current = S;
     const T = () => {
@@ -11741,9 +11741,9 @@ function CN(t, e, i, r = {}) {
       }, w);
     })) : T();
   }, [t, e, i, E, w, p, g]);
-  return W.useEffect(() => {
+  return Q.useEffect(() => {
     g && a.current && (m(!0), c(!1), d(null));
-  }, [g]), { configured: h, loading: s, error: u, fetchStatus: N };
+  }, [g]), { configured: h, loading: s, error: u, fetchStatus: C };
 }
 const Vr = {
   listSessions: "/agents/chat/sessions",
@@ -11843,21 +11843,21 @@ function ON(t) {
   return e === "THINKING" || e === "GENERATING_TITLE" || e === "ACTION" ? { event: "status", state: "working", note: i || (e === "ACTION" ? "Running action…" : "Thinking…") } : e === "ERROR" ? { event: "status", state: "error", note: i || "Error" } : { event: "status", state: "progress", note: i };
 }
 function IN({ sessionId: t, onMessage: e, onStatus: i, onError: r, onOpen: w, enabled: p = !0 }) {
-  const { serverBase: g, accessToken: E } = An(), h = W.useRef(e), m = W.useRef(i), s = W.useRef(r), c = W.useRef(w);
-  W.useLayoutEffect(() => {
+  const { serverBase: g, accessToken: E } = An(), h = Q.useRef(e), m = Q.useRef(i), s = Q.useRef(r), c = Q.useRef(w);
+  Q.useLayoutEffect(() => {
     h.current = e;
-  }, [e]), W.useLayoutEffect(() => {
+  }, [e]), Q.useLayoutEffect(() => {
     m.current = i;
-  }, [i]), W.useLayoutEffect(() => {
+  }, [i]), Q.useLayoutEffect(() => {
     s.current = r;
-  }, [r]), W.useLayoutEffect(() => {
+  }, [r]), Q.useLayoutEffect(() => {
     c.current = w;
   }, [w]);
-  const u = W.useRef(/* @__PURE__ */ new Set()), d = W.useRef(""), a = W.useRef(""), f = W.useRef(null), b = W.useRef({
+  const u = Q.useRef(/* @__PURE__ */ new Set()), d = Q.useRef(""), a = Q.useRef(""), f = Q.useRef(null), b = Q.useRef({
     timer: null,
     attempt: 0
   });
-  W.useEffect(() => {
+  Q.useEffect(() => {
     var O;
     if (!p || !t || !E) {
       f.current && (f.current.close(), f.current = null), b.current.timer && (clearTimeout(b.current.timer), b.current.timer = null), a.current = "";
@@ -11876,7 +11876,7 @@ function IN({ sessionId: t, onMessage: e, onStatus: i, onError: r, onOpen: w, en
       var z;
       const L = x.trim();
       !L || L === a.current || (a.current = L, (z = s.current) == null || z.call(s, { message: L, raw: _ }));
-    }, N = E ? `?access_token=${encodeURIComponent(E)}` : "", C = `${g}/agents/chat/sse/${encodeURIComponent(t)}${N}`;
+    }, C = E ? `?access_token=${encodeURIComponent(E)}` : "", N = `${g}/agents/chat/sse/${encodeURIComponent(t)}${C}`;
     let S = !1;
     const T = () => {
       b.current.timer && (clearTimeout(b.current.timer), b.current.timer = null);
@@ -11900,7 +11900,7 @@ function IN({ sessionId: t, onMessage: e, onStatus: i, onError: r, onOpen: w, en
         return;
       }
       f.current && (f.current.close(), f.current = null), T();
-      const x = new EventSource(C);
+      const x = new EventSource(N);
       f.current = x, b.current.attempt = 0, x.onopen = () => {
         var _;
         b.current.attempt = 0, a.current = "", (_ = c.current) == null || _.call(c);
@@ -13776,24 +13776,24 @@ function DN(t) {
     if (!y) continue;
     if (y.startsWith("{") || y.startsWith("["))
       try {
-        const N = JSON.parse(y), C = (N == null ? void 0 : N.message) ?? ((p = N == null ? void 0 : N.error) == null ? void 0 : p.message) ?? (N == null ? void 0 : N.error_description) ?? (N == null ? void 0 : N.Data);
-        if (typeof C == "string" && C.trim()) return C.trim();
+        const C = JSON.parse(y), N = (C == null ? void 0 : C.message) ?? ((p = C == null ? void 0 : C.error) == null ? void 0 : p.message) ?? (C == null ? void 0 : C.error_description) ?? (C == null ? void 0 : C.Data);
+        if (typeof N == "string" && N.trim()) return N.trim();
       } catch {
       }
     if (y.startsWith("<") && typeof DOMParser < "u")
       try {
-        const N = new DOMParser().parseFromString(y, "application/xml");
-        if (!N.querySelector("parsererror")) {
-          const C = (E = (g = N.querySelector("UserMessage > Data")) == null ? void 0 : g.textContent) == null ? void 0 : E.trim();
-          if (C) return C;
-          const S = N.querySelector("error > message") || N.querySelector("message") || N.querySelector("faultstring"), T = (h = S == null ? void 0 : S.textContent) == null ? void 0 : h.trim();
+        const C = new DOMParser().parseFromString(y, "application/xml");
+        if (!C.querySelector("parsererror")) {
+          const N = (E = (g = C.querySelector("UserMessage > Data")) == null ? void 0 : g.textContent) == null ? void 0 : E.trim();
+          if (N) return N;
+          const S = C.querySelector("error > message") || C.querySelector("message") || C.querySelector("faultstring"), T = (h = S == null ? void 0 : S.textContent) == null ? void 0 : h.trim();
           if (T) return T;
-          for (const M of Array.from(N.getElementsByTagName("*")))
+          for (const M of Array.from(C.getElementsByTagName("*")))
             if (((m = M.localName) == null ? void 0 : m.toLowerCase()) === "text" && ((c = (s = M.parentElement) == null ? void 0 : s.localName) == null ? void 0 : c.toLowerCase()) === "reason") {
               const I = (u = M.textContent) == null ? void 0 : u.trim();
               if (I) return I;
             }
-          const k = (a = (d = N.documentElement) == null ? void 0 : d.textContent) == null ? void 0 : a.trim();
+          const k = (a = (d = C.documentElement) == null ? void 0 : d.textContent) == null ? void 0 : a.trim();
           if (k) return k;
         }
       } catch {
@@ -13806,9 +13806,9 @@ function DN(t) {
       /<message>([\s\S]*?)<\/message>/i,
       /<Text[^>]*>([\s\S]*?)<\/Text>/i
     ];
-    for (const N of A) {
-      const C = y.match(N);
-      if ((f = C == null ? void 0 : C[1]) != null && f.trim()) return C[1].trim();
+    for (const C of A) {
+      const N = y.match(C);
+      if ((f = N == null ? void 0 : N[1]) != null && f.trim()) return N[1].trim();
     }
     if (y) return y;
   }
@@ -13923,11 +13923,11 @@ function HN(t) {
     sessionId: i,
     onNewSessionId: r,
     persistMode: w = "none"
-  } = t, { boomiConfig: p } = An(), g = i != null, E = W.useMemo(() => t.storageKey ?? `agent:sess:${e.id ?? "unknown"}`, [t.storageKey, e.id]), h = !g && w === "modal", m = `boomi:sesslist:${e.integrationPackId ?? e.id ?? "default"}`, s = e.integrationPackId ? (Ve = p == null ? void 0 : p.agents) == null ? void 0 : Ve[e.integrationPackId] : void 0, c = (s == null ? void 0 : s.boomiAgentId) || (s == null ? void 0 : s.boomi_agent_id) || e.integrationPackId || "", u = !!(s != null && s.sendMultipartData || s != null && s.sendMultiPartOnly), d = (s == null ? void 0 : s.transport) === "boomi-direct", a = NN(), f = W.useRef(a.listSessions), b = W.useRef(a.getConversation), y = W.useRef(a.createSession), A = W.useRef(a.sendMessage), N = W.useRef(a.deleteSession);
-  W.useEffect(() => {
-    f.current = a.listSessions, b.current = a.getConversation, y.current = a.createSession, A.current = d ? a.sendBoomiAgentSession : a.sendMessage, N.current = a.deleteSession;
+  } = t, { boomiConfig: p } = An(), g = i != null, E = Q.useMemo(() => t.storageKey ?? `agent:sess:${e.id ?? "unknown"}`, [t.storageKey, e.id]), h = !g && w === "modal", m = `boomi:sesslist:${e.integrationPackId ?? e.id ?? "default"}`, s = e.integrationPackId ? (Ve = p == null ? void 0 : p.agents) == null ? void 0 : Ve[e.integrationPackId] : void 0, c = (s == null ? void 0 : s.boomiAgentId) || (s == null ? void 0 : s.boomi_agent_id) || e.integrationPackId || "", u = !!(s != null && s.sendMultipartData || s != null && s.sendMultiPartOnly), d = (s == null ? void 0 : s.transport) === "boomi-direct", a = NN(), f = Q.useRef(a.listSessions), b = Q.useRef(a.getConversation), y = Q.useRef(a.createSession), A = Q.useRef(a.sendMessage), C = Q.useRef(a.deleteSession);
+  Q.useEffect(() => {
+    f.current = a.listSessions, b.current = a.getConversation, y.current = a.createSession, A.current = d ? a.sendBoomiAgentSession : a.sendMessage, C.current = a.deleteSession;
   }, [a, d]);
-  const [C, S] = W.useState(() => {
+  const [N, S] = Q.useState(() => {
     try {
       const Ae = localStorage.getItem(m);
       if (Ae) {
@@ -13937,14 +13937,14 @@ function HN(t) {
     } catch {
     }
     return [];
-  }), [T, k] = W.useState(!0), [M, I] = W.useState(null), [$, B] = W.useState(null), D = W.useRef(!1), O = g ? i ?? null : $, x = W.useRef(O);
-  W.useEffect(() => {
+  }), [T, k] = Q.useState(!0), [M, I] = Q.useState(null), [$, B] = Q.useState(null), D = Q.useRef(!1), O = g ? i ?? null : $, x = Q.useRef(O);
+  Q.useEffect(() => {
     x.current = O;
   }, [O]);
-  const [_, L] = W.useState(!1), [z, H] = W.useState(!1), [P, Q] = W.useState(null), [F, K] = W.useReducer($N, { byId: {}, order: [] }), V = W.useMemo(
+  const [_, L] = Q.useState(!1), [z, H] = Q.useState(!1), [P, W] = Q.useState(null), [F, K] = Q.useReducer($N, { byId: {}, order: [] }), V = Q.useMemo(
     () => F.order.map((Ae) => F.byId[Ae]).filter(Boolean),
     [F]
-  ), [X, q] = W.useState("idle"), [Z, ne] = W.useState(void 0), ae = W.useRef(!1), le = z || X === "working", me = W.useRef(!1), Se = W.useRef(null), Ne = W.useRef(null), Me = W.useRef(0), $e = 1500, Be = W.useRef(/* @__PURE__ */ new Set()), Xe = W.useRef(/* @__PURE__ */ new Set()), nt = W.useCallback(async (Ae = !1) => {
+  ), [X, q] = Q.useState("idle"), [Z, ne] = Q.useState(void 0), ae = Q.useRef(!1), le = z || X === "working", me = Q.useRef(!1), Se = Q.useRef(null), Ne = Q.useRef(null), Me = Q.useRef(0), $e = 1500, Be = Q.useRef(/* @__PURE__ */ new Set()), Xe = Q.useRef(/* @__PURE__ */ new Set()), nt = Q.useCallback(async (Ae = !1) => {
     const _e = Date.now();
     if (!Ae && _e - Me.current < $e) return;
     if (Ne.current) {
@@ -13992,19 +13992,19 @@ function HN(t) {
       }
     })();
     return Ne.current = Ce, Ce;
-  }, [e.integrationPackId]), ht = W.useCallback(async (Ae) => {
+  }, [e.integrationPackId]), ht = Q.useCallback(async (Ae) => {
     if (Ae && Se.current !== Ae) {
-      Se.current = Ae, L(!0), Q(null);
+      Se.current = Ae, L(!0), W(null);
       try {
         const Ce = ((await b.current({ sessionId: Ae, limit: 200 })).messages ?? []).filter((Pe) => (Pe == null ? void 0 : Pe.type) !== "status");
         Ce.length > 0 && x.current === Ae && K({ type: "reset", list: Ce });
       } catch (_e) {
-        je.warn({ e: _e }, "fetchConversation failed"), x.current === Ae && Q(_e);
+        je.warn({ e: _e }, "fetchConversation failed"), x.current === Ae && W(_e);
       } finally {
         L(!1), Se.current === Ae && (Se.current = null);
       }
     }
-  }, []), ye = W.useCallback(async (Ae) => {
+  }, []), ye = Q.useCallback(async (Ae) => {
     if (me.current) return null;
     me.current = !0;
     try {
@@ -14035,7 +14035,7 @@ function HN(t) {
       }
       return Pe;
     } catch (_e) {
-      return je.warn({ e: _e }, "createSession failed"), Q(_e), null;
+      return je.warn({ e: _e }, "createSession failed"), W(_e), null;
     } finally {
       me.current = !1;
     }
@@ -14047,7 +14047,7 @@ function HN(t) {
     E,
     nt,
     O
-  ]), Et = W.useCallback(async (Ae) => {
+  ]), Et = Q.useCallback(async (Ae) => {
     const _e = O === Ae;
     if (Xe.current.add(Ae), S((Ce) => {
       const Pe = Ce.filter((ot) => ot.sessionId !== Ae);
@@ -14063,17 +14063,17 @@ function HN(t) {
       }
     _e && (K({ type: "reset", list: [] }), q("idle"), ne(void 0));
     try {
-      await N.current({ sessionId: Ae });
+      await C.current({ sessionId: Ae });
     } finally {
       nt(!0);
     }
-  }, [g, h, E, nt, O, K, q, ne]), Bt = W.useCallback((Ae) => {
+  }, [g, h, E, nt, O, K, q, ne]), Bt = Q.useCallback((Ae) => {
     if (!g && (D.current = !1, x.current = Ae, B(Ae), h))
       try {
         localStorage.setItem(E, Ae);
       } catch {
       }
-  }, [g, h, E]), Wt = W.useCallback(async (Ae) => {
+  }, [g, h, E]), Wt = Q.useCallback(async (Ae) => {
     var Pe, ot;
     let _e = O;
     if (_e || (_e = await ye()), !_e) return;
@@ -14152,7 +14152,7 @@ function HN(t) {
     } finally {
       H(!1);
     }
-  }, [O, e.integrationPackId, ye, a, A, K, u, d]), Sn = W.useCallback(async (Ae) => {
+  }, [O, e.integrationPackId, ye, a, A, K, u, d]), Sn = Q.useCallback(async (Ae) => {
     var ot;
     if (u) {
       await Wt({ data: Ae, files: [] });
@@ -14208,31 +14208,31 @@ function HN(t) {
       H(!1);
     }
   }, [O, e.integrationPackId, ye, Wt, u, d]);
-  W.useEffect(() => {
+  Q.useEffect(() => {
     nt(!0);
-  }, [nt]), W.useEffect(() => {
-    if (!g && !D.current && !($ && C.some((Ae) => Ae.sessionId === $))) {
+  }, [nt]), Q.useEffect(() => {
+    if (!g && !D.current && !($ && N.some((Ae) => Ae.sessionId === $))) {
       if (h)
         try {
           const Ae = localStorage.getItem(E) || "";
-          if (Ae && C.some((_e) => _e.sessionId === Ae)) {
+          if (Ae && N.some((_e) => _e.sessionId === Ae)) {
             D.current = !1, B(Ae);
             return;
           }
         } catch {
         }
-      if (C.length > 0 && (D.current = !1, B(C[0].sessionId), h))
+      if (N.length > 0 && (D.current = !1, B(N[0].sessionId), h))
         try {
-          localStorage.setItem(E, C[0].sessionId);
+          localStorage.setItem(E, N[0].sessionId);
         } catch {
         }
     }
-  }, [g, h, E, C, $]);
-  const gt = W.useRef(ye);
-  W.useEffect(() => {
+  }, [g, h, E, N, $]);
+  const gt = Q.useRef(ye);
+  Q.useEffect(() => {
     gt.current = ye;
-  }, [ye]), W.useEffect(() => {
-    if (K({ type: "reset", list: [] }), Q(null), !!O) {
+  }, [ye]), Q.useEffect(() => {
+    if (K({ type: "reset", list: [] }), W(null), !!O) {
       if (t.ensureSession && !Be.current.has(O)) {
         Be.current.add(O), (async () => {
           try {
@@ -14248,7 +14248,7 @@ function HN(t) {
       ht(O);
     }
   }, [O, ht, t.ensureSession]);
-  const Kt = W.useRef(0), Yt = W.useCallback((Ae) => {
+  const Kt = Q.useRef(0), Yt = Q.useCallback((Ae) => {
     if ((Ae == null ? void 0 : Ae.type) === "status") {
       const Ce = String(Ae.status || "working"), Pe = typeof Ae.note == "string" ? Ae.note : void 0;
       q(Ce), ne(Pe);
@@ -14257,7 +14257,7 @@ function HN(t) {
     Ae.role === "user" ? K({ type: "reconcileUserEcho", server: Ae }) : K({ type: "mergeFromServer", list: [Ae] });
     const _e = Date.now();
     _e - Kt.current > 5e3 && (Kt.current = _e, nt());
-  }, [K, nt]), Ge = W.useCallback((Ae) => {
+  }, [K, nt]), Ge = Q.useCallback((Ae) => {
     const _e = Ae.note;
     let Ce = Ae.state;
     _e && /progress/i.test(_e) && (Ce = "progress"), _e && /error|timeout|failed/i.test(_e) && (Ce = "error"), q(Ce), ne(_e);
@@ -14268,14 +14268,14 @@ function HN(t) {
     onMessage: Yt,
     onStatus: Ge,
     onError: (Ae) => {
-      ae.current = !0, Q(Ae), q("error"), ne((Ae == null ? void 0 : Ae.message) || "Realtime connection lost. Retrying…");
+      ae.current = !0, W(Ae), q("error"), ne((Ae == null ? void 0 : Ae.message) || "Realtime connection lost. Retrying…");
     },
     onOpen: () => {
-      ae.current && (ae.current = !1, Q(null), X === "error" && q("idle"), Z && /realtime connection/i.test(Z) && ne(void 0));
+      ae.current && (ae.current = !1, W(null), X === "error" && q("idle"), Z && /realtime connection/i.test(Z) && ne(void 0));
     }
   }), {
     // sessions
-    sessions: C,
+    sessions: N,
     sessionsLoading: T,
     sessionsError: M,
     // selection
@@ -14301,12 +14301,12 @@ const t1 = typeof document < "u" ? tt.useLayoutEffect : () => {
 var pf;
 const zN = (pf = tt.useInsertionEffect) !== null && pf !== void 0 ? pf : t1;
 function BN(t) {
-  const e = W.useRef(null);
+  const e = Q.useRef(null);
   return zN(() => {
     e.current = t;
   }, [
     t
-  ]), W.useCallback((...i) => {
+  ]), Q.useCallback((...i) => {
     const r = e.current;
     return r == null ? void 0 : r(...i);
   }, []);
@@ -14365,7 +14365,7 @@ const QN = i1(function() {
   return GN(/Android/i);
 });
 function r1() {
-  let t = W.useRef(/* @__PURE__ */ new Map()), e = W.useCallback((w, p, g, E) => {
+  let t = Q.useRef(/* @__PURE__ */ new Map()), e = Q.useCallback((w, p, g, E) => {
     let h = E != null && E.once ? (...m) => {
       t.current.delete(g), g(...m);
     } : g;
@@ -14375,18 +14375,18 @@ function r1() {
       fn: h,
       options: E
     }), w.addEventListener(p, h, E);
-  }, []), i = W.useCallback((w, p, g, E) => {
+  }, []), i = Q.useCallback((w, p, g, E) => {
     var h;
     let m = ((h = t.current.get(g)) === null || h === void 0 ? void 0 : h.fn) || g;
     w.removeEventListener(p, m, E), t.current.delete(g);
-  }, []), r = W.useCallback(() => {
+  }, []), r = Q.useCallback(() => {
     t.current.forEach((w, p) => {
       i(w.eventTarget, w.type, p, w.options);
     });
   }, [
     i
   ]);
-  return W.useEffect(() => r, [
+  return Q.useEffect(() => r, [
     r
   ]), {
     addGlobalListener: e,
@@ -14411,7 +14411,7 @@ function YN(t, e) {
   });
 }
 function s1(t) {
-  let e = W.useRef({
+  let e = Q.useRef({
     isFocused: !1,
     observer: null
   });
@@ -14424,7 +14424,7 @@ function s1(t) {
   let i = BN((r) => {
     t == null || t(r);
   });
-  return W.useCallback((r) => {
+  return Q.useCallback((r) => {
     if (r.target instanceof HTMLButtonElement || r.target instanceof HTMLInputElement || r.target instanceof HTMLTextAreaElement || r.target instanceof HTMLSelectElement) {
       e.current.isFocused = !0;
       let w = r.target, p = (g) => {
@@ -14531,7 +14531,7 @@ function tR(t, e, i) {
   return t = t || r.activeElement instanceof w && !eR.has(r.activeElement.type) || r.activeElement instanceof p || r.activeElement instanceof g && r.activeElement.isContentEditable, !(t && e === "keyboard" && i instanceof E && !qN[i.key]);
 }
 function nR(t, e, i) {
-  lm(), W.useEffect(() => {
+  lm(), Q.useEffect(() => {
     let r = (w, p) => {
       tR(!!(i != null && i.isTextInput), w, p) && t(h1());
     };
@@ -14542,13 +14542,13 @@ function nR(t, e, i) {
 }
 function oR(t) {
   let { isDisabled: e, onFocus: i, onBlur: r, onFocusChange: w } = t;
-  const p = W.useCallback((h) => {
+  const p = Q.useCallback((h) => {
     if (h.target === h.currentTarget)
       return r && r(h), w && w(!1), !0;
   }, [
     r,
     w
-  ]), g = s1(p), E = W.useCallback((h) => {
+  ]), g = s1(p), E = Q.useCallback((h) => {
     const m = _r(h.target), s = m ? rm(m) : rm();
     h.target === h.currentTarget && s === o1(h.nativeEvent) && (i && i(h), w && w(!0), g(h));
   }, [
@@ -14564,16 +14564,16 @@ function oR(t) {
   };
 }
 function iR(t) {
-  let { isDisabled: e, onBlurWithin: i, onFocusWithin: r, onFocusWithinChange: w } = t, p = W.useRef({
+  let { isDisabled: e, onBlurWithin: i, onFocusWithin: r, onFocusWithinChange: w } = t, p = Q.useRef({
     isFocusWithin: !1
-  }), { addGlobalListener: g, removeAllGlobalListeners: E } = r1(), h = W.useCallback((c) => {
+  }), { addGlobalListener: g, removeAllGlobalListeners: E } = r1(), h = Q.useCallback((c) => {
     c.currentTarget.contains(c.target) && p.current.isFocusWithin && !c.currentTarget.contains(c.relatedTarget) && (p.current.isFocusWithin = !1, E(), i && i(c), w && w(!1));
   }, [
     i,
     w,
     p,
     E
-  ]), m = s1(h), s = W.useCallback((c) => {
+  ]), m = s1(h), s = Q.useCallback((c) => {
     if (!c.currentTarget.contains(c.target)) return;
     const u = _r(c.target), d = rm(u);
     if (!p.current.isFocusWithin && d === o1(c.nativeEvent)) {
@@ -14628,14 +14628,14 @@ function aR() {
     };
 }
 function sR(t) {
-  let { onHoverStart: e, onHoverChange: i, onHoverEnd: r, isDisabled: w } = t, [p, g] = W.useState(!1), E = W.useRef({
+  let { onHoverStart: e, onHoverChange: i, onHoverEnd: r, isDisabled: w } = t, [p, g] = Q.useState(!1), E = Q.useRef({
     isHovered: !1,
     ignoreEmulatedMouseEvents: !1,
     pointerType: "",
     target: null
   }).current;
-  W.useEffect(aR, []);
-  let { addGlobalListener: h, removeAllGlobalListeners: m } = r1(), { hoverProps: s, triggerHoverEnd: c } = W.useMemo(() => {
+  Q.useEffect(aR, []);
+  let { addGlobalListener: h, removeAllGlobalListeners: m } = r1(), { hoverProps: s, triggerHoverEnd: c } = Q.useMemo(() => {
     let u = (f, b) => {
       if (E.pointerType = b, w || b === "touch" || E.isHovered || !f.currentTarget.contains(f.target)) return;
       E.isHovered = !0;
@@ -14674,7 +14674,7 @@ function sR(t) {
     h,
     m
   ]);
-  return W.useEffect(() => {
+  return Q.useEffect(() => {
     w && c({
       currentTarget: E.target
     }, E.pointerType);
@@ -14686,10 +14686,10 @@ function sR(t) {
   };
 }
 function lR(t = {}) {
-  let { autoFocus: e = !1, isTextInput: i, within: r } = t, w = W.useRef({
+  let { autoFocus: e = !1, isTextInput: i, within: r } = t, w = Q.useRef({
     isFocused: !1,
     isFocusVisible: e || h1()
-  }), [p, g] = W.useState(!1), [E, h] = W.useState(() => w.current.isFocused && w.current.isFocusVisible), m = W.useCallback(() => h(w.current.isFocused && w.current.isFocusVisible), []), s = W.useCallback((d) => {
+  }), [p, g] = Q.useState(!1), [E, h] = Q.useState(() => w.current.isFocused && w.current.isFocusVisible), m = Q.useCallback(() => h(w.current.isFocused && w.current.isFocusVisible), []), s = Q.useCallback((d) => {
     w.current.isFocused = d, g(d), m();
   }, [
     m
@@ -14799,14 +14799,14 @@ function eo() {
   return e;
 }
 function us() {
-  let [t] = W.useState(eo);
-  return W.useEffect(() => () => t.dispose(), [t]), t;
+  let [t] = Q.useState(eo);
+  return Q.useEffect(() => () => t.dispose(), [t]), t;
 }
 let Gt = (t, e) => {
-  fi.isServer ? W.useEffect(t, e) : W.useLayoutEffect(t, e);
+  fi.isServer ? Q.useEffect(t, e) : Q.useLayoutEffect(t, e);
 };
 function ds(t) {
-  let e = W.useRef(t);
+  let e = Q.useRef(t);
   return Gt(() => {
     e.current = t;
   }, [t]), e;
@@ -14823,7 +14823,7 @@ function mR(t, e) {
   return !(!t || !e || t.right < e.left || t.left > e.right || t.bottom < e.top || t.top > e.bottom);
 }
 function pR({ disabled: t = !1 } = {}) {
-  let e = W.useRef(null), [i, r] = W.useState(!1), w = us(), p = et(() => {
+  let e = Q.useRef(null), [i, r] = Q.useState(!1), w = us(), p = et(() => {
     e.current = null, r(!1), w.dispose();
   }), g = et((E) => {
     if (w.dispose(), e.current === null) {
@@ -14842,11 +14842,11 @@ function pR({ disabled: t = !1 } = {}) {
   return { pressed: i, pressProps: t ? {} : { onPointerDown: g, onPointerUp: p, onClick: p } };
 }
 function hs(t) {
-  return W.useMemo(() => t, Object.values(t));
+  return Q.useMemo(() => t, Object.values(t));
 }
-let gR = W.createContext(void 0);
+let gR = Q.createContext(void 0);
 function m1() {
-  return W.useContext(gR);
+  return Q.useContext(gR);
 }
 function um(...t) {
   return Array.from(new Set(t.flatMap((e) => typeof e == "string" ? e.split(" ") : []))).filter(Boolean).join(" ");
@@ -14862,7 +14862,7 @@ function xr(t, e, ...i) {
 var Au = ((t) => (t[t.None = 0] = "None", t[t.RenderStrategy = 1] = "RenderStrategy", t[t.Static = 2] = "Static", t))(Au || {}), Er = ((t) => (t[t.Unmount = 0] = "Unmount", t[t.Hidden = 1] = "Hidden", t))(Er || {});
 function to() {
   let t = vR();
-  return W.useCallback((e) => bR({ mergeRefs: t, ...e }), [t]);
+  return Q.useCallback((e) => bR({ mergeRefs: t, ...e }), [t]);
 }
 function bR({ ourProps: t, theirProps: e, slot: i, defaultTag: r, features: w, visible: p = !0, name: g, mergeRefs: E }) {
   E = E ?? ER;
@@ -14895,7 +14895,7 @@ function ou(t, e = {}, i, r, w) {
       for (let a of d) c[`data-${a}`] = "";
     }
   }
-  if (_l(p) && (Object.keys(Yr(h)).length > 0 || Object.keys(Yr(c)).length > 0)) if (!W.isValidElement(s) || Array.isArray(s) && s.length > 1 || yR(s)) {
+  if (_l(p) && (Object.keys(Yr(h)).length > 0 || Object.keys(Yr(c)).length > 0)) if (!Q.isValidElement(s) || Array.isArray(s) && s.length > 1 || yR(s)) {
     if (Object.keys(Yr(h)).length > 0) throw new Error(['Passing props on "Fragment"!', "", `The current component <${r} /> is rendering a "Fragment".`, "However we need to passthrough the following props:", Object.keys(Yr(h)).concat(Object.keys(Yr(c))).map((u) => `  - ${u}`).join(`
 `), "", "You can apply a few solutions:", ['Add an `as="..."` prop, to ensure that we render an actual element instead of a "Fragment".', "Render a single element as the child so that we can forward the props onto that element."].map((u) => `  - ${u}`).join(`
 `)].join(`
@@ -14903,12 +14903,12 @@ function ou(t, e = {}, i, r, w) {
   } else {
     let u = s.props, d = u == null ? void 0 : u.className, a = typeof d == "function" ? (...y) => um(d(...y), h.className) : um(d, h.className), f = a ? { className: a } : {}, b = p1(s.props, Yr(bf(h, ["ref"])));
     for (let y in c) y in b && delete c[y];
-    return W.cloneElement(s, Object.assign({}, b, c, m, { ref: w(wR(s), m.ref) }, f));
+    return Q.cloneElement(s, Object.assign({}, b, c, m, { ref: w(wR(s), m.ref) }, f));
   }
-  return W.createElement(p, Object.assign({}, bf(h, ["ref"]), !_l(p) && m, !_l(p) && c), s);
+  return Q.createElement(p, Object.assign({}, bf(h, ["ref"]), !_l(p) && m, !_l(p) && c), s);
 }
 function vR() {
-  let t = W.useRef([]), e = W.useCallback((i) => {
+  let t = Q.useRef([]), e = Q.useCallback((i) => {
     for (let r of t.current) r != null && (typeof r == "function" ? r(i) : r.current = i);
   }, []);
   return (...i) => {
@@ -14951,7 +14951,7 @@ function g1(...t) {
 }
 function Bn(t) {
   var e;
-  return Object.assign(W.forwardRef(t), { displayName: (e = t.displayName) != null ? e : t.name });
+  return Object.assign(Q.forwardRef(t), { displayName: (e = t.displayName) != null ? e : t.name });
 }
 function Yr(t) {
   let e = Object.assign({}, t);
@@ -14967,14 +14967,14 @@ function wR(t) {
   return tt.version.split(".")[0] >= "19" ? t.props.ref : t.ref;
 }
 function _l(t) {
-  return t === W.Fragment || t === Symbol.for("react.fragment");
+  return t === Q.Fragment || t === Symbol.for("react.fragment");
 }
 function yR(t) {
   return _l(t.type);
 }
-let TR = W.createContext(void 0);
+let TR = Q.createContext(void 0);
 function AR() {
-  return W.useContext(TR);
+  return Q.useContext(TR);
 }
 function b1(t) {
   return typeof t != "object" || t === null ? !1 : "nodeType" in t;
@@ -15029,8 +15029,8 @@ function NR(t, e = !0) {
   return Object.assign(t, { [w1]: e });
 }
 function ti(...t) {
-  let e = W.useRef(t);
-  W.useEffect(() => {
+  let e = Q.useRef(t);
+  Q.useEffect(() => {
     e.current = t;
   }, [t]);
   let i = et((r) => {
@@ -15038,10 +15038,10 @@ function ti(...t) {
   });
   return t.every((r) => r == null || (r == null ? void 0 : r[w1])) ? void 0 : i;
 }
-let Um = W.createContext(null);
+let Um = Q.createContext(null);
 Um.displayName = "DescriptionContext";
 function y1() {
-  let t = W.useContext(Um);
+  let t = Q.useContext(Um);
   if (t === null) {
     let e = new Error("You used a <Description /> component, but it is not inside a relevant parent.");
     throw Error.captureStackTrace && Error.captureStackTrace(e, y1), e;
@@ -15049,18 +15049,18 @@ function y1() {
   return t;
 }
 function RR() {
-  let [t, e] = W.useState([]);
-  return [t.length > 0 ? t.join(" ") : void 0, W.useMemo(() => function(i) {
+  let [t, e] = Q.useState([]);
+  return [t.length > 0 ? t.join(" ") : void 0, Q.useMemo(() => function(i) {
     let r = et((p) => (e((g) => [...g, p]), () => e((g) => {
       let E = g.slice(), h = E.indexOf(p);
       return h !== -1 && E.splice(h, 1), E;
-    }))), w = W.useMemo(() => ({ register: r, slot: i.slot, name: i.name, props: i.props, value: i.value }), [r, i.slot, i.name, i.props, i.value]);
+    }))), w = Q.useMemo(() => ({ register: r, slot: i.slot, name: i.name, props: i.props, value: i.value }), [r, i.slot, i.name, i.props, i.value]);
     return tt.createElement(Um.Provider, { value: w }, i.children);
   }, [e])];
 }
 let kR = "p";
 function OR(t, e) {
-  let i = W.useId(), r = m1(), { id: w = `headlessui-description-${i}`, ...p } = t, g = y1(), E = ti(e);
+  let i = Q.useId(), r = m1(), { id: w = `headlessui-description-${i}`, ...p } = t, g = y1(), E = ti(e);
   Gt(() => g.register(w), [w, g.register]);
   let h = hs({ ...g.slot, disabled: r || !1 }), m = { ref: E, ...g.props, id: w };
   return to()({ ourProps: m, theirProps: p, slot: h, defaultTag: kR, name: g.name || "Description" });
@@ -15068,10 +15068,10 @@ function OR(t, e) {
 let IR = Bn(OR);
 Object.assign(IR, {});
 var Tn = ((t) => (t.Space = " ", t.Enter = "Enter", t.Escape = "Escape", t.Backspace = "Backspace", t.Delete = "Delete", t.ArrowLeft = "ArrowLeft", t.ArrowUp = "ArrowUp", t.ArrowRight = "ArrowRight", t.ArrowDown = "ArrowDown", t.Home = "Home", t.End = "End", t.PageUp = "PageUp", t.PageDown = "PageDown", t.Tab = "Tab", t))(Tn || {});
-let Gu = W.createContext(null);
+let Gu = Q.createContext(null);
 Gu.displayName = "LabelContext";
 function Hm() {
-  let t = W.useContext(Gu);
+  let t = Q.useContext(Gu);
   if (t === null) {
     let e = new Error("You used a <Label /> component, but it is not inside a relevant parent.");
     throw Error.captureStackTrace && Error.captureStackTrace(e, Hm), e;
@@ -15080,23 +15080,23 @@ function Hm() {
 }
 function DR(t) {
   var e, i, r;
-  let w = (i = (e = W.useContext(Gu)) == null ? void 0 : e.value) != null ? i : void 0;
+  let w = (i = (e = Q.useContext(Gu)) == null ? void 0 : e.value) != null ? i : void 0;
   return ((r = void 0) != null ? r : 0) > 0 ? [w, ...t].filter(Boolean).join(" ") : w;
 }
 function T1({ inherit: t = !1 } = {}) {
-  let e = DR(), [i, r] = W.useState([]), w = t ? [e, ...i].filter(Boolean) : i;
-  return [w.length > 0 ? w.join(" ") : void 0, W.useMemo(() => function(p) {
+  let e = DR(), [i, r] = Q.useState([]), w = t ? [e, ...i].filter(Boolean) : i;
+  return [w.length > 0 ? w.join(" ") : void 0, Q.useMemo(() => function(p) {
     let g = et((h) => (r((m) => [...m, h]), () => r((m) => {
       let s = m.slice(), c = s.indexOf(h);
       return c !== -1 && s.splice(c, 1), s;
-    }))), E = W.useMemo(() => ({ register: g, slot: p.slot, name: p.name, props: p.props, value: p.value }), [g, p.slot, p.name, p.props, p.value]);
+    }))), E = Q.useMemo(() => ({ register: g, slot: p.slot, name: p.name, props: p.props, value: p.value }), [g, p.slot, p.name, p.props, p.value]);
     return tt.createElement(Gu.Provider, { value: E }, p.children);
   }, [r])];
 }
 let MR = "label";
 function $R(t, e) {
   var i;
-  let r = W.useId(), w = Hm(), p = AR(), g = m1(), { id: E = `headlessui-label-${r}`, htmlFor: h = p ?? ((i = w.props) == null ? void 0 : i.htmlFor), passive: m = !1, ...s } = t, c = ti(e);
+  let r = Q.useId(), w = Hm(), p = AR(), g = m1(), { id: E = `headlessui-label-${r}`, htmlFor: h = p ?? ((i = w.props) == null ? void 0 : i.htmlFor), passive: m = !1, ...s } = t, c = ti(e);
   Gt(() => w.register(E), [E, w.register]);
   let u = et((f) => {
     let b = f.currentTarget;
@@ -15105,8 +15105,8 @@ function $R(t, e) {
       if (y) {
         let A = y.getAttribute("disabled");
         if (A === "true" || A === "") return;
-        let N = y.getAttribute("aria-disabled");
-        if (N === "true" || N === "") return;
+        let C = y.getAttribute("aria-disabled");
+        if (C === "true" || C === "") return;
         (v1(y) && (y.type === "file" || y.type === "radio" || y.type === "checkbox") || y.role === "radio" || y.role === "checkbox" || y.role === "switch") && y.click(), y.focus({ preventScroll: !0 });
       }
     }
@@ -15121,7 +15121,7 @@ function dA(t) {
   return { width: e, height: i };
 }
 function HR(t, e, i = !1) {
-  let [r, w] = W.useState(() => dA(e));
+  let [r, w] = Q.useState(() => dA(e));
   return Gt(() => {
     if (!e || !t) return;
     let p = eo();
@@ -15137,7 +15137,7 @@ function HR(t, e, i = !1) {
 }
 var A1 = ((t) => (t[t.Left = 0] = "Left", t[t.Right = 2] = "Right", t))(A1 || {});
 function zR(t) {
-  let e = W.useRef(null), i = et((w) => {
+  let e = Q.useRef(null), i = et((w) => {
     e.current = w.pointerType, !uA(w.currentTarget) && w.pointerType === "mouse" && w.button === A1.Left && (w.preventDefault(), t(w));
   }), r = et((w) => {
     e.current !== "mouse" && (uA(w.currentTarget) || t(w));
@@ -15276,21 +15276,21 @@ function VR() {
             if (y = !0, A = S, S = c(S), u !== void 0 && a.hasValue) {
               var T = a.value;
               if (u(T, S))
-                return N = T;
+                return C = T;
             }
-            return N = S;
+            return C = S;
           }
-          if (T = N, i(A, S)) return T;
+          if (T = C, i(A, S)) return T;
           var k = c(S);
-          return u !== void 0 && u(T, k) ? (A = S, T) : (A = S, N = k);
+          return u !== void 0 && u(T, k) ? (A = S, T) : (A = S, C = k);
         }
-        var y = !1, A, N, C = s === void 0 ? null : s;
+        var y = !1, A, C, N = s === void 0 ? null : s;
         return [
           function() {
             return b(m());
           },
-          C === null ? void 0 : function() {
-            return b(C());
+          N === null ? void 0 : function() {
+            return b(N());
           }
         ];
       },
@@ -15317,7 +15317,7 @@ function XR(t) {
   return t;
 }
 function R1(t, e) {
-  let i = W.useId(), r = zm.get(e), [w, p] = Zo(r, W.useCallback((g) => [r.selectors.isTop(g, i), r.selectors.inStack(g, i)], [r, i]));
+  let i = Q.useId(), r = zm.get(e), [w, p] = Zo(r, Q.useCallback((g) => [r.selectors.isTop(g, i), r.selectors.inStack(g, i)], [r, i]));
   return Gt(() => {
     if (t) return r.actions.push(i), () => r.actions.pop(i);
   }, [r, t, i]), t ? p ? w : !0 : !1;
@@ -15361,7 +15361,7 @@ function ZR(t, e, i) {
     let p = w.getBoundingClientRect();
     p.x === 0 && p.y === 0 && p.width === 0 && p.height === 0 && i();
   });
-  W.useEffect(() => {
+  Q.useEffect(() => {
     if (!t) return;
     let w = e === null ? null : Bi(e) ? e : e.current;
     if (!w) return;
@@ -15467,7 +15467,7 @@ function wA() {
 }
 function ns(t, e, i, r) {
   let w = ds(i);
-  W.useEffect(() => {
+  Q.useEffect(() => {
     if (!t) return;
     function p(g) {
       w.current(g);
@@ -15477,7 +15477,7 @@ function ns(t, e, i, r) {
 }
 function uk(t, e, i, r) {
   let w = ds(i);
-  W.useEffect(() => {
+  Q.useEffect(() => {
     if (!t) return;
     function p(g) {
       w.current(g);
@@ -15487,7 +15487,7 @@ function uk(t, e, i, r) {
 }
 const yA = 30;
 function dk(t, e, i) {
-  let r = ds(i), w = W.useCallback(function(E, h) {
+  let r = ds(i), w = Q.useCallback(function(E, h) {
     if (E.defaultPrevented) return;
     let m = h(E);
     if (m === null || !m.getRootNode().contains(m) || !m.isConnected) return;
@@ -15496,7 +15496,7 @@ function dk(t, e, i) {
     })(e);
     for (let c of s) if (c !== null && (c.contains(m) || E.composed && E.composedPath().includes(c))) return;
     return !Fm(m, Bm.Loose) && m.tabIndex !== -1 && E.preventDefault(), r.current(E, m);
-  }, [r, e]), p = W.useRef(null);
+  }, [r, e]), p = Q.useRef(null);
   ns(t, "pointerdown", (E) => {
     var h, m;
     wA() || (p.current = ((m = (h = E.composedPath) == null ? void 0 : h.call(E)) == null ? void 0 : m[0]) || E.target);
@@ -15505,7 +15505,7 @@ function dk(t, e, i) {
     let h = p.current;
     return p.current = null, w(E, () => h);
   }, !0);
-  let g = W.useRef({ x: 0, y: 0 });
+  let g = Q.useRef({ x: 0, y: 0 });
   ns(t, "touchstart", (E) => {
     g.current.x = E.touches[0].clientX, g.current.y = E.touches[0].clientY;
   }, !0), ns(t, "touchend", (E) => {
@@ -15514,12 +15514,12 @@ function dk(t, e, i) {
   }, !0), uk(t, "blur", (E) => w(E, () => _R(window.document.activeElement) ? window.document.activeElement : null), !0);
 }
 function mm(...t) {
-  return W.useMemo(() => Dl(...t), [...t]);
+  return Q.useMemo(() => Dl(...t), [...t]);
 }
 var hk = ((t) => (t[t.Ignore = 0] = "Ignore", t[t.Select = 1] = "Select", t[t.Close = 2] = "Close", t))(hk || {});
 const iu = { Ignore: { kind: 0 }, Select: (t) => ({ kind: 1, target: t }), Close: { kind: 2 } }, fk = 200, TA = 5;
 function mk(t, { trigger: e, action: i, close: r, select: w }) {
-  let p = W.useRef(null), g = W.useRef(null), E = W.useRef(null);
+  let p = Q.useRef(null), g = Q.useRef(null), E = Q.useRef(null);
   ns(t && e !== null, "pointerdown", (h) => {
     b1(h == null ? void 0 : h.target) && e != null && e.contains(h.target) && (g.current = h.x, E.current = h.y, p.current = h.timeStamp);
   }), ns(t && e !== null, "pointerup", (h) => {
@@ -15542,7 +15542,7 @@ function mk(t, { trigger: e, action: i, close: r, select: w }) {
   }, { capture: !0 });
 }
 function pk(t, e) {
-  return W.useMemo(() => {
+  return Q.useMemo(() => {
     var i;
     if (t.type) return t.type;
     let r = (i = t.as) != null ? i : "button";
@@ -15550,7 +15550,7 @@ function pk(t, e) {
   }, [t.type, t.as, e]);
 }
 function gk(t) {
-  return W.useSyncExternalStore(t.subscribe, t.getSnapshot, t.getSnapshot);
+  return Q.useSyncExternalStore(t.subscribe, t.getSnapshot, t.getSnapshot);
 }
 function bk(t, e) {
   let i = t(), r = /* @__PURE__ */ new Set();
@@ -15672,7 +15672,7 @@ function SA(t) {
   return [t.screenX, t.screenY];
 }
 function Ak() {
-  let t = W.useRef([-1, -1]);
+  let t = Q.useRef([-1, -1]);
   return { wasMoved(e) {
     let i = SA(e);
     return t.current[0] === i[0] && t.current[1] === i[1] ? !1 : (t.current = i, !0);
@@ -15681,7 +15681,7 @@ function Ak() {
   } };
 }
 function Sk(t = 0) {
-  let [e, i] = W.useState(t), r = W.useCallback((h) => i(h), []), w = W.useCallback((h) => i((m) => m | h), []), p = W.useCallback((h) => (e & h) === h, [e]), g = W.useCallback((h) => i((m) => m & ~h), []), E = W.useCallback((h) => i((m) => m ^ h), []);
+  let [e, i] = Q.useState(t), r = Q.useCallback((h) => i(h), []), w = Q.useCallback((h) => i((m) => m | h), []), p = Q.useCallback((h) => (e & h) === h, [e]), g = Q.useCallback((h) => i((m) => m & ~h), []), E = Q.useCallback((h) => i((m) => m ^ h), []);
   return { flags: e, setFlag: r, addFlag: w, hasFlag: p, removeFlag: g, toggleFlag: E };
 }
 var _k = {}, _A, xA;
@@ -15696,7 +15696,7 @@ function M1(t) {
   return e;
 }
 function $1(t, e, i, r) {
-  let [w, p] = W.useState(i), { hasFlag: g, addFlag: E, removeFlag: h } = Sk(t && w ? 3 : 0), m = W.useRef(!1), s = W.useRef(!1), c = us();
+  let [w, p] = Q.useState(i), { hasFlag: g, addFlag: E, removeFlag: h } = Sk(t && w ? 3 : 0), m = Q.useRef(!1), s = Q.useRef(!1), c = us();
   return Gt(() => {
     var u;
     if (t) {
@@ -15749,8 +15749,8 @@ function Rk(t) {
   return ((i = (e = t.getAnimations) == null ? void 0 : e.call(t)) != null ? i : []).some((r) => r instanceof CSSTransition && r.playState !== "finished");
 }
 function kk(t, { container: e, accept: i, walk: r }) {
-  let w = W.useRef(i), p = W.useRef(r);
-  W.useEffect(() => {
+  let w = Q.useRef(i), p = Q.useRef(r);
+  Q.useEffect(() => {
     w.current = i, p.current = r;
   }, [i, r]), Gt(() => {
     if (!e || !t) return;
@@ -16059,8 +16059,8 @@ const Jk = async (t, e, i) => {
       fn: y
     } = E[f], {
       x: A,
-      y: N,
-      data: C,
+      y: C,
+      data: N,
       reset: S
     } = await y({
       x: s,
@@ -16076,11 +16076,11 @@ const Jk = async (t, e, i) => {
         floating: e
       }
     });
-    s = A ?? s, c = N ?? c, d = {
+    s = A ?? s, c = C ?? c, d = {
       ...d,
       [b]: {
         ...d[b],
-        ...C
+        ...N
       }
     }, S && a <= 50 && (a++, typeof S == "object" && (S.placement && (u = S.placement), S.rects && (m = S.rects === !0 ? await g.getElementRects({
       reference: t,
@@ -16125,7 +16125,7 @@ async function Ku(t, e) {
     y: w,
     width: g.floating.width,
     height: g.floating.height
-  } : g.reference, N = await (p.getOffsetParent == null ? void 0 : p.getOffsetParent(E.floating)), C = await (p.isElement == null ? void 0 : p.isElement(N)) ? await (p.getScale == null ? void 0 : p.getScale(N)) || {
+  } : g.reference, C = await (p.getOffsetParent == null ? void 0 : p.getOffsetParent(E.floating)), N = await (p.isElement == null ? void 0 : p.isElement(C)) ? await (p.getScale == null ? void 0 : p.getScale(C)) || {
     x: 1,
     y: 1
   } : {
@@ -16134,14 +16134,14 @@ async function Ku(t, e) {
   }, S = _u(p.convertOffsetParentRelativeRectToViewportRelativeRect ? await p.convertOffsetParentRelativeRectToViewportRelativeRect({
     elements: E,
     rect: A,
-    offsetParent: N,
+    offsetParent: C,
     strategy: h
   }) : A);
   return {
-    top: (y.top - S.top + a.top) / C.y,
-    bottom: (S.bottom - y.bottom + a.bottom) / C.y,
-    left: (y.left - S.left + a.left) / C.x,
-    right: (S.right - y.right + a.right) / C.x
+    top: (y.top - S.top + a.top) / N.y,
+    bottom: (S.bottom - y.bottom + a.bottom) / N.y,
+    left: (y.left - S.left + a.left) / N.x,
+    right: (S.right - y.right + a.right) / N.x
   };
 }
 const eO = function(t) {
@@ -16168,12 +16168,12 @@ const eO = function(t) {
       } = ms(t, e);
       if ((i = p.arrow) != null && i.alignmentOffset)
         return {};
-      const y = Sr(w), A = Ui(E), N = Sr(E) === E, C = await (h.isRTL == null ? void 0 : h.isRTL(m.floating)), S = u || (N || !f ? [Su(E)] : Qk(E)), T = a !== "none";
-      !u && T && S.push(...Xk(E, f, a, C));
+      const y = Sr(w), A = Ui(E), C = Sr(E) === E, N = await (h.isRTL == null ? void 0 : h.isRTL(m.floating)), S = u || (C || !f ? [Su(E)] : Qk(E)), T = a !== "none";
+      !u && T && S.push(...Xk(E, f, a, N));
       const k = [E, ...S], M = await Ku(e, b), I = [];
       let $ = ((r = p.flip) == null ? void 0 : r.overflows) || [];
       if (s && I.push(M[y]), c) {
-        const x = Wk(w, g, C);
+        const x = Wk(w, g, N);
         I.push(M[x[0]], M[x[1]]);
       }
       if ($ = [...$, {
@@ -16207,7 +16207,7 @@ const eO = function(t) {
                   P === "y";
                 }
                 return !0;
-              }).map((H) => [H.placement, H.overflows.filter((P) => P > 0).reduce((P, Q) => P + Q, 0)]).sort((H, P) => H[1] - P[1])[0]) == null ? void 0 : O[0];
+              }).map((H) => [H.placement, H.overflows.filter((P) => P > 0).reduce((P, W) => P + W, 0)]).sort((H, P) => H[1] - P[1])[0]) == null ? void 0 : O[0];
               z && (L = z);
               break;
             }
@@ -16306,12 +16306,12 @@ const oO = function(t) {
       }, s = await Ku(e, h), c = Ui(Sr(w)), u = z1(c);
       let d = m[u], a = m[c];
       if (p) {
-        const b = u === "y" ? "top" : "left", y = u === "y" ? "bottom" : "right", A = d + s[b], N = d - s[y];
-        d = CA(A, d, N);
+        const b = u === "y" ? "top" : "left", y = u === "y" ? "bottom" : "right", A = d + s[b], C = d - s[y];
+        d = CA(A, d, C);
       }
       if (g) {
-        const b = c === "y" ? "top" : "left", y = c === "y" ? "bottom" : "right", A = a + s[b], N = a - s[y];
-        a = CA(A, a, N);
+        const b = c === "y" ? "top" : "left", y = c === "y" ? "bottom" : "right", A = a + s[b], C = a - s[y];
+        a = CA(A, a, C);
       }
       const f = E.fn({
         ...e,
@@ -16352,9 +16352,9 @@ const oO = function(t) {
       } = p.floating;
       let b, y;
       c === "top" || c === "bottom" ? (b = c, y = u === (await (g.isRTL == null ? void 0 : g.isRTL(E.floating)) ? "start" : "end") ? "left" : "right") : (y = c, b = u === "end" ? "top" : "bottom");
-      const A = f - s.top - s.bottom, N = a - s.left - s.right, C = oa(f - s[b], A), S = oa(a - s[y], N), T = !e.middlewareData.shift;
-      let k = C, M = S;
-      if ((i = e.middlewareData.shift) != null && i.enabled.x && (M = N), (r = e.middlewareData.shift) != null && r.enabled.y && (k = A), T && !u) {
+      const A = f - s.top - s.bottom, C = a - s.left - s.right, N = oa(f - s[b], A), S = oa(a - s[y], C), T = !e.middlewareData.shift;
+      let k = N, M = S;
+      if ((i = e.middlewareData.shift) != null && i.enabled.x && (M = C), (r = e.middlewareData.shift) != null && r.enabled.y && (k = A), T && !u) {
         const $ = Rn(s.left, 0), B = Rn(s.right, 0), D = Rn(s.top, 0), O = Rn(s.bottom, 0);
         d ? M = a - 2 * ($ !== 0 || B !== 0 ? $ + B : Rn(s.left, s.right)) : k = f - 2 * (D !== 0 || O !== 0 ? D + O : Rn(s.top, s.bottom));
       }
@@ -16422,8 +16422,8 @@ function ia(t, e, i, r) {
     const u = bo(p), d = r && $n(r) ? bo(r) : r;
     let a = u, f = pm(a);
     for (; f && r && d !== a; ) {
-      const b = is(f), y = f.getBoundingClientRect(), A = ei(f), N = y.left + (f.clientLeft + parseFloat(A.paddingLeft)) * b.x, C = y.top + (f.clientTop + parseFloat(A.paddingTop)) * b.y;
-      h *= b.x, m *= b.y, s *= b.x, c *= b.y, h += N, m += C, a = bo(f), f = pm(a);
+      const b = is(f), y = f.getBoundingClientRect(), A = ei(f), C = y.left + (f.clientLeft + parseFloat(A.paddingLeft)) * b.x, N = y.top + (f.clientTop + parseFloat(A.paddingTop)) * b.y;
+      h *= b.x, m *= b.y, s *= b.x, c *= b.y, h += C, m += N, a = bo(f), f = pm(a);
     }
   }
   return _u({
@@ -16680,30 +16680,30 @@ function yO(t, e) {
     } = m;
     if (E || e(), !u || !d)
       return;
-    const a = ru(c), f = ru(w.clientWidth - (s + u)), b = ru(w.clientHeight - (c + d)), y = ru(s), N = {
+    const a = ru(c), f = ru(w.clientWidth - (s + u)), b = ru(w.clientHeight - (c + d)), y = ru(s), C = {
       rootMargin: -a + "px " + -f + "px " + -b + "px " + -y + "px",
       threshold: Rn(0, oa(1, h)) || 1
     };
-    let C = !0;
+    let N = !0;
     function S(T) {
       const k = T[0].intersectionRatio;
       if (k !== h) {
-        if (!C)
+        if (!N)
           return g();
         k ? g(!1, k) : r = setTimeout(() => {
           g(!1, 1e-7);
         }, 1e3);
       }
-      k === 1 && !V1(m, t.getBoundingClientRect()) && g(), C = !1;
+      k === 1 && !V1(m, t.getBoundingClientRect()) && g(), N = !1;
     }
     try {
       i = new IntersectionObserver(S, {
-        ...N,
+        ...C,
         // Handle <iframe>s
         root: w.ownerDocument
       });
     } catch {
-      i = new IntersectionObserver(S, N);
+      i = new IntersectionObserver(S, C);
     }
     i.observe(t);
   }
@@ -16728,8 +16728,8 @@ function TO(t, e, i, r) {
   g && (d = new ResizeObserver((y) => {
     let [A] = y;
     A && A.target === m && d && (d.unobserve(e), cancelAnimationFrame(u), u = requestAnimationFrame(() => {
-      var N;
-      (N = d) == null || N.observe(e);
+      var C;
+      (C = d) == null || C.observe(e);
     })), i();
   }), m && !h && d.observe(m), d.observe(e));
   let a, f = h ? ia(t) : null;
@@ -16759,7 +16759,7 @@ const Af = Ku, AO = oO, SO = iO, _O = eO, xO = rO, LO = (t, e, i) => {
   });
 };
 var CO = typeof document < "u", NO = function() {
-}, fu = CO ? W.useLayoutEffect : NO;
+}, fu = CO ? Q.useLayoutEffect : NO;
 function xu(t, e) {
   if (t === e)
     return !0;
@@ -16798,7 +16798,7 @@ function MA(t, e) {
   return Math.round(e * i) / i;
 }
 function Sf(t) {
-  const e = W.useRef(t);
+  const e = Q.useRef(t);
   return fu(() => {
     e.current = t;
   }), e;
@@ -16817,20 +16817,20 @@ function RO(t) {
     transform: E = !0,
     whileElementsMounted: h,
     open: m
-  } = t, [s, c] = W.useState({
+  } = t, [s, c] = Q.useState({
     x: 0,
     y: 0,
     strategy: i,
     placement: e,
     middlewareData: {},
     isPositioned: !1
-  }), [u, d] = W.useState(r);
+  }), [u, d] = Q.useState(r);
   xu(u, r) || d(r);
-  const [a, f] = W.useState(null), [b, y] = W.useState(null), A = W.useCallback((H) => {
+  const [a, f] = Q.useState(null), [b, y] = Q.useState(null), A = Q.useCallback((H) => {
     H !== T.current && (T.current = H, f(H));
-  }, []), N = W.useCallback((H) => {
+  }, []), C = Q.useCallback((H) => {
     H !== k.current && (k.current = H, y(H));
-  }, []), C = p || a, S = g || b, T = W.useRef(null), k = W.useRef(null), M = W.useRef(s), I = h != null, $ = Sf(h), B = Sf(w), D = Sf(m), O = W.useCallback(() => {
+  }, []), N = p || a, S = g || b, T = Q.useRef(null), k = Q.useRef(null), M = Q.useRef(s), I = h != null, $ = Sf(h), B = Sf(w), D = Sf(m), O = Q.useCallback(() => {
     if (!T.current || !k.current)
       return;
     const H = {
@@ -16839,7 +16839,7 @@ function RO(t) {
       middleware: u
     };
     B.current && (H.platform = B.current), LO(T.current, k.current, H).then((P) => {
-      const Q = {
+      const W = {
         ...P,
         // The floating element's position may be recomputed while it's closed
         // but still mounted (such as when transitioning out). To ensure
@@ -16847,8 +16847,8 @@ function RO(t) {
         // setting it to `true` when `open === false` (must be specified).
         isPositioned: D.current !== !1
       };
-      x.current && !xu(M.current, Q) && (M.current = Q, Tr.flushSync(() => {
-        c(Q);
+      x.current && !xu(M.current, W) && (M.current = W, Tr.flushSync(() => {
+        c(W);
       }));
     });
   }, [u, e, i, B, D]);
@@ -16858,25 +16858,25 @@ function RO(t) {
       isPositioned: !1
     })));
   }, [m]);
-  const x = W.useRef(!1);
+  const x = Q.useRef(!1);
   fu(() => (x.current = !0, () => {
     x.current = !1;
   }), []), fu(() => {
-    if (C && (T.current = C), S && (k.current = S), C && S) {
+    if (N && (T.current = N), S && (k.current = S), N && S) {
       if ($.current)
-        return $.current(C, S, O);
+        return $.current(N, S, O);
       O();
     }
-  }, [C, S, O, $, I]);
-  const _ = W.useMemo(() => ({
+  }, [N, S, O, $, I]);
+  const _ = Q.useMemo(() => ({
     reference: T,
     floating: k,
     setReference: A,
-    setFloating: N
-  }), [A, N]), L = W.useMemo(() => ({
-    reference: C,
+    setFloating: C
+  }), [A, C]), L = Q.useMemo(() => ({
+    reference: N,
     floating: S
-  }), [C, S]), z = W.useMemo(() => {
+  }), [N, S]), z = Q.useMemo(() => {
     const H = {
       position: i,
       left: 0,
@@ -16884,20 +16884,20 @@ function RO(t) {
     };
     if (!L.floating)
       return H;
-    const P = MA(L.floating, s.x), Q = MA(L.floating, s.y);
+    const P = MA(L.floating, s.x), W = MA(L.floating, s.y);
     return E ? {
       ...H,
-      transform: "translate(" + P + "px, " + Q + "px)",
+      transform: "translate(" + P + "px, " + W + "px)",
       ...K1(L.floating) >= 1.5 && {
         willChange: "transform"
       }
     } : {
       position: i,
       left: P,
-      top: Q
+      top: W
     };
   }, [i, E, L.floating, s.x, s.y]);
-  return W.useMemo(() => ({
+  return Q.useMemo(() => ({
     ...s,
     update: O,
     refs: _,
@@ -16921,17 +16921,17 @@ const Y1 = (t, e) => ({
   ...tm
 }, DO = X1.useInsertionEffect, MO = DO || ((t) => t());
 function q1(t) {
-  const e = W.useRef(() => {
+  const e = Q.useRef(() => {
   });
   return MO(() => {
     e.current = t;
-  }), W.useCallback(function() {
+  }), Q.useCallback(function() {
     for (var i = arguments.length, r = new Array(i), w = 0; w < i; w++)
       r[w] = arguments[w];
     return e.current == null ? void 0 : e.current(...r);
   }, []);
 }
-var bm = typeof document < "u" ? W.useLayoutEffect : W.useEffect;
+var bm = typeof document < "u" ? Q.useLayoutEffect : Q.useEffect;
 let $A = !1, $O = 0;
 const UA = () => (
   // Ensure the id is unique with multiple independent versions of Floating UI
@@ -16939,10 +16939,10 @@ const UA = () => (
   "floating-ui-" + Math.random().toString(36).slice(2, 6) + $O++
 );
 function UO() {
-  const [t, e] = W.useState(() => $A ? UA() : void 0);
+  const [t, e] = Q.useState(() => $A ? UA() : void 0);
   return bm(() => {
     t == null && e(UA());
-  }, []), W.useEffect(() => {
+  }, []), Q.useEffect(() => {
     $A = !0;
   }, []), t;
 }
@@ -16963,30 +16963,30 @@ function BO() {
     }
   };
 }
-const FO = /* @__PURE__ */ W.createContext(null), PO = /* @__PURE__ */ W.createContext(null), jO = () => {
+const FO = /* @__PURE__ */ Q.createContext(null), PO = /* @__PURE__ */ Q.createContext(null), jO = () => {
   var t;
-  return ((t = W.useContext(FO)) == null ? void 0 : t.id) || null;
-}, GO = () => W.useContext(PO), WO = "data-floating-ui-focusable";
+  return ((t = Q.useContext(FO)) == null ? void 0 : t.id) || null;
+}, GO = () => Q.useContext(PO), WO = "data-floating-ui-focusable";
 function QO(t) {
   const {
     open: e = !1,
     onOpenChange: i,
     elements: r
-  } = t, w = zO(), p = W.useRef({}), [g] = W.useState(() => BO()), E = jO() != null, [h, m] = W.useState(r.reference), s = q1((d, a, f) => {
+  } = t, w = zO(), p = Q.useRef({}), [g] = Q.useState(() => BO()), E = jO() != null, [h, m] = Q.useState(r.reference), s = q1((d, a, f) => {
     p.current.openEvent = d ? a : void 0, g.emit("openchange", {
       open: d,
       event: a,
       reason: f,
       nested: E
     }), i == null || i(d, a, f);
-  }), c = W.useMemo(() => ({
+  }), c = Q.useMemo(() => ({
     setPositionReference: m
-  }), []), u = W.useMemo(() => ({
+  }), []), u = Q.useMemo(() => ({
     reference: h || r.reference || null,
     floating: r.floating || null,
     domReference: r.reference
   }), [h, r.reference, r.floating]);
-  return W.useMemo(() => ({
+  return Q.useMemo(() => ({
     dataRef: p,
     open: e,
     onOpenChange: s,
@@ -17007,7 +17007,7 @@ function VO(t) {
       floating: null,
       ...t.elements
     }
-  }), r = t.rootContext || i, w = r.elements, [p, g] = W.useState(null), [E, h] = W.useState(null), s = (w == null ? void 0 : w.domReference) || p, c = W.useRef(null), u = GO();
+  }), r = t.rootContext || i, w = r.elements, [p, g] = Q.useState(null), [E, h] = Q.useState(null), s = (w == null ? void 0 : w.domReference) || p, c = Q.useRef(null), u = GO();
   bm(() => {
     s && (c.current = s);
   }, [s]);
@@ -17019,26 +17019,26 @@ function VO(t) {
         reference: E
       }
     }
-  }), a = W.useCallback((N) => {
-    const C = $n(N) ? {
-      getBoundingClientRect: () => N.getBoundingClientRect(),
-      contextElement: N
-    } : N;
-    h(C), d.refs.setReference(C);
-  }, [d.refs]), f = W.useCallback((N) => {
-    ($n(N) || N === null) && (c.current = N, g(N)), ($n(d.refs.reference.current) || d.refs.reference.current === null || // Don't allow setting virtual elements using the old technique back to
+  }), a = Q.useCallback((C) => {
+    const N = $n(C) ? {
+      getBoundingClientRect: () => C.getBoundingClientRect(),
+      contextElement: C
+    } : C;
+    h(N), d.refs.setReference(N);
+  }, [d.refs]), f = Q.useCallback((C) => {
+    ($n(C) || C === null) && (c.current = C, g(C)), ($n(d.refs.reference.current) || d.refs.reference.current === null || // Don't allow setting virtual elements using the old technique back to
     // `null` to support `positionReference` + an unstable `reference`
     // callback ref.
-    N !== null && !$n(N)) && d.refs.setReference(N);
-  }, [d.refs]), b = W.useMemo(() => ({
+    C !== null && !$n(C)) && d.refs.setReference(C);
+  }, [d.refs]), b = Q.useMemo(() => ({
     ...d.refs,
     setReference: f,
     setPositionReference: a,
     domReference: c
-  }), [d.refs, f, a]), y = W.useMemo(() => ({
+  }), [d.refs, f, a]), y = Q.useMemo(() => ({
     ...d.elements,
     domReference: s
-  }), [d.elements, s]), A = W.useMemo(() => ({
+  }), [d.elements, s]), A = Q.useMemo(() => ({
     ...d,
     ...r,
     refs: b,
@@ -17047,9 +17047,9 @@ function VO(t) {
   }), [d, b, y, e, r]);
   return bm(() => {
     r.dataRef.current.floatingContext = A;
-    const N = u == null ? void 0 : u.nodesRef.current.find((C) => C.id === e);
-    N && (N.context = A);
-  }), W.useMemo(() => ({
+    const C = u == null ? void 0 : u.nodesRef.current.find((N) => N.id === e);
+    C && (C.context = A);
+  }), Q.useMemo(() => ({
     ...d,
     context: A,
     refs: b,
@@ -17096,20 +17096,20 @@ function _f(t, e, i) {
 }
 function KO(t) {
   t === void 0 && (t = []);
-  const e = t.map((E) => E == null ? void 0 : E.reference), i = t.map((E) => E == null ? void 0 : E.floating), r = t.map((E) => E == null ? void 0 : E.item), w = W.useCallback(
+  const e = t.map((E) => E == null ? void 0 : E.reference), i = t.map((E) => E == null ? void 0 : E.floating), r = t.map((E) => E == null ? void 0 : E.item), w = Q.useCallback(
     (E) => _f(E, t, "reference"),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     e
-  ), p = W.useCallback(
+  ), p = Q.useCallback(
     (E) => _f(E, t, "floating"),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     i
-  ), g = W.useCallback(
+  ), g = Q.useCallback(
     (E) => _f(E, t, "item"),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     r
   );
-  return W.useMemo(() => ({
+  return Q.useMemo(() => ({
     getReferenceProps: w,
     getFloatingProps: p,
     getItemProps: g
@@ -17149,19 +17149,19 @@ const YO = (t) => ({
     } = e, d = i.current[g], a = (m == null ? void 0 : m.current) || u, f = u.clientTop || a.clientTop, b = u.clientTop !== 0, y = a.clientTop !== 0, A = u === a;
     if (!d)
       return {};
-    const N = {
+    const C = {
       ...e,
       ...await Y1(-d.offsetTop - u.clientTop - c.reference.height / 2 - d.offsetHeight / 2 - p).fn(e)
-    }, C = await Af(BA(N, a.scrollHeight + f + u.clientTop), s), S = await Af(N, {
+    }, N = await Af(BA(C, a.scrollHeight + f + u.clientTop), s), S = await Af(C, {
       ...s,
       elementContext: "reference"
-    }), T = Rn(0, C.top), k = N.y + T, $ = (a.scrollHeight > a.clientHeight ? (B) => B : Cl)(Rn(0, a.scrollHeight + (b && A || y ? f * 2 : 0) - T - Rn(0, C.bottom)));
+    }), T = Rn(0, N.top), k = C.y + T, $ = (a.scrollHeight > a.clientHeight ? (B) => B : Cl)(Rn(0, a.scrollHeight + (b && A || y ? f * 2 : 0) - T - Rn(0, N.bottom)));
     if (a.style.maxHeight = $ + "px", a.scrollTop = T, w) {
       const B = a.offsetHeight < d.offsetHeight * oa(E, i.current.length) - 1 || S.top >= -h || S.bottom >= -h;
       Tr.flushSync(() => w(B));
     }
     return r && (r.current = await Af(BA({
-      ...N,
+      ...C,
       y: k
     }, a.offsetHeight + f + u.clientTop), s)), {
       y: k
@@ -17177,15 +17177,15 @@ function XO(t, e) {
     overflowRef: p,
     scrollRef: g,
     onChange: E
-  } = e, h = q1(E), m = W.useRef(!1), s = W.useRef(null), c = W.useRef(null);
-  W.useEffect(() => {
+  } = e, h = q1(E), m = Q.useRef(!1), s = Q.useRef(null), c = Q.useRef(null);
+  Q.useEffect(() => {
     if (!w) return;
     function d(f) {
       if (f.ctrlKey || !a || p.current == null)
         return;
-      const b = f.deltaY, y = p.current.top >= -0.5, A = p.current.bottom >= -0.5, N = a.scrollHeight - a.clientHeight, C = b < 0 ? -1 : 1, S = b < 0 ? "max" : "min";
+      const b = f.deltaY, y = p.current.top >= -0.5, A = p.current.bottom >= -0.5, C = a.scrollHeight - a.clientHeight, N = b < 0 ? -1 : 1, S = b < 0 ? "max" : "min";
       a.scrollHeight <= a.clientHeight || (!y && b > 0 || !A && b < 0 ? (f.preventDefault(), Tr.flushSync(() => {
-        h((T) => T + Math[S](b, N * C));
+        h((T) => T + Math[S](b, C * N));
       })) : /firefox/i.test(Fk()) && (a.scrollTop += b));
     }
     const a = (g == null ? void 0 : g.current) || r.floating;
@@ -17198,7 +17198,7 @@ function XO(t, e) {
         s.current = null, c.current = null, a.removeEventListener("wheel", d);
       };
   }, [w, i, r.floating, p, g, h]);
-  const u = W.useMemo(() => ({
+  const u = Q.useMemo(() => ({
     onKeyDown() {
       m.current = !0;
     },
@@ -17221,75 +17221,75 @@ function XO(t, e) {
       }
     }
   }), [r.floating, h, p, g]);
-  return W.useMemo(() => w ? {
+  return Q.useMemo(() => w ? {
     floating: u
   } : {}, [w, u]);
 }
-let ps = W.createContext({ styles: void 0, setReference: () => {
+let ps = Q.createContext({ styles: void 0, setReference: () => {
 }, setFloating: () => {
 }, getReferenceProps: () => ({}), getFloatingProps: () => ({}), slot: {} });
 ps.displayName = "FloatingContext";
-let Wm = W.createContext(null);
+let Wm = Q.createContext(null);
 Wm.displayName = "PlacementContext";
 function qO(t) {
-  return W.useMemo(() => t ? typeof t == "string" ? { to: t } : t : null, [t]);
+  return Q.useMemo(() => t ? typeof t == "string" ? { to: t } : t : null, [t]);
 }
 function ZO() {
-  return W.useContext(ps).setReference;
+  return Q.useContext(ps).setReference;
 }
 function JO() {
-  return W.useContext(ps).getReferenceProps;
+  return Q.useContext(ps).getReferenceProps;
 }
 function eI() {
-  let { getFloatingProps: t, slot: e } = W.useContext(ps);
-  return W.useCallback((...i) => Object.assign({}, t(...i), { "data-anchor": e.anchor }), [t, e]);
+  let { getFloatingProps: t, slot: e } = Q.useContext(ps);
+  return Q.useCallback((...i) => Object.assign({}, t(...i), { "data-anchor": e.anchor }), [t, e]);
 }
 function tI(t = null) {
   t === !1 && (t = null), typeof t == "string" && (t = { to: t });
-  let e = W.useContext(Wm), i = W.useMemo(() => t, [JSON.stringify(t, (w, p) => {
+  let e = Q.useContext(Wm), i = Q.useMemo(() => t, [JSON.stringify(t, (w, p) => {
     var g;
     return (g = p == null ? void 0 : p.outerHTML) != null ? g : p;
   })]);
   Gt(() => {
     e == null || e(i ?? null);
   }, [e, i]);
-  let r = W.useContext(ps);
-  return W.useMemo(() => [r.setFloating, t ? r.styles : {}], [r.setFloating, t, r.styles]);
+  let r = Q.useContext(ps);
+  return Q.useMemo(() => [r.setFloating, t ? r.styles : {}], [r.setFloating, t, r.styles]);
 }
 let FA = 4;
 function nI({ children: t, enabled: e = !0 }) {
-  let [i, r] = W.useState(null), [w, p] = W.useState(0), g = W.useRef(null), [E, h] = W.useState(null);
+  let [i, r] = Q.useState(null), [w, p] = Q.useState(0), g = Q.useRef(null), [E, h] = Q.useState(null);
   oI(E);
   let m = e && i !== null && E !== null, { to: s = "bottom", gap: c = 0, offset: u = 0, padding: d = 0, inner: a } = iI(i, E), [f, b = "center"] = s.split(" ");
   Gt(() => {
     m && p(0);
   }, [m]);
-  let { refs: y, floatingStyles: A, context: N } = VO({ open: m, placement: f === "selection" ? b === "center" ? "bottom" : `bottom-${b}` : b === "center" ? `${f}` : `${f}-${b}`, strategy: "absolute", transform: !1, middleware: [Y1({ mainAxis: f === "selection" ? 0 : c, crossAxis: u }), kO({ padding: d }), f !== "selection" && OO({ padding: d }), f === "selection" && a ? YO({ ...a, padding: d, overflowRef: g, offset: w, minItemsVisible: FA, referenceOverflowThreshold: d, onFallbackChange(B) {
+  let { refs: y, floatingStyles: A, context: C } = VO({ open: m, placement: f === "selection" ? b === "center" ? "bottom" : `bottom-${b}` : b === "center" ? `${f}` : `${f}-${b}`, strategy: "absolute", transform: !1, middleware: [Y1({ mainAxis: f === "selection" ? 0 : c, crossAxis: u }), kO({ padding: d }), f !== "selection" && OO({ padding: d }), f === "selection" && a ? YO({ ...a, padding: d, overflowRef: g, offset: w, minItemsVisible: FA, referenceOverflowThreshold: d, onFallbackChange(B) {
     var D, O;
     if (!B) return;
-    let x = N.elements.floating;
+    let x = C.elements.floating;
     if (!x) return;
     let _ = parseFloat(getComputedStyle(x).scrollPaddingBottom) || 0, L = Math.min(FA, x.childElementCount), z = 0, H = 0;
-    for (let P of (O = (D = N.elements.floating) == null ? void 0 : D.childNodes) != null ? O : []) if (Bi(P)) {
-      let Q = P.offsetTop, F = Q + P.clientHeight + _, K = x.scrollTop, V = K + x.clientHeight;
-      if (Q >= K && F <= V) L--;
+    for (let P of (O = (D = C.elements.floating) == null ? void 0 : D.childNodes) != null ? O : []) if (Bi(P)) {
+      let W = P.offsetTop, F = W + P.clientHeight + _, K = x.scrollTop, V = K + x.clientHeight;
+      if (W >= K && F <= V) L--;
       else {
-        H = Math.max(0, Math.min(F, V) - Math.max(Q, K)), z = P.clientHeight;
+        H = Math.max(0, Math.min(F, V) - Math.max(W, K)), z = P.clientHeight;
         break;
       }
     }
     L >= 1 && p((P) => {
-      let Q = z * L - H + _;
-      return P >= Q ? P : Q;
+      let W = z * L - H + _;
+      return P >= W ? P : W;
     });
   } }) : null, IO({ padding: d, apply({ availableWidth: B, availableHeight: D, elements: O }) {
     Object.assign(O.floating.style, { overflow: "auto", maxWidth: `${B}px`, maxHeight: `min(var(--anchor-max-height, 100vh), ${D}px)` });
-  } })].filter(Boolean), whileElementsMounted: TO }), [C = f, S = b] = N.placement.split("-");
-  f === "selection" && (C = "selection");
-  let T = W.useMemo(() => ({ anchor: [C, S].filter(Boolean).join(" ") }), [C, S]), k = XO(N, { overflowRef: g, onChange: p }), { getReferenceProps: M, getFloatingProps: I } = KO([k]), $ = et((B) => {
+  } })].filter(Boolean), whileElementsMounted: TO }), [N = f, S = b] = C.placement.split("-");
+  f === "selection" && (N = "selection");
+  let T = Q.useMemo(() => ({ anchor: [N, S].filter(Boolean).join(" ") }), [N, S]), k = XO(C, { overflowRef: g, onChange: p }), { getReferenceProps: M, getFloatingProps: I } = KO([k]), $ = et((B) => {
     h(B), y.setFloating(B);
   });
-  return W.createElement(Wm.Provider, { value: r }, W.createElement(ps.Provider, { value: { setFloating: $, setReference: y.setReference, styles: A, getReferenceProps: M, getFloatingProps: I, slot: T } }, t));
+  return Q.createElement(Wm.Provider, { value: r }, Q.createElement(ps.Provider, { value: { setFloating: $, setReference: y.setReference, styles: A, getReferenceProps: M, getFloatingProps: I, slot: T } }, t));
 }
 function oI(t) {
   Gt(() => {
@@ -17325,9 +17325,9 @@ function xf(t, e, i = void 0) {
             r.nextFrame(a);
             let f = !1;
             for (let [y, A] of u.entries()) {
-              let N = window.getComputedStyle(m).getPropertyValue(A);
-              if (d[y] !== N) {
-                d[y] = N, f = !0;
+              let C = window.getComputedStyle(m).getPropertyValue(A);
+              if (d[y] !== C) {
+                d[y] = C, f = !0;
                 break;
               }
             }
@@ -17340,7 +17340,7 @@ function xf(t, e, i = void 0) {
       }];
     }
     return [i, null];
-  }), p = W.useMemo(() => w(t, e)[0], [t, e]), [g = p, E] = W.useState();
+  }), p = Q.useMemo(() => w(t, e)[0], [t, e]), [g = p, E] = Q.useState();
   return Gt(() => {
     let [h, m] = w(t, e);
     if (E(h), !!m) return m(E);
@@ -17362,11 +17362,11 @@ function PA(t, e) {
   let r = parseFloat(window.getComputedStyle(i).marginTop) || 0;
   return e.removeChild(i), r;
 }
-let Qm = W.createContext(null);
+let Qm = Q.createContext(null);
 Qm.displayName = "OpenClosedContext";
 var Jo = ((t) => (t[t.Open = 1] = "Open", t[t.Closed = 2] = "Closed", t[t.Closing = 4] = "Closing", t[t.Opening = 8] = "Opening", t))(Jo || {});
 function Vm() {
-  return W.useContext(Qm);
+  return Q.useContext(Qm);
 }
 function J1({ value: t, children: e }) {
   return tt.createElement(Qm.Provider, { value: t }, e);
@@ -17408,19 +17408,19 @@ function au(t, e) {
   }
 }
 function e_(t) {
-  let e = et(t), i = W.useRef(!1);
-  W.useEffect(() => (i.current = !1, () => {
+  let e = et(t), i = Q.useRef(!1);
+  Q.useEffect(() => (i.current = !1, () => {
     i.current = !0, f1(() => {
       i.current && e();
     });
   }), [e]);
 }
-let aI = W.createContext(!1);
+let aI = Q.createContext(!1);
 function sI() {
-  return W.useContext(aI);
+  return Q.useContext(aI);
 }
 function lI(t) {
-  let e = sI(), i = W.useContext(n_), [r, w] = W.useState(() => {
+  let e = sI(), i = Q.useContext(n_), [r, w] = Q.useState(() => {
     var p;
     if (!e && i !== null) return (p = i.current) != null ? p : null;
     if (fi.isServer) return null;
@@ -17430,16 +17430,16 @@ function lI(t) {
     let E = t.createElement("div");
     return E.setAttribute("id", "headlessui-portal-root"), t.body.appendChild(E);
   });
-  return W.useEffect(() => {
+  return Q.useEffect(() => {
     r !== null && (t != null && t.body.contains(r) || t == null || t.body.appendChild(r));
-  }, [r, t]), W.useEffect(() => {
+  }, [r, t]), Q.useEffect(() => {
     e || i !== null && w(i.current);
   }, [i, w, e]), r;
 }
-let t_ = W.Fragment, cI = Bn(function(t, e) {
-  let { ownerDocument: i = null, ...r } = t, w = W.useRef(null), p = ti(NR((u) => {
+let t_ = Q.Fragment, cI = Bn(function(t, e) {
+  let { ownerDocument: i = null, ...r } = t, w = Q.useRef(null), p = ti(NR((u) => {
     w.current = u;
-  }), e), g = mm(w.current), E = i ?? g, h = lI(E), m = W.useContext(fI), s = us(), c = to();
+  }), e), g = mm(w.current), E = i ?? g, h = lI(E), m = Q.useContext(fI), s = us(), c = to();
   return e_(() => {
     var u;
     h && h.childNodes.length <= 0 && ((u = h.parentElement) == null || u.removeChild(h));
@@ -17451,12 +17451,12 @@ function uI(t, e) {
   let i = ti(e), { enabled: r = !0, ownerDocument: w, ...p } = t, g = to();
   return r ? tt.createElement(cI, { ...p, ownerDocument: w, ref: i }) : g({ ourProps: { ref: i }, theirProps: p, slot: {}, defaultTag: t_, name: "Portal" });
 }
-let dI = W.Fragment, n_ = W.createContext(null);
+let dI = Q.Fragment, n_ = Q.createContext(null);
 function hI(t, e) {
   let { target: i, ...r } = t, w = { ref: ti(e) }, p = to();
   return tt.createElement(n_.Provider, { value: i }, p({ ourProps: w, theirProps: r, defaultTag: dI, name: "Popover.Group" }));
 }
-let fI = W.createContext(null), mI = Bn(uI), pI = Bn(hI), gI = Object.assign(mI, { Group: pI });
+let fI = Q.createContext(null), mI = Bn(uI), pI = Bn(hI), gI = Object.assign(mI, { Group: pI });
 const mu = { Idle: { kind: "Idle" }, Tracked: (t) => ({ kind: "Tracked", position: t }), Moved: { kind: "Moved" } };
 function o_(t) {
   let e = t.getBoundingClientRect();
@@ -17478,13 +17478,13 @@ function vI() {
   }, () => !1, () => !t) : !1;
 }
 function i_() {
-  let t = vI(), [e, i] = W.useState(fi.isHandoffComplete);
-  return e && fi.isHandoffComplete === !1 && i(!1), W.useEffect(() => {
+  let t = vI(), [e, i] = Q.useState(fi.isHandoffComplete);
+  return e && fi.isHandoffComplete === !1 && i(!1), Q.useEffect(() => {
     e !== !0 && i(!0);
-  }, [e]), W.useEffect(() => fi.handoff(), []), t ? !1 : e;
+  }, [e]), Q.useEffect(() => fi.handoff(), []), t ? !1 : e;
 }
 function EI() {
-  let t = W.useRef(!1);
+  let t = Q.useRef(!1);
   return Gt(() => (t.current = !0, () => {
     t.current = !1;
   }), []), t;
@@ -17493,26 +17493,26 @@ function r_(t) {
   var e;
   return !!(t.enter || t.enterFrom || t.enterTo || t.leave || t.leaveFrom || t.leaveTo) || !_l((e = t.as) != null ? e : s_) || tt.Children.count(t.children) === 1;
 }
-let Xu = W.createContext(null);
+let Xu = Q.createContext(null);
 Xu.displayName = "TransitionContext";
 var wI = ((t) => (t.Visible = "visible", t.Hidden = "hidden", t))(wI || {});
 function yI() {
-  let t = W.useContext(Xu);
+  let t = Q.useContext(Xu);
   if (t === null) throw new Error("A <Transition.Child /> is used but it is missing a parent <Transition /> or <Transition.Root />.");
   return t;
 }
 function TI() {
-  let t = W.useContext(qu);
+  let t = Q.useContext(qu);
   if (t === null) throw new Error("A <Transition.Child /> is used but it is missing a parent <Transition /> or <Transition.Root />.");
   return t;
 }
-let qu = W.createContext(null);
+let qu = Q.createContext(null);
 qu.displayName = "NestingContext";
 function Zu(t) {
   return "children" in t ? Zu(t.children) : t.current.filter(({ el: e }) => e.current !== null).filter(({ state: e }) => e === "visible").length > 0;
 }
 function a_(t, e) {
-  let i = ds(t), r = W.useRef([]), w = EI(), p = us(), g = et((d, a = Er.Hidden) => {
+  let i = ds(t), r = Q.useRef([]), w = EI(), p = us(), g = et((d, a = Er.Hidden) => {
     let f = r.current.findIndex(({ el: b }) => b === d);
     f !== -1 && (xr(a, { [Er.Unmount]() {
       r.current.splice(f, 1);
@@ -17525,7 +17525,7 @@ function a_(t, e) {
   }), E = et((d) => {
     let a = r.current.find(({ el: f }) => f === d);
     return a ? a.state !== "visible" && (a.state = "visible") : r.current.push({ el: d, state: "visible" }), () => g(d, Er.Unmount);
-  }), h = W.useRef([]), m = W.useRef(Promise.resolve()), s = W.useRef({ enter: [], leave: [] }), c = et((d, a, f) => {
+  }), h = Q.useRef([]), m = Q.useRef(Promise.resolve()), s = Q.useRef({ enter: [], leave: [] }), c = et((d, a, f) => {
     h.current.splice(0), e && (e.chains.current[a] = e.chains.current[a].filter(([b]) => b !== d)), e == null || e.chains.current[a].push([d, new Promise((b) => {
       h.current.push(b);
     })]), e == null || e.chains.current[a].push([d, new Promise((b) => {
@@ -17537,73 +17537,73 @@ function a_(t, e) {
       (b = h.current.shift()) == null || b();
     }).then(() => f(a));
   });
-  return W.useMemo(() => ({ children: r, register: E, unregister: g, onStart: c, onStop: u, wait: m, chains: s }), [E, g, r, c, u, s, m]);
+  return Q.useMemo(() => ({ children: r, register: E, unregister: g, onStart: c, onStop: u, wait: m, chains: s }), [E, g, r, c, u, s, m]);
 }
-let s_ = W.Fragment, l_ = Au.RenderStrategy;
+let s_ = Q.Fragment, l_ = Au.RenderStrategy;
 function AI(t, e) {
   var i, r;
-  let { transition: w = !0, beforeEnter: p, afterEnter: g, beforeLeave: E, afterLeave: h, enter: m, enterFrom: s, enterTo: c, entered: u, leave: d, leaveFrom: a, leaveTo: f, ...b } = t, [y, A] = W.useState(null), N = W.useRef(null), C = r_(t), S = ti(...C ? [N, e, A] : e === null ? [] : [e]), T = (i = b.unmount) == null || i ? Er.Unmount : Er.Hidden, { show: k, appear: M, initial: I } = yI(), [$, B] = W.useState(k ? "visible" : "hidden"), D = TI(), { register: O, unregister: x } = D;
-  Gt(() => O(N), [O, N]), Gt(() => {
-    if (T === Er.Hidden && N.current) {
+  let { transition: w = !0, beforeEnter: p, afterEnter: g, beforeLeave: E, afterLeave: h, enter: m, enterFrom: s, enterTo: c, entered: u, leave: d, leaveFrom: a, leaveTo: f, ...b } = t, [y, A] = Q.useState(null), C = Q.useRef(null), N = r_(t), S = ti(...N ? [C, e, A] : e === null ? [] : [e]), T = (i = b.unmount) == null || i ? Er.Unmount : Er.Hidden, { show: k, appear: M, initial: I } = yI(), [$, B] = Q.useState(k ? "visible" : "hidden"), D = TI(), { register: O, unregister: x } = D;
+  Gt(() => O(C), [O, C]), Gt(() => {
+    if (T === Er.Hidden && C.current) {
       if (k && $ !== "visible") {
         B("visible");
         return;
       }
-      return xr($, { hidden: () => x(N), visible: () => O(N) });
+      return xr($, { hidden: () => x(C), visible: () => O(C) });
     }
-  }, [$, N, O, x, k, T]);
+  }, [$, C, O, x, k, T]);
   let _ = i_();
   Gt(() => {
-    if (C && _ && $ === "visible" && N.current === null) throw new Error("Did you forget to passthrough the `ref` to the actual DOM node?");
-  }, [N, $, _, C]);
-  let L = I && !M, z = M && k && I, H = W.useRef(!1), P = a_(() => {
-    H.current || (B("hidden"), x(N));
-  }, D), Q = et((ne) => {
+    if (N && _ && $ === "visible" && C.current === null) throw new Error("Did you forget to passthrough the `ref` to the actual DOM node?");
+  }, [C, $, _, N]);
+  let L = I && !M, z = M && k && I, H = Q.useRef(!1), P = a_(() => {
+    H.current || (B("hidden"), x(C));
+  }, D), W = et((ne) => {
     H.current = !0;
     let ae = ne ? "enter" : "leave";
-    P.onStart(N, ae, (le) => {
+    P.onStart(C, ae, (le) => {
       le === "enter" ? p == null || p() : le === "leave" && (E == null || E());
     });
   }), F = et((ne) => {
     let ae = ne ? "enter" : "leave";
-    H.current = !1, P.onStop(N, ae, (le) => {
+    H.current = !1, P.onStop(C, ae, (le) => {
       le === "enter" ? g == null || g() : le === "leave" && (h == null || h());
-    }), ae === "leave" && !Zu(P) && (B("hidden"), x(N));
+    }), ae === "leave" && !Zu(P) && (B("hidden"), x(C));
   });
-  W.useEffect(() => {
-    C && w || (Q(k), F(k));
-  }, [k, C, w]);
-  let K = !(!w || !C || !_ || L), [, V] = $1(K, y, k, { start: Q, end: F }), X = Yr({ ref: S, className: ((r = um(b.className, z && m, z && s, V.enter && m, V.enter && V.closed && s, V.enter && !V.closed && c, V.leave && d, V.leave && !V.closed && a, V.leave && V.closed && f, !V.transition && k && u)) == null ? void 0 : r.trim()) || void 0, ...M1(V) }), q = 0;
+  Q.useEffect(() => {
+    N && w || (W(k), F(k));
+  }, [k, N, w]);
+  let K = !(!w || !N || !_ || L), [, V] = $1(K, y, k, { start: W, end: F }), X = Yr({ ref: S, className: ((r = um(b.className, z && m, z && s, V.enter && m, V.enter && V.closed && s, V.enter && !V.closed && c, V.leave && d, V.leave && !V.closed && a, V.leave && V.closed && f, !V.transition && k && u)) == null ? void 0 : r.trim()) || void 0, ...M1(V) }), q = 0;
   $ === "visible" && (q |= Jo.Open), $ === "hidden" && (q |= Jo.Closed), k && $ === "hidden" && (q |= Jo.Opening), !k && $ === "visible" && (q |= Jo.Closing);
   let Z = to();
   return tt.createElement(qu.Provider, { value: P }, tt.createElement(J1, { value: q }, Z({ ourProps: X, theirProps: b, defaultTag: s_, features: l_, visible: $ === "visible", name: "Transition.Child" })));
 }
 function SI(t, e) {
-  let { show: i, appear: r = !1, unmount: w = !0, ...p } = t, g = W.useRef(null), E = r_(t), h = ti(...E ? [g, e] : e === null ? [] : [e]);
+  let { show: i, appear: r = !1, unmount: w = !0, ...p } = t, g = Q.useRef(null), E = r_(t), h = ti(...E ? [g, e] : e === null ? [] : [e]);
   i_();
   let m = Vm();
   if (i === void 0 && m !== null && (i = (m & Jo.Open) === Jo.Open), i === void 0) throw new Error("A <Transition /> is used but it is missing a `show={true | false}` prop.");
-  let [s, c] = W.useState(i ? "visible" : "hidden"), u = a_(() => {
+  let [s, c] = Q.useState(i ? "visible" : "hidden"), u = a_(() => {
     i || c("hidden");
-  }), [d, a] = W.useState(!0), f = W.useRef([i]);
+  }), [d, a] = Q.useState(!0), f = Q.useRef([i]);
   Gt(() => {
     d !== !1 && f.current[f.current.length - 1] !== i && (f.current.push(i), a(!1));
   }, [f, i]);
-  let b = W.useMemo(() => ({ show: i, appear: r, initial: d }), [i, r, d]);
+  let b = Q.useMemo(() => ({ show: i, appear: r, initial: d }), [i, r, d]);
   Gt(() => {
     i ? c("visible") : !Zu(u) && g.current !== null && c("hidden");
   }, [i, u]);
   let y = { unmount: w }, A = et(() => {
     var S;
     d && a(!1), (S = t.beforeEnter) == null || S.call(t);
-  }), N = et(() => {
+  }), C = et(() => {
     var S;
     d && a(!1), (S = t.beforeLeave) == null || S.call(t);
-  }), C = to();
-  return tt.createElement(qu.Provider, { value: u }, tt.createElement(Xu.Provider, { value: b }, C({ ourProps: { ...y, as: W.Fragment, children: tt.createElement(c_, { ref: h, ...y, ...p, beforeEnter: A, beforeLeave: N }) }, theirProps: {}, defaultTag: W.Fragment, features: l_, visible: s === "visible", name: "Transition" })));
+  }), N = to();
+  return tt.createElement(qu.Provider, { value: u }, tt.createElement(Xu.Provider, { value: b }, N({ ourProps: { ...y, as: Q.Fragment, children: tt.createElement(c_, { ref: h, ...y, ...p, beforeEnter: A, beforeLeave: C }) }, theirProps: {}, defaultTag: Q.Fragment, features: l_, visible: s === "visible", name: "Transition" })));
 }
 function _I(t, e) {
-  let i = W.useContext(Xu) !== null, r = Vm() !== null;
+  let i = Q.useContext(Xu) !== null, r = Vm() !== null;
   return tt.createElement(tt.Fragment, null, !i && r ? tt.createElement(vm, { ref: e, ...t }) : tt.createElement(c_, { ref: e, ...t }));
 }
 let vm = Bn(SI), c_ = Bn(AI), xI = Bn(_I), LI = Object.assign(vm, { Child: xI, Root: vm }), jA = /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g;
@@ -17634,7 +17634,7 @@ function CI(t) {
   return GA(t).trim();
 }
 function NI(t) {
-  let e = W.useRef(""), i = W.useRef("");
+  let e = Q.useRef(""), i = Q.useRef("");
   return et(() => {
     let r = t.current;
     if (!r) return "";
@@ -17752,9 +17752,9 @@ class Km extends x1 {
     return xr(i.type, OI, e, i);
   }
 }
-const u_ = W.createContext(null);
+const u_ = Q.createContext(null);
 function Ym(t) {
-  let e = W.useContext(u_);
+  let e = Q.useContext(u_);
   if (e === null) {
     let i = new Error(`<${t} /> is missing a parent <Menu /> component.`);
     throw Error.captureStackTrace && Error.captureStackTrace(i, d_), i;
@@ -17762,12 +17762,12 @@ function Ym(t) {
   return e;
 }
 function d_({ id: t, __demoMode: e = !1 }) {
-  let i = W.useMemo(() => Km.new({ id: t, __demoMode: e }), []);
+  let i = Q.useMemo(() => Km.new({ id: t, __demoMode: e }), []);
   return e_(() => i.dispose()), i;
 }
-let II = W.Fragment;
+let II = Q.Fragment;
 function DI(t, e) {
-  let i = W.useId(), { __demoMode: r = !1, ...w } = t, p = d_({ id: i, __demoMode: r }), [g, E, h] = Zo(p, (b) => [b.menuState, b.itemsElement, b.buttonElement]), m = ti(e), s = zm.get(null), c = Zo(s, W.useCallback((b) => s.selectors.isTop(b, i), [s, i]));
+  let i = Q.useId(), { __demoMode: r = !1, ...w } = t, p = d_({ id: i, __demoMode: r }), [g, E, h] = Zo(p, (b) => [b.menuState, b.itemsElement, b.buttonElement]), m = ti(e), s = zm.get(null), c = Zo(s, Q.useCallback((b) => s.selectors.isTop(b, i), [s, i]));
   dk(c, [h, E], (b, y) => {
     var A;
     p.send({ type: Dt.CloseMenu }), Fm(y, Bm.Loose) || (b.preventDefault(), (A = p.state.buttonElement) == null || A.focus());
@@ -17779,7 +17779,7 @@ function DI(t, e) {
 }
 let MI = "button";
 function $I(t, e) {
-  let i = Ym("Menu.Button"), r = W.useId(), { id: w = `headlessui-menu-button-${r}`, disabled: p = !1, autoFocus: g = !1, ...E } = t, h = W.useRef(null), m = JO(), s = ti(e, h, ZO(), et(($) => i.send({ type: Dt.SetButtonElement, element: $ }))), c = et(($) => {
+  let i = Ym("Menu.Button"), r = Q.useId(), { id: w = `headlessui-menu-button-${r}`, disabled: p = !1, autoFocus: g = !1, ...E } = t, h = Q.useRef(null), m = JO(), s = ti(e, h, ZO(), et(($) => i.send({ type: Dt.SetButtonElement, element: $ }))), c = et(($) => {
     switch ($.key) {
       case Tn.Space:
       case Tn.Enter:
@@ -17797,31 +17797,31 @@ function $I(t, e) {
         break;
     }
   }), [d, a, f] = Zo(i, ($) => [$.menuState, $.buttonElement, $.itemsElement]), b = d === Nn.Open;
-  mk(b, { trigger: a, action: W.useCallback(($) => {
+  mk(b, { trigger: a, action: Q.useCallback(($) => {
     if (a != null && a.contains($.target)) return iu.Ignore;
     let B = $.target.closest('[role="menuitem"]:not([data-disabled])');
     return Bi(B) ? iu.Select(B) : f != null && f.contains($.target) ? iu.Ignore : iu.Close;
-  }, [a, f]), close: W.useCallback(() => i.send({ type: Dt.CloseMenu }), []), select: W.useCallback(($) => $.click(), []) });
+  }, [a, f]), close: Q.useCallback(() => i.send({ type: Dt.CloseMenu }), []), select: Q.useCallback(($) => $.click(), []) });
   let y = zR(($) => {
     var B;
     p || (d === Nn.Open ? (Tr.flushSync(() => i.send({ type: Dt.CloseMenu })), (B = h.current) == null || B.focus({ preventScroll: !0 })) : ($.preventDefault(), i.send({ type: Dt.OpenMenu, focus: { focus: sn.Nothing }, trigger: Lu.Pointer })));
-  }), { isFocusVisible: A, focusProps: N } = lR({ autoFocus: g }), { isHovered: C, hoverProps: S } = sR({ isDisabled: p }), { pressed: T, pressProps: k } = pR({ disabled: p }), M = hs({ open: d === Nn.Open, active: T || d === Nn.Open, disabled: p, hover: C, focus: A, autofocus: g }), I = g1(m(), { ref: s, id: w, type: pk(t, h.current), "aria-haspopup": "menu", "aria-controls": f == null ? void 0 : f.id, "aria-expanded": d === Nn.Open, disabled: p || void 0, autoFocus: g, onKeyDown: c, onKeyUp: u }, y, N, S, k);
+  }), { isFocusVisible: A, focusProps: C } = lR({ autoFocus: g }), { isHovered: N, hoverProps: S } = sR({ isDisabled: p }), { pressed: T, pressProps: k } = pR({ disabled: p }), M = hs({ open: d === Nn.Open, active: T || d === Nn.Open, disabled: p, hover: N, focus: A, autofocus: g }), I = g1(m(), { ref: s, id: w, type: pk(t, h.current), "aria-haspopup": "menu", "aria-controls": f == null ? void 0 : f.id, "aria-expanded": d === Nn.Open, disabled: p || void 0, autoFocus: g, onKeyDown: c, onKeyUp: u }, y, C, S, k);
   return to()({ ourProps: I, theirProps: E, slot: M, defaultTag: MI, name: "Menu.Button" });
 }
 let UI = "div", HI = Au.RenderStrategy | Au.Static;
 function zI(t, e) {
-  let i = W.useId(), { id: r = `headlessui-menu-items-${i}`, anchor: w, portal: p = !1, modal: g = !0, transition: E = !1, ...h } = t, m = qO(w), s = Ym("Menu.Items"), [c, u] = tI(m), d = eI(), [a, f] = W.useState(null), b = ti(e, m ? c : null, et((H) => s.send({ type: Dt.SetItemsElement, element: H })), f), [y, A] = Zo(s, (H) => [H.menuState, H.buttonElement]), N = mm(A), C = mm(a);
+  let i = Q.useId(), { id: r = `headlessui-menu-items-${i}`, anchor: w, portal: p = !1, modal: g = !0, transition: E = !1, ...h } = t, m = qO(w), s = Ym("Menu.Items"), [c, u] = tI(m), d = eI(), [a, f] = Q.useState(null), b = ti(e, m ? c : null, et((H) => s.send({ type: Dt.SetItemsElement, element: H })), f), [y, A] = Zo(s, (H) => [H.menuState, H.buttonElement]), C = mm(A), N = mm(a);
   m && (p = !0);
   let S = Vm(), [T, k] = $1(E, a, S !== null ? (S & Jo.Open) === Jo.Open : y === Nn.Open);
   ZR(T, A, () => {
     s.send({ type: Dt.CloseMenu });
   });
   let M = Zo(s, (H) => H.__demoMode), I = M ? !1 : g && y === Nn.Open;
-  Tk(I, C);
+  Tk(I, N);
   let $ = M ? !1 : g && y === Nn.Open;
-  qR($, { allowed: W.useCallback(() => [A, a], [A, a]) });
+  qR($, { allowed: Q.useCallback(() => [A, a], [A, a]) });
   let B = Zo(s, s.selectors.didButtonMove) ? !1 : T;
-  W.useEffect(() => {
+  Q.useEffect(() => {
     let H = a;
     H && y === Nn.Open && (hR(H) || H.focus({ preventScroll: !0 }));
   }, [y, a]), kk(y === Nn.Open, { container: a, accept(H) {
@@ -17830,14 +17830,14 @@ function zI(t, e) {
     H.setAttribute("role", "none");
   } });
   let D = us(), O = et((H) => {
-    var P, Q, F;
+    var P, W, F;
     switch (D.dispose(), H.key) {
       case Tn.Space:
         if (s.state.searchQuery !== "") return H.preventDefault(), H.stopPropagation(), s.send({ type: Dt.Search, value: H.key });
       case Tn.Enter:
         if (H.preventDefault(), H.stopPropagation(), s.state.activeItemIndex !== null) {
           let { dataRef: K } = s.state.items[s.state.activeItemIndex];
-          (Q = (P = K.current) == null ? void 0 : P.domRef.current) == null || Q.click();
+          (W = (P = K.current) == null ? void 0 : P.domRef.current) == null || W.click();
         }
         s.send({ type: Dt.CloseMenu }), O1(s.state.buttonElement);
         break;
@@ -17871,18 +17871,18 @@ function zI(t, e) {
     var P;
     return (P = H.buttonElement) == null ? void 0 : P.id;
   }), id: r, onKeyDown: O, onKeyUp: x, role: "menu", tabIndex: y === Nn.Open ? 0 : void 0, ref: b, style: { ...h.style, ...u, "--button-width": HR(T, A, !0).width }, ...M1(k) }), z = to();
-  return tt.createElement(gI, { enabled: p ? t.static || T : !1, ownerDocument: N }, z({ ourProps: L, theirProps: h, slot: _, defaultTag: UI, features: HI, visible: B, name: "Menu.Items" }));
+  return tt.createElement(gI, { enabled: p ? t.static || T : !1, ownerDocument: C }, z({ ourProps: L, theirProps: h, slot: _, defaultTag: UI, features: HI, visible: B, name: "Menu.Items" }));
 }
-let BI = W.Fragment;
+let BI = Q.Fragment;
 function FI(t, e) {
-  let i = W.useId(), { id: r = `headlessui-menu-item-${i}`, disabled: w = !1, ...p } = t, g = Ym("Menu.Item"), E = Zo(g, (B) => g.selectors.isActive(B, r)), h = W.useRef(null), m = ti(e, h), s = Zo(g, (B) => g.selectors.shouldScrollIntoView(B, r));
+  let i = Q.useId(), { id: r = `headlessui-menu-item-${i}`, disabled: w = !1, ...p } = t, g = Ym("Menu.Item"), E = Zo(g, (B) => g.selectors.isActive(B, r)), h = Q.useRef(null), m = ti(e, h), s = Zo(g, (B) => g.selectors.shouldScrollIntoView(B, r));
   Gt(() => {
     if (s) return eo().requestAnimationFrame(() => {
       var B, D;
       (D = (B = h.current) == null ? void 0 : B.scrollIntoView) == null || D.call(B, { block: "nearest" });
     });
   }, [s, h]);
-  let c = NI(h), u = W.useRef({ disabled: w, domRef: h, get textValue() {
+  let c = NI(h), u = Q.useRef({ disabled: w, domRef: h, get textValue() {
     return c();
   } });
   Gt(() => {
@@ -17898,9 +17898,9 @@ function FI(t, e) {
     g.send({ type: Dt.GoToItem, focus: sn.Specific, id: r });
   }), b = Ak(), y = et((B) => b.update(B)), A = et((B) => {
     b.wasMoved(B) && (w || E || g.send({ type: Dt.GoToItem, focus: sn.Specific, id: r, trigger: Lu.Pointer }));
-  }), N = et((B) => {
+  }), C = et((B) => {
     b.wasMoved(B) && (w || E && g.state.activationTrigger === Lu.Pointer && g.send({ type: Dt.GoToItem, focus: sn.Nothing }));
-  }), [C, S] = T1(), [T, k] = RR(), M = hs({ active: E, focus: E, disabled: w, close: d }), I = { id: r, ref: m, role: "menuitem", tabIndex: w === !0 ? void 0 : -1, "aria-disabled": w === !0 ? !0 : void 0, "aria-labelledby": C, "aria-describedby": T, disabled: void 0, onClick: a, onFocus: f, onPointerEnter: y, onMouseEnter: y, onPointerMove: A, onMouseMove: A, onPointerLeave: N, onMouseLeave: N }, $ = to();
+  }), [N, S] = T1(), [T, k] = RR(), M = hs({ active: E, focus: E, disabled: w, close: d }), I = { id: r, ref: m, role: "menuitem", tabIndex: w === !0 ? void 0 : -1, "aria-disabled": w === !0 ? !0 : void 0, "aria-labelledby": N, "aria-describedby": T, disabled: void 0, onClick: a, onFocus: f, onPointerEnter: y, onMouseEnter: y, onPointerMove: A, onMouseMove: A, onPointerLeave: C, onMouseLeave: C }, $ = to();
   return tt.createElement(S, null, tt.createElement(k, null, $({ ourProps: I, theirProps: p, slot: M, defaultTag: BI, name: "Menu.Item" })));
 }
 let PI = "div";
@@ -17910,7 +17910,7 @@ function jI(t, e) {
 }
 let GI = "header";
 function WI(t, e) {
-  let i = W.useId(), { id: r = `headlessui-menu-heading-${i}`, ...w } = t, p = Hm();
+  let i = Q.useId(), { id: r = `headlessui-menu-heading-${i}`, ...w } = t, p = Hm();
   Gt(() => p.register(r), [r, p.register]);
   let g = { id: r, ref: e, role: "presentation", ...p.props };
   return to()({ ourProps: g, theirProps: w, slot: {}, defaultTag: GI, name: "Menu.Heading" });
@@ -17922,7 +17922,7 @@ function VI(t, e) {
 }
 let KI = Bn(DI), YI = Bn($I), XI = Bn(zI), qI = Bn(FI), ZI = Bn(jI), JI = Bn(WI), eD = Bn(VI), pu = Object.assign(KI, { Button: YI, Items: XI, Item: qI, Section: ZI, Heading: JI, Separator: eD });
 const tD = ({ children: t }) => {
-  const e = W.useRef(null);
+  const e = Q.useRef(null);
   return /* @__PURE__ */ G.jsx(pu, { as: "div", children: ({ open: i }) => {
     var w;
     const r = (w = e.current) == null ? void 0 : w.closest(".boomi-card");
@@ -17940,7 +17940,7 @@ const tD = ({ children: t }) => {
           /* @__PURE__ */ G.jsx(
             LI,
             {
-              as: W.Fragment,
+              as: Q.Fragment,
               enter: "transition ease-out duration-100",
               enterFrom: "transform opacity-0 scale-95",
               enterTo: "transform opacity-100 scale-100",
@@ -18264,15 +18264,15 @@ ${s}` : s;
 `, 1)[0], f = !d.trim(), b = 0;
         if (this.options.pedantic ? (b = 2, u = d.trimStart()) : f ? b = e[1].length + 1 : (b = d.search(this.rules.other.nonSpaceChar), b = b > 4 ? 1 : b, u = d.slice(b), b += e[1].length), f && this.rules.other.blankLine.test(a) && (c += a + `
 `, t = t.substring(a.length + 1), s = !0), !s) {
-          let y = this.rules.other.nextBulletRegex(b), A = this.rules.other.hrRegex(b), N = this.rules.other.fencesBeginRegex(b), C = this.rules.other.headingBeginRegex(b), S = this.rules.other.htmlBeginRegex(b), T = this.rules.other.blockquoteBeginRegex(b);
+          let y = this.rules.other.nextBulletRegex(b), A = this.rules.other.hrRegex(b), C = this.rules.other.fencesBeginRegex(b), N = this.rules.other.headingBeginRegex(b), S = this.rules.other.htmlBeginRegex(b), T = this.rules.other.blockquoteBeginRegex(b);
           for (; t; ) {
             let k = t.split(`
 `, 1)[0], M;
-            if (a = k, this.options.pedantic ? (a = a.replace(this.rules.other.listReplaceNesting, "  "), M = a) : M = a.replace(this.rules.other.tabCharGlobal, "    "), N.test(a) || C.test(a) || S.test(a) || T.test(a) || y.test(a) || A.test(a)) break;
+            if (a = k, this.options.pedantic ? (a = a.replace(this.rules.other.listReplaceNesting, "  "), M = a) : M = a.replace(this.rules.other.tabCharGlobal, "    "), C.test(a) || N.test(a) || S.test(a) || T.test(a) || y.test(a) || A.test(a)) break;
             if (M.search(this.rules.other.nonSpaceChar) >= b || !a.trim()) u += `
 ` + M.slice(b);
             else {
-              if (f || d.replace(this.rules.other.tabCharGlobal, "    ").search(this.rules.other.nonSpaceChar) >= 4 || N.test(d) || C.test(d) || A.test(d)) break;
+              if (f || d.replace(this.rules.other.tabCharGlobal, "    ").search(this.rules.other.nonSpaceChar) >= 4 || C.test(d) || N.test(d) || A.test(d)) break;
               u += `
 ` + a;
             }
@@ -18687,8 +18687,8 @@ ${s}` : s;
       let f = e;
       if ((d = this.options.extensions) != null && d.startInline) {
         let b = 1 / 0, y = e.slice(1), A;
-        this.options.extensions.startInline.forEach((N) => {
-          A = N.call({ lexer: this }, y), typeof A == "number" && A >= 0 && (b = Math.min(b, A));
+        this.options.extensions.startInline.forEach((C) => {
+          A = C.call({ lexer: this }, y), typeof A == "number" && A >= 0 && (b = Math.min(b, A));
         }), b < 1 / 0 && b >= 0 && (f = e.substring(0, b + 1));
       }
       if (a = this.tokenizer.inlineText(f)) {
@@ -19396,12 +19396,12 @@ function x_() {
     HTMLFormElement: c,
     DOMParser: u,
     trustedTypes: d
-  } = t, a = h.prototype, f = vl(a, "cloneNode"), b = vl(a, "remove"), y = vl(a, "nextSibling"), A = vl(a, "childNodes"), N = vl(a, "parentNode");
+  } = t, a = h.prototype, f = vl(a, "cloneNode"), b = vl(a, "remove"), y = vl(a, "nextSibling"), A = vl(a, "childNodes"), C = vl(a, "parentNode");
   if (typeof g == "function") {
     const De = i.createElement("template");
     De.content && De.content.ownerDocument && (i = De.content.ownerDocument);
   }
-  let C, S = "";
+  let N, S = "";
   const {
     implementation: T,
     createNodeIterator: k,
@@ -19411,7 +19411,7 @@ function x_() {
     importNode: $
   } = r;
   let B = sS();
-  e.isSupported = typeof T_ == "function" && typeof N == "function" && T && T.createHTMLDocument !== void 0;
+  e.isSupported = typeof T_ == "function" && typeof C == "function" && T && T.createHTMLDocument !== void 0;
   const {
     MUSTACHE_EXPR: D,
     ERB_EXPR: O,
@@ -19423,7 +19423,7 @@ function x_() {
     CUSTOM_ELEMENT: P
   } = aS;
   let {
-    IS_ALLOWED_URI: Q
+    IS_ALLOWED_URI: W
   } = aS, F = null;
   const K = Je({}, [...nS, ...Nf, ...Rf, ...kf, ...oS]);
   let V = null;
@@ -19468,18 +19468,18 @@ function x_() {
     let oe = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
     if (!(yo && yo === oe)) {
       if ((!oe || typeof oe != "object") && (oe = {}), oe = Mi(oe), jt = // eslint-disable-next-line unicorn/prefer-includes
-      mn.indexOf(oe.PARSER_MEDIA_TYPE) === -1 ? pn : oe.PARSER_MEDIA_TYPE, xt = jt === "application/xhtml+xml" ? Lf : gu, F = Yo(oe, "ALLOWED_TAGS") ? Je({}, oe.ALLOWED_TAGS, xt) : K, V = Yo(oe, "ALLOWED_ATTR") ? Je({}, oe.ALLOWED_ATTR, xt) : X, pe = Yo(oe, "ALLOWED_NAMESPACES") ? Je({}, oe.ALLOWED_NAMESPACES, Lf) : Re, _e = Yo(oe, "ADD_URI_SAFE_ATTR") ? Je(Mi(Ce), oe.ADD_URI_SAFE_ATTR, xt) : Ce, Ve = Yo(oe, "ADD_DATA_URI_TAGS") ? Je(Mi(Ae), oe.ADD_DATA_URI_TAGS, xt) : Ae, Yt = Yo(oe, "FORBID_CONTENTS") ? Je({}, oe.FORBID_CONTENTS, xt) : Ge, Z = Yo(oe, "FORBID_TAGS") ? Je({}, oe.FORBID_TAGS, xt) : Mi({}), ne = Yo(oe, "FORBID_ATTR") ? Je({}, oe.FORBID_ATTR, xt) : Mi({}), Kt = Yo(oe, "USE_PROFILES") ? oe.USE_PROFILES : !1, ae = oe.ALLOW_ARIA_ATTR !== !1, le = oe.ALLOW_DATA_ATTR !== !1, me = oe.ALLOW_UNKNOWN_PROTOCOLS || !1, Se = oe.ALLOW_SELF_CLOSE_IN_ATTR !== !1, Ne = oe.SAFE_FOR_TEMPLATES || !1, Me = oe.SAFE_FOR_XML !== !1, $e = oe.WHOLE_DOCUMENT || !1, nt = oe.RETURN_DOM || !1, ht = oe.RETURN_DOM_FRAGMENT || !1, ye = oe.RETURN_TRUSTED_TYPE || !1, Xe = oe.FORCE_BODY || !1, Et = oe.SANITIZE_DOM !== !1, Bt = oe.SANITIZE_NAMED_PROPS || !1, Sn = oe.KEEP_CONTENT !== !1, gt = oe.IN_PLACE || !1, Q = oe.ALLOWED_URI_REGEXP || S_, he = oe.NAMESPACE || Ie, Ue = oe.MATHML_TEXT_INTEGRATION_POINTS || Ue, at = oe.HTML_INTEGRATION_POINTS || at, q = oe.CUSTOM_ELEMENT_HANDLING || {}, oe.CUSTOM_ELEMENT_HANDLING && To(oe.CUSTOM_ELEMENT_HANDLING.tagNameCheck) && (q.tagNameCheck = oe.CUSTOM_ELEMENT_HANDLING.tagNameCheck), oe.CUSTOM_ELEMENT_HANDLING && To(oe.CUSTOM_ELEMENT_HANDLING.attributeNameCheck) && (q.attributeNameCheck = oe.CUSTOM_ELEMENT_HANDLING.attributeNameCheck), oe.CUSTOM_ELEMENT_HANDLING && typeof oe.CUSTOM_ELEMENT_HANDLING.allowCustomizedBuiltInElements == "boolean" && (q.allowCustomizedBuiltInElements = oe.CUSTOM_ELEMENT_HANDLING.allowCustomizedBuiltInElements), Ne && (le = !1), ht && (nt = !0), Kt && (F = Je({}, oS), V = [], Kt.html === !0 && (Je(F, nS), Je(V, iS)), Kt.svg === !0 && (Je(F, Nf), Je(V, Of), Je(V, cu)), Kt.svgFilters === !0 && (Je(F, Rf), Je(V, Of), Je(V, cu)), Kt.mathMl === !0 && (Je(F, kf), Je(V, rS), Je(V, cu))), oe.ADD_TAGS && (F === K && (F = Mi(F)), Je(F, oe.ADD_TAGS, xt)), oe.ADD_ATTR && (V === X && (V = Mi(V)), Je(V, oe.ADD_ATTR, xt)), oe.ADD_URI_SAFE_ATTR && Je(_e, oe.ADD_URI_SAFE_ATTR, xt), oe.FORBID_CONTENTS && (Yt === Ge && (Yt = Mi(Yt)), Je(Yt, oe.FORBID_CONTENTS, xt)), Sn && (F["#text"] = !0), $e && Je(F, ["html", "head", "body"]), F.table && (Je(F, ["tbody"]), delete Z.tbody), oe.TRUSTED_TYPES_POLICY) {
+      mn.indexOf(oe.PARSER_MEDIA_TYPE) === -1 ? pn : oe.PARSER_MEDIA_TYPE, xt = jt === "application/xhtml+xml" ? Lf : gu, F = Yo(oe, "ALLOWED_TAGS") ? Je({}, oe.ALLOWED_TAGS, xt) : K, V = Yo(oe, "ALLOWED_ATTR") ? Je({}, oe.ALLOWED_ATTR, xt) : X, pe = Yo(oe, "ALLOWED_NAMESPACES") ? Je({}, oe.ALLOWED_NAMESPACES, Lf) : Re, _e = Yo(oe, "ADD_URI_SAFE_ATTR") ? Je(Mi(Ce), oe.ADD_URI_SAFE_ATTR, xt) : Ce, Ve = Yo(oe, "ADD_DATA_URI_TAGS") ? Je(Mi(Ae), oe.ADD_DATA_URI_TAGS, xt) : Ae, Yt = Yo(oe, "FORBID_CONTENTS") ? Je({}, oe.FORBID_CONTENTS, xt) : Ge, Z = Yo(oe, "FORBID_TAGS") ? Je({}, oe.FORBID_TAGS, xt) : Mi({}), ne = Yo(oe, "FORBID_ATTR") ? Je({}, oe.FORBID_ATTR, xt) : Mi({}), Kt = Yo(oe, "USE_PROFILES") ? oe.USE_PROFILES : !1, ae = oe.ALLOW_ARIA_ATTR !== !1, le = oe.ALLOW_DATA_ATTR !== !1, me = oe.ALLOW_UNKNOWN_PROTOCOLS || !1, Se = oe.ALLOW_SELF_CLOSE_IN_ATTR !== !1, Ne = oe.SAFE_FOR_TEMPLATES || !1, Me = oe.SAFE_FOR_XML !== !1, $e = oe.WHOLE_DOCUMENT || !1, nt = oe.RETURN_DOM || !1, ht = oe.RETURN_DOM_FRAGMENT || !1, ye = oe.RETURN_TRUSTED_TYPE || !1, Xe = oe.FORCE_BODY || !1, Et = oe.SANITIZE_DOM !== !1, Bt = oe.SANITIZE_NAMED_PROPS || !1, Sn = oe.KEEP_CONTENT !== !1, gt = oe.IN_PLACE || !1, W = oe.ALLOWED_URI_REGEXP || S_, he = oe.NAMESPACE || Ie, Ue = oe.MATHML_TEXT_INTEGRATION_POINTS || Ue, at = oe.HTML_INTEGRATION_POINTS || at, q = oe.CUSTOM_ELEMENT_HANDLING || {}, oe.CUSTOM_ELEMENT_HANDLING && To(oe.CUSTOM_ELEMENT_HANDLING.tagNameCheck) && (q.tagNameCheck = oe.CUSTOM_ELEMENT_HANDLING.tagNameCheck), oe.CUSTOM_ELEMENT_HANDLING && To(oe.CUSTOM_ELEMENT_HANDLING.attributeNameCheck) && (q.attributeNameCheck = oe.CUSTOM_ELEMENT_HANDLING.attributeNameCheck), oe.CUSTOM_ELEMENT_HANDLING && typeof oe.CUSTOM_ELEMENT_HANDLING.allowCustomizedBuiltInElements == "boolean" && (q.allowCustomizedBuiltInElements = oe.CUSTOM_ELEMENT_HANDLING.allowCustomizedBuiltInElements), Ne && (le = !1), ht && (nt = !0), Kt && (F = Je({}, oS), V = [], Kt.html === !0 && (Je(F, nS), Je(V, iS)), Kt.svg === !0 && (Je(F, Nf), Je(V, Of), Je(V, cu)), Kt.svgFilters === !0 && (Je(F, Rf), Je(V, Of), Je(V, cu)), Kt.mathMl === !0 && (Je(F, kf), Je(V, rS), Je(V, cu))), oe.ADD_TAGS && (F === K && (F = Mi(F)), Je(F, oe.ADD_TAGS, xt)), oe.ADD_ATTR && (V === X && (V = Mi(V)), Je(V, oe.ADD_ATTR, xt)), oe.ADD_URI_SAFE_ATTR && Je(_e, oe.ADD_URI_SAFE_ATTR, xt), oe.FORBID_CONTENTS && (Yt === Ge && (Yt = Mi(Yt)), Je(Yt, oe.FORBID_CONTENTS, xt)), Sn && (F["#text"] = !0), $e && Je(F, ["html", "head", "body"]), F.table && (Je(F, ["tbody"]), delete Z.tbody), oe.TRUSTED_TYPES_POLICY) {
         if (typeof oe.TRUSTED_TYPES_POLICY.createHTML != "function")
           throw bl('TRUSTED_TYPES_POLICY configuration option must provide a "createHTML" hook.');
         if (typeof oe.TRUSTED_TYPES_POLICY.createScriptURL != "function")
           throw bl('TRUSTED_TYPES_POLICY configuration option must provide a "createScriptURL" hook.');
-        C = oe.TRUSTED_TYPES_POLICY, S = C.createHTML("");
+        N = oe.TRUSTED_TYPES_POLICY, S = N.createHTML("");
       } else
-        C === void 0 && (C = dM(d, w)), C !== null && typeof S == "string" && (S = C.createHTML(""));
+        N === void 0 && (N = dM(d, w)), N !== null && typeof S == "string" && (S = N.createHTML(""));
       Un && Un(oe), yo = oe;
     }
   }, da = Je({}, [...Nf, ...Rf, ...eM]), Lr = Je({}, [...kf, ...tM]), ha = function(oe) {
-    let Te = N(oe);
+    let Te = C(oe);
     (!Te || !Te.tagName) && (Te = {
       namespaceURI: he,
       tagName: "template"
@@ -19491,7 +19491,7 @@ function x_() {
       element: oe
     });
     try {
-      N(oe).removeChild(oe);
+      C(oe).removeChild(oe);
     } catch {
       b(oe);
     }
@@ -19527,7 +19527,7 @@ function x_() {
       Le = Tt && Tt[0];
     }
     jt === "application/xhtml+xml" && he === Ie && (oe = '<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body>' + oe + "</body></html>");
-    const ut = C ? C.createHTML(oe) : oe;
+    const ut = N ? N.createHTML(oe) : oe;
     if (he === Ie)
       try {
         Te = new u().parseFromString(ut, jt);
@@ -19574,7 +19574,7 @@ function x_() {
       if (!Z[Le] && _n(Le) && (q.tagNameCheck instanceof RegExp && Mn(q.tagNameCheck, Le) || q.tagNameCheck instanceof Function && q.tagNameCheck(Le)))
         return !1;
       if (Sn && !Yt[Le]) {
-        const ut = N(oe) || oe.parentNode, Ft = A(oe) || oe.childNodes;
+        const ut = C(oe) || oe.parentNode, Ft = A(oe) || oe.childNodes;
         if (Ft && ut) {
           const Tt = Ft.length;
           for (let st = Tt - 1; st >= 0; --st) {
@@ -19605,7 +19605,7 @@ function x_() {
             Te === "is" && q.allowCustomizedBuiltInElements && (q.tagNameCheck instanceof RegExp && Mn(q.tagNameCheck, Le) || q.tagNameCheck instanceof Function && q.tagNameCheck(Le)))
           ) return !1;
         } else if (!_e[Te]) {
-          if (!Mn(Q, gl(Le, H, ""))) {
+          if (!Mn(W, gl(Le, H, ""))) {
             if (!((Te === "src" || Te === "xlink:href" || Te === "href") && oe !== "script" && XD(Le, "data:") === 0 && Ve[oe])) {
               if (!(me && !Mn(z, gl(Le, H, "")))) {
                 if (Le)
@@ -19667,14 +19667,14 @@ function x_() {
         Pn(Tt, oe);
         continue;
       }
-      if (C && typeof d == "object" && typeof d.getAttributeType == "function" && !st)
+      if (N && typeof d == "object" && typeof d.getAttributeType == "function" && !st)
         switch (d.getAttributeType(ro, Gn)) {
           case "TrustedHTML": {
-            Mt = C.createHTML(Mt);
+            Mt = N.createHTML(Mt);
             break;
           }
           case "TrustedScriptURL": {
-            Mt = C.createScriptURL(Mt);
+            Mt = N.createScriptURL(Mt);
             break;
           }
         }
@@ -19714,7 +19714,7 @@ function x_() {
     else {
       if (!nt && !Ne && !$e && // eslint-disable-next-line unicorn/prefer-includes
       De.indexOf("<") === -1)
-        return C && ye ? C.createHTML(De) : De;
+        return N && ye ? N.createHTML(De) : De;
       if (Te = ni(De), !Te)
         return nt ? null : ye ? S : "";
     }
@@ -19736,7 +19736,7 @@ function x_() {
     return $e && F["!doctype"] && Te.ownerDocument && Te.ownerDocument.doctype && Te.ownerDocument.doctype.name && Mn(__, Te.ownerDocument.doctype.name) && (st = "<!DOCTYPE " + Te.ownerDocument.doctype.name + `>
 ` + st), Ne && lu([D, O, x], (jn) => {
       st = gl(st, jn, " ");
-    }), C && ye ? C.createHTML(st) : st;
+    }), N && ye ? N.createHTML(st) : st;
   }, e.setConfig = function() {
     let De = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
     $o(De), Be = !0;
@@ -20014,19 +20014,19 @@ function Nl() {
           return d && d.appendChild && a && a.appendChild(d), d;
         if (typeof d[0] != "string" || !d[0]) {
           for (var y = [], A = 0; A < d.length; A++) {
-            var N = u(d[A], a, f);
-            N && y.push(N);
+            var C = u(d[A], a, f);
+            C && y.push(C);
           }
           return y;
         }
-        var C = document.createElement(d[0]), S = d[1], T = 1;
+        var N = document.createElement(d[0]), S = d[1], T = 1;
         S && typeof S == "object" && !Array.isArray(S) && (T = 2);
         for (var A = T; A < d.length; A++)
-          u(d[A], C, f);
+          u(d[A], N, f);
         return T == 2 && Object.keys(S).forEach(function(k) {
           var M = S[k];
-          k === "class" ? C.className = Array.isArray(M) ? M.join(" ") : M : typeof M == "function" || k == "value" || k[0] == "$" ? C[k] = M : k === "ref" ? f && (f[M] = C) : k === "style" ? typeof M == "string" && (C.style.cssText = M) : M != null && C.setAttribute(k, M);
-        }), a && a.appendChild(C), C;
+          k === "class" ? N.className = Array.isArray(M) ? M.join(" ") : M : typeof M == "function" || k == "value" || k[0] == "$" ? N[k] = M : k === "ref" ? f && (f[M] = N) : k === "style" ? typeof M == "string" && (N.style.cssText = M) : M != null && N.setAttribute(k, M);
+        }), a && a.appendChild(N), N;
       }, r.getDocumentHead = function(u) {
         return u || (u = document), u.head || u.getElementsByTagName("head")[0] || u.documentElement;
       }, r.createElement = function(u, d) {
@@ -20342,8 +20342,8 @@ function Nl() {
           }
           return a.prototype.defineOptions = function(f, b, y) {
             return f.$options || (this.$defaultOptions[b] = f.$options = {}), Object.keys(y).forEach(function(A) {
-              var N = y[A];
-              typeof N == "string" && (N = { forwardTo: N }), N.name || (N.name = A), f.$options[N.name] = N, "initialValue" in N && (f["$" + N.name] = N.initialValue);
+              var C = y[A];
+              typeof C == "string" && (C = { forwardTo: C }), C.name || (C.name = A), f.$options[C.name] = C, "initialValue" in C && (f["$" + C.name] = C.initialValue);
             }), p.implement(f, m), this;
           }, a.prototype.resetOptions = function(f) {
             Object.keys(f.$options).forEach(function(b) {
@@ -20369,10 +20369,10 @@ function Nl() {
           }, a.prototype.nls = function(f, b, y) {
             c[f] || (s("No message found for the key '" + f + "' in messages with id " + c.$id + ", trying to find a translation for the default string '" + b + "'."), c[b] || s("No message found for the default string '" + b + "' in the provided messages. Falling back to the default English message."));
             var A = c[f] || c[b] || b;
-            return y && (u === "dollarSigns" && (A = A.replace(/\$(\$|[\d]+)/g, function(N, C) {
-              return C == "$" ? "$" : y[C];
-            })), u === "curlyBrackets" && (A = A.replace(/\{([^\}]+)\}/g, function(N, C) {
-              return y[C];
+            return y && (u === "dollarSigns" && (A = A.replace(/\$(\$|[\d]+)/g, function(C, N) {
+              return N == "$" ? "$" : y[N];
+            })), u === "curlyBrackets" && (A = A.replace(/\{([^\}]+)\}/g, function(C, N) {
+              return y[N];
             }))), A;
           }, a;
         })()
@@ -20581,8 +20581,8 @@ function Nl() {
           y = y.replace(A, "");
         }
         (!y || y == a) && f.length > 1 && (y = f[f.length - 2]);
-        var N = m[a + "Path"];
-        return N == null ? N = m.basePath : b == "/" && (a = b = ""), N && N.slice(-1) != "/" && (N += "/"), N + a + b + y + this.get("suffix");
+        var C = m[a + "Path"];
+        return C == null ? C = m.basePath : b == "/" && (a = b = ""), C && C.slice(-1) != "/" && (C += "/"), C + a + b + y + this.get("suffix");
       }, r.setModuleUrl = function(d, a) {
         return m.$moduleUrls[d] = a;
       };
@@ -20601,11 +20601,11 @@ function Nl() {
           var b = d[0], y = d[1];
         else if (typeof d == "string")
           var y = d;
-        var A = function(N) {
-          if (N && !r.$loading[y])
-            return a && a(N);
+        var A = function(C) {
+          if (C && !r.$loading[y])
+            return a && a(C);
           if (r.$loading[y] || (r.$loading[y] = []), r.$loading[y].push(a), !(r.$loading[y].length > 1)) {
-            var C = function() {
+            var N = function() {
               s(y, function(S, T) {
                 T && (r.$loaded[y] = T), r._emit("load.module", { name: y, module: T });
                 var k = r.$loading[y];
@@ -20615,13 +20615,13 @@ function Nl() {
               });
             };
             if (!r.get("packaged"))
-              return C();
-            g.loadScript(r.moduleUrl(y, b), C), u();
+              return N();
+            g.loadScript(r.moduleUrl(y, b), N), u();
           }
         };
         if (r.dynamicModules[y])
-          r.dynamicModules[y]().then(function(N) {
-            N.default ? A(N.default) : A(N);
+          r.dynamicModules[y]().then(function(C) {
+            C.default ? A(C.default) : A(C);
           });
         else {
           try {
@@ -20665,8 +20665,8 @@ function Nl() {
           for (var a = d.getElementsByTagName("script"), f = 0; f < a.length; f++) {
             var b = a[f], y = b.src || b.getAttribute("src");
             if (y) {
-              for (var A = b.attributes, N = 0, C = A.length; N < C; N++) {
-                var S = A[N];
+              for (var A = b.attributes, C = 0, N = A.length; C < N; C++) {
+                var S = A[C];
                 S.name.indexOf("data-ace-") === 0 && (s[h(S.name.replace(/^data-ace-/, ""))] = S.value);
               }
               var T = y.match(/^(.*)\/ace([\-.]\w+)?\.js(\?|$)/);
@@ -20925,33 +20925,33 @@ function Nl() {
       function c() {
         return m == null && s(), m;
       }
-      function u(N, C, S) {
-        this.elem = N, this.type = C, this.callback = S;
+      function u(C, N, S) {
+        this.elem = C, this.type = N, this.callback = S;
       }
       u.prototype.destroy = function() {
         a(this.elem, this.type, this.callback), this.elem = this.type = this.callback = void 0;
       };
-      var d = r.addListener = function(N, C, S, T) {
-        N.addEventListener(C, S, c()), T && T.$toDestroy.push(new u(N, C, S));
-      }, a = r.removeListener = function(N, C, S) {
-        N.removeEventListener(C, S, c());
+      var d = r.addListener = function(C, N, S, T) {
+        C.addEventListener(N, S, c()), T && T.$toDestroy.push(new u(C, N, S));
+      }, a = r.removeListener = function(C, N, S) {
+        C.removeEventListener(N, S, c());
       };
-      r.stopEvent = function(N) {
-        return r.stopPropagation(N), r.preventDefault(N), !1;
-      }, r.stopPropagation = function(N) {
-        N.stopPropagation && N.stopPropagation();
-      }, r.preventDefault = function(N) {
-        N.preventDefault && N.preventDefault();
-      }, r.getButton = function(N) {
-        return N.type == "dblclick" ? 0 : N.type == "contextmenu" || g.isMac && N.ctrlKey && !N.altKey && !N.shiftKey ? 2 : N.button;
-      }, r.capture = function(N, C, S) {
-        var T = N && N.ownerDocument || document;
+      r.stopEvent = function(C) {
+        return r.stopPropagation(C), r.preventDefault(C), !1;
+      }, r.stopPropagation = function(C) {
+        C.stopPropagation && C.stopPropagation();
+      }, r.preventDefault = function(C) {
+        C.preventDefault && C.preventDefault();
+      }, r.getButton = function(C) {
+        return C.type == "dblclick" ? 0 : C.type == "contextmenu" || g.isMac && C.ctrlKey && !C.altKey && !C.shiftKey ? 2 : C.button;
+      }, r.capture = function(C, N, S) {
+        var T = C && C.ownerDocument || document;
         function k(M) {
-          C && C(M), S && S(M), a(T, "mousemove", C), a(T, "mouseup", k), a(T, "dragstart", k);
+          N && N(M), S && S(M), a(T, "mousemove", N), a(T, "mouseup", k), a(T, "dragstart", k);
         }
-        return d(T, "mousemove", C), d(T, "mouseup", k), d(T, "dragstart", k), k;
-      }, r.addMouseWheelListener = function(N, C, S) {
-        d(N, "wheel", function(T) {
+        return d(T, "mousemove", N), d(T, "mouseup", k), d(T, "dragstart", k), k;
+      }, r.addMouseWheelListener = function(C, N, S) {
+        d(C, "wheel", function(T) {
           var k = 0.15, M = T.deltaX || 0, I = T.deltaY || 0;
           switch (T.deltaMode) {
             case T.DOM_DELTA_PIXEL:
@@ -20966,9 +20966,9 @@ function Nl() {
               T.wheelX = M * B, T.wheelY = I * B;
               break;
           }
-          C(T);
+          N(T);
         }, S);
-      }, r.addMultiMouseDownListener = function(N, C, S, T, k) {
+      }, r.addMultiMouseDownListener = function(C, N, S, T, k) {
         var M = 0, I, $, B, D = {
           2: "dblclick",
           3: "tripleclick",
@@ -20979,59 +20979,59 @@ function Nl() {
             var _ = Math.abs(x.clientX - I) > 5 || Math.abs(x.clientY - $) > 5;
             (!B || _) && (M = 1), B && clearTimeout(B), B = setTimeout(function() {
               B = null;
-            }, C[M - 1] || 600), M == 1 && (I = x.clientX, $ = x.clientY);
+            }, N[M - 1] || 600), M == 1 && (I = x.clientX, $ = x.clientY);
           }
           if (x._clicks = M, S[T]("mousedown", x), M > 4)
             M = 0;
           else if (M > 1)
             return S[T](D[M], x);
         }
-        Array.isArray(N) || (N = [N]), N.forEach(function(x) {
+        Array.isArray(C) || (C = [C]), C.forEach(function(x) {
           d(x, "mousedown", O, k);
         });
       };
-      function f(N) {
-        return 0 | (N.ctrlKey ? 1 : 0) | (N.altKey ? 2 : 0) | (N.shiftKey ? 4 : 0) | (N.metaKey ? 8 : 0);
+      function f(C) {
+        return 0 | (C.ctrlKey ? 1 : 0) | (C.altKey ? 2 : 0) | (C.shiftKey ? 4 : 0) | (C.metaKey ? 8 : 0);
       }
-      r.getModifierString = function(N) {
-        return p.KEY_MODS[f(N)];
+      r.getModifierString = function(C) {
+        return p.KEY_MODS[f(C)];
       };
-      function b(N, C, S) {
-        var T = f(C);
-        if (!S && C.code && (S = p.$codeToKeyCode[C.code] || S), !g.isMac && E) {
-          if (C.getModifierState && (C.getModifierState("OS") || C.getModifierState("Win")) && (T |= 8), E.altGr)
+      function b(C, N, S) {
+        var T = f(N);
+        if (!S && N.code && (S = p.$codeToKeyCode[N.code] || S), !g.isMac && E) {
+          if (N.getModifierState && (N.getModifierState("OS") || N.getModifierState("Win")) && (T |= 8), E.altGr)
             if ((3 & T) != 3)
               E.altGr = 0;
             else
               return;
           if (S === 18 || S === 17) {
-            var k = C.location;
+            var k = N.location;
             if (S === 17 && k === 1)
-              E[S] == 1 && (h = C.timeStamp);
+              E[S] == 1 && (h = N.timeStamp);
             else if (S === 18 && T === 3 && k === 2) {
-              var M = C.timeStamp - h;
+              var M = N.timeStamp - h;
               M < 50 && (E.altGr = !0);
             }
           }
         }
-        if (S in p.MODIFIER_KEYS && (S = -1), !(!T && S === 13 && C.location === 3 && (N(C, T, -S), C.defaultPrevented))) {
+        if (S in p.MODIFIER_KEYS && (S = -1), !(!T && S === 13 && N.location === 3 && (C(N, T, -S), N.defaultPrevented))) {
           if (g.isChromeOS && T & 8) {
-            if (N(C, T, S), C.defaultPrevented)
+            if (C(N, T, S), N.defaultPrevented)
               return;
             T &= -9;
           }
-          return !T && !(S in p.FUNCTION_KEYS) && !(S in p.PRINTABLE_KEYS) ? !1 : N(C, T, S);
+          return !T && !(S in p.FUNCTION_KEYS) && !(S in p.PRINTABLE_KEYS) ? !1 : C(N, T, S);
         }
       }
-      r.addCommandKeyListener = function(N, C, S) {
+      r.addCommandKeyListener = function(C, N, S) {
         var T = null;
-        d(N, "keydown", function(k) {
+        d(C, "keydown", function(k) {
           E[k.keyCode] = (E[k.keyCode] || 0) + 1;
-          var M = b(C, k, k.keyCode);
+          var M = b(N, k, k.keyCode);
           return T = k.defaultPrevented, M;
-        }, S), d(N, "keypress", function(k) {
+        }, S), d(C, "keypress", function(k) {
           T && (k.ctrlKey || k.altKey || k.shiftKey || k.metaKey) && (r.stopEvent(k), T = null);
-        }, S), d(N, "keyup", function(k) {
+        }, S), d(C, "keyup", function(k) {
           E[k.keyCode] = null;
         }, S), E || (y(), d(window, "focus", y));
       };
@@ -21040,24 +21040,24 @@ function Nl() {
       }
       if (typeof window == "object" && window.postMessage && !g.isOldIE) {
         var A = 1;
-        r.nextTick = function(N, C) {
-          C = C || window;
+        r.nextTick = function(C, N) {
+          N = N || window;
           var S = "zero-timeout-message-" + A++, T = function(k) {
-            k.data == S && (r.stopPropagation(k), a(C, "message", T), N());
+            k.data == S && (r.stopPropagation(k), a(N, "message", T), C());
           };
-          d(C, "message", T), C.postMessage(S, "*");
+          d(N, "message", T), N.postMessage(S, "*");
         };
       }
-      r.$idleBlocked = !1, r.onIdle = function(N, C) {
+      r.$idleBlocked = !1, r.onIdle = function(C, N) {
         return setTimeout(function S() {
-          r.$idleBlocked ? setTimeout(S, 100) : N();
-        }, C);
-      }, r.$idleBlockId = null, r.blockIdle = function(N) {
+          r.$idleBlocked ? setTimeout(S, 100) : C();
+        }, N);
+      }, r.$idleBlockId = null, r.blockIdle = function(C) {
         r.$idleBlockId && clearTimeout(r.$idleBlockId), r.$idleBlocked = !0, r.$idleBlockId = setTimeout(function() {
           r.$idleBlocked = !1;
-        }, N || 100);
-      }, r.nextFrame = typeof window == "object" && (window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame), r.nextFrame ? r.nextFrame = r.nextFrame.bind(window) : r.nextFrame = function(N) {
-        setTimeout(N, 17);
+        }, C || 100);
+      }, r.nextFrame = typeof window == "object" && (window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame), r.nextFrame ? r.nextFrame = r.nextFrame.bind(window) : r.nextFrame = function(C) {
+        setTimeout(C, 17);
       };
     }), ace.define("ace/clipboard", ["require", "exports", "module"], function(i, r, w) {
       var p;
@@ -21071,12 +21071,12 @@ function Nl() {
         }
       };
     }), ace.define("ace/keyboard/textinput", ["require", "exports", "module", "ace/lib/event", "ace/config", "ace/lib/useragent", "ace/lib/dom", "ace/lib/lang", "ace/clipboard", "ace/lib/keys"], function(i, r, w) {
-      var p = i("../lib/event"), g = i("../config").nls, E = i("../lib/useragent"), h = i("../lib/dom"), m = i("../lib/lang"), s = i("../clipboard"), c = E.isChrome < 18, u = E.isIE, d = E.isChrome > 63, a = 400, f = i("../lib/keys"), b = f.KEY_MODS, y = E.isIOS, A = y ? /\s/ : /\n/, N = E.isMobile, C = (
+      var p = i("../lib/event"), g = i("../config").nls, E = i("../lib/useragent"), h = i("../lib/dom"), m = i("../lib/lang"), s = i("../clipboard"), c = E.isChrome < 18, u = E.isIE, d = E.isChrome > 63, a = 400, f = i("../lib/keys"), b = f.KEY_MODS, y = E.isIOS, A = y ? /\s/ : /\n/, C = E.isMobile, N = (
         /** @class */
         (function() {
           function S(T, k) {
             var M = this;
-            this.host = k, this.text = h.createElement("textarea"), this.text.className = "ace_text-input", this.text.setAttribute("wrap", "off"), this.text.setAttribute("autocomplete", "off"), this.text.setAttribute("autocorrect", "off"), this.text.setAttribute("autocapitalize", "off"), this.text.setAttribute("spellcheck", "false"), this.text.style.opacity = "0", T.insertBefore(this.text, T.firstChild), this.copied = !1, this.pasted = !1, this.inComposition = !1, this.sendingText = !1, this.tempStyle = "", N || (this.text.style.fontSize = "1px"), this.commandMode = !1, this.ignoreFocusEvents = !1, this.lastValue = "", this.lastSelectionStart = 0, this.lastSelectionEnd = 0, this.lastRestoreEnd = 0, this.rowStart = Number.MAX_SAFE_INTEGER, this.rowEnd = Number.MIN_SAFE_INTEGER, this.numberOfExtraLines = 0;
+            this.host = k, this.text = h.createElement("textarea"), this.text.className = "ace_text-input", this.text.setAttribute("wrap", "off"), this.text.setAttribute("autocomplete", "off"), this.text.setAttribute("autocorrect", "off"), this.text.setAttribute("autocapitalize", "off"), this.text.setAttribute("spellcheck", "false"), this.text.style.opacity = "0", T.insertBefore(this.text, T.firstChild), this.copied = !1, this.pasted = !1, this.inComposition = !1, this.sendingText = !1, this.tempStyle = "", C || (this.text.style.fontSize = "1px"), this.commandMode = !1, this.ignoreFocusEvents = !1, this.lastValue = "", this.lastSelectionStart = 0, this.lastSelectionEnd = 0, this.lastRestoreEnd = 0, this.rowStart = Number.MAX_SAFE_INTEGER, this.rowEnd = Number.MIN_SAFE_INTEGER, this.numberOfExtraLines = 0;
             try {
               this.$isFocused = document.activeElement === this.text;
             } catch {
@@ -21214,7 +21214,7 @@ function Nl() {
                 return this.host.execCommand("redo");
             }
             var k = this.text.value, M = this.sendText(k, !0);
-            (k.length > a + 100 || A.test(M) || N && this.lastSelectionStart < 1 && this.lastSelectionStart == this.lastSelectionEnd) && this.resetSelection();
+            (k.length > a + 100 || A.test(M) || C && this.lastSelectionStart < 1 && this.lastSelectionStart == this.lastSelectionEnd) && this.resetSelection();
           }, S.prototype.sendText = function(T, k) {
             if (this.afterContextMenu && (this.afterContextMenu = !1), this.pasted)
               return this.resetSelection(), T && this.host.onPaste(T), this.pasted = !1, "";
@@ -21241,7 +21241,7 @@ function Nl() {
               var M = function(I) {
                 return I.selectionStart === 0 && I.selectionEnd >= k.lastValue.length && I.value === k.lastValue && k.lastValue && I.selectionEnd !== k.lastSelectionEnd;
               };
-              this.copied ? this.copied = !1 : M(this.text) ? (this.host.selectAll(), this.resetSelection()) : N && this.text.selectionStart != this.lastSelectionStart && this.resetSelection();
+              this.copied ? this.copied = !1 : M(this.text) ? (this.host.selectAll(), this.resetSelection()) : C && this.text.selectionStart != this.lastSelectionStart && this.resetSelection();
             }
           }, S.prototype.$resetSelectionIOS = function(T) {
             if (!(!this.$isFocused || this.copied && !T || this.sendingText)) {
@@ -21257,8 +21257,8 @@ function Nl() {
             var T = this;
             if (!(this.inComposition || this.sendingText) && !(!this.$isFocused && !this.afterContextMenu)) {
               this.inComposition = !0;
-              var k = 0, M = 0, I = "", $ = function(P, Q) {
-                for (var F = Q, K = 1; K <= P - T.rowStart && K < 2 * T.numberOfExtraLines + 1; K++)
+              var k = 0, M = 0, I = "", $ = function(P, W) {
+                for (var F = W, K = 1; K <= P - T.rowStart && K < 2 * T.numberOfExtraLines + 1; K++)
                   F += T.host.session.getLine(P - K).length + 1;
                 return F;
               };
@@ -21276,7 +21276,7 @@ function Nl() {
                   var z = this.host.session.getLine(this.rowEnd + 1);
                   M = D.end.row > this.rowEnd + 1 ? z.length : D.end.column, M += I.length + 1, I = I + `
 ` + z;
-                } else N && O > 0 && (I = `
+                } else C && O > 0 && (I = `
 ` + I, M += 1, k += 1);
                 I.length > a && (k < a && M < a ? I = I.slice(0, a) : (I = `
 `, k == M ? k = M = 0 : (k = 0, M = 1)));
@@ -21363,8 +21363,8 @@ function Nl() {
           }, S;
         })()
       );
-      r.TextInput = C, r.$setUserAgentForTests = function(S, T) {
-        N = S, y = T;
+      r.TextInput = N, r.$setUserAgentForTests = function(S, T) {
+        C = S, y = T;
       };
     }), ace.define("ace/mouse/default_handlers", ["require", "exports", "module", "ace/lib/useragent"], function(i, r, w) {
       var p = i("../lib/useragent"), g = 0, E = 550, h = (
@@ -21433,8 +21433,8 @@ function Nl() {
               else if (y == -1 && A == 1)
                 f = b.end, d = b.start;
               else {
-                var N = s(this.$clickSelection, f);
-                f = N.cursor, d = N.anchor;
+                var C = s(this.$clickSelection, f);
+                f = C.cursor, d = C.anchor;
               }
               a.selection.setSelectionAnchor(d.row, d.column);
             }
@@ -21462,14 +21462,14 @@ function Nl() {
               this.$lastScroll || (this.$lastScroll = { t: 0, vx: 0, vy: 0, allowed: 0 });
               var a = this.$lastScroll, f = u.domEvent.timeStamp, b = f - a.t, y = b ? u.wheelX / b : a.vx, A = b ? u.wheelY / b : a.vy;
               b < E && (y = (y + a.vx) / 2, A = (A + a.vy) / 2);
-              var N = Math.abs(y / A), C = !1;
-              if (N >= 1 && d.renderer.isScrollableBy(u.wheelX * u.speed, 0) && (C = !0), N <= 1 && d.renderer.isScrollableBy(0, u.wheelY * u.speed) && (C = !0), C)
+              var C = Math.abs(y / A), N = !1;
+              if (C >= 1 && d.renderer.isScrollableBy(u.wheelX * u.speed, 0) && (N = !0), C <= 1 && d.renderer.isScrollableBy(0, u.wheelY * u.speed) && (N = !0), N)
                 a.allowed = f;
               else if (f - a.allowed < E) {
                 var S = Math.abs(y) <= 1.5 * Math.abs(a.vx) && Math.abs(A) <= 1.5 * Math.abs(a.vy);
-                S ? (C = !0, a.allowed = f) : a.allowed = 0;
+                S ? (N = !0, a.allowed = f) : a.allowed = 0;
               }
-              if (a.t = f, a.vx = y, a.vy = A, C)
+              if (a.t = f, a.vx = y, a.vy = A, N)
                 return d.renderer.scrollBy(u.wheelX * u.speed, u.wheelY * u.speed), u.stop();
             }
           }, c;
@@ -21497,10 +21497,10 @@ function Nl() {
     }), ace.define("ace/tooltip", ["require", "exports", "module", "ace/lib/dom", "ace/lib/event", "ace/range", "ace/lib/scroll"], function(i, r, w) {
       var p = this && this.__extends || /* @__PURE__ */ (function() {
         var f = function(b, y) {
-          return f = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(A, N) {
-            A.__proto__ = N;
-          } || function(A, N) {
-            for (var C in N) Object.prototype.hasOwnProperty.call(N, C) && (A[C] = N[C]);
+          return f = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(A, C) {
+            A.__proto__ = C;
+          } || function(A, C) {
+            for (var N in C) Object.prototype.hasOwnProperty.call(C, N) && (A[N] = C[N]);
           }, f(b, y);
         };
         return function(b, y) {
@@ -21538,8 +21538,8 @@ function Nl() {
           }, f.prototype.setHtml = function(b) {
             this.getElement().innerHTML = b;
           }, f.prototype.setPosition = function(b, y) {
-            var A = this.getElement(), N = A.offsetParent && A.offsetParent.getBoundingClientRect();
-            A.style.left = b - (N ? N.left : 0) + "px", A.style.top = y - (N ? N.top : 0) + "px";
+            var A = this.getElement(), C = A.offsetParent && A.offsetParent.getBoundingClientRect();
+            A.style.left = b - (C ? C.left : 0) + "px", A.style.top = y - (C ? C.top : 0) + "px";
           }, f.prototype.setClassName = function(b) {
             E.addCssClass(this.getElement(), b);
           }, f.prototype.setTheme = function(b) {
@@ -21568,16 +21568,16 @@ function Nl() {
             var y = this.popups.indexOf(b);
             y !== -1 && (this.popups.splice(y, 1), this.updatePopups());
           }, f.prototype.updatePopups = function() {
-            var b, y, A, N;
+            var b, y, A, C;
             this.popups.sort(function(D, O) {
               return O.priority - D.priority;
             });
-            var C = [];
+            var N = [];
             try {
               for (var S = g(this.popups), T = S.next(); !T.done; T = S.next()) {
                 var k = T.value, M = !0;
                 try {
-                  for (var I = (A = void 0, g(C)), $ = I.next(); !$.done; $ = I.next()) {
+                  for (var I = (A = void 0, g(N)), $ = I.next(); !$.done; $ = I.next()) {
                     var B = $.value;
                     if (this.doPopupsOverlap(B, k)) {
                       M = !1;
@@ -21588,12 +21588,12 @@ function Nl() {
                   A = { error: D };
                 } finally {
                   try {
-                    $ && !$.done && (N = I.return) && N.call(I);
+                    $ && !$.done && (C = I.return) && C.call(I);
                   } finally {
                     if (A) throw A.error;
                   }
                 }
-                M ? C.push(k) : k.hide();
+                M ? N.push(k) : k.hide();
               }
             } catch (D) {
               b = { error: D };
@@ -21605,8 +21605,8 @@ function Nl() {
               }
             }
           }, f.prototype.doPopupsOverlap = function(b, y) {
-            var A = b.getElement().getBoundingClientRect(), N = y.getElement().getBoundingClientRect();
-            return A.left < N.right && A.right > N.left && A.top < N.bottom && A.bottom > N.top;
+            var A = b.getElement().getBoundingClientRect(), C = y.getElement().getBoundingClientRect();
+            return A.left < C.right && A.right > C.left && A.top < C.bottom && A.bottom > C.top;
           }, f;
         })()
       ), d = new u();
@@ -21619,10 +21619,10 @@ function Nl() {
             y === void 0 && (y = document.body);
             var A = f.call(this, y) || this;
             A.timeout = void 0, A.lastT = 0, A.idleTime = 350, A.lastEvent = void 0, A.onMouseOut = A.onMouseOut.bind(A), A.onMouseMove = A.onMouseMove.bind(A), A.waitForHover = A.waitForHover.bind(A), A.hide = A.hide.bind(A);
-            var N = A.getElement();
-            return N.style.whiteSpace = "pre-wrap", N.style.pointerEvents = "auto", N.addEventListener("mouseout", A.onMouseOut), N.tabIndex = -1, N.addEventListener("blur", (function() {
-              N.contains(document.activeElement) || this.hide();
-            }).bind(A)), N.addEventListener("wheel", m), A;
+            var C = A.getElement();
+            return C.style.whiteSpace = "pre-wrap", C.style.pointerEvents = "auto", C.addEventListener("mouseout", A.onMouseOut), C.tabIndex = -1, C.addEventListener("blur", (function() {
+              C.contains(document.activeElement) || this.hide();
+            }).bind(A)), C.addEventListener("wheel", m), A;
           }
           return b.prototype.addToEditor = function(y) {
             y.on("mousemove", this.onMouseMove), y.on("mousedown", this.hide), y.renderer.getMouseEventTarget().addEventListener("mouseout", this.onMouseOut, !0);
@@ -21630,12 +21630,12 @@ function Nl() {
             y.off("mousemove", this.onMouseMove), y.off("mousedown", this.hide), y.renderer.getMouseEventTarget().removeEventListener("mouseout", this.onMouseOut, !0), this.timeout && (clearTimeout(this.timeout), this.timeout = null);
           }, b.prototype.onMouseMove = function(y, A) {
             this.lastEvent = y, this.lastT = Date.now();
-            var N = A.$mouseHandler.isMousePressed;
+            var C = A.$mouseHandler.isMousePressed;
             if (this.isOpen) {
-              var C = this.lastEvent && this.lastEvent.getDocumentPosition();
-              (!this.range || !this.range.contains(C.row, C.column) || N || this.isOutsideOfText(this.lastEvent)) && this.hide();
+              var N = this.lastEvent && this.lastEvent.getDocumentPosition();
+              (!this.range || !this.range.contains(N.row, N.column) || C || this.isOutsideOfText(this.lastEvent)) && this.hide();
             }
-            this.timeout || N || (this.lastEvent = y, this.timeout = setTimeout(this.waitForHover, this.idleTime));
+            this.timeout || C || (this.lastEvent = y, this.timeout = setTimeout(this.waitForHover, this.idleTime));
           }, b.prototype.waitForHover = function() {
             this.timeout && clearTimeout(this.timeout);
             var y = Date.now() - this.lastT;
@@ -21645,24 +21645,24 @@ function Nl() {
             }
             this.timeout = null, this.lastEvent && !this.isOutsideOfText(this.lastEvent) && this.$gatherData(this.lastEvent, this.lastEvent.editor);
           }, b.prototype.isOutsideOfText = function(y) {
-            var A = y.editor, N = y.getDocumentPosition(), C = A.session.getLine(N.row);
-            if (N.column == C.length) {
-              var S = A.renderer.pixelToScreenCoordinates(y.clientX, y.clientY), T = A.session.documentToScreenPosition(N.row, N.column);
+            var A = y.editor, C = y.getDocumentPosition(), N = A.session.getLine(C.row);
+            if (C.column == N.length) {
+              var S = A.renderer.pixelToScreenCoordinates(y.clientX, y.clientY), T = A.session.documentToScreenPosition(C.row, C.column);
               if (T.column != S.column || T.row != S.row)
                 return !0;
             }
             return !1;
           }, b.prototype.setDataProvider = function(y) {
             this.$gatherData = y;
-          }, b.prototype.showForRange = function(y, A, N, C) {
+          }, b.prototype.showForRange = function(y, A, C, N) {
             var S = 10;
-            if (!(C && C != this.lastEvent) && !(this.isOpen && document.activeElement == this.getElement())) {
+            if (!(N && N != this.lastEvent) && !(this.isOpen && document.activeElement == this.getElement())) {
               var T = y.renderer;
               this.isOpen || (d.addPopup(this), this.$registerCloseEvents(), this.setTheme(T.theme)), this.isOpen = !0, this.addMarker(A, y.session), this.range = h.fromPoints(A.start, A.end);
               var k = T.textToScreenCoordinates(A.start.row, A.start.column), M = T.scroller.getBoundingClientRect();
               k.pageX < M.left && (k.pageX = M.left);
               var I = this.getElement();
-              I.innerHTML = "", I.appendChild(N), I.style.maxHeight = "", I.style.display = "block";
+              I.innerHTML = "", I.appendChild(C), I.style.maxHeight = "", I.style.display = "block";
               var $ = I.clientHeight, B = I.clientWidth, D = window.innerHeight - k.pageY - T.lineHeight, O = !0;
               k.pageY - $ < 0 && k.pageY < D && (O = !1), I.style.maxHeight = (O ? k.pageY : D) - S + "px", I.style.top = O ? "" : k.pageY + T.lineHeight + "px", I.style.bottom = O ? window.innerHeight - k.pageY + "px" : "", I.style.left = Math.min(k.pageX, window.innerWidth - B - S) + "px";
             }
@@ -21683,10 +21683,10 @@ function Nl() {
     }), ace.define("ace/mouse/default_gutter_handler", ["require", "exports", "module", "ace/lib/dom", "ace/lib/event", "ace/tooltip", "ace/config"], function(i, r, w) {
       var p = this && this.__extends || /* @__PURE__ */ (function() {
         var f = function(b, y) {
-          return f = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(A, N) {
-            A.__proto__ = N;
-          } || function(A, N) {
-            for (var C in N) Object.prototype.hasOwnProperty.call(N, C) && (A[C] = N[C]);
+          return f = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(A, C) {
+            A.__proto__ = C;
+          } || function(A, C) {
+            for (var N in C) Object.prototype.hasOwnProperty.call(C, N) && (A[N] = C[N]);
           }, f(b, y);
         };
         return function(b, y) {
@@ -21727,28 +21727,28 @@ function Nl() {
             }
           }
         });
-        var N, C;
+        var C, N;
         function S() {
-          var M = C.getDocumentPosition().row, I = b.session.getLength();
+          var M = N.getDocumentPosition().row, I = b.session.getLength();
           if (M == I) {
-            var $ = b.renderer.pixelToScreenCoordinates(0, C.y).row, B = C.$pos;
+            var $ = b.renderer.pixelToScreenCoordinates(0, N.y).row, B = N.$pos;
             if ($ > b.session.documentToScreenRow(B.row, B.column))
               return T();
           }
           if (A.showTooltip(M), !!A.isOpen)
             if (b.on("mousewheel", T), b.on("changeSession", T), window.addEventListener("keydown", T, !0), f.$tooltipFollowsMouse)
-              k(C);
+              k(N);
             else {
-              var D = C.getGutterRow(), O = y.$lines.get(D);
+              var D = N.getGutterRow(), O = y.$lines.get(D);
               if (O) {
                 var x = O.element.querySelector(".ace_gutter_annotation"), _ = x.getBoundingClientRect(), L = A.getElement().style;
                 L.left = _.right - c + "px", L.top = _.bottom - u + "px";
               } else
-                k(C);
+                k(N);
             }
         }
         function T(M) {
-          M && M.type === "keydown" && (M.ctrlKey || M.metaKey) || M && M.type === "mouseout" && (!M.relatedTarget || A.getElement().contains(M.relatedTarget)) || (N && (N = clearTimeout(N)), A.isOpen && (A.hideTooltip(), b.off("mousewheel", T), b.off("changeSession", T), window.removeEventListener("keydown", T, !0)));
+          M && M.type === "keydown" && (M.ctrlKey || M.metaKey) || M && M.type === "mouseout" && (!M.relatedTarget || A.getElement().contains(M.relatedTarget)) || (C && (C = clearTimeout(C)), A.isOpen && (A.hideTooltip(), b.off("mousewheel", T), b.off("changeSession", T), window.removeEventListener("keydown", T, !0)));
         }
         function k(M) {
           A.setPosition(M.x, M.y);
@@ -21757,12 +21757,12 @@ function Nl() {
           var I = M.domEvent.target || M.domEvent.srcElement;
           if (E.hasCssClass(I, "ace_fold-widget") || E.hasCssClass(I, "ace_custom-widget"))
             return T();
-          A.isOpen && f.$tooltipFollowsMouse && k(M), C = M, !N && (N = setTimeout(function() {
-            N = null, C && !f.isMousePressed && S();
+          A.isOpen && f.$tooltipFollowsMouse && k(M), N = M, !C && (C = setTimeout(function() {
+            C = null, N && !f.isMousePressed && S();
           }, 50));
         }), h.addListener(b.renderer.$gutter, "mouseout", function(M) {
-          C = null, A.isOpen && (N = setTimeout(function() {
-            N = null, T(M);
+          N = null, A.isOpen && (C = setTimeout(function() {
+            C = null, T(M);
           }, 50));
         }, b);
       }
@@ -21773,16 +21773,16 @@ function Nl() {
           p(b, f);
           function b(y, A) {
             A === void 0 && (A = !1);
-            var N = f.call(this, y.container) || this;
-            N.id = "gt" + ++b.$uid, N.editor = y, N.visibleTooltipRow;
-            var C = N.getElement();
-            return C.setAttribute("role", "tooltip"), C.setAttribute("id", N.id), C.style.pointerEvents = "auto", A && (N.onMouseOut = N.onMouseOut.bind(N), C.addEventListener("mouseout", N.onMouseOut)), N;
+            var C = f.call(this, y.container) || this;
+            C.id = "gt" + ++b.$uid, C.editor = y, C.visibleTooltipRow;
+            var N = C.getElement();
+            return N.setAttribute("role", "tooltip"), N.setAttribute("id", C.id), N.style.pointerEvents = "auto", A && (C.onMouseOut = C.onMouseOut.bind(C), N.addEventListener("mouseout", C.onMouseOut)), C;
           }
           return b.prototype.onMouseOut = function(y) {
             this.isOpen && (!y.relatedTarget || this.getElement().contains(y.relatedTarget) || y && y.currentTarget.contains(y.relatedTarget) || this.hideTooltip());
           }, b.prototype.setPosition = function(y, A) {
-            var N = window.innerWidth || document.documentElement.clientWidth, C = window.innerHeight || document.documentElement.clientHeight, S = this.getWidth(), T = this.getHeight();
-            y += 15, A += 15, y + S > N && (y -= y + S - N), A + T > C && (A -= 20 + T), m.prototype.setPosition.call(this, y, A);
+            var C = window.innerWidth || document.documentElement.clientWidth, N = window.innerHeight || document.documentElement.clientHeight, S = this.getWidth(), T = this.getHeight();
+            y += 15, A += 15, y + S > C && (y -= y + S - C), A + T > N && (A -= 20 + T), m.prototype.setPosition.call(this, y, A);
           }, Object.defineProperty(b, "annotationLabels", {
             get: function() {
               return {
@@ -21811,18 +21811,18 @@ function Nl() {
             enumerable: !1,
             configurable: !0
           }), b.prototype.showTooltip = function(y) {
-            var A, N = this.editor.renderer.$gutterLayer, C = N.$annotations[y], S;
-            C ? S = {
-              displayText: Array.from(C.displayText),
-              type: Array.from(C.type)
+            var A, C = this.editor.renderer.$gutterLayer, N = C.$annotations[y], S;
+            N ? S = {
+              displayText: Array.from(N.displayText),
+              type: Array.from(N.type)
             } : S = { displayText: [], type: [] };
-            var T = N.session.getFoldLine(y);
-            if (T && N.$showFoldedAnnotations) {
+            var T = C.session.getFoldLine(y);
+            if (T && C.$showFoldedAnnotations) {
               for (var k = { error: [], security: [], warning: [], info: [], hint: [] }, M = { error: 1, security: 2, warning: 3, info: 4, hint: 5 }, I, $ = y + 1; $ <= T.end.row; $++)
-                if (N.$annotations[$])
-                  for (var B = 0; B < N.$annotations[$].text.length; B++) {
-                    var D = N.$annotations[$].type[B];
-                    k[D].push(N.$annotations[$].text[B]), (!I || M[D] < M[I]) && (I = D);
+                if (C.$annotations[$])
+                  for (var B = 0; B < C.$annotations[$].text.length; B++) {
+                    var D = C.$annotations[$].type[B];
+                    k[D].push(C.$annotations[$].text[B]), (!I || M[D] < M[I]) && (I = D);
                   }
               if (["error", "security", "warning"].includes(I)) {
                 var O = "".concat(b.annotationsToSummaryString(k), " in folded code.");
@@ -21831,30 +21831,30 @@ function Nl() {
             }
             if (S.displayText.length === 0)
               return this.hideTooltip();
-            for (var x = { error: [], security: [], warning: [], info: [], hint: [] }, _ = N.$useSvgGutterIcons ? "ace_icon_svg" : "ace_icon", $ = 0; $ < S.displayText.length; $++) {
+            for (var x = { error: [], security: [], warning: [], info: [], hint: [] }, _ = C.$useSvgGutterIcons ? "ace_icon_svg" : "ace_icon", $ = 0; $ < S.displayText.length; $++) {
               var L = E.createElement("span"), z = E.createElement("span");
               (A = z.classList).add.apply(A, ["ace_".concat(S.type[$]), _]), z.setAttribute("aria-label", "".concat(b.annotationLabels[S.type[$].replace("_fold", "")].singular)), z.setAttribute("role", "img"), z.appendChild(E.createTextNode(" ")), L.appendChild(z), L.appendChild(E.createTextNode(S.displayText[$])), L.appendChild(E.createElement("br")), x[S.type[$].replace("_fold", "")].push(L);
             }
             var H = this.getElement();
-            E.removeChildren(H), x.error.forEach(function(Q) {
-              return H.appendChild(Q);
-            }), x.security.forEach(function(Q) {
-              return H.appendChild(Q);
-            }), x.warning.forEach(function(Q) {
-              return H.appendChild(Q);
-            }), x.info.forEach(function(Q) {
-              return H.appendChild(Q);
-            }), x.hint.forEach(function(Q) {
-              return H.appendChild(Q);
+            E.removeChildren(H), x.error.forEach(function(W) {
+              return H.appendChild(W);
+            }), x.security.forEach(function(W) {
+              return H.appendChild(W);
+            }), x.warning.forEach(function(W) {
+              return H.appendChild(W);
+            }), x.info.forEach(function(W) {
+              return H.appendChild(W);
+            }), x.hint.forEach(function(W) {
+              return H.appendChild(W);
             }), H.setAttribute("aria-live", "polite"), this.isOpen || (this.setTheme(this.editor.renderer.theme), this.setClassName("ace_gutter-tooltip"));
             var P = this.$findLinkedAnnotationNode(y);
             P && P.setAttribute("aria-describedby", this.id), this.show(), this.visibleTooltipRow = y, this.editor._signal("showGutterTooltip", this);
           }, b.prototype.$findLinkedAnnotationNode = function(y) {
             var A = this.$findCellByRow(y);
             if (A) {
-              var N = A.element;
-              if (N.childNodes.length > 2)
-                return N.childNodes[2];
+              var C = A.element;
+              if (C.childNodes.length > 2)
+                return C.childNodes[2];
             }
           }, b.prototype.$findCellByRow = function(y) {
             return this.editor.renderer.$gutterLayer.$lines.cells.find(function(A) {
@@ -21869,25 +21869,25 @@ function Nl() {
               this.visibleTooltipRow = void 0, this.editor._signal("hideGutterTooltip", this);
             }
           }, b.annotationsToSummaryString = function(y) {
-            var A, N, C = [], S = ["error", "security", "warning", "info", "hint"];
+            var A, C, N = [], S = ["error", "security", "warning", "info", "hint"];
             try {
               for (var T = g(S), k = T.next(); !k.done; k = T.next()) {
                 var M = k.value;
                 if (y[M].length) {
                   var I = y[M].length === 1 ? b.annotationLabels[M].singular : b.annotationLabels[M].plural;
-                  C.push("".concat(y[M].length, " ").concat(I));
+                  N.push("".concat(y[M].length, " ").concat(I));
                 }
               }
             } catch ($) {
               A = { error: $ };
             } finally {
               try {
-                k && !k.done && (N = T.return) && N.call(T);
+                k && !k.done && (C = T.return) && C.call(T);
               } finally {
                 if (A) throw A.error;
               }
             }
-            return C.join(", ");
+            return N.join(", ");
           }, b;
         })(m)
       );
@@ -21940,7 +21940,7 @@ function Nl() {
         b.forEach(function(V) {
           d[V] = this[V];
         }, this), a.on("mousedown", this.onMouseDown.bind(d));
-        var y = a.container, A, N, C, S, T, k, M = 0, I, $, B, D, O;
+        var y = a.container, A, C, N, S, T, k, M = 0, I, $, B, D, O;
         this.onDragStart = function(V) {
           if (this.cancelDrag || !y.draggable) {
             var X = this;
@@ -21961,10 +21961,10 @@ function Nl() {
           this.editor.unsetStyle("ace_dragging"), this.editor.renderer.setCursorStyle("");
         }, this.onDragEnter = function(V) {
           if (!(a.getReadOnly() || !F(V.dataTransfer)))
-            return N = V.clientX, C = V.clientY, A || z(), M++, V.dataTransfer.dropEffect = I = K(V), g.preventDefault(V);
+            return C = V.clientX, N = V.clientY, A || z(), M++, V.dataTransfer.dropEffect = I = K(V), g.preventDefault(V);
         }, this.onDragOver = function(V) {
           if (!(a.getReadOnly() || !F(V.dataTransfer)))
-            return N = V.clientX, C = V.clientY, A || (z(), M++), P !== null && (P = null), V.dataTransfer.dropEffect = I = K(V), g.preventDefault(V);
+            return C = V.clientX, N = V.clientY, A || (z(), M++), P !== null && (P = null), V.dataTransfer.dropEffect = I = K(V), g.preventDefault(V);
         }, this.onDragLeave = function(V) {
           if (M--, M <= 0 && A)
             return H(), I = null, g.preventDefault(V);
@@ -21996,21 +21996,21 @@ function Nl() {
         function x(V, X) {
           var q = Date.now(), Z = !X || V.row != X.row, ne = !X || V.column != X.column;
           if (!D || Z || ne)
-            a.moveCursorToPosition(V), D = q, O = { x: N, y: C };
+            a.moveCursorToPosition(V), D = q, O = { x: C, y: N };
           else {
-            var ae = u(O.x, O.y, N, C);
+            var ae = u(O.x, O.y, C, N);
             ae > s ? D = null : q - D >= m && (a.renderer.scrollCursorIntoView(), D = null);
           }
         }
         function _(V, X) {
           var q = Date.now(), Z = a.renderer.layerConfig.lineHeight, ne = a.renderer.layerConfig.characterWidth, ae = a.renderer.scroller.getBoundingClientRect(), le = {
             x: {
-              left: N - ae.left,
-              right: ae.right - N
+              left: C - ae.left,
+              right: ae.right - C
             },
             y: {
-              top: C - ae.top,
-              bottom: ae.bottom - C
+              top: N - ae.top,
+              bottom: ae.bottom - N
             }
           }, me = Math.min(le.x.left, le.x.right), Se = Math.min(le.y.top, le.y.bottom), Ne = { row: V.row, column: V.column };
           me / ne <= 2 && (Ne.column += le.x.left < le.x.right ? -3 : 2), Se / Z <= 1 && (Ne.row += le.y.top < le.y.bottom ? -1 : 1);
@@ -22019,16 +22019,16 @@ function Nl() {
         }
         function L() {
           var V = k;
-          k = a.renderer.screenToTextCoordinates(N, C), x(k, V), _(k, V);
+          k = a.renderer.screenToTextCoordinates(C, N), x(k, V), _(k, V);
         }
         function z() {
-          T = a.selection.toOrientedRange(), A = a.session.addMarker(T, "ace_selection", a.getSelectionStyle()), a.clearSelection(), a.isFocused() && a.renderer.$cursorLayer.setBlinking(!1), clearInterval(S), L(), S = setInterval(L, 20), M = 0, g.addListener(document, "mousemove", Q);
+          T = a.selection.toOrientedRange(), A = a.session.addMarker(T, "ace_selection", a.getSelectionStyle()), a.clearSelection(), a.isFocused() && a.renderer.$cursorLayer.setBlinking(!1), clearInterval(S), L(), S = setInterval(L, 20), M = 0, g.addListener(document, "mousemove", W);
         }
         function H() {
-          clearInterval(S), a.session.removeMarker(A), A = null, a.selection.fromOrientedRange(T), a.isFocused() && !$ && a.$resetCursorStyle(), T = null, k = null, M = 0, B = null, D = null, g.removeListener(document, "mousemove", Q);
+          clearInterval(S), a.session.removeMarker(A), A = null, a.selection.fromOrientedRange(T), a.isFocused() && !$ && a.$resetCursorStyle(), T = null, k = null, M = 0, B = null, D = null, g.removeListener(document, "mousemove", W);
         }
         var P = null;
-        function Q() {
+        function W() {
           P == null && (P = setTimeout(function() {
             P != null && A && H();
           }, 20));
@@ -22086,8 +22086,8 @@ function Nl() {
               if ("unselectable" in A && (A.unselectable = "on"), a.getDragDelay()) {
                 if (E.isWebKit) {
                   this.cancelDrag = !0;
-                  var N = a.container;
-                  N.draggable = !0;
+                  var C = a.container;
+                  C.draggable = !0;
                 }
                 this.setState("dragWait");
               } else
@@ -22104,29 +22104,29 @@ function Nl() {
     }), ace.define("ace/mouse/touch_handler", ["require", "exports", "module", "ace/mouse/mouse_event", "ace/lib/event", "ace/lib/dom"], function(i, r, w) {
       var p = i("./mouse_event").MouseEvent, g = i("../lib/event"), E = i("../lib/dom");
       r.addTouchListeners = function(h, m) {
-        var s = "scroll", c, u, d, a, f, b, y = 0, A, N = 0, C = 0, S = 0, T, k;
+        var s = "scroll", c, u, d, a, f, b, y = 0, A, C = 0, N = 0, S = 0, T, k;
         function M() {
           var x = window.navigator && window.navigator.clipboard, _ = !1, L = function() {
-            var P = m.getCopyText(), Q = m.session.getUndoManager().hasUndo();
+            var P = m.getCopyText(), W = m.session.getUndoManager().hasUndo();
             k.replaceChild(E.buildDom(_ ? [
               "span",
               !P && z("selectall") && ["span", { class: "ace_mobile-button", action: "selectall" }, "Select All"],
               P && z("copy") && ["span", { class: "ace_mobile-button", action: "copy" }, "Copy"],
               P && z("cut") && ["span", { class: "ace_mobile-button", action: "cut" }, "Cut"],
               x && z("paste") && ["span", { class: "ace_mobile-button", action: "paste" }, "Paste"],
-              Q && z("undo") && ["span", { class: "ace_mobile-button", action: "undo" }, "Undo"],
+              W && z("undo") && ["span", { class: "ace_mobile-button", action: "undo" }, "Undo"],
               z("find") && ["span", { class: "ace_mobile-button", action: "find" }, "Find"],
               z("openCommandPalette") && ["span", { class: "ace_mobile-button", action: "openCommandPalette" }, "Palette"]
             ] : ["span"]), k.firstChild);
           }, z = function(P) {
             return m.commands.canExecute(P, m);
           }, H = function(P) {
-            var Q = P.target.getAttribute("action");
-            if (Q == "more" || !_)
+            var W = P.target.getAttribute("action");
+            if (W == "more" || !_)
               return _ = !_, L();
-            Q == "paste" ? x.readText().then(function(F) {
-              m.execCommand(Q, F);
-            }) : Q && ((Q == "cut" || Q == "copy") && (x ? x.writeText(m.getCopyText()) : document.execCommand("copy")), m.execCommand(Q)), k.firstChild.style.display = "none", _ = !1, Q != "openCommandPalette" && m.focus();
+            W == "paste" ? x.readText().then(function(F) {
+              m.execCommand(W, F);
+            }) : W && ((W == "cut" || W == "copy") && (x ? x.writeText(m.getCopyText()) : document.execCommand("copy")), m.execCommand(W)), k.firstChild.style.display = "none", _ = !1, W != "openCommandPalette" && m.focus();
           };
           k = E.buildDom([
             "div",
@@ -22163,7 +22163,7 @@ function Nl() {
         }
         function D() {
           f = null, clearTimeout(f), m.selection.moveToPosition(A);
-          var x = N >= 2 ? m.selection.getLineRange(A.row) : m.session.getBracketRange(A);
+          var x = C >= 2 ? m.selection.getLineRange(A.row) : m.session.getBracketRange(A);
           x && !x.isEmpty() ? m.selection.setRange(x) : m.selection.selectWord(), s = "wait";
         }
         g.addListener(h, "contextmenu", function(x) {
@@ -22180,13 +22180,13 @@ function Nl() {
           T = m.$mouseHandler.isMousePressed = !0;
           var L = m.renderer.layerConfig.lineHeight, z = m.renderer.layerConfig.lineHeight, H = x.timeStamp;
           a = H;
-          var P = _[0], Q = P.clientX, F = P.clientY;
-          Math.abs(c - Q) + Math.abs(u - F) > L && (d = -1), c = x.clientX = Q, u = x.clientY = F, C = S = 0;
+          var P = _[0], W = P.clientX, F = P.clientY;
+          Math.abs(c - W) + Math.abs(u - F) > L && (d = -1), c = x.clientX = W, u = x.clientY = F, N = S = 0;
           var K = new p(x, m);
           if (A = K.getDocumentPosition(), H - d < 500 && _.length == 1 && !y)
-            N++, x.preventDefault(), x.button = 0, D();
+            C++, x.preventDefault(), x.button = 0, D();
           else {
-            N = 0;
+            C = 0;
             var V = m.selection.cursor, X = m.selection.isEmpty() ? V : m.selection.anchor, q = m.renderer.$cursorLayer.getPixelPosition(V, !0), Z = m.renderer.$cursorLayer.getPixelPosition(X, !0), ne = m.renderer.scroller.getBoundingClientRect(), ae = m.renderer.layerConfig.offset, le = m.renderer.scrollLeft, me = function(Me, $e) {
               return Me = Me / z, $e = $e / L - 0.75, Me * Me + $e * $e;
             };
@@ -22211,10 +22211,10 @@ function Nl() {
               else
                 return x.preventDefault();
             c = L.clientX, u = L.clientY, x.clientX = L.clientX, x.clientY = L.clientY;
-            var P = x.timeStamp, Q = P - a;
+            var P = x.timeStamp, W = P - a;
             if (a = P, s == "scroll") {
               var F = new p(x, m);
-              F.speed = 1, F.wheelX = z, F.wheelY = H, 10 * Math.abs(z) < Math.abs(H) && (z = 0), 10 * Math.abs(H) < Math.abs(z) && (H = 0), Q != 0 && (C = z / Q, S = H / Q), m._emit("mousewheel", F), F.propagationStopped || (C = S = 0);
+              F.speed = 1, F.wheelX = z, F.wheelY = H, 10 * Math.abs(z) < Math.abs(H) && (z = 0), 10 * Math.abs(H) < Math.abs(z) && (H = 0), W != 0 && (N = z / W, S = H / W), m._emit("mousewheel", F), F.propagationStopped || (N = S = 0);
             } else {
               var K = new p(x, m), V = K.getDocumentPosition();
               s == "cursor" ? m.selection.moveCursorToPosition(V) : s == "anchor" && m.selection.setSelectionAnchor(V.row, V.column), m.renderer.scrollCursorIntoView(V), x.preventDefault();
@@ -22223,9 +22223,9 @@ function Nl() {
         }, m);
         function O() {
           y += 60, b = setInterval(function() {
-            y-- <= 0 && (clearInterval(b), b = null), Math.abs(C) < 0.01 && (C = 0), Math.abs(S) < 0.01 && (S = 0), y < 20 && (C = 0.9 * C), y < 20 && (S = 0.9 * S);
+            y-- <= 0 && (clearInterval(b), b = null), Math.abs(N) < 0.01 && (N = 0), Math.abs(S) < 0.01 && (S = 0), y < 20 && (N = 0.9 * N), y < 20 && (S = 0.9 * S);
             var x = m.session.getScrollTop();
-            m.renderer.scrollBy(10 * C, 10 * S), x == m.session.getScrollTop() && (y = 0);
+            m.renderer.scrollBy(10 * N, 10 * S), x == m.session.getScrollTop() && (y = 0);
           }, 10);
         }
       };
@@ -22237,7 +22237,7 @@ function Nl() {
             this.$dragDelay, this.$dragEnabled, this.$mouseMoved, this.mouseEvent, this.$focusTimeout;
             var b = this;
             this.editor = f, new E(this), new h(this), new s(this);
-            var y = function(C) {
+            var y = function(N) {
               var S = !document.hasFocus || !document.hasFocus() || !f.isFocused() && document.activeElement == (f.textInput && f.textInput.getElement());
               S && window.focus(), f.focus(), setTimeout(function() {
                 f.isFocused() || f.focus();
@@ -22249,12 +22249,12 @@ function Nl() {
               f.renderer.scrollBarH && f.renderer.scrollBarH.inner,
               f.textInput && f.textInput.getElement()
             ].filter(Boolean), [400, 300, 250], this, "onMouseEvent", f), p.addMouseWheelListener(f.container, this.onMouseWheel.bind(this, "mousewheel"), f), c(f.container, f);
-            var N = f.renderer.$gutter;
-            p.addListener(N, "mousedown", this.onMouseEvent.bind(this, "guttermousedown"), f), p.addListener(N, "click", this.onMouseEvent.bind(this, "gutterclick"), f), p.addListener(N, "dblclick", this.onMouseEvent.bind(this, "gutterdblclick"), f), p.addListener(N, "mousemove", this.onMouseEvent.bind(this, "guttermousemove"), f), p.addListener(A, "mousedown", y, f), p.addListener(N, "mousedown", y, f), g.isIE && f.renderer.scrollBarV && (p.addListener(f.renderer.scrollBarV.element, "mousedown", y, f), p.addListener(f.renderer.scrollBarH.element, "mousedown", y, f)), f.on(
+            var C = f.renderer.$gutter;
+            p.addListener(C, "mousedown", this.onMouseEvent.bind(this, "guttermousedown"), f), p.addListener(C, "click", this.onMouseEvent.bind(this, "gutterclick"), f), p.addListener(C, "dblclick", this.onMouseEvent.bind(this, "gutterdblclick"), f), p.addListener(C, "mousemove", this.onMouseEvent.bind(this, "guttermousemove"), f), p.addListener(A, "mousedown", y, f), p.addListener(C, "mousedown", y, f), g.isIE && f.renderer.scrollBarV && (p.addListener(f.renderer.scrollBarV.element, "mousedown", y, f), p.addListener(f.renderer.scrollBarH.element, "mousedown", y, f)), f.on(
               "mousemove",
-              function(C) {
+              function(N) {
                 if (!(b.state || b.$dragDelay || !b.$dragEnabled)) {
-                  var S = f.renderer.screenToTextCoordinates(C.x, C.y), T = f.session.selection.getRange(), k = f.renderer;
+                  var S = f.renderer.screenToTextCoordinates(N.x, N.y), T = f.session.selection.getRange(), k = f.renderer;
                   !T.isEmpty() && T.insideStart(S.row, S.column) ? k.setCursorStyle("default") : k.setCursorStyle("");
                 }
               },
@@ -22276,27 +22276,27 @@ function Nl() {
             this.x = f.x, this.y = f.y, this.isMousePressed = !0;
             var y = this.editor, A = this.editor.renderer;
             A.$isMousePressed = !0;
-            var N = this, C = !0, S = function($) {
+            var C = this, N = !0, S = function($) {
               if ($) {
-                if (g.isWebKit && !$.which && N.releaseMouse)
-                  return N.releaseMouse();
-                N.x = $.clientX, N.y = $.clientY, b && b($), N.mouseEvent = new m($, N.editor), N.$mouseMoved = !0;
+                if (g.isWebKit && !$.which && C.releaseMouse)
+                  return C.releaseMouse();
+                C.x = $.clientX, C.y = $.clientY, b && b($), C.mouseEvent = new m($, C.editor), C.$mouseMoved = !0;
               }
             }, T = function($) {
-              y.off("beforeEndOperation", I), C = !1, y.session && k(), N[N.state + "End"] && N[N.state + "End"]($), N.state = "", N.isMousePressed = A.$isMousePressed = !1, A.$keepTextAreaAtCursor && A.$moveTextAreaToCursor(), N.$onCaptureMouseMove = N.releaseMouse = null, $ && N.onMouseEvent("mouseup", $), y.endOperation();
+              y.off("beforeEndOperation", I), N = !1, y.session && k(), C[C.state + "End"] && C[C.state + "End"]($), C.state = "", C.isMousePressed = A.$isMousePressed = !1, A.$keepTextAreaAtCursor && A.$moveTextAreaToCursor(), C.$onCaptureMouseMove = C.releaseMouse = null, $ && C.onMouseEvent("mouseup", $), y.endOperation();
             }, k = function() {
-              N[N.state] && N[N.state](), N.$mouseMoved = !1;
+              C[C.state] && C[C.state](), C.$mouseMoved = !1;
             }, M = function() {
-              C && (k(), p.nextFrame(M));
+              N && (k(), p.nextFrame(M));
             };
             if (g.isOldIE && f.domEvent.type == "dblclick")
               return setTimeout(function() {
                 T(f);
               });
             var I = function($) {
-              N.releaseMouse && y.curOp.command.name && y.curOp.selectionChanged && (N[N.state + "End"] && N[N.state + "End"](), N.state = "", N.releaseMouse());
+              C.releaseMouse && y.curOp.command.name && y.curOp.selectionChanged && (C[C.state + "End"] && C[C.state + "End"](), C.state = "", C.releaseMouse());
             };
-            y.on("beforeEndOperation", I), y.startOperation({ command: { name: "mouse" } }), N.$onCaptureMouseMove = S, N.releaseMouse = p.capture(this.editor.container, S, T), M();
+            y.on("beforeEndOperation", I), y.startOperation({ command: { name: "mouse" } }), C.$onCaptureMouseMove = S, C.releaseMouse = p.capture(this.editor.container, S, T), M();
           }, a.prototype.cancelContextMenu = function() {
             var f = (function(b) {
               b && b.domEvent && b.domEvent.type != "contextmenu" || (this.editor.off("nativecontextmenu", f), b && b.domEvent && p.stopEvent(b.domEvent));
@@ -22411,7 +22411,7 @@ function Nl() {
         [2, 0, 1, 1, 0, 2, 0],
         [2, 0, 2, 1, 3, 2, 0],
         [2, 0, 2, 33, 3, 1, 1]
-      ], u = 0, d = 1, a = 0, f = 1, b = 2, y = 3, A = 4, N = 5, C = 6, S = 7, T = 8, k = 9, M = 10, I = 11, $ = 12, B = 13, D = 14, O = 15, x = 16, _ = 17, L = 18, z = [
+      ], u = 0, d = 1, a = 0, f = 1, b = 2, y = 3, A = 4, C = 5, N = 6, S = 7, T = 8, k = 9, M = 10, I = 11, $ = 12, B = 13, D = 14, O = 15, x = 16, _ = 17, L = 18, z = [
         L,
         L,
         L,
@@ -22421,29 +22421,29 @@ function Nl() {
         L,
         L,
         L,
-        C,
         N,
         C,
+        N,
         T,
-        N,
-        L,
-        L,
-        L,
-        L,
-        L,
-        L,
-        L,
-        L,
-        L,
-        L,
-        L,
-        L,
-        L,
-        L,
-        N,
-        N,
-        N,
         C,
+        L,
+        L,
+        L,
+        L,
+        L,
+        L,
+        L,
+        L,
+        L,
+        L,
+        L,
+        L,
+        L,
+        L,
+        C,
+        C,
+        C,
+        N,
         T,
         A,
         A,
@@ -22545,7 +22545,7 @@ function Nl() {
         L,
         L,
         L,
-        N,
+        C,
         L,
         L,
         L,
@@ -22646,7 +22646,7 @@ function Nl() {
         A,
         A,
         T,
-        N,
+        C,
         B,
         D,
         O,
@@ -22722,18 +22722,18 @@ function Nl() {
               X[Be] = me;
             $e = -1;
           }
-          Z[Xe] == N && (X[Xe] = 0), g |= me;
+          Z[Xe] == C && (X[Xe] = 0), g |= me;
         }
         if (m) {
           for (Be = 0; Be < q; Be++)
-            if (Z[Be] == C) {
+            if (Z[Be] == N) {
               X[Be] = p;
               for (var ht = Be - 1; ht >= 0 && Z[ht] == T; ht--)
                 X[ht] = p;
             }
         }
       }
-      function Q(V, X, q) {
+      function W(V, X, q) {
         if (!(g < V)) {
           if (V == 1 && p == d && !h) {
             q.reverse();
@@ -22769,7 +22769,7 @@ function Nl() {
           case k:
             return Z < 1 || Z + 1 >= X.length || (ae = q[Z - 1]) != b && ae != y || (le = X[Z + 1]) != b && le != y ? A : (E && (le = y), le == ae ? le : A);
           case M:
-            return ae = Z > 0 ? q[Z - 1] : N, ae == b && Z + 1 < X.length && X[Z + 1] == b ? b : A;
+            return ae = Z > 0 ? q[Z - 1] : C, ae == b && Z + 1 < X.length && X[Z + 1] == b ? b : A;
           case I:
             if (Z > 0 && q[Z - 1] == b)
               return b;
@@ -22786,10 +22786,10 @@ function Nl() {
               if (ae = X[Se], Me && (ae == f || ae == S))
                 return f;
             }
-            return Z < 1 || (ae = X[Z - 1]) == N ? A : q[Z - 1];
-          case N:
-            return E = !1, h = !0, p;
+            return Z < 1 || (ae = X[Z - 1]) == C ? A : q[Z - 1];
           case C:
+            return E = !1, h = !0, p;
+          case N:
             return m = !0, A;
           case B:
           case D:
@@ -22812,7 +22812,7 @@ function Nl() {
         p = q ? d : u, P(Z, le, Z.length, X);
         for (var me = 0; me < ne.length; ne[me] = me, me++)
           ;
-        Q(2, le, ne), Q(1, le, ne);
+        W(2, le, ne), W(1, le, ne);
         for (var me = 0; me < ne.length - 1; me++)
           X[me] === y ? le[me] = r.AN : le[me] === f && (X[me] > S && X[me] < B || X[me] === A || X[me] === L) ? le[me] = r.ON_R : me > 0 && Z[me - 1] === "ل" && /\u0622|\u0623|\u0625|\u0627/.test(Z[me]) && (le[me - 1] = le[me] = r.R_H, me++);
         Z[Z.length - 1] === r.DOT && (le[Z.length - 1] = r.B), Z[0] === "‫" && (le[0] = r.RLE);
@@ -22865,8 +22865,8 @@ function Nl() {
             } else
               this.line += this.showInvisibles ? d : p.DOT;
             var f = this.session, b = 0, y;
-            this.line = this.line.replace(/\t|[\u1100-\u2029, \u202F-\uFFE6]/g, function(A, N) {
-              return A === "	" || f.isFullWidth(A.charCodeAt(0)) ? (y = A === "	" ? f.getScreenTabSize(N + b) : 2, b += y - 1, g.stringRepeat(p.DOT, y)) : A;
+            this.line = this.line.replace(/\t|[\u1100-\u2029, \u202F-\uFFE6]/g, function(A, C) {
+              return A === "	" || f.isFullWidth(A.charCodeAt(0)) ? (y = A === "	" ? f.getScreenTabSize(C + b) : 2, b += y - 1, g.stringRepeat(p.DOT, y)) : A;
             }), this.isRtlDir && (this.fontMetrics.$main.textContent = this.line.charAt(this.line.length - 1) == p.DOT ? this.line.substr(0, this.line.length - 1) : this.line, this.rtlLineOffset = this.contentWidth - this.fontMetrics.$main.getBoundingClientRect().width);
           }, m.prototype.updateBidiMap = function() {
             var s = [];
@@ -22898,11 +22898,11 @@ function Nl() {
               f += this.charWidths[a[b]];
             return !this.session.getOverwrite() && s > c && a[d] % 2 === 0 && (f += this.charWidths[a[d]]), this.wrapIndent && (f += this.isRtlDir ? -1 * this.wrapOffset : this.wrapOffset), this.isRtlDir && (f += this.rtlLineOffset), f;
           }, m.prototype.getSelections = function(s, c) {
-            var u = this.bidiMap, d = u.bidiLevels, a, f = [], b = 0, y = Math.min(s, c) - this.wrapIndent, A = Math.max(s, c) - this.wrapIndent, N = !1, C = !1, S = 0;
+            var u = this.bidiMap, d = u.bidiLevels, a, f = [], b = 0, y = Math.min(s, c) - this.wrapIndent, A = Math.max(s, c) - this.wrapIndent, C = !1, N = !1, S = 0;
             this.wrapIndent && (b += this.isRtlDir ? -1 * this.wrapOffset : this.wrapOffset);
             for (var T, k = 0; k < d.length; k++)
-              T = u.logicalFromVisual[k], a = d[k], N = T >= y && T < A, N && !C ? S = b : !N && C && f.push({ left: S, width: b - S }), b += this.charWidths[a], C = N;
-            if (N && k === d.length && f.push({ left: S, width: b - S }), this.isRtlDir)
+              T = u.logicalFromVisual[k], a = d[k], C = T >= y && T < A, C && !N ? S = b : !C && N && f.push({ left: S, width: b - S }), b += this.charWidths[a], N = C;
+            if (C && k === d.length && f.push({ left: S, width: b - S }), this.isRtlDir)
               for (var M = 0; M < f.length; M++)
                 f[M].left += this.rtlLineOffset;
             return f;
@@ -23222,13 +23222,13 @@ function Nl() {
                 var A = c[y];
                 if (A.defaultToken && (a.defaultToken = A.defaultToken), A.caseInsensitive && f.indexOf("i") === -1 && (f += "i"), A.unicode && f.indexOf("u") === -1 && (f += "u"), A.regex != null) {
                   A.regex instanceof RegExp && (A.regex = A.regex.toString().slice(1, -1));
-                  var N = A.regex, C = new RegExp("(?:(" + N + ")|(.))").exec("a").length - 2;
-                  Array.isArray(A.token) ? A.token.length == 1 || C == 1 ? A.token = A.token[0] : C - 1 != A.token.length ? (this.reportError("number of classes and regexp groups doesn't match", {
+                  var C = A.regex, N = new RegExp("(?:(" + C + ")|(.))").exec("a").length - 2;
+                  Array.isArray(A.token) ? A.token.length == 1 || N == 1 ? A.token = A.token[0] : N - 1 != A.token.length ? (this.reportError("number of classes and regexp groups doesn't match", {
                     rule: A,
-                    groupCount: C - 1
-                  }), A.token = A.token[0]) : (A.tokenArray = A.token, A.token = null, A.onMatch = this.$arrayTokens) : typeof A.token == "function" && !A.onMatch && (C > 1 ? A.onMatch = this.$applyToken : A.onMatch = A.token), C > 1 && (/\\\d/.test(A.regex) ? N = A.regex.replace(/\\([0-9]+)/g, function(S, T) {
+                    groupCount: N - 1
+                  }), A.token = A.token[0]) : (A.tokenArray = A.token, A.token = null, A.onMatch = this.$arrayTokens) : typeof A.token == "function" && !A.onMatch && (N > 1 ? A.onMatch = this.$applyToken : A.onMatch = A.token), N > 1 && (/\\\d/.test(A.regex) ? C = A.regex.replace(/\\([0-9]+)/g, function(S, T) {
                     return "\\" + (parseInt(T, 10) + d + 1);
-                  }) : (C = 1, N = this.removeCapturingGroups(A.regex)), !A.splitRegex && typeof A.token != "string" && b.push(A)), a[d] = y, d += C, u.push(N), A.onMatch || (A.onMatch = null);
+                  }) : (N = 1, C = this.removeCapturingGroups(A.regex)), !A.splitRegex && typeof A.token != "string" && b.push(A)), a[d] = y, d += N, u.push(C), A.onMatch || (A.onMatch = null);
                 }
               }
               u.length || (a[0] = 0, u.push("$")), b.forEach(function(S) {
@@ -23268,8 +23268,8 @@ function Nl() {
           }, h.prototype.createSplitterRegexp = function(m, s) {
             if (m.indexOf("(?=") != -1) {
               var c = 0, u = !1, d = {};
-              m.replace(/(\\.)|(\((?:\?[=!])?)|(\))|([\[\]])/g, function(a, f, b, y, A, N) {
-                return u ? u = A != "]" : A ? u = !0 : y ? (c == d.stack && (d.end = N + 1, d.stack = -1), c--) : b && (c++, b.length != 1 && (d.stack = c, d.start = N)), a;
+              m.replace(/(\\.)|(\((?:\?[=!])?)|(\))|([\[\]])/g, function(a, f, b, y, A, C) {
+                return u ? u = A != "]" : A ? u = !0 : y ? (c == d.stack && (d.end = C + 1, d.stack = -1), c--) : b && (c++, b.length != 1 && (d.stack = c, d.start = C)), a;
               }), d.end != null && /^\)*$/.test(m.substr(d.end)) && (m = m.substring(0, d.start) + m.substr(d.end));
             }
             return m.charAt(0) != "^" && (m = "^" + m), m.charAt(m.length - 1) != "$" && (m += "$"), new RegExp(m, (s || "").replace("g", ""));
@@ -23286,11 +23286,11 @@ function Nl() {
             d || (u = "start", d = this.states[u]);
             var a = this.matchMappings[u], f = this.regExps[u];
             f.lastIndex = 0;
-            for (var b, y = [], A = 0, N = 0, C = { type: null, value: "" }; b = f.exec(m); ) {
+            for (var b, y = [], A = 0, C = 0, N = { type: null, value: "" }; b = f.exec(m); ) {
               var S = a.defaultToken, T = null, k = b[0], M = f.lastIndex;
               if (M - k.length > A) {
                 var I = m.substring(A, M - k.length);
-                C.type == S ? C.value += I : (C.type && y.push(C), C = { type: S, value: I });
+                N.type == S ? N.value += I : (N.type && y.push(N), N = { type: S, value: I });
               }
               for (var $ = 0; $ < b.length - 2; $++)
                 if (b[$ + 1] !== void 0) {
@@ -23299,21 +23299,21 @@ function Nl() {
                 }
               if (k) {
                 if (typeof S == "string")
-                  (!T || T.merge !== !1) && C.type === S ? C.value += k : (C.type && y.push(C), C = { type: S, value: k });
+                  (!T || T.merge !== !1) && N.type === S ? N.value += k : (N.type && y.push(N), N = { type: S, value: k });
                 else if (S) {
-                  C.type && y.push(C), C = { type: null, value: "" };
+                  N.type && y.push(N), N = { type: null, value: "" };
                   for (var $ = 0; $ < S.length; $++)
                     y.push(S[$]);
                 }
               }
               if (A == m.length)
                 break;
-              if (A = M, N++ > g) {
-                for (N > 2 * m.length && this.reportError("infinite loop with in ace tokenizer", {
+              if (A = M, C++ > g) {
+                for (C > 2 * m.length && this.reportError("infinite loop with in ace tokenizer", {
                   startState: s,
                   line: m
                 }); A < m.length; )
-                  C.type && y.push(C), C = {
+                  N.type && y.push(N), N = {
                     value: m.substring(A, A += 500),
                     type: "overflow"
                   };
@@ -23321,7 +23321,7 @@ function Nl() {
                 break;
               }
             }
-            return C.type && y.push(C), c.length > 1 && c[0] !== u && c.unshift("#tmp", u), {
+            return N.type && y.push(N), c.length > 1 && c[0] !== u && c.unshift("#tmp", u), {
               tokens: y,
               state: c.length ? c : u
             };
@@ -23398,12 +23398,12 @@ function Nl() {
                 A || (A = f.token, typeof A != "string" && (A = A[0] || ""), s[A] && (A += m++)), s[A] = y, f.next = A, c(A);
               } else y == "pop" && (f.next = h);
               if (f.push && (f.nextState = f.next || f.push, f.next = E, delete f.push), f.rules)
-                for (var N in f.rules)
-                  s[N] ? s[N].push && s[N].push.apply(s[N], f.rules[N]) : s[N] = f.rules[N];
-              var C = typeof f == "string" ? f : f.include;
-              if (C && (C === "$self" && (C = "start"), Array.isArray(C) ? b = C.map(function(T) {
+                for (var C in f.rules)
+                  s[C] ? s[C].push && s[C].push.apply(s[C], f.rules[C]) : s[C] = f.rules[C];
+              var N = typeof f == "string" ? f : f.include;
+              if (N && (N === "$self" && (N = "start"), Array.isArray(N) ? b = N.map(function(T) {
                 return s[T];
-              }) : b = s[C]), b) {
+              }) : b = s[N]), b) {
                 var S = [a, 1].concat(b);
                 f.noEscape && (S = S.filter(function(T) {
                   return !T.next;
@@ -23521,10 +23521,10 @@ function Nl() {
           maybeInsertedLineStart: "",
           maybeInsertedLineEnd: ""
         };
-      }, f = function(y, A, N, C) {
+      }, f = function(y, A, C, N) {
         var S = y.end.row - y.start.row;
         return {
-          text: N + A + C,
+          text: C + A + N,
           selection: [
             0,
             y.start.column + 1,
@@ -23534,12 +23534,12 @@ function Nl() {
         };
       }, b;
       b = function(y) {
-        y = y || {}, this.add("braces", "insertion", function(A, N, C, S, T) {
-          var k = C.getCursorPosition(), M = S.doc.getLine(k.row);
+        y = y || {}, this.add("braces", "insertion", function(A, C, N, S, T) {
+          var k = N.getCursorPosition(), M = S.doc.getLine(k.row);
           if (T == "{") {
-            a(C);
-            var I = C.getSelectionRange(), $ = S.doc.getTextRange(I), B = S.getTokenAt(k.row, k.column);
-            if ($ !== "" && $ !== "{" && C.getWrapBehavioursEnabled())
+            a(N);
+            var I = N.getSelectionRange(), $ = S.doc.getTextRange(I), B = S.getTokenAt(k.row, k.column);
+            if ($ !== "" && $ !== "{" && N.getWrapBehavioursEnabled())
               return f(I, $, "{", "}");
             if (B && /(?:string)\.quasi|\.xml/.test(B.type)) {
               var D = [
@@ -23548,20 +23548,20 @@ function Nl() {
               ];
               return D.some(function(P) {
                 return P.test(B.type);
-              }) || /(string)\.quasi/.test(B.type) && B.value[k.column - B.start - 1] !== "$" ? void 0 : (b.recordAutoInsert(C, S, "}"), {
+              }) || /(string)\.quasi/.test(B.type) && B.value[k.column - B.start - 1] !== "$" ? void 0 : (b.recordAutoInsert(N, S, "}"), {
                 text: "{}",
                 selection: [1, 1]
               });
-            } else if (b.isSaneInsertion(C, S))
-              return /[\]\}\)]/.test(M[k.column]) || C.inMultiSelectMode || y.braces ? (b.recordAutoInsert(C, S, "}"), {
+            } else if (b.isSaneInsertion(N, S))
+              return /[\]\}\)]/.test(M[k.column]) || N.inMultiSelectMode || y.braces ? (b.recordAutoInsert(N, S, "}"), {
                 text: "{}",
                 selection: [1, 1]
-              }) : (b.recordMaybeInsert(C, S, "{"), {
+              }) : (b.recordMaybeInsert(N, S, "{"), {
                 text: "{",
                 selection: [1, 1]
               });
           } else if (T == "}") {
-            a(C);
+            a(N);
             var O = M.substring(k.column, k.column + 1);
             if (O == "}") {
               var x = S.$findOpeningBracket("}", { column: k.column + 1, row: k.row });
@@ -23574,7 +23574,7 @@ function Nl() {
           } else if (T == `
 ` || T == `\r
 `) {
-            a(C);
+            a(N);
             var _ = "";
             b.isMaybeInsertedClosing(k, M) && (_ = h.stringRepeat("}", c.maybeInsertedBrackets), b.clearMaybeInsertedClosing());
             var O = M.substring(k.column, k.column + 1);
@@ -23598,29 +23598,29 @@ function Nl() {
             };
           } else
             b.clearMaybeInsertedClosing();
-        }), this.add("braces", "deletion", function(A, N, C, S, T) {
+        }), this.add("braces", "deletion", function(A, C, N, S, T) {
           var k = S.doc.getTextRange(T);
           if (!T.isMultiLine() && k == "{") {
-            a(C);
+            a(N);
             var M = S.doc.getLine(T.start.row), I = M.substring(T.end.column, T.end.column + 1);
             if (I == "}")
               return T.end.column++, T;
             c.maybeInsertedBrackets--;
           }
-        }), this.add("parens", "insertion", function(A, N, C, S, T) {
+        }), this.add("parens", "insertion", function(A, C, N, S, T) {
           if (T == "(") {
-            a(C);
-            var k = C.getSelectionRange(), M = S.doc.getTextRange(k);
-            if (M !== "" && C.getWrapBehavioursEnabled())
+            a(N);
+            var k = N.getSelectionRange(), M = S.doc.getTextRange(k);
+            if (M !== "" && N.getWrapBehavioursEnabled())
               return f(k, M, "(", ")");
-            if (b.isSaneInsertion(C, S))
-              return b.recordAutoInsert(C, S, ")"), {
+            if (b.isSaneInsertion(N, S))
+              return b.recordAutoInsert(N, S, ")"), {
                 text: "()",
                 selection: [1, 1]
               };
           } else if (T == ")") {
-            a(C);
-            var I = C.getCursorPosition(), $ = S.doc.getLine(I.row), B = $.substring(I.column, I.column + 1);
+            a(N);
+            var I = N.getCursorPosition(), $ = S.doc.getLine(I.row), B = $.substring(I.column, I.column + 1);
             if (B == ")") {
               var D = S.$findOpeningBracket(")", { column: I.column + 1, row: I.row });
               if (D !== null && b.isAutoInsertedClosing(I, $, T))
@@ -23630,28 +23630,28 @@ function Nl() {
                 };
             }
           }
-        }), this.add("parens", "deletion", function(A, N, C, S, T) {
+        }), this.add("parens", "deletion", function(A, C, N, S, T) {
           var k = S.doc.getTextRange(T);
           if (!T.isMultiLine() && k == "(") {
-            a(C);
+            a(N);
             var M = S.doc.getLine(T.start.row), I = M.substring(T.start.column + 1, T.start.column + 2);
             if (I == ")")
               return T.end.column++, T;
           }
-        }), this.add("brackets", "insertion", function(A, N, C, S, T) {
+        }), this.add("brackets", "insertion", function(A, C, N, S, T) {
           if (T == "[") {
-            a(C);
-            var k = C.getSelectionRange(), M = S.doc.getTextRange(k);
-            if (M !== "" && C.getWrapBehavioursEnabled())
+            a(N);
+            var k = N.getSelectionRange(), M = S.doc.getTextRange(k);
+            if (M !== "" && N.getWrapBehavioursEnabled())
               return f(k, M, "[", "]");
-            if (b.isSaneInsertion(C, S))
-              return b.recordAutoInsert(C, S, "]"), {
+            if (b.isSaneInsertion(N, S))
+              return b.recordAutoInsert(N, S, "]"), {
                 text: "[]",
                 selection: [1, 1]
               };
           } else if (T == "]") {
-            a(C);
-            var I = C.getCursorPosition(), $ = S.doc.getLine(I.row), B = $.substring(I.column, I.column + 1);
+            a(N);
+            var I = N.getCursorPosition(), $ = S.doc.getLine(I.row), B = $.substring(I.column, I.column + 1);
             if (B == "]") {
               var D = S.$findOpeningBracket("]", { column: I.column + 1, row: I.row });
               if (D !== null && b.isAutoInsertedClosing(I, $, T))
@@ -23661,25 +23661,25 @@ function Nl() {
                 };
             }
           }
-        }), this.add("brackets", "deletion", function(A, N, C, S, T) {
+        }), this.add("brackets", "deletion", function(A, C, N, S, T) {
           var k = S.doc.getTextRange(T);
           if (!T.isMultiLine() && k == "[") {
-            a(C);
+            a(N);
             var M = S.doc.getLine(T.start.row), I = M.substring(T.start.column + 1, T.start.column + 2);
             if (I == "]")
               return T.end.column++, T;
           }
-        }), this.add("string_dquotes", "insertion", function(A, N, C, S, T) {
+        }), this.add("string_dquotes", "insertion", function(A, C, N, S, T) {
           var k = S.$mode.$quotes || d;
           if (T.length == 1 && k[T]) {
             if (this.lineCommentStart && this.lineCommentStart.indexOf(T) != -1)
               return;
-            a(C);
-            var M = T, I = C.getSelectionRange(), $ = S.doc.getTextRange(I);
-            if ($ !== "" && ($.length != 1 || !k[$]) && C.getWrapBehavioursEnabled())
+            a(N);
+            var M = T, I = N.getSelectionRange(), $ = S.doc.getTextRange(I);
+            if ($ !== "" && ($.length != 1 || !k[$]) && N.getWrapBehavioursEnabled())
               return f(I, $, M, M);
             if (!$) {
-              var B = C.getCursorPosition(), D = S.doc.getLine(B.row), O = D.substring(B.column - 1, B.column), x = D.substring(B.column, B.column + 1), _ = S.getTokenAt(B.row, B.column), L = S.getTokenAt(B.row, B.column + 1);
+              var B = N.getCursorPosition(), D = S.doc.getLine(B.row), O = D.substring(B.column - 1, B.column), x = D.substring(B.column, B.column + 1), _ = S.getTokenAt(B.row, B.column), L = S.getTokenAt(B.row, B.column + 1);
               if (O == "\\" && _ && /escape/.test(_.type))
                 return null;
               var z = _ && /string|escape/.test(_.type), H = !L || /string|escape/.test(L.type), P;
@@ -23688,15 +23688,15 @@ function Nl() {
               else {
                 if (z && !H || z && H)
                   return null;
-                var Q = S.$mode.tokenRe;
-                Q.lastIndex = 0;
-                var F = Q.test(O);
-                Q.lastIndex = 0;
-                var K = Q.test(x), V = S.$mode.$pairQuotesAfter, X = V && V[M] && V[M].test(O);
+                var W = S.$mode.tokenRe;
+                W.lastIndex = 0;
+                var F = W.test(O);
+                W.lastIndex = 0;
+                var K = W.test(x), V = S.$mode.$pairQuotesAfter, X = V && V[M] && V[M].test(O);
                 if (!X && F || K || x && !/[\s;,.})\]\\]/.test(x))
                   return null;
                 var q = D[B.column - 2];
-                if (O == M && (q == M || Q.test(q)))
+                if (O == M && (q == M || W.test(q)))
                   return null;
                 P = !0;
               }
@@ -23706,19 +23706,19 @@ function Nl() {
               };
             }
           }
-        }), this.add("string_dquotes", "deletion", function(A, N, C, S, T) {
+        }), this.add("string_dquotes", "deletion", function(A, C, N, S, T) {
           var k = S.$mode.$quotes || d, M = S.doc.getTextRange(T);
           if (!T.isMultiLine() && k.hasOwnProperty(M)) {
-            a(C);
+            a(N);
             var I = S.doc.getLine(T.start.row), $ = I.substring(T.start.column + 1, T.start.column + 2);
             if ($ == M)
               return T.end.column++, T;
           }
-        }), y.closeDocComment !== !1 && this.add("doc comment end", "insertion", function(A, N, C, S, T) {
+        }), y.closeDocComment !== !1 && this.add("doc comment end", "insertion", function(A, C, N, S, T) {
           if (A === "doc-start" && (T === `
 ` || T === `\r
-`) && C.selection.isEmpty()) {
-            var k = C.getCursorPosition();
+`) && N.selection.isEmpty()) {
+            var k = N.getCursorPosition();
             if (k.column === 0)
               return;
             for (var M = S.doc.getLine(k.row), I = S.doc.getLine(k.row + 1), $ = S.getTokens(k.row), B = 0, D = 0; D < $.length; D++) {
@@ -23757,25 +23757,25 @@ function Nl() {
           }
         });
       }, b.isSaneInsertion = function(y, A) {
-        var N = y.getCursorPosition(), C = new E(A, N.row, N.column);
-        if (!this.$matchTokenType(C.getCurrentToken() || "text", m)) {
-          if (/[)}\]]/.test(y.session.getLine(N.row)[N.column]))
+        var C = y.getCursorPosition(), N = new E(A, C.row, C.column);
+        if (!this.$matchTokenType(N.getCurrentToken() || "text", m)) {
+          if (/[)}\]]/.test(y.session.getLine(C.row)[C.column]))
             return !0;
-          var S = new E(A, N.row, N.column + 1);
+          var S = new E(A, C.row, C.column + 1);
           if (!this.$matchTokenType(S.getCurrentToken() || "text", m))
             return !1;
         }
-        return C.stepForward(), C.getCurrentTokenRow() !== N.row || this.$matchTokenType(C.getCurrentToken() || "text", s);
+        return N.stepForward(), N.getCurrentTokenRow() !== C.row || this.$matchTokenType(N.getCurrentToken() || "text", s);
       }, b.$matchTokenType = function(y, A) {
         return A.indexOf(y.type || y) > -1;
-      }, b.recordAutoInsert = function(y, A, N) {
-        var C = y.getCursorPosition(), S = A.doc.getLine(C.row);
-        this.isAutoInsertedClosing(C, S, c.autoInsertedLineEnd[0]) || (c.autoInsertedBrackets = 0), c.autoInsertedRow = C.row, c.autoInsertedLineEnd = N + S.substr(C.column), c.autoInsertedBrackets++;
-      }, b.recordMaybeInsert = function(y, A, N) {
-        var C = y.getCursorPosition(), S = A.doc.getLine(C.row);
-        this.isMaybeInsertedClosing(C, S) || (c.maybeInsertedBrackets = 0), c.maybeInsertedRow = C.row, c.maybeInsertedLineStart = S.substr(0, C.column) + N, c.maybeInsertedLineEnd = S.substr(C.column), c.maybeInsertedBrackets++;
-      }, b.isAutoInsertedClosing = function(y, A, N) {
-        return c.autoInsertedBrackets > 0 && y.row === c.autoInsertedRow && N === c.autoInsertedLineEnd[0] && A.substr(y.column) === c.autoInsertedLineEnd;
+      }, b.recordAutoInsert = function(y, A, C) {
+        var N = y.getCursorPosition(), S = A.doc.getLine(N.row);
+        this.isAutoInsertedClosing(N, S, c.autoInsertedLineEnd[0]) || (c.autoInsertedBrackets = 0), c.autoInsertedRow = N.row, c.autoInsertedLineEnd = C + S.substr(N.column), c.autoInsertedBrackets++;
+      }, b.recordMaybeInsert = function(y, A, C) {
+        var N = y.getCursorPosition(), S = A.doc.getLine(N.row);
+        this.isMaybeInsertedClosing(N, S) || (c.maybeInsertedBrackets = 0), c.maybeInsertedRow = N.row, c.maybeInsertedLineStart = S.substr(0, N.column) + C, c.maybeInsertedLineEnd = S.substr(N.column), c.maybeInsertedBrackets++;
+      }, b.isAutoInsertedClosing = function(y, A, C) {
+        return c.autoInsertedBrackets > 0 && y.row === c.autoInsertedRow && C === c.autoInsertedLineEnd[0] && A.substr(y.column) === c.autoInsertedLineEnd;
       }, b.isMaybeInsertedClosing = function(y, A) {
         return c.maybeInsertedBrackets > 0 && y.row === c.maybeInsertedRow && A.substr(y.column) === c.maybeInsertedLineEnd && A.substr(0, y.column) == c.maybeInsertedLineStart;
       }, b.popAutoInsertedClosing = function() {
@@ -23795,7 +23795,7 @@ function Nl() {
         this.$defaultBehaviour = new h(), this.tokenRe = new RegExp("^[" + m.wordChars + "\\$_]+", "g"), this.nonTokenRe = new RegExp("^(?:[^" + m.wordChars + "\\$_]|\\s])+", "g"), this.getTokenizer = function() {
           return this.$tokenizer || (this.$highlightRules = this.$highlightRules || new this.HighlightRules(this.$highlightRuleConfig), this.$tokenizer = new g(this.$highlightRules.getRules())), this.$tokenizer;
         }, this.lineCommentStart = "", this.blockComment = "", this.toggleCommentLines = function(a, f, b, y) {
-          var A = f.doc, N = !0, C = !0, S = 1 / 0, T = f.getTabSize(), k = !1;
+          var A = f.doc, C = !0, N = !0, S = 1 / 0, T = f.getTabSize(), k = !1;
           if (this.lineCommentStart) {
             if (Array.isArray(this.lineCommentStart))
               var $ = this.lineCommentStart.map(s.escapeRegExp).join("|"), M = this.lineCommentStart[0];
@@ -23809,7 +23809,7 @@ function Nl() {
                 !L(K, q, Z) && X[0][Z - 1] == " " && Z--, A.removeInLine(V, q, Z);
               }
             }, _ = M + " ", D = function(K, V) {
-              (!N || /\S/.test(K)) && (L(K, S, S) ? A.insertInLine({ row: V, column: S }, _) : A.insertInLine({ row: V, column: S }, M));
+              (!C || /\S/.test(K)) && (L(K, S, S) ? A.insertInLine({ row: V, column: S }, _) : A.insertInLine({ row: V, column: S }, M));
             }, x = function(K, V) {
               return $.test(K);
             }, L = function(K, V, X) {
@@ -23824,53 +23824,53 @@ function Nl() {
           } else {
             if (!this.blockComment)
               return !1;
-            var M = this.blockComment.start, I = this.blockComment.end, $ = new RegExp("^(\\s*)(?:" + s.escapeRegExp(M) + ")"), B = new RegExp("(?:" + s.escapeRegExp(I) + ")\\s*$"), D = function(P, Q) {
-              x(P, Q) || (!N || /\S/.test(P)) && (A.insertInLine({ row: Q, column: P.length }, I), A.insertInLine({ row: Q, column: S }, M));
-            }, O = function(P, Q) {
+            var M = this.blockComment.start, I = this.blockComment.end, $ = new RegExp("^(\\s*)(?:" + s.escapeRegExp(M) + ")"), B = new RegExp("(?:" + s.escapeRegExp(I) + ")\\s*$"), D = function(P, W) {
+              x(P, W) || (!C || /\S/.test(P)) && (A.insertInLine({ row: W, column: P.length }, I), A.insertInLine({ row: W, column: S }, M));
+            }, O = function(P, W) {
               var F;
-              (F = P.match(B)) && A.removeInLine(Q, P.length - F[0].length, P.length), (F = P.match($)) && A.removeInLine(Q, F[1].length, F[0].length);
-            }, x = function(P, Q) {
+              (F = P.match(B)) && A.removeInLine(W, P.length - F[0].length, P.length), (F = P.match($)) && A.removeInLine(W, F[1].length, F[0].length);
+            }, x = function(P, W) {
               if ($.test(P))
                 return !0;
-              for (var F = f.getTokens(Q), K = 0; K < F.length; K++)
+              for (var F = f.getTokens(W), K = 0; K < F.length; K++)
                 if (F[K].type === "comment")
                   return !0;
             };
           }
           function z(P) {
-            for (var Q = b; Q <= y; Q++)
-              P(A.getLine(Q), Q);
+            for (var W = b; W <= y; W++)
+              P(A.getLine(W), W);
           }
           var H = 1 / 0;
-          z(function(P, Q) {
+          z(function(P, W) {
             var F = P.search(/\S/);
-            F !== -1 ? (F < S && (S = F), C && !x(P, Q) && (C = !1)) : H > P.length && (H = P.length);
-          }), S == 1 / 0 && (S = H, N = !1, C = !1), k && S % T != 0 && (S = Math.floor(S / T) * T), z(C ? O : D);
+            F !== -1 ? (F < S && (S = F), N && !x(P, W) && (N = !1)) : H > P.length && (H = P.length);
+          }), S == 1 / 0 && (S = H, C = !1, N = !1), k && S % T != 0 && (S = Math.floor(S / T) * T), z(N ? O : D);
         }, this.toggleBlockComment = function(a, f, b, y) {
           var A = this.blockComment;
           if (A) {
             !A.start && A[0] && (A = A[0]);
-            var N = new c(f, y.row, y.column), C = N.getCurrentToken();
+            var C = new c(f, y.row, y.column), N = C.getCurrentToken();
             f.selection;
             var S = f.selection.toOrientedRange(), T, k;
-            if (C && /comment/.test(C.type)) {
-              for (var M, I; C && /comment/.test(C.type); ) {
-                var $ = C.value.indexOf(A.start);
+            if (N && /comment/.test(N.type)) {
+              for (var M, I; N && /comment/.test(N.type); ) {
+                var $ = N.value.indexOf(A.start);
                 if ($ != -1) {
-                  var B = N.getCurrentTokenRow(), D = N.getCurrentTokenColumn() + $;
+                  var B = C.getCurrentTokenRow(), D = C.getCurrentTokenColumn() + $;
                   M = new u(B, D, B, D + A.start.length);
                   break;
                 }
-                C = N.stepBackward();
+                N = C.stepBackward();
               }
-              for (var N = new c(f, y.row, y.column), C = N.getCurrentToken(); C && /comment/.test(C.type); ) {
-                var $ = C.value.indexOf(A.end);
+              for (var C = new c(f, y.row, y.column), N = C.getCurrentToken(); N && /comment/.test(N.type); ) {
+                var $ = N.value.indexOf(A.end);
                 if ($ != -1) {
-                  var B = N.getCurrentTokenRow(), D = N.getCurrentTokenColumn() + $;
+                  var B = C.getCurrentTokenRow(), D = C.getCurrentTokenColumn() + $;
                   I = new u(B, D, B, D + A.end.length);
                   break;
                 }
-                C = N.stepForward();
+                N = C.stepForward();
               }
               I && f.remove(I), M && (f.remove(M), T = M.start.row, k = -A.start.length);
             } else
@@ -23893,7 +23893,7 @@ function Nl() {
               var b = a[f], y = b.prototype.$id, A = p.$modes[y];
               A || (p.$modes[y] = A = new b()), p.$modes[f] || (p.$modes[f] = A), this.$embeds.push(f), this.$modes[f] = A;
             }
-          for (var N = [
+          for (var C = [
             "toggleBlockComment",
             "toggleCommentLines",
             "getNextLineIndent",
@@ -23901,42 +23901,42 @@ function Nl() {
             "autoOutdent",
             "transformAction",
             "getCompletions"
-          ], C = function(T) {
+          ], N = function(T) {
             (function(k) {
-              var M = N[T], I = k[M];
-              k[N[T]] = function() {
+              var M = C[T], I = k[M];
+              k[C[T]] = function() {
                 return this.$delegator(M, arguments, I);
               };
             })(S);
-          }, S = this, f = 0; f < N.length; f++)
-            C(f);
+          }, S = this, f = 0; f < C.length; f++)
+            N(f);
         }, this.$delegator = function(a, f, b) {
           var y = f[0] || "start";
           if (typeof y != "string") {
             if (Array.isArray(y[2])) {
-              var A = y[2][y[2].length - 1], N = this.$modes[A];
-              if (N)
-                return N[a].apply(N, [y[1]].concat([].slice.call(f, 1)));
+              var A = y[2][y[2].length - 1], C = this.$modes[A];
+              if (C)
+                return C[a].apply(C, [y[1]].concat([].slice.call(f, 1)));
             }
             y = y[0] || "start";
           }
-          for (var C = 0; C < this.$embeds.length; C++)
-            if (this.$modes[this.$embeds[C]]) {
-              var S = y.split(this.$embeds[C]);
+          for (var N = 0; N < this.$embeds.length; N++)
+            if (this.$modes[this.$embeds[N]]) {
+              var S = y.split(this.$embeds[N]);
               if (!S[0] && S[1]) {
                 f[0] = S[1];
-                var N = this.$modes[this.$embeds[C]];
-                return N[a].apply(N, f);
+                var C = this.$modes[this.$embeds[N]];
+                return C[a].apply(C, f);
               }
             }
           var T = b.apply(this, f);
           return b ? T : void 0;
         }, this.transformAction = function(a, f, b, y, A) {
           if (this.$behaviour) {
-            var N = this.$behaviour.getBehaviours();
-            for (var C in N)
-              if (N[C][f]) {
-                var S = N[C][f].apply(this, arguments);
+            var C = this.$behaviour.getBehaviours();
+            for (var N in C)
+              if (C[N][f]) {
+                var S = C[N][f].apply(this, arguments);
                 if (S)
                   return S;
               }
@@ -23945,13 +23945,13 @@ function Nl() {
           if (!this.completionKeywords) {
             var f = this.$tokenizer.rules, b = [];
             for (var y in f)
-              for (var A = f[y], N = 0, C = A.length; N < C; N++)
-                if (typeof A[N].token == "string")
-                  /keyword|support|storage/.test(A[N].token) && b.push(A[N].regex);
-                else if (typeof A[N].token == "object") {
-                  for (var S = 0, T = A[N].token.length; S < T; S++)
-                    if (/keyword|support|storage/.test(A[N].token[S])) {
-                      var y = A[N].regex.match(/\(.+?\)/g)[S];
+              for (var A = f[y], C = 0, N = A.length; C < N; C++)
+                if (typeof A[C].token == "string")
+                  /keyword|support|storage/.test(A[C].token) && b.push(A[C].regex);
+                else if (typeof A[C].token == "object") {
+                  for (var S = 0, T = A[C].token.length; S < T; S++)
+                    if (/keyword|support|storage/.test(A[C].token[S])) {
+                      var y = A[C].regex.match(/\(.+?\)/g)[S];
                       b.push(y.substr(1, y.length - 2));
                     }
                 }
@@ -23962,10 +23962,10 @@ function Nl() {
           return this.$highlightRules || this.getTokenizer(), this.$keywordList = this.$highlightRules.$keywordList || [];
         }, this.getCompletions = function(a, f, b, y) {
           var A = this.$keywordList || this.$createKeywordList();
-          return A.map(function(N) {
+          return A.map(function(C) {
             return {
-              name: N,
-              value: N,
+              name: C,
+              value: C,
               score: 0,
               meta: "keyword"
             };
@@ -24313,12 +24313,12 @@ function Nl() {
             }, !0), this.clonePos(f);
           }, c.prototype.removeFullLines = function(u, d) {
             u = Math.min(Math.max(0, u), this.getLength() - 1), d = Math.min(Math.max(0, d), this.getLength() - 1);
-            var a = d == this.getLength() - 1 && u > 0, f = d < this.getLength() - 1, b = a ? u - 1 : u, y = a ? this.getLine(b).length : 0, A = f ? d + 1 : d, N = f ? 0 : this.getLine(A).length, C = new h(b, y, A, N), S = this.$lines.slice(u, d + 1);
+            var a = d == this.getLength() - 1 && u > 0, f = d < this.getLength() - 1, b = a ? u - 1 : u, y = a ? this.getLine(b).length : 0, A = f ? d + 1 : d, C = f ? 0 : this.getLine(A).length, N = new h(b, y, A, C), S = this.$lines.slice(u, d + 1);
             return this.applyDelta({
-              start: C.start,
-              end: C.end,
+              start: N.start,
+              end: N.end,
               action: "remove",
-              lines: this.getLinesForRange(C)
+              lines: this.getLinesForRange(N)
             }), S;
           }, c.prototype.removeNewLine = function(u) {
             u < this.getLength() - 1 && u >= 0 && this.applyDelta({
@@ -24348,14 +24348,14 @@ function Nl() {
             var d = this.$lines.length;
             (u.action == "remove" && u.start.row < d && u.end.row < d || u.action == "insert" && u.start.row <= d) && this.applyDelta(u);
           }, c.prototype.$splitAndapplyLargeDelta = function(u, d) {
-            for (var a = u.lines, f = a.length - d + 1, b = u.start.row, y = u.start.column, A = 0, N = 0; A < f; A = N) {
-              N += d - 1;
-              var C = a.slice(A, N);
-              C.push(""), this.applyDelta({
+            for (var a = u.lines, f = a.length - d + 1, b = u.start.row, y = u.start.column, A = 0, C = 0; A < f; A = C) {
+              C += d - 1;
+              var N = a.slice(A, C);
+              N.push(""), this.applyDelta({
                 start: this.pos(b + A, y),
-                end: this.pos(b + N, y = 0),
+                end: this.pos(b + C, y = 0),
                 action: u.action,
-                lines: C
+                lines: N
               }, !0);
             }
             u.lines = a.slice(A), u.start.row = b + A, u.start.column = y, this.applyDelta(u, !0);
@@ -24459,25 +24459,25 @@ function Nl() {
           }, h.prototype.update = function(m, s, c, u) {
             if (this.regExp) {
               for (var d = u.firstRow, a = u.lastRow, f = {}, b = c.$editor && c.$editor.$search, y = b && b.$isMultilineSearch(c.$editor.getLastSearchOptions()), A = d; A <= a; A++) {
-                var N = this.cache[A];
-                if (N == null || c.getValue().length != this.docLen) {
+                var C = this.cache[A];
+                if (C == null || c.getValue().length != this.docLen) {
                   if (y) {
-                    N = [];
-                    var C = b.$multiLineForward(c, this.regExp, A, a);
-                    if (C) {
-                      var S = C.endRow <= a ? C.endRow - 1 : a;
-                      S > A && (A = S), N.push(new g(C.startRow, C.startCol, C.endRow, C.endCol));
+                    C = [];
+                    var N = b.$multiLineForward(c, this.regExp, A, a);
+                    if (N) {
+                      var S = N.endRow <= a ? N.endRow - 1 : a;
+                      S > A && (A = S), C.push(new g(N.startRow, N.startCol, N.endRow, N.endCol));
                     }
-                    N.length > this.MAX_RANGES && (N = N.slice(0, this.MAX_RANGES));
+                    C.length > this.MAX_RANGES && (C = C.slice(0, this.MAX_RANGES));
                   } else
-                    N = p.getMatchOffsets(c.getLine(A), this.regExp), N.length > this.MAX_RANGES && (N = N.slice(0, this.MAX_RANGES)), N = N.map(function(I) {
+                    C = p.getMatchOffsets(c.getLine(A), this.regExp), C.length > this.MAX_RANGES && (C = C.slice(0, this.MAX_RANGES)), C = C.map(function(I) {
                       return new g(A, I.offset, A, I.offset + I.length);
                     });
-                  this.cache[A] = N.length ? N : "";
+                  this.cache[A] = C.length ? C : "";
                 }
-                if (N.length !== 0)
-                  for (var T = N.length; T--; ) {
-                    var k = N[T].toScreenRange(c), M = k.toString();
+                if (C.length !== 0)
+                  for (var T = C.length; T--; ) {
+                    var k = C[T].toScreenRange(c), M = k.toString();
                     f[M] || (f[M] = !0, s.drawSingleLineMarker(m, k, this.clazz, u));
                   }
               }
@@ -24554,7 +24554,7 @@ function Nl() {
           }, S.prototype.redo = function(T, k) {
             if (this.lastDeltas = null, T || (T = this.$session), this.$fromUndo = !0, this.$redoStackBaseRev != this.$rev) {
               var M = this.getDeltas(this.$redoStackBaseRev, this.$rev + 1);
-              C(this.$redoStack, M), this.$redoStackBaseRev = this.$rev, this.$redoStack.forEach(function(B) {
+              N(this.$redoStack, M), this.$redoStackBaseRev = this.$rev, this.$redoStack.forEach(function(B) {
                 B[0].id = ++this.$maxRev;
               }, this);
             }
@@ -24707,7 +24707,7 @@ function Nl() {
         };
         return D;
       }
-      function N(S, T) {
+      function C(S, T) {
         T = s(T);
         for (var k = S.length; k--; ) {
           for (var M = S[k], I = 0; I < M.length; I++) {
@@ -24718,10 +24718,10 @@ function Nl() {
         }
         return S;
       }
-      function C(S, T) {
+      function N(S, T) {
         for (var k = 0; k < T.length; k++)
           for (var M = T[k], I = 0; I < M.length; I++)
-            N(S, M[I]);
+            C(S, M[I]);
       }
       r.UndoManager = p;
     }), ace.define("ace/edit_session/fold_line", ["require", "exports", "module", "ace/range"], function(i, r, w) {
@@ -24909,22 +24909,22 @@ function Nl() {
                 break;
             }
             if (m.action == "insert")
-              for (var A = d - u, N = -s.column + c.column; f < b; f++) {
+              for (var A = d - u, C = -s.column + c.column; f < b; f++) {
                 var y = a[f];
                 if (y.start.row > u)
                   break;
-                if (y.start.row == u && y.start.column >= s.column && (y.start.column == s.column && this.$bias <= 0 || (y.start.column += N, y.start.row += A)), y.end.row == u && y.end.column >= s.column) {
+                if (y.start.row == u && y.start.column >= s.column && (y.start.column == s.column && this.$bias <= 0 || (y.start.column += C, y.start.row += A)), y.end.row == u && y.end.column >= s.column) {
                   if (y.end.column == s.column && this.$bias < 0)
                     continue;
-                  y.end.column == s.column && N > 0 && f < b - 1 && y.end.column > y.start.column && y.end.column == a[f + 1].start.column && (y.end.column -= N), y.end.column += N, y.end.row += A;
+                  y.end.column == s.column && C > 0 && f < b - 1 && y.end.column > y.start.column && y.end.column == a[f + 1].start.column && (y.end.column -= C), y.end.column += C, y.end.row += A;
                 }
               }
             else
-              for (var A = u - d, N = s.column - c.column; f < b; f++) {
+              for (var A = u - d, C = s.column - c.column; f < b; f++) {
                 var y = a[f];
                 if (y.start.row > d)
                   break;
-                y.end.row < d && (u < y.end.row || u == y.end.row && s.column < y.end.column) ? (y.end.row = u, y.end.column = s.column) : y.end.row == d ? y.end.column <= c.column ? (A || y.end.column > s.column) && (y.end.column = s.column, y.end.row = s.row) : (y.end.column += N, y.end.row += A) : y.end.row > d && (y.end.row += A), y.start.row < d && (u < y.start.row || u == y.start.row && s.column < y.start.column) ? (y.start.row = u, y.start.column = s.column) : y.start.row == d ? y.start.column <= c.column ? (A || y.start.column > s.column) && (y.start.column = s.column, y.start.row = s.row) : (y.start.column += N, y.start.row += A) : y.start.row > d && (y.start.row += A);
+                y.end.row < d && (u < y.end.row || u == y.end.row && s.column < y.end.column) ? (y.end.row = u, y.end.column = s.column) : y.end.row == d ? y.end.column <= c.column ? (A || y.end.column > s.column) && (y.end.column = s.column, y.end.row = s.row) : (y.end.column += C, y.end.row += A) : y.end.row > d && (y.end.row += A), y.start.row < d && (u < y.start.row || u == y.start.row && s.column < y.start.column) ? (y.start.row = u, y.start.column = s.column) : y.start.row == d ? y.start.column <= c.column ? (A || y.start.column > s.column) && (y.start.column = s.column, y.start.row = s.row) : (y.start.column += C, y.start.row += A) : y.start.row > d && (y.start.row += A);
               }
             if (A != 0 && f < b)
               for (; f < b; f++) {
@@ -24975,7 +24975,7 @@ function Nl() {
           }, d.prototype.addSubFold = function(a) {
             if (!this.range.isEqual(a)) {
               m(a, this.start);
-              for (var N = a.start.row, C = a.start.column, f = 0, b = -1; f < this.subFolds.length && (b = this.subFolds[f].range.compare(N, C), b == 1); f++)
+              for (var C = a.start.row, N = a.start.column, f = 0, b = -1; f < this.subFolds.length && (b = this.subFolds[f].range.compare(C, N), b == 1); f++)
                 ;
               var y = this.subFolds[f], A = 0;
               if (b == 0) {
@@ -24983,7 +24983,7 @@ function Nl() {
                   return y.addSubFold(a);
                 A = 1;
               }
-              for (var N = a.range.end.row, C = a.range.end.column, S = f, b = -1; S < this.subFolds.length && (b = this.subFolds[S].range.compare(N, C), b == 1); S++)
+              for (var C = a.range.end.row, N = a.range.end.column, S = f, b = -1; S < this.subFolds.length && (b = this.subFolds[S].range.compare(C, N), b == 1); S++)
                 ;
               b == 0 && S++;
               for (var T = this.subFolds.splice(f, S - f, a), k = b == 0 ? T.length - 1 : T.length, M = A; M < k; M++)
@@ -25033,15 +25033,15 @@ function Nl() {
             if (y != 2) {
               if (y == -2)
                 break;
-              for (var A = a[b].folds, N = 0; N < A.length; N++) {
-                var C = A[N];
-                if (y = C.range.compareRange(c), y == -2)
+              for (var A = a[b].folds, C = 0; C < A.length; C++) {
+                var N = A[C];
+                if (y = N.range.compareRange(c), y == -2)
                   break;
                 if (y == 2)
                   continue;
                 if (y == 42)
                   break;
-                f.push(C);
+                f.push(N);
               }
             }
           }
@@ -25067,11 +25067,11 @@ function Nl() {
             end: { column: 0 }
           }, b, y, A = 0; A < a.folds.length; A++) {
             y = a.folds[A];
-            var N = y.range.compareEnd(c, u);
-            if (N == -1) {
+            var C = y.range.compareEnd(c, u);
+            if (C == -1) {
               b = this.getLine(y.start.row).substring(f.end.column, y.start.column);
               break;
-            } else if (N === 0)
+            } else if (C === 0)
               return null;
             f = y;
           }
@@ -25110,10 +25110,10 @@ function Nl() {
         }, this.addFold = function(c, u) {
           var d = this.$foldData, a = !1, f;
           c instanceof E ? f = c : (f = new E(u, c), f.collapseChildren = u.collapseChildren), this.$clipRangeToDocument(f.range);
-          var b = f.start.row, y = f.start.column, A = f.end.row, N = f.end.column, C = this.getFoldAt(b, y, 1), S = this.getFoldAt(A, N, -1);
-          if (C && S == C)
-            return C.addSubFold(f);
-          C && !C.range.isStart(b, y) && this.removeFold(C), S && !S.range.isEnd(A, N) && this.removeFold(S);
+          var b = f.start.row, y = f.start.column, A = f.end.row, C = f.end.column, N = this.getFoldAt(b, y, 1), S = this.getFoldAt(A, C, -1);
+          if (N && S == N)
+            return N.addSubFold(f);
+          N && !N.range.isStart(b, y) && this.removeFold(N), S && !S.range.isEnd(A, C) && this.removeFold(S);
           var T = this.getFoldsInRange(f.range);
           T.length > 0 && (this.removeFolds(T), f.collapseChildren || T.forEach(function($) {
             f.addSubFold($);
@@ -25200,14 +25200,14 @@ function Nl() {
         }, this.getFoldDisplayLine = function(c, u, d, a, f) {
           a == null && (a = c.start.row), f == null && (f = 0), u == null && (u = c.end.row), d == null && (d = this.getLine(u).length);
           var b = this.doc, y = "";
-          return c.walk(function(A, N, C, S) {
-            if (!(N < a)) {
-              if (N == a) {
-                if (C < f)
+          return c.walk(function(A, C, N, S) {
+            if (!(C < a)) {
+              if (C == a) {
+                if (N < f)
                   return;
                 S = Math.max(f, S);
               }
-              A != null ? y += A : y += b.getLine(N).substring(S, C);
+              A != null ? y += A : y += b.getLine(C).substring(S, N);
             }
           }, u, d), y;
         }, this.getDisplayLine = function(c, u, d, a) {
@@ -25247,13 +25247,13 @@ function Nl() {
             this.expandFold(a);
             return;
           }
-          var N = "...";
+          var C = "...";
           if (!d.isMultiLine()) {
-            if (N = this.getTextRange(d), N.length < 4)
+            if (C = this.getTextRange(d), C.length < 4)
               return;
-            N = N.trim().substring(0, 2) + "..";
+            C = C.trim().substring(0, 2) + "..";
           }
-          this.addFold(N, d);
+          this.addFold(C, d);
         }, this.getCommentFoldRange = function(c, u, d) {
           var a = new h(this, c, u), f = a.getCurrentToken(), b = f && f.type;
           if (f && /^comment|string/.test(b)) {
@@ -25266,14 +25266,14 @@ function Nl() {
               f = a.stepForward();
             }
             A.start.row = a.getCurrentTokenRow(), A.start.column = a.getCurrentTokenColumn() + f.value.length, a = new h(this, c, u);
-            var N = this.getState(a.$row);
+            var C = this.getState(a.$row);
             if (d != -1) {
-              var C = -1;
+              var N = -1;
               do
-                if (f = a.stepForward(), C == -1) {
+                if (f = a.stepForward(), N == -1) {
                   var S = this.getState(a.$row);
-                  N.toString() !== S.toString() && (C = a.$row);
-                } else if (a.$row > C)
+                  C.toString() !== S.toString() && (N = a.$row);
+                } else if (a.$row > N)
                   break;
               while (f && y.test(f.type));
               f = a.stepBackward();
@@ -25363,9 +25363,9 @@ function Nl() {
             if (u.siblings) {
               var A = this.getParentFoldRangeData(c);
               if (A.range)
-                var N = A.range.start.row + 1, C = A.range.end.row;
-              this.foldAll(N, C, u.all ? 1e4 : 0);
-            } else u.children ? (C = y ? y.end.row : this.getLength(), this.foldAll(c + 1, C, u.all ? 1e4 : 0)) : y && (u.all && (y.collapseChildren = 1e4), this.addFold("...", y));
+                var C = A.range.start.row + 1, N = A.range.end.row;
+              this.foldAll(C, N, u.all ? 1e4 : 0);
+            } else u.children ? (N = y ? y.end.row : this.getLength(), this.foldAll(c + 1, N, u.all ? 1e4 : 0)) : y && (u.all && (y.collapseChildren = 1e4), this.addFold("...", y));
             return y;
           }
         }, this.toggleFoldWidget = function(c) {
@@ -25529,23 +25529,23 @@ function Nl() {
                     h.stepBackward();
                     var A = new g(h.getCurrentTokenRow(), h.getCurrentTokenColumn(), h.getCurrentTokenRow(), h.getCurrentTokenColumn() + 2);
                     m = h.stepForward();
-                    var N = new g(h.getCurrentTokenRow(), h.getCurrentTokenColumn(), h.getCurrentTokenRow(), h.getCurrentTokenColumn() + m.value.length);
+                    var C = new g(h.getCurrentTokenRow(), h.getCurrentTokenColumn(), h.getCurrentTokenRow(), h.getCurrentTokenColumn() + m.value.length);
                     if (m.type.indexOf("tag-close") === -1 && (m = h.stepForward()), m && m.value === ">")
-                      var C = new g(h.getCurrentTokenRow(), h.getCurrentTokenColumn(), h.getCurrentTokenRow(), h.getCurrentTokenColumn() + 1);
+                      var N = new g(h.getCurrentTokenRow(), h.getCurrentTokenColumn(), h.getCurrentTokenRow(), h.getCurrentTokenColumn() + 1);
                     else
                       return;
                   }
                 }
               } else if (u === c && m.value === "/>" && (d--, d < 0))
-                var A = new g(h.getCurrentTokenRow(), h.getCurrentTokenColumn(), h.getCurrentTokenRow(), h.getCurrentTokenColumn() + 2), N = A, C = N, y = new g(f.end.row, f.end.column, f.end.row, f.end.column + 1);
+                var A = new g(h.getCurrentTokenRow(), h.getCurrentTokenColumn(), h.getCurrentTokenRow(), h.getCurrentTokenColumn() + 2), C = A, N = C, y = new g(f.end.row, f.end.column, f.end.row, f.end.column + 1);
             }
           } while (m && d >= 0);
-          if (a && y && A && C && f && N)
+          if (a && y && A && N && f && C)
             return {
               openTag: new g(a.start.row, a.start.column, y.end.row, y.end.column),
-              closeTag: new g(A.start.row, A.start.column, C.end.row, C.end.column),
+              closeTag: new g(A.start.row, A.start.column, N.end.row, N.end.column),
               openTagName: f,
-              closeTagName: N
+              closeTagName: C
             };
         }, this.$findOpeningTag = function(h, m) {
           var s = h.getCurrentToken(), c = m.value, u = 0, d = h.getCurrentTokenRow(), a = h.getCurrentTokenColumn(), f = a + 2, b = new g(d, a, d, f);
@@ -25560,7 +25560,7 @@ function Nl() {
                   if (c === m.value)
                     if (s.value === "<") {
                       if (u++, u > 0) {
-                        var N = new g(d, a, d, f), C = new g(h.getCurrentTokenRow(), h.getCurrentTokenColumn(), h.getCurrentTokenRow(), h.getCurrentTokenColumn() + 1);
+                        var C = new g(d, a, d, f), N = new g(h.getCurrentTokenRow(), h.getCurrentTokenColumn(), h.getCurrentTokenRow(), h.getCurrentTokenColumn() + 1);
                         do
                           m = h.stepForward();
                         while (m && m.value !== ">");
@@ -25581,11 +25581,11 @@ function Nl() {
                 }
               }
             while (s && u <= 0);
-            if (C && S && b && A && N && y)
+            if (N && S && b && A && C && y)
               return {
-                openTag: new g(C.start.row, C.start.column, S.end.row, S.end.column),
+                openTag: new g(N.start.row, N.start.column, S.end.row, S.end.column),
                 closeTag: new g(b.start.row, b.start.column, A.end.row, A.end.column),
-                openTagName: N,
+                openTagName: C,
                 closeTagName: y
               };
           }
@@ -25922,9 +25922,9 @@ function Nl() {
             if (this.$modified || O) {
               if (this.$modified = !1, this.$useWrapMode)
                 return this.screenWidth = this.$wrapLimit;
-              for (var x = this.doc.getAllLines(), _ = this.$rowLengthCache, L = 0, z = 0, H = this.$foldData[z], P = H ? H.start.row : 1 / 0, Q = x.length, F = 0; F < Q; F++) {
+              for (var x = this.doc.getAllLines(), _ = this.$rowLengthCache, L = 0, z = 0, H = this.$foldData[z], P = H ? H.start.row : 1 / 0, W = x.length, F = 0; F < W; F++) {
                 if (F > P) {
-                  if (F = H.end.row + 1, F >= Q)
+                  if (F = H.end.row + 1, F >= W)
                     break;
                   H = this.$foldData[z++], P = H ? H.start.row : 1 / 0;
                 }
@@ -25967,8 +25967,8 @@ function Nl() {
           }, D.prototype.setUndoSelect = function(O) {
             this.$undoSelect = O;
           }, D.prototype.$getUndoSelection = function(O, x) {
-            function _(Q) {
-              return x ? Q.action !== "insert" : Q.action === "insert";
+            function _(W) {
+              return x ? W.action !== "insert" : W.action === "insert";
             }
             for (var L, z, H = 0; H < O.length; H++) {
               var P = O[H];
@@ -25987,13 +25987,13 @@ function Nl() {
             var L = this.getTextRange(O), z = this.getFoldsInRange(O), H = u.fromPoints(x, x);
             if (!_) {
               this.remove(O);
-              var P = O.start.row - O.end.row, Q = P ? -O.end.column : O.start.column - O.end.column;
-              Q && (H.start.row == O.end.row && H.start.column > O.end.column && (H.start.column += Q), H.end.row == O.end.row && H.end.column > O.end.column && (H.end.column += Q)), P && H.start.row >= O.end.row && (H.start.row += P, H.end.row += P);
+              var P = O.start.row - O.end.row, W = P ? -O.end.column : O.start.column - O.end.column;
+              W && (H.start.row == O.end.row && H.start.column > O.end.column && (H.start.column += W), H.end.row == O.end.row && H.end.column > O.end.column && (H.end.column += W)), P && H.start.row >= O.end.row && (H.start.row += P, H.end.row += P);
             }
             if (H.end = this.insert(H.start, L), z.length) {
-              var F = O.start, K = H.start, P = K.row - F.row, Q = K.column - F.column;
+              var F = O.start, K = H.start, P = K.row - F.row, W = K.column - F.column;
               this.addFolds(z.map(function(q) {
-                return q = q.clone(), q.start.row == F.row && (q.start.column += Q), q.end.row == F.row && (q.end.column += Q), q.start.row += P, q.end.row += P, q;
+                return q = q.clone(), q.start.row == F.row && (q.start.column += W), q.end.row == F.row && (q.end.column += W), q.start.row += P, q.end.row += P, q;
               }));
             }
             return H;
@@ -26026,8 +26026,8 @@ function Nl() {
             }
             var H = new u(O, 0, x, Number.MAX_VALUE), P = this.getFoldsInRange(H).map(function(F) {
               return F = F.clone(), F.start.row += z, F.end.row += z, F;
-            }), Q = _ == 0 ? this.doc.getLines(O, x) : this.doc.removeFullLines(O, x);
-            return this.doc.insertFullLines(O + z, Q), P.length && this.addFolds(P), z;
+            }), W = _ == 0 ? this.doc.getLines(O, x) : this.doc.removeFullLines(O, x);
+            return this.doc.insertFullLines(O + z, W), P.length && this.addFolds(P), z;
           }, D.prototype.moveLinesUp = function(O, x) {
             return this.$moveLines(O, x, -1);
           }, D.prototype.moveLinesDown = function(O, x) {
@@ -26082,50 +26082,50 @@ function Nl() {
               max: this.$wrapLimitRange.max
             };
           }, D.prototype.$updateInternalDataOnChange = function(O) {
-            var x = this.$useWrapMode, _ = O.action, L = O.start, z = O.end, H = L.row, P = z.row, Q = P - H, F = null;
-            if (this.$updating = !0, Q != 0)
+            var x = this.$useWrapMode, _ = O.action, L = O.start, z = O.end, H = L.row, P = z.row, W = P - H, F = null;
+            if (this.$updating = !0, W != 0)
               if (_ === "remove") {
-                this[x ? "$wrapData" : "$rowLengthCache"].splice(H, Q);
+                this[x ? "$wrapData" : "$rowLengthCache"].splice(H, W);
                 var K = this.$foldData;
                 F = this.getFoldsInRange(O), this.removeFolds(F);
                 var V = this.getFoldLine(z.row), X = 0;
                 if (V) {
-                  V.addRemoveChars(z.row, z.column, L.column - z.column), V.shiftRow(-Q);
+                  V.addRemoveChars(z.row, z.column, L.column - z.column), V.shiftRow(-W);
                   var q = this.getFoldLine(H);
                   q && q !== V && (q.merge(V), V = q), X = K.indexOf(V) + 1;
                 }
                 for (X; X < K.length; X++) {
                   var V = K[X];
-                  V.start.row >= z.row && V.shiftRow(-Q);
+                  V.start.row >= z.row && V.shiftRow(-W);
                 }
                 P = H;
               } else {
-                var Z = Array(Q);
+                var Z = Array(W);
                 Z.unshift(H, 0);
                 var ne = x ? this.$wrapData : this.$rowLengthCache;
                 ne.splice.apply(ne, Z);
                 var K = this.$foldData, V = this.getFoldLine(H), X = 0;
                 if (V) {
                   var ae = V.range.compareInside(L.row, L.column);
-                  ae == 0 ? (V = V.split(L.row, L.column), V && (V.shiftRow(Q), V.addRemoveChars(P, 0, z.column - L.column))) : ae == -1 && (V.addRemoveChars(H, 0, z.column - L.column), V.shiftRow(Q)), X = K.indexOf(V) + 1;
+                  ae == 0 ? (V = V.split(L.row, L.column), V && (V.shiftRow(W), V.addRemoveChars(P, 0, z.column - L.column))) : ae == -1 && (V.addRemoveChars(H, 0, z.column - L.column), V.shiftRow(W)), X = K.indexOf(V) + 1;
                 }
                 for (X; X < K.length; X++) {
                   var V = K[X];
-                  V.start.row >= H && V.shiftRow(Q);
+                  V.start.row >= H && V.shiftRow(W);
                 }
               }
             else {
-              Q = Math.abs(O.start.column - O.end.column), _ === "remove" && (F = this.getFoldsInRange(O), this.removeFolds(F), Q = -Q);
+              W = Math.abs(O.start.column - O.end.column), _ === "remove" && (F = this.getFoldsInRange(O), this.removeFolds(F), W = -W);
               var V = this.getFoldLine(H);
-              V && V.addRemoveChars(H, L.column, Q);
+              V && V.addRemoveChars(H, L.column, W);
             }
             return x && this.$wrapData.length != this.doc.getLength() && console.error("doc.getLength() and $wrapData.length have to be the same!"), this.$updating = !1, x ? this.$updateWrapData(H, P) : this.$updateRowLengthCache(H, P), F;
           }, D.prototype.$updateRowLengthCache = function(O, x) {
             this.$rowLengthCache[O] = null, this.$rowLengthCache[x] = null;
           }, D.prototype.$updateWrapData = function(O, x) {
-            var _ = this.doc.getAllLines(), L = this.getTabSize(), z = this.$wrapData, H = this.$wrapLimit, P, Q, F = O;
+            var _ = this.doc.getAllLines(), L = this.getTabSize(), z = this.$wrapData, H = this.$wrapLimit, P, W, F = O;
             for (x = Math.min(x, _.length - 1); F <= x; )
-              Q = this.getFoldLine(F, Q), Q ? (P = [], Q.walk((function(K, V, X, q) {
+              W = this.getFoldLine(F, W), W ? (P = [], W.walk((function(K, V, X, q) {
                 var Z;
                 if (K != null) {
                   Z = this.$getDisplayTokens(K, P.length), Z[0] = S;
@@ -26134,11 +26134,11 @@ function Nl() {
                 } else
                   Z = this.$getDisplayTokens(_[V].substring(q, X), P.length);
                 P = P.concat(Z);
-              }).bind(this), Q.end.row, _[Q.end.row].length + 1), z[Q.start.row] = this.$computeWrapSplits(P, H, L), F = Q.end.row + 1) : (P = this.$getDisplayTokens(_[F]), z[F] = this.$computeWrapSplits(P, H, L), F++);
+              }).bind(this), W.end.row, _[W.end.row].length + 1), z[W.start.row] = this.$computeWrapSplits(P, H, L), F = W.end.row + 1) : (P = this.$getDisplayTokens(_[F]), z[F] = this.$computeWrapSplits(P, H, L), F++);
           }, D.prototype.$computeWrapSplits = function(O, x, _) {
             if (O.length == 0)
               return [];
-            var L = [], z = O.length, H = 0, P = 0, Q = this.$wrapAsCode, F = this.$indentedSoftWrap, K = x <= Math.max(2 * _, 8) || F === !1 ? 0 : Math.floor(x / 2);
+            var L = [], z = O.length, H = 0, P = 0, W = this.$wrapAsCode, F = this.$indentedSoftWrap, K = x <= Math.max(2 * _, 8) || F === !1 ? 0 : Math.floor(x / 2);
             function V() {
               var ae = 0;
               if (K === 0)
@@ -26156,7 +26156,7 @@ function Nl() {
                     break;
                   }
                 }
-              return Q && F !== !1 && (ae += _), Math.min(ae, K);
+              return W && F !== !1 && (ae += _), Math.min(ae, K);
             }
             function X(ae) {
               for (var le = ae - H, me = H; me < ae; me++) {
@@ -26187,7 +26187,7 @@ function Nl() {
               }
               for (var ne = Math.max(Z - (x - (x >> 2)), H - 1); Z > ne && O[Z] < S; )
                 Z--;
-              if (Q) {
+              if (W) {
                 for (; Z > ne && O[Z] < S; )
                   Z--;
                 for (; Z > ne && O[Z] == k; )
@@ -26199,7 +26199,7 @@ function Nl() {
                 X(++Z);
                 continue;
               }
-              Z = H + x, O[Z] == C && Z--, X(Z - q);
+              Z = H + x, O[Z] == N && Z--, X(Z - q);
             }
             return L;
           }, D.prototype.$getDisplayTokens = function(O, x) {
@@ -26211,7 +26211,7 @@ function Nl() {
                 L = this.getScreenTabSize(_.length + x), _.push(I);
                 for (var P = 1; P < L; P++)
                   _.push($);
-              } else H == 32 ? _.push(M) : H > 39 && H < 48 || H > 57 && H < 64 ? _.push(k) : H >= 4352 && B(H) ? _.push(N, C) : _.push(N);
+              } else H == 32 ? _.push(M) : H > 39 && H < 48 || H > 57 && H < 64 ? _.push(k) : H >= 4352 && B(H) ? _.push(C, N) : _.push(C);
             }
             return _;
           }, D.prototype.$getStringScreenWidth = function(O, x, _) {
@@ -26254,29 +26254,29 @@ function Nl() {
           }, D.prototype.screenToDocumentPosition = function(O, x, _) {
             if (O < 0)
               return { row: 0, column: 0 };
-            var L, z = 0, H = 0, P, Q = 0, F = 0, K = this.$screenRowCache, V = this.$getRowCacheIndex(K, O), X = K.length;
+            var L, z = 0, H = 0, P, W = 0, F = 0, K = this.$screenRowCache, V = this.$getRowCacheIndex(K, O), X = K.length;
             if (X && V >= 0)
-              var Q = K[V], z = this.$docRowCache[V], q = O > K[X - 1];
+              var W = K[V], z = this.$docRowCache[V], q = O > K[X - 1];
             else
               var q = !X;
-            for (var Z = this.getLength() - 1, ne = this.getNextFoldLine(z), ae = ne ? ne.start.row : 1 / 0; Q <= O && (F = this.getRowLength(z), !(Q + F > O || z >= Z)); )
-              Q += F, z++, z > ae && (z = ne.end.row + 1, ne = this.getNextFoldLine(z, ne), ae = ne ? ne.start.row : 1 / 0), q && (this.$docRowCache.push(z), this.$screenRowCache.push(Q));
+            for (var Z = this.getLength() - 1, ne = this.getNextFoldLine(z), ae = ne ? ne.start.row : 1 / 0; W <= O && (F = this.getRowLength(z), !(W + F > O || z >= Z)); )
+              W += F, z++, z > ae && (z = ne.end.row + 1, ne = this.getNextFoldLine(z, ne), ae = ne ? ne.start.row : 1 / 0), q && (this.$docRowCache.push(z), this.$screenRowCache.push(W));
             if (ne && ne.start.row <= z)
               L = this.getFoldDisplayLine(ne), z = ne.start.row;
             else {
-              if (Q + F <= O || z > Z)
+              if (W + F <= O || z > Z)
                 return {
                   row: Z,
                   column: this.getLine(Z).length
                 };
               L = this.getLine(z), ne = null;
             }
-            var le = 0, me = Math.floor(O - Q);
+            var le = 0, me = Math.floor(O - W);
             if (this.$useWrapMode) {
               var Se = this.$wrapData[z];
               Se && (P = Se[me], me > 0 && Se.length && (le = Se.indent, H = Se[me - 1] || Se[Se.length - 1], L = L.substring(H)));
             }
-            return _ !== void 0 && this.$bidiHandler.isBidiRow(Q + me, z, me) && (x = this.$bidiHandler.offsetToCol(_)), H += this.$getStringScreenWidth(L, x - le)[1], this.$useWrapMode && H >= P && (H = P - 1), ne ? ne.idxToPosition(H) : { row: z, column: H };
+            return _ !== void 0 && this.$bidiHandler.isBidiRow(W + me, z, me) && (x = this.$bidiHandler.offsetToCol(_)), H += this.$getStringScreenWidth(L, x - le)[1], this.$useWrapMode && H >= P && (H = P - 1), ne ? ne.idxToPosition(H) : { row: z, column: H };
           }, D.prototype.documentToScreenPosition = function(O, x) {
             if (typeof x > "u")
               var _ = this.$clipPositionToDocument(
@@ -26294,22 +26294,22 @@ function Nl() {
             O = _.row, x = _.column;
             var L = 0, z = null, H = null;
             H = this.getFoldAt(O, x, 1), H && (O = H.start.row, x = H.start.column);
-            var P, Q = 0, F = this.$docRowCache, K = this.$getRowCacheIndex(F, O), V = F.length;
+            var P, W = 0, F = this.$docRowCache, K = this.$getRowCacheIndex(F, O), V = F.length;
             if (V && K >= 0)
-              var Q = F[K], L = this.$screenRowCache[K], X = O > F[V - 1];
+              var W = F[K], L = this.$screenRowCache[K], X = O > F[V - 1];
             else
               var X = !V;
-            for (var q = this.getNextFoldLine(Q), Z = q ? q.start.row : 1 / 0; Q < O; ) {
-              if (Q >= Z) {
+            for (var q = this.getNextFoldLine(W), Z = q ? q.start.row : 1 / 0; W < O; ) {
+              if (W >= Z) {
                 if (P = q.end.row + 1, P > O)
                   break;
                 q = this.getNextFoldLine(P, q), Z = q ? q.start.row : 1 / 0;
               } else
-                P = Q + 1;
-              L += this.getRowLength(Q), Q = P, X && (this.$docRowCache.push(Q), this.$screenRowCache.push(L));
+                P = W + 1;
+              L += this.getRowLength(W), W = P, X && (this.$docRowCache.push(W), this.$screenRowCache.push(L));
             }
             var ne = "";
-            q && Q >= Z ? (ne = this.getFoldDisplayLine(q, O, x), z = q.start.row) : (ne = this.getLine(O).substring(0, x), z = O);
+            q && W >= Z ? (ne = this.getFoldDisplayLine(q, O, x), z = q.start.row) : (ne = this.getLine(O).substring(0, x), z = O);
             var ae = 0;
             if (this.$useWrapMode) {
               var le = this.$wrapData[z];
@@ -26319,7 +26319,7 @@ function Nl() {
                 ne = ne.substring(le[me - 1] || 0, ne.length), ae = me > 0 ? le.indent : 0;
               }
             }
-            return this.lineWidgets && this.lineWidgets[Q] && this.lineWidgets[Q].rowsAbove && (L += this.lineWidgets[Q].rowsAbove), {
+            return this.lineWidgets && this.lineWidgets[W] && this.lineWidgets[W].rowsAbove && (L += this.lineWidgets[W].rowsAbove), {
               row: L,
               column: ae + this.$getStringScreenWidth(ne)[0]
             };
@@ -26331,8 +26331,8 @@ function Nl() {
             var O = 0, x = null;
             if (this.$useWrapMode)
               for (var z = this.$wrapData.length, H = 0, L = 0, x = this.$foldData[L++], P = x ? x.start.row : 1 / 0; H < z; ) {
-                var Q = this.$wrapData[H];
-                O += Q ? Q.length + 1 : 1, H++, H > P && (H = x.end.row + 1, x = this.$foldData[L++], P = x ? x.start.row : 1 / 0);
+                var W = this.$wrapData[H];
+                O += W ? W.length + 1 : 1, H++, H > P && (H = x.end.row + 1, x = this.$foldData[L++], P = x ? x.start.row : 1 / 0);
               }
             else {
               O = this.getLength();
@@ -26384,7 +26384,7 @@ function Nl() {
         min: null,
         max: null
       }, A.prototype.lineWidgets = null, A.prototype.isFullWidth = B, p.implement(A.prototype, m);
-      var N = 1, C = 2, S = 3, T = 4, k = 9, M = 10, I = 11, $ = 12;
+      var C = 1, N = 2, S = 3, T = 4, k = 9, M = 10, I = 11, $ = 12;
       function B(D) {
         return D < 4352 ? !1 : D >= 4352 && D <= 4447 || D >= 4515 && D <= 4519 || D >= 4602 && D <= 4607 || D >= 9001 && D <= 9002 || D >= 11904 && D <= 11929 || D >= 11931 && D <= 12019 || D >= 12032 && D <= 12245 || D >= 12272 && D <= 12283 || D >= 12288 && D <= 12350 || D >= 12353 && D <= 12438 || D >= 12441 && D <= 12543 || D >= 12549 && D <= 12589 || D >= 12593 && D <= 12686 || D >= 12688 && D <= 12730 || D >= 12736 && D <= 12771 || D >= 12784 && D <= 12830 || D >= 12832 && D <= 12871 || D >= 12880 && D <= 13054 || D >= 13056 && D <= 19903 || D >= 19968 && D <= 42124 || D >= 42128 && D <= 42182 || D >= 43360 && D <= 43388 || D >= 44032 && D <= 55203 || D >= 55216 && D <= 55238 || D >= 55243 && D <= 55291 || D >= 63744 && D <= 64255 || D >= 65040 && D <= 65049 || D >= 65072 && D <= 65106 || D >= 65108 && D <= 65126 || D >= 65128 && D <= 65131 || D >= 65281 && D <= 65376 || D >= 65504 && D <= 65510;
       }
@@ -26486,8 +26486,8 @@ function Nl() {
             if (!f)
               return !1;
             var b = null;
-            return f.forEach(function(y, A, N, C) {
-              return b = new E(y, A, N, C), A == C && a.start && /**@type{Range}*/
+            return f.forEach(function(y, A, C, N) {
+              return b = new E(y, A, C, N), A == N && a.start && /**@type{Range}*/
               a.start.start && a.skipCurrent != !1 && b.isEqual(
                 /**@type{Range}*/
                 a.start
@@ -26500,13 +26500,13 @@ function Nl() {
             this.$assembleRegExp(a);
             var f = a.range, b = f ? d.getLines(f.start.row, f.end.row) : d.doc.getAllLines(), y = [], A = a.re;
             if (a.$isMultiLine) {
-              var N = A.length, C = b.length - N, S;
-              e: for (var T = A.offset || 0; T <= C; T++) {
-                for (var k = 0; k < N; k++)
+              var C = A.length, N = b.length - C, S;
+              e: for (var T = A.offset || 0; T <= N; T++) {
+                for (var k = 0; k < C; k++)
                   if (b[T + k].search(A[k]) == -1)
                     continue e;
-                var M = b[T], I = b[T + N - 1], $ = M.length - M.match(A[0])[0].length, B = I.match(A[N - 1])[0].length;
-                S && S.end.row === T && S.end.column > $ || (y.push(S = new E(T, $, T + N - 1, B)), N > 2 && (T = T + N - 2));
+                var M = b[T], I = b[T + C - 1], $ = M.length - M.match(A[0])[0].length, B = I.match(A[C - 1])[0].length;
+                S && S.end.row === T && S.end.column > $ || (y.push(S = new E(T, $, T + C - 1, B)), C > 2 && (T = T + C - 2));
               }
             } else
               for (var D, O = 0; O < b.length; O++)
@@ -26549,8 +26549,8 @@ function Nl() {
                   f += "\\";
                   break;
                 }
-                var N = d.charCodeAt(b);
-                switch (N) {
+                var C = d.charCodeAt(b);
+                switch (C) {
                   case a.Backslash:
                     f += "\\";
                     break;
@@ -26569,16 +26569,16 @@ function Nl() {
                   f += "$";
                   break;
                 }
-                var C = d.charCodeAt(b);
-                if (C === a.DollarSign) {
+                var N = d.charCodeAt(b);
+                if (N === a.DollarSign) {
                   f += "$$";
                   continue;
                 }
-                if (C === a.Digit0 || C === a.Ampersand) {
+                if (N === a.Digit0 || N === a.Ampersand) {
                   f += "$&";
                   continue;
                 }
-                if (a.Digit1 <= C && C <= a.Digit9) {
+                if (a.Digit1 <= N && N <= a.Digit9) {
                   f += "$" + d[b];
                   continue;
                 }
@@ -26599,9 +26599,9 @@ function Nl() {
                 return null;
               if (a = f.regExp ? this.parseReplaceString(a) : a.replace(/\$/g, "$$$$"), a = d.replace(b, a), f.preserveCase) {
                 a = a.split("");
-                for (var N = Math.min(d.length, d.length); N--; ) {
-                  var C = d[N];
-                  C && C.toLowerCase() != C ? a[N] = a[N].toUpperCase() : a[N] = a[N].toLowerCase();
+                for (var C = Math.min(d.length, d.length); C--; ) {
+                  var N = d[C];
+                  N && N.toLowerCase() != N ? a[C] = a[C].toUpperCase() : a[C] = a[C].toLowerCase();
                 }
                 a = a.join("");
               }
@@ -26641,9 +26641,9 @@ function Nl() {
           }, u.prototype.$isMultilineSearch = function(d) {
             return d.re && /\\r\\n|\\r|\\n/.test(d.re.source) && d.regExp && !d.$isMultiLine;
           }, u.prototype.$multiLineForward = function(d, a, f, b) {
-            for (var y, A = c(d, f), N = f; N <= b; ) {
-              for (var C = 0; C < A && !(N > b); C++) {
-                var S = d.getLine(N++);
+            for (var y, A = c(d, f), C = f; C <= b; ) {
+              for (var N = 0; N < A && !(C > b); N++) {
+                var S = d.getLine(C++);
                 y = y == null ? S : y + `
 ` + S;
               }
@@ -26662,13 +26662,13 @@ function Nl() {
             }
             return null;
           }, u.prototype.$multiLineBackward = function(d, a, f, b, y) {
-            for (var A, N = c(d, b), C = d.getLine(b).length - f, S = b; S >= y; ) {
-              for (var T = 0; T < N && S >= y; T++) {
+            for (var A, C = c(d, b), N = d.getLine(b).length - f, S = b; S >= y; ) {
+              for (var T = 0; T < C && S >= y; T++) {
                 var k = d.getLine(S--);
                 A = A == null ? k : k + `
 ` + A;
               }
-              var M = s(A, a, C);
+              var M = s(A, a, N);
               if (M) {
                 var I = A.slice(0, M.index).split(`
 `), $ = M[0].split(`
@@ -26686,10 +26686,10 @@ function Nl() {
             var f = this.$assembleRegExp(a);
             if (!f)
               return !1;
-            var b = this.$isMultilineSearch(a), y = this.$multiLineForward, A = this.$multiLineBackward, N = a.backwards == !0, C = a.skipCurrent != !1, S = f.unicode, T = a.range, k = a.start;
-            k || (k = T ? T[N ? "end" : "start"] : d.selection.getRange()), k.start && (k = k[C != N ? "end" : "start"]);
+            var b = this.$isMultilineSearch(a), y = this.$multiLineForward, A = this.$multiLineBackward, C = a.backwards == !0, N = a.skipCurrent != !1, S = f.unicode, T = a.range, k = a.start;
+            k || (k = T ? T[C ? "end" : "start"] : d.selection.getRange()), k.start && (k = k[N != C ? "end" : "start"]);
             var M = T ? T.start.row : 0, I = T ? T.end.row : d.getLength() - 1;
-            if (N)
+            if (C)
               var $ = function(O) {
                 var x = k.row;
                 if (!D(x, k.column, O)) {
@@ -26719,20 +26719,20 @@ function Nl() {
               };
             if (a.$isMultiLine)
               var B = f.length, D = function(O, x, _) {
-                var L = N ? O - B + 1 : O;
+                var L = C ? O - B + 1 : O;
                 if (!(L < 0 || L + B > d.getLength())) {
                   var z = d.getLine(L), H = z.search(f[0]);
-                  if (!(!N && H < x || H === -1)) {
+                  if (!(!C && H < x || H === -1)) {
                     for (var P = 1; P < B; P++)
                       if (z = d.getLine(L + P), z.search(f[P]) == -1)
                         return;
-                    var Q = z.match(f[B - 1])[0].length;
-                    if (!(N && Q > x) && _(L, H, L + B - 1, Q))
+                    var W = z.match(f[B - 1])[0].length;
+                    if (!(C && W > x) && _(L, H, L + B - 1, W))
                       return !0;
                   }
                 }
               };
-            else if (N)
+            else if (C)
               var D = function(x, _, L) {
                 if (b) {
                   var z = A(d, f, _, x, M);
@@ -26741,17 +26741,17 @@ function Nl() {
                   if (L(z.startRow, z.startCol, z.endRow, z.endCol))
                     return !0;
                 } else {
-                  var H = d.getLine(x), P = [], Q, F = 0;
-                  for (f.lastIndex = 0; Q = f.exec(H); ) {
-                    var K = Q[0].length;
-                    if (F = Q.index, !K) {
+                  var H = d.getLine(x), P = [], W, F = 0;
+                  for (f.lastIndex = 0; W = f.exec(H); ) {
+                    var K = W[0].length;
+                    if (F = W.index, !K) {
                       if (F >= H.length)
                         break;
                       f.lastIndex = F += p.skipEmptyMatch(H, F, S);
                     }
-                    if (Q.index + K > _)
+                    if (W.index + K > _)
                       break;
-                    P.push(Q.index, K);
+                    P.push(W.index, K);
                   }
                   for (var V = P.length - 1; V >= 0; V -= 2) {
                     var X = P[V - 1], K = P[V];
@@ -26773,11 +26773,11 @@ function Nl() {
                   if (L(z.startRow, z.startCol, z.endRow, z.endCol))
                     return !0;
                 } else
-                  for (var P = d.getLine(x), Q, F; F = f.exec(P); ) {
+                  for (var P = d.getLine(x), W, F; F = f.exec(P); ) {
                     var K = F[0].length;
-                    if (Q = F.index, L(x, Q, x, Q + K))
+                    if (W = F.index, L(x, W, x, W + K))
                       return !0;
-                    if (!K && (f.lastIndex = Q += p.skipEmptyMatch(P, Q, S), Q >= P.length))
+                    if (!K && (f.lastIndex = W += p.skipEmptyMatch(P, W, S), W >= P.length))
                       return !1;
                   }
               };
@@ -26787,10 +26787,10 @@ function Nl() {
       );
       function m(u, d) {
         var a = p.supportsLookbehind();
-        function f(N, C) {
-          C === void 0 && (C = !0);
+        function f(C, N) {
+          N === void 0 && (N = !0);
           var S = a && d.$supportsUnicodeFlag ? new RegExp("[\\p{L}\\p{N}_]", "u") : new RegExp("\\w");
-          return S.test(N) || d.regExp ? a && d.$supportsUnicodeFlag ? C ? "(?<=^|[^\\p{L}\\p{N}_])" : "(?=[^\\p{L}\\p{N}_]|$)" : "\\b" : "";
+          return S.test(C) || d.regExp ? a && d.$supportsUnicodeFlag ? N ? "(?<=^|[^\\p{L}\\p{N}_])" : "(?=[^\\p{L}\\p{N}_]|$)" : "\\b" : "";
         }
         var b = Array.from(u), y = b[0], A = b[b.length - 1];
         return f(y) + u + f(A, !1);
@@ -26809,8 +26809,8 @@ function Nl() {
         return f;
       }
       function c(u, d) {
-        var a = 5e3, f = { row: d, column: 0 }, b = u.doc.positionToIndex(f), y = b + a, A = u.doc.indexToPosition(y), N = A.row;
-        return N + 1;
+        var a = 5e3, f = { row: d, column: 0 }, b = u.doc.positionToIndex(f), y = b + a, A = u.doc.indexToPosition(y), C = A.row;
+        return C + 1;
       }
       r.Search = h;
     }), ace.define("ace/keyboard/hash_handler", ["require", "exports", "module", "ace/lib/keys", "ace/lib/useragent"], function(i, r, w) {
@@ -26850,8 +26850,8 @@ function Nl() {
               if (A == d)
                 delete b[y];
               else if (Array.isArray(A)) {
-                var N = A.indexOf(d);
-                N != -1 && (A.splice(N, 1), A.length == 1 && (b[y] = A[0]));
+                var C = A.indexOf(d);
+                C != -1 && (A.splice(C, 1), A.length == 1 && (b[y] = A[0]));
               }
             }
           }, u.prototype.bindKey = function(d, a, f) {
@@ -26868,8 +26868,8 @@ function Nl() {
                     y += (y ? " " : "") + k, this._addCommandToBinding(y, "chainKeys");
                   }, this), y += " ";
                 }
-                var N = this.parseKeys(b), C = h[N.hashId] + N.key;
-                this._addCommandToBinding(y + C, a, f);
+                var C = this.parseKeys(b), N = h[C.hashId] + C.key;
+                this._addCommandToBinding(y + N, a, f);
               }, this);
             }
           }, u.prototype._addCommandToBinding = function(d, a, f) {
@@ -26882,8 +26882,8 @@ function Nl() {
               Array.isArray(b[d]) ? (y = b[d].indexOf(a)) != -1 && b[d].splice(y, 1) : b[d] = [b[d]], typeof f != "number" && (f = s(a));
               var A = b[d];
               for (y = 0; y < A.length; y++) {
-                var N = A[y], C = s(N);
-                if (C > f)
+                var C = A[y], N = s(C);
+                if (N > f)
                   break;
               }
               A.splice(y, 0, a);
@@ -26908,8 +26908,8 @@ function Nl() {
           }, u.prototype._buildKeyHash = function(d) {
             this.bindKey(d.bindKey, d);
           }, u.prototype.parseKeys = function(d) {
-            var a = d.toLowerCase().split(/[\-\+]([\-\+])?/).filter(function(C) {
-              return C;
+            var a = d.toLowerCase().split(/[\-\+]([\-\+])?/).filter(function(N) {
+              return N;
             }), f = a.pop(), b = g[f];
             if (g.FUNCTION_KEYS[b])
               f = g.FUNCTION_KEYS[b].toLowerCase();
@@ -26918,10 +26918,10 @@ function Nl() {
                 return { key: f.toUpperCase(), hashId: -1 };
             } else return { key: f, hashId: -1 };
             for (var y = 0, A = a.length; A--; ) {
-              var N = g.KEY_MODS[a[A]];
-              if (N == null)
+              var C = g.KEY_MODS[a[A]];
+              if (C == null)
                 return typeof console < "u" && console.error("invalid modifier " + a[A] + " in " + d), !1;
-              y |= N;
+              y |= C;
             }
             return { key: f, hashId: y };
           }, u.prototype.findKeyCommand = function(d, a) {
@@ -27995,8 +27995,8 @@ function Nl() {
           bindKey: h(null, null),
           exec: function(s) {
             for (var c = s.selection.isBackwards(), u = c ? s.selection.getSelectionLead() : s.selection.getSelectionAnchor(), d = c ? s.selection.getSelectionAnchor() : s.selection.getSelectionLead(), a = s.session.doc.getLine(u.row).length, f = s.session.doc.getTextRange(s.selection.getRange()), b = f.replace(/\n\s*/, " ").length, y = s.session.doc.getLine(u.row), A = u.row + 1; A <= d.row + 1; A++) {
-              var N = p.stringTrimLeft(p.stringTrimRight(s.session.doc.getLine(A)));
-              N.length !== 0 && (N = " " + N), y += N;
+              var C = p.stringTrimLeft(p.stringTrimRight(s.session.doc.getLine(A)));
+              C.length !== 0 && (C = " " + C), y += C;
             }
             d.row + 1 < s.session.doc.getLength() - 1 && (y += s.session.doc.getNewLineCharacter()), s.clearSelection(), s.session.doc.replace(new E(u.row, 0, d.row + 2, 0), y), b > 0 ? (s.selection.moveCursorTo(u.row, u.column), s.selection.selectTo(u.row, u.column + b)) : (a = s.session.doc.getLine(u.row).length > a ? a + 1 : a, s.selection.moveCursorTo(u.row, a));
           },
@@ -28352,19 +28352,19 @@ function Nl() {
           }
         };
         throw new TypeError(_ ? "Object is not iterable." : "Symbol.iterator is not defined.");
-      }, g = i("./lib/oop"), E = i("./lib/dom"), h = i("./lib/lang"), m = i("./lib/useragent"), s = i("./keyboard/textinput").TextInput, c = i("./mouse/mouse_handler").MouseHandler, u = i("./mouse/fold_handler").FoldHandler, d = i("./keyboard/keybinding").KeyBinding, a = i("./edit_session").EditSession, f = i("./search").Search, b = i("./range").Range, y = i("./lib/event_emitter").EventEmitter, A = i("./commands/command_manager").CommandManager, N = i("./commands/default_commands").commands, C = i("./config"), S = i("./token_iterator").TokenIterator, T = i("./keyboard/gutter_handler").GutterKeyboardHandler, k = i("./config").nls, M = i("./clipboard"), I = i("./lib/keys"), $ = i("./lib/event"), B = i("./tooltip").HoverTooltip, D = (
+      }, g = i("./lib/oop"), E = i("./lib/dom"), h = i("./lib/lang"), m = i("./lib/useragent"), s = i("./keyboard/textinput").TextInput, c = i("./mouse/mouse_handler").MouseHandler, u = i("./mouse/fold_handler").FoldHandler, d = i("./keyboard/keybinding").KeyBinding, a = i("./edit_session").EditSession, f = i("./search").Search, b = i("./range").Range, y = i("./lib/event_emitter").EventEmitter, A = i("./commands/command_manager").CommandManager, C = i("./commands/default_commands").commands, N = i("./config"), S = i("./token_iterator").TokenIterator, T = i("./keyboard/gutter_handler").GutterKeyboardHandler, k = i("./config").nls, M = i("./clipboard"), I = i("./lib/keys"), $ = i("./lib/event"), B = i("./tooltip").HoverTooltip, D = (
         /** @class */
         (function() {
           function x(_, L, z) {
             this.id = "editor" + ++x.$uid, this.session, this.$toDestroy = [];
             var H = _.getContainerElement();
-            this.container = H, this.renderer = _, this.commands = new A(m.isMac ? "mac" : "win", N), typeof document == "object" && (this.textInput = new s(_.getTextAreaContainer(), this), this.renderer.textarea = this.textInput.getElement(), this.$mouseHandler = new c(this), new u(this)), this.keyBinding = new d(this), this.$search = new f().set({
+            this.container = H, this.renderer = _, this.commands = new A(m.isMac ? "mac" : "win", C), typeof document == "object" && (this.textInput = new s(_.getTextAreaContainer(), this), this.renderer.textarea = this.textInput.getElement(), this.$mouseHandler = new c(this), new u(this)), this.keyBinding = new d(this), this.$search = new f().set({
               wrap: !0
             }), this.$historyTracker = this.$historyTracker.bind(this), this.commands.on("exec", this.$historyTracker), this.$initOperationListeners(), this._$emitInputEvent = h.delayedCall((function() {
               this._signal("input", {}), this.session && !this.session.destroyed && this.session.bgTokenizer.scheduleStart();
-            }).bind(this)), this.on("change", function(P, Q) {
-              Q._$emitInputEvent.schedule(31);
-            }), this.setSession(L || z && z.session || new a("")), C.resetOptions(this), z && this.setOptions(z), C._signal("editor", this);
+            }).bind(this)), this.on("change", function(P, W) {
+              W._$emitInputEvent.schedule(31);
+            }), this.setSession(L || z && z.session || new a("")), N.resetOptions(this), z && this.setOptions(z), N._signal("editor", this);
           }
           return x.prototype.$initOperationListeners = function() {
             this.commands.on("exec", this.startOperation.bind(this), !0), this.commands.on("afterExec", this.endOperation.bind(this), !0);
@@ -28417,7 +28417,7 @@ function Nl() {
             if (_ && typeof _ == "string" && _ != "ace") {
               this.$keybindingId = _;
               var z = this;
-              C.loadModule(["keybinding", _], function(H) {
+              N.loadModule(["keybinding", _], function(H) {
                 z.$keybindingId == _ && z.keyBinding.setKeyboardHandler(H && H.handler), L && L();
               });
             } else
@@ -28470,25 +28470,25 @@ function Nl() {
                   L.$bracketHighlight && (L.$bracketHighlight.markerIds.forEach(function(q) {
                     L.removeMarker(q);
                   }), L.$bracketHighlight = null);
-                  var z = _.getCursorPosition(), H = _.getKeyboardHandler(), P = H && H.$getDirectionForHighlight && H.$getDirectionForHighlight(_), Q = L.getMatchingBracketRanges(z, P);
-                  if (!Q) {
+                  var z = _.getCursorPosition(), H = _.getKeyboardHandler(), P = H && H.$getDirectionForHighlight && H.$getDirectionForHighlight(_), W = L.getMatchingBracketRanges(z, P);
+                  if (!W) {
                     var F = new S(L, z.row, z.column), K = F.getCurrentToken();
                     if (K && /\b(?:tag-open|tag-name)/.test(K.type)) {
                       var V = L.getMatchingTags(z);
-                      V && (Q = [
+                      V && (W = [
                         V.openTagName.isEmpty() ? V.openTag : V.openTagName,
                         V.closeTagName.isEmpty() ? V.closeTag : V.closeTagName
                       ]);
                     }
                   }
-                  if (!Q && L.$mode.getMatching && (Q = L.$mode.getMatching(_.session)), !Q) {
+                  if (!W && L.$mode.getMatching && (W = L.$mode.getMatching(_.session)), !W) {
                     _.getHighlightIndentGuides() && _.renderer.$textLayer.$highlightIndentGuide();
                     return;
                   }
                   var X = "ace_bracket";
-                  Array.isArray(Q) ? Q.length == 1 && (X = "ace_error_bracket") : Q = [Q], Q.length == 2 && (b.comparePoints(Q[0].end, Q[1].start) == 0 ? Q = [b.fromPoints(Q[0].start, Q[1].end)] : b.comparePoints(Q[0].start, Q[1].end) == 0 && (Q = [b.fromPoints(Q[1].start, Q[0].end)])), L.$bracketHighlight = {
-                    ranges: Q,
-                    markerIds: Q.map(function(q) {
+                  Array.isArray(W) ? W.length == 1 && (X = "ace_error_bracket") : W = [W], W.length == 2 && (b.comparePoints(W[0].end, W[1].start) == 0 ? W = [b.fromPoints(W[0].start, W[1].end)] : b.comparePoints(W[0].start, W[1].end) == 0 && (W = [b.fromPoints(W[1].start, W[0].end)])), L.$bracketHighlight = {
+                    ranges: W,
+                    markerIds: W.map(function(q) {
                       return L.addMarker(q, X, "text");
                     })
                   }, _.getHighlightIndentGuides() && _.renderer.$textLayer.$highlightIndentGuide();
@@ -28540,12 +28540,12 @@ function Nl() {
           }, x.prototype.$getSelectionHighLightRegexp = function() {
             var _ = this.session, L = this.getSelectionRange();
             if (!(L.isEmpty() || L.isMultiLine())) {
-              var z = L.start.column, H = L.end.column, P = _.getLine(L.start.row), Q = P.substring(z, H);
-              if (!(Q.length > 5e3 || !/[\w\d]/.test(Q))) {
+              var z = L.start.column, H = L.end.column, P = _.getLine(L.start.row), W = P.substring(z, H);
+              if (!(W.length > 5e3 || !/[\w\d]/.test(W))) {
                 var F = this.$search.$assembleRegExp({
                   wholeWord: !0,
                   caseSensitive: !0,
-                  needle: Q
+                  needle: W
                 }), K = P.substring(z - 1, H + 1);
                 if (F.test(K))
                   return F;
@@ -28574,8 +28574,8 @@ function Nl() {
             if (!_ && this.$copyWithEmptySelection) {
               z = !0;
               for (var H = this.selection.getAllRanges(), P = 0; P < H.length; P++) {
-                var Q = H[P];
-                P && H[P - 1].start.row == Q.start.row || (_ += this.session.getLine(Q.start.row) + L);
+                var W = H[P];
+                P && H[P - 1].start.row == W.start.row || (_ += this.session.getLine(W.start.row) + L);
               }
             }
             var F = { text: _ };
@@ -28597,11 +28597,11 @@ function Nl() {
                 H.insert({ row: X.start.row, column: 0 }, L);
               });
             else {
-              var P = L.split(/\r\n|\r|\n/), Q = this.selection.rangeList.ranges, F = P.length == 2 && (!P[0] || !P[1]);
-              if (P.length != Q.length || F)
+              var P = L.split(/\r\n|\r|\n/), W = this.selection.rangeList.ranges, F = P.length == 2 && (!P[0] || !P[1]);
+              if (P.length != W.length || F)
                 return this.commands.exec("insertstring", this, L);
-              for (var K = Q.length; K--; ) {
-                var V = Q[K];
+              for (var K = W.length; K--; ) {
+                var V = W[K];
                 V.isEmpty() || H.remove(V), H.insert(V.start, P[K]);
               }
             }
@@ -28610,8 +28610,8 @@ function Nl() {
           }, x.prototype.insert = function(_, L) {
             var z = this.session, H = z.getMode(), P = this.getCursorPosition();
             if (this.getBehavioursEnabled() && !L) {
-              var Q = H.transformAction(z.getState(P.row), "insertion", this, z, _);
-              Q && (_ !== Q.text && (this.inVirtualSelectionMode || (this.session.mergeUndoDeltas = !1, this.mergeNextCommand = !1)), _ = Q.text);
+              var W = H.transformAction(z.getState(P.row), "insertion", this, z, _);
+              W && (_ !== W.text && (this.inVirtualSelectionMode || (this.session.mergeUndoDeltas = !1, this.mergeNextCommand = !1)), _ = W.text);
             }
             if (_ == "	" && (_ = this.session.getTabString()), this.selection.isEmpty()) {
               if (this.session.getOverwrite() && _.indexOf(`
@@ -28634,7 +28634,7 @@ function Nl() {
             }
             this.clearSelection();
             var V = P.column, X = z.getState(P.row), q = z.getLine(P.row), Z = H.checkOutdent(X, q, _);
-            if (z.insert(P, _), Q && Q.selection && (Q.selection.length == 2 ? this.selection.setSelectionRange(new b(P.row, V + Q.selection[0], P.row, V + Q.selection[1])) : this.selection.setSelectionRange(new b(P.row + Q.selection[0], Q.selection[1], P.row + Q.selection[2], Q.selection[3]))), this.$enableAutoIndent) {
+            if (z.insert(P, _), W && W.selection && (W.selection.length == 2 ? this.selection.setSelectionRange(new b(P.row, V + W.selection[0], P.row, V + W.selection[1])) : this.selection.setSelectionRange(new b(P.row + W.selection[0], W.selection[1], P.row + W.selection[2], W.selection[3]))), this.$enableAutoIndent) {
               if (z.getDocument().isNewLine(_)) {
                 var ne = H.getNextLineIndent(X, q.slice(0, P.column), z.getTabString());
                 z.insert({ row: P.row + 1, column: 0 }, ne);
@@ -28642,16 +28642,16 @@ function Nl() {
               Z && H.autoOutdent(X, z, P.row);
             }
           }, x.prototype.autoIndent = function() {
-            for (var _ = this.session, L = _.getMode(), z = this.selection.isEmpty() ? [new b(0, 0, _.doc.getLength() - 1, 0)] : this.selection.getAllRanges(), H = "", P = "", Q = "", F = _.getTabString(), K = 0; K < z.length; K++)
+            for (var _ = this.session, L = _.getMode(), z = this.selection.isEmpty() ? [new b(0, 0, _.doc.getLength() - 1, 0)] : this.selection.getAllRanges(), H = "", P = "", W = "", F = _.getTabString(), K = 0; K < z.length; K++)
               for (var V = z[K].start.row, X = z[K].end.row, q = V; q <= X; q++) {
-                q > 0 && (H = _.getState(q - 1), P = _.getLine(q - 1), Q = L.getNextLineIndent(H, P, F));
+                q > 0 && (H = _.getState(q - 1), P = _.getLine(q - 1), W = L.getNextLineIndent(H, P, F));
                 var Z = _.getLine(q), ne = L.$getIndent(Z);
-                if (Q !== ne) {
+                if (W !== ne) {
                   if (ne.length > 0) {
                     var ae = new b(q, 0, q, ne.length);
                     _.remove(ae);
                   }
-                  Q.length > 0 && _.insert({ row: q, column: 0 }, Q);
+                  W.length > 0 && _.insert({ row: q, column: 0 }, W);
                 }
                 L.autoOutdent(H, _, q);
               }
@@ -28752,8 +28752,8 @@ function Nl() {
             if (this.getBehavioursEnabled()) {
               var z = this.session, H = z.getState(L.start.row), P = z.getMode().transformAction(H, "deletion", this, z, L);
               if (L.end.column === 0) {
-                var Q = z.getTextRange(L);
-                if (Q[Q.length - 1] == `
+                var W = z.getTextRange(L);
+                if (W[W.length - 1] == `
 `) {
                   var F = z.getLine(L.end.row);
                   /^\s+$/.test(F) && (L.end.column = F.length);
@@ -28813,7 +28813,7 @@ function Nl() {
                 return;
               }
             }
-            var P = _.getLine(L.start.row), Q = L.start, F = _.getTabSize(), K = _.documentToScreenColumn(Q.row, Q.column);
+            var P = _.getLine(L.start.row), W = L.start, F = _.getTabSize(), K = _.documentToScreenColumn(W.row, W.column);
             if (this.session.getUseSoftTabs())
               var V = F - K % F, X = h.stringRepeat(" ", V);
             else {
@@ -28835,8 +28835,8 @@ function Nl() {
               return F.toLowerCase() < K.toLowerCase() ? -1 : F.toLowerCase() > K.toLowerCase() ? 1 : 0;
             });
             for (var P = new b(0, 0, 0, 0), H = _.first; H <= _.last; H++) {
-              var Q = L.getLine(H);
-              P.start.row = H, P.end.row = H, P.end.column = Q.length, L.replace(P, z[H - _.first]);
+              var W = L.getLine(H);
+              P.start.row = H, P.end.row = H, P.end.column = W.length, L.replace(P, z[H - _.first]);
             }
           }, x.prototype.toggleCommentLines = function() {
             var _ = this.session.getState(this.getCursorPosition().row), L = this.$getSelectedRows();
@@ -28850,35 +28850,35 @@ function Nl() {
             for (var H = this.session.getLine(_); z.lastIndex < L; ) {
               var P = z.exec(H);
               if (P.index <= L && P.index + P[0].length >= L) {
-                var Q = {
+                var W = {
                   value: P[0],
                   start: P.index,
                   end: P.index + P[0].length
                 };
-                return Q;
+                return W;
               }
             }
             return null;
           }, x.prototype.modifyNumber = function(_) {
             var L = this.selection.getCursor().row, z = this.selection.getCursor().column, H = new b(L, z - 1, L, z), P = this.session.getTextRange(H);
             if (!isNaN(parseFloat(P)) && isFinite(P)) {
-              var Q = this.getNumberAt(L, z);
-              if (Q) {
-                var F = Q.value.indexOf(".") >= 0 ? Q.start + Q.value.indexOf(".") + 1 : Q.end, K = Q.start + Q.value.length - F, V = parseFloat(Q.value);
-                V *= Math.pow(10, K), F !== Q.end && z < F ? _ *= Math.pow(10, Q.end - z - 1) : _ *= Math.pow(10, Q.end - z), V += _, V /= Math.pow(10, K);
-                var X = V.toFixed(K), q = new b(L, Q.start, L, Q.end);
-                this.session.replace(q, X), this.moveCursorTo(L, Math.max(Q.start + 1, z + X.length - Q.value.length));
+              var W = this.getNumberAt(L, z);
+              if (W) {
+                var F = W.value.indexOf(".") >= 0 ? W.start + W.value.indexOf(".") + 1 : W.end, K = W.start + W.value.length - F, V = parseFloat(W.value);
+                V *= Math.pow(10, K), F !== W.end && z < F ? _ *= Math.pow(10, W.end - z - 1) : _ *= Math.pow(10, W.end - z), V += _, V /= Math.pow(10, K);
+                var X = V.toFixed(K), q = new b(L, W.start, L, W.end);
+                this.session.replace(q, X), this.moveCursorTo(L, Math.max(W.start + 1, z + X.length - W.value.length));
               }
             } else
               this.toggleWord();
           }, x.prototype.toggleWord = function() {
             var _ = this.selection.getCursor().row, L = this.selection.getCursor().column;
             this.selection.selectWord();
-            var z = this.getSelectedText(), H = this.selection.getWordRange().start.column, P = z.replace(/([a-z]+|[A-Z]+)(?=[A-Z_]|$)/g, "$1 ").split(/\s/), Q = L - H - 1;
-            Q < 0 && (Q = 0);
+            var z = this.getSelectedText(), H = this.selection.getWordRange().start.column, P = z.replace(/([a-z]+|[A-Z]+)(?=[A-Z_]|$)/g, "$1 ").split(/\s/), W = L - H - 1;
+            W < 0 && (W = 0);
             var F = 0, K = 0, V = this;
             z.match(/[A-Za-z0-9_]+/) && P.forEach(function(Ne, Me) {
-              K = F + Ne.length, Q >= F && Q <= K && (z = Ne, V.selection.clearSelection(), V.moveCursorTo(_, F + H), V.selection.selectTo(_, K + H)), F = K;
+              K = F + Ne.length, W >= F && W <= K && (z = Ne, V.selection.clearSelection(), V.moveCursorTo(_, F + H), V.selection.selectTo(_, K + H)), F = K;
             });
             for (var X = this.$toggleWordPairs, q, Z = 0; Z < X.length; Z++)
               for (var ne = X[Z], ae = 0; ae <= 1; ae++) {
@@ -28892,11 +28892,11 @@ function Nl() {
                 }
               }
           }, x.prototype.findLinkAt = function(_, L) {
-            var z, H, P = this.session.getLine(_), Q = P.split(/((?:https?|ftp):\/\/[\S]+)/), F = L;
+            var z, H, P = this.session.getLine(_), W = P.split(/((?:https?|ftp):\/\/[\S]+)/), F = L;
             F < 0 && (F = 0);
             var K = 0, V = 0, X;
             try {
-              for (var q = p(Q), Z = q.next(); !Z.done; Z = q.next()) {
+              for (var q = p(W), Z = q.next(); !Z.done; Z = q.next()) {
                 var ne = Z.value;
                 if (V = K + ne.length, F >= K && F <= V && ne.match(/((?:https?|ftp):\/\/[\S]+)/)) {
                   X = ne.replace(/[\s:.,'";}\]]+$/, "");
@@ -28926,8 +28926,8 @@ function Nl() {
               var P = z.start.row;
               L.duplicateLines(P, P);
             } else {
-              var Q = H ? z.start : z.end, F = L.insert(Q, L.getTextRange(z));
-              z.start = Q, z.end = F, _.setSelectionRange(z, H);
+              var W = H ? z.start : z.end, F = L.insert(W, L.getTextRange(z));
+              z.start = W, z.end = F, _.setSelectionRange(z, H);
             }
           }, x.prototype.moveLinesDown = function() {
             this.$moveLines(1, !1);
@@ -28942,8 +28942,8 @@ function Nl() {
           }, x.prototype.$moveLines = function(_, L) {
             var z, H, P = this.selection;
             if (!P.inMultiSelectMode || this.inVirtualSelectionMode) {
-              var Q = P.toOrientedRange();
-              z = this.$getSelectedRows(Q), H = this.session.$moveLines(z.first, z.last, L ? 0 : _), L && _ == -1 && (H = 0), Q.moveBy(H, 0), P.fromOrientedRange(Q);
+              var W = P.toOrientedRange();
+              z = this.$getSelectedRows(W), H = this.session.$moveLines(z.first, z.last, L ? 0 : _), L && _ == -1 && (H = 0), W.moveBy(H, 0), P.fromOrientedRange(W);
             } else {
               var F = P.rangeList.ranges;
               P.rangeList.detach(this.session), this.inVirtualSelectionMode = !0;
@@ -28991,8 +28991,8 @@ function Nl() {
             L === !0 ? this.selection.$moveSelection(function() {
               this.moveCursorBy(P, 0);
             }) : L === !1 && (this.selection.moveCursorBy(P, 0), this.selection.clearSelection());
-            var Q = z.scrollTop;
-            z.scrollBy(0, P * H.lineHeight), L != null && z.scrollCursorIntoView(null, 0.5), z.animateScrolling(Q);
+            var W = z.scrollTop;
+            z.scrollBy(0, P * H.lineHeight), L != null && z.scrollCursorIntoView(null, 0.5), z.animateScrolling(W);
           }, x.prototype.selectPageDown = function() {
             this.$moveByPage(1, !0);
           }, x.prototype.selectPageUp = function() {
@@ -29030,7 +29030,7 @@ function Nl() {
           }, x.prototype.moveCursorToPosition = function(_) {
             this.selection.moveCursorToPosition(_);
           }, x.prototype.jumpToMatching = function(_, L) {
-            var z = this.getCursorPosition(), H = new S(this.session, z.row, z.column), P = H.getCurrentToken(), Q = 0;
+            var z = this.getCursorPosition(), H = new S(this.session, z.row, z.column), P = H.getCurrentToken(), W = 0;
             P && P.type.indexOf("tag-name") !== -1 && (P = H.stepBackward());
             var F = P || H.stepForward();
             if (F) {
@@ -29058,8 +29058,8 @@ function Nl() {
                           X[Z]--, X[Z] === -1 && (K = "bracket", V = !0);
                           break;
                       }
-                } else F.type.indexOf("tag-name") !== -1 && (isNaN(X[F.value]) && (X[F.value] = 0), P.value === "<" && Q > 1 ? X[F.value]++ : P.value === "</" && X[F.value]--, X[F.value] === -1 && (K = "tag", V = !0));
-                V || (P = F, Q++, F = H.stepForward(), q = 0);
+                } else F.type.indexOf("tag-name") !== -1 && (isNaN(X[F.value]) && (X[F.value] = 0), P.value === "<" && W > 1 ? X[F.value]++ : P.value === "</" && X[F.value]--, X[F.value] === -1 && (K = "tag", V = !0));
+                V || (P = F, W++, F = H.stepForward(), q = 0);
               } while (F && !V);
               if (K) {
                 var ae, le;
@@ -29134,8 +29134,8 @@ function Nl() {
               return H;
             var P = this.getSelectionRange();
             this.selection.moveTo(0, 0);
-            for (var Q = z.length - 1; Q >= 0; --Q)
-              this.$tryReplace(z[Q], _) && H++;
+            for (var W = z.length - 1; W >= 0; --W)
+              this.$tryReplace(z[W], _) && H++;
             return this.selection.setSelectionRange(P), H;
           }, x.prototype.$tryReplace = function(_, L) {
             var z = this.session.getTextRange(_);
@@ -29174,7 +29174,7 @@ function Nl() {
               this.$scrollAnchor || (this.$scrollAnchor = document.createElement("div"));
               var P = this.$scrollAnchor;
               P.style.cssText = "position:absolute", this.container.insertBefore(P, this.container.firstChild);
-              var Q = this.on("changeSelection", function() {
+              var W = this.on("changeSelection", function() {
                 H = !0;
               }), F = this.renderer.on("beforeRender", function() {
                 H && (L = z.renderer.container.getBoundingClientRect());
@@ -29185,7 +29185,7 @@ function Nl() {
                 }
               });
               this.setAutoScrollEditorIntoView = function(V) {
-                V || (delete this.setAutoScrollEditorIntoView, this.off("changeSelection", Q), this.renderer.off("afterRender", K), this.renderer.off("beforeRender", F));
+                V || (delete this.setAutoScrollEditorIntoView, this.off("changeSelection", W), this.renderer.off("afterRender", K), this.renderer.off("beforeRender", F));
               };
             }
           }, x.prototype.$resetCursorStyle = function() {
@@ -29193,7 +29193,7 @@ function Nl() {
             L && (L.setSmoothBlinking(/smooth/.test(_)), L.isBlinking = !this.$readOnly && _ != "wide", E.setCssClass(L.element, "ace_slim-cursors", /slim/.test(_)));
           }, x.prototype.prompt = function(_, L, z) {
             var H = this;
-            C.loadModule("ace/ext/prompt", function(P) {
+            N.loadModule("ace/ext/prompt", function(P) {
               P.prompt(H, _, L, z);
             });
           }, x;
@@ -29223,7 +29223,7 @@ function Nl() {
         ["attach", "detach"],
         ["&&", "||"],
         ["==", "!="]
-      ], g.implement(D.prototype, y), C.defineOptions(D.prototype, "editor", {
+      ], g.implement(D.prototype, y), N.defineOptions(D.prototype, "editor", {
         selectionStyle: {
           set: function(x) {
             this.onSelectionChange(), this._signal("changeSelectionStyle", { data: x });
@@ -29517,8 +29517,8 @@ function Nl() {
             for (var f = 0; f < a.length; f++) {
               var b = a[f], y = b.row, A = this.$annotations[y];
               A || (A = this.$annotations[y] = { text: [], type: [], displayText: [] });
-              var N = b.text, C = b.text, S = b.type;
-              N = N ? E.escapeHTML(N) : b.html || "", C = C || b.html || "", A.text.indexOf(N) === -1 && (A.text.push(N), A.type.push(S), A.displayText.push(C));
+              var C = b.text, N = b.text, S = b.type;
+              C = C ? E.escapeHTML(C) : b.html || "", N = N || b.html || "", A.text.indexOf(C) === -1 && (A.text.push(C), A.type.push(S), A.displayText.push(N));
               var T = b.className;
               T ? A.className = T : S === "error" ? A.className = " ace_error" : S === "security" && !/\bace_error\b/.test(A.className) ? A.className = " ace_security" : S === "warning" && !/\bace_(error|security)\b/.test(A.className) ? A.className = " ace_warning" : S === "info" && !A.className ? A.className = " ace_info" : S === "hint" && !A.className && (A.className = " ace_hint");
             }
@@ -29540,20 +29540,20 @@ function Nl() {
               f.getLength() - 1
             );
             this.oldLastRow = y, this.config = a, this.$lines.moveContainer(a), this.$updateCursorRow();
-            for (var A = f.getNextFoldLine(b), N = A ? A.start.row : 1 / 0, C = null, S = -1, T = b; ; ) {
-              if (T > N && (T = A.end.row + 1, A = f.getNextFoldLine(T, A), N = A ? A.start.row : 1 / 0), T > y) {
+            for (var A = f.getNextFoldLine(b), C = A ? A.start.row : 1 / 0, N = null, S = -1, T = b; ; ) {
+              if (T > C && (T = A.end.row + 1, A = f.getNextFoldLine(T, A), C = A ? A.start.row : 1 / 0), T > y) {
                 for (; this.$lines.getLength() > S + 1; )
                   this.$lines.pop();
                 break;
               }
-              C = this.$lines.get(++S), C ? C.row = T : (C = this.$lines.createCell(T, a, this.session, u), this.$lines.push(C)), this.$renderCell(C, a, A, T), T++;
+              N = this.$lines.get(++S), N ? N.row = T : (N = this.$lines.createCell(T, a, this.session, u), this.$lines.push(N)), this.$renderCell(N, a, A, T), T++;
             }
             this._signal("afterRender"), this.$updateGutterWidth(a);
           }, d.prototype.$updateGutterWidth = function(a) {
             var f = this.session, b = f.gutterRenderer || this.$renderer, y = f.$firstLineNumber, A = this.$lines.last() ? this.$lines.last().text : "";
             (this.$fixedWidth || f.$useWrapMode) && (A = f.getLength() + y - 1);
-            var N = b ? b.getWidth(f, A, a) : A.toString().length * a.characterWidth, C = this.$padding || this.$computePadding();
-            N += C.left + C.right, N !== this.gutterWidth && !isNaN(N) && (this.gutterWidth = N, this.element.parentNode.style.width = this.element.style.width = Math.ceil(this.gutterWidth) + "px", this._signal("changeGutterWidth", N));
+            var C = b ? b.getWidth(f, A, a) : A.toString().length * a.characterWidth, N = this.$padding || this.$computePadding();
+            C += N.left + N.right, C !== this.gutterWidth && !isNaN(C) && (this.gutterWidth = C, this.element.parentNode.style.width = this.element.style.width = Math.ceil(this.gutterWidth) + "px", this._signal("changeGutterWidth", C));
           }, d.prototype.$updateCursorRow = function() {
             if (this.$highlightGutterLine) {
               var a = this.session.selection.getCursor();
@@ -29604,21 +29604,21 @@ function Nl() {
                 this.$lines.pop();
             a.firstRow < f.firstRow && this.$lines.unshift(this.$renderLines(a, a.firstRow, f.firstRow - 1)), b > y && this.$lines.push(this.$renderLines(a, y + 1, b)), this.updateLineHighlight(), this._signal("afterRender"), this.$updateGutterWidth(a);
           }, d.prototype.$renderLines = function(a, f, b) {
-            for (var y = [], A = f, N = this.session.getNextFoldLine(A), C = N ? N.start.row : 1 / 0; A > C && (A = N.end.row + 1, N = this.session.getNextFoldLine(A, N), C = N ? N.start.row : 1 / 0), !(A > b); ) {
+            for (var y = [], A = f, C = this.session.getNextFoldLine(A), N = C ? C.start.row : 1 / 0; A > N && (A = C.end.row + 1, C = this.session.getNextFoldLine(A, C), N = C ? C.start.row : 1 / 0), !(A > b); ) {
               var S = this.$lines.createCell(A, a, this.session, u);
-              this.$renderCell(S, a, N, A), y.push(S), A++;
+              this.$renderCell(S, a, C, A), y.push(S), A++;
             }
             return y;
           }, d.prototype.$renderCell = function(a, f, b, y) {
-            var A = a.element, N = this.session, C = A.childNodes[0], S = A.childNodes[1], T = A.childNodes[2], k = A.childNodes[3], M = T.firstChild, I = N.$firstLineNumber, $ = N.$breakpoints, B = N.$decorations, D = N.gutterRenderer || this.$renderer, O = this.$showFoldWidgets && N.foldWidgets, x = b ? b.start.row : Number.MAX_VALUE, _ = f.lineHeight + "px", L = this.$useSvgGutterIcons ? "ace_gutter-cell_svg-icons " : "ace_gutter-cell ", z = this.$useSvgGutterIcons ? "ace_icon_svg" : "ace_icon", H = (D ? D.getText(N, y) : y + I).toString();
+            var A = a.element, C = this.session, N = A.childNodes[0], S = A.childNodes[1], T = A.childNodes[2], k = A.childNodes[3], M = T.firstChild, I = C.$firstLineNumber, $ = C.$breakpoints, B = C.$decorations, D = C.gutterRenderer || this.$renderer, O = this.$showFoldWidgets && C.foldWidgets, x = b ? b.start.row : Number.MAX_VALUE, _ = f.lineHeight + "px", L = this.$useSvgGutterIcons ? "ace_gutter-cell_svg-icons " : "ace_gutter-cell ", z = this.$useSvgGutterIcons ? "ace_icon_svg" : "ace_icon", H = (D ? D.getText(C, y) : y + I).toString();
             if (this.$highlightGutterLine && (y == this.$cursorRow || b && y < this.$cursorRow && y >= x && this.$cursorRow <= b.end.row) && (L += "ace_gutter-active-line ", this.$cursorCell != a && (this.$cursorCell && (this.$cursorCell.element.className = this.$cursorCell.element.className.replace("ace_gutter-active-line ", "")), this.$cursorCell = a)), $[y] && (L += $[y]), B[y] && (L += B[y]), this.$annotations[y] && y !== x && (L += this.$annotations[y].className), O) {
               var P = O[y];
-              P == null && (P = O[y] = N.getFoldWidget(y));
+              P == null && (P = O[y] = C.getFoldWidget(y));
             }
             if (P) {
-              var Q = "ace_fold-widget ace_" + P, F = P == "start" && y == x && y < b.end.row;
+              var W = "ace_fold-widget ace_" + P, F = P == "start" && y == x && y < b.end.row;
               if (F) {
-                Q += " ace_closed";
+                W += " ace_closed";
                 for (var K = "", V = !1, X = y + 1; X <= b.end.row; X++)
                   if (this.$annotations[X]) {
                     if (this.$annotations[X].className === " ace_error") {
@@ -29629,9 +29629,9 @@ function Nl() {
                   }
                 L += K;
               } else
-                Q += " ace_open";
-              S.className != Q && (S.className = Q), p.setStyle(S.style, "height", _), p.setStyle(S.style, "display", "inline-block"), S.setAttribute("role", "button"), S.setAttribute("tabindex", "-1");
-              var q = N.getFoldWidgetRange(y);
+                W += " ace_open";
+              S.className != W && (S.className = W), p.setStyle(S.style, "height", _), p.setStyle(S.style, "display", "inline-block"), S.setAttribute("role", "button"), S.setAttribute("tabindex", "-1");
+              var q = C.getFoldWidgetRange(y);
               q ? S.setAttribute("aria-label", s("gutter.code-folding.range.aria-label", "Toggle code folding, rows $0 through $1", [
                 q.start.row + 1,
                 q.end.row + 1
@@ -29680,7 +29680,7 @@ function Nl() {
               T.setAttribute("aria-label", ne), T.setAttribute("tabindex", "-1"), T.setAttribute("role", "button");
             } else
               p.setStyle(T.style, "display", "none"), T.removeAttribute("aria-label"), T.removeAttribute("role"), T.setAttribute("tabindex", "0");
-            return H !== C.data && (C.data = H), A.className != L && (A.className = L), p.setStyle(a.element.style, "height", this.$lines.computeLineHeight(y, f, N) + "px"), p.setStyle(a.element.style, "top", this.$lines.computeLineTop(y, f, N) + "px"), a.text = H, T.style.display === "none" && S.style.display === "none" && !Z ? a.element.setAttribute("aria-hidden", !0) : a.element.setAttribute("aria-hidden", !1), a;
+            return H !== N.data && (N.data = H), A.className != L && (A.className = L), p.setStyle(a.element.style, "height", this.$lines.computeLineHeight(y, f, C) + "px"), p.setStyle(a.element.style, "top", this.$lines.computeLineTop(y, f, C) + "px"), a.text = H, T.style.display === "none" && S.style.display === "none" && !Z ? a.element.setAttribute("aria-hidden", !0) : a.element.setAttribute("aria-hidden", !1), a;
           }, d.prototype.setHighlightGutterLine = function(a) {
             this.$highlightGutterLine = a;
           }, d.prototype.setShowLineNumbers = function(a) {
@@ -29714,13 +29714,13 @@ function Nl() {
             var f = this.$lines.cells, b = this.session.documentToScreenRow(a, 0);
             return f[a - this.config.firstRowScreen - (a - b)];
           }, d.prototype.$addCustomWidget = function(a, f, b) {
-            var y = f.className, A = f.label, N = f.title, C = f.callbacks;
-            this.session.$gutterCustomWidgets[a] = { className: y, label: A, title: N, callbacks: C }, this.$hideFoldWidget(a, b);
+            var y = f.className, A = f.label, C = f.title, N = f.callbacks;
+            this.session.$gutterCustomWidgets[a] = { className: y, label: A, title: C, callbacks: N }, this.$hideFoldWidget(a, b);
             var S = b || this.$getGutterCell(a);
             if (S && S.element) {
               var T = S.element.querySelector(".ace_custom-widget");
-              T && T.remove(), T = p.createElement("span"), T.className = "ace_custom-widget ".concat(y), T.setAttribute("tabindex", "-1"), T.setAttribute("role", "button"), T.setAttribute("aria-label", A), T.setAttribute("title", N), p.setStyle(T.style, "display", "inline-block"), p.setStyle(T.style, "height", "inherit"), C && C.onClick && T.addEventListener("click", function(k) {
-                C.onClick(k, a), k.stopPropagation();
+              T && T.remove(), T = p.createElement("span"), T.className = "ace_custom-widget ".concat(y), T.setAttribute("tabindex", "-1"), T.setAttribute("role", "button"), T.setAttribute("aria-label", A), T.setAttribute("title", C), p.setStyle(T.style, "display", "inline-block"), p.setStyle(T.style, "height", "inherit"), N && N.onClick && T.addEventListener("click", function(k) {
+                N.onClick(k, a), k.stopPropagation();
               }), S.element.appendChild(T);
             }
           }, d.prototype.$removeCustomWidget = function(a, f) {
@@ -29799,22 +29799,22 @@ function Nl() {
           }, m.prototype.$getTop = function(s, c) {
             return (s - c.firstRowScreen) * c.lineHeight;
           }, m.prototype.drawTextMarker = function(s, c, u, d, a) {
-            for (var f = this.session, b = c.start.row, y = c.end.row, A = b, N = 0, C = 0, S = f.getScreenLastRowColumn(A), T = new p(A, c.start.column, A, C); A <= y; A++)
-              T.start.row = T.end.row = A, T.start.column = A == b ? c.start.column : f.getRowWrapIndent(A), T.end.column = S, N = C, C = S, S = A + 1 < y ? f.getScreenLastRowColumn(A + 1) : A == y ? 0 : c.end.column, this.drawSingleLineMarker(s, T, u + (A == b ? " ace_start" : "") + " ace_br" + h(A == b || A == b + 1 && c.start.column, N < C, C > S, A == y), d, A == y ? 0 : 1, a);
+            for (var f = this.session, b = c.start.row, y = c.end.row, A = b, C = 0, N = 0, S = f.getScreenLastRowColumn(A), T = new p(A, c.start.column, A, N); A <= y; A++)
+              T.start.row = T.end.row = A, T.start.column = A == b ? c.start.column : f.getRowWrapIndent(A), T.end.column = S, C = N, N = S, S = A + 1 < y ? f.getScreenLastRowColumn(A + 1) : A == y ? 0 : c.end.column, this.drawSingleLineMarker(s, T, u + (A == b ? " ace_start" : "") + " ace_br" + h(A == b || A == b + 1 && c.start.column, C < N, N > S, A == y), d, A == y ? 0 : 1, a);
           }, m.prototype.drawMultiLineMarker = function(s, c, u, d, a) {
             var f = this.$padding, b = d.lineHeight, y = this.$getTop(c.start.row, d), A = f + c.start.column * d.characterWidth;
             if (a = a || "", this.session.$bidiHandler.isBidiRow(c.start.row)) {
-              var N = c.clone();
-              N.end.row = N.start.row, N.end.column = this.session.getLine(N.start.row).length, this.drawBidiSingleLineMarker(s, N, u + " ace_br1 ace_start", d, null, a);
+              var C = c.clone();
+              C.end.row = C.start.row, C.end.column = this.session.getLine(C.start.row).length, this.drawBidiSingleLineMarker(s, C, u + " ace_br1 ace_start", d, null, a);
             } else
               this.elt(u + " ace_br1 ace_start", "height:" + b + "px;right:" + f + "px;top:" + y + "px;left:" + A + "px;" + (a || ""));
             if (this.session.$bidiHandler.isBidiRow(c.end.row)) {
-              var N = c.clone();
-              N.start.row = N.end.row, N.start.column = 0, this.drawBidiSingleLineMarker(s, N, u + " ace_br12", d, null, a);
+              var C = c.clone();
+              C.start.row = C.end.row, C.start.column = 0, this.drawBidiSingleLineMarker(s, C, u + " ace_br12", d, null, a);
             } else {
               y = this.$getTop(c.end.row, d);
-              var C = c.end.column * d.characterWidth;
-              this.elt(u + " ace_br12", "height:" + b + "px;width:" + C + "px;top:" + y + "px;left:" + f + "px;" + (a || ""));
+              var N = c.end.column * d.characterWidth;
+              this.elt(u + " ace_br12", "height:" + b + "px;width:" + N + "px;top:" + y + "px;left:" + f + "px;" + (a || ""));
             }
             if (b = (c.end.row - c.start.row - 1) * d.lineHeight, !(b <= 0)) {
               y = this.$getTop(c.start.row + 1, d);
@@ -29824,12 +29824,12 @@ function Nl() {
           }, m.prototype.drawSingleLineMarker = function(s, c, u, d, a, f) {
             if (this.session.$bidiHandler.isBidiRow(c.start.row))
               return this.drawBidiSingleLineMarker(s, c, u, d, a, f);
-            var b = d.lineHeight, y = (c.end.column + (a || 0) - c.start.column) * d.characterWidth, A = this.$getTop(c.start.row, d), N = this.$padding + c.start.column * d.characterWidth;
-            this.elt(u, "height:" + b + "px;width:" + y + "px;top:" + A + "px;left:" + N + "px;" + (f || ""));
+            var b = d.lineHeight, y = (c.end.column + (a || 0) - c.start.column) * d.characterWidth, A = this.$getTop(c.start.row, d), C = this.$padding + c.start.column * d.characterWidth;
+            this.elt(u, "height:" + b + "px;width:" + y + "px;top:" + A + "px;left:" + C + "px;" + (f || ""));
           }, m.prototype.drawBidiSingleLineMarker = function(s, c, u, d, a, f) {
-            var b = d.lineHeight, y = this.$getTop(c.start.row, d), A = this.$padding, N = this.session.$bidiHandler.getSelections(c.start.column, c.end.column);
-            N.forEach(function(C) {
-              this.elt(u, "height:" + b + "px;width:" + (C.width + (a || 0)) + "px;top:" + y + "px;left:" + (A + C.left) + "px;" + (f || ""));
+            var b = d.lineHeight, y = this.$getTop(c.start.row, d), A = this.$padding, C = this.session.$bidiHandler.getSelections(c.start.column, c.end.column);
+            C.forEach(function(N) {
+              this.elt(u, "height:" + b + "px;width:" + (N.width + (a || 0)) + "px;top:" + y + "px;left:" + (A + N.left) + "px;" + (f || ""));
             }, this);
           }, m.prototype.drawFullLineMarker = function(s, c, u, d, a) {
             var f = this.$getTop(c.start.row, d), b = d.lineHeight;
@@ -29898,8 +29898,8 @@ function Nl() {
                 f.push(this.dom.createTextNode(E.stringRepeat(" ", b), this.element));
             if (this.displayIndentGuides) {
               this.$indentGuideRe = /\s\S| \t|\t |\s$/;
-              var A = "ace_indent-guide", N = this.showSpaces ? " ace_invisible ace_invisible_space" : "", C = this.showSpaces ? E.stringRepeat(this.SPACE_CHAR, this.tabSize) : E.stringRepeat(" ", this.tabSize), S = this.showTabs ? " ace_invisible ace_invisible_tab" : "", T = this.showTabs ? E.stringRepeat(this.TAB_CHAR, this.tabSize) : C, y = this.dom.createElement("span");
-              y.className = A + N, y.textContent = C, this.$tabStrings[" "] = y;
+              var A = "ace_indent-guide", C = this.showSpaces ? " ace_invisible ace_invisible_space" : "", N = this.showSpaces ? E.stringRepeat(this.SPACE_CHAR, this.tabSize) : E.stringRepeat(" ", this.tabSize), S = this.showTabs ? " ace_invisible ace_invisible_tab" : "", T = this.showTabs ? E.stringRepeat(this.TAB_CHAR, this.tabSize) : N, y = this.dom.createElement("span");
+              y.className = A + C, y.textContent = N, this.$tabStrings[" "] = y;
               var y = this.dom.createElement("span");
               y.className = A + S, y.textContent = T, this.$tabStrings["	"] = y;
             }
@@ -29907,7 +29907,7 @@ function Nl() {
             if (this.config.lastRow != a.lastRow || this.config.firstRow != a.firstRow)
               return this.update(a);
             this.config = a;
-            for (var y = Math.max(f, a.firstRow), A = Math.min(b, a.lastRow), N = this.element.childNodes, C = 0, T = a.firstRow; T < y; T++) {
+            for (var y = Math.max(f, a.firstRow), A = Math.min(b, a.lastRow), C = this.element.childNodes, N = 0, T = a.firstRow; T < y; T++) {
               var k = this.session.getFoldLine(T);
               if (k)
                 if (k.containsRow(y)) {
@@ -29915,10 +29915,10 @@ function Nl() {
                   break;
                 } else
                   T = k.end.row;
-              C++;
+              N++;
             }
             for (var S = !1, T = y, k = this.session.getNextFoldLine(T), M = k ? k.start.row : 1 / 0; T > M && (T = k.end.row + 1, k = this.session.getNextFoldLine(T, k), M = k ? k.start.row : 1 / 0), !(T > A); ) {
-              var I = N[C++];
+              var I = C[N++];
               if (I) {
                 this.dom.removeChildren(I), this.$renderLine(I, T, T == M ? k : !1), S && (I.style.top = this.$lines.computeLineTop(T, a, this.session) + "px");
                 var $ = a.lineHeight * this.session.getRowLength(T) + "px";
@@ -29927,8 +29927,8 @@ function Nl() {
               T++;
             }
             if (S)
-              for (; C < this.$lines.cells.length; ) {
-                var B = this.$lines.cells[C++];
+              for (; N < this.$lines.cells.length; ) {
+                var B = this.$lines.cells[N++];
                 B.element.style.top = this.$lines.computeLineTop(B.row, a, this.session) + "px";
               }
           }, d.prototype.scrollLines = function(a) {
@@ -29953,9 +29953,9 @@ function Nl() {
                 this.$lines.pop();
             a.firstRow < f.firstRow && this.$lines.unshift(this.$renderLinesFragment(a, a.firstRow, f.firstRow - 1)), a.lastRow > f.lastRow && this.$lines.push(this.$renderLinesFragment(a, f.lastRow + 1, a.lastRow)), this.$highlightIndentGuide();
           }, d.prototype.$renderLinesFragment = function(a, f, b) {
-            for (var y = [], A = f, N = this.session.getNextFoldLine(A), C = N ? N.start.row : 1 / 0; A > C && (A = N.end.row + 1, N = this.session.getNextFoldLine(A, N), C = N ? N.start.row : 1 / 0), !(A > b); ) {
+            for (var y = [], A = f, C = this.session.getNextFoldLine(A), N = C ? C.start.row : 1 / 0; A > N && (A = C.end.row + 1, C = this.session.getNextFoldLine(A, C), N = C ? C.start.row : 1 / 0), !(A > b); ) {
               var S = this.$lines.createCell(A, a, this.session), T = S.element;
-              this.dom.removeChildren(T), g.setStyle(T.style, "height", this.$lines.computeLineHeight(A, a, this.session) + "px"), g.setStyle(T.style, "top", this.$lines.computeLineTop(A, a, this.session) + "px"), this.$renderLine(T, A, A == C ? N : !1), this.$useLineGroups() ? T.className = "ace_line_group" : T.className = "ace_line", y.push(S), A++;
+              this.dom.removeChildren(T), g.setStyle(T.style, "height", this.$lines.computeLineHeight(A, a, this.session) + "px"), g.setStyle(T.style, "top", this.$lines.computeLineTop(A, a, this.session) + "px"), this.$renderLine(T, A, A == N ? C : !1), this.$useLineGroups() ? T.className = "ace_line_group" : T.className = "ace_line", y.push(S), A++;
             }
             return y;
           }, d.prototype.update = function(a) {
@@ -29964,38 +29964,38 @@ function Nl() {
               y.pop();
             y.push(this.$renderLinesFragment(a, f, b));
           }, d.prototype.$renderToken = function(a, f, b, y) {
-            for (var A = this, N = /(\t)|( +)|([\x00-\x1f\x80-\xa0\xad\u1680\u180E\u2000-\u200f\u2028\u2029\u202F\u205F\uFEFF\uFFF9-\uFFFC\u2066\u2067\u2068\u202A\u202B\u202D\u202E\u202C\u2069\u2060\u2061\u2062\u2063\u2064\u206A\u206B\u206B\u206C\u206D\u206E\u206F]+)|(\u3000)|([\u1100-\u115F\u11A3-\u11A7\u11FA-\u11FF\u2329-\u232A\u2E80-\u2E99\u2E9B-\u2EF3\u2F00-\u2FD5\u2FF0-\u2FFB\u3001-\u303E\u3041-\u3096\u3099-\u30FF\u3105-\u312D\u3131-\u318E\u3190-\u31BA\u31C0-\u31E3\u31F0-\u321E\u3220-\u3247\u3250-\u32FE\u3300-\u4DBF\u4E00-\uA48C\uA490-\uA4C6\uA960-\uA97C\uAC00-\uD7A3\uD7B0-\uD7C6\uD7CB-\uD7FB\uF900-\uFAFF\uFE10-\uFE19\uFE30-\uFE52\uFE54-\uFE66\uFE68-\uFE6B\uFF01-\uFF60\uFFE0-\uFFE6]|[\uD800-\uDBFF][\uDC00-\uDFFF])/g, C = this.dom.createFragment(this.element), S, T = 0; S = N.exec(y); ) {
+            for (var A = this, C = /(\t)|( +)|([\x00-\x1f\x80-\xa0\xad\u1680\u180E\u2000-\u200f\u2028\u2029\u202F\u205F\uFEFF\uFFF9-\uFFFC\u2066\u2067\u2068\u202A\u202B\u202D\u202E\u202C\u2069\u2060\u2061\u2062\u2063\u2064\u206A\u206B\u206B\u206C\u206D\u206E\u206F]+)|(\u3000)|([\u1100-\u115F\u11A3-\u11A7\u11FA-\u11FF\u2329-\u232A\u2E80-\u2E99\u2E9B-\u2EF3\u2F00-\u2FD5\u2FF0-\u2FFB\u3001-\u303E\u3041-\u3096\u3099-\u30FF\u3105-\u312D\u3131-\u318E\u3190-\u31BA\u31C0-\u31E3\u31F0-\u321E\u3220-\u3247\u3250-\u32FE\u3300-\u4DBF\u4E00-\uA48C\uA490-\uA4C6\uA960-\uA97C\uAC00-\uD7A3\uD7B0-\uD7C6\uD7CB-\uD7FB\uF900-\uFAFF\uFE10-\uFE19\uFE30-\uFE52\uFE54-\uFE66\uFE68-\uFE6B\uFF01-\uFF60\uFFE0-\uFFE6]|[\uD800-\uDBFF][\uDC00-\uDFFF])/g, N = this.dom.createFragment(this.element), S, T = 0; S = C.exec(y); ) {
               var k = S[1], M = S[2], I = S[3], $ = S[4], B = S[5];
               if (!(!A.showSpaces && M)) {
                 var D = T != S.index ? y.slice(T, S.index) : "";
-                if (T = S.index + S[0].length, D && C.appendChild(this.dom.createTextNode(D, this.element)), k) {
+                if (T = S.index + S[0].length, D && N.appendChild(this.dom.createTextNode(D, this.element)), k) {
                   var O = A.session.getScreenTabSize(f + S.index), x = A.$tabStrings[O].cloneNode(!0);
-                  x.charCount = 1, C.appendChild(x), f += O - 1;
+                  x.charCount = 1, N.appendChild(x), f += O - 1;
                 } else if (M)
                   if (A.showSpaces) {
                     var _ = this.dom.createElement("span");
-                    _.className = "ace_invisible ace_invisible_space", _.textContent = E.stringRepeat(A.SPACE_CHAR, M.length), C.appendChild(_);
+                    _.className = "ace_invisible ace_invisible_space", _.textContent = E.stringRepeat(A.SPACE_CHAR, M.length), N.appendChild(_);
                   } else
-                    C.appendChild(this.dom.createTextNode(M, this.element));
+                    N.appendChild(this.dom.createTextNode(M, this.element));
                 else if (I) {
                   var _ = this.dom.createElement("span");
-                  _.className = "ace_invisible ace_invisible_space ace_invalid", _.textContent = E.stringRepeat(A.SPACE_CHAR, I.length), C.appendChild(_);
+                  _.className = "ace_invisible ace_invisible_space ace_invalid", _.textContent = E.stringRepeat(A.SPACE_CHAR, I.length), N.appendChild(_);
                 } else if ($) {
                   f += 1;
                   var _ = this.dom.createElement("span");
-                  _.style.width = A.config.characterWidth * 2 + "px", _.className = A.showSpaces ? "ace_cjk ace_invisible ace_invisible_space" : "ace_cjk", _.textContent = A.showSpaces ? A.SPACE_CHAR : $, C.appendChild(_);
+                  _.style.width = A.config.characterWidth * 2 + "px", _.className = A.showSpaces ? "ace_cjk ace_invisible ace_invisible_space" : "ace_cjk", _.textContent = A.showSpaces ? A.SPACE_CHAR : $, N.appendChild(_);
                 } else if (B) {
                   f += 1;
                   var _ = this.dom.createElement("span");
-                  _.style.width = A.config.characterWidth * 2 + "px", _.className = "ace_cjk", _.textContent = B, C.appendChild(_);
+                  _.style.width = A.config.characterWidth * 2 + "px", _.className = "ace_cjk", _.textContent = B, N.appendChild(_);
                 }
               }
             }
-            if (C.appendChild(this.dom.createTextNode(T ? y.slice(T) : y, this.element)), c(b.type))
-              a.appendChild(C);
+            if (N.appendChild(this.dom.createTextNode(T ? y.slice(T) : y, this.element)), c(b.type))
+              a.appendChild(N);
             else {
               var L = "ace_" + b.type.replace(/\./g, " ace_"), _ = this.dom.createElement("span");
-              b.type == "fold" && (_.style.width = b.value.length * this.config.characterWidth + "px", _.setAttribute("title", s("inline-fold.closed.title", "Unfold code"))), _.className = L, _.appendChild(C), a.appendChild(_);
+              b.type == "fold" && (_.style.width = b.value.length * this.config.characterWidth + "px", _.setAttribute("title", s("inline-fold.closed.title", "Unfold code"))), _.className = L, _.appendChild(N), a.appendChild(_);
             }
             return f + y.length;
           }, d.prototype.renderIndentGuide = function(a, f, b) {
@@ -30004,11 +30004,11 @@ function Nl() {
               return f;
             if (f[0] == " ") {
               y -= y % this.tabSize;
-              for (var A = y / this.tabSize, N = 0; N < A; N++)
+              for (var A = y / this.tabSize, C = 0; C < A; C++)
                 a.appendChild(this.$tabStrings[" "].cloneNode(!0));
               return this.$highlightIndentGuide(), f.substr(y);
             } else if (f[0] == "	") {
-              for (var N = 0; N < y; N++)
+              for (var C = 0; C < y; C++)
                 a.appendChild(this.$tabStrings["	"].cloneNode(!0));
               return this.$highlightIndentGuide(), f.substr(y);
             }
@@ -30030,17 +30030,17 @@ function Nl() {
                 };
                 var A = this.session.$bracketHighlight;
                 if (A) {
-                  for (var N = this.session.$bracketHighlight.ranges, C = 0; C < N.length; C++)
-                    if (f.row !== N[C].start.row) {
-                      this.$highlightIndentGuideMarker.end = N[C].start.row + 1, f.row > N[C].start.row ? this.$highlightIndentGuideMarker.dir = -1 : this.$highlightIndentGuideMarker.dir = 1;
+                  for (var C = this.session.$bracketHighlight.ranges, N = 0; N < C.length; N++)
+                    if (f.row !== C[N].start.row) {
+                      this.$highlightIndentGuideMarker.end = C[N].start.row + 1, f.row > C[N].start.row ? this.$highlightIndentGuideMarker.dir = -1 : this.$highlightIndentGuideMarker.dir = 1;
                       break;
                     }
                 }
                 if (!this.$highlightIndentGuideMarker.end && a[f.row] !== "" && f.column === a[f.row].length) {
                   this.$highlightIndentGuideMarker.dir = 1;
-                  for (var C = f.row + 1; C < a.length; C++) {
-                    var S = a[C], T = /^\s*/.exec(S)[0].length;
-                    if (S !== "" && (this.$highlightIndentGuideMarker.end = C, T <= b))
+                  for (var N = f.row + 1; N < a.length; N++) {
+                    var S = a[N], T = /^\s*/.exec(S)[0].length;
+                    if (S !== "" && (this.$highlightIndentGuideMarker.end = N, T <= b))
                       break;
                   }
                 }
@@ -30061,8 +30061,8 @@ function Nl() {
                   return;
               var A = y.childNodes;
               if (A) {
-                var N = A[f - 1];
-                N && N.classList && N.classList.contains("ace_indent-guide") && N.classList.add("ace_indent-guide-active");
+                var C = A[f - 1];
+                C && C.classList && C.classList.contains("ace_indent-guide") && C.classList.add("ace_indent-guide-active");
               }
             }
           }, d.prototype.$renderHighlightIndentGuide = function() {
@@ -30094,40 +30094,40 @@ function Nl() {
             var f = this.dom.createElement("div");
             return f.className = "ace_line", f.style.height = this.config.lineHeight + "px", f;
           }, d.prototype.$renderWrappedLine = function(a, f, b) {
-            var y = 0, A = 0, N = b[0], C = 0, S = this.$createLineElement();
+            var y = 0, A = 0, C = b[0], N = 0, S = this.$createLineElement();
             a.appendChild(S);
             for (var T = 0; T < f.length; T++) {
               var k = f[T], M = k.value;
               if (T == 0 && this.displayIndentGuides) {
-                if (y = M.length, M = this.renderIndentGuide(S, M, N), !M)
+                if (y = M.length, M = this.renderIndentGuide(S, M, C), !M)
                   continue;
                 y -= M.length;
               }
-              if (y + M.length < N)
-                C = this.$renderToken(S, C, k, M), y += M.length;
+              if (y + M.length < C)
+                N = this.$renderToken(S, N, k, M), y += M.length;
               else {
-                for (; y + M.length >= N; ) {
-                  C = this.$renderToken(S, C, k, M.substring(0, N - y)), M = M.substring(N - y), y = N, S = this.$createLineElement(), a.appendChild(S);
+                for (; y + M.length >= C; ) {
+                  N = this.$renderToken(S, N, k, M.substring(0, C - y)), M = M.substring(C - y), y = C, S = this.$createLineElement(), a.appendChild(S);
                   var I = this.dom.createTextNode(E.stringRepeat(" ", b.indent), this.element);
-                  I.charCount = 0, S.appendChild(I), A++, C = 0, N = b[A] || Number.MAX_VALUE;
+                  I.charCount = 0, S.appendChild(I), A++, N = 0, C = b[A] || Number.MAX_VALUE;
                 }
-                M.length != 0 && (y += M.length, C = this.$renderToken(S, C, k, M));
+                M.length != 0 && (y += M.length, N = this.$renderToken(S, N, k, M));
               }
             }
-            b[b.length - 1] > this.MAX_LINE_LENGTH && this.$renderOverflowMessage(S, C, null, "", !0);
+            b[b.length - 1] > this.MAX_LINE_LENGTH && this.$renderOverflowMessage(S, N, null, "", !0);
           }, d.prototype.$renderSimpleLine = function(a, f) {
             for (var b = 0, y = 0; y < f.length; y++) {
-              var A = f[y], N = A.value;
-              if (!(y == 0 && this.displayIndentGuides && (N = this.renderIndentGuide(a, N), !N))) {
-                if (b + N.length > this.MAX_LINE_LENGTH)
-                  return this.$renderOverflowMessage(a, b, A, N);
-                b = this.$renderToken(a, b, A, N);
+              var A = f[y], C = A.value;
+              if (!(y == 0 && this.displayIndentGuides && (C = this.renderIndentGuide(a, C), !C))) {
+                if (b + C.length > this.MAX_LINE_LENGTH)
+                  return this.$renderOverflowMessage(a, b, A, C);
+                b = this.$renderToken(a, b, A, C);
               }
             }
           }, d.prototype.$renderOverflowMessage = function(a, f, b, y, A) {
             b && this.$renderToken(a, f, b, y.slice(0, this.MAX_LINE_LENGTH - f));
-            var N = this.dom.createElement("span");
-            N.className = "ace_inline_button ace_keyword ace_toggle_wrap", N.textContent = A ? "<hide>" : "<click to see more...>", a.appendChild(N);
+            var C = this.dom.createElement("span");
+            C.className = "ace_inline_button ace_keyword ace_toggle_wrap", C.textContent = A ? "<hide>" : "<click to see more...>", a.appendChild(C);
           }, d.prototype.$renderLine = function(a, f, b) {
             if (!b && b != !1 && (b = this.session.getFoldLine(f)), b)
               var y = this.$getFoldLineTokens(f, b);
@@ -30135,9 +30135,9 @@ function Nl() {
               var y = this.session.getTokens(f);
             var A = a;
             if (y.length) {
-              var N = this.session.getRowSplitData(f);
-              if (N && N.length) {
-                this.$renderWrappedLine(a, y, N);
+              var C = this.session.getRowSplitData(f);
+              if (C && C.length) {
+                this.$renderWrappedLine(a, y, C);
                 var A = a.lastChild;
               } else {
                 var A = a;
@@ -30146,36 +30146,36 @@ function Nl() {
             } else this.$useLineGroups() && (A = this.$createLineElement(), a.appendChild(A));
             if (this.showEOL && A) {
               b && (f = b.end.row);
-              var C = this.dom.createElement("span");
-              C.className = "ace_invisible ace_invisible_eol", C.textContent = f == this.session.getLength() - 1 ? this.EOF_CHAR : this.EOL_CHAR, A.appendChild(C);
+              var N = this.dom.createElement("span");
+              N.className = "ace_invisible ace_invisible_eol", N.textContent = f == this.session.getLength() - 1 ? this.EOF_CHAR : this.EOL_CHAR, A.appendChild(N);
             }
           }, d.prototype.$getFoldLineTokens = function(a, f) {
             var b = this.session, y = [];
-            function A(C, S, T) {
-              for (var k = 0, M = 0; M + C[k].value.length < S; )
-                if (M += C[k].value.length, k++, k == C.length)
+            function A(N, S, T) {
+              for (var k = 0, M = 0; M + N[k].value.length < S; )
+                if (M += N[k].value.length, k++, k == N.length)
                   return;
               if (M != S) {
-                var I = C[k].value.substring(S - M);
+                var I = N[k].value.substring(S - M);
                 I.length > T - S && (I = I.substring(0, T - S)), y.push({
-                  type: C[k].type,
+                  type: N[k].type,
                   value: I
                 }), M = S + I.length, k += 1;
               }
-              for (; M < T && k < C.length; ) {
-                var I = C[k].value;
+              for (; M < T && k < N.length; ) {
+                var I = N[k].value;
                 I.length + M > T ? y.push({
-                  type: C[k].type,
+                  type: N[k].type,
                   value: I.substring(0, T - M)
-                }) : y.push(C[k]), M += I.length, k += 1;
+                }) : y.push(N[k]), M += I.length, k += 1;
               }
             }
-            var N = b.getTokens(a);
-            return f.walk(function(C, S, T, k, M) {
-              C != null ? y.push({
+            var C = b.getTokens(a);
+            return f.walk(function(N, S, T, k, M) {
+              N != null ? y.push({
                 type: "fold",
-                value: C
-              }) : (M && (N = b.getTokens(S)), N.length && A(N, k, T));
+                value: N
+              }) : (M && (C = b.getTokens(S)), C.length && A(C, k, T));
             }, f.end.row, this.session.getLine(f.end.row).length), y;
           }, d.prototype.$useLineGroups = function() {
             return this.session.getUseWrapMode();
@@ -30283,7 +30283,7 @@ function Nl() {
           return a = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(y, A) {
             y.__proto__ = A;
           } || function(y, A) {
-            for (var N in A) Object.prototype.hasOwnProperty.call(A, N) && (y[N] = A[N]);
+            for (var C in A) Object.prototype.hasOwnProperty.call(A, C) && (y[C] = A[C]);
           }, a(f, b);
         };
         return function(f, b) {
@@ -30441,9 +30441,9 @@ function Nl() {
           return a.prototype.onMouseDown = function(f, b) {
             if (f === "mousedown" && !(h.getButton(b) !== 0 || b.detail === 2)) {
               if (b.target === this.inner) {
-                var y = this, A = b.clientY, N = function($) {
+                var y = this, A = b.clientY, C = function($) {
                   A = $.clientY;
-                }, C = function() {
+                }, N = function() {
                   clearInterval(M);
                 }, S = b.clientY, T = this.thumbTop, k = function() {
                   if (A !== void 0) {
@@ -30451,7 +30451,7 @@ function Nl() {
                     $ !== y.scrollTop && y._emit("scroll", { data: $ });
                   }
                 };
-                h.capture(this.inner, N, C);
+                h.capture(this.inner, C, N);
                 var M = setInterval(k, 20);
                 return h.preventDefault(b);
               }
@@ -30486,9 +30486,9 @@ function Nl() {
           return a.prototype.onMouseDown = function(f, b) {
             if (f === "mousedown" && !(h.getButton(b) !== 0 || b.detail === 2)) {
               if (b.target === this.inner) {
-                var y = this, A = b.clientX, N = function($) {
+                var y = this, A = b.clientX, C = function($) {
                   A = $.clientX;
-                }, C = function() {
+                }, N = function() {
                   clearInterval(M);
                 }, S = b.clientX, T = this.thumbLeft, k = function() {
                   if (A !== void 0) {
@@ -30496,7 +30496,7 @@ function Nl() {
                     $ !== y.scrollLeft && y._emit("scroll", { data: $ });
                   }
                 };
-                h.capture(this.inner, N, C);
+                h.capture(this.inner, C, N);
                 var M = setInterval(k, 20);
                 return h.preventDefault(b);
               }
@@ -30603,33 +30603,33 @@ function Nl() {
               var A = this.$getZoom(this.el);
               b = T(1 / A, b);
             }
-            function N(Q, F, K) {
-              var V = Q[1] * F[0] - Q[0] * F[1];
+            function C(W, F, K) {
+              var V = W[1] * F[0] - W[0] * F[1];
               return [
                 (-F[1] * K[0] + F[0] * K[1]) / V,
-                (+Q[1] * K[0] - Q[0] * K[1]) / V
+                (+W[1] * K[0] - W[0] * K[1]) / V
               ];
             }
-            function C(Q, F) {
-              return [Q[0] - F[0], Q[1] - F[1]];
+            function N(W, F) {
+              return [W[0] - F[0], W[1] - F[1]];
             }
-            function S(Q, F) {
-              return [Q[0] + F[0], Q[1] + F[1]];
+            function S(W, F) {
+              return [W[0] + F[0], W[1] + F[1]];
             }
-            function T(Q, F) {
-              return [Q * F[0], Q * F[1]];
+            function T(W, F) {
+              return [W * F[0], W * F[1]];
             }
             this.els || this.$initTransformMeasureNodes();
-            function k(Q) {
-              var F = Q.getBoundingClientRect();
+            function k(W) {
+              var F = W.getBoundingClientRect();
               return [F.left, F.top];
             }
-            var M = k(this.els[0]), I = k(this.els[1]), $ = k(this.els[2]), B = k(this.els[3]), D = N(C(B, I), C(B, $), C(S(I, $), S(B, M))), O = T(1 + D[0], C(I, M)), x = T(1 + D[1], C($, M));
+            var M = k(this.els[0]), I = k(this.els[1]), $ = k(this.els[2]), B = k(this.els[3]), D = C(N(B, I), N(B, $), N(S(I, $), S(B, M))), O = T(1 + D[0], N(I, M)), x = T(1 + D[1], N($, M));
             if (y) {
               var _ = y, L = D[0] * _[0] / d + D[1] * _[1] / d + 1, z = S(T(_[0], O), T(_[1], x));
               return S(T(1 / L / d, z), M);
             }
-            var H = C(b, M), P = N(C(O, T(D[0], H)), C(x, T(D[1], H)), H);
+            var H = N(b, M), P = C(N(O, T(D[0], H)), N(x, T(D[1], H)), H);
             return T(d, P);
           }, f;
         })()
@@ -31372,7 +31372,7 @@ function Nl() {
                 O.priority = f[O.type] || null;
               }), a = a.sort(d);
               for (var b = 0; b < a.length; b++) {
-                var y = a[b].row, A = this.getVerticalOffsetForRow(y), N = A + this.lineHeight, C = Math.round(this.heightRatio * A), S = Math.round(this.heightRatio * N), T = Math.round((C + S) / 2), k = S - T;
+                var y = a[b].row, A = this.getVerticalOffsetForRow(y), C = A + this.lineHeight, N = Math.round(this.heightRatio * A), S = Math.round(this.heightRatio * C), T = Math.round((N + S) / 2), k = S - T;
                 k < this.halfMinDecorationHeight && (k = this.halfMinDecorationHeight), T - k < 0 && (T = k), T + k > this.canvasHeight && (T = this.canvasHeight - k);
                 var M = T - k, I = T + k, $ = I - M;
                 u.fillStyle = c[a[b].type] || null, u.fillRect(0, M, Math.round(this.oneZoneWidth - 1), $);
@@ -31398,8 +31398,8 @@ function Nl() {
       );
       g.implement(h.prototype, E), r.Decorator = h;
     }), ace.define("ace/virtual_renderer", ["require", "exports", "module", "ace/lib/oop", "ace/lib/dom", "ace/lib/lang", "ace/config", "ace/layer/gutter", "ace/layer/marker", "ace/layer/text", "ace/layer/cursor", "ace/scrollbar", "ace/scrollbar", "ace/scrollbar_custom", "ace/scrollbar_custom", "ace/renderloop", "ace/layer/font_metrics", "ace/lib/event_emitter", "ace/css/editor-css", "ace/layer/decorators", "ace/lib/useragent", "ace/layer/text_util"], function(i, r, w) {
-      var p = i("./lib/oop"), g = i("./lib/dom"), E = i("./lib/lang"), h = i("./config"), m = i("./layer/gutter").Gutter, s = i("./layer/marker").Marker, c = i("./layer/text").Text, u = i("./layer/cursor").Cursor, d = i("./scrollbar").HScrollBar, a = i("./scrollbar").VScrollBar, f = i("./scrollbar_custom").HScrollBar, b = i("./scrollbar_custom").VScrollBar, y = i("./renderloop").RenderLoop, A = i("./layer/font_metrics").FontMetrics, N = i("./lib/event_emitter").EventEmitter, C = i("./css/editor-css"), S = i("./layer/decorators").Decorator, T = i("./lib/useragent"), k = i("./layer/text_util").isTextToken;
-      g.importCssString(C, "ace_editor.css", !1);
+      var p = i("./lib/oop"), g = i("./lib/dom"), E = i("./lib/lang"), h = i("./config"), m = i("./layer/gutter").Gutter, s = i("./layer/marker").Marker, c = i("./layer/text").Text, u = i("./layer/cursor").Cursor, d = i("./scrollbar").HScrollBar, a = i("./scrollbar").VScrollBar, f = i("./scrollbar_custom").HScrollBar, b = i("./scrollbar_custom").VScrollBar, y = i("./renderloop").RenderLoop, A = i("./layer/font_metrics").FontMetrics, C = i("./lib/event_emitter").EventEmitter, N = i("./css/editor-css"), S = i("./layer/decorators").Decorator, T = i("./lib/useragent"), k = i("./layer/text_util").isTextToken;
+      g.importCssString(N, "ace_editor.css", !1);
       var M = (
         /** @class */
         (function() {
@@ -31661,11 +31661,11 @@ function Nl() {
             z && (this.$horizScroll = L, this.scrollBarH.setVisible(L));
             var H = this.$vScroll;
             this.$maxLines && this.lineHeight > 1 && (this.$autosize(), D = B.height <= 2 * this.lineHeight);
-            var P = B.scrollerHeight + this.lineHeight, Q = !this.$maxLines && this.$scrollPastEnd ? (B.scrollerHeight - this.lineHeight) * this.$scrollPastEnd : 0;
-            x += Q;
+            var P = B.scrollerHeight + this.lineHeight, W = !this.$maxLines && this.$scrollPastEnd ? (B.scrollerHeight - this.lineHeight) * this.$scrollPastEnd : 0;
+            x += W;
             var F = this.scrollMargin;
             this.session.setScrollTop(Math.max(-F.top, Math.min(this.scrollTop, x - B.scrollerHeight + F.bottom))), this.session.setScrollLeft(Math.max(-F.left, Math.min(this.scrollLeft, _ + 2 * this.$padding - B.scrollerWidth + F.right)));
-            var K = !D && (this.$vScrollBarAlwaysVisible || B.scrollerHeight - x + Q < 0 || this.scrollTop > F.top), V = H !== K;
+            var K = !D && (this.$vScrollBarAlwaysVisible || B.scrollerHeight - x + W < 0 || this.scrollTop > F.top), V = H !== K;
             V && (this.$vScroll = K, this.scrollBarV.setVisible(K));
             var X = this.scrollTop % this.lineHeight, q = Math.ceil(P / this.lineHeight) - 1, Z = Math.max(0, Math.round((this.scrollTop - X) / this.lineHeight)), ne = Z + q, ae, le, me = this.lineHeight;
             Z = $.screenToDocumentRow(Z, 0);
@@ -31728,8 +31728,8 @@ function Nl() {
               this.$scrollAnimation && (this.$stopAnimation = !0);
               var H = this.$scrollAnimation ? this.session.getScrollTop() : this.scrollTop;
               H + L > _ ? (B && H + L > _ + this.lineHeight && (_ -= B * this.$size.scrollerHeight), _ === 0 && (_ = -this.scrollMargin.top), this.session.setScrollTop(_)) : H + this.$size.scrollerHeight - z < _ + this.lineHeight && (B && H + this.$size.scrollerHeight - z < _ - this.lineHeight && (_ += B * this.$size.scrollerHeight), this.session.setScrollTop(_ + this.lineHeight + z - this.$size.scrollerHeight));
-              var P = this.scrollLeft, Q = 2 * this.layerConfig.characterWidth;
-              x - Q < P ? (x -= Q, x < this.$padding + Q && (x = -this.scrollMargin.left), this.session.setScrollLeft(x)) : (x += Q, P + this.$size.scrollerWidth < x + this.characterWidth ? this.session.setScrollLeft(Math.round(x + this.characterWidth - this.$size.scrollerWidth)) : P <= this.$padding && x - P < this.characterWidth && this.session.setScrollLeft(0));
+              var P = this.scrollLeft, W = 2 * this.layerConfig.characterWidth;
+              x - W < P ? (x -= W, x < this.$padding + W && (x = -this.scrollMargin.left), this.session.setScrollLeft(x)) : (x += W, P + this.$size.scrollerWidth < x + this.characterWidth ? this.session.setScrollLeft(Math.round(x + this.characterWidth - this.$size.scrollerWidth)) : P <= this.$padding && x - P < this.characterWidth && this.session.setScrollLeft(0));
             }
           }, I.prototype.getScrollTop = function() {
             return this.session.getScrollTop();
@@ -31861,10 +31861,10 @@ function Nl() {
                 column: O.column,
                 className: "ace_ghost_text_container"
               }, this.session.widgetManager.addLineWidget(this.$ghostTextWidget);
-              var H = this.$cursorLayer.getPixelPosition(O, !0), P = this.container, Q = P.getBoundingClientRect().height, F = x.length * this.lineHeight, K = F < Q - H.top;
+              var H = this.$cursorLayer.getPixelPosition(O, !0), P = this.container, W = P.getBoundingClientRect().height, F = x.length * this.lineHeight, K = F < W - H.top;
               if (K)
                 return;
-              F < Q ? this.scrollBy(0, (x.length - 1) * this.lineHeight) : this.scrollToRow(O.row);
+              F < W ? this.scrollBy(0, (x.length - 1) * this.lineHeight) : this.scrollToRow(O.row);
             }
           }, I.prototype.$calculateWrappedTextChunks = function($, B) {
             var D = this.$size.scrollerWidth - this.$padding * 2, O = Math.floor(D / this.characterWidth) - 2;
@@ -31874,9 +31874,9 @@ function Nl() {
               if (H.length > 0) {
                 var P = 0;
                 H.push(x[L].length);
-                for (var Q = 0; Q < H.length; Q++) {
-                  var F = x[L].slice(P, H[Q]);
-                  _.push({ text: F, wrapped: !0 }), P = H[Q];
+                for (var W = 0; W < H.length; W++) {
+                  var F = x[L].slice(P, H[W]);
+                  _.push({ text: F, wrapped: !0 }), P = H[W];
                 }
               } else
                 _.push({ text: x[L], wrapped: !1 });
@@ -31897,7 +31897,7 @@ function Nl() {
               for (var z = 0, H = 0; H < L.length; H++) {
                 var P = L[H];
                 if (z += P.value.length, O <= z) {
-                  var Q = P.value.length - (z - O), F = P.value.slice(0, Q), K = P.value.slice(Q);
+                  var W = P.value.length - (z - O), F = P.value.slice(0, W), K = P.value.slice(W);
                   L.splice(H, 1, { type: P.type, value: F }, _, { type: P.type, value: K });
                   break;
                 }
@@ -31944,7 +31944,7 @@ function Nl() {
           }, I.prototype.setMouseCursor = function($) {
             g.setStyle(this.scroller.style, "cursor", $);
           }, I.prototype.attachToShadowRoot = function() {
-            g.importCssString(C, "ace_editor.css", this.container);
+            g.importCssString(N, "ace_editor.css", this.container);
           }, I.prototype.destroy = function() {
             this.freeze(), this.$fontMetrics.destroy(), this.$cursorLayer.destroy(), this.removeAllListeners(), this.container.textContent = "", this.setOption("useResizeObserver", !1);
           }, I.prototype.$updateCustomScrollbar = function($) {
@@ -31971,7 +31971,7 @@ function Nl() {
           }, I;
         })()
       );
-      M.prototype.CHANGE_CURSOR = 1, M.prototype.CHANGE_MARKER = 2, M.prototype.CHANGE_GUTTER = 4, M.prototype.CHANGE_SCROLL = 8, M.prototype.CHANGE_LINES = 16, M.prototype.CHANGE_TEXT = 32, M.prototype.CHANGE_SIZE = 64, M.prototype.CHANGE_MARKER_BACK = 128, M.prototype.CHANGE_MARKER_FRONT = 256, M.prototype.CHANGE_FULL = 512, M.prototype.CHANGE_H_SCROLL = 1024, M.prototype.$changes = 0, M.prototype.$padding = null, M.prototype.$frozen = !1, M.prototype.STEPS = 8, p.implement(M.prototype, N), h.defineOptions(M.prototype, "renderer", {
+      M.prototype.CHANGE_CURSOR = 1, M.prototype.CHANGE_MARKER = 2, M.prototype.CHANGE_GUTTER = 4, M.prototype.CHANGE_SCROLL = 8, M.prototype.CHANGE_LINES = 16, M.prototype.CHANGE_TEXT = 32, M.prototype.CHANGE_SIZE = 64, M.prototype.CHANGE_MARKER_BACK = 128, M.prototype.CHANGE_MARKER_FRONT = 256, M.prototype.CHANGE_FULL = 512, M.prototype.CHANGE_H_SCROLL = 1024, M.prototype.$changes = 0, M.prototype.$padding = null, M.prototype.$frozen = !1, M.prototype.STEPS = 8, p.implement(M.prototype, C), h.defineOptions(M.prototype, "renderer", {
         useResizeObserver: {
           set: function(I) {
             !I && this.$resizeObserver ? (this.$resizeObserver.disconnect(), this.$resizeTimer.cancel(), this.$resizeTimer = this.$resizeObserver = null) : I && !this.$resizeObserver && this.$addResizeObserver();
@@ -32156,14 +32156,14 @@ function Nl() {
           else {
             var A = this.$normalizePath;
             b = b || A(i.toUrl("ace/worker/worker.js", null, "_"));
-            var N = {};
-            d.forEach(function(C) {
-              N[C] = A(i.toUrl(C, null, "_").replace(/(\.js)?(\?.*)?$/, ""));
+            var C = {};
+            d.forEach(function(N) {
+              C[N] = A(i.toUrl(N, null, "_").replace(/(\.js)?(\?.*)?$/, ""));
             });
           }
           return this.$worker = s(b), y && this.send("importScripts", y), this.$worker.postMessage({
             init: !0,
-            tlns: N,
+            tlns: C,
             module: a,
             classname: f
           }), this.$worker;
@@ -32216,31 +32216,31 @@ function Nl() {
         };
       }).call(c.prototype);
       var u = function(d, a, f) {
-        var b = null, y = !1, A = Object.create(E), N = [], C = new c({
-          messageBuffer: N,
+        var b = null, y = !1, A = Object.create(E), C = [], N = new c({
+          messageBuffer: C,
           terminate: function() {
           },
           postMessage: function(T) {
-            N.push(T), b && (y ? setTimeout(S) : S());
+            C.push(T), b && (y ? setTimeout(S) : S());
           }
         });
-        C.setEmitSync = function(T) {
+        N.setEmitSync = function(T) {
           y = T;
         };
         var S = function() {
-          var T = N.shift();
+          var T = C.shift();
           T.command ? b[T.command].apply(b, T.args) : T.event && A._signal(T.event, T.data);
         };
         return A.postMessage = function(T) {
-          C.onMessage({ data: T });
+          N.onMessage({ data: T });
         }, A.callback = function(T, k) {
           this.postMessage({ type: "call", id: k, data: T });
         }, A.emit = function(T, k) {
           this.postMessage({ type: "event", name: T, data: k });
         }, h.loadModule(["worker", a], function(T) {
-          for (b = new T[f](A); N.length; )
+          for (b = new T[f](A); C.length; )
             S();
-        }), C;
+        }), N;
       };
       r.UIWorkerClient = u, r.WorkerClient = c, r.createWorker = s;
     }), ace.define("ace/placeholder", ["require", "exports", "module", "ace/range", "ace/lib/event_emitter", "ace/lib/oop"], function(i, r, w) {
@@ -32346,7 +32346,7 @@ function Nl() {
           return;
         }
         if (f === 0) {
-          var b = m.editor, y = b.selection, A = b.inMultiSelectMode, N = m.getDocumentPosition(), C = y.getCursor(), S = m.inSelection() || y.isEmpty() && E(N, C), T = m.x, k = m.y, M = function(F) {
+          var b = m.editor, y = b.selection, A = b.inMultiSelectMode, C = m.getDocumentPosition(), N = y.getCursor(), S = m.inSelection() || y.isEmpty() && E(C, N), T = m.x, k = m.y, M = function(F) {
             T = F.clientX, k = F.clientY;
           }, I = b.session, $ = b.renderer.pixelToScreenCoordinates(T, k), B = $, D;
           if (b.$mouseHandler.$enableJumpToDef)
@@ -32362,7 +32362,7 @@ function Nl() {
               var O = y.toOrientedRange();
               b.addSelectionMarker(O);
             }
-            var x = y.rangeList.rangeAtPoint(N);
+            var x = y.rangeList.rangeAtPoint(C);
             b.inVirtualSelectionMode = !0, u && (x = null, O = y.ranges[0] || O, b.removeSelectionMarker(O)), b.once("mouseup", function() {
               var F = y.toOrientedRange();
               x && F.isEmpty() && E(x.cursor, F.cursor) ? y.substractPoint(F.cursor) : (u ? y.substractPoint(O.cursor) : O && (b.removeSelectionMarker(O), y.addRange(O)), y.addRange(F)), b.inVirtualSelectionMode = !1;
@@ -32373,15 +32373,15 @@ function Nl() {
               var F = b.renderer.pixelToScreenCoordinates(T, k), K = I.screenToDocumentPosition(F.row, F.column, F.offsetX);
               E(B, F) && E(K, y.lead) || (B = F, b.selection.moveToPosition(K), b.renderer.scrollCursorIntoView(), b.removeSelectionMarkers(L), L = y.rectangularRangeBlock(B, $), b.$mouseHandler.$clickSelection && L.length == 1 && L[0].isEmpty() && (L[0] = b.$mouseHandler.$clickSelection.clone()), L.forEach(b.addSelectionMarker, b), b.updateSelectionMarkers());
             };
-            A && !a ? y.toSingleRange() : !A && a && (_ = y.toOrientedRange(), b.addSelectionMarker(_)), u ? $ = I.documentToScreenPosition(y.lead) : y.moveToPosition(N), B = { row: -1, column: -1 };
+            A && !a ? y.toSingleRange() : !A && a && (_ = y.toOrientedRange(), b.addSelectionMarker(_)), u ? $ = I.documentToScreenPosition(y.lead) : y.moveToPosition(C), B = { row: -1, column: -1 };
             var H = function(F) {
-              z(), clearInterval(Q), b.removeSelectionMarkers(L), L.length || (L = [y.toOrientedRange()]), _ && (b.removeSelectionMarker(_), y.toSingleRange(_));
+              z(), clearInterval(W), b.removeSelectionMarkers(L), L.length || (L = [y.toOrientedRange()]), _ && (b.removeSelectionMarker(_), y.toSingleRange(_));
               for (var K = 0; K < L.length; K++)
                 y.addRange(L[K]);
               b.inVirtualSelectionMode = !1, b.$mouseHandler.$clickSelection = null;
             }, P = z;
             p.capture(b.container, M, H);
-            var Q = setInterval(function() {
+            var W = setInterval(function() {
               P();
             }, 20);
             return m.preventDefault();
@@ -32513,8 +32513,8 @@ function Nl() {
       var p = i("./range_list").RangeList, g = i("./range").Range, E = i("./selection").Selection, h = i("./mouse/multi_select_handler").onMouseDown, m = i("./lib/event"), s = i("./lib/lang"), c = i("./commands/multi_select_commands");
       r.commands = c.defaultCommands.concat(c.multiSelectCommands);
       var u = i("./search").Search, d = new u();
-      function a(C, S, T) {
-        return d.$options.wrap = !0, d.$options.needle = S, d.$options.backwards = T == -1, d.find(C);
+      function a(N, S, T) {
+        return d.$options.wrap = !0, d.$options.needle = S, d.$options.backwards = T == -1, d.find(N);
       }
       var f = i("./edit_session").EditSession;
       (function() {
@@ -32522,48 +32522,48 @@ function Nl() {
           return this.$selectionMarkers;
         };
       }).call(f.prototype), (function() {
-        this.ranges = null, this.rangeList = null, this.addRange = function(C, S) {
-          if (C) {
+        this.ranges = null, this.rangeList = null, this.addRange = function(N, S) {
+          if (N) {
             if (!this.inMultiSelectMode && this.rangeCount === 0) {
               var T = this.toOrientedRange();
-              if (this.rangeList.add(T), this.rangeList.add(C), this.rangeList.ranges.length != 2)
-                return this.rangeList.removeAll(), S || this.fromOrientedRange(C);
+              if (this.rangeList.add(T), this.rangeList.add(N), this.rangeList.ranges.length != 2)
+                return this.rangeList.removeAll(), S || this.fromOrientedRange(N);
               this.rangeList.removeAll(), this.rangeList.add(T), this.$onAddRange(T);
             }
-            C.cursor || (C.cursor = C.end);
-            var k = this.rangeList.add(C);
-            return this.$onAddRange(C), k.length && this.$onRemoveRange(k), this.rangeCount > 1 && !this.inMultiSelectMode && (this._signal("multiSelect"), this.inMultiSelectMode = !0, this.session.$undoSelect = !1, this.rangeList.attach(this.session)), S || this.fromOrientedRange(C);
+            N.cursor || (N.cursor = N.end);
+            var k = this.rangeList.add(N);
+            return this.$onAddRange(N), k.length && this.$onRemoveRange(k), this.rangeCount > 1 && !this.inMultiSelectMode && (this._signal("multiSelect"), this.inMultiSelectMode = !0, this.session.$undoSelect = !1, this.rangeList.attach(this.session)), S || this.fromOrientedRange(N);
           }
-        }, this.toSingleRange = function(C) {
-          C = C || this.ranges[0];
+        }, this.toSingleRange = function(N) {
+          N = N || this.ranges[0];
           var S = this.rangeList.removeAll();
-          S.length && this.$onRemoveRange(S), C && this.fromOrientedRange(C);
-        }, this.substractPoint = function(C) {
-          var S = this.rangeList.substractPoint(C);
+          S.length && this.$onRemoveRange(S), N && this.fromOrientedRange(N);
+        }, this.substractPoint = function(N) {
+          var S = this.rangeList.substractPoint(N);
           if (S)
             return this.$onRemoveRange(S), S[0];
         }, this.mergeOverlappingRanges = function() {
-          var C = this.rangeList.merge();
-          C.length && this.$onRemoveRange(C);
-        }, this.$onAddRange = function(C) {
-          this.rangeCount = this.rangeList.ranges.length, this.ranges.unshift(C), this._signal("addRange", { range: C });
-        }, this.$onRemoveRange = function(C) {
+          var N = this.rangeList.merge();
+          N.length && this.$onRemoveRange(N);
+        }, this.$onAddRange = function(N) {
+          this.rangeCount = this.rangeList.ranges.length, this.ranges.unshift(N), this._signal("addRange", { range: N });
+        }, this.$onRemoveRange = function(N) {
           if (this.rangeCount = this.rangeList.ranges.length, this.rangeCount == 1 && this.inMultiSelectMode) {
             var S = this.rangeList.ranges.pop();
-            C.push(S), this.rangeCount = 0;
+            N.push(S), this.rangeCount = 0;
           }
-          for (var T = C.length; T--; ) {
-            var k = this.ranges.indexOf(C[T]);
+          for (var T = N.length; T--; ) {
+            var k = this.ranges.indexOf(N[T]);
             this.ranges.splice(k, 1);
           }
-          this._signal("removeRange", { ranges: C }), this.rangeCount === 0 && this.inMultiSelectMode && (this.inMultiSelectMode = !1, this._signal("singleSelect"), this.session.$undoSelect = !0, this.rangeList.detach(this.session)), S = S || this.ranges[0], S && !S.isEqual(this.getRange()) && this.fromOrientedRange(S);
+          this._signal("removeRange", { ranges: N }), this.rangeCount === 0 && this.inMultiSelectMode && (this.inMultiSelectMode = !1, this._signal("singleSelect"), this.session.$undoSelect = !0, this.rangeList.detach(this.session)), S = S || this.ranges[0], S && !S.isEqual(this.getRange()) && this.fromOrientedRange(S);
         }, this.$initRangeList = function() {
           this.rangeList || (this.rangeList = new p(), this.ranges = [], this.rangeCount = 0);
         }, this.getAllRanges = function() {
           return this.rangeCount ? this.rangeList.ranges.concat() : [this.getRange()];
         }, this.splitIntoLines = function() {
-          for (var C = this.ranges.length ? this.ranges : [this.getRange()], S = [], T = 0; T < C.length; T++) {
-            var k = C[T], M = k.start.row, I = k.end.row;
+          for (var N = this.ranges.length ? this.ranges : [this.getRange()], S = [], T = 0; T < N.length; T++) {
+            var k = N[T], M = k.start.row, I = k.end.row;
             if (M === I)
               S.push(k.clone());
             else {
@@ -32577,27 +32577,27 @@ function Nl() {
           for (var T = S.length; T--; )
             this.addRange(S[T]);
         }, this.joinSelections = function() {
-          var C = this.rangeList.ranges, S = C[C.length - 1], T = g.fromPoints(C[0].start, S.end);
+          var N = this.rangeList.ranges, S = N[N.length - 1], T = g.fromPoints(N[0].start, S.end);
           this.toSingleRange(), this.setSelectionRange(T, S.cursor == S.start);
         }, this.toggleBlockSelection = function() {
           if (this.rangeCount > 1) {
-            var C = this.rangeList.ranges, S = C[C.length - 1], T = g.fromPoints(C[0].start, S.end);
+            var N = this.rangeList.ranges, S = N[N.length - 1], T = g.fromPoints(N[0].start, S.end);
             this.toSingleRange(), this.setSelectionRange(T, S.cursor == S.start);
           } else {
             var k = this.session.documentToScreenPosition(this.cursor), M = this.session.documentToScreenPosition(this.anchor), I = this.rectangularRangeBlock(k, M);
             I.forEach(this.addRange, this);
           }
-        }, this.rectangularRangeBlock = function(C, S, T) {
-          var k = [], M = C.column < S.column;
+        }, this.rectangularRangeBlock = function(N, S, T) {
+          var k = [], M = N.column < S.column;
           if (M)
-            var I = C.column, $ = S.column, B = C.offsetX, D = S.offsetX;
+            var I = N.column, $ = S.column, B = N.offsetX, D = S.offsetX;
           else
-            var I = S.column, $ = C.column, B = S.offsetX, D = C.offsetX;
-          var O = C.row < S.row;
+            var I = S.column, $ = N.column, B = S.offsetX, D = N.offsetX;
+          var O = N.row < S.row;
           if (O)
-            var x = C.row, _ = S.row;
+            var x = N.row, _ = S.row;
           else
-            var x = S.row, _ = C.row;
+            var x = S.row, _ = N.row;
           I < 0 && (I = 0), x < 0 && (x = 0), x == _ && (T = !0);
           for (var L, z = x; z <= _; z++) {
             var H = g.fromPoints(this.session.screenToDocumentPosition(z, I, B), this.session.screenToDocumentPosition(z, $, D));
@@ -32612,9 +32612,9 @@ function Nl() {
             for (var P = k.length - 1; k[P].isEmpty() && P > 0; )
               P--;
             if (P > 0)
-              for (var Q = 0; k[Q].isEmpty(); )
-                Q++;
-            for (var F = P; F >= Q; F--)
+              for (var W = 0; k[W].isEmpty(); )
+                W++;
+            for (var F = P; F >= W; F--)
               k[F].isEmpty() && k.splice(F, 1);
           }
           return k;
@@ -32624,19 +32624,19 @@ function Nl() {
       (function() {
         this.updateSelectionMarkers = function() {
           this.renderer.updateCursor(), this.renderer.updateBackMarkers();
-        }, this.addSelectionMarker = function(C) {
-          C.cursor || (C.cursor = C.end);
+        }, this.addSelectionMarker = function(N) {
+          N.cursor || (N.cursor = N.end);
           var S = this.getSelectionStyle();
-          return C.marker = this.session.addMarker(C, "ace_selection", S), this.session.$selectionMarkers.push(C), this.session.selectionMarkerCount = this.session.$selectionMarkers.length, C;
-        }, this.removeSelectionMarker = function(C) {
-          if (C.marker) {
-            this.session.removeMarker(C.marker);
-            var S = this.session.$selectionMarkers.indexOf(C);
+          return N.marker = this.session.addMarker(N, "ace_selection", S), this.session.$selectionMarkers.push(N), this.session.selectionMarkerCount = this.session.$selectionMarkers.length, N;
+        }, this.removeSelectionMarker = function(N) {
+          if (N.marker) {
+            this.session.removeMarker(N.marker);
+            var S = this.session.$selectionMarkers.indexOf(N);
             S != -1 && this.session.$selectionMarkers.splice(S, 1), this.session.selectionMarkerCount = this.session.$selectionMarkers.length;
           }
-        }, this.removeSelectionMarkers = function(C) {
-          for (var S = this.session.$selectionMarkers, T = C.length; T--; ) {
-            var k = C[T];
+        }, this.removeSelectionMarkers = function(N) {
+          for (var S = this.session.$selectionMarkers, T = N.length; T--; ) {
+            var k = N[T];
             if (k.marker) {
               this.session.removeMarker(k.marker);
               var M = S.indexOf(k);
@@ -32644,30 +32644,30 @@ function Nl() {
             }
           }
           this.session.selectionMarkerCount = S.length;
-        }, this.$onAddRange = function(C) {
-          this.addSelectionMarker(C.range), this.renderer.updateCursor(), this.renderer.updateBackMarkers();
-        }, this.$onRemoveRange = function(C) {
-          this.removeSelectionMarkers(C.ranges), this.renderer.updateCursor(), this.renderer.updateBackMarkers();
-        }, this.$onMultiSelect = function(C) {
+        }, this.$onAddRange = function(N) {
+          this.addSelectionMarker(N.range), this.renderer.updateCursor(), this.renderer.updateBackMarkers();
+        }, this.$onRemoveRange = function(N) {
+          this.removeSelectionMarkers(N.ranges), this.renderer.updateCursor(), this.renderer.updateBackMarkers();
+        }, this.$onMultiSelect = function(N) {
           this.inMultiSelectMode || (this.inMultiSelectMode = !0, this.setStyle("ace_multiselect"), this.keyBinding.addKeyboardHandler(c.keyboardHandler), this.commands.setDefaultHandler("exec", this.$onMultiSelectExec), this.renderer.updateCursor(), this.renderer.updateBackMarkers());
-        }, this.$onSingleSelect = function(C) {
+        }, this.$onSingleSelect = function(N) {
           this.session.multiSelect.inVirtualMode || (this.inMultiSelectMode = !1, this.unsetStyle("ace_multiselect"), this.keyBinding.removeKeyboardHandler(c.keyboardHandler), this.commands.removeDefaultHandler("exec", this.$onMultiSelectExec), this.renderer.updateCursor(), this.renderer.updateBackMarkers(), this._emit("changeSelection"));
-        }, this.$onMultiSelectExec = function(C) {
-          var S = C.command, T = C.editor;
+        }, this.$onMultiSelectExec = function(N) {
+          var S = N.command, T = N.editor;
           if (T.multiSelect) {
             if (S.multiSelectAction)
-              S.multiSelectAction == "forEach" ? k = T.forEachSelection(S, C.args) : S.multiSelectAction == "forEachLine" ? k = T.forEachSelection(S, C.args, !0) : S.multiSelectAction == "single" ? (T.exitMultiSelectMode(), k = S.exec(T, C.args || {})) : k = S.multiSelectAction(T, C.args || {});
+              S.multiSelectAction == "forEach" ? k = T.forEachSelection(S, N.args) : S.multiSelectAction == "forEachLine" ? k = T.forEachSelection(S, N.args, !0) : S.multiSelectAction == "single" ? (T.exitMultiSelectMode(), k = S.exec(T, N.args || {})) : k = S.multiSelectAction(T, N.args || {});
             else {
-              var k = S.exec(T, C.args || {});
+              var k = S.exec(T, N.args || {});
               T.multiSelect.addRange(T.multiSelect.toOrientedRange()), T.multiSelect.mergeOverlappingRanges();
             }
             return k;
           }
-        }, this.forEachSelection = function(C, S, T) {
+        }, this.forEachSelection = function(N, S, T) {
           if (!this.inVirtualSelectionMode) {
             var k = T && T.keepOrder, M = T == !0 || T && T.$byLines, I = this.session, $ = this.selection, B = $.rangeList, D = (k ? $ : B).ranges, O;
             if (!D.length)
-              return C.exec ? C.exec(this, S || {}) : C(this, S || {});
+              return N.exec ? N.exec(this, S || {}) : N(this, S || {});
             var x = $._eventRegistry;
             $._eventRegistry = {};
             var _ = new E(I);
@@ -32677,7 +32677,7 @@ function Nl() {
                 for (; L > 0 && D[L].start.row == D[L - 1].end.row; )
                   L--;
               _.fromOrientedRange(D[L]), _.index = L, this.selection = I.selection = _;
-              var z = C.exec ? C.exec(this, S || {}) : C(this, S || {});
+              var z = N.exec ? N.exec(this, S || {}) : N(this, S || {});
               !O && z !== void 0 && (O = z), _.toOrientedRange(D[L]);
             }
             _.detach(), this.selection = I.selection = $, this.inVirtualSelectionMode = !1, $._eventRegistry = x, $.mergeOverlappingRanges(), $.ranges[0] && $.fromOrientedRange($.ranges[0]);
@@ -32687,15 +32687,15 @@ function Nl() {
         }, this.exitMultiSelectMode = function() {
           !this.inMultiSelectMode || this.inVirtualSelectionMode || this.multiSelect.toSingleRange();
         }, this.getSelectedText = function() {
-          var C = "";
+          var N = "";
           if (this.inMultiSelectMode && !this.inVirtualSelectionMode) {
             for (var S = this.multiSelect.rangeList.ranges, T = [], k = 0; k < S.length; k++)
               T.push(this.session.getTextRange(S[k]));
             var M = this.session.getDocument().getNewLineCharacter();
-            C = T.join(M), C.length == (T.length - 1) * M.length && (C = "");
-          } else this.selection.isEmpty() || (C = this.session.getTextRange(this.getSelectionRange()));
-          return C;
-        }, this.$checkMultiselectChange = function(C, S) {
+            N = T.join(M), N.length == (T.length - 1) * M.length && (N = "");
+          } else this.selection.isEmpty() || (N = this.session.getTextRange(this.getSelectionRange()));
+          return N;
+        }, this.$checkMultiselectChange = function(N, S) {
           if (this.inMultiSelectMode && !this.inVirtualSelectionMode) {
             var T = this.multiSelect.ranges[0];
             if (this.multiSelect.isEmpty() && S == this.multiSelect.anchor)
@@ -32703,8 +32703,8 @@ function Nl() {
             var k = S == this.multiSelect.anchor ? T.cursor == T.start ? T.end : T.start : T.cursor;
             k.row != S.row || this.session.$clipPositionToDocument(k.row, k.column).column != S.column ? this.multiSelect.toSingleRange(this.multiSelect.toOrientedRange()) : this.multiSelect.mergeOverlappingRanges();
           }
-        }, this.findAll = function(C, S, T) {
-          if (S = S || {}, S.needle = C || S.needle, S.needle == null) {
+        }, this.findAll = function(N, S, T) {
+          if (S = S || {}, S.needle = N || S.needle, S.needle == null) {
             var k = this.selection.isEmpty() ? this.selection.getWordRange() : this.selection.getRange();
             S.needle = this.session.getTextRange(k);
           }
@@ -32717,14 +32717,14 @@ function Nl() {
           for (var $ = M.length; $--; )
             I.addRange(M[$], !0);
           return k && I.rangeList.rangeAtPoint(k.start) && I.addRange(k, !0), M.length;
-        }, this.selectMoreLines = function(C, S) {
+        }, this.selectMoreLines = function(N, S) {
           var T = this.selection.toOrientedRange(), k = T.cursor == T.end, M = this.session.documentToScreenPosition(T.cursor);
           this.selection.$desiredColumn && (M.column = this.selection.$desiredColumn);
-          var I = this.session.screenToDocumentPosition(M.row + C, M.column);
+          var I = this.session.screenToDocumentPosition(M.row + N, M.column);
           if (T.isEmpty())
             var B = I;
           else
-            var $ = this.session.documentToScreenPosition(k ? T.end : T.start), B = this.session.screenToDocumentPosition($.row + C, $.column);
+            var $ = this.session.documentToScreenPosition(k ? T.end : T.start), B = this.session.screenToDocumentPosition($.row + N, $.column);
           if (k) {
             var D = g.fromPoints(I, B);
             D.cursor = D.start;
@@ -32737,7 +32737,7 @@ function Nl() {
           else if (S)
             var O = T.cursor;
           this.selection.addRange(D), O && this.selection.substractPoint(O);
-        }, this.transposeSelections = function(C) {
+        }, this.transposeSelections = function(N) {
           for (var S = this.session, T = S.multiSelect, k = T.ranges, M = k.length; M--; ) {
             var I = k[M];
             if (I.isEmpty()) {
@@ -32750,20 +32750,20 @@ function Nl() {
             var I = k[M];
             B.unshift(S.getTextRange(I));
           }
-          C < 0 ? B.unshift(B.pop()) : B.push(B.shift());
+          N < 0 ? B.unshift(B.pop()) : B.push(B.shift());
           for (var M = k.length; M--; ) {
             var I = k[M], D = I.clone();
             S.replace(I, B[M]), I.start.row = D.start.row, I.start.column = D.start.column;
           }
           T.fromOrientedRange(T.ranges[0]);
-        }, this.selectMore = function(C, S, T) {
+        }, this.selectMore = function(N, S, T) {
           var k = this.session, M = k.multiSelect, I = M.toOrientedRange();
-          if (!(I.isEmpty() && (I = k.getWordRange(I.start.row, I.start.column), I.cursor = C == -1 ? I.start : I.end, this.multiSelect.addRange(I), T))) {
-            var $ = k.getTextRange(I), B = a(k, $, C);
-            B && (B.cursor = C == -1 ? B.start : B.end, this.session.unfold(B), this.multiSelect.addRange(B), this.renderer.scrollCursorIntoView(null, 0.5)), S && this.multiSelect.substractPoint(I.cursor);
+          if (!(I.isEmpty() && (I = k.getWordRange(I.start.row, I.start.column), I.cursor = N == -1 ? I.start : I.end, this.multiSelect.addRange(I), T))) {
+            var $ = k.getTextRange(I), B = a(k, $, N);
+            B && (B.cursor = N == -1 ? B.start : B.end, this.session.unfold(B), this.multiSelect.addRange(B), this.renderer.scrollCursorIntoView(null, 0.5)), S && this.multiSelect.substractPoint(I.cursor);
           }
         }, this.alignCursors = function() {
-          var C = this.session, S = C.multiSelect, T = S.ranges, k = -1, M = T.filter(function(P) {
+          var N = this.session, S = N.multiSelect, T = S.ranges, k = -1, M = T.filter(function(P) {
             if (P.cursor.row == k)
               return !0;
             k = P.cursor.row;
@@ -32789,17 +32789,17 @@ function Nl() {
               S.substractPoint(P.cursor);
             });
             var L = 0, z = 1 / 0, H = T.map(function(P) {
-              var Q = P.cursor, F = C.getLine(Q.row), K = F.substr(Q.column).search(/\S/g);
-              return K == -1 && (K = 0), Q.column > L && (L = Q.column), K < z && (z = K), K;
+              var W = P.cursor, F = N.getLine(W.row), K = F.substr(W.column).search(/\S/g);
+              return K == -1 && (K = 0), W.column > L && (L = W.column), K < z && (z = K), K;
             });
-            T.forEach(function(P, Q) {
-              var F = P.cursor, K = L - F.column, V = H[Q] - z;
-              K > V ? C.insert(F, s.stringRepeat(" ", K - V)) : C.remove(new g(F.row, F.column, F.row, F.column - K + V)), P.start.column = P.end.column = L, P.start.row = P.end.row = F.row, P.cursor = P.end;
+            T.forEach(function(P, W) {
+              var F = P.cursor, K = L - F.column, V = H[W] - z;
+              K > V ? N.insert(F, s.stringRepeat(" ", K - V)) : N.remove(new g(F.row, F.column, F.row, F.column - K + V)), P.start.column = P.end.column = L, P.start.row = P.end.row = F.row, P.cursor = P.end;
             }), S.fromOrientedRange(T[0]), this.renderer.updateCursor(), this.renderer.updateBackMarkers();
           }
-        }, this.$reAlignText = function(C, S) {
+        }, this.$reAlignText = function(N, S) {
           var T = !0, k = !0, M, I, $;
-          return C.map(function(_) {
+          return N.map(function(_) {
             var L = _.match(/(\s*)(.*?)(\s*)([=:].*)/);
             return L ? M == null ? (M = L[1].length, I = L[2].length, $ = L[3].length, L) : (M + I + $ != L[1].length + L[2].length + L[3].length && (k = !1), M != L[1].length && (T = !1), M > L[1].length && (M = L[1].length), I < L[2].length && (I = L[2].length), $ > L[3].length && ($ = L[3].length), L) : [_];
           }).map(S ? D : T ? k ? O : D : x);
@@ -32817,40 +32817,40 @@ function Nl() {
           }
         };
       }).call(b.prototype);
-      function y(C, S) {
-        return C.row == S.row && C.column == S.column;
+      function y(N, S) {
+        return N.row == S.row && N.column == S.column;
       }
-      r.onSessionChange = function(C) {
-        var S = C.session;
+      r.onSessionChange = function(N) {
+        var S = N.session;
         S && !S.multiSelect && (S.$selectionMarkers = [], S.selection.$initRangeList(), S.multiSelect = S.selection), this.multiSelect = S && S.multiSelect;
-        var T = C.oldSession;
+        var T = N.oldSession;
         T && (T.multiSelect.off("addRange", this.$onAddRange), T.multiSelect.off("removeRange", this.$onRemoveRange), T.multiSelect.off("multiSelect", this.$onMultiSelect), T.multiSelect.off("singleSelect", this.$onSingleSelect), T.multiSelect.lead.off("change", this.$checkMultiselectChange), T.multiSelect.anchor.off("change", this.$checkMultiselectChange)), S && (S.multiSelect.on("addRange", this.$onAddRange), S.multiSelect.on("removeRange", this.$onRemoveRange), S.multiSelect.on("multiSelect", this.$onMultiSelect), S.multiSelect.on("singleSelect", this.$onSingleSelect), S.multiSelect.lead.on("change", this.$checkMultiselectChange), S.multiSelect.anchor.on("change", this.$checkMultiselectChange)), S && this.inMultiSelectMode != S.selection.inMultiSelectMode && (S.selection.inMultiSelectMode ? this.$onMultiSelect() : this.$onSingleSelect());
       };
-      function A(C) {
-        C.$multiselectOnSessionChange || (C.$onAddRange = C.$onAddRange.bind(C), C.$onRemoveRange = C.$onRemoveRange.bind(C), C.$onMultiSelect = C.$onMultiSelect.bind(C), C.$onSingleSelect = C.$onSingleSelect.bind(C), C.$multiselectOnSessionChange = r.onSessionChange.bind(C), C.$checkMultiselectChange = C.$checkMultiselectChange.bind(C), C.$multiselectOnSessionChange(C), C.on("changeSession", C.$multiselectOnSessionChange), C.on("mousedown", h), C.commands.addCommands(c.defaultCommands), N(C));
+      function A(N) {
+        N.$multiselectOnSessionChange || (N.$onAddRange = N.$onAddRange.bind(N), N.$onRemoveRange = N.$onRemoveRange.bind(N), N.$onMultiSelect = N.$onMultiSelect.bind(N), N.$onSingleSelect = N.$onSingleSelect.bind(N), N.$multiselectOnSessionChange = r.onSessionChange.bind(N), N.$checkMultiselectChange = N.$checkMultiselectChange.bind(N), N.$multiselectOnSessionChange(N), N.on("changeSession", N.$multiselectOnSessionChange), N.on("mousedown", h), N.commands.addCommands(c.defaultCommands), C(N));
       }
-      function N(C) {
-        if (!C.textInput)
+      function C(N) {
+        if (!N.textInput)
           return;
-        var S = C.textInput.getElement(), T = !1;
+        var S = N.textInput.getElement(), T = !1;
         m.addListener(S, "keydown", function(M) {
           var I = M.keyCode == 18 && !(M.ctrlKey || M.shiftKey || M.metaKey);
-          C.$blockSelectEnabled && I ? T || (C.renderer.setMouseCursor("crosshair"), T = !0) : T && k();
-        }, C), m.addListener(S, "keyup", k, C), m.addListener(S, "blur", k, C);
+          N.$blockSelectEnabled && I ? T || (N.renderer.setMouseCursor("crosshair"), T = !0) : T && k();
+        }, N), m.addListener(S, "keyup", k, N), m.addListener(S, "blur", k, N);
         function k(M) {
-          T && (C.renderer.setMouseCursor(""), T = !1);
+          T && (N.renderer.setMouseCursor(""), T = !1);
         }
       }
       r.MultiSelect = A, i("./config").defineOptions(b.prototype, "editor", {
         enableMultiselect: {
-          set: function(C) {
-            A(this), C ? this.on("mousedown", h) : this.off("mousedown", h);
+          set: function(N) {
+            A(this), N ? this.on("mousedown", h) : this.off("mousedown", h);
           },
           value: !0
         },
         enableBlockSelect: {
-          set: function(C) {
-            this.$blockSelectEnabled = C;
+          set: function(N) {
+            this.$blockSelectEnabled = N;
           },
           value: !0
         }
@@ -32879,8 +32879,8 @@ function Nl() {
               }
             }
             if (b > f) {
-              var N = E.getLine(b).length;
-              return new p(f, d, b, N);
+              var C = E.getLine(b).length;
+              return new p(f, d, b, C);
             }
           }
         }, this.openingBracketBlock = function(E, h, m, s, c) {
@@ -32950,25 +32950,25 @@ function Nl() {
           };
         }
         s.session.unfold(d.row), s.selection.moveToPosition(d);
-        var N = {
+        var C = {
           row: d.row,
           fixedWidth: !0,
           coverGutter: !0,
           el: p.createElement("div"),
           type: "errorMarker"
-        }, C = N.el.appendChild(p.createElement("div")), S = N.el.appendChild(p.createElement("div"));
+        }, N = C.el.appendChild(p.createElement("div")), S = C.el.appendChild(p.createElement("div"));
         S.className = "error_widget_arrow " + y.className;
         var T = s.renderer.$cursorLayer.getPixelPosition(d).left;
-        S.style.left = T + s.renderer.gutterWidth - 5 + "px", N.el.className = "error_widget_wrapper", C.className = "error_widget " + y.className, y.displayText.forEach(function(M, I) {
-          C.appendChild(p.createTextNode(M)), I < y.displayText.length - 1 && C.appendChild(p.createElement("br"));
-        }), C.appendChild(p.createElement("div"));
+        S.style.left = T + s.renderer.gutterWidth - 5 + "px", C.el.className = "error_widget_wrapper", N.className = "error_widget " + y.className, y.displayText.forEach(function(M, I) {
+          N.appendChild(p.createTextNode(M)), I < y.displayText.length - 1 && N.appendChild(p.createElement("br"));
+        }), N.appendChild(p.createElement("div"));
         var k = function(M, I, $) {
           if (I === 0 && ($ === "esc" || $ === "return"))
-            return N.destroy(), { command: "null" };
+            return C.destroy(), { command: "null" };
         };
-        N.destroy = function() {
-          s.$mouseHandler.isMousePressed || (s.keyBinding.removeKeyboardHandler(k), u.widgetManager.removeLineWidget(N), s.off("changeSelection", N.destroy), s.off("changeSession", N.destroy), s.off("mouseup", N.destroy), s.off("change", N.destroy));
-        }, s.keyBinding.addKeyboardHandler(k), s.on("changeSelection", N.destroy), s.on("changeSession", N.destroy), s.on("mouseup", N.destroy), s.on("change", N.destroy), s.session.widgetManager.addLineWidget(N), N.el.onmousedown = s.focus.bind(s), s.renderer.scrollCursorIntoView(null, 0.5, { bottom: N.el.offsetHeight });
+        C.destroy = function() {
+          s.$mouseHandler.isMousePressed || (s.keyBinding.removeKeyboardHandler(k), u.widgetManager.removeLineWidget(C), s.off("changeSelection", C.destroy), s.off("changeSession", C.destroy), s.off("mouseup", C.destroy), s.off("change", C.destroy));
+        }, s.keyBinding.addKeyboardHandler(k), s.on("changeSelection", C.destroy), s.on("changeSession", C.destroy), s.on("mouseup", C.destroy), s.on("change", C.destroy), s.session.widgetManager.addLineWidget(C), C.el.onmousedown = s.focus.bind(s), s.renderer.scrollCursorIntoView(null, 0.5, { bottom: C.el.offsetHeight });
       }, p.importCssString(`
     .error_widget_wrapper {
         background: inherit;
@@ -33019,14 +33019,14 @@ function Nl() {
           var b = u;
           f = b.value, u = p.createElement("pre"), b.parentNode.replaceChild(u, b);
         } else u && (f = u.textContent, u.innerHTML = "");
-        var y = r.createEditSession(f), A = new E(new s(u), y, d), N = {
+        var y = r.createEditSession(f), A = new E(new s(u), y, d), C = {
           document: y,
           editor: A,
           onResize: A.resize.bind(A, null)
         };
-        return b && (N.textarea = b), A.on("destroy", function() {
-          N.editor.container.env = null;
-        }), A.container.env = A.env = N, A;
+        return b && (C.textarea = b), A.on("destroy", function() {
+          C.editor.container.env = null;
+        }), A.container.env = A.env = C, A;
       }, r.createEditSession = function(u, d) {
         var a = new h(u, d);
         return a.setUndoManager(new m()), a;
@@ -33110,8 +33110,8 @@ Al.exports;
 var hS;
 function L_() {
   return hS || (hS = 1, (function(t, e) {
-    var i = 200, r = "__lodash_hash_undefined__", w = 1, p = 2, g = 9007199254740991, E = "[object Arguments]", h = "[object Array]", m = "[object AsyncFunction]", s = "[object Boolean]", c = "[object Date]", u = "[object Error]", d = "[object Function]", a = "[object GeneratorFunction]", f = "[object Map]", b = "[object Number]", y = "[object Null]", A = "[object Object]", N = "[object Promise]", C = "[object Proxy]", S = "[object RegExp]", T = "[object Set]", k = "[object String]", M = "[object Symbol]", I = "[object Undefined]", $ = "[object WeakMap]", B = "[object ArrayBuffer]", D = "[object DataView]", O = "[object Float32Array]", x = "[object Float64Array]", _ = "[object Int8Array]", L = "[object Int16Array]", z = "[object Int32Array]", H = "[object Uint8Array]", P = "[object Uint8ClampedArray]", Q = "[object Uint16Array]", F = "[object Uint32Array]", K = /[\\^$.*+?()[\]{}|]/g, V = /^\[object .+?Constructor\]$/, X = /^(?:0|[1-9]\d*)$/, q = {};
-    q[O] = q[x] = q[_] = q[L] = q[z] = q[H] = q[P] = q[Q] = q[F] = !0, q[E] = q[h] = q[B] = q[s] = q[D] = q[c] = q[u] = q[d] = q[f] = q[b] = q[A] = q[S] = q[T] = q[k] = q[$] = !1;
+    var i = 200, r = "__lodash_hash_undefined__", w = 1, p = 2, g = 9007199254740991, E = "[object Arguments]", h = "[object Array]", m = "[object AsyncFunction]", s = "[object Boolean]", c = "[object Date]", u = "[object Error]", d = "[object Function]", a = "[object GeneratorFunction]", f = "[object Map]", b = "[object Number]", y = "[object Null]", A = "[object Object]", C = "[object Promise]", N = "[object Proxy]", S = "[object RegExp]", T = "[object Set]", k = "[object String]", M = "[object Symbol]", I = "[object Undefined]", $ = "[object WeakMap]", B = "[object ArrayBuffer]", D = "[object DataView]", O = "[object Float32Array]", x = "[object Float64Array]", _ = "[object Int8Array]", L = "[object Int16Array]", z = "[object Int32Array]", H = "[object Uint8Array]", P = "[object Uint8ClampedArray]", W = "[object Uint16Array]", F = "[object Uint32Array]", K = /[\\^$.*+?()[\]{}|]/g, V = /^\[object .+?Constructor\]$/, X = /^(?:0|[1-9]\d*)$/, q = {};
+    q[O] = q[x] = q[_] = q[L] = q[z] = q[H] = q[P] = q[W] = q[F] = !0, q[E] = q[h] = q[B] = q[s] = q[D] = q[c] = q[u] = q[d] = q[f] = q[b] = q[A] = q[S] = q[T] = q[k] = q[$] = !1;
     var Z = typeof di == "object" && di && di.Object === Object && di, ne = typeof self == "object" && self && self.Object === Object && self, ae = Z || ne || Function("return this")(), le = e && !e.nodeType && e, me = le && !0 && t && !t.nodeType && t, Se = me && me.exports === le, Ne = Se && Z.process, Me = (function() {
       try {
         return Ne && Ne.binding && Ne.binding("util");
@@ -33495,7 +33495,7 @@ function L_() {
         return pe.call(J, re);
       }));
     } : ya, zo = Nr;
-    (mn && zo(new mn(new ArrayBuffer(1))) != D || pn && zo(new pn()) != f || xt && zo(xt.resolve()) != N || yo && zo(new yo()) != T || Fi && zo(new Fi()) != $) && (zo = function(J) {
+    (mn && zo(new mn(new ArrayBuffer(1))) != D || pn && zo(new pn()) != f || xt && zo(xt.resolve()) != C || yo && zo(new yo()) != T || Fi && zo(new Fi()) != $) && (zo = function(J) {
       var re = Nr(J), we = re == A ? J.constructor : void 0, xe = we ? Fo(we) : "";
       if (xe)
         switch (xe) {
@@ -33504,7 +33504,7 @@ function L_() {
           case da:
             return f;
           case Lr:
-            return N;
+            return C;
           case ha:
             return T;
           case In:
@@ -33561,7 +33561,7 @@ function L_() {
       if (!wa(J))
         return !1;
       var re = Nr(J);
-      return re == d || re == a || re == m || re == C;
+      return re == d || re == a || re == m || re == N;
     }
     function Ao(J) {
       return typeof J == "number" && J > -1 && J % 1 == 0 && J <= g;
@@ -33680,17 +33680,17 @@ function pM() {
         }
         return !1;
       }, s.prototype.componentDidMount = function() {
-        var c = this, u = this.props, d = u.className, a = u.onBeforeLoad, f = u.onValidate, b = u.mode, y = u.focus, A = u.theme, N = u.fontSize, C = u.lineHeight, S = u.value, T = u.defaultValue, k = u.showGutter, M = u.wrapEnabled, I = u.showPrintMargin, $ = u.scrollMargin, B = $ === void 0 ? [0, 0, 0, 0] : $, D = u.keyboardHandler, O = u.onLoad, x = u.commands, _ = u.annotations, L = u.markers, z = u.placeholder;
+        var c = this, u = this.props, d = u.className, a = u.onBeforeLoad, f = u.onValidate, b = u.mode, y = u.focus, A = u.theme, C = u.fontSize, N = u.lineHeight, S = u.value, T = u.defaultValue, k = u.showGutter, M = u.wrapEnabled, I = u.showPrintMargin, $ = u.scrollMargin, B = $ === void 0 ? [0, 0, 0, 0] : $, D = u.keyboardHandler, O = u.onLoad, x = u.commands, _ = u.annotations, L = u.markers, z = u.placeholder;
         this.editor = E.edit(this.refEditor), a && a(E);
         for (var H = Object.keys(this.props.editorProps), P = 0; P < H.length; P++)
           this.editor[H[P]] = this.props.editorProps[H[P]];
-        this.props.debounceChangePeriod && (this.onChange = this.debounce(this.onChange, this.props.debounceChangePeriod)), this.editor.renderer.setScrollMargin(B[0], B[1], B[2], B[3]), this.isInShadow(this.refEditor) && this.editor.renderer.attachToShadowRoot(), this.editor.getSession().setMode(typeof b == "string" ? "ace/mode/".concat(b) : b), A && A !== "" && this.editor.setTheme("ace/theme/".concat(A)), this.editor.setFontSize(typeof N == "number" ? "".concat(N, "px") : N), C && (this.editor.container.style.lineHeight = typeof C == "number" ? "".concat(C, "px") : "".concat(C), this.editor.renderer.updateFontSize()), this.editor.getSession().setValue(T || S || ""), this.props.navigateToFileEnd && this.editor.navigateFileEnd(), this.editor.renderer.setShowGutter(k), this.editor.getSession().setUseWrapMode(M), this.editor.setShowPrintMargin(I), this.editor.on("focus", this.onFocus), this.editor.on("blur", this.onBlur), this.editor.on("copy", this.onCopy), this.editor.on("paste", this.onPaste), this.editor.on("change", this.onChange), this.editor.on("input", this.onInput), z && this.updatePlaceholder(), this.editor.getSession().selection.on("changeSelection", this.onSelectionChange), this.editor.getSession().selection.on("changeCursor", this.onCursorChange), f && this.editor.getSession().on("changeAnnotation", function() {
+        this.props.debounceChangePeriod && (this.onChange = this.debounce(this.onChange, this.props.debounceChangePeriod)), this.editor.renderer.setScrollMargin(B[0], B[1], B[2], B[3]), this.isInShadow(this.refEditor) && this.editor.renderer.attachToShadowRoot(), this.editor.getSession().setMode(typeof b == "string" ? "ace/mode/".concat(b) : b), A && A !== "" && this.editor.setTheme("ace/theme/".concat(A)), this.editor.setFontSize(typeof C == "number" ? "".concat(C, "px") : C), N && (this.editor.container.style.lineHeight = typeof N == "number" ? "".concat(N, "px") : "".concat(N), this.editor.renderer.updateFontSize()), this.editor.getSession().setValue(T || S || ""), this.props.navigateToFileEnd && this.editor.navigateFileEnd(), this.editor.renderer.setShowGutter(k), this.editor.getSession().setUseWrapMode(M), this.editor.setShowPrintMargin(I), this.editor.on("focus", this.onFocus), this.editor.on("blur", this.onBlur), this.editor.on("copy", this.onCopy), this.editor.on("paste", this.onPaste), this.editor.on("change", this.onChange), this.editor.on("input", this.onInput), z && this.updatePlaceholder(), this.editor.getSession().selection.on("changeSelection", this.onSelectionChange), this.editor.getSession().selection.on("changeCursor", this.onCursorChange), f && this.editor.getSession().on("changeAnnotation", function() {
           var F = c.editor.getSession().getAnnotations();
           c.props.onValidate(F);
         }), this.editor.session.on("changeScrollTop", this.onScroll), this.editor.getSession().setAnnotations(_ || []), L && L.length > 0 && this.handleMarkers(L);
-        var Q = this.editor.$options;
+        var W = this.editor.$options;
         g.editorOptions.forEach(function(F) {
-          Q.hasOwnProperty(F) ? c.editor.setOption(F, c.props[F]) : c.props[F] && console.warn("ReactAce: editor option ".concat(F, " was activated but not found. Did you need to import a related tool or did you possibly mispell the option?"));
+          W.hasOwnProperty(F) ? c.editor.setOption(F, c.props[F]) : c.props[F] && console.warn("ReactAce: editor option ".concat(F, " was activated but not found. Did you need to import a related tool or did you possibly mispell the option?"));
         }), this.handleOptions(this.props), Array.isArray(x) && x.forEach(function(F) {
           typeof F.exec == "string" ? c.editor.commands.bindKey(F.bindKey, F.exec) : c.editor.commands.addCommand(F);
         }), D && this.editor.setKeyboardHandler("ace/keyboard/" + D), d && (this.refEditor.className += " " + d), O && O(this.editor), this.editor.resize(), y && this.editor.focus();
@@ -33706,13 +33706,13 @@ function pM() {
             y.splice(T, 1);
           }), this.refEditor.className = " " + d.className + " " + y.join(" ");
         }
-        var N = this.editor && d.value != null && this.editor.getValue() !== d.value;
-        if (N) {
+        var C = this.editor && d.value != null && this.editor.getValue() !== d.value;
+        if (C) {
           this.silent = !0;
-          var C = this.editor.session.selection.toJSON();
-          this.editor.setValue(d.value, d.cursorStart), this.editor.session.selection.fromJSON(C), this.silent = !1;
+          var N = this.editor.session.selection.toJSON();
+          this.editor.setValue(d.value, d.cursorStart), this.editor.session.selection.fromJSON(N), this.silent = !1;
         }
-        d.placeholder !== u.placeholder && this.updatePlaceholder(), d.mode !== u.mode && this.editor.getSession().setMode(typeof d.mode == "string" ? "ace/mode/".concat(d.mode) : d.mode), d.theme !== u.theme && this.editor.setTheme("ace/theme/" + d.theme), d.keyboardHandler !== u.keyboardHandler && (d.keyboardHandler ? this.editor.setKeyboardHandler("ace/keyboard/" + d.keyboardHandler) : this.editor.setKeyboardHandler(null)), d.fontSize !== u.fontSize && this.editor.setFontSize(typeof d.fontSize == "number" ? "".concat(d.fontSize, "px") : d.fontSize), d.lineHeight !== u.lineHeight && (this.editor.container.style.lineHeight = typeof d.lineHeight == "number" ? "".concat(d.lineHeight, "px") : d.lineHeight, this.editor.renderer.updateFontSize()), d.wrapEnabled !== u.wrapEnabled && this.editor.getSession().setUseWrapMode(d.wrapEnabled), d.showPrintMargin !== u.showPrintMargin && this.editor.setShowPrintMargin(d.showPrintMargin), d.showGutter !== u.showGutter && this.editor.renderer.setShowGutter(d.showGutter), p(d.setOptions, u.setOptions) || this.handleOptions(d), (N || !p(d.annotations, u.annotations)) && this.editor.getSession().setAnnotations(d.annotations || []), !p(d.markers, u.markers) && Array.isArray(d.markers) && this.handleMarkers(d.markers), p(d.scrollMargin, u.scrollMargin) || this.handleScrollMargins(d.scrollMargin), (c.height !== this.props.height || c.width !== this.props.width) && this.editor.resize(), this.props.focus && !c.focus && this.editor.focus();
+        d.placeholder !== u.placeholder && this.updatePlaceholder(), d.mode !== u.mode && this.editor.getSession().setMode(typeof d.mode == "string" ? "ace/mode/".concat(d.mode) : d.mode), d.theme !== u.theme && this.editor.setTheme("ace/theme/" + d.theme), d.keyboardHandler !== u.keyboardHandler && (d.keyboardHandler ? this.editor.setKeyboardHandler("ace/keyboard/" + d.keyboardHandler) : this.editor.setKeyboardHandler(null)), d.fontSize !== u.fontSize && this.editor.setFontSize(typeof d.fontSize == "number" ? "".concat(d.fontSize, "px") : d.fontSize), d.lineHeight !== u.lineHeight && (this.editor.container.style.lineHeight = typeof d.lineHeight == "number" ? "".concat(d.lineHeight, "px") : d.lineHeight, this.editor.renderer.updateFontSize()), d.wrapEnabled !== u.wrapEnabled && this.editor.getSession().setUseWrapMode(d.wrapEnabled), d.showPrintMargin !== u.showPrintMargin && this.editor.setShowPrintMargin(d.showPrintMargin), d.showGutter !== u.showGutter && this.editor.renderer.setShowGutter(d.showGutter), p(d.setOptions, u.setOptions) || this.handleOptions(d), (C || !p(d.annotations, u.annotations)) && this.editor.getSession().setAnnotations(d.annotations || []), !p(d.markers, u.markers) && Array.isArray(d.markers) && this.handleMarkers(d.markers), p(d.scrollMargin, u.scrollMargin) || this.handleScrollMargins(d.scrollMargin), (c.height !== this.props.height || c.width !== this.props.width) && this.editor.resize(), this.props.focus && !c.focus && this.editor.focus();
       }, s.prototype.handleScrollMargins = function(c) {
         c === void 0 && (c = [0, 0, 0, 0]), this.editor.renderer.setScrollMargin(c[0], c[1], c[2], c[3]);
       }, s.prototype.componentWillUnmount = function() {
@@ -33757,8 +33757,8 @@ function pM() {
         for (var a in d)
           d.hasOwnProperty(a) && d[a].clazz !== "ace_active-line" && d[a].clazz !== "ace_selected-word" && this.editor.getSession().removeMarker(d[a].id);
         c.forEach(function(f) {
-          var b = f.startRow, y = f.startCol, A = f.endRow, N = f.endCol, C = f.className, S = f.type, T = f.inFront, k = T === void 0 ? !1 : T, M = new i.Range(b, y, A, N);
-          u.editor.getSession().addMarker(M, C, S, k);
+          var b = f.startRow, y = f.startCol, A = f.endRow, C = f.endCol, N = f.className, S = f.type, T = f.inFront, k = T === void 0 ? !1 : T, M = new i.Range(b, y, A, C);
+          u.editor.getSession().addMarker(M, N, S, k);
         });
       }, s.prototype.updatePlaceholder = function() {
         var c = this.editor, u = this.props.placeholder, d = !c.session.getValue().length, a = c.renderer.placeholderNode;
@@ -33964,10 +33964,10 @@ function bM() {
       }
     return pe;
   }
-  var y = Array.prototype, A = Function.prototype, N = Object.prototype, C = a["__core-js_shared__"], S = (function() {
-    var ee = /[^.]+$/.exec(C && C.keys && C.keys.IE_PROTO || "");
+  var y = Array.prototype, A = Function.prototype, C = Object.prototype, N = a["__core-js_shared__"], S = (function() {
+    var ee = /[^.]+$/.exec(N && N.keys && N.keys.IE_PROTO || "");
     return ee ? "Symbol(src)_1." + ee : "";
-  })(), T = A.toString, k = N.hasOwnProperty, M = N.toString, I = RegExp(
+  })(), T = A.toString, k = C.hasOwnProperty, M = C.toString, I = RegExp(
     "^" + T.call(k).replace(m, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"
   ), $ = a.Symbol, B = y.splice, D = Et(a, "Map"), O = Et(Object, "create"), x = $ ? $.prototype : void 0, _ = x ? x.toString : void 0;
   function L(ee) {
@@ -33991,7 +33991,7 @@ function bM() {
     }
     return k.call(pe, ee) ? pe[ee] : void 0;
   }
-  function Q(ee) {
+  function W(ee) {
     var pe = this.__data__;
     return O ? pe[ee] !== void 0 : k.call(pe, ee);
   }
@@ -33999,7 +33999,7 @@ function bM() {
     var Re = this.__data__;
     return Re[ee] = O && pe === void 0 ? e : pe, this;
   }
-  L.prototype.clear = z, L.prototype.delete = H, L.prototype.get = P, L.prototype.has = Q, L.prototype.set = F;
+  L.prototype.clear = z, L.prototype.delete = H, L.prototype.get = P, L.prototype.has = W, L.prototype.set = F;
   function K(ee) {
     var pe = -1, Re = ee ? ee.length : 0;
     for (this.clear(); ++pe < Re; ) {
@@ -34221,16 +34221,16 @@ function N_() {
         }
         return !1;
       }, u.prototype.componentDidMount = function() {
-        var d = this, a = this.props, f = a.className, b = a.onBeforeLoad, y = a.mode, A = a.focus, N = a.theme, C = a.fontSize, S = a.value, T = a.defaultValue, k = a.cursorStart, M = a.showGutter, I = a.wrapEnabled, $ = a.showPrintMargin, B = a.scrollMargin, D = B === void 0 ? [0, 0, 0, 0] : B, O = a.keyboardHandler, x = a.onLoad, _ = a.commands, L = a.annotations, z = a.markers, H = a.splits;
-        this.editor = r.edit(this.refEditor), this.isInShadow(this.refEditor) && this.editor.renderer.attachToShadowRoot(), this.editor.setTheme("ace/theme/".concat(N)), b && b(r);
-        var P = Object.keys(this.props.editorProps), Q = new p.Split(this.editor.container, "ace/theme/".concat(N), H);
-        this.editor.env.split = Q, this.splitEditor = Q.getEditor(0), this.split = Q, this.editor.setShowPrintMargin(!1), this.editor.renderer.setShowGutter(!1);
+        var d = this, a = this.props, f = a.className, b = a.onBeforeLoad, y = a.mode, A = a.focus, C = a.theme, N = a.fontSize, S = a.value, T = a.defaultValue, k = a.cursorStart, M = a.showGutter, I = a.wrapEnabled, $ = a.showPrintMargin, B = a.scrollMargin, D = B === void 0 ? [0, 0, 0, 0] : B, O = a.keyboardHandler, x = a.onLoad, _ = a.commands, L = a.annotations, z = a.markers, H = a.splits;
+        this.editor = r.edit(this.refEditor), this.isInShadow(this.refEditor) && this.editor.renderer.attachToShadowRoot(), this.editor.setTheme("ace/theme/".concat(C)), b && b(r);
+        var P = Object.keys(this.props.editorProps), W = new p.Split(this.editor.container, "ace/theme/".concat(C), H);
+        this.editor.env.split = W, this.splitEditor = W.getEditor(0), this.split = W, this.editor.setShowPrintMargin(!1), this.editor.renderer.setShowGutter(!1);
         var F = this.splitEditor.$options;
-        this.props.debounceChangePeriod && (this.onChange = this.debounce(this.onChange, this.props.debounceChangePeriod)), Q.forEach(function(V, X) {
+        this.props.debounceChangePeriod && (this.onChange = this.debounce(this.onChange, this.props.debounceChangePeriod)), W.forEach(function(V, X) {
           for (var q = 0; q < P.length; q++)
             V[P[q]] = d.props.editorProps[P[q]];
           var Z = m(T, X), ne = m(S, X, "");
-          V.session.setUndoManager(new r.UndoManager()), V.setTheme("ace/theme/".concat(N)), V.renderer.setScrollMargin(D[0], D[1], D[2], D[3]), V.getSession().setMode("ace/mode/".concat(y)), V.setFontSize(C), V.renderer.setShowGutter(M), V.getSession().setUseWrapMode(I), V.setShowPrintMargin($), V.on("focus", d.onFocus), V.on("blur", d.onBlur), V.on("input", d.onInput), V.on("copy", d.onCopy), V.on("paste", d.onPaste), V.on("change", d.onChange), V.getSession().selection.on("changeSelection", d.onSelectionChange), V.getSession().selection.on("changeCursor", d.onCursorChange), V.session.on("changeScrollTop", d.onScroll), V.setValue(Z === void 0 ? ne : Z, k);
+          V.session.setUndoManager(new r.UndoManager()), V.setTheme("ace/theme/".concat(C)), V.renderer.setScrollMargin(D[0], D[1], D[2], D[3]), V.getSession().setMode("ace/mode/".concat(y)), V.setFontSize(N), V.renderer.setShowGutter(M), V.getSession().setUseWrapMode(I), V.setShowPrintMargin($), V.on("focus", d.onFocus), V.on("blur", d.onBlur), V.on("input", d.onInput), V.on("copy", d.onCopy), V.on("paste", d.onPaste), V.on("change", d.onChange), V.getSession().selection.on("changeSelection", d.onSelectionChange), V.getSession().selection.on("changeCursor", d.onCursorChange), V.session.on("changeScrollTop", d.onScroll), V.setValue(Z === void 0 ? ne : Z, k);
           var ae = m(L, X, []), le = m(z, X, []);
           V.getSession().setAnnotations(ae), le && le.length > 0 && d.handleMarkers(le, V);
           for (var q = 0; q < i.editorOptions.length; q++) {
@@ -34263,11 +34263,11 @@ function N_() {
           var O = m(b.markers, T, []), x = m(f.markers, T, []);
           !h(O, x) && Array.isArray(O) && a.handleMarkers(O, S);
         }), b.className !== f.className) {
-          var A = this.refEditor.className, N = A.trim().split(" "), C = f.className.trim().split(" ");
-          C.forEach(function(S) {
-            var T = N.indexOf(S);
-            N.splice(T, 1);
-          }), this.refEditor.className = " " + b.className + " " + N.join(" ");
+          var A = this.refEditor.className, C = A.trim().split(" "), N = f.className.trim().split(" ");
+          N.forEach(function(S) {
+            var T = C.indexOf(S);
+            C.splice(T, 1);
+          }), this.refEditor.className = " " + b.className + " " + C.join(" ");
         }
         b.theme !== f.theme && y.setTheme("ace/theme/" + b.theme), b.focus && !f.focus && this.splitEditor.focus(), (b.height !== this.props.height || b.width !== this.props.width) && this.editor.resize();
       }, u.prototype.componentWillUnmount = function() {
@@ -34316,7 +34316,7 @@ function N_() {
         for (var b in f)
           f.hasOwnProperty(b) && a.getSession().removeMarker(f[b].id);
         d.forEach(function(y) {
-          var A = y.startRow, N = y.startCol, C = y.endRow, S = y.endCol, T = y.className, k = y.type, M = y.inFront, I = M === void 0 ? !1 : M, $ = new w.Range(A, N, C, S);
+          var A = y.startRow, C = y.startCol, N = y.endRow, S = y.endCol, T = y.className, k = y.type, M = y.inFront, I = M === void 0 ? !1 : M, $ = new w.Range(A, C, N, S);
           a.getSession().addMarker($, T, k, I);
         });
       }, u.prototype.updateRef = function(d) {
@@ -34454,10 +34454,10 @@ function vM() {
         ];
       var d = this.diff_halfMatch_(p, g);
       if (d) {
-        var a = d[0], f = d[1], b = d[2], y = d[3], A = d[4], N = this.diff_main(a, b, E, h), C = this.diff_main(f, y, E, h);
-        return N.concat(
+        var a = d[0], f = d[1], b = d[2], y = d[3], A = d[4], C = this.diff_main(a, b, E, h), N = this.diff_main(f, y, E, h);
+        return C.concat(
           [new e.Diff(w, A)],
-          C
+          N
         );
       }
       return E && p.length > 100 && g.length > 100 ? this.diff_lineMode_(p, g, h) : this.diff_bisect_(p, g, h);
@@ -34494,14 +34494,14 @@ function vM() {
       for (var h = p.length, m = g.length, s = Math.ceil((h + m) / 2), c = s, u = 2 * s, d = new Array(u), a = new Array(u), f = 0; f < u; f++)
         d[f] = -1, a[f] = -1;
       d[c + 1] = 0, a[c + 1] = 0;
-      for (var b = h - m, y = b % 2 != 0, A = 0, N = 0, C = 0, S = 0, T = 0; T < s && !((/* @__PURE__ */ new Date()).getTime() > E); T++) {
-        for (var k = -T + A; k <= T - N; k += 2) {
+      for (var b = h - m, y = b % 2 != 0, A = 0, C = 0, N = 0, S = 0, T = 0; T < s && !((/* @__PURE__ */ new Date()).getTime() > E); T++) {
+        for (var k = -T + A; k <= T - C; k += 2) {
           var M = c + k, I;
           k == -T || k != T && d[M - 1] < d[M + 1] ? I = d[M + 1] : I = d[M - 1] + 1;
           for (var $ = I - k; I < h && $ < m && p.charAt(I) == g.charAt($); )
             I++, $++;
           if (d[M] = I, I > h)
-            N += 2;
+            C += 2;
           else if ($ > m)
             A += 2;
           else if (y) {
@@ -34513,7 +34513,7 @@ function vM() {
             }
           }
         }
-        for (var O = -T + C; O <= T - S; O += 2) {
+        for (var O = -T + N; O <= T - S; O += 2) {
           var B = c + O, D;
           O == -T || O != T && a[B - 1] < a[B + 1] ? D = a[B + 1] : D = a[B - 1] + 1;
           for (var x = D - O; D < h && x < m && p.charAt(h - D - 1) == g.charAt(m - x - 1); )
@@ -34521,7 +34521,7 @@ function vM() {
           if (a[B] = D, D > h)
             S += 2;
           else if (x > m)
-            C += 2;
+            N += 2;
           else if (!y) {
             var M = c + b - O;
             if (M >= 0 && M < u && d[M] != -1) {
@@ -34594,18 +34594,18 @@ function vM() {
       if (E.length < 4 || h.length * 2 < E.length)
         return null;
       var m = this;
-      function s(N, C, S) {
-        for (var T = N.substring(S, S + Math.floor(N.length / 4)), k = -1, M = "", I, $, B, D; (k = C.indexOf(T, k + 1)) != -1; ) {
+      function s(C, N, S) {
+        for (var T = C.substring(S, S + Math.floor(C.length / 4)), k = -1, M = "", I, $, B, D; (k = N.indexOf(T, k + 1)) != -1; ) {
           var O = m.diff_commonPrefix(
-            N.substring(S),
-            C.substring(k)
+            C.substring(S),
+            N.substring(k)
           ), x = m.diff_commonSuffix(
-            N.substring(0, S),
-            C.substring(0, k)
+            C.substring(0, S),
+            N.substring(0, k)
           );
-          M.length < x + O && (M = C.substring(k - x, k) + C.substring(k, k + O), I = N.substring(0, S - x), $ = N.substring(S + O), B = C.substring(0, k - x), D = C.substring(k + O));
+          M.length < x + O && (M = N.substring(k - x, k) + N.substring(k, k + O), I = C.substring(0, S - x), $ = C.substring(S + O), B = N.substring(0, k - x), D = N.substring(k + O));
         }
-        return M.length * 2 >= N.length ? [
+        return M.length * 2 >= C.length ? [
           I,
           $,
           B,
@@ -34653,10 +34653,10 @@ function vM() {
         s++;
       }
     }, e.prototype.diff_cleanupSemanticLossless = function(p) {
-      function g(A, N) {
-        if (!A || !N)
+      function g(A, C) {
+        if (!A || !C)
           return 6;
-        var C = A.charAt(A.length - 1), S = N.charAt(0), T = C.match(e.nonAlphaNumericRegex_), k = S.match(e.nonAlphaNumericRegex_), M = T && C.match(e.whitespaceRegex_), I = k && S.match(e.whitespaceRegex_), $ = M && C.match(e.linebreakRegex_), B = I && S.match(e.linebreakRegex_), D = $ && A.match(e.blanklineEndRegex_), O = B && N.match(e.blanklineStartRegex_);
+        var N = A.charAt(A.length - 1), S = C.charAt(0), T = N.match(e.nonAlphaNumericRegex_), k = S.match(e.nonAlphaNumericRegex_), M = T && N.match(e.whitespaceRegex_), I = k && S.match(e.whitespaceRegex_), $ = M && N.match(e.linebreakRegex_), B = I && S.match(e.linebreakRegex_), D = $ && A.match(e.blanklineEndRegex_), O = B && C.match(e.blanklineStartRegex_);
         return D || O ? 5 : $ || B ? 4 : T && !M && I ? 3 : M || I ? 2 : T || k ? 1 : 0;
       }
       for (var E = 1; E < p.length - 1; ) {
@@ -34820,15 +34820,15 @@ function vM() {
         for (a = 0, f = b; a < f; )
           s(A, E + f) <= c ? a = f : b = f, f = Math.floor((b - a) / 2 + a);
         b = f;
-        var N = Math.max(1, E - f + 1), C = Math.min(E + f, p.length) + g.length, S = Array(C + 2);
-        S[C + 1] = (1 << A) - 1;
-        for (var T = C; T >= N; T--) {
+        var C = Math.max(1, E - f + 1), N = Math.min(E + f, p.length) + g.length, S = Array(N + 2);
+        S[N + 1] = (1 << A) - 1;
+        for (var T = N; T >= C; T--) {
           var k = h[p.charAt(T - 1)];
           if (A === 0 ? S[T] = (S[T + 1] << 1 | 1) & k : S[T] = (S[T + 1] << 1 | 1) & k | ((y[T + 1] | y[T]) << 1 | 1) | y[T + 1], S[T] & d) {
             var M = s(A, T - 1);
             if (M <= c)
               if (c = M, u = T - 1, u > E)
-                N = Math.max(1, 2 * E - u);
+                C = Math.max(1, 2 * E - u);
               else
                 break;
           }
@@ -34888,19 +34888,19 @@ function vM() {
       if (m.length === 0)
         return [];
       for (var s = [], c = new e.patch_obj(), u = 0, d = 0, a = 0, f = h, b = h, y = 0; y < m.length; y++) {
-        var A = m[y][0], N = m[y][1];
+        var A = m[y][0], C = m[y][1];
         switch (!u && A !== w && (c.start1 = d, c.start2 = a), A) {
           case r:
-            c.diffs[u++] = m[y], c.length2 += N.length, b = b.substring(0, a) + N + b.substring(a);
+            c.diffs[u++] = m[y], c.length2 += C.length, b = b.substring(0, a) + C + b.substring(a);
             break;
           case i:
-            c.length1 += N.length, c.diffs[u++] = m[y], b = b.substring(0, a) + b.substring(a + N.length);
+            c.length1 += C.length, c.diffs[u++] = m[y], b = b.substring(0, a) + b.substring(a + C.length);
             break;
           case w:
-            N.length <= 2 * this.Patch_Margin && u && m.length != y + 1 ? (c.diffs[u++] = m[y], c.length1 += N.length, c.length2 += N.length) : N.length >= 2 * this.Patch_Margin && u && (this.patch_addContext_(c, f), s.push(c), c = new e.patch_obj(), u = 0, f = b, d = a);
+            C.length <= 2 * this.Patch_Margin && u && m.length != y + 1 ? (c.diffs[u++] = m[y], c.length1 += C.length, c.length2 += C.length) : C.length >= 2 * this.Patch_Margin && u && (this.patch_addContext_(c, f), s.push(c), c = new e.patch_obj(), u = 0, f = b, d = a);
             break;
         }
-        A !== r && (d += N.length), A !== i && (a += N.length);
+        A !== r && (d += C.length), A !== i && (a += C.length);
       }
       return u && (this.patch_addContext_(c, f), s.push(c)), s;
     }, e.prototype.patch_deepCopy = function(p) {
@@ -34941,12 +34941,12 @@ function vM() {
               m[s] = !1;
             else {
               this.diff_cleanupSemanticLossless(b);
-              for (var y = 0, A, N = 0; N < p[s].diffs.length; N++) {
-                var C = p[s].diffs[N];
-                C[0] !== w && (A = this.diff_xIndex(b, y)), C[0] === r ? g = g.substring(0, d + A) + C[1] + g.substring(d + A) : C[0] === i && (g = g.substring(0, d + A) + g.substring(d + this.diff_xIndex(
+              for (var y = 0, A, C = 0; C < p[s].diffs.length; C++) {
+                var N = p[s].diffs[C];
+                N[0] !== w && (A = this.diff_xIndex(b, y)), N[0] === r ? g = g.substring(0, d + A) + N[1] + g.substring(d + A) : N[0] === i && (g = g.substring(0, d + A) + g.substring(d + this.diff_xIndex(
                   b,
-                  y + C[1].length
-                ))), C[0] !== i && (y += C[1].length);
+                  y + N[1].length
+                ))), N[0] !== i && (y += N[1].length);
               }
             }
           }
@@ -35283,11 +35283,11 @@ function AM() {
       }
       var E = i("../lib/oop"), h = i("./jsdoc_comment_highlight_rules").JsDocCommentHighlightRules, m = i("./text_highlight_rules").TextHighlightRules, s = "[a-zA-Z\\$_¡-￿][a-zA-Z\\d\\$_¡-￿]*", c = function(u) {
         var d = { "variable.language": "Array|Boolean|Date|Function|Iterator|Number|Object|RegExp|String|Proxy|Symbol|Namespace|QName|XML|XMLList|ArrayBuffer|Float32Array|Float64Array|Int16Array|Int32Array|Int8Array|Uint16Array|Uint32Array|Uint8Array|Uint8ClampedArray|Error|EvalError|InternalError|RangeError|ReferenceError|StopIteration|SyntaxError|TypeError|URIError|decodeURI|decodeURIComponent|encodeURI|encodeURIComponent|eval|isFinite|isNaN|parseFloat|parseInt|JSON|Math|this|arguments|prototype|window|document", keyword: "const|yield|import|get|set|async|await|break|case|catch|continue|default|delete|do|else|finally|for|if|in|of|instanceof|new|return|switch|throw|try|typeof|let|var|while|with|debugger|__parent__|__count__|escape|unescape|with|__proto__|class|enum|extends|super|export|implements|private|public|interface|package|protected|static|constructor", "storage.type": "const|let|var|function", "constant.language": "null|Infinity|NaN|undefined", "support.function": "alert", "constant.language.boolean": "true|false" }, a = this.createKeywordMapper(d, "identifier"), f = "case|do|else|finally|in|instanceof|return|throw|try|typeof|yield|void", b = "\\\\(?:x[0-9a-fA-F]{2}|u[0-9a-fA-F]{4}|u{[0-9a-fA-F]{1,6}}|[0-2][0-7]{0,2}|3[0-7][0-7]?|[4-7][0-7]?|.)", y = "(function)(\\s*)(\\*?)", A = { token: ["identifier", "text", "paren.lparen"], regex: "(\\b(?!" + Object.values(d).join("|") + "\\b)" + s + ")(\\s*)(\\()" };
-        this.$rules = { no_regex: [h.getStartRule("doc-start"), g("no_regex"), A, { token: "string", regex: "'(?=.)", next: "qstring" }, { token: "string", regex: '"(?=.)', next: "qqstring" }, { token: "constant.numeric", regex: /0(?:[xX][0-9a-fA-F]+|[oO][0-7]+|[bB][01]+)\b/ }, { token: "constant.numeric", regex: /(?:\d\d*(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+\b)?/ }, { token: ["entity.name.function", "text", "keyword.operator", "text", "storage.type", "text", "storage.type", "text", "paren.lparen"], regex: "(" + s + ")(\\s*)(=)(\\s*)" + y + "(\\s*)(\\()", next: "function_arguments" }, { token: ["storage.type", "text", "storage.type", "text", "text", "entity.name.function", "text", "paren.lparen"], regex: "(function)(?:(?:(\\s*)(\\*)(\\s*))|(\\s+))(" + s + ")(\\s*)(\\()", next: "function_arguments" }, { token: ["entity.name.function", "text", "punctuation.operator", "text", "storage.type", "text", "storage.type", "text", "paren.lparen"], regex: "(" + s + ")(\\s*)(:)(\\s*)" + y + "(\\s*)(\\()", next: "function_arguments" }, { token: ["text", "text", "storage.type", "text", "storage.type", "text", "paren.lparen"], regex: "(:)(\\s*)" + y + "(\\s*)(\\()", next: "function_arguments" }, { token: "keyword", regex: `from(?=\\s*('|"))` }, { token: "keyword", regex: "(?:" + f + ")\\b", next: "start" }, { token: "support.constant", regex: /that\b/ }, { token: ["storage.type", "punctuation.operator", "support.function.firebug"], regex: /(console)(\.)(warn|info|log|error|debug|time|trace|timeEnd|assert)\b/ }, { token: a, regex: s }, { token: "punctuation.operator", regex: /[.](?![.])/, next: "property" }, { token: "storage.type", regex: /=>/, next: "start" }, { token: "keyword.operator", regex: /--|\+\+|\.{3}|===|==|=|!=|!==|<+=?|>+=?|!|&&|\|\||\?:|[!$%&*+\-~\/^]=?/, next: "start" }, { token: "punctuation.operator", regex: /[?:,;.]/, next: "start" }, { token: "paren.lparen", regex: /[\[({]/, next: "start" }, { token: "paren.rparen", regex: /[\])}]/ }, { token: "comment", regex: /^#!.*$/ }], property: [{ token: "text", regex: "\\s+" }, { token: "keyword.operator", regex: /=/ }, { token: ["storage.type", "text", "storage.type", "text", "paren.lparen"], regex: y + "(\\s*)(\\()", next: "function_arguments" }, { token: ["storage.type", "text", "storage.type", "text", "text", "entity.name.function", "text", "paren.lparen"], regex: "(function)(?:(?:(\\s*)(\\*)(\\s*))|(\\s+))(\\w+)(\\s*)(\\()", next: "function_arguments" }, { token: "punctuation.operator", regex: /[.](?![.])/ }, { token: "support.function", regex: "prototype" }, { token: "support.function", regex: /(s(?:h(?:ift|ow(?:Mod(?:elessDialog|alDialog)|Help))|croll(?:X|By(?:Pages|Lines)?|Y|To)?|t(?:op|rike)|i(?:n|zeToContent|debar|gnText)|ort|u(?:p|b(?:str(?:ing)?)?)|pli(?:ce|t)|e(?:nd|t(?:Re(?:sizable|questHeader)|M(?:i(?:nutes|lliseconds)|onth)|Seconds|Ho(?:tKeys|urs)|Year|Cursor|Time(?:out)?|Interval|ZOptions|Date|UTC(?:M(?:i(?:nutes|lliseconds)|onth)|Seconds|Hours|Date|FullYear)|FullYear|Active)|arch)|qrt|lice|avePreferences|mall)|h(?:ome|andleEvent)|navigate|c(?:har(?:CodeAt|At)|o(?:s|n(?:cat|textual|firm)|mpile)|eil|lear(?:Timeout|Interval)?|a(?:ptureEvents|ll)|reate(?:StyleSheet|Popup|EventObject))|t(?:o(?:GMTString|S(?:tring|ource)|U(?:TCString|pperCase)|Lo(?:caleString|werCase))|est|a(?:n|int(?:Enabled)?))|i(?:s(?:NaN|Finite)|ndexOf|talics)|d(?:isableExternalCapture|ump|etachEvent)|u(?:n(?:shift|taint|escape|watch)|pdateCommands)|j(?:oin|avaEnabled)|p(?:o(?:p|w)|ush|lugins.refresh|a(?:ddings|rse(?:Int|Float)?)|r(?:int|ompt|eference))|e(?:scape|nableExternalCapture|val|lementFromPoint|x(?:p|ec(?:Script|Command)?))|valueOf|UTC|queryCommand(?:State|Indeterm|Enabled|Value)|f(?:i(?:nd|lter|le(?:ModifiedDate|Size|CreatedDate|UpdatedDate)|xed)|o(?:nt(?:size|color)|rward|rEach)|loor|romCharCode)|watch|l(?:ink|o(?:ad|g)|astIndexOf)|a(?:sin|nchor|cos|t(?:tachEvent|ob|an(?:2)?)|pply|lert|b(?:s|ort))|r(?:ou(?:nd|teEvents)|e(?:size(?:By|To)|calc|turnValue|place|verse|l(?:oad|ease(?:Capture|Events)))|andom)|g(?:o|et(?:ResponseHeader|M(?:i(?:nutes|lliseconds)|onth)|Se(?:conds|lection)|Hours|Year|Time(?:zoneOffset)?|Da(?:y|te)|UTC(?:M(?:i(?:nutes|lliseconds)|onth)|Seconds|Hours|Da(?:y|te)|FullYear)|FullYear|A(?:ttention|llResponseHeaders)))|m(?:in|ove(?:B(?:y|elow)|To(?:Absolute)?|Above)|ergeAttributes|a(?:tch|rgins|x))|b(?:toa|ig|o(?:ld|rderWidths)|link|ack))\b(?=\()/ }, { token: "support.function.dom", regex: /(s(?:ub(?:stringData|mit)|plitText|e(?:t(?:NamedItem|Attribute(?:Node)?)|lect))|has(?:ChildNodes|Feature)|namedItem|c(?:l(?:ick|o(?:se|neNode))|reate(?:C(?:omment|DATASection|aption)|T(?:Head|extNode|Foot)|DocumentFragment|ProcessingInstruction|E(?:ntityReference|lement)|Attribute))|tabIndex|i(?:nsert(?:Row|Before|Cell|Data)|tem)|open|delete(?:Row|C(?:ell|aption)|T(?:Head|Foot)|Data)|focus|write(?:ln)?|a(?:dd|ppend(?:Child|Data))|re(?:set|place(?:Child|Data)|move(?:NamedItem|Child|Attribute(?:Node)?)?)|get(?:NamedItem|Element(?:sBy(?:Name|TagName|ClassName)|ById)|Attribute(?:Node)?)|blur)\b(?=\()/ }, { token: "support.constant", regex: /(s(?:ystemLanguage|cr(?:ipts|ollbars|een(?:X|Y|Top|Left))|t(?:yle(?:Sheets)?|atus(?:Text|bar)?)|ibling(?:Below|Above)|ource|uffixes|e(?:curity(?:Policy)?|l(?:ection|f)))|h(?:istory|ost(?:name)?|as(?:h|Focus))|y|X(?:MLDocument|SLDocument)|n(?:ext|ame(?:space(?:s|URI)|Prop))|M(?:IN_VALUE|AX_VALUE)|c(?:haracterSet|o(?:n(?:structor|trollers)|okieEnabled|lorDepth|mp(?:onents|lete))|urrent|puClass|l(?:i(?:p(?:boardData)?|entInformation)|osed|asses)|alle(?:e|r)|rypto)|t(?:o(?:olbar|p)|ext(?:Transform|Indent|Decoration|Align)|ags)|SQRT(?:1_2|2)|i(?:n(?:ner(?:Height|Width)|put)|ds|gnoreCase)|zIndex|o(?:scpu|n(?:readystatechange|Line)|uter(?:Height|Width)|p(?:sProfile|ener)|ffscreenBuffering)|NEGATIVE_INFINITY|d(?:i(?:splay|alog(?:Height|Top|Width|Left|Arguments)|rectories)|e(?:scription|fault(?:Status|Ch(?:ecked|arset)|View)))|u(?:ser(?:Profile|Language|Agent)|n(?:iqueID|defined)|pdateInterval)|_content|p(?:ixelDepth|ort|ersonalbar|kcs11|l(?:ugins|atform)|a(?:thname|dding(?:Right|Bottom|Top|Left)|rent(?:Window|Layer)?|ge(?:X(?:Offset)?|Y(?:Offset)?))|r(?:o(?:to(?:col|type)|duct(?:Sub)?|mpter)|e(?:vious|fix)))|e(?:n(?:coding|abledPlugin)|x(?:ternal|pando)|mbeds)|v(?:isibility|endor(?:Sub)?|Linkcolor)|URLUnencoded|P(?:I|OSITIVE_INFINITY)|f(?:ilename|o(?:nt(?:Size|Family|Weight)|rmName)|rame(?:s|Element)|gColor)|E|whiteSpace|l(?:i(?:stStyleType|n(?:eHeight|kColor))|o(?:ca(?:tion(?:bar)?|lName)|wsrc)|e(?:ngth|ft(?:Context)?)|a(?:st(?:M(?:odified|atch)|Index|Paren)|yer(?:s|X)|nguage))|a(?:pp(?:MinorVersion|Name|Co(?:deName|re)|Version)|vail(?:Height|Top|Width|Left)|ll|r(?:ity|guments)|Linkcolor|bove)|r(?:ight(?:Context)?|e(?:sponse(?:XML|Text)|adyState))|global|x|m(?:imeTypes|ultiline|enubar|argin(?:Right|Bottom|Top|Left))|L(?:N(?:10|2)|OG(?:10E|2E))|b(?:o(?:ttom|rder(?:Width|RightWidth|BottomWidth|Style|Color|TopWidth|LeftWidth))|ufferDepth|elow|ackground(?:Color|Image)))\b/ }, { token: "identifier", regex: s }, { regex: "", token: "empty", next: "no_regex" }], start: [h.getStartRule("doc-start"), g("start"), { token: "string.regexp", regex: "\\/", next: "regex" }, { token: "text", regex: "\\s+|^$", next: "start" }, { token: "empty", regex: "", next: "no_regex" }], regex: [{ token: "regexp.keyword.operator", regex: "\\\\(?:u[\\da-fA-F]{4}|x[\\da-fA-F]{2}|.)" }, { token: "string.regexp", regex: "/[sxngimy]*", next: "no_regex" }, { token: "invalid", regex: /\{\d+\b,?\d*\}[+*]|[+*$^?][+*]|[$^][?]|\?{3,}/ }, { token: "constant.language.escape", regex: /\(\?[:=!]|\)|\{\d+\b,?\d*\}|[+*]\?|[()$^+*?.]/ }, { token: "constant.language.delimiter", regex: /\|/ }, { token: "constant.language.escape", regex: /\[\^?/, next: "regex_character_class" }, { token: "empty", regex: "$", next: "no_regex" }, { defaultToken: "string.regexp" }], regex_character_class: [{ token: "regexp.charclass.keyword.operator", regex: "\\\\(?:u[\\da-fA-F]{4}|x[\\da-fA-F]{2}|.)" }, { token: "constant.language.escape", regex: "]", next: "regex" }, { token: "constant.language.escape", regex: "-" }, { token: "empty", regex: "$", next: "no_regex" }, { defaultToken: "string.regexp.charachterclass" }], default_parameter: [{ token: "string", regex: "'(?=.)", push: [{ token: "string", regex: "'|$", next: "pop" }, { include: "qstring" }] }, { token: "string", regex: '"(?=.)', push: [{ token: "string", regex: '"|$', next: "pop" }, { include: "qqstring" }] }, { token: "constant.language", regex: "null|Infinity|NaN|undefined" }, { token: "constant.numeric", regex: /0(?:[xX][0-9a-fA-F]+|[oO][0-7]+|[bB][01]+)\b/ }, { token: "constant.numeric", regex: /(?:\d\d*(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+\b)?/ }, { token: "punctuation.operator", regex: ",", next: "function_arguments" }, { token: "text", regex: "\\s+" }, { token: "punctuation.operator", regex: "$" }, { token: "empty", regex: "", next: "no_regex" }], function_arguments: [g("function_arguments"), { token: "variable.parameter", regex: s }, { token: "punctuation.operator", regex: "," }, { token: "text", regex: "\\s+" }, { token: "punctuation.operator", regex: "$" }, { token: "empty", regex: "", next: "no_regex" }], qqstring: [{ token: "constant.language.escape", regex: b }, { token: "string", regex: "\\\\$", consumeLineEnd: !0 }, { token: "string", regex: '"|$', next: "no_regex" }, { defaultToken: "string" }], qstring: [{ token: "constant.language.escape", regex: b }, { token: "string", regex: "\\\\$", consumeLineEnd: !0 }, { token: "string", regex: "'|$", next: "no_regex" }, { defaultToken: "string" }] }, (!u || !u.noES6) && (this.$rules.no_regex.unshift({ regex: "[{}]", onMatch: function(N, C, S) {
-          if (this.next = N == "{" ? this.nextState : "", N == "{" && S.length) S.unshift("start", C);
-          else if (N == "}" && S.length && (S.shift(), this.next = S.shift(), this.next.indexOf("string") != -1 || this.next.indexOf("jsx") != -1))
+        this.$rules = { no_regex: [h.getStartRule("doc-start"), g("no_regex"), A, { token: "string", regex: "'(?=.)", next: "qstring" }, { token: "string", regex: '"(?=.)', next: "qqstring" }, { token: "constant.numeric", regex: /0(?:[xX][0-9a-fA-F]+|[oO][0-7]+|[bB][01]+)\b/ }, { token: "constant.numeric", regex: /(?:\d\d*(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+\b)?/ }, { token: ["entity.name.function", "text", "keyword.operator", "text", "storage.type", "text", "storage.type", "text", "paren.lparen"], regex: "(" + s + ")(\\s*)(=)(\\s*)" + y + "(\\s*)(\\()", next: "function_arguments" }, { token: ["storage.type", "text", "storage.type", "text", "text", "entity.name.function", "text", "paren.lparen"], regex: "(function)(?:(?:(\\s*)(\\*)(\\s*))|(\\s+))(" + s + ")(\\s*)(\\()", next: "function_arguments" }, { token: ["entity.name.function", "text", "punctuation.operator", "text", "storage.type", "text", "storage.type", "text", "paren.lparen"], regex: "(" + s + ")(\\s*)(:)(\\s*)" + y + "(\\s*)(\\()", next: "function_arguments" }, { token: ["text", "text", "storage.type", "text", "storage.type", "text", "paren.lparen"], regex: "(:)(\\s*)" + y + "(\\s*)(\\()", next: "function_arguments" }, { token: "keyword", regex: `from(?=\\s*('|"))` }, { token: "keyword", regex: "(?:" + f + ")\\b", next: "start" }, { token: "support.constant", regex: /that\b/ }, { token: ["storage.type", "punctuation.operator", "support.function.firebug"], regex: /(console)(\.)(warn|info|log|error|debug|time|trace|timeEnd|assert)\b/ }, { token: a, regex: s }, { token: "punctuation.operator", regex: /[.](?![.])/, next: "property" }, { token: "storage.type", regex: /=>/, next: "start" }, { token: "keyword.operator", regex: /--|\+\+|\.{3}|===|==|=|!=|!==|<+=?|>+=?|!|&&|\|\||\?:|[!$%&*+\-~\/^]=?/, next: "start" }, { token: "punctuation.operator", regex: /[?:,;.]/, next: "start" }, { token: "paren.lparen", regex: /[\[({]/, next: "start" }, { token: "paren.rparen", regex: /[\])}]/ }, { token: "comment", regex: /^#!.*$/ }], property: [{ token: "text", regex: "\\s+" }, { token: "keyword.operator", regex: /=/ }, { token: ["storage.type", "text", "storage.type", "text", "paren.lparen"], regex: y + "(\\s*)(\\()", next: "function_arguments" }, { token: ["storage.type", "text", "storage.type", "text", "text", "entity.name.function", "text", "paren.lparen"], regex: "(function)(?:(?:(\\s*)(\\*)(\\s*))|(\\s+))(\\w+)(\\s*)(\\()", next: "function_arguments" }, { token: "punctuation.operator", regex: /[.](?![.])/ }, { token: "support.function", regex: "prototype" }, { token: "support.function", regex: /(s(?:h(?:ift|ow(?:Mod(?:elessDialog|alDialog)|Help))|croll(?:X|By(?:Pages|Lines)?|Y|To)?|t(?:op|rike)|i(?:n|zeToContent|debar|gnText)|ort|u(?:p|b(?:str(?:ing)?)?)|pli(?:ce|t)|e(?:nd|t(?:Re(?:sizable|questHeader)|M(?:i(?:nutes|lliseconds)|onth)|Seconds|Ho(?:tKeys|urs)|Year|Cursor|Time(?:out)?|Interval|ZOptions|Date|UTC(?:M(?:i(?:nutes|lliseconds)|onth)|Seconds|Hours|Date|FullYear)|FullYear|Active)|arch)|qrt|lice|avePreferences|mall)|h(?:ome|andleEvent)|navigate|c(?:har(?:CodeAt|At)|o(?:s|n(?:cat|textual|firm)|mpile)|eil|lear(?:Timeout|Interval)?|a(?:ptureEvents|ll)|reate(?:StyleSheet|Popup|EventObject))|t(?:o(?:GMTString|S(?:tring|ource)|U(?:TCString|pperCase)|Lo(?:caleString|werCase))|est|a(?:n|int(?:Enabled)?))|i(?:s(?:NaN|Finite)|ndexOf|talics)|d(?:isableExternalCapture|ump|etachEvent)|u(?:n(?:shift|taint|escape|watch)|pdateCommands)|j(?:oin|avaEnabled)|p(?:o(?:p|w)|ush|lugins.refresh|a(?:ddings|rse(?:Int|Float)?)|r(?:int|ompt|eference))|e(?:scape|nableExternalCapture|val|lementFromPoint|x(?:p|ec(?:Script|Command)?))|valueOf|UTC|queryCommand(?:State|Indeterm|Enabled|Value)|f(?:i(?:nd|lter|le(?:ModifiedDate|Size|CreatedDate|UpdatedDate)|xed)|o(?:nt(?:size|color)|rward|rEach)|loor|romCharCode)|watch|l(?:ink|o(?:ad|g)|astIndexOf)|a(?:sin|nchor|cos|t(?:tachEvent|ob|an(?:2)?)|pply|lert|b(?:s|ort))|r(?:ou(?:nd|teEvents)|e(?:size(?:By|To)|calc|turnValue|place|verse|l(?:oad|ease(?:Capture|Events)))|andom)|g(?:o|et(?:ResponseHeader|M(?:i(?:nutes|lliseconds)|onth)|Se(?:conds|lection)|Hours|Year|Time(?:zoneOffset)?|Da(?:y|te)|UTC(?:M(?:i(?:nutes|lliseconds)|onth)|Seconds|Hours|Da(?:y|te)|FullYear)|FullYear|A(?:ttention|llResponseHeaders)))|m(?:in|ove(?:B(?:y|elow)|To(?:Absolute)?|Above)|ergeAttributes|a(?:tch|rgins|x))|b(?:toa|ig|o(?:ld|rderWidths)|link|ack))\b(?=\()/ }, { token: "support.function.dom", regex: /(s(?:ub(?:stringData|mit)|plitText|e(?:t(?:NamedItem|Attribute(?:Node)?)|lect))|has(?:ChildNodes|Feature)|namedItem|c(?:l(?:ick|o(?:se|neNode))|reate(?:C(?:omment|DATASection|aption)|T(?:Head|extNode|Foot)|DocumentFragment|ProcessingInstruction|E(?:ntityReference|lement)|Attribute))|tabIndex|i(?:nsert(?:Row|Before|Cell|Data)|tem)|open|delete(?:Row|C(?:ell|aption)|T(?:Head|Foot)|Data)|focus|write(?:ln)?|a(?:dd|ppend(?:Child|Data))|re(?:set|place(?:Child|Data)|move(?:NamedItem|Child|Attribute(?:Node)?)?)|get(?:NamedItem|Element(?:sBy(?:Name|TagName|ClassName)|ById)|Attribute(?:Node)?)|blur)\b(?=\()/ }, { token: "support.constant", regex: /(s(?:ystemLanguage|cr(?:ipts|ollbars|een(?:X|Y|Top|Left))|t(?:yle(?:Sheets)?|atus(?:Text|bar)?)|ibling(?:Below|Above)|ource|uffixes|e(?:curity(?:Policy)?|l(?:ection|f)))|h(?:istory|ost(?:name)?|as(?:h|Focus))|y|X(?:MLDocument|SLDocument)|n(?:ext|ame(?:space(?:s|URI)|Prop))|M(?:IN_VALUE|AX_VALUE)|c(?:haracterSet|o(?:n(?:structor|trollers)|okieEnabled|lorDepth|mp(?:onents|lete))|urrent|puClass|l(?:i(?:p(?:boardData)?|entInformation)|osed|asses)|alle(?:e|r)|rypto)|t(?:o(?:olbar|p)|ext(?:Transform|Indent|Decoration|Align)|ags)|SQRT(?:1_2|2)|i(?:n(?:ner(?:Height|Width)|put)|ds|gnoreCase)|zIndex|o(?:scpu|n(?:readystatechange|Line)|uter(?:Height|Width)|p(?:sProfile|ener)|ffscreenBuffering)|NEGATIVE_INFINITY|d(?:i(?:splay|alog(?:Height|Top|Width|Left|Arguments)|rectories)|e(?:scription|fault(?:Status|Ch(?:ecked|arset)|View)))|u(?:ser(?:Profile|Language|Agent)|n(?:iqueID|defined)|pdateInterval)|_content|p(?:ixelDepth|ort|ersonalbar|kcs11|l(?:ugins|atform)|a(?:thname|dding(?:Right|Bottom|Top|Left)|rent(?:Window|Layer)?|ge(?:X(?:Offset)?|Y(?:Offset)?))|r(?:o(?:to(?:col|type)|duct(?:Sub)?|mpter)|e(?:vious|fix)))|e(?:n(?:coding|abledPlugin)|x(?:ternal|pando)|mbeds)|v(?:isibility|endor(?:Sub)?|Linkcolor)|URLUnencoded|P(?:I|OSITIVE_INFINITY)|f(?:ilename|o(?:nt(?:Size|Family|Weight)|rmName)|rame(?:s|Element)|gColor)|E|whiteSpace|l(?:i(?:stStyleType|n(?:eHeight|kColor))|o(?:ca(?:tion(?:bar)?|lName)|wsrc)|e(?:ngth|ft(?:Context)?)|a(?:st(?:M(?:odified|atch)|Index|Paren)|yer(?:s|X)|nguage))|a(?:pp(?:MinorVersion|Name|Co(?:deName|re)|Version)|vail(?:Height|Top|Width|Left)|ll|r(?:ity|guments)|Linkcolor|bove)|r(?:ight(?:Context)?|e(?:sponse(?:XML|Text)|adyState))|global|x|m(?:imeTypes|ultiline|enubar|argin(?:Right|Bottom|Top|Left))|L(?:N(?:10|2)|OG(?:10E|2E))|b(?:o(?:ttom|rder(?:Width|RightWidth|BottomWidth|Style|Color|TopWidth|LeftWidth))|ufferDepth|elow|ackground(?:Color|Image)))\b/ }, { token: "identifier", regex: s }, { regex: "", token: "empty", next: "no_regex" }], start: [h.getStartRule("doc-start"), g("start"), { token: "string.regexp", regex: "\\/", next: "regex" }, { token: "text", regex: "\\s+|^$", next: "start" }, { token: "empty", regex: "", next: "no_regex" }], regex: [{ token: "regexp.keyword.operator", regex: "\\\\(?:u[\\da-fA-F]{4}|x[\\da-fA-F]{2}|.)" }, { token: "string.regexp", regex: "/[sxngimy]*", next: "no_regex" }, { token: "invalid", regex: /\{\d+\b,?\d*\}[+*]|[+*$^?][+*]|[$^][?]|\?{3,}/ }, { token: "constant.language.escape", regex: /\(\?[:=!]|\)|\{\d+\b,?\d*\}|[+*]\?|[()$^+*?.]/ }, { token: "constant.language.delimiter", regex: /\|/ }, { token: "constant.language.escape", regex: /\[\^?/, next: "regex_character_class" }, { token: "empty", regex: "$", next: "no_regex" }, { defaultToken: "string.regexp" }], regex_character_class: [{ token: "regexp.charclass.keyword.operator", regex: "\\\\(?:u[\\da-fA-F]{4}|x[\\da-fA-F]{2}|.)" }, { token: "constant.language.escape", regex: "]", next: "regex" }, { token: "constant.language.escape", regex: "-" }, { token: "empty", regex: "$", next: "no_regex" }, { defaultToken: "string.regexp.charachterclass" }], default_parameter: [{ token: "string", regex: "'(?=.)", push: [{ token: "string", regex: "'|$", next: "pop" }, { include: "qstring" }] }, { token: "string", regex: '"(?=.)', push: [{ token: "string", regex: '"|$', next: "pop" }, { include: "qqstring" }] }, { token: "constant.language", regex: "null|Infinity|NaN|undefined" }, { token: "constant.numeric", regex: /0(?:[xX][0-9a-fA-F]+|[oO][0-7]+|[bB][01]+)\b/ }, { token: "constant.numeric", regex: /(?:\d\d*(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+\b)?/ }, { token: "punctuation.operator", regex: ",", next: "function_arguments" }, { token: "text", regex: "\\s+" }, { token: "punctuation.operator", regex: "$" }, { token: "empty", regex: "", next: "no_regex" }], function_arguments: [g("function_arguments"), { token: "variable.parameter", regex: s }, { token: "punctuation.operator", regex: "," }, { token: "text", regex: "\\s+" }, { token: "punctuation.operator", regex: "$" }, { token: "empty", regex: "", next: "no_regex" }], qqstring: [{ token: "constant.language.escape", regex: b }, { token: "string", regex: "\\\\$", consumeLineEnd: !0 }, { token: "string", regex: '"|$', next: "no_regex" }, { defaultToken: "string" }], qstring: [{ token: "constant.language.escape", regex: b }, { token: "string", regex: "\\\\$", consumeLineEnd: !0 }, { token: "string", regex: "'|$", next: "no_regex" }, { defaultToken: "string" }] }, (!u || !u.noES6) && (this.$rules.no_regex.unshift({ regex: "[{}]", onMatch: function(C, N, S) {
+          if (this.next = C == "{" ? this.nextState : "", C == "{" && S.length) S.unshift("start", N);
+          else if (C == "}" && S.length && (S.shift(), this.next = S.shift(), this.next.indexOf("string") != -1 || this.next.indexOf("jsx") != -1))
             return "paren.quasi.end";
-          return N == "{" ? "paren.lparen" : "paren.rparen";
+          return C == "{" ? "paren.lparen" : "paren.rparen";
         }, nextState: "start" }, { token: "string.quasi.start", regex: /`/, push: [{ token: "constant.language.escape", regex: b }, { token: "paren.quasi.start", regex: /\${/, push: "start" }, { token: "string.quasi.end", regex: /`/, next: "pop" }, { defaultToken: "string.quasi" }] }, { token: ["variable.parameter", "text"], regex: "(" + s + ")(\\s*)(?=\\=>)" }, { token: "paren.lparen", regex: "(\\()(?=[^\\(]+\\s*=>)", next: "function_arguments" }, { token: "variable.language", regex: "(?:(?:(?:Weak)?(?:Set|Map))|Promise)\\b" }), this.$rules.function_arguments.unshift({ token: "keyword.operator", regex: "=", next: "default_parameter" }, { token: "keyword.operator", regex: "\\.{3}" }), this.$rules.property.unshift({ token: "support.function", regex: "(findIndex|repeat|startsWith|endsWith|includes|isSafeInteger|trunc|cbrt|log2|log10|sign|then|catch|finally|resolve|reject|race|any|all|allSettled|keys|entries|isInteger)\\b(?=\\()" }, { token: "constant.language", regex: "(?:MAX_SAFE_INTEGER|MIN_SAFE_INTEGER|EPSILON)\\b" }), (!u || u.jsx != 0) && p.call(this)), this.embedRules(h, "doc-", [h.getEndRule("no_regex")]), this.normalizeRules();
       };
       E.inherits(c, m), r.JavaScriptHighlightRules = c;
@@ -35317,12 +35317,12 @@ function AM() {
           if (a == '"' || a == "'") {
             var f = a, b = d.doc.getTextRange(u.getSelectionRange());
             if (b !== "" && b !== "'" && b != '"' && u.getWrapBehavioursEnabled()) return { text: f + b + f, selection: !1 };
-            var y = u.getCursorPosition(), A = d.doc.getLine(y.row), N = A.substring(y.column, y.column + 1), C = new h(d, y.row, y.column), S = C.getCurrentToken();
-            if (N == f && (p(S, "attribute-value") || p(S, "string"))) return { text: "", selection: [1, 1] };
-            if (S || (S = C.stepBackward()), !S) return;
-            for (; p(S, "tag-whitespace") || p(S, "whitespace"); ) S = C.stepBackward();
-            var T = !N || N.match(/\s/);
-            if (p(S, "attribute-equals") && (T || N == ">") || p(S, "decl-attribute-equals") && (T || N == "?")) return { text: f + f, selection: [1, 1] };
+            var y = u.getCursorPosition(), A = d.doc.getLine(y.row), C = A.substring(y.column, y.column + 1), N = new h(d, y.row, y.column), S = N.getCurrentToken();
+            if (C == f && (p(S, "attribute-value") || p(S, "string"))) return { text: "", selection: [1, 1] };
+            if (S || (S = N.stepBackward()), !S) return;
+            for (; p(S, "tag-whitespace") || p(S, "whitespace"); ) S = N.stepBackward();
+            var T = !C || C.match(/\s/);
+            if (p(S, "attribute-equals") && (T || C == ">") || p(S, "decl-attribute-equals") && (T || C == "?")) return { text: f + f, selection: [1, 1] };
           }
         }), this.add("string_dquotes", "deletion", function(s, c, u, d, a) {
           var f = d.doc.getTextRange(a);
@@ -35338,8 +35338,8 @@ function AM() {
               var A = b.getCurrentTokenColumn() + y.value.length;
               if (f.column < A) return;
               if (f.column == A) {
-                var N = b.stepForward();
-                if (N && p(N, "attribute-value")) return;
+                var C = b.stepForward();
+                if (C && p(C, "attribute-value")) return;
                 b.stepBackward();
               }
             }
@@ -35349,10 +35349,10 @@ function AM() {
                 y = b.stepForward();
                 break;
               }
-            var C = b.getCurrentTokenRow(), S = b.getCurrentTokenColumn();
+            var N = b.getCurrentTokenRow(), S = b.getCurrentTokenColumn();
             if (p(b.stepBackward(), "end-tag-open")) return;
             var T = y.value;
-            return C == f.row && (T = T.substring(0, f.column - S)), this.voidElements && this.voidElements.hasOwnProperty(T.toLowerCase()) ? void 0 : { text: "></" + T + ">", selection: [1, 1] };
+            return N == f.row && (T = T.substring(0, f.column - S)), this.voidElements && this.voidElements.hasOwnProperty(T.toLowerCase()) ? void 0 : { text: "></" + T + ">", selection: [1, 1] };
           }
         }), this.add("autoindent", "insertion", function(s, c, u, d, a) {
           if (a == `
@@ -35362,10 +35362,10 @@ function AM() {
               if (A.value == "/>") return;
               for (; A && A.type.indexOf("tag-name") === -1; ) A = y.stepBackward();
               if (!A) return;
-              var N = A.value, C = y.getCurrentTokenRow();
+              var C = A.value, N = y.getCurrentTokenRow();
               if (A = y.stepBackward(), !A || A.type.indexOf("end-tag") !== -1) return;
-              if (this.voidElements && !this.voidElements[N] || !this.voidElements) {
-                var S = d.getTokenAt(f.row, f.column + 1), b = d.getLine(C), T = this.$getIndent(b), k = T + d.getTabString();
+              if (this.voidElements && !this.voidElements[C] || !this.voidElements) {
+                var S = d.getTokenAt(f.row, f.column + 1), b = d.getLine(N), T = this.$getIndent(b), k = T + d.getTabString();
                 return S && S.value === "</" ? { text: `
 ` + k + `
 ` + T, selection: [1, k.length, 1, k.length] } : { text: `
@@ -35514,12 +35514,12 @@ function AM() {
       };
       p.inherits(u, g), (function() {
         this.lineCommentStart = "//", this.blockComment = { start: "/*", end: "*/" }, this.$quotes = { '"': '"', "'": "'", "`": "`" }, this.$pairQuotesAfter = { "`": /\w/ }, this.getNextLineIndent = function(d, a, f) {
-          var b = this.$getIndent(a), y = this.getTokenizer().getLineTokens(a, d), A = y.tokens, N = y.state;
+          var b = this.$getIndent(a), y = this.getTokenizer().getLineTokens(a, d), A = y.tokens, C = y.state;
           if (A.length && A[A.length - 1].type == "comment") return b;
           if (d == "start" || d == "no_regex") {
-            var C = a.match(/^.*(?:\bcase\b.*:|[\{\(\[])\s*$/);
-            C && (b += f);
-          } else if (d == "doc-start" && (N == "start" || N == "no_regex")) return "";
+            var N = a.match(/^.*(?:\bcase\b.*:|[\{\(\[])\s*$/);
+            N && (b += f);
+          } else if (d == "doc-start" && (C == "start" || C == "no_regex")) return "";
           return b;
         }, this.checkOutdent = function(d, a, f) {
           return this.$outdent.checkOutdent(a, f);
@@ -36005,8 +36005,8 @@ function xM() {
               var P = L[H];
               if (typeof P == "object")
                 if (L[H] = "", P.changeCase && P.local) {
-                  var Q = L[H + 1];
-                  Q && typeof Q == "string" && (P.changeCase == "u" ? L[H] = Q[0].toUpperCase() : L[H] = Q[0].toLowerCase(), L[H + 1] = Q.substr(1));
+                  var W = L[H + 1];
+                  W && typeof W == "string" && (P.changeCase == "u" ? L[H] = W[0].toUpperCase() : L[H] = W[0].toLowerCase(), L[H + 1] = W.substr(1));
                 } else P.changeCase && (z = P.changeCase);
               else z == "U" ? L[H] = P.toUpperCase() : z == "L" && (L[H] = P.toLowerCase());
             }
@@ -36181,16 +36181,16 @@ function xM() {
         for (var L = {}, z = 0; z < x.length; z++) {
           var H = x[z];
           if (typeof H == "object") {
-            var P = H.tabstopId, Q = _[P], F = x.indexOf(H, z + 1);
+            var P = H.tabstopId, W = _[P], F = x.indexOf(H, z + 1);
             if (L[P]) {
               L[P] === H && (delete L[P], Object.keys(L).forEach(function(Z) {
-                Q.parents[Z] = !0;
+                W.parents[Z] = !0;
               }));
               continue;
             }
             L[P] = H;
-            var K = Q.value;
-            typeof K != "string" ? K = I(K) : H.fmt && (K = this.tmStrFormat(K, H, T)), x.splice.apply(x, [z + 1, Math.max(0, F - z)].concat(K, H)), Q.indexOf(H) === -1 && Q.push(H);
+            var K = W.value;
+            typeof K != "string" ? K = I(K) : H.fmt && (K = this.tmStrFormat(K, H, T)), x.splice.apply(x, [z + 1, Math.max(0, F - z)].concat(K, H)), W.indexOf(H) === -1 && W.push(H);
           }
         }
         var V = 0, X = 0, q = "";
@@ -36222,8 +36222,8 @@ function xM() {
             }
             O.rangeList.$onChange(k);
           }
-          var Q = this.session;
-          !this.$inChange && M && Q.getLength() == 1 && !Q.getValue() && this.detach();
+          var W = this.session;
+          !this.$inChange && M && W.getLength() == 1 && !W.getValue() && this.detach();
         }, T.prototype.updateLinkedFields = function() {
           var k = this.selectedTabstop;
           if (!(!k || !k.hasLinkedRanges || !k.firstNonLinked)) {
@@ -36273,15 +36273,15 @@ function xM() {
           var $ = this.useLink || !this.editor.getOption("enableMultiselect");
           if (this.$openTabstops || (this.$openTabstops = []), !k[0]) {
             var B = s.fromPoints(I, I);
-            C(B.start, M), C(B.end, M), k[0] = [B], k[0].index = 0;
+            N(B.start, M), N(B.end, M), k[0] = [B], k[0].index = 0;
           }
           var D = this.index, O = [D + 1, 0], x = this.ranges, _ = this.snippetId = (this.snippetId || 0) + 1;
           k.forEach(function(L, z) {
             var H = this.$openTabstops[z] || L;
             H.snippetId = _;
             for (var P = 0; P < L.length; P++) {
-              var Q = L[P], F = s.fromPoints(Q.start, Q.end || Q.start);
-              N(F.start, M), N(F.end, M), F.original = Q, F.tabstop = H, x.push(F), H != L ? H.unshift(F) : H[P] = F, Q.fmtString || H.firstNonLinked && $ ? (F.linked = !0, H.hasLinkedRanges = !0) : H.firstNonLinked || (H.firstNonLinked = F);
+              var W = L[P], F = s.fromPoints(W.start, W.end || W.start);
+              C(F.start, M), C(F.end, M), F.original = W, F.tabstop = H, x.push(F), H != L ? H.unshift(F) : H[P] = F, W.fmtString || H.firstNonLinked && $ ? (F.linked = !0, H.hasLinkedRanges = !0) : H.firstNonLinked || (H.firstNonLinked = F);
             }
             H.firstNonLinked || (H.hasLinkedRanges = !1), H === L && (O.push(H), this.$openTabstops[z] = H), this.addTabstopMarkers(H), H.rangeList = H.rangeList || new c(), H.rangeList.$bias = 0, H.rangeList.addList(H);
           }, this), O.length > 2 && (this.tabstops.length && O.push(O.splice(2, 1)[0]), this.tabstops.splice.apply(this.tabstops, O));
@@ -36314,9 +36314,9 @@ function xM() {
       }, Esc: function(T) {
         T.tabstopManager.detach();
       } });
-      var N = function(T, k) {
+      var C = function(T, k) {
         T.row == 0 && (T.column += k.column), T.row += k.row;
-      }, C = function(T, k) {
+      }, N = function(T, k) {
         T.row == k.row && (T.column -= k.column), T.row -= k.row;
       };
       g.importCssString(`
@@ -36336,17 +36336,17 @@ function xM() {
         };
       }).call(S.prototype);
     }), ace.define("ace/autocomplete/popup", ["require", "exports", "module", "ace/virtual_renderer", "ace/editor", "ace/range", "ace/lib/event", "ace/lib/lang", "ace/lib/dom", "ace/config", "ace/lib/useragent"], function(i, r, w) {
-      var p = i("../virtual_renderer").VirtualRenderer, g = i("../editor").Editor, E = i("../range").Range, h = i("../lib/event"), m = i("../lib/lang"), s = i("../lib/dom"), c = i("../config").nls, u = i("./../lib/useragent"), d = function(N) {
-        return "suggest-aria-id:".concat(N);
-      }, a = u.isSafari ? "menu" : "listbox", f = u.isSafari ? "menuitem" : "option", b = u.isSafari ? "aria-current" : "aria-selected", y = function(N) {
-        var C = new p(N);
-        C.$maxLines = 4;
-        var S = new g(C);
+      var p = i("../virtual_renderer").VirtualRenderer, g = i("../editor").Editor, E = i("../range").Range, h = i("../lib/event"), m = i("../lib/lang"), s = i("../lib/dom"), c = i("../config").nls, u = i("./../lib/useragent"), d = function(C) {
+        return "suggest-aria-id:".concat(C);
+      }, a = u.isSafari ? "menu" : "listbox", f = u.isSafari ? "menuitem" : "option", b = u.isSafari ? "aria-current" : "aria-selected", y = function(C) {
+        var N = new p(C);
+        N.$maxLines = 4;
+        var S = new g(N);
         return S.setHighlightActiveLine(!1), S.setShowPrintMargin(!1), S.renderer.setShowGutter(!1), S.renderer.setHighlightGutterLine(!1), S.$mouseHandler.$focusTimeout = 0, S.$highlightTagPending = !0, S;
       }, A = /* @__PURE__ */ (function() {
-        function N(C) {
+        function C(N) {
           var S = s.createElement("div"), T = y(S);
-          C && C.appendChild(S), S.style.display = "none", T.renderer.content.style.cursor = "default", T.renderer.setStyle("ace_autocomplete"), T.renderer.$textLayer.element.setAttribute("role", a), T.renderer.$textLayer.element.setAttribute("aria-roledescription", c("autocomplete.popup.aria-roledescription", "Autocomplete suggestions")), T.renderer.$textLayer.element.setAttribute("aria-label", c("autocomplete.popup.aria-label", "Autocomplete suggestions")), T.renderer.textarea.setAttribute("aria-hidden", "true"), T.setOption("displayIndentGuides", !1), T.setOption("dragDelay", 150);
+          N && N.appendChild(S), S.style.display = "none", T.renderer.content.style.cursor = "default", T.renderer.setStyle("ace_autocomplete"), T.renderer.$textLayer.element.setAttribute("role", a), T.renderer.$textLayer.element.setAttribute("aria-roledescription", c("autocomplete.popup.aria-roledescription", "Autocomplete suggestions")), T.renderer.$textLayer.element.setAttribute("aria-label", c("autocomplete.popup.aria-label", "Autocomplete suggestions")), T.renderer.textarea.setAttribute("aria-hidden", "true"), T.setOption("displayIndentGuides", !1), T.setOption("dragDelay", 150);
           var k = function() {
           };
           T.focus = k, T.$isFocused = !0, T.renderer.$cursorLayer.restartTimer = k, T.renderer.$cursorLayer.element.style.opacity = "0", T.renderer.$maxLines = 8, T.renderer.$keepTextAreaAtCursor = !1, T.setHighlightActiveLine(!1), T.session.highlight(""), T.session.$searchHighlight.clazz = "ace_highlight-marker", T.on("mousedown", function(x) {
@@ -36381,8 +36381,8 @@ function xM() {
                 var P = "".concat(H.caption || H.value).concat(H.meta ? ", ".concat(H.meta) : "");
                 z.setAttribute("aria-label", P);
               }
-              var Q = z.querySelectorAll(".ace_completion-highlight");
-              Q.forEach(function(F) {
+              var W = z.querySelectorAll(".ace_completion-highlight");
+              W.forEach(function(F) {
                 F.setAttribute("role", "mark");
               });
             }
@@ -36416,8 +36416,8 @@ function xM() {
             var L = T.data[x], z = [];
             if (!L) return z;
             typeof L == "string" && (L = { value: L });
-            for (var H = L.caption || L.value || L.name, P = H.toLowerCase(), Q = (T.filterText || "").toLowerCase(), F = 0, K = 0, V = 0; V <= Q.length; V++) if (V != K && (L.matchMask & 1 << V || V == Q.length)) {
-              var X = Q.slice(K, V);
+            for (var H = L.caption || L.value || L.name, P = H.toLowerCase(), W = (T.filterText || "").toLowerCase(), F = 0, K = 0, V = 0; V <= W.length; V++) if (V != K && (L.matchMask & 1 << V || V == W.length)) {
+              var X = W.slice(K, V);
               K = V;
               var q = P.indexOf(X, F);
               if (q == -1) continue;
@@ -36441,13 +36441,13 @@ function xM() {
             this.container.style.display = "none", T.anchorPos = null, T.anchor = null, T.isOpen && (T.isOpen = !1, this._signal("hide"));
           }, T.tryShow = function(x, _, L, z) {
             if (!z && T.isOpen && T.anchorPos && T.anchor && T.anchorPos.top === x.top && T.anchorPos.left === x.left && T.anchor === L) return !0;
-            var H = this.container, P = this.renderer.scrollBar.width || 10, Q = window.innerHeight - P, F = window.innerWidth - P, K = this.renderer, V = K.$maxLines * _ * 1.4, X = { top: 0, bottom: 0 }, q = Q - x.top - 3 * this.$borderSize - _, Z = x.top - 3 * this.$borderSize;
+            var H = this.container, P = this.renderer.scrollBar.width || 10, W = window.innerHeight - P, F = window.innerWidth - P, K = this.renderer, V = K.$maxLines * _ * 1.4, X = { top: 0, bottom: 0 }, q = W - x.top - 3 * this.$borderSize - _, Z = x.top - 3 * this.$borderSize;
             L || (Z <= q || q >= V ? L = "bottom" : L = "top"), L === "top" ? (X.bottom = x.top - this.$borderSize, X.top = X.bottom - V) : L === "bottom" && (X.top = x.top + _ + this.$borderSize, X.bottom = X.top + V);
-            var ne = X.top >= 0 && X.bottom <= Q;
+            var ne = X.top >= 0 && X.bottom <= W;
             if (!z && !ne) return !1;
             ne ? K.$maxPixelHeight = null : L === "top" ? K.$maxPixelHeight = Z : K.$maxPixelHeight = q, H.style.display = "";
             var ae = H.offsetParent && H.offsetParent.getBoundingClientRect();
-            L === "top" ? (H.style.top = "", H.style.bottom = Q + P - X.bottom - (ae ? Q + P - ae.bottom : 0) + "px", T.isTopdown = !1) : (H.style.top = X.top - (ae ? ae.top : 0) + "px", H.style.bottom = "", T.isTopdown = !0);
+            L === "top" ? (H.style.top = "", H.style.bottom = W + P - X.bottom - (ae ? W + P - ae.bottom : 0) + "px", T.isTopdown = !1) : (H.style.top = X.top - (ae ? ae.top : 0) + "px", H.style.bottom = "", T.isTopdown = !0);
             var le = x.left;
             return le + H.offsetWidth > F && (le = F - H.offsetWidth), H.style.left = le - (ae ? ae.left : 0) + "px", H.style.right = "", T.isOpen || (T.isOpen = !0, this._signal("show"), M = null), T.anchorPos = x, T.anchor = L, !0;
           }, T.show = function(x, _, L) {
@@ -36472,7 +36472,7 @@ function xM() {
             return this.$borderSize + this.renderer.$padding + this.$imageSize;
           }, T.$imageSize = 0, T.$borderSize = 1, T;
         }
-        return N;
+        return C;
       })();
       s.importCssString(`
 .ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {
@@ -36650,35 +36650,35 @@ function xM() {
         });
       };
     }), ace.define("ace/autocomplete", ["require", "exports", "module", "ace/keyboard/hash_handler", "ace/autocomplete/popup", "ace/autocomplete/inline", "ace/autocomplete/popup", "ace/autocomplete/util", "ace/lib/lang", "ace/lib/dom", "ace/snippets", "ace/config", "ace/lib/event", "ace/lib/scroll"], function(i, r, w) {
-      var p = i("./keyboard/hash_handler").HashHandler, g = i("./autocomplete/popup").AcePopup, E = i("./autocomplete/inline").AceInline, h = i("./autocomplete/popup").getAriaId, m = i("./autocomplete/util"), s = i("./lib/lang"), c = i("./lib/dom"), u = i("./snippets").snippetManager, d = i("./config"), a = i("./lib/event"), f = i("./lib/scroll").preventParentScroll, b = function(C, S) {
+      var p = i("./keyboard/hash_handler").HashHandler, g = i("./autocomplete/popup").AcePopup, E = i("./autocomplete/inline").AceInline, h = i("./autocomplete/popup").getAriaId, m = i("./autocomplete/util"), s = i("./lib/lang"), c = i("./lib/dom"), u = i("./snippets").snippetManager, d = i("./config"), a = i("./lib/event"), f = i("./lib/scroll").preventParentScroll, b = function(N, S) {
         S.completer && S.completer.destroy();
       }, y = (function() {
-        function C() {
+        function N() {
           this.autoInsert = !1, this.autoSelect = !0, this.autoShown = !1, this.exactMatch = !1, this.inlineEnabled = !1, this.keyboardHandler = new p(), this.keyboardHandler.bindKeys(this.commands), this.parentNode = null, this.setSelectOnHover = !1, this.hasSeen = /* @__PURE__ */ new Set(), this.showLoadingState = !1, this.stickySelectionDelay = 500, this.blurListener = this.blurListener.bind(this), this.changeListener = this.changeListener.bind(this), this.mousedownListener = this.mousedownListener.bind(this), this.mousewheelListener = this.mousewheelListener.bind(this), this.onLayoutChange = this.onLayoutChange.bind(this), this.changeTimer = s.delayedCall((function() {
             this.updateCompletions(!0);
           }).bind(this)), this.tooltipTimer = s.delayedCall(this.updateDocTooltip.bind(this), 50), this.popupTimer = s.delayedCall(this.$updatePopupPosition.bind(this), 50), this.stickySelectionTimer = s.delayedCall((function() {
             this.stickySelection = !0;
           }).bind(this), this.stickySelectionDelay), this.$firstOpenTimer = s.delayedCall((function() {
             var S = this.completionProvider && this.completionProvider.initialPosition;
-            this.autoShown || this.popup && this.popup.isOpen || !S || this.editor.completers.length === 0 || (this.completions = new N(C.completionsForLoading), this.openPopup(this.editor, S.prefix, !1), this.popup.renderer.setStyle("ace_loading", !0));
+            this.autoShown || this.popup && this.popup.isOpen || !S || this.editor.completers.length === 0 || (this.completions = new C(N.completionsForLoading), this.openPopup(this.editor, S.prefix, !1), this.popup.renderer.setStyle("ace_loading", !0));
           }).bind(this), this.stickySelectionDelay);
         }
-        return Object.defineProperty(C, "completionsForLoading", { get: function() {
+        return Object.defineProperty(N, "completionsForLoading", { get: function() {
           return [{ caption: d.nls("autocomplete.loading", "Loading..."), value: "" }];
-        }, enumerable: !1, configurable: !0 }), C.prototype.$init = function() {
+        }, enumerable: !1, configurable: !0 }), N.prototype.$init = function() {
           return this.popup = new g(this.parentNode || document.body || document.documentElement), this.popup.on("click", (function(S) {
             this.insertMatch(), S.stop();
           }).bind(this)), this.popup.focus = this.editor.focus.bind(this.editor), this.popup.on("show", this.$onPopupShow.bind(this)), this.popup.on("hide", this.$onHidePopup.bind(this)), this.popup.on("select", this.$onPopupChange.bind(this)), a.addListener(this.popup.container, "mouseout", this.mouseOutListener.bind(this)), this.popup.on("changeHoverMarker", this.tooltipTimer.bind(null, null)), this.popup.renderer.on("afterRender", this.$onPopupRender.bind(this)), this.popup;
-        }, C.prototype.$initInline = function() {
+        }, N.prototype.$initInline = function() {
           if (!(!this.inlineEnabled || this.inlineRenderer))
             return this.inlineRenderer = new E(), this.inlineRenderer;
-        }, C.prototype.getPopup = function() {
+        }, N.prototype.getPopup = function() {
           return this.popup || this.$init();
-        }, C.prototype.$onHidePopup = function() {
+        }, N.prototype.$onHidePopup = function() {
           this.inlineRenderer && this.inlineRenderer.hide(), this.hideDocTooltip(), this.stickySelectionTimer.cancel(), this.popupTimer.cancel(), this.stickySelection = !1;
-        }, C.prototype.$seen = function(S) {
+        }, N.prototype.$seen = function(S) {
           !this.hasSeen.has(S) && S && S.completer && S.completer.onSeen && typeof S.completer.onSeen == "function" && (S.completer.onSeen(this.editor, S), this.hasSeen.add(S));
-        }, C.prototype.$onPopupChange = function(S) {
+        }, N.prototype.$onPopupChange = function(S) {
           if (this.inlineRenderer && this.inlineEnabled) {
             var T = S ? null : this.popup.getData(this.popup.getRow());
             if (this.$updateGhostText(T), this.popup.isMouseOver && this.setSelectOnHover) {
@@ -36687,32 +36687,32 @@ function xM() {
             }
             this.popupTimer.schedule(), this.tooltipTimer.schedule();
           } else this.popupTimer.call(null, null), this.tooltipTimer.call(null, null);
-        }, C.prototype.$updateGhostText = function(S) {
+        }, N.prototype.$updateGhostText = function(S) {
           var T = this.base.row, k = this.base.column, M = this.editor.getCursorPosition().column, I = this.editor.session.getLine(T).slice(k, M);
           this.inlineRenderer.show(this.editor, S, I) ? this.$seen(S) : this.inlineRenderer.hide();
-        }, C.prototype.$onPopupRender = function() {
+        }, N.prototype.$onPopupRender = function() {
           var S = this.inlineRenderer && this.inlineEnabled;
           if (this.completions && this.completions.filtered && this.completions.filtered.length > 0) for (var T = this.popup.getFirstVisibleRow(); T <= this.popup.getLastVisibleRow(); T++) {
             var k = this.popup.getData(T);
             k && (!S || k.hideInlinePreview) && this.$seen(k);
           }
-        }, C.prototype.$onPopupShow = function(S) {
+        }, N.prototype.$onPopupShow = function(S) {
           this.$onPopupChange(S), this.stickySelection = !1, this.stickySelectionDelay >= 0 && this.stickySelectionTimer.schedule(this.stickySelectionDelay);
-        }, C.prototype.observeLayoutChanges = function() {
+        }, N.prototype.observeLayoutChanges = function() {
           if (!(this.$elements || !this.editor)) {
             window.addEventListener("resize", this.onLayoutChange, { passive: !0 }), window.addEventListener("wheel", this.mousewheelListener);
             for (var S = this.editor.container.parentNode, T = []; S; ) T.push(S), S.addEventListener("scroll", this.onLayoutChange, { passive: !0 }), S = S.parentNode;
             this.$elements = T;
           }
-        }, C.prototype.unObserveLayoutChanges = function() {
+        }, N.prototype.unObserveLayoutChanges = function() {
           var S = this;
           window.removeEventListener("resize", this.onLayoutChange, { passive: !0 }), window.removeEventListener("wheel", this.mousewheelListener), this.$elements && this.$elements.forEach(function(T) {
             T.removeEventListener("scroll", S.onLayoutChange, { passive: !0 });
           }), this.$elements = null;
-        }, C.prototype.onLayoutChange = function() {
+        }, N.prototype.onLayoutChange = function() {
           if (!this.popup.isOpen) return this.unObserveLayoutChanges();
           this.$updatePopupPosition(), this.updateDocTooltip();
-        }, C.prototype.$updatePopupPosition = function() {
+        }, N.prototype.$updatePopupPosition = function() {
           var S = this.editor, T = S.renderer, k = T.layerConfig.lineHeight, M = T.$cursorLayer.getPixelPosition(this.base, !0);
           M.left -= this.popup.getTextLeftOffset();
           var I = S.container.getBoundingClientRect();
@@ -36721,7 +36721,7 @@ function xM() {
           T.$ghostText && T.$ghostTextWidget && this.base.row === T.$ghostText.position.row && ($.top += T.$ghostTextWidget.el.offsetHeight);
           var B = S.container.getBoundingClientRect().bottom - k, D = B < $.top ? { top: B, left: $.left } : $;
           this.popup.tryShow(D, k, "bottom") || this.popup.tryShow(M, k, "top") || this.popup.show(M, k);
-        }, C.prototype.openPopup = function(S, T, k) {
+        }, N.prototype.openPopup = function(S, T, k) {
           this.$firstOpenTimer.cancel(), this.popup || this.$init(), this.inlineEnabled && !this.inlineRenderer && this.$initInline(), this.popup.autoSelect = this.autoSelect, this.popup.setSelectOnHover(this.setSelectOnHover);
           var M = this.popup.getRow(), I = this.popup.data[M];
           this.popup.setData(this.completions.filtered, this.completions.filterText), this.editor.textInput.setAriaOptions && this.editor.textInput.setAriaOptions({ activeDescendant: h(this.popup.getRow()), inline: this.inlineEnabled }), S.keyBinding.addKeyboardHandler(this.keyboardHandler);
@@ -36733,34 +36733,34 @@ function xM() {
             this.$updateGhostText(D);
           }
           k || (this.popup.setTheme(S.getTheme()), this.popup.setFontSize(S.getFontSize()), this.$updatePopupPosition(), this.tooltipNode && this.updateDocTooltip()), this.changeTimer.cancel(), this.observeLayoutChanges();
-        }, C.prototype.detach = function() {
+        }, N.prototype.detach = function() {
           this.editor && (this.editor.keyBinding.removeKeyboardHandler(this.keyboardHandler), this.editor.off("changeSelection", this.changeListener), this.editor.off("blur", this.blurListener), this.editor.off("mousedown", this.mousedownListener), this.editor.off("mousewheel", this.mousewheelListener)), this.$firstOpenTimer.cancel(), this.changeTimer.cancel(), this.hideDocTooltip(), this.completionProvider && this.completionProvider.detach(), this.popup && this.popup.isOpen && this.popup.hide(), this.popup && this.popup.renderer && this.popup.renderer.off("afterRender", this.$onPopupRender), this.base && this.base.detach(), this.activated = !1, this.completionProvider = this.completions = this.base = null, this.unObserveLayoutChanges();
-        }, C.prototype.changeListener = function(S) {
+        }, N.prototype.changeListener = function(S) {
           var T = this.editor.selection.lead;
           (T.row != this.base.row || T.column < this.base.column) && this.detach(), this.activated ? this.changeTimer.schedule() : this.detach();
-        }, C.prototype.blurListener = function(S) {
+        }, N.prototype.blurListener = function(S) {
           var T = document.activeElement, k = this.editor.textInput.getElement(), M = S.relatedTarget && this.tooltipNode && this.tooltipNode.contains(S.relatedTarget), I = this.popup && this.popup.container;
           T != k && T.parentNode != I && !M && T != this.tooltipNode && S.relatedTarget != k && this.detach();
-        }, C.prototype.mousedownListener = function(S) {
+        }, N.prototype.mousedownListener = function(S) {
           this.detach();
-        }, C.prototype.mousewheelListener = function(S) {
+        }, N.prototype.mousewheelListener = function(S) {
           this.popup && !this.popup.isMouseOver && this.detach();
-        }, C.prototype.mouseOutListener = function(S) {
+        }, N.prototype.mouseOutListener = function(S) {
           this.popup.isOpen && this.$updatePopupPosition();
-        }, C.prototype.goTo = function(S) {
+        }, N.prototype.goTo = function(S) {
           this.popup.goTo(S);
-        }, C.prototype.insertMatch = function(S, T) {
+        }, N.prototype.insertMatch = function(S, T) {
           if (S || (S = this.popup.getData(this.popup.getRow())), !S) return !1;
           if (S.value === "") return this.detach();
           var k = this.completions, M = this.getCompletionProvider().insertMatch(this.editor, S, k.filterText, T);
           return this.completions == k && this.detach(), M;
-        }, C.prototype.showPopup = function(S, T) {
+        }, N.prototype.showPopup = function(S, T) {
           this.editor && this.detach(), this.activated = !0, this.editor = S, S.completer != this && (S.completer && S.completer.detach(), S.completer = this), S.on("changeSelection", this.changeListener), S.on("blur", this.blurListener), S.on("mousedown", this.mousedownListener), S.on("mousewheel", this.mousewheelListener), this.updateCompletions(!1, T);
-        }, C.prototype.getCompletionProvider = function(S) {
+        }, N.prototype.getCompletionProvider = function(S) {
           return this.completionProvider || (this.completionProvider = new A(S)), this.completionProvider;
-        }, C.prototype.gatherCompletions = function(S, T) {
+        }, N.prototype.gatherCompletions = function(S, T) {
           return this.getCompletionProvider().gatherCompletions(S, T);
-        }, C.prototype.updateCompletions = function(S, T) {
+        }, N.prototype.updateCompletions = function(S, T) {
           if (S && this.base && this.completions) {
             var M = this.editor.getCursorPosition(), I = this.editor.session.getTextRange({ start: this.base, end: M });
             if (I == this.completions.filterText) return;
@@ -36771,7 +36771,7 @@ function xM() {
           }
           if (T && T.matches) {
             var M = this.editor.getSelectionRange().start;
-            return this.base = this.editor.session.doc.createAnchor(M.row, M.column), this.base.$insertRight = !0, this.completions = new N(T.matches), this.getCompletionProvider().completions = this.completions, this.openPopup(this.editor, "", S);
+            return this.base = this.editor.session.doc.createAnchor(M.row, M.column), this.base.$insertRight = !0, this.completions = new C(T.matches), this.getCompletionProvider().completions = this.completions, this.openPopup(this.editor, "", S);
           }
           var k = this.editor.getSession(), M = this.editor.getCursorPosition(), I = m.getCompletionPrefix(this.editor);
           this.base = k.doc.createAnchor(M.row, M.column - I.length), this.base.$insertRight = !0;
@@ -36783,7 +36783,7 @@ function xM() {
                 var L = !this.autoShown && this.emptyMessage;
                 if (typeof L == "function" && (L = this.emptyMessage(_)), L) {
                   var z = [{ caption: L, value: "" }];
-                  this.completions = new N(z), this.openPopup(this.editor, _, S), this.popup.renderer.setStyle("ace_loading", !1), this.popup.renderer.setStyle("ace_empty-message", !0);
+                  this.completions = new C(z), this.openPopup(this.editor, _, S), this.popup.renderer.setStyle("ace_loading", !1), this.popup.renderer.setStyle("ace_empty-message", !0);
                   return;
                 }
                 return this.detach();
@@ -36791,11 +36791,11 @@ function xM() {
               if (x.length == 1 && x[0].value == _ && !x[0].snippet) return this.detach();
               if (this.autoInsert && !this.autoShown && x.length == 1) return this.insertMatch(x[0]);
             }
-            this.completions = !O && this.showLoadingState ? new N(C.completionsForLoading.concat(x), D.filterText) : D, this.openPopup(this.editor, _, S), this.popup.renderer.setStyle("ace_empty-message", !1), this.popup.renderer.setStyle("ace_loading", !O);
+            this.completions = !O && this.showLoadingState ? new C(N.completionsForLoading.concat(x), D.filterText) : D, this.openPopup(this.editor, _, S), this.popup.renderer.setStyle("ace_empty-message", !1), this.popup.renderer.setStyle("ace_loading", !O);
           }).bind(this)), this.showLoadingState && !this.autoShown && (!this.popup || !this.popup.isOpen) && this.$firstOpenTimer.delay(this.stickySelectionDelay / 2);
-        }, C.prototype.cancelContextMenu = function() {
+        }, N.prototype.cancelContextMenu = function() {
           this.editor.$mouseHandler.cancelContextMenu();
-        }, C.prototype.updateDocTooltip = function() {
+        }, N.prototype.updateDocTooltip = function() {
           var S = this.popup, T = this.completions && this.completions.filtered, k = T && (T[S.getHoveredRow()] || T[S.getRow()]), M = null;
           if (!k || !this.editor || !this.popup.isOpen) return this.hideDocTooltip();
           for (var I = this.editor.completers.length, $ = 0; $ < I; $++) {
@@ -36807,7 +36807,7 @@ function xM() {
           }
           if (!M && typeof k != "string" && (M = k), typeof M == "string" && (M = { docText: M }), !M || !M.docHTML && !M.docText) return this.hideDocTooltip();
           this.showDocTooltip(M);
-        }, C.prototype.showDocTooltip = function(S) {
+        }, N.prototype.showDocTooltip = function(S) {
           this.tooltipNode || (this.tooltipNode = c.createElement("div"), this.tooltipNode.style.margin = "0", this.tooltipNode.style.pointerEvents = "auto", this.tooltipNode.style.overscrollBehavior = "contain", this.tooltipNode.tabIndex = -1, this.tooltipNode.onblur = this.blurListener.bind(this), this.tooltipNode.onclick = this.onTooltipClick.bind(this), this.tooltipNode.id = "doc-tooltip", this.tooltipNode.setAttribute("role", "tooltip"), this.tooltipNode.addEventListener("wheel", f));
           var T = this.editor.renderer.theme;
           this.tooltipNode.className = "ace_tooltip ace_doc-tooltip " + (T.isDark ? "ace_dark " : "") + (T.cssClass || "");
@@ -36815,12 +36815,12 @@ function xM() {
           S.docHTML ? k.innerHTML = S.docHTML : S.docText && (k.textContent = S.docText), k.parentNode || this.popup.container.appendChild(this.tooltipNode);
           var M = this.popup, I = M.container.getBoundingClientRect(), $ = 400, B = 300, D = M.renderer.scrollBar.width || 10, O = I.left, x = window.innerWidth - I.right - D, _ = M.isTopdown ? I.top : window.innerHeight - D - I.bottom, L = [Math.min(x / $, 1), Math.min(O / $, 1), Math.min(_ / B * 0.9)], z = Math.max.apply(Math, L), H = k.style;
           H.display = "block", z == L[0] ? (H.left = I.right + 1 + "px", H.right = "", H.maxWidth = $ * z + "px", H.top = I.top + "px", H.bottom = "", H.maxHeight = Math.min(window.innerHeight - D - I.top, B) + "px") : z == L[1] ? (H.right = window.innerWidth - I.left + "px", H.left = "", H.maxWidth = $ * z + "px", H.top = I.top + "px", H.bottom = "", H.maxHeight = Math.min(window.innerHeight - D - I.top, B) + "px") : z == L[2] && (H.left = window.innerWidth - I.left + "px", H.maxWidth = Math.min($, window.innerWidth) + "px", M.isTopdown ? (H.top = I.bottom + "px", H.left = I.left + "px", H.right = "", H.bottom = "", H.maxHeight = Math.min(window.innerHeight - D - I.bottom, B) + "px") : (H.top = M.container.offsetTop - k.offsetHeight + "px", H.left = I.left + "px", H.right = "", H.bottom = "", H.maxHeight = Math.min(M.container.offsetTop, B) + "px"));
-        }, C.prototype.hideDocTooltip = function() {
+        }, N.prototype.hideDocTooltip = function() {
           if (this.tooltipTimer.cancel(), !!this.tooltipNode) {
             var S = this.tooltipNode;
             !this.editor.isFocused() && document.activeElement == S && this.editor.focus(), this.tooltipNode = null, S.parentNode && S.parentNode.removeChild(S);
           }
-        }, C.prototype.onTooltipClick = function(S) {
+        }, N.prototype.onTooltipClick = function(S) {
           for (var T = S.target; T && T != this.tooltipNode; ) {
             if (T.nodeName == "A" && T.href) {
               T.rel = "noreferrer", T.target = "_blank";
@@ -36828,54 +36828,54 @@ function xM() {
             }
             T = T.parentNode;
           }
-        }, C.prototype.destroy = function() {
+        }, N.prototype.destroy = function() {
           if (this.detach(), this.popup) {
             this.popup.destroy();
             var S = this.popup.container;
             S && S.parentNode && S.parentNode.removeChild(S);
           }
           this.editor && this.editor.completer == this && (this.editor.off("destroy", b), this.editor.completer = null), this.inlineRenderer = this.popup = this.editor = null;
-        }, C.for = function(S) {
-          return S.completer instanceof C || (S.completer && (S.completer.destroy(), S.completer = null), d.get("sharedPopups") ? (C.$sharedInstance || (C.$sharedInstance = new C()), S.completer = C.$sharedInstance) : (S.completer = new C(), S.once("destroy", b))), S.completer;
-        }, C;
+        }, N.for = function(S) {
+          return S.completer instanceof N || (S.completer && (S.completer.destroy(), S.completer = null), d.get("sharedPopups") ? (N.$sharedInstance || (N.$sharedInstance = new N()), S.completer = N.$sharedInstance) : (S.completer = new N(), S.once("destroy", b))), S.completer;
+        }, N;
       })();
-      y.prototype.commands = { Up: function(C) {
-        C.completer.goTo("up");
-      }, Down: function(C) {
-        C.completer.goTo("down");
-      }, "Ctrl-Up|Ctrl-Home": function(C) {
-        C.completer.goTo("start");
-      }, "Ctrl-Down|Ctrl-End": function(C) {
-        C.completer.goTo("end");
-      }, Esc: function(C) {
-        C.completer.detach();
-      }, Return: function(C) {
-        return C.completer.insertMatch();
-      }, "Shift-Return": function(C) {
-        C.completer.insertMatch(null, { deleteSuffix: !0 });
-      }, Tab: function(C) {
-        var S = C.completer.insertMatch();
-        if (S || C.tabstopManager) return S;
-        C.completer.goTo("down");
-      }, Backspace: function(C) {
-        C.execCommand("backspace");
-        var S = m.getCompletionPrefix(C);
-        !S && C.completer && C.completer.detach();
-      }, PageUp: function(C) {
-        C.completer.popup.gotoPageUp();
-      }, PageDown: function(C) {
-        C.completer.popup.gotoPageDown();
-      } }, y.startCommand = { name: "startAutocomplete", exec: function(C, S) {
-        var T = y.for(C);
-        T.autoInsert = !1, T.autoSelect = !0, T.autoShown = !1, T.showPopup(C, S), T.cancelContextMenu();
+      y.prototype.commands = { Up: function(N) {
+        N.completer.goTo("up");
+      }, Down: function(N) {
+        N.completer.goTo("down");
+      }, "Ctrl-Up|Ctrl-Home": function(N) {
+        N.completer.goTo("start");
+      }, "Ctrl-Down|Ctrl-End": function(N) {
+        N.completer.goTo("end");
+      }, Esc: function(N) {
+        N.completer.detach();
+      }, Return: function(N) {
+        return N.completer.insertMatch();
+      }, "Shift-Return": function(N) {
+        N.completer.insertMatch(null, { deleteSuffix: !0 });
+      }, Tab: function(N) {
+        var S = N.completer.insertMatch();
+        if (S || N.tabstopManager) return S;
+        N.completer.goTo("down");
+      }, Backspace: function(N) {
+        N.execCommand("backspace");
+        var S = m.getCompletionPrefix(N);
+        !S && N.completer && N.completer.detach();
+      }, PageUp: function(N) {
+        N.completer.popup.gotoPageUp();
+      }, PageDown: function(N) {
+        N.completer.popup.gotoPageDown();
+      } }, y.startCommand = { name: "startAutocomplete", exec: function(N, S) {
+        var T = y.for(N);
+        T.autoInsert = !1, T.autoSelect = !0, T.autoShown = !1, T.showPopup(N, S), T.cancelContextMenu();
       }, bindKey: "Ctrl-Space|Ctrl-Shift-Space|Alt-Space" };
       var A = (function() {
-        function C(S) {
+        function N(S) {
           this.initialPosition = S, this.active = !0;
         }
-        return C.prototype.insertByIndex = function(S, T, k) {
+        return N.prototype.insertByIndex = function(S, T, k) {
           return !this.completions || !this.completions.filtered ? !1 : this.insertMatch(S, this.completions.filtered[T], k);
-        }, C.prototype.insertMatch = function(S, T, k) {
+        }, N.prototype.insertMatch = function(S, T, k) {
           if (!T) return !1;
           if (S.startOperation({ command: { name: "insertMatch" } }), T.completer && T.completer.insertMatch) T.completer.insertMatch(S, T);
           else {
@@ -36889,10 +36889,10 @@ function xM() {
             T.snippet ? u.insertSnippet(S, T.snippet) : this.$insertString(S, T), T.completer && T.completer.onInsert && typeof T.completer.onInsert == "function" && T.completer.onInsert(S, T), T.command && T.command === "startAutocomplete" && S.execCommand(T.command);
           }
           return S.endOperation(), !0;
-        }, C.prototype.$insertString = function(S, T) {
+        }, N.prototype.$insertString = function(S, T) {
           var k = T.value || T;
           S.execCommand("insertstring", k);
-        }, C.prototype.gatherCompletions = function(S, T) {
+        }, N.prototype.gatherCompletions = function(S, T) {
           var k = S.getSession(), M = S.getCursorPosition(), I = m.getCompletionPrefix(S), $ = [];
           this.completers = S.completers;
           var B = S.completers.length;
@@ -36903,10 +36903,10 @@ function xM() {
               })), !x && _ && ($ = $.concat(_)), T(null, { prefix: m.getCompletionPrefix(S), matches: $, finished: --B === 0 });
             });
           }), !0;
-        }, C.prototype.provideCompletions = function(S, T, k) {
+        }, N.prototype.provideCompletions = function(S, T, k) {
           var M = (function(D) {
             var O = D.prefix, x = D.matches;
-            this.completions = new N(x), T.exactMatch && (this.completions.exactMatch = !0), T.ignoreCaption && (this.completions.ignoreCaption = !0), this.completions.setFilter(O), (D.finished || this.completions.filtered.length) && k(null, this.completions, D.finished);
+            this.completions = new C(x), T.exactMatch && (this.completions.exactMatch = !0), T.ignoreCaption && (this.completions.ignoreCaption = !0), this.completions.setFilter(O), (D.finished || this.completions.filtered.length) && k(null, this.completions, D.finished);
           }).bind(this), I = !0, $ = null;
           if (this.gatherCompletions(S, (function(D, O) {
             if (this.active) {
@@ -36924,16 +36924,16 @@ function xM() {
             var B = $;
             $ = null, M(B);
           }
-        }, C.prototype.detach = function() {
+        }, N.prototype.detach = function() {
           this.active = !1, this.completers && this.completers.forEach(function(S) {
             typeof S.cancel == "function" && S.cancel();
           });
-        }, C;
-      })(), N = (function() {
-        function C(S, T) {
+        }, N;
+      })(), C = (function() {
+        function N(S, T) {
           this.all = S, this.filtered = S, this.filterText = T || "", this.exactMatch = !1, this.ignoreCaption = !1;
         }
-        return C.prototype.setFilter = function(S) {
+        return N.prototype.setFilter = function(S) {
           if (S.length > this.filterText && S.lastIndexOf(this.filterText, 0) === 0) var T = this.filtered;
           else var T = this.all;
           this.filterText = S, T = this.filterCompletions(T, this.filterText), T = T.sort(function(M, I) {
@@ -36944,7 +36944,7 @@ function xM() {
             var I = M.snippet || M.caption || M.value;
             return I === k ? !1 : (k = I, !0);
           }), this.filtered = T;
-        }, C.prototype.filterCompletions = function(S, T) {
+        }, N.prototype.filterCompletions = function(S, T) {
           var k = [], M = T.toUpperCase(), I = T.toLowerCase();
           e: for (var $ = 0, B; B = S[$]; $++) {
             if (B.skipFilter) {
@@ -36960,8 +36960,8 @@ function xM() {
                 var H = D.toLowerCase().indexOf(I);
                 if (H > -1) _ = H;
                 else for (var P = 0; P < T.length; P++) {
-                  var Q = D.indexOf(I[P], O + 1), F = D.indexOf(M[P], O + 1);
-                  if (L = Q >= 0 && (F < 0 || Q < F) ? Q : F, L < 0) continue e;
+                  var W = D.indexOf(I[P], O + 1), F = D.indexOf(M[P], O + 1);
+                  if (L = W >= 0 && (F < 0 || W < F) ? W : F, L < 0) continue e;
                   z = L - O - 1, z > 0 && (O === -1 && (_ += 10), _ += z, x |= 1 << P), O = L;
                 }
               }
@@ -36969,9 +36969,9 @@ function xM() {
             }
           }
           return k;
-        }, C;
+        }, N;
       })();
-      r.Autocomplete = y, r.CompletionProvider = A, r.FilteredList = N;
+      r.Autocomplete = y, r.CompletionProvider = A, r.FilteredList = C;
     }), ace.define("ace/marker_group", ["require", "exports", "module"], function(i, r, w) {
       var p = (function() {
         function g(E, h) {
@@ -36992,12 +36992,12 @@ function xM() {
               if (!(y.range.end.row < c) && !(y.range.start.row > u) && (y.range.start.row === f ? a++ : (f = y.range.start.row, a = 0), !(a > 200))) {
                 var A = y.range.clipRows(c, u);
                 if (!(A.start.row === A.end.row && A.start.column === A.end.column)) {
-                  var N = A.toScreenRange(m);
-                  if (N.isEmpty()) {
+                  var C = A.toScreenRange(m);
+                  if (C.isEmpty()) {
                     d = m.getNextFoldLine(A.end.row, d), d && d.end.row > A.end.row && (c = d.end.row);
                     continue;
                   }
-                  this.markerType === "fullLine" ? h.drawFullLineMarker(E, N, y.className, s) : N.isMultiLine() ? this.markerType === "line" ? h.drawMultiLineMarker(E, N, y.className, s) : h.drawTextMarker(E, N, y.className, s) : h.drawSingleLineMarker(E, N, y.className + " ace_br15", s);
+                  this.markerType === "fullLine" ? h.drawFullLineMarker(E, C, y.className, s) : C.isMultiLine() ? this.markerType === "line" ? h.drawMultiLineMarker(E, C, y.className, s) : h.drawTextMarker(E, C, y.className, s) : h.drawSingleLineMarker(E, C, y.className + " ace_br15", s);
                 }
               }
             }
@@ -37044,8 +37044,8 @@ function xM() {
         _ && _.type.match(/(tag-name|tag-open|tag-whitespace|attribute-name|attribute-value)\.xml$/) ? x.push("html-tag") : x = p.getActiveScopes(I);
         var L = p.snippetMap, z = [];
         x.forEach(function(H) {
-          for (var P = L[H] || [], Q = P.length; Q--; ) {
-            var F = P[Q], K = F.name || F.tabTrigger;
+          for (var P = L[H] || [], W = P.length; W--; ) {
+            var F = P[W], K = F.name || F.tabTrigger;
             K && z.push({ caption: K, snippet: F.content, meta: F.tabTrigger && !F.name ? F.tabTrigger + "⇥ " : "snippet", completerId: a.id });
           }
         }, this), O(null, z);
@@ -37062,14 +37062,14 @@ function xM() {
       }, bindKey: "Tab" }, y = function(I, $) {
         A($.session.$mode);
       }, A = function(I) {
-        typeof I == "string" && (I = E.$modes[I]), I && (p.files || (p.files = {}), N(I.$id, I.snippetFileId), I.modes && I.modes.forEach(A));
-      }, N = function(I, $) {
+        typeof I == "string" && (I = E.$modes[I]), I && (p.files || (p.files = {}), C(I.$id, I.snippetFileId), I.modes && I.modes.forEach(A));
+      }, C = function(I, $) {
         !$ || !I || p.files[I] || (p.files[I] = {}, E.loadModule($, function(B) {
           B && (p.files[I] = B, !B.snippets && B.snippetText && (B.snippets = p.parseSnippetFile(B.snippetText)), p.register(B.snippets || [], B.scope), B.includeScopes && (p.snippetMap[B.scope].includeScopes = B.includeScopes, B.includeScopes.forEach(function(D) {
             A("ace/mode/" + D);
           })));
         }));
-      }, C = function(I) {
+      }, N = function(I) {
         var $ = I.editor, B = $.completer && $.completer.activated;
         if (I.command.name === "backspace") B && !m.getCompletionPrefix($) && $.completer.detach();
         else if (I.command.name === "insertstring" && !B) {
@@ -37089,7 +37089,7 @@ function xM() {
       i("../config").defineOptions(M.prototype, "editor", { enableBasicAutocompletion: { set: function(I) {
         I ? (g.for(this), this.completers || (this.completers = Array.isArray(I) ? I : f), this.commands.addCommand(g.startCommand)) : this.commands.removeCommand(g.startCommand);
       }, value: !1 }, enableLiveAutocompletion: { set: function(I) {
-        I ? (this.completers || (this.completers = Array.isArray(I) ? I : f), this.commands.on("afterExec", C)) : this.commands.off("afterExec", C);
+        I ? (this.completers || (this.completers = Array.isArray(I) ? I : f), this.commands.on("afterExec", N)) : this.commands.off("afterExec", N);
       }, value: !1 }, liveAutocompletionDelay: { initialValue: 0 }, liveAutocompletionThreshold: { initialValue: 0 }, enableSnippets: { set: function(I) {
         I ? (this.commands.addCommand(b), this.on("changeMode", y), y(null, this)) : (this.commands.removeCommand(b), this.off("changeMode", y));
       }, value: !1 } }), r.MarkerGroup = s;
@@ -37447,16 +37447,16 @@ const OM = ({
   maxHeight: p = 640
 }) => {
   var A;
-  const { boomiConfig: g } = An(), [E, h] = W.useState(!r), m = W.useMemo(() => RM(t, e), [t, e]), s = W.useMemo(() => Math.max(3, m.split(`
+  const { boomiConfig: g } = An(), [E, h] = Q.useState(!r), m = Q.useMemo(() => RM(t, e), [t, e]), s = Q.useMemo(() => Math.max(3, m.split(`
 `).length), [m]), c = Math.max(w, Math.min(p, s * 18 + 48)), u = (A = g == null ? void 0 : g.theme) != null && A.darkModeTheme ? "tomorrow_night_bright" : "chrome", d = typeof t == "object" && t !== null ? "json" : LS(e), a = LS(e, d);
-  W.useEffect(() => {
+  Q.useEffect(() => {
     kM(a);
   }, [a]);
-  const f = W.useRef(null), b = async () => {
+  const f = Q.useRef(null), b = async () => {
     await navigator.clipboard.writeText(m);
   }, y = () => {
-    const N = new Blob([m], { type: "text/plain;charset=utf-8" }), C = URL.createObjectURL(N);
-    f.current && (f.current.href = C, f.current.download = `${(e ?? a).toLowerCase() || "data"}.txt`, f.current.click(), setTimeout(() => URL.revokeObjectURL(C), 1500));
+    const C = new Blob([m], { type: "text/plain;charset=utf-8" }), N = URL.createObjectURL(C);
+    f.current && (f.current.href = N, f.current.download = `${(e ?? a).toLowerCase() || "data"}.txt`, f.current.click(), setTimeout(() => URL.revokeObjectURL(N), 1500));
   };
   return /* @__PURE__ */ G.jsxs("div", { className: "rounded-lg border border-[var(--boomi-card-border)] bg-[var(--boomi-card-bg)]", children: [
     /* @__PURE__ */ G.jsxs("div", { className: "flex items-center justify-between px-2 py-1 border-b border-[var(--boomi-card-border)]", children: [
@@ -37465,7 +37465,7 @@ const OM = ({
         /* @__PURE__ */ G.jsx("button", { className: "text-xs opacity-75 hover:opacity-100", onClick: b, children: "Copy" }),
         /* @__PURE__ */ G.jsx("button", { className: "text-xs opacity-75 hover:opacity-100", onClick: y, children: "Download" }),
         /* @__PURE__ */ G.jsx("a", { ref: f, className: "hidden" }),
-        /* @__PURE__ */ G.jsx("button", { className: "text-xs opacity-75 hover:opacity-100", onClick: () => h((N) => !N), children: E ? "Collapse" : "Expand" })
+        /* @__PURE__ */ G.jsx("button", { className: "text-xs opacity-75 hover:opacity-100", onClick: () => h((C) => !C), children: E ? "Collapse" : "Expand" })
       ] })
     ] }),
     E && /* @__PURE__ */ G.jsx("div", { className: "relative", style: { height: c }, children: /* @__PURE__ */ G.jsx(
@@ -37558,9 +37558,9 @@ const NS = ({ variant: t = "error", children: e, title: i }) => {
   compact: g = !1,
   ariaLabel: E
 }) => {
-  const [h, m] = W.useState(i), [s, c] = W.useState(!1), [u, d] = W.useState(!1), a = W.useMemo(() => k_(t), [t]), f = typeof a.reason == "string" && a.reason.trim() || typeof a.errorDescription == "string" && a.errorDescription.trim() || void 0, b = typeof a.message == "string" && a.message.trim() || f || typeof a.error == "string" && a.error.trim() || typeof a.title == "string" && a.title.trim() || "An unexpected error occurred.", y = (a == null ? void 0 : a.code) ?? (a == null ? void 0 : a.status), A = (a == null ? void 0 : a.requestId) ?? (a == null ? void 0 : a.traceId) ?? (a == null ? void 0 : a.correlationId);
+  const [h, m] = Q.useState(i), [s, c] = Q.useState(!1), [u, d] = Q.useState(!1), a = Q.useMemo(() => k_(t), [t]), f = typeof a.reason == "string" && a.reason.trim() || typeof a.errorDescription == "string" && a.errorDescription.trim() || void 0, b = typeof a.message == "string" && a.message.trim() || f || typeof a.error == "string" && a.error.trim() || typeof a.title == "string" && a.title.trim() || "An unexpected error occurred.", y = (a == null ? void 0 : a.code) ?? (a == null ? void 0 : a.status), A = (a == null ? void 0 : a.requestId) ?? (a == null ? void 0 : a.traceId) ?? (a == null ? void 0 : a.correlationId);
   a != null && a.name || a != null && a.title;
-  const N = typeof (a == null ? void 0 : a.stack) == "string" ? a.stack : void 0, C = Array.isArray(a == null ? void 0 : a.issues) ? a.issues : [], S = C.length > 0, T = e || (a == null ? void 0 : a.title) || "Something went wrong", k = g ? "py-2 px-2" : "py-2.5 px-3", M = g ? "p-2" : "p-3";
+  const C = typeof (a == null ? void 0 : a.stack) == "string" ? a.stack : void 0, N = Array.isArray(a == null ? void 0 : a.issues) ? a.issues : [], S = N.length > 0, T = e || (a == null ? void 0 : a.title) || "Something went wrong", k = g ? "py-2 px-2" : "py-2.5 px-3", M = g ? "p-2" : "p-3";
   return /* @__PURE__ */ G.jsxs(
     "section",
     {
@@ -37609,7 +37609,7 @@ const NS = ({ variant: t = "error", children: e, title: i }) => {
                     children: "Raw"
                   }
                 ),
-                p && N && /* @__PURE__ */ G.jsx(
+                p && C && /* @__PURE__ */ G.jsx(
                   "button",
                   {
                     type: "button",
@@ -37666,7 +37666,7 @@ const NS = ({ variant: t = "error", children: e, title: i }) => {
           ] }),
           S && /* @__PURE__ */ G.jsxs("div", { className: "mt-2", children: [
             /* @__PURE__ */ G.jsx("div", { className: "boomi-connector-inner mb-1", children: /* @__PURE__ */ G.jsx("div", { className: "boomi-connector-heading", children: "Details" }) }),
-            /* @__PURE__ */ G.jsx("ul", { className: "list-disc pl-5 text-[13px] space-y-1", children: C.map((I, $) => {
+            /* @__PURE__ */ G.jsx("ul", { className: "list-disc pl-5 text-[13px] space-y-1", children: N.map((I, $) => {
               const B = (I == null ? void 0 : I.message) || (I == null ? void 0 : I.detail) || (I == null ? void 0 : I.error) || JSON.stringify(I), D = Array.isArray(I == null ? void 0 : I.path) && I.path.length ? ` (${I.path.join(".")})` : "";
               return /* @__PURE__ */ G.jsxs("li", { className: "break-words", children: [
                 B,
@@ -37674,7 +37674,7 @@ const NS = ({ variant: t = "error", children: e, title: i }) => {
               ] }, $);
             }) })
           ] }),
-          u && N && /* @__PURE__ */ G.jsxs("div", { className: "mt-3", children: [
+          u && C && /* @__PURE__ */ G.jsxs("div", { className: "mt-3", children: [
             /* @__PURE__ */ G.jsx("div", { className: "boomi-connector-inner mb-1", children: /* @__PURE__ */ G.jsx("div", { className: "boomi-connector-heading", children: "Stack Trace" }) }),
             /* @__PURE__ */ G.jsx(
               "pre",
@@ -37684,7 +37684,7 @@ const NS = ({ variant: t = "error", children: e, title: i }) => {
                   borderColor: "var(--boomi-card-border)",
                   background: "var(--boomi-update-content-bg)"
                 },
-                children: N
+                children: C
               }
             ),
             /* @__PURE__ */ G.jsx("div", { className: "flex justify-end mt-1", children: /* @__PURE__ */ G.jsx(
@@ -37692,7 +37692,7 @@ const NS = ({ variant: t = "error", children: e, title: i }) => {
               {
                 type: "button",
                 className: "boomi-btn-secondary px-2 py-1 rounded text-xs font-semibold",
-                onClick: () => Qf(N),
+                onClick: () => Qf(C),
                 "aria-label": "Copy stack trace",
                 children: "Copy Stack"
               }
@@ -37750,7 +37750,7 @@ const Vf = ({
   title: e,
   treatStringAsHTML: i = !1
 }) => {
-  const { display: r } = W.useMemo(() => typeof t == "string" ? { display: t } : { display: IM(t, 2) }, [t]);
+  const { display: r } = Q.useMemo(() => typeof t == "string" ? { display: t } : { display: IM(t, 2) }, [t]);
   return /* @__PURE__ */ G.jsxs("div", { className: "w-full", children: [
     e ? /* @__PURE__ */ G.jsx("div", { className: "text-xl font-semibold mb-2", children: e }) : null,
     typeof t == "string" && i ? /* @__PURE__ */ G.jsx(
@@ -37770,11 +37770,11 @@ const Vf = ({
     ) : /* @__PURE__ */ G.jsx("pre", { className: "m-0 text-sm whitespace-pre-wrap break-words", children: r })
   ] });
 }, Kf = (t, e) => t ? /* @__PURE__ */ G.jsx("span", { "aria-hidden": "true", children: t }) : e, MM = ({ config: t, responseText: e, context: i }) => {
-  var A, N, C, S, T, k, M, I, $, B, D, O, x, _;
-  const [r, w] = W.useState(null), [p, g] = W.useState(!1), [E, h] = W.useState(""), [m, s] = W.useState(!1), c = ((A = t.thumbsUp) == null ? void 0 : A.show) !== !1, u = ((N = t.thumbsDown) == null ? void 0 : N.show) !== !1, d = ((C = t.comment) == null ? void 0 : C.show) !== !1, a = (L, z) => {
-    const H = {
-      rating: L,
-      ...z.trim() ? { comment: z.trim() } : {},
+  var T, k, M, I, $, B, D, O, x, _, L, z;
+  const [r, w] = Q.useState(null), [p, g] = Q.useState(!1), [E, h] = Q.useState(""), [m, s] = Q.useState(!1), c = ((T = t.thumbsUp) == null ? void 0 : T.show) !== !1, u = ((k = t.thumbsDown) == null ? void 0 : k.show) !== !1, d = ((M = t.comment) == null ? void 0 : M.show) !== !1, a = ((I = t.thumbsUp) == null ? void 0 : I.label) || "Good response", f = (($ = t.thumbsDown) == null ? void 0 : $.label) || "Bad response", b = ((B = t.comment) == null ? void 0 : B.label) || "Add a comment", y = ((D = t.comment) == null ? void 0 : D.ariaLabel) || "Feedback comment", A = (H, P) => {
+    const W = {
+      rating: H,
+      ...P.trim() ? { comment: P.trim() } : {},
       prompt: i.promptText ?? "",
       response: e
     };
@@ -37782,24 +37782,24 @@ const Vf = ({
       agentId: i.agentId,
       sessionId: i.sessionId,
       messageId: i.messageId
-    }, H), s(!0);
-  }, f = (L) => {
-    const z = r === L ? null : L;
-    w(z), a(z, E);
-  }, b = () => {
-    E.trim() && (a(r, E), g(!1));
-  }, y = t.thanksText ?? "Thanks for your feedback!";
+    }, W), s(!0);
+  }, C = (H) => {
+    const P = r === H ? null : H;
+    w(P), A(P, E);
+  }, N = () => {
+    E.trim() && (A(r, E), g(!1));
+  }, S = t.thanksText ?? "Thanks for your feedback!";
   return /* @__PURE__ */ G.jsxs("div", { className: "boomi-agent-feedback", role: "group", "aria-label": "Response feedback", children: [
     c && /* @__PURE__ */ G.jsx(
       "button",
       {
         type: "button",
         className: `boomi-agent-feedback__btn is-up ${r === "up" ? "is-active" : ""}`,
-        onClick: () => f("up"),
-        title: ((S = t.thumbsUp) == null ? void 0 : S.label) ?? "Good response",
-        "aria-label": ((T = t.thumbsUp) == null ? void 0 : T.label) ?? "Good response",
+        onClick: () => C("up"),
+        title: a,
+        "aria-label": a,
         "aria-pressed": r === "up",
-        children: Kf((k = t.thumbsUp) == null ? void 0 : k.icon, /* @__PURE__ */ G.jsx(TN, {}))
+        children: Kf((O = t.thumbsUp) == null ? void 0 : O.icon, /* @__PURE__ */ G.jsx(TN, {}))
       }
     ),
     u && /* @__PURE__ */ G.jsx(
@@ -37807,11 +37807,11 @@ const Vf = ({
       {
         type: "button",
         className: `boomi-agent-feedback__btn is-down ${r === "down" ? "is-active" : ""}`,
-        onClick: () => f("down"),
-        title: ((M = t.thumbsDown) == null ? void 0 : M.label) ?? "Bad response",
-        "aria-label": ((I = t.thumbsDown) == null ? void 0 : I.label) ?? "Bad response",
+        onClick: () => C("down"),
+        title: f,
+        "aria-label": f,
         "aria-pressed": r === "down",
-        children: Kf(($ = t.thumbsDown) == null ? void 0 : $.icon, /* @__PURE__ */ G.jsx(yN, {}))
+        children: Kf((x = t.thumbsDown) == null ? void 0 : x.icon, /* @__PURE__ */ G.jsx(yN, {}))
       }
     ),
     d && /* @__PURE__ */ G.jsx(
@@ -37819,22 +37819,23 @@ const Vf = ({
       {
         type: "button",
         className: `boomi-agent-feedback__btn is-comment ${p ? "is-active" : ""}`,
-        onClick: () => g((L) => !L),
-        title: ((B = t.comment) == null ? void 0 : B.label) ?? "Add a comment",
-        "aria-label": ((D = t.comment) == null ? void 0 : D.label) ?? "Add a comment",
+        onClick: () => g((H) => !H),
+        title: b,
+        "aria-label": b,
         "aria-expanded": p,
-        children: Kf((O = t.comment) == null ? void 0 : O.icon, /* @__PURE__ */ G.jsx(e1, {}))
+        children: Kf((_ = t.comment) == null ? void 0 : _.icon, /* @__PURE__ */ G.jsx(e1, {}))
       }
     ),
-    m && !p && /* @__PURE__ */ G.jsx("span", { className: "boomi-agent-feedback__thanks", role: "status", children: y }),
+    m && !p && /* @__PURE__ */ G.jsx("span", { className: "boomi-agent-feedback__thanks", role: "status", children: S }),
     p && /* @__PURE__ */ G.jsxs("div", { className: "boomi-agent-feedback__comment", children: [
       /* @__PURE__ */ G.jsx(
         "textarea",
         {
           className: "boomi-agent-feedback__textarea",
           value: E,
-          onChange: (L) => h(L.target.value),
-          placeholder: ((x = t.comment) == null ? void 0 : x.placeholder) ?? "Tell us more about this response…",
+          onChange: (H) => h(H.target.value),
+          placeholder: ((L = t.comment) == null ? void 0 : L.placeholder) ?? "Tell us more about this response…",
+          "aria-label": y,
           rows: 3
         }
       ),
@@ -37843,9 +37844,9 @@ const Vf = ({
         {
           type: "button",
           className: "boomi-agent-feedback__submit",
-          onClick: b,
+          onClick: N,
           disabled: !E.trim(),
-          children: ((_ = t.comment) == null ? void 0 : _.submitLabel) ?? "Submit"
+          children: ((z = t.comment) == null ? void 0 : z.submitLabel) ?? "Submit"
         }
       )
     ] })
@@ -37863,7 +37864,7 @@ const $M = (t) => {
   feedbackContext: w
 }) => {
   var d;
-  const p = W.useSyncExternalStore(
+  const p = Q.useSyncExternalStore(
     wu.subscribeChanges,
     () => wu.hasSubscribers("feedback")
   ), g = (t == null ? void 0 : t.role) === "user", E = (() => {
@@ -38074,11 +38075,11 @@ function PM({
   error: m
 }) {
   var Ge, Ve, Ae, _e, Ce, Pe, ot, Ie;
-  const { boomiConfig: s } = An(), [c, u] = W.useState(""), [d, a] = W.useState([]), [f, b] = W.useState(!1), y = W.useRef(null), A = W.useRef(null), N = W.useRef(null), C = W.useRef(null), S = W.useRef(null), T = W.useRef(!1), [k, M] = W.useState(120), I = (w == null ? void 0 : w.state) === "working" || (w == null ? void 0 : w.state) === "progress", $ = !r && !I, B = t.integrationPackId, D = B ? ((Ve = (Ge = s == null ? void 0 : s.agents) == null ? void 0 : Ge[B]) == null ? void 0 : Ve.ui) ?? void 0 : void 0, O = B ? ((_e = (Ae = s == null ? void 0 : s.agents) == null ? void 0 : Ae[B]) == null ? void 0 : _e.transport) === "boomi-direct" : !1, x = B ? ((Pe = (Ce = s == null ? void 0 : s.agents) == null ? void 0 : Ce[B]) == null ? void 0 : Pe.feedback) ?? void 0 : void 0, _ = (D == null ? void 0 : D.allowFreeTextPrompt) !== !1, L = Array.isArray(D == null ? void 0 : D.prompts) ? D.prompts : [], z = (D == null ? void 0 : D.promptsAlign) ?? "center", H = (D == null ? void 0 : D.promptsLocation) ?? "input", P = z === "left" ? "justify-start" : z === "right" ? "justify-end" : "justify-center", Q = !!(D != null && D.fileAttachmentSupported), F = !!(D != null && D.fileAttachmentRequired), K = Array.isArray(D == null ? void 0 : D.allowedFileExtensions) ? D.allowedFileExtensions.map((he) => he.startsWith(".") ? he.toLowerCase() : `.${he.toLowerCase()}`) : [], V = Q && F && d.length === 0, X = Number.isFinite(D == null ? void 0 : D.maxFiles) ? D.maxFiles : 5, q = Number.isFinite(D == null ? void 0 : D.maxTotalBytes) ? D.maxTotalBytes : 25 * 1024 * 1024, Z = (D == null ? void 0 : D.welcome) ?? void 0, ne = (Z == null ? void 0 : Z.title) ?? "Welcome to your Agent Chat", ae = (Z == null ? void 0 : Z.subtitle) ?? "Ask me anything about your integrations.", le = W.useRef(!0), [me, Se] = W.useState(!0), Ne = W.useRef(!0), Me = (he = "smooth") => {
+  const { boomiConfig: s } = An(), [c, u] = Q.useState(""), [d, a] = Q.useState([]), [f, b] = Q.useState(!1), y = Q.useRef(null), A = Q.useRef(null), C = Q.useRef(null), N = Q.useRef(null), S = Q.useRef(null), T = Q.useRef(!1), [k, M] = Q.useState(120), I = (w == null ? void 0 : w.state) === "working" || (w == null ? void 0 : w.state) === "progress", $ = !r && !I, B = t.integrationPackId, D = B ? ((Ve = (Ge = s == null ? void 0 : s.agents) == null ? void 0 : Ge[B]) == null ? void 0 : Ve.ui) ?? void 0 : void 0, O = B ? ((_e = (Ae = s == null ? void 0 : s.agents) == null ? void 0 : Ae[B]) == null ? void 0 : _e.transport) === "boomi-direct" : !1, x = B ? ((Pe = (Ce = s == null ? void 0 : s.agents) == null ? void 0 : Ce[B]) == null ? void 0 : Pe.feedback) ?? void 0 : void 0, _ = (D == null ? void 0 : D.allowFreeTextPrompt) !== !1, L = Array.isArray(D == null ? void 0 : D.prompts) ? D.prompts : [], z = (D == null ? void 0 : D.promptsAlign) ?? "center", H = (D == null ? void 0 : D.promptsLocation) ?? "input", P = z === "left" ? "justify-start" : z === "right" ? "justify-end" : "justify-center", W = !!(D != null && D.fileAttachmentSupported), F = !!(D != null && D.fileAttachmentRequired), K = Array.isArray(D == null ? void 0 : D.allowedFileExtensions) ? D.allowedFileExtensions.map((he) => he.startsWith(".") ? he.toLowerCase() : `.${he.toLowerCase()}`) : [], V = W && F && d.length === 0, X = Number.isFinite(D == null ? void 0 : D.maxFiles) ? D.maxFiles : 5, q = Number.isFinite(D == null ? void 0 : D.maxTotalBytes) ? D.maxTotalBytes : 25 * 1024 * 1024, Z = (D == null ? void 0 : D.welcome) ?? void 0, ne = (Z == null ? void 0 : Z.title) ?? "Welcome to your Agent Chat", ae = (Z == null ? void 0 : Z.subtitle) ?? "Ask me anything about your integrations.", le = Q.useRef(!0), [me, Se] = Q.useState(!0), Ne = Q.useRef(!0), Me = (he = "smooth") => {
     var jt;
     const ee = y.current;
     if (!ee) return;
-    const pe = A.current, Re = ((jt = C.current) == null ? void 0 : jt.offsetHeight) ?? 0, Ue = 32, at = pe ? pe.offsetTop : ee.scrollHeight, _t = Math.max(0, at - (ee.clientHeight - Re - Ue));
+    const pe = A.current, Re = ((jt = N.current) == null ? void 0 : jt.offsetHeight) ?? 0, Ue = 32, at = pe ? pe.offsetTop : ee.scrollHeight, _t = Math.max(0, at - (ee.clientHeight - Re - Ue));
     ee.scrollTo({ top: _t, behavior: he });
   }, $e = () => {
     const he = y.current;
@@ -38086,11 +38087,11 @@ function PM({
     const ee = he.scrollTop + he.clientHeight >= he.scrollHeight - 24;
     Se(ee), le.current = ee;
   };
-  W.useEffect(() => {
+  Q.useEffect(() => {
     const he = Ne.current ? "auto" : "smooth";
     Me(he), Ne.current = !1;
-  }, [i.length, w == null ? void 0 : w.note, r, I, h, d.length]), W.useLayoutEffect(() => {
-    const he = C.current;
+  }, [i.length, w == null ? void 0 : w.note, r, I, h, d.length]), Q.useLayoutEffect(() => {
+    const he = N.current;
     if (!he) return;
     const ee = () => {
       const Re = he.offsetHeight || 0;
@@ -38099,17 +38100,17 @@ function PM({
     ee();
     const pe = new ResizeObserver(ee);
     return pe.observe(he), () => pe.disconnect();
-  }, []), W.useEffect(() => {
+  }, []), Q.useEffect(() => {
     Me("auto");
-  }, [k]), W.useEffect(() => {
+  }, [k]), Q.useEffect(() => {
     T.current = !0;
-  }, [e]), W.useEffect(() => {
+  }, [e]), Q.useEffect(() => {
     if (T.current || h || r || I) {
       Me(h ? "auto" : "smooth"), T.current = !1;
       return;
     }
   }, [i.length, h, r, I, w == null ? void 0 : w.note]);
-  const Be = W.useMemo(
+  const Be = Q.useMemo(
     () => {
       const he = [];
       return i.forEach((ee, pe) => {
@@ -38162,16 +38163,16 @@ function PM({
     const he = S.current;
     he && (he.style.height = "auto", he.style.height = `${Math.min(he.scrollHeight, 720)}px`);
   };
-  W.useEffect(() => {
+  Q.useEffect(() => {
     Bt();
   }, [c]);
   const Wt = (he) => {
-    Q && (he.preventDefault(), he.stopPropagation(), b(!0));
+    W && (he.preventDefault(), he.stopPropagation(), b(!0));
   }, Sn = (he) => {
-    Q && (he.preventDefault(), he.stopPropagation(), b(!1));
+    W && (he.preventDefault(), he.stopPropagation(), b(!1));
   }, gt = (he) => {
     var ee, pe;
-    Q && (he.preventDefault(), he.stopPropagation(), b(!1), (pe = (ee = he.dataTransfer) == null ? void 0 : ee.files) != null && pe.length && ye(he.dataTransfer.files));
+    W && (he.preventDefault(), he.stopPropagation(), b(!1), (pe = (ee = he.dataTransfer) == null ? void 0 : ee.files) != null && pe.length && ye(he.dataTransfer.files));
   }, Kt = async () => {
     if (!$) return;
     const he = c.trim();
@@ -38243,12 +38244,12 @@ function PM({
         ]
       }
     ),
-    /* @__PURE__ */ G.jsx("div", { className: "boomi-agent-composer pointer-events-none", "aria-live": "polite", ref: C, children: /* @__PURE__ */ G.jsx(
+    /* @__PURE__ */ G.jsx("div", { className: "boomi-agent-composer pointer-events-none", "aria-live": "polite", ref: N, children: /* @__PURE__ */ G.jsx(
       "form",
       {
         className: [
           "pointer-events-auto w-full relative z-10",
-          Q && f ? "outline outline-2 outline-[var(--boomi-accent,#6366f1)]" : ""
+          W && f ? "outline outline-2 outline-[var(--boomi-accent,#6366f1)]" : ""
         ].join(" "),
         onSubmit: (he) => {
           he.preventDefault(), Kt();
@@ -38257,7 +38258,7 @@ function PM({
         onDragLeave: Sn,
         onDrop: gt,
         children: /* @__PURE__ */ G.jsxs("div", { className: "mx-auto max-w-[1024px] w-full px-4 md:px-6 py-3 space-y-2", children: [
-          Q && d.length > 0 && /* @__PURE__ */ G.jsx("div", { className: "flex flex-wrap gap-2 items-center", children: d.map((he, ee) => /* @__PURE__ */ G.jsxs(
+          W && d.length > 0 && /* @__PURE__ */ G.jsx("div", { className: "flex flex-wrap gap-2 items-center", children: d.map((he, ee) => /* @__PURE__ */ G.jsxs(
             "span",
             {
               className: `inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm border
@@ -38281,7 +38282,7 @@ function PM({
             `${he.name}-${ee}`
           )) }),
           /* @__PURE__ */ G.jsxs("div", { className: "flex items-end gap-2 rounded-2xl bg-[var(--boomi-agent-compose-bg,var(--boomi-card-bg))] border border-[var(--boomi-agent-compose-input-border,var(--boomi-card-border))] p-2 shadow-[0_6px_18px_rgba(15,23,42,0.08)]", children: [
-            Q && /* @__PURE__ */ G.jsxs(G.Fragment, { children: [
+            W && /* @__PURE__ */ G.jsxs(G.Fragment, { children: [
               /* @__PURE__ */ G.jsx(
                 "button",
                 {
@@ -38289,7 +38290,7 @@ function PM({
                   disabled: !$,
                   onClick: () => {
                     var he;
-                    return (he = N.current) == null ? void 0 : he.click();
+                    return (he = C.current) == null ? void 0 : he.click();
                   },
                   className: "shrink-0 inline-flex items-center justify-center rounded-lg p-2 border border-[var(--boomi-agent-compose-secondary-border,var(--boomi-card-border))] bg-[var(--boomi-agent-compose-secondary-bg,var(--boomi-card-bg))] hover:bg-[color-mix(in_srgb,var(--boomi-agent-compose-secondary-bg,var(--boomi-card-bg)) 85%,var(--boomi-agent-compose-bg,var(--boomi-card-bg)))] disabled:opacity-50",
                   title: K.length ? `Attach file (${K.join(", ")})` : "Attach file",
@@ -38299,7 +38300,7 @@ function PM({
               /* @__PURE__ */ G.jsx(
                 "input",
                 {
-                  ref: N,
+                  ref: C,
                   type: "file",
                   multiple: !0,
                   accept: ht,
@@ -38320,7 +38321,7 @@ function PM({
                   u(he.target.value), Bt();
                 },
                 rows: 1,
-                placeholder: Q ? F && V ? `Attachment Required — drop a file here or click the paperclip (supported: ${ht})` : "Message..." : "Message…",
+                placeholder: W ? F && V ? `Attachment Required — drop a file here or click the paperclip (supported: ${ht})` : "Message..." : "Message…",
                 className: [
                   "w-full resize-none bg-transparent focus:outline-none",
                   V ? "placeholder-[var(--boomi-error-soft,var(--boomi-error-fg,#b91c1c))]/90" : ""
@@ -38701,12 +38702,13 @@ const jM = {
 function GM() {
   const t = Fu();
   async function e(p) {
-    const { integrationPackInstanceId: g, environmentId: E, signal: h } = p;
+    const { integrationPackInstanceId: g, environmentId: E, isSingleInstall: h, signal: m } = p;
     return t.get("/map-extensions", {
-      signal: h,
+      signal: m,
       params: {
         integrationPackInstanceId: g,
-        environmentId: E
+        environmentId: E,
+        isSingleInstall: h
       }
     });
   }
@@ -38723,12 +38725,13 @@ function GM() {
     });
   }
   async function w(p) {
-    const { originals: g, updated: E, integrationPackInstanceId: h, environmentId: m } = p;
+    const { originals: g, updated: E, integrationPackInstanceId: h, environmentId: m, isSingleInstall: s } = p;
     return t.post("/map-extensions/browse", {
       originals: g,
       updated: E,
       integrationPackInstanceId: h,
-      environmentId: m
+      environmentId: m,
+      isSingleInstall: s
     });
   }
   return { getMapExtensions: e, updateMapExtension: i, dynamicBrowseMapExtensions: r, mapFunctionBrowse: w };
@@ -38740,9 +38743,9 @@ function GM() {
  * @support https://bitbucket.org/officialboomi/embedkit
  */
 const WM = () => {
-  const [t, e] = W.useState(!1), [i, r] = W.useState(null), [w, p] = W.useState(null), [g, E] = W.useState(null), h = W.useRef(null), { updateEnvironmentExtensions: m } = Ol(), { mapFunctionBrowse: s } = GM();
+  const [t, e] = Q.useState(!1), [i, r] = Q.useState(null), [w, p] = Q.useState(null), [g, E] = Q.useState(null), h = Q.useRef(null), { updateEnvironmentExtensions: m } = Ol(), { mapFunctionBrowse: s } = GM();
   return {
-    updateFromCombined: W.useCallback(
+    updateFromCombined: Q.useCallback(
       async (u, d, a, f, b) => {
         if (je.debug("Starting batch update from combined edits:", { originals: u.length, edited: d.length }), !a || !f) {
           const y = "Code [3002] - environmentId and integrationPackInstanceId are required for update.";
@@ -38756,40 +38759,37 @@ const WM = () => {
               combinedEdited: d
             }
           );
-          if (je.debug("Batch update completed:", y.updatedExtensions), b)
-            p(d);
-          else {
-            const A = await s({
-              originals: u,
-              updated: d,
-              integrationPackInstanceId: f,
-              environmentId: a
+          je.debug("Batch update completed:", y.updatedExtensions);
+          const A = await s({
+            originals: u,
+            updated: d,
+            integrationPackInstanceId: f,
+            environmentId: a,
+            isSingleInstall: b
+          });
+          je.debug("Map function browse response:", A);
+          const C = A.failedCandidates || [], N = A.successCandidates || [];
+          if (N.length > 0 && N.forEach((S) => {
+            je.debug("Storing successful Dynamic Browsing candidate in BrowseSessionStore:", S), jM.upsert({
+              containerId: S.containerId,
+              connectionId: S.connectionId,
+              connectionName: S.connectionName,
+              paramName: S.paramName,
+              sessionId: S.sessionId,
+              ttlMs: O_,
+              mapId: S.mapId,
+              processId: S.processId,
+              environmentId: S.environmentId,
+              candidateSource: S.candidateSource
             });
-            je.debug("Map function browse response:", A);
-            const N = A.failedCandidates || [], C = A.successCandidates || [];
-            if (C.length > 0 && C.forEach((S) => {
-              je.debug("Storing successful Dynamic Browsing candidate in BrowseSessionStore:", S), jM.upsert({
-                containerId: S.containerId,
-                connectionId: S.connectionId,
-                connectionName: S.connectionName,
-                paramName: S.paramName,
-                sessionId: S.sessionId,
-                ttlMs: O_,
-                mapId: S.mapId,
-                processId: S.processId,
-                environmentId: S.environmentId,
-                candidateSource: S.candidateSource
-              });
-            }), N && N.length > 0) {
-              je.warn("Some Dynamic Browsing candidates failed to authenticate:", A.failedCandidates);
-              const S = h.current ?? [], T = await xN(A, S);
-              p(T);
-              const k = "You must provide valid connection credentials to proceed.";
-              throw je.error("Failed to authenticate Dynamic Browsing endpoints."), r(k), new Error(k);
-            }
-            je.debug("Map function browse completed:", A);
+          }), C && C.length > 0) {
+            je.warn("Some Dynamic Browsing candidates failed to authenticate:", A.failedCandidates);
+            const S = h.current ?? [], T = await xN(A, S);
+            p(T);
+            const k = "You must provide valid connection credentials to proceed.";
+            throw je.error("Failed to authenticate Dynamic Browsing endpoints."), r(k), new Error(k);
           }
-          return y;
+          return je.debug("Map function browse completed:", A), y;
         } catch (y) {
           const A = (y == null ? void 0 : y.message) ?? "Unknown batch update error";
           throw r(A), je.error("Batch update failed:", A), y;
@@ -38812,7 +38812,7 @@ const WM = () => {
  * @support https://bitbucket.org/officialboomi/embedkit
  */
 const QM = ({} = {}) => {
-  const [t, e] = W.useState(null), [i, r] = W.useState(null), [w, p] = W.useState(!1), [g, E] = W.useState(null), { fetchEnvironmentExtensions: h } = Ol(), m = W.useRef(null), s = W.useCallback(
+  const [t, e] = Q.useState(null), [i, r] = Q.useState(null), [w, p] = Q.useState(!1), [g, E] = Q.useState(null), { fetchEnvironmentExtensions: h } = Ol(), m = Q.useRef(null), s = Q.useCallback(
     async (c, u, d, a) => {
       const f = `${u}:${d}`;
       m.current = f;
@@ -38823,17 +38823,17 @@ const QM = ({} = {}) => {
           throw new Error("Code [1003] - environmentId or environments[] required");
         const b = a ?? !1;
         if (b) {
-          const C = "Code [1004] - Cannot edit connection details for this type of integration. ";
-          throw E(C), new Error(C);
+          const N = "Code [1004] - Cannot edit connection details for this type of integration. ";
+          throw E(N), new Error(N);
         }
         p(!0), E(null);
         const y = await h({
           integrationPackInstanceId: d,
           environmentId: u || void 0,
-          environmentIds: u ? void 0 : c.map((C) => C.id).filter((C) => C != null),
+          environmentIds: u ? void 0 : c.map((N) => N.id).filter((N) => N != null),
           isSingleInstall: b
-        }), A = (y == null ? void 0 : y.result) ?? (y == null ? void 0 : y.result) ?? [], N = (y == null ? void 0 : y.combined) ?? (y == null ? void 0 : y.combined) ?? [];
-        r(A), e(N);
+        }), A = (y == null ? void 0 : y.result) ?? (y == null ? void 0 : y.result) ?? [], C = (y == null ? void 0 : y.combined) ?? (y == null ? void 0 : y.combined) ?? [];
+        r(A), e(C);
       } catch (b) {
         const y = (b == null ? void 0 : b.message) ?? "Code [1010] - Unknown error occurred";
         throw je.error("Failed to fetch environment extensions:", y), E(y), new Error(y);
@@ -38872,7 +38872,7 @@ const QM = ({} = {}) => {
  * - Tolerates namespaced response keys (e.g., `bns:authorizationCodeRequestUrl`).
  */
 const VM = () => {
-  const [t, e] = W.useState(null), [i, r] = W.useState(!1), [w, p] = W.useState(null), { fetchOauth2Url: g } = Ol(), E = W.useCallback(async (h, m, s, c) => {
+  const [t, e] = Q.useState(null), [i, r] = Q.useState(!1), [w, p] = Q.useState(null), { fetchOauth2Url: g } = Ol(), E = Q.useCallback(async (h, m, s, c) => {
     const u = h == null ? void 0 : h.trim(), d = m == null ? void 0 : m.trim(), a = s == null ? void 0 : s.trim(), f = c == null ? void 0 : c.trim(), b = !!u && !!d && !!a && !!f;
     try {
       if (r(!0), p(null), !b)
@@ -38900,7 +38900,7 @@ const VM = () => {
  * @support https://bitbucket.org/officialboomi/embedkit
  */
 const KM = () => {
-  const [t, e] = W.useState(null), [i, r] = W.useState(!1), [w, p] = W.useState(null), { fetchConnectionStatus: g } = Ol(), E = W.useCallback(
+  const [t, e] = Q.useState(null), [i, r] = Q.useState(!1), [w, p] = Q.useState(null), { fetchConnectionStatus: g } = Ol(), E = Q.useCallback(
     async (h, m, s, c, u) => {
       try {
         r(!0), p(null);
@@ -38942,8 +38942,8 @@ const KM = () => {
   hoverText: u,
   iconOnly: d = !1
 }) => {
-  const [a, f] = W.useState(!1), [b, y] = W.useState(!1);
-  W.useEffect(() => {
+  const [a, f] = Q.useState(!1), [b, y] = Q.useState(!1);
+  Q.useEffect(() => {
     if (t && i) {
       const D = localStorage.getItem(i || "plugin-table");
       f(D === "on");
@@ -38957,17 +38957,17 @@ const KM = () => {
       }
       c == null || c(D);
     }
-  }, N = a && t, C = "flex items-center justify-center rounded-md text-sm font-semibold relative transition-all duration-150 cursor-pointer select-none border", S = d ? "p-2 shadow-none rounded-full" : "px-3 py-2 shadow-sm", T = e ? "boomi-btn-primary" : "boomi-btn-secondary", k = "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:[outline-color:var(--boomi-btn-primary-border)]", M = "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:[outline-color:var(--boomi-btn-secondary-border)]", I = "opacity-50 cursor-not-allowed pointer-events-none [filter:saturate(0.9)]", $ = km(
-    C,
+  }, C = a && t, N = "flex items-center justify-center rounded-md text-sm font-semibold relative transition-all duration-150 cursor-pointer select-none border", S = d ? "p-2 shadow-none rounded-full" : "px-3 py-2 shadow-sm", T = e ? "boomi-btn-primary" : "boomi-btn-secondary", k = "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:[outline-color:var(--boomi-btn-primary-border)]", M = "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:[outline-color:var(--boomi-btn-secondary-border)]", I = "opacity-50 cursor-not-allowed pointer-events-none [filter:saturate(0.9)]", $ = km(
+    N,
     S,
     T,
     e ? k : M,
     {
-      [p || ""]: N,
+      [p || ""]: C,
       [I]: s || h
     },
     m
-  ), B = N && w ? w : r;
+  ), B = C && w ? w : r;
   return /* @__PURE__ */ G.jsxs(
     "div",
     {
@@ -38983,7 +38983,7 @@ const KM = () => {
             onClick: A,
             className: $,
             disabled: s || h,
-            "aria-pressed": t ? N : void 0,
+            "aria-pressed": t ? C : void 0,
             "aria-busy": h || void 0,
             children: [
               g && B && /* @__PURE__ */ G.jsx("span", { className: E && !d ? "mr-1" : void 0, children: B }),
@@ -39012,7 +39012,7 @@ const KM = () => {
   inputMode: a
 }) => {
   var _, L;
-  const { boomiConfig: f } = An(), b = ((L = (_ = f == null ? void 0 : f.form) == null ? void 0 : _[t]) == null ? void 0 : L[r]) ?? {}, y = b.label ?? e, A = b.placeholder ?? u, N = b.validation ?? d, C = b.inputMode ?? a, S = b.wrapClass || "", T = b.labelClass || "", k = b.inputClass || "", M = b.helperClass || "", I = b.errorClass || "", $ = `${t}-${r}`, B = `${$}-help`, D = `${$}-err`, O = !!c, x = typeof E < "u" && typeof m == "function";
+  const { boomiConfig: f } = An(), b = ((L = (_ = f == null ? void 0 : f.form) == null ? void 0 : _[t]) == null ? void 0 : L[r]) ?? {}, y = b.label ?? e, A = b.placeholder ?? u, C = b.validation ?? d, N = b.inputMode ?? a, S = b.wrapClass || "", T = b.labelClass || "", k = b.inputClass || "", M = b.helperClass || "", I = b.errorClass || "", $ = `${t}-${r}`, B = `${$}-help`, D = `${$}-err`, O = !!c, x = typeof E < "u" && typeof m == "function";
   return /* @__PURE__ */ G.jsxs("div", { className: S, children: [
     /* @__PURE__ */ G.jsxs(
       "label",
@@ -39034,8 +39034,8 @@ const KM = () => {
         required: i,
         readOnly: w,
         placeholder: A,
-        pattern: N,
-        inputMode: C,
+        pattern: C,
+        inputMode: N,
         onBlur: s,
         "aria-invalid": O || void 0,
         "aria-describedby": O ? `${h ? B + " " : ""}${D}` : h ? B : void 0,
@@ -39083,10 +39083,10 @@ const IS = ({ type: t, message: e, className: i }) => {
       ]
     }
   );
-}, I_ = W.forwardRef(
+}, I_ = Q.forwardRef(
   ({ extensions: t, onAuthConnection: e, authBusy: i, authConnected: r, authMessage: w, propertiesName: p }, g) => {
-    const { boomiConfig: E } = An(), [h, m] = W.useState({}), [s, c] = W.useState({}), [u, d] = W.useState({}), [a, f] = W.useState({}), [b, y] = W.useState(!1), A = p || "Process Properties";
-    W.useEffect(() => {
+    const { boomiConfig: E } = An(), [h, m] = Q.useState({}), [s, c] = Q.useState({}), [u, d] = Q.useState({}), [a, f] = Q.useState({}), [b, y] = Q.useState(!1), A = p || "Process Properties";
+    Q.useEffect(() => {
       const S = {}, T = {}, k = {}, M = {};
       t.forEach((I) => {
         var D, O;
@@ -39097,12 +39097,12 @@ const IS = ({ type: t, message: e, className: i }) => {
           S[_] = {}, T[_] = {}, k[_] = {};
           let L = !1, z;
           const H = x.__ui;
-          (P = H == null ? void 0 : H.message) != null && P.trim() && (L = !0, z = H.message.trim()), (x.field ?? []).forEach((Q) => {
-            const F = Q.__ui, K = typeof (F == null ? void 0 : F.message) == "string" ? F.message.trim() : "", V = !!(F != null && F.invalid) || !!K;
+          (P = H == null ? void 0 : H.message) != null && P.trim() && (L = !0, z = H.message.trim()), (x.field ?? []).forEach((W) => {
+            const F = W.__ui, K = typeof (F == null ? void 0 : F.message) == "string" ? F.message.trim() : "", V = !!(F != null && F.invalid) || !!K;
             V && (L = !0, z || (z = K || "Validation Error."));
-            const X = Q.id ?? Q["@id"] ?? Q.name ?? Q["@name"];
+            const X = W.id ?? W["@id"] ?? W.name ?? W["@name"];
             if (!X) return;
-            const q = Q.encryptedValueSet ? "••••• (stored)" : Q.value ?? "";
+            const q = W.encryptedValueSet ? "••••• (stored)" : W.value ?? "";
             S[_][X] = q;
             const Z = V ? K || "Validation Error." : "";
             T[_][X] = Z, k[_][X] = !1, X.includes("accessToken") && q !== "" && y(!0);
@@ -39117,7 +39117,7 @@ const IS = ({ type: t, message: e, className: i }) => {
           }));
         });
       }), m(S), c(T), d(k), f(M);
-    }, [t]), W.useImperativeHandle(g, () => ({
+    }, [t]), Q.useImperativeHandle(g, () => ({
       validateAndSubmit: () => {
         var M, I, $, B, D;
         let S = !0;
@@ -39141,10 +39141,10 @@ const IS = ({ type: t, message: e, className: i }) => {
                     )
                   );
                 }
-              ), P = H && L === "••••• (stored)" && !((M = u[O]) != null && M[_]), Q = _.includes("accessToken");
-              Q && H && ((I = u[O]) != null && I[_]) && y(!0), !Q && !L.trim() && !P && (S = !1, z.push("is required."));
+              ), P = H && L === "••••• (stored)" && !((M = u[O]) != null && M[_]), W = _.includes("accessToken");
+              W && H && ((I = u[O]) != null && I[_]) && y(!0), !W && !L.trim() && !P && (S = !1, z.push("is required."));
               const F = (D = (B = ($ = E == null ? void 0 : E.form) == null ? void 0 : $.connectorForm) == null ? void 0 : B[_]) == null ? void 0 : D.validation;
-              if (F && !P && !Q)
+              if (F && !P && !W)
                 try {
                   new RegExp(F).test(L) || (S = !1, z.push("is invalid."));
                 } catch {
@@ -39157,25 +39157,25 @@ const IS = ({ type: t, message: e, className: i }) => {
           const x = (((L = O.connections) == null ? void 0 : L.connection) ?? []).map((H) => {
             const P = H.id;
             if (!P) return H;
-            const Q = (H.field ?? []).map((F) => {
+            const W = (H.field ?? []).map((F) => {
               var ne, ae;
               const K = F.id;
               if (!K) return F;
               const V = (ne = u[P]) == null ? void 0 : ne[K], X = ((ae = h[P]) == null ? void 0 : ae[K]) ?? "", Z = !F.encryptedValueSet || V ? X : F.value ?? "";
               return { ...F, value: Z, useDefault: !1 };
             });
-            return { ...H, field: Q };
+            return { ...H, field: W };
           }), _ = (((z = O.processProperties) == null ? void 0 : z.ProcessProperty) ?? []).map((H) => {
             const P = H.id;
             if (!P) return H;
-            const Q = (H.ProcessPropertyValue ?? []).map((F) => {
+            const W = (H.ProcessPropertyValue ?? []).map((F) => {
               var q, Z;
               const K = F.key;
               if (!K) return F;
               const X = H.name === "_validation" ? ((q = h[P]) == null ? void 0 : q[K]) ?? "validated" : ((Z = h[P]) == null ? void 0 : Z[K]) ?? F.value ?? "";
               return { ...F, value: X, useDefault: !1 };
             });
-            return { ...H, ProcessPropertyValue: Q };
+            return { ...H, ProcessPropertyValue: W };
           });
           return {
             id: O.id,
@@ -39187,7 +39187,7 @@ const IS = ({ type: t, message: e, className: i }) => {
         }) : null;
       }
     }));
-    const N = (S, T, k) => {
+    const C = (S, T, k) => {
       m((M) => ({
         ...M,
         [S]: {
@@ -39207,7 +39207,7 @@ const IS = ({ type: t, message: e, className: i }) => {
           [T]: !0
         }
       }));
-    }, C = (S, T, k) => {
+    }, N = (S, T, k) => {
       var O, x, _, L;
       const M = (_ = (x = (O = E == null ? void 0 : E.form) == null ? void 0 : O.connectorForm) == null ? void 0 : x[T]) == null ? void 0 : _.validation;
       let I = "";
@@ -39215,7 +39215,7 @@ const IS = ({ type: t, message: e, className: i }) => {
         (z) => {
           var H, P;
           return (P = (H = z.connections) == null ? void 0 : H.connection) == null ? void 0 : P.some(
-            (Q) => Q.id === S && (Q.field ?? []).some(
+            (W) => W.id === S && (W.field ?? []).some(
               (F) => F.id === T && F.encryptedValueSet
             )
           );
@@ -39270,8 +39270,8 @@ const IS = ({ type: t, message: e, className: i }) => {
                     var Se, Ne;
                     const H = L.id;
                     if (!H) return null;
-                    const P = H.includes("clientSecret"), Q = H.includes("accessToken"), F = ((Se = h == null ? void 0 : h[O]) == null ? void 0 : Se[H]) ?? "", K = ((Ne = s == null ? void 0 : s[O]) == null ? void 0 : Ne[H]) ?? "", V = x ? "" : K, X = YM(H) || H, q = L.usesEncryption || P ? "password" : "text", Z = `${O}:${H}`, ne = !!(i != null && i[Z]), ae = !!(r != null && r[Z]), le = (w == null ? void 0 : w[Z]) ?? null, me = ae || b;
-                    return /* @__PURE__ */ G.jsx(tt.Fragment, { children: Q ? /* @__PURE__ */ G.jsx(
+                    const P = H.includes("clientSecret"), W = H.includes("accessToken"), F = ((Se = h == null ? void 0 : h[O]) == null ? void 0 : Se[H]) ?? "", K = ((Ne = s == null ? void 0 : s[O]) == null ? void 0 : Ne[H]) ?? "", V = x ? "" : K, X = YM(H) || H, q = L.usesEncryption || P ? "password" : "text", Z = `${O}:${H}`, ne = !!(i != null && i[Z]), ae = !!(r != null && r[Z]), le = (w == null ? void 0 : w[Z]) ?? null, me = ae || b;
+                    return /* @__PURE__ */ G.jsx(tt.Fragment, { children: W ? /* @__PURE__ */ G.jsx(
                       "div",
                       {
                         className: "boomi-connector-field flex flex-col items-start space-y-2",
@@ -39317,8 +39317,8 @@ const IS = ({ type: t, message: e, className: i }) => {
                         value: F,
                         error: V,
                         readOnly: !1,
-                        onChange: (Me) => N(O, H, Me.target.value),
-                        onBlur: (Me) => C(O, H, Me.target.value)
+                        onChange: (Me) => C(O, H, Me.target.value),
+                        onBlur: (Me) => N(O, H, Me.target.value)
                       }
                     ) }, `field-${z}`) }, H);
                   })
@@ -39349,7 +39349,7 @@ const IS = ({ type: t, message: e, className: i }) => {
               var K, V;
               const H = L.key;
               if (!H) return null;
-              const P = L.label || H, Q = ((K = h == null ? void 0 : h[O]) == null ? void 0 : K[H]) ?? "", F = ((V = s == null ? void 0 : s[O]) == null ? void 0 : V[H]) ?? "";
+              const P = L.label || H, W = ((K = h == null ? void 0 : h[O]) == null ? void 0 : K[H]) ?? "", F = ((V = s == null ? void 0 : s[O]) == null ? void 0 : V[H]) ?? "";
               return /* @__PURE__ */ G.jsx("div", { className: "boomi-connector-field", children: /* @__PURE__ */ G.jsx(
                 OS,
                 {
@@ -39357,11 +39357,11 @@ const IS = ({ type: t, message: e, className: i }) => {
                   inputName: H,
                   label: P,
                   required: !0,
-                  value: Q,
+                  value: W,
                   error: F,
                   readOnly: !1,
-                  onChange: (X) => N(O, H, X.target.value),
-                  onBlur: (X) => C(O, H, X.target.value)
+                  onChange: (X) => C(O, H, X.target.value),
+                  onBlur: (X) => N(O, H, X.target.value)
                 }
               ) }, `ppval-${z}`);
             })
@@ -39393,7 +39393,7 @@ const XM = ({ message: t = "Loading...", variant: e = "full" }) => {
     ] }),
     /* @__PURE__ */ G.jsx("span", { className: "boomi-spinner-message", children: t })
   ] }) });
-}, qM = W.forwardRef(({
+}, qM = Q.forwardRef(({
   componentKey: t,
   integration: e,
   onSubmit: i,
@@ -39401,7 +39401,7 @@ const XM = ({ message: t = "Loading...", variant: e = "full" }) => {
   onCancel: w
 }, p) => {
   var le, me, Se, Ne, Me, $e, Be, Xe, nt, ht, ye, Et, Bt, Wt, Sn, gt, Kt, Yt;
-  const { boomiConfig: g, setPageIsLoading: E } = An(), h = W.useRef(null), { updateFromCombined: m, editedConnections: s } = WM(), { extensions: c, rawExtensions: u, isLoading: d, fetchEnvironmentExtensions: a } = QM(), [f, b] = W.useState(null), [y, A] = W.useState(null), { fetchOauth2Url: N } = VM(), { fetchEnvironmentExtensionConnectionStatus: C } = KM(), [S, T] = W.useState({}), [k, M] = W.useState({}), [I, $] = W.useState({}), B = W.useRef(null), D = W.useRef({}), O = (Ge, Ve) => `${Ge}:${Ve}`, [x, _] = W.useState(!1), L = (le = g == null ? void 0 : g.agents) == null ? void 0 : le[e.integrationPackId || ""], z = ((me = L == null ? void 0 : L.ui) == null ? void 0 : me.mode) === "modal", H = (Ge) => {
+  const { boomiConfig: g, setPageIsLoading: E } = An(), h = Q.useRef(null), { updateFromCombined: m, editedConnections: s } = WM(), { extensions: c, rawExtensions: u, isLoading: d, fetchEnvironmentExtensions: a } = QM(), [f, b] = Q.useState(null), [y, A] = Q.useState(null), { fetchOauth2Url: C } = VM(), { fetchEnvironmentExtensionConnectionStatus: N } = KM(), [S, T] = Q.useState({}), [k, M] = Q.useState({}), [I, $] = Q.useState({}), B = Q.useRef(null), D = Q.useRef({}), O = (Ge, Ve) => `${Ge}:${Ve}`, [x, _] = Q.useState(!1), L = (le = g == null ? void 0 : g.agents) == null ? void 0 : le[e.integrationPackId || ""], z = ((me = L == null ? void 0 : L.ui) == null ? void 0 : me.mode) === "modal", H = (Ge) => {
     z ? _(Ge) : E(Ge), r == null || r(Ge);
   }, P = async () => {
     var Ge;
@@ -39418,10 +39418,10 @@ const XM = ({ message: t = "Loading...", variant: e = "full" }) => {
       H(!1);
     }
   };
-  W.useImperativeHandle(p, () => ({
+  Q.useImperativeHandle(p, () => ({
     submit: P
   }));
-  const Q = async () => {
+  const W = async () => {
     await P() && (w == null || w());
   }, F = (Ge, Ve, Ae) => {
     const _e = O(Ge, Ve), Ce = D.current[_e];
@@ -39434,7 +39434,7 @@ const XM = ({ message: t = "Loading...", variant: e = "full" }) => {
       }), Ae(!1);
     }, 12e4), ot = window.setInterval(async () => {
       try {
-        const he = await C(
+        const he = await N(
           e.environmentId,
           e.id || "",
           Ge,
@@ -39474,7 +39474,7 @@ const XM = ({ message: t = "Loading...", variant: e = "full" }) => {
     const _e = 600, Ce = 750, Pe = window.screenX + Math.max(0, (window.outerWidth - _e) / 2), ot = window.screenY + Math.max(0, (window.outerHeight - Ce) / 2), Ie = window.open("", "oauth2_auth", `width=${_e},height=${Ce},left=${Pe},top=${ot},resizable,scrollbars`);
     B.current = Ie ?? null;
     try {
-      const he = await N(
+      const he = await C(
         e.id || "",
         e.environmentId,
         Ge,
@@ -39493,15 +39493,15 @@ const XM = ({ message: t = "Loading...", variant: e = "full" }) => {
       b(ee), je.error("Failed to fetch oauth2Url", he);
     }
   };
-  W.useEffect(() => {
+  Q.useEffect(() => {
     s && s.length > 0 && A(s);
-  }, [s]), W.useEffect(() => {
+  }, [s]), Q.useEffect(() => {
     c && A(c);
-  }, [c]), W.useEffect(() => () => {
+  }, [c]), Q.useEffect(() => () => {
     Object.values(D.current).forEach(({ interval: Ge, timeout: Ve }) => {
       Ge && window.clearInterval(Ge), Ve && window.clearTimeout(Ve);
     }), B.current && !B.current.closed && B.current.close();
-  }, []), W.useEffect(() => {
+  }, []), Q.useEffect(() => {
     if (!(e != null && e.environmentId) || !(e != null && e.id)) return;
     const Ge = e.installationType === "SINGLE" || !1;
     a([], e.environmentId, e.id, Ge).catch((Ve) => {
@@ -39555,7 +39555,7 @@ const XM = ({ message: t = "Loading...", variant: e = "full" }) => {
             primary: !0,
             showIcon: !1,
             label: "Save",
-            onClick: Q
+            onClick: W
           }
         )
       ] })
@@ -41220,8 +41220,8 @@ function kx() {
   document.head.querySelectorAll(`style[${Cx}]`).forEach((t) => t.remove());
 }
 const Q3 = ({ type: t, content: e }) => {
-  const { boomiConfig: i } = An(), r = W.useRef(null);
-  return W.useEffect(() => {
+  const { boomiConfig: i } = An(), r = Q.useRef(null);
+  return Q.useEffect(() => {
     const w = Nx(r.current), p = (w == null ? void 0 : w.computed) ?? null, g = P3[t], E = ts(p, `--boomi-toast-${t}-bg`, g.bg), h = ts(p, `--boomi-toast-${t}-fg`, g.fg), m = ts(p, `--boomi-toast-${t}-icon`, g.icon), s = ts(p, "--boomi-toast-position", j3), c = Number(ts(p, "--boomi-toast-timer", String(G3))), u = Number.isFinite(c) && c > 0 ? c : void 0, d = ts(p, "--boomi-toast-width", "600px");
     ta.mixin({
       toast: !0,
@@ -41323,8 +41323,8 @@ const X3 = ({
   allowEscapeKey: m = !0,
   timerMs: s
 }) => {
-  const c = W.useRef(null);
-  return W.useEffect(() => {
+  const c = Q.useRef(null);
+  return Q.useEffect(() => {
     ta.fire({
       icon: t,
       title: e,
@@ -41369,7 +41369,7 @@ function WS() {
 }
 const Rl = ({ integration: t, onHeaderActionsChange: e }) => {
   var Be, Xe, nt, ht;
-  const { boomiConfig: i } = An(), [r, w] = W.useState(null), [p, g] = W.useState(!1), [E, h] = W.useState(!1), m = (Be = i == null ? void 0 : i.agents) == null ? void 0 : Be[t.integrationPackId ?? ""], s = (m == null ? void 0 : m.transport) === "boomi-direct", u = (((Xe = m == null ? void 0 : m.ui) == null ? void 0 : Xe.sessionScope) ?? "multi") === "mount", d = `boomi:mount-sid:${t.integrationPackId ?? "default"}`, a = W.useRef(null);
+  const { boomiConfig: i } = An(), [r, w] = Q.useState(null), [p, g] = Q.useState(!1), [E, h] = Q.useState(!1), m = (Be = i == null ? void 0 : i.agents) == null ? void 0 : Be[t.integrationPackId ?? ""], s = (m == null ? void 0 : m.transport) === "boomi-direct", u = (((Xe = m == null ? void 0 : m.ui) == null ? void 0 : Xe.sessionScope) ?? "multi") === "mount", d = `boomi:mount-sid:${t.integrationPackId ?? "default"}`, a = Q.useRef(null);
   if (!a.current) {
     let ye = null;
     if (u)
@@ -41384,7 +41384,7 @@ const Rl = ({ integration: t, onHeaderActionsChange: e }) => {
       }
     a.current = ye;
   }
-  const f = a.current ?? "", b = `boomi:multi-sid:${t.integrationPackId ?? "default"}`, y = W.useRef(null);
+  const f = a.current ?? "", b = `boomi:multi-sid:${t.integrationPackId ?? "default"}`, y = Q.useRef(null);
   if (!y.current && !u) {
     let ye = null;
     try {
@@ -41402,8 +41402,8 @@ const Rl = ({ integration: t, onHeaderActionsChange: e }) => {
   }
   const {
     sessions: A,
-    sessionsLoading: N,
-    sessionsError: C,
+    sessionsLoading: C,
+    sessionsError: N,
     createSession: S,
     deleteSession: T,
     sendMessage: k,
@@ -41424,25 +41424,25 @@ const Rl = ({ integration: t, onHeaderActionsChange: e }) => {
   }), z = t.installationType === "SINGLE", { configured: H, fetchStatus: P } = CN(t.id || "", t.environmentId || "", z, {
     debounceMs: 0,
     disabled: s
-  }), Q = !s && H === !1, F = !s && (Q || p), K = W.useRef(!1), V = W.useRef(!1), X = async () => {
+  }), W = !s && H === !1, F = !s && (W || p), K = Q.useRef(!1), V = Q.useRef(!1), X = async () => {
     g(!1), h(!0), setTimeout(() => h(!1), 3e3), await P(!0);
   };
-  W.useEffect(() => {
+  Q.useEffect(() => {
     K.current || (K.current = !0, P());
   }, [P]);
-  const q = W.useRef(!1);
-  W.useEffect(() => {
-    u || N || A.length > 0 || _ || q.current || (q.current = !0, S(y.current ?? void 0));
-  }, [u, N, A, _, S]);
-  const Z = W.useMemo(
+  const q = Q.useRef(!1);
+  Q.useEffect(() => {
+    u || C || A.length > 0 || _ || q.current || (q.current = !0, S(y.current ?? void 0));
+  }, [u, C, A, _, S]);
+  const Z = Q.useMemo(
     () => (A ?? []).map((ye) => ({
       id: ye.sessionId,
       title: MN(ye.createdAt) ?? "Untitled chat",
       lastAt: ye.lastAt
     })),
     [A]
-  ), ne = (nt = m == null ? void 0 : m.ui) == null ? void 0 : nt.sidebar, ae = ((ht = m == null ? void 0 : m.ui) == null ? void 0 : ht.mode) ?? "full", le = (m == null ? void 0 : m.expandable) ?? !1, me = !u && (ne == null ? void 0 : ne.show) !== !1 && ((ne == null ? void 0 : ne.width) ?? 280) > 0, Se = Math.max(1, (ne == null ? void 0 : ne.width) ?? 280), [Ne, Me] = W.useState(!1), $e = !s && ae === "modal" && !me && !Q && !!e;
-  return W.useEffect(() => {
+  ), ne = (nt = m == null ? void 0 : m.ui) == null ? void 0 : nt.sidebar, ae = ((ht = m == null ? void 0 : m.ui) == null ? void 0 : ht.mode) ?? "full", le = (m == null ? void 0 : m.expandable) ?? !1, me = !u && (ne == null ? void 0 : ne.show) !== !1 && ((ne == null ? void 0 : ne.width) ?? 280) > 0, Se = Math.max(1, (ne == null ? void 0 : ne.width) ?? 280), [Ne, Me] = Q.useState(!1), $e = !s && ae === "modal" && !me && !W && !!e;
+  return Q.useEffect(() => {
     if (e)
       return e(
         $e ? /* @__PURE__ */ G.jsx(
@@ -41493,8 +41493,8 @@ const Rl = ({ integration: t, onHeaderActionsChange: e }) => {
           me && /* @__PURE__ */ G.jsx(
             oD,
             {
-              loading: N,
-              error: (C == null ? void 0 : C.message) ?? null,
+              loading: C,
+              error: (N == null ? void 0 : N.message) ?? null,
               threads: Z,
               activeId: _,
               showSettings: !s,
@@ -41502,19 +41502,19 @@ const Rl = ({ integration: t, onHeaderActionsChange: e }) => {
               collapsed: Ne,
               onToggleCollapse: () => Me((ye) => !ye),
               onEditSettings: () => {
-                Q || g((ye) => !ye);
+                W || g((ye) => !ye);
               },
               onSelect: (ye) => {
-                Q || L(ye);
+                W || L(ye);
               },
               onCreate: async () => {
-                if (!Q) {
+                if (!W) {
                   const ye = await S();
                   ye && L(ye);
                 }
               },
               onDelete: (ye) => {
-                Q || w(ye);
+                W || w(ye);
               }
             }
           ),
@@ -41527,7 +41527,7 @@ const Rl = ({ integration: t, onHeaderActionsChange: e }) => {
                 X();
               },
               onCancel: () => {
-                Q || g(!1);
+                W || g(!1);
               }
             }
           ) }) : /* @__PURE__ */ G.jsx(
@@ -41554,7 +41554,7 @@ const Rl = ({ integration: t, onHeaderActionsChange: e }) => {
             },
             _ ?? "empty"
           ),
-          !s && !me && !Q && !$e && /* @__PURE__ */ G.jsx(
+          !s && !me && !W && !$e && /* @__PURE__ */ G.jsx(
             "button",
             {
               type: "button",
@@ -41590,28 +41590,28 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
 }, q3 = ({
   integrationPackId: t
 }) => {
-  var L, z, H, P, Q, F, K, V, X, q, Z, ne, ae, le, me, Se, Ne, Me, $e, Be, Xe, nt, ht;
-  const { boomiConfig: e } = An(), i = (z = (L = e == null ? void 0 : e.agents) == null ? void 0 : L[t]) == null ? void 0 : z.environmentId, r = ((P = (H = e == null ? void 0 : e.agents) == null ? void 0 : H[t]) == null ? void 0 : P.position) || { corner: "bottom-right", offsetX: 24, offsetY: 40 }, w = ((F = (Q = e == null ? void 0 : e.agents) == null ? void 0 : Q[t]) == null ? void 0 : F.shape) || "pill", p = ((V = (K = e == null ? void 0 : e.agents) == null ? void 0 : K[t]) == null ? void 0 : V.label) || "Chat with us", g = (q = (X = e == null ? void 0 : e.agents) == null ? void 0 : X[t]) == null ? void 0 : q.icon, E = (ne = (Z = e == null ? void 0 : e.agents) == null ? void 0 : Z[t]) == null ? void 0 : ne.hideIcon, h = ((le = (ae = e == null ? void 0 : e.agents) == null ? void 0 : ae[t]) == null ? void 0 : le.installAsName) ?? "Agent", m = (Se = (me = e == null ? void 0 : e.agents) == null ? void 0 : me[t]) == null ? void 0 : Se.transport, s = ((Me = (Ne = e == null ? void 0 : e.agents) == null ? void 0 : Ne[t]) == null ? void 0 : Me.expandable) ?? !1, { instance: c, installed: u, loading: d } = Pu(
+  var L, z, H, P, W, F, K, V, X, q, Z, ne, ae, le, me, Se, Ne, Me, $e, Be, Xe, nt, ht;
+  const { boomiConfig: e } = An(), i = (z = (L = e == null ? void 0 : e.agents) == null ? void 0 : L[t]) == null ? void 0 : z.environmentId, r = ((P = (H = e == null ? void 0 : e.agents) == null ? void 0 : H[t]) == null ? void 0 : P.position) || { corner: "bottom-right", offsetX: 24, offsetY: 40 }, w = ((F = (W = e == null ? void 0 : e.agents) == null ? void 0 : W[t]) == null ? void 0 : F.shape) || "pill", p = ((V = (K = e == null ? void 0 : e.agents) == null ? void 0 : K[t]) == null ? void 0 : V.label) || "Chat with us", g = (q = (X = e == null ? void 0 : e.agents) == null ? void 0 : X[t]) == null ? void 0 : q.icon, E = (ne = (Z = e == null ? void 0 : e.agents) == null ? void 0 : Z[t]) == null ? void 0 : ne.hideIcon, h = ((le = (ae = e == null ? void 0 : e.agents) == null ? void 0 : ae[t]) == null ? void 0 : le.installAsName) ?? "Agent", m = (Se = (me = e == null ? void 0 : e.agents) == null ? void 0 : me[t]) == null ? void 0 : Se.transport, s = ((Me = (Ne = e == null ? void 0 : e.agents) == null ? void 0 : Ne[t]) == null ? void 0 : Me.expandable) ?? !1, { instance: c, installed: u, loading: d } = Pu(
     t || "",
     i || "",
     h,
     m
-  ), [a, f] = W.useState(!1), [b, y] = W.useState(!1), [A, N] = W.useState("info"), [C, S] = W.useState(null), T = (Be = ($e = e == null ? void 0 : e.agents) == null ? void 0 : $e[t]) == null ? void 0 : Be.ui, k = (T == null ? void 0 : T.mode) ?? "full", M = {
+  ), [a, f] = Q.useState(!1), [b, y] = Q.useState(!1), [A, C] = Q.useState("info"), [N, S] = Q.useState(null), T = (Be = ($e = e == null ? void 0 : e.agents) == null ? void 0 : $e[t]) == null ? void 0 : Be.ui, k = (T == null ? void 0 : T.mode) ?? "full", M = {
     w: ((Xe = T == null ? void 0 : T.modal) == null ? void 0 : Xe.width) ?? 980,
     h: ((nt = T == null ? void 0 : T.modal) == null ? void 0 : nt.height) ?? 720
-  }, I = (ht = T == null ? void 0 : T.modal) == null ? void 0 : ht.position, $ = W.useMemo(() => ({
+  }, I = (ht = T == null ? void 0 : T.modal) == null ? void 0 : ht.position, $ = Q.useMemo(() => ({
     id: (c == null ? void 0 : c.id) ?? t,
     integrationPackId: t,
     environmentId: i || "",
     installationType: "MULTI"
-  }), [t, i, c == null ? void 0 : c.id]), B = W.useMemo(() => {
+  }), [t, i, c == null ? void 0 : c.id]), B = Q.useMemo(() => {
     const ye = { position: "fixed", zIndex: 999998 };
     if (!r || "corner" in r) {
       const Et = (r == null ? void 0 : r.corner) ?? "bottom-right", Bt = (r == null ? void 0 : r.offsetX) ?? 24, Wt = (r == null ? void 0 : r.offsetY) ?? 24;
       return Et.includes("bottom") && (ye.bottom = Wt), Et.includes("top") && (ye.top = Wt), Et.includes("right") && (ye.right = Bt), Et.includes("left") && (ye.left = Bt), ye;
     }
     return ye.left = r.x, ye.top = r.y, ye;
-  }, [r]), D = W.useMemo(() => {
+  }, [r]), D = Q.useMemo(() => {
     if (!I) return;
     const ye = {
       position: "fixed",
@@ -41623,13 +41623,13 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
     }
     return ye.left = I.x, ye.top = I.y, ye;
   }, [I]), O = d ? "Agent (loading)" : u ? "Open Agent chat" : "Open Agent info";
-  if (W.useEffect(() => {
+  if (Q.useEffect(() => {
     if (!a) return;
     const ye = document.body.style.overflow;
     return document.body.style.overflow = "hidden", () => {
       document.body.style.overflow = ye;
     };
-  }, [a]), W.useEffect(() => {
+  }, [a]), Q.useEffect(() => {
     a || (S(null), y(!1));
   }, [a]), k === "page")
     return /* @__PURE__ */ G.jsx("div", { className: "h-full w-full", children: d ? /* @__PURE__ */ G.jsx("div", { className: "flex h-full w-full items-center justify-center", children: /* @__PURE__ */ G.jsx(go, { message: "Preparing agent..." }) }) : c ? /* @__PURE__ */ G.jsx(Rl, { integration: $, onHeaderActionsChange: S }) : /* @__PURE__ */ G.jsxs("div", { className: "flex h-full w-full flex-col items-center justify-center gap-4", children: [
@@ -41643,7 +41643,7 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
     /* @__PURE__ */ G.jsxs("div", { className: "boomi-agent-overlay__header", children: [
       /* @__PURE__ */ G.jsx("div", { className: "boomi-agent-overlay__title", children: p }),
       /* @__PURE__ */ G.jsxs("div", { className: "boomi-agent-overlay__header-actions", children: [
-        C,
+        N,
         s && /* @__PURE__ */ G.jsx(
           "button",
           {
@@ -41690,7 +41690,7 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
         "aria-label": O,
         title: O,
         onClick: () => {
-          N(u ? "chat" : "info"), f((ye) => !ye);
+          C(u ? "chat" : "info"), f((ye) => !ye);
         },
         style: B,
         className: w === "circle" ? "w-12 h-12 rounded-full bg-blue-600 text-white shadow-lg hover:scale-[1.03] transition-transform" : "px-4 h-10 rounded-full bg-blue-600 text-white shadow-lg hover:scale-[1.02] transition-transform",
@@ -41711,15 +41711,15 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
   placeholder: i = "Type to search...",
   maxSuggestions: r = 8
 }) => {
-  const [w, p] = W.useState(""), [g, E] = W.useState(!1), [h, m] = W.useState(-1), s = W.useRef(null), c = W.useId(), u = W.useMemo(() => {
-    const N = w.trim().toLowerCase();
-    if (!N || !(e != null && e.length)) return [];
-    const C = /* @__PURE__ */ new Set(), S = [];
+  const [w, p] = Q.useState(""), [g, E] = Q.useState(!1), [h, m] = Q.useState(-1), s = Q.useRef(null), c = Q.useId(), u = Q.useMemo(() => {
+    const C = w.trim().toLowerCase();
+    if (!C || !(e != null && e.length)) return [];
+    const N = /* @__PURE__ */ new Set(), S = [];
     for (const T of e) {
       const k = (T ?? "").trim();
       if (!k) continue;
       const M = k.toLowerCase();
-      if (!(M === N || C.has(M)) && M.includes(N) && (C.add(M), S.push(k), S.length >= r))
+      if (!(M === C || N.has(M)) && M.includes(C) && (N.add(M), S.push(k), S.length >= r))
         break;
     }
     return S;
@@ -41727,30 +41727,30 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
     u.length > 0 && E(!0);
   }, a = () => {
     E(!1), m(-1);
-  }, f = (N) => {
-    p(N), t(N), a();
-  }, b = (N) => {
-    p(N.currentTarget.value), m(-1), E(!0);
-  }, y = (N) => {
-    const C = g && u.length > 0;
-    switch (N.key) {
+  }, f = (C) => {
+    p(C), t(C), a();
+  }, b = (C) => {
+    p(C.currentTarget.value), m(-1), E(!0);
+  }, y = (C) => {
+    const N = g && u.length > 0;
+    switch (C.key) {
       case "ArrowDown":
-        C ? (N.preventDefault(), m((S) => (S + 1) % u.length)) : d();
+        N ? (C.preventDefault(), m((S) => (S + 1) % u.length)) : d();
         break;
       case "ArrowUp":
-        C && (N.preventDefault(), m((S) => S <= 0 ? u.length - 1 : S - 1));
+        N && (C.preventDefault(), m((S) => S <= 0 ? u.length - 1 : S - 1));
         break;
       case "Enter":
-        N.preventDefault(), C && h >= 0 ? f(u[h]) : (t(N.currentTarget.value), a());
+        C.preventDefault(), N && h >= 0 ? f(u[h]) : (t(C.currentTarget.value), a());
         break;
       case "Escape":
-        C && (N.preventDefault(), a());
+        N && (C.preventDefault(), a());
         break;
     }
   }, A = () => {
     p(""), t(""), a();
-    const N = document.getElementById("search");
-    N == null || N.focus();
+    const C = document.getElementById("search");
+    C == null || C.focus();
   };
   return /* @__PURE__ */ G.jsxs("div", { className: "relative w-[400px] pr-2", children: [
     /* @__PURE__ */ G.jsxs("div", { className: "relative flex items-center", children: [
@@ -41796,21 +41796,21 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
         id: c,
         role: "listbox",
         className: "boomi-options absolute left-0 right-2 top-full",
-        onMouseDown: (N) => {
-          N.preventDefault(), s.current && window.clearTimeout(s.current);
+        onMouseDown: (C) => {
+          C.preventDefault(), s.current && window.clearTimeout(s.current);
         },
-        children: u.map((N, C) => /* @__PURE__ */ G.jsx(
+        children: u.map((C, N) => /* @__PURE__ */ G.jsx(
           "li",
           {
-            id: `${c}-opt-${C}`,
+            id: `${c}-opt-${N}`,
             role: "option",
-            "aria-selected": C === h,
-            className: `boomi-option cursor-pointer ${C === h ? "boomi-option--active" : ""}`,
-            onMouseEnter: () => m(C),
-            onClick: () => f(N),
-            children: N
+            "aria-selected": N === h,
+            className: `boomi-option cursor-pointer ${N === h ? "boomi-option--active" : ""}`,
+            onMouseEnter: () => m(N),
+            onClick: () => f(C),
+            children: C
           },
-          N
+          C
         ))
       }
     )
@@ -41820,7 +41820,7 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
   totalPages: e,
   onPageChange: i
 }) => {
-  const [r, w] = W.useState(t.toString()), p = (h) => {
+  const [r, w] = Q.useState(t.toString()), p = (h) => {
     h >= 1 && h <= e && (i(h), w(h.toString()));
   }, g = (h) => {
     w(h.target.value);
@@ -41887,23 +41887,23 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
     )
   ] });
 }, Jf = 10, Z3 = ({ agentId: t, onClose: e }) => {
-  var N, C, S, T, k;
-  const { boomiConfig: i } = An(), r = (N = i == null ? void 0 : i.agents) == null ? void 0 : N[t], w = r == null ? void 0 : r.ui, p = r == null ? void 0 : r.transport, g = (r == null ? void 0 : r.environmentId) ?? "", E = (r == null ? void 0 : r.label) || (r == null ? void 0 : r.installAsName) || (w == null ? void 0 : w.pageTitle) || ((C = w == null ? void 0 : w.welcome) == null ? void 0 : C.title) || "Agent", { instance: h, installed: m, loading: s } = Pu(
+  var C, N, S, T, k;
+  const { boomiConfig: i } = An(), r = (C = i == null ? void 0 : i.agents) == null ? void 0 : C[t], w = r == null ? void 0 : r.ui, p = r == null ? void 0 : r.transport, g = (r == null ? void 0 : r.environmentId) ?? "", E = (r == null ? void 0 : r.label) || (r == null ? void 0 : r.installAsName) || (w == null ? void 0 : w.pageTitle) || ((N = w == null ? void 0 : w.welcome) == null ? void 0 : N.title) || "Agent", { instance: h, installed: m, loading: s } = Pu(
     t,
     g,
     E,
     p
-  ), [c, u] = W.useState(null), d = (w == null ? void 0 : w.mode) ?? "full", a = {
+  ), [c, u] = Q.useState(null), d = (w == null ? void 0 : w.mode) ?? "full", a = {
     w: ((S = w == null ? void 0 : w.modal) == null ? void 0 : S.width) ?? 980,
     h: ((T = w == null ? void 0 : w.modal) == null ? void 0 : T.height) ?? 720
   }, f = (k = w == null ? void 0 : w.modal) == null ? void 0 : k.position;
-  W.useEffect(() => {
+  Q.useEffect(() => {
     const M = document.body.style.overflow;
     return document.body.style.overflow = "hidden", () => {
       document.body.style.overflow = M;
     };
   }, []);
-  const b = W.useMemo(() => {
+  const b = Q.useMemo(() => {
     if (!f) return;
     const M = {
       position: "fixed",
@@ -41914,7 +41914,7 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
       return I.includes("bottom") && (M.bottom = B), I.includes("top") && (M.top = B), I.includes("right") && (M.right = $), I.includes("left") && (M.left = $), M;
     }
     return M.left = f.x, M.top = f.y, M;
-  }, [f]), y = W.useMemo(() => ({
+  }, [f]), y = Q.useMemo(() => ({
     id: (h == null ? void 0 : h.id) ?? t,
     integrationPackId: t,
     environmentId: g,
@@ -41959,7 +41959,7 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
   ] });
 }, J3 = ({ agentId: t, onBack: e }) => {
   var d, a, f, b;
-  const { boomiConfig: i } = An(), r = (d = i == null ? void 0 : i.agents) == null ? void 0 : d[t], w = (r == null ? void 0 : r.environmentId) ?? "", p = r == null ? void 0 : r.transport, g = (r == null ? void 0 : r.label) || (r == null ? void 0 : r.installAsName) || ((a = r == null ? void 0 : r.ui) == null ? void 0 : a.pageTitle) || ((b = (f = r == null ? void 0 : r.ui) == null ? void 0 : f.welcome) == null ? void 0 : b.title) || "Agent", { instance: E, installed: h, loading: m } = Pu(t, w, String(g), p), [s, c] = W.useState(null), u = W.useMemo(() => ({
+  const { boomiConfig: i } = An(), r = (d = i == null ? void 0 : i.agents) == null ? void 0 : d[t], w = (r == null ? void 0 : r.environmentId) ?? "", p = r == null ? void 0 : r.transport, g = (r == null ? void 0 : r.label) || (r == null ? void 0 : r.installAsName) || ((a = r == null ? void 0 : r.ui) == null ? void 0 : a.pageTitle) || ((b = (f = r == null ? void 0 : r.ui) == null ? void 0 : f.welcome) == null ? void 0 : b.title) || "Agent", { instance: E, installed: h, loading: m } = Pu(t, w, String(g), p), [s, c] = Q.useState(null), u = Q.useMemo(() => ({
     id: (E == null ? void 0 : E.id) ?? t,
     integrationPackId: t,
     environmentId: w,
@@ -41975,15 +41975,15 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
   ] });
 }, e5 = ({ agentIds: t }) => {
   var T, k, M, I, $;
-  const { boomiConfig: e, componentKey: i } = An(), r = `embed-agents-view:${i || "public"}`, w = ((T = e == null ? void 0 : e.components) == null ? void 0 : T.agentTiles) ?? ((k = e == null ? void 0 : e.components) == null ? void 0 : k.agentList) ?? {}, p = (w == null ? void 0 : w.header) ?? {}, g = (w == null ? void 0 : w.search) ?? {}, E = (w == null ? void 0 : w.viewToggle) ?? {}, [h, m] = W.useState(""), [s, c] = W.useState(1), [u, d] = W.useState("off"), [a, f] = W.useState(null);
-  W.useEffect(() => {
+  const { boomiConfig: e, componentKey: i } = An(), r = `embed-agents-view:${i || "public"}`, w = ((T = e == null ? void 0 : e.components) == null ? void 0 : T.agentTiles) ?? ((k = e == null ? void 0 : e.components) == null ? void 0 : k.agentList) ?? {}, p = (w == null ? void 0 : w.header) ?? {}, g = (w == null ? void 0 : w.search) ?? {}, E = (w == null ? void 0 : w.viewToggle) ?? {}, [h, m] = Q.useState(""), [s, c] = Q.useState(1), [u, d] = Q.useState("off"), [a, f] = Q.useState(null);
+  Q.useEffect(() => {
     try {
       const B = localStorage.getItem(r);
       (B === "on" || B === "off") && d(B);
     } catch {
     }
   }, [r]);
-  const b = W.useCallback(() => {
+  const b = Q.useCallback(() => {
     d((B) => {
       const D = B === "on" ? "off" : "on";
       try {
@@ -41992,22 +41992,22 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
       }
       return D;
     });
-  }, [r]), y = W.useMemo(() => Array.from(new Set(t ?? [])).map((D) => {
-    var L, z, H, P, Q, F, K;
-    const O = (L = e == null ? void 0 : e.agents) == null ? void 0 : L[D], x = (O == null ? void 0 : O.label) || (O == null ? void 0 : O.installAsName) || ((z = O == null ? void 0 : O.ui) == null ? void 0 : z.pageTitle) || ((P = (H = O == null ? void 0 : O.ui) == null ? void 0 : H.welcome) == null ? void 0 : P.title) || D, _ = ((Q = O == null ? void 0 : O.ui) == null ? void 0 : Q.pageDescription) || ((K = (F = O == null ? void 0 : O.ui) == null ? void 0 : F.welcome) == null ? void 0 : K.subtitle) || void 0;
+  }, [r]), y = Q.useMemo(() => Array.from(new Set(t ?? [])).map((D) => {
+    var L, z, H, P, W, F, K;
+    const O = (L = e == null ? void 0 : e.agents) == null ? void 0 : L[D], x = (O == null ? void 0 : O.label) || (O == null ? void 0 : O.installAsName) || ((z = O == null ? void 0 : O.ui) == null ? void 0 : z.pageTitle) || ((P = (H = O == null ? void 0 : O.ui) == null ? void 0 : H.welcome) == null ? void 0 : P.title) || D, _ = ((W = O == null ? void 0 : O.ui) == null ? void 0 : W.pageDescription) || ((K = (F = O == null ? void 0 : O.ui) == null ? void 0 : F.welcome) == null ? void 0 : K.subtitle) || void 0;
     return {
       agentId: D,
       name: String(x || D),
       description: _ ? String(_) : void 0
     };
-  }), [t, e]), A = W.useMemo(() => {
+  }), [t, e]), A = Q.useMemo(() => {
     const B = h.trim().toLowerCase();
     return B ? y.filter((D) => {
       var _;
       const O = D.name.toLowerCase(), x = ((_ = D.description) == null ? void 0 : _.toLowerCase()) ?? "";
       return D.agentId.toLowerCase().includes(B) || O.includes(B) || x.includes(B);
     }) : y;
-  }, [y, h]), N = Math.max(1, Math.ceil(A.length / Jf)), C = A.slice((s - 1) * Jf, s * Jf), S = a ? (($ = (I = (M = e == null ? void 0 : e.agents) == null ? void 0 : M[a]) == null ? void 0 : I.ui) == null ? void 0 : $.mode) ?? "full" : null;
+  }, [y, h]), C = Math.max(1, Math.ceil(A.length / Jf)), N = A.slice((s - 1) * Jf, s * Jf), S = a ? (($ = (I = (M = e == null ? void 0 : e.agents) == null ? void 0 : M[a]) == null ? void 0 : I.ui) == null ? void 0 : $.mode) ?? "full" : null;
   return a && S === "page" ? /* @__PURE__ */ G.jsx(J3, { agentId: a, onBack: () => f(null) }) : /* @__PURE__ */ G.jsxs(G.Fragment, { children: [
     a && /* @__PURE__ */ G.jsx(Z3, { agentId: a, onClose: () => f(null) }),
     /* @__PURE__ */ G.jsxs("div", { className: "w-full h-full p-6", children: [
@@ -42040,7 +42040,7 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
           {
             role: "list",
             className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-8",
-            children: C.length > 0 ? C.map((B) => {
+            children: N.length > 0 ? N.map((B) => {
               var O;
               const D = ((O = B.description) == null ? void 0 : O.trim()) || B.agentId;
               return /* @__PURE__ */ G.jsxs("li", { className: "boomi-card", children: [
@@ -42062,11 +42062,11 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
             }) : /* @__PURE__ */ G.jsx("div", { className: "col-span-full flex justify-center items-center", children: /* @__PURE__ */ G.jsx("p", { className: "text-gray-500 text-xs", children: "No agents found." }) })
           }
         ),
-        N > 1 && /* @__PURE__ */ G.jsx(
+        C > 1 && /* @__PURE__ */ G.jsx(
           Rm,
           {
             currentPage: s,
-            totalPages: N,
+            totalPages: C,
             onPageChange: (B) => c(B)
           }
         )
@@ -42078,7 +42078,7 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
             /* @__PURE__ */ G.jsx("th", { className: "py-3 px-4 text-left text-sm font-semibold", children: "Agent ID" }),
             /* @__PURE__ */ G.jsx("th", { className: "py-3 px-4 text-right text-sm font-semibold", children: "Actions" })
           ] }) }),
-          /* @__PURE__ */ G.jsx("tbody", { className: "divide-y", children: C.length > 0 ? C.map((B) => /* @__PURE__ */ G.jsxs("tr", { className: "boomi-table-row", children: [
+          /* @__PURE__ */ G.jsx("tbody", { className: "divide-y", children: N.length > 0 ? N.map((B) => /* @__PURE__ */ G.jsxs("tr", { className: "boomi-table-row", children: [
             /* @__PURE__ */ G.jsx("td", { className: "py-4 pl-4 pr-3 text-xs sm:pl-2 max-w-xs break-words", children: B.name }),
             /* @__PURE__ */ G.jsx("td", { className: "py-4 pl-4 pr-3 text-xs sm:pl-2 max-w-xs break-words", children: B.description || "—" }),
             /* @__PURE__ */ G.jsx("td", { className: "py-4 pl-4 pr-3 text-xs sm:pl-2 max-w-xs break-words", children: B.agentId }),
@@ -42094,11 +42094,11 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
             ) }) })
           ] }, B.agentId)) : /* @__PURE__ */ G.jsx("tr", { children: /* @__PURE__ */ G.jsx("td", { colSpan: 4, children: /* @__PURE__ */ G.jsx("div", { className: "flex justify-center items-center py-4", children: /* @__PURE__ */ G.jsx("p", { className: "text-gray-500 text-xs", children: "No agents found." }) }) }) }) })
         ] }),
-        N > 1 && /* @__PURE__ */ G.jsx("div", { className: "mt-4 flex justify-end", children: /* @__PURE__ */ G.jsx(
+        C > 1 && /* @__PURE__ */ G.jsx("div", { className: "mt-4 flex justify-end", children: /* @__PURE__ */ G.jsx(
           Rm,
           {
             currentPage: s,
-            totalPages: N,
+            totalPages: C,
             onPageChange: c
           }
         ) })
@@ -42131,18 +42131,18 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
   };
   return /* @__PURE__ */ G.jsx(Rl, { integration: s, onHeaderActionsChange: e });
 }, n5 = ({ agentIds: t }) => {
-  var P, Q, F, K, V;
-  const { boomiConfig: e } = An(), [i, r] = W.useState(!1), [w, p] = W.useState(null), [g, E] = W.useState(null), h = ((P = e == null ? void 0 : e.components) == null ? void 0 : P.agentList) ?? {}, m = (h == null ? void 0 : h.launcher) ?? {}, s = (h == null ? void 0 : h.modal) ?? {}, c = (h == null ? void 0 : h.welcome) ?? {}, u = (h == null ? void 0 : h.header) ?? {}, d = (h == null ? void 0 : h.search) ?? {}, a = (m == null ? void 0 : m.position) || { corner: "bottom-right", offsetX: 24, offsetY: 40 }, f = (m == null ? void 0 : m.shape) || "pill", b = (m == null ? void 0 : m.label) || "Find an Agent", y = m == null ? void 0 : m.icon, A = m == null ? void 0 : m.hideIcon, N = W.useMemo(() => {
+  var P, W, F, K, V;
+  const { boomiConfig: e } = An(), [i, r] = Q.useState(!1), [w, p] = Q.useState(null), [g, E] = Q.useState(null), h = ((P = e == null ? void 0 : e.components) == null ? void 0 : P.agentList) ?? {}, m = (h == null ? void 0 : h.launcher) ?? {}, s = (h == null ? void 0 : h.modal) ?? {}, c = (h == null ? void 0 : h.welcome) ?? {}, u = (h == null ? void 0 : h.header) ?? {}, d = (h == null ? void 0 : h.search) ?? {}, a = (m == null ? void 0 : m.position) || { corner: "bottom-right", offsetX: 24, offsetY: 40 }, f = (m == null ? void 0 : m.shape) || "pill", b = (m == null ? void 0 : m.label) || "Find an Agent", y = m == null ? void 0 : m.icon, A = m == null ? void 0 : m.hideIcon, C = Q.useMemo(() => {
     const X = { position: "fixed", zIndex: 999998 };
     if (!a || "corner" in a) {
       const q = (a == null ? void 0 : a.corner) ?? "bottom-right", Z = (a == null ? void 0 : a.offsetX) ?? 24, ne = (a == null ? void 0 : a.offsetY) ?? 24;
       return q.includes("bottom") && (X.bottom = ne), q.includes("top") && (X.top = ne), q.includes("right") && (X.right = Z), q.includes("left") && (X.left = Z), X;
     }
     return X.left = a.x, X.top = a.y, X;
-  }, [a]), C = {
+  }, [a]), N = {
     w: (s == null ? void 0 : s.width) ?? 980,
     h: (s == null ? void 0 : s.height) ?? 720
-  }, S = s == null ? void 0 : s.position, T = W.useMemo(() => {
+  }, S = s == null ? void 0 : s.position, T = Q.useMemo(() => {
     if (!S) return;
     const X = {
       position: "fixed",
@@ -42154,22 +42154,22 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
     }
     return X.left = S.x, X.top = S.y, X;
   }, [S]);
-  W.useEffect(() => {
+  Q.useEffect(() => {
     if (!i) return;
     const X = document.body.style.overflow;
     return document.body.style.overflow = "hidden", () => {
       document.body.style.overflow = X;
     };
-  }, [i]), W.useEffect(() => {
+  }, [i]), Q.useEffect(() => {
     w || E(null);
   }, [w]);
-  const k = W.useCallback(() => {
+  const k = Q.useCallback(() => {
     if (w) {
       p(null);
       return;
     }
     r(!1);
-  }, [w]), M = W.useMemo(() => {
+  }, [w]), M = Q.useMemo(() => {
     const X = (e == null ? void 0 : e.agents) ?? {};
     return Array.from(new Set(t ?? [])).flatMap((Z) => {
       var me, Se, Ne, Me, $e, Be;
@@ -42185,14 +42185,14 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
         hideIcon: ne.hideIcon
       }];
     });
-  }, [t, e]), [I, $] = W.useState(""), [B, D] = W.useState(1), O = W.useMemo(() => {
+  }, [t, e]), [I, $] = Q.useState(""), [B, D] = Q.useState(1), O = Q.useMemo(() => {
     const X = I.trim().toLowerCase();
     return X ? M.filter((q) => {
       var ae;
       const Z = q.name.toLowerCase(), ne = ((ae = q.description) == null ? void 0 : ae.toLowerCase()) ?? "";
       return q.agentId.toLowerCase().includes(X) || Z.includes(X) || ne.includes(X);
     }) : M;
-  }, [M, I]), x = Math.max(1, Math.ceil(O.length / em)), _ = O.slice((B - 1) * em, B * em), L = w ? (Q = e == null ? void 0 : e.agents) == null ? void 0 : Q[w] : void 0, z = (L == null ? void 0 : L.label) || (L == null ? void 0 : L.installAsName) || ((F = L == null ? void 0 : L.ui) == null ? void 0 : F.pageTitle) || ((V = (K = L == null ? void 0 : L.ui) == null ? void 0 : K.welcome) == null ? void 0 : V.title) || w || "Agent", H = () => /* @__PURE__ */ G.jsxs("div", { className: "w-full h-full p-4", children: [
+  }, [M, I]), x = Math.max(1, Math.ceil(O.length / em)), _ = O.slice((B - 1) * em, B * em), L = w ? (W = e == null ? void 0 : e.agents) == null ? void 0 : W[w] : void 0, z = (L == null ? void 0 : L.label) || (L == null ? void 0 : L.installAsName) || ((F = L == null ? void 0 : L.ui) == null ? void 0 : F.pageTitle) || ((V = (K = L == null ? void 0 : L.ui) == null ? void 0 : K.welcome) == null ? void 0 : V.title) || w || "Agent", H = () => /* @__PURE__ */ G.jsxs("div", { className: "w-full h-full p-4", children: [
     ((u == null ? void 0 : u.show) ?? !0) && /* @__PURE__ */ G.jsxs("div", { className: "space-y-1 mb-4", children: [
       /* @__PURE__ */ G.jsx("h2", { className: "text-lg font-semibold", children: (u == null ? void 0 : u.title) || (c == null ? void 0 : c.title) || "Agents" }),
       /* @__PURE__ */ G.jsx("p", { className: "text-sm opacity-70", children: (u == null ? void 0 : u.description) || (c == null ? void 0 : c.subtitle) || "Select an agent to start chatting." })
@@ -42245,7 +42245,7 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
         "aria-label": b,
         title: b,
         onClick: () => r(!0),
-        style: N,
+        style: C,
         className: f === "circle" ? "w-12 h-12 rounded-full bg-blue-600 text-white shadow-lg hover:scale-[1.03] transition-transform" : "px-4 h-10 rounded-full bg-blue-600 text-white shadow-lg hover:scale-[1.02] transition-transform",
         children: (() => {
           const X = A ? "" : y ?? "🤖";
@@ -42256,7 +42256,7 @@ const yp = ({ children: t, size: e, style: i, expanded: r = !1 }) => {
         })()
       }
     ),
-    i && /* @__PURE__ */ G.jsx(yp, { size: C, style: T, children: /* @__PURE__ */ G.jsxs("div", { className: "boomi-agent-overlay__inner", children: [
+    i && /* @__PURE__ */ G.jsx(yp, { size: N, style: T, children: /* @__PURE__ */ G.jsxs("div", { className: "boomi-agent-overlay__inner", children: [
       /* @__PURE__ */ G.jsxs("div", { className: "boomi-agent-overlay__header", children: [
         /* @__PURE__ */ G.jsx("div", { className: "boomi-agent-overlay__title", children: w ? z : (c == null ? void 0 : c.title) || "Agents" }),
         /* @__PURE__ */ G.jsxs("div", { className: "boomi-agent-overlay__header-actions", children: [
@@ -42304,7 +42304,7 @@ function r5(t, e, i) {
   w && r.push(`:host{${w}}`);
   const E = e.cssVarsByTheme ?? {};
   for (const [b, y] of Object.entries(E)) {
-    const A = Object.entries(y).filter(([N]) => String(N).startsWith("--")).map(([N, C]) => `${N}:${String(C)};`).join("");
+    const A = Object.entries(y).filter(([C]) => String(C).startsWith("--")).map(([C, N]) => `${C}:${String(N)};`).join("");
     A && r.push(`:host([data-theme="${b}"]){${A}}`);
   }
   const m = (e.cssVarsByKey ?? {})[i] ?? {}, s = ((a = e.componentsByKey) == null ? void 0 : a[i]) ?? {}, c = (f = e.components) == null ? void 0 : f[i], u = c == null ? void 0 : c.modalOffset;
@@ -42314,7 +42314,7 @@ function r5(t, e, i) {
   for (const [b, y] of Object.entries(m))
     String(b).startsWith("--") && (d += `${b}:${String(y)};`);
   if (u) {
-    const b = (N) => typeof N == "number" && Number.isFinite(N) ? `${N}px` : typeof N == "string" && N.trim().length > 0 ? N : null, y = b(u.offsetX ?? u.x ?? null), A = b(u.offsetY ?? u.y ?? null);
+    const b = (C) => typeof C == "number" && Number.isFinite(C) ? `${C}px` : typeof C == "string" && C.trim().length > 0 ? C : null, y = b(u.offsetX ?? u.x ?? null), A = b(u.offsetY ?? u.y ?? null);
     y && (d += `--boomi-modal-offset-x:${y};`), A && (d += `--boomi-modal-offset-y:${A};`);
   }
   if (d && r.push(`:host{${d}}`), r.length) {
@@ -42361,7 +42361,7 @@ function c5(t, e) {
     componentKey: e,
     reactRoot: null,
     shadowRoot: null,
-    rootRef: W.createRef(),
+    rootRef: Q.createRef(),
     initialized: !1,
     mountEl: null
   }, Io[t]) : (je.error(`Host element with id '#${t}' not found.`), null);
@@ -42417,7 +42417,7 @@ function d5(t) {
     const p = r.getElementById("boomi-root");
     p && r.removeChild(p), r.querySelectorAll("style[data-boomi-base], style[data-boomi-vars]").forEach((g) => g.remove());
   }
-  Io[t] && (Io[t].reactRoot = null, Io[t].rootRef = W.createRef(), Io[t].initialized = !1, Io[t].mountEl = null);
+  Io[t] && (Io[t].reactRoot = null, Io[t].rootRef = Q.createRef(), Io[t].initialized = !1, Io[t].mountEl = null);
 }
 function T5(t = {}) {
   if (t.clearAuth) {
@@ -42538,21 +42538,21 @@ async function b5(t) {
     E.config ?? void 0,
     i,
     (O = E.agent) == null ? void 0 : O.boomiAgentId
-  ), d = u.agents && typeof u.agents == "object" ? { ...u.agents } : {}, a = !!((x = u == null ? void 0 : u.components) != null && x.agentList), f = m5(m == null ? void 0 : m.embedType) ?? (c.length > 0 ? a ? "list" : "tiles" : "single"), b = f === "list", A = (b || f === "tiles") && c.length > 0, N = new Set(Object.keys(d)), C = A ? c : [i], S = b && N.size > 0, T = S ? C.filter((H) => N.has(H)) : C;
+  ), d = u.agents && typeof u.agents == "object" ? { ...u.agents } : {}, a = !!((x = u == null ? void 0 : u.components) != null && x.agentList), f = m5(m == null ? void 0 : m.embedType) ?? (c.length > 0 ? a ? "list" : "tiles" : "single"), b = f === "list", A = (b || f === "tiles") && c.length > 0, C = new Set(Object.keys(d)), N = A ? c : [i], S = b && C.size > 0, T = S ? N.filter((H) => C.has(H)) : N;
   for (const H of T) {
-    const P = d[H] && typeof d[H] == "object" ? { ...d[H] } : {}, Q = P.ui && typeof P.ui == "object" ? { ...P.ui } : {}, F = t.sessionScope ?? Q.sessionScope ?? "mount";
+    const P = d[H] && typeof d[H] == "object" ? { ...d[H] } : {}, W = P.ui && typeof P.ui == "object" ? { ...P.ui } : {}, F = t.sessionScope ?? W.sessionScope ?? "mount";
     d[H] = {
       ...P,
       transport: "boomi-direct",
-      ui: { ...Q, sessionScope: F }
+      ui: { ...W, sessionScope: F }
     };
   }
-  if ((_ = E.agent) != null && _.boomiAgentId && E.agent.boomiAgentId !== i && !(S && !N.has(i))) {
-    const H = d[i] && typeof d[i] == "object" ? { ...d[i] } : {}, P = H.ui && typeof H.ui == "object" ? { ...H.ui } : {}, Q = t.sessionScope ?? P.sessionScope ?? "mount";
+  if ((_ = E.agent) != null && _.boomiAgentId && E.agent.boomiAgentId !== i && !(S && !C.has(i))) {
+    const H = d[i] && typeof d[i] == "object" ? { ...d[i] } : {}, P = H.ui && typeof H.ui == "object" ? { ...H.ui } : {}, W = t.sessionScope ?? P.sessionScope ?? "mount";
     d[E.agent.boomiAgentId] = {
       ...H,
       transport: "boomi-direct",
-      ui: { ...P, sessionScope: Q }
+      ui: { ...P, sessionScope: W }
     };
   }
   u.agents = d;
@@ -42587,7 +42587,7 @@ async function b5(t) {
       return null;
     }
   });
-  const $ = A ? S ? c.filter((H) => N.has(H)) : c : [], B = ((z = (L = u == null ? void 0 : u.components) == null ? void 0 : L.agentList) == null ? void 0 : z.mode) === "page";
+  const $ = A ? S ? c.filter((H) => C.has(H)) : c : [], B = ((z = (L = u == null ? void 0 : u.components) == null ? void 0 : L.agentList) == null ? void 0 : z.mode) === "page";
   Dx({
     component: A ? b && !B ? "AgentListLauncher" : "AgentTiles" : "Agent",
     hostId: h,
