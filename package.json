@@ -1,6 +1,6 @@
 {
   "name": "@boomi/embedkit-cdn",
-  "version": "1.5.3",
+  "version": "1.6.0",
   "description": "Pre-built UMD bundle and CSS for Boomi EmbedKit — drop-in script tag distribution via jsDelivr and unpkg",
   "files": [
     "embedkit-cdn.js",
